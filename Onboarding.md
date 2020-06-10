@@ -3,9 +3,9 @@
 ![OpenSAFELY](https://opensafely.org/) is a secure analytics platform for routinely collected electronic health records in the NHS. 
 
 A key feature of the platform is that datasets are analysed within the secure environment where they are already stored, 
-removing the need for large extracts of potentially disclosive anonymised patient data being moved around.
-Whilst this makes it impossible for third-party groups to access the underlying data directly, 
-the platform is designed with collaboration in mind to ensure as many research groups as possible acting in the public interest can analyse the data.
+removing the need for large extracts of potentially disclosive anonymised patient data to be moved around.
+Whilst this prevents third-party groups from accessing the underlying data directly, 
+the platform is designed with collaboration in mind to ensure as many research groups acting in the public interest as possible can analyse the data.
 
 This document is intended for prospective OpenSAFELY collaborators who are interested in using the platform to conduct health research.
 
@@ -27,7 +27,7 @@ We are not able to provide foundational Git/GitHub training, though there are se
 ### Desirable
 * **Python** 
 The code to generate each study-specific dataset is written in Python. 
-We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody with some programming experience. 
+We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody familiar with health research. 
 However, some knowledge of Python may still be beneficial to create or modify existing functions. 
 * **Docker** 
 We use Docker containers so that you don't need to install Python on your local machine or worry about version dependencies.
@@ -37,14 +37,15 @@ We use Docker containers so that you don't need to install Python on your local 
 The process of conducting an analysis via OpenSAFELY can be broken down into the following steps:
 
 1. Design a study protocol Research question and protocol are discussed and written (preferably in a google document so multiple authors can edit and review)
-2. Institutional Ethics Approval once protocol is finalised. 
-3. Codelists that do not exist already are developed and put onto the opencodelist webpage 
-4. Study population, outcomes and covariates are defined within a Python script that is developed locally (i.e on your machine) and uploaded to Github for comments, reviews and other contributions. This process is iterative. 
-5. When the study definition script is “run” on a local computer, it creates a dummy dataset which approximates the structure of the source data. This dummy dataset has all the necessary covariates, as specified in your study definition script, with the right type of data (for example numbers, dates or count variables) (but currently does not respect expected between-variable relationships such as metformin prescriptions only for people with diabetes). You do not need to have Python installed to run the study population script to generate the dummy data. 
-6. Stata code (and in the future R) is developed against this dummy dataset. 
-7. Once the analytic code and the study population code is finalised and uploaded to GitHub, this code is uploaded to the server by one of a few authorised individuals. This code can then be run to extract the real study population and run the analysis
-8. Analytic output files (log or txt files) are reviewed by 2 people on the server and any sensitive data is removed.
-9. Summary results are returned to the external researcher via GitHub and can be reviewed by the team.
+2. Institutional Ethics Approval once protocol is finalised.
+3. Create a study-specific repository from the template provided, and upload the protocol to the repository.
+4. Codelists that do not exist already are developed and put onto the opencodelist webpage 
+5. Study population and study variables are defined within a Python script that is developed locally (i.e on your machine) and uploaded to Github for comments, reviews, and other contributions. This process is iterative. 
+6. When the study definition script is “run” on a local computer, it creates a dummy dataset which approximates the structure of the source data. This dummy dataset has all the necessary covariates, as specified in your study definition script, with the right type of data (for example numbers, dates or count variables) (but currently does not respect expected between-variable relationships such as metformin prescriptions only for people with diabetes). You do not need to have Python installed to run the study population script to generate the dummy data. 
+7. Stata code (and in the future R) is developed against this dummy dataset. 
+8. Once the analytic code and the study population code is finalised and uploaded to GitHub, this code is uploaded to the server by one of a few authorised individuals. This code can then be run to extract the real study population and run the analysis
+9. Analytic output files (log or txt files) are reviewed by 2 people on the server and any sensitive data is removed.
+10. Summary results are returned to the external researcher via GitHub and can be reviewed by the team.
 
 These sections are described in further detail below.
 
@@ -52,6 +53,10 @@ These sections are described in further detail below.
 * Initial request + discussion of study idea
 * Protocol template - why is a preregistered protocol a good idea. 
 * Encourage registration of studies on encepp or clinicaltrials.gov or similar? (Even though we have not done that so far)
+
+### Creating a git repository for your study
+* clone the research template
+* update README, import protocol
 
 ### Code Lists 
 * Check and/or review existing lists on opensafely
@@ -103,3 +108,4 @@ These sections are described in further detail below.
   [answer]
 
 ## Further Resources
+
