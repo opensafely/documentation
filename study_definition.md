@@ -1,7 +1,7 @@
 # Overview
 
 A _study definition_ describes all of the features of your study: the
-codelists, the population definitions, the dates, and the covariates.
+codelists, the population definitions, the dates, and the variables.
 
 It is written in a custom format which is intended to be readable and
 reviewable by anyone with epidemiological knowledge.  The OpenSAFELY
@@ -101,11 +101,11 @@ population=patients.satisfying(
 )
 ```
 
-# Covariate definitions
+# Variable definitions
 
 ## Clinical Events
 
-The most common kind of covariate query. It allows you to flag
+The most common kind of variable query. It allows you to flag
 patients matching lists of codes.  The flag is typically a date, but
 can be a binary variable or a count.
 
@@ -191,9 +191,9 @@ study = StudyDefinition(
 )
 ```
 
-## Adding date columns to existing covariates
+## Adding date columns to existing variables
 
-If you have already defined a covariate, for which you also want to
+If you have already defined a variable, for which you also want to
 add a date column, you can wrap a definition with `date_of`.
 
 For example, given this definition which returns matching codes:
