@@ -386,6 +386,36 @@ has_history=patients.with_complete_gp_consultation_history_between(
 ...
 ```
 
+## Households
+
+OpenSAFELY can return information about the household to which the
+patient belonged as of a reference date. This is inferred from address
+data using an algorithm developed by TPP (to be documented soon) so the
+results are not 100% reliable but are apparently pretty good.
+
+Options for `returning` are:
+
+```
+    pseudo_id: An integer identifier for the household which has no meaning
+               other than to identify individual members of the same
+               household (0 if no household information available)
+
+    household_size: the number of individuals in the household (0 if no
+                    household information available)
+```
+
+Examples:
+
+```
+household_id=patients.household_as_of(
+    "2020-02-01", returning="pseudo_id"
+)
+
+household_size=patients.household_as_of(
+    "2020-02-01", returning="household_size"
+),
+```
+
 
 # Expectations
 
