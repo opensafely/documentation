@@ -1,18 +1,6 @@
-# Introducing OpenSAFELY
-
-[OpenSAFELY](https://opensafely.org/) is a secure analytics platform for routinely collected electronic health records in the NHS.
-
-A key feature of the platform is that datasets are analysed within the secure environment where they are already stored, removing the need for large extracts of potentially disclosive anonymised patient data to be moved around. Whilst this prevents third-party groups from accessing the underlying data directly, the platform is designed with collaboration in mind to ensure as many research groups acting in the public interest as possible can analyse the data.
-
-This document is intended for prospective OpenSAFELY collaborators who are interested in using the platform to conduct health research.
-
-...
-
-
-
 # Getting started with OpenSAFELY
 
-This document will take you through everything needed to using the OpenSAFELY platform. By the end you should be able to:
+This document will take you through everything needed to use the OpenSAFELY platform. By the end you should be able to:
 
 * Create a new OpenSAFELY GitHub repository for your study
 * Clone the repository to a local folder
