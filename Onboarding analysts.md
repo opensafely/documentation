@@ -351,11 +351,13 @@ You've now completed the required changes so this is good opportunity to `push` 
 
 Now that you've pushed your commits to the remote repo, you can view them on GitHub. Go to your repository webpage -- you can click `View on GitHub` in GitHub Desktop, navigate to the repo from you GitHub profile page, or type `https://github.com/<user-or-organisation>/<repo-name>`. You can select either the (unchanged) `master` branch or the new `add-transplant-var` branch that you've just created. 
 
-Back on GitHub Desktop, you should see the option to create a pull request to merge your development branch onto the master branch.
+If you're happy with the new branch, you can create a pull request to merge your development branch onto the master branch. 
 
-* In GitHub desktop, click `Create Pull Request`
+* Create a Pull Request in GitHub or in GitHub Desktop:
+   * In GitHub, select the development branch and click `Create Pull Request`
+   * In GitHub desktop, click `Create Pull Request` which will open the relevant webpage on GitHub
 
-This will open a webpage on GitHub. Review the changes, fill in any extra details if helpful, and submit. On the following page you can suggest someone to review the PR. In OpenSAFELY, a PR must always get a second pair of eyes before merging for sense-checking and bug-catching. 
+Review the changes, fill in any extra details if helpful, and submit. On the following page you can suggest someone to review the PR. In OpenSAFELY, a PR must always get a second pair of eyes before merging for sense-checking and bug-catching. 
 
 ### Merge the PR and delete the branch
 
