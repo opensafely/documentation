@@ -349,7 +349,9 @@ You've now completed the required changes so this is good opportunity to `push` 
 
 ### Create a `pull request` for review
 
-Now that you've pushed your commits to the remote repo, you should see the option to create a pull request to merge your development branch onto the master branch.
+Now that you've pushed your commits to the remote repo, you can view them on GitHub. Go to your repository webpage -- you can click `View on GitHub` in GitHub Desktop, navigate to the repo from you GitHub profile page, or type `https://github.com/<user-or-organisation>/<repo-name>`. You can select either the (unchanged) `master` branch or the new `add-transplant-var` branch that you've just created. 
+
+Back on GitHub Desktop, you should see the option to create a pull request to merge your development branch onto the master branch.
 
 * In GitHub desktop, click `Create Pull Request`
 
