@@ -264,7 +264,7 @@ Re-run it each time you want to update the document using the latest version of 
 
 For more detail about the study definition, see: https://github.com/opensafely/documentation/blob/master/study_definition.md 
 
-You should now have all the tools you need to being making changes to the study definition. 
+You should now have all the tools you need to make changes to the study definition. 
 
 The general workflow for updating the repo is as follows:
 
