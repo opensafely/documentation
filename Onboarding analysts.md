@@ -5,7 +5,7 @@ This document will take you through everything needed to use the OpenSAFELY plat
 * Create a new OpenSAFELY GitHub repository for your study
 * Clone the repository to a local folder
 * Update the Study Definition according to your study codelists, population, and variables
-* Create, edit, and retrieve codelists at codelists.opensafely.org
+* Create, edit, and retrieve codelists at [codelists.opensafely.org](https:\\codelists.opensafely.org)
 * Create dummy datasets for testing analysis code based on the OpenSAFELY's _expectations_ framework
 * Commit these changes via git, then push them to the remote repository and create a pull request
 * Understand and use good practice for version control with git e.g., when using `branch`, `commit`, `push`, `pull`.
@@ -20,17 +20,16 @@ OpenSAFELY maintains extremely high standards for data privacy, whilst ensuring 
 
 ### Essential
 * **Stata**. OpenSAFELY currently supports Stata v16.1 for statistical analysis. We are not able to provide Stata training. You need to be able to perform all stages of the statistical analysis in Stata, including statistical models and graphic and tabular outputs. 
-Support for R and other languages are planned.
+Support for R and other languages is planned.
 * **Git** The workflow is strongly integrated into Git/GitHub. At a minimum you need to be able to <!--(clone, branch, commit, push, pull)--> clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, and create a pull request. We are not able to provide foundational Git/GitHub training, though this start up guide points to resources and runs through a basic edit-commit-push-pull workflow. 
 <!--We provide a simple tutorial for navigating the OpenSAFELY workflow.-->
 
 ### Desirable
 * **Python** The code to generate each study-specific dataset is written in Python. We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody familiar with health research. However, some knowledge of Python may still be beneficial to create or modify existing functions. 
-* **Docker** We use Docker containers so that you don't need to install Python on your local machine or worry about version dependencies.
 
 ## Set up git/GitHub
 
-OpenSAFELY uses [**GitHub**](https://github.com/) to store the code used to create and analyse the study data. It is based on [**git**](https://git-scm.com/), an industry-standard version control system that helps multiple contributors manage code effectively. The code (and its history of changes) can also published openly so that anybody can view it, comment on it, and suggest improvements. 
+OpenSAFELY uses [**GitHub**](https://github.com/) to store the code used to create and analyse the study data. It is based on [**git**](https://git-scm.com/), an industry-standard version control system that helps multiple contributors manage code effectively. It also supports convenient publication of your code, so that anybody can view it, comment on it, and suggest improvements (we require that anyone who uses OpenSAFELY publish their code on publication of their papers).
 
 A good starting point for understanding version control in the context of scientific research has been written by The Turing Way collaborative. If you are completely new to these concepts or want to understand more then we suggest reading through their [chapter on version control](https://the-turing-way.netlify.app/reproducible-research/vcs.html).
 
@@ -41,11 +40,10 @@ To get set up, you will need:
 
 
 ### New to git
-For Windows or macOS users new to git, the easiest way to do both is to install [**GitHub Desktop**](https://desktop.github.com/). This includes a command line version of git and a useful GUI for editing files and gitting. To install GitHub Desktop, visit the [GitHub Desktop homepage](https://desktop.github.com/) and click install for your operating system. This will ask you to create or sign-in to your GitHub account. You'll then be taken to a _Let's get started_ page. Hold that thought while we get a few other things sorted first.
+For Windows or macOS users new to git, the easiest way to do both is to install [**GitHub Desktop**](https://desktop.github.com/). This includes a command line version of git and a useful GUI for editing files and gitting. To install GitHub Desktop, visit the [GitHub Desktop homepage](https://desktop.github.com/) and click install for your operating system. This will ask you to create or sign-in to your GitHub account. You'll be taken to a _Let's get started_ page. We'll return to this later once you have Python and a repository for your study.
 
-<!--Follow the instructions on the homepage. <font color='red'>(Do we have opinions about which email address to use?)</font> -->
 ### Old to git
-If you already have git installed and prefer using your existing git workflow, then this is fine. The instructions below will focus on gitting with GitHub Desktop, but will also include command line instructions that you can follow too.
+If you already have git installed and prefer using your existing git workflow, then this is fine. 
 
 If you're not sure if you already have git installed, type `git --version` into any command line terminal. 
 
@@ -84,15 +82,15 @@ For security, consistency, and readability, OpenSAFELY has an API for creating a
 ### Windows users
 For Windows users, we recommend that you install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual), a popular Python distribution that includes an recent version of Python 3, many useful Python packages, and an environment manager. This will help avoid some fiddly annoyances when dealing with multiple versions/installations of Python. 
 
-If you already have Python installed on your machine, you should still be able install Anaconda without any inteference. <font color='red'>(is this true?)</font> Alternatively, you're welcome to use any existing or fresh Python installation you want if you're happy to troubleshoot problems yourself.
+<!--If you already have Python installed on your machine, you should still be able install Anaconda without any inteference. <font color='red'>(is this true?)</font> Alternatively, you're welcome to use any existing or fresh Python installation you want if you're happy to troubleshoot problems yourself. -->
 
-To install, [follow these instructions](https://docs.anaconda.com/anaconda/install/). Accept the default/recommended settings unless you understand the consequences of changing them.
+To install, [follow these instructions](https://docs.anaconda.com/anaconda/install/). Accept the default/recommended settings unless you understand the consequences of changing them. 
 
-This should have added _Anaconda Prompt_ and _Anaconda Powershell Prompt_ to your machine. Open either of them and submit:
+This should have added _Anaconda Prompt_ to your machine. To to verify that you can run Python with it, open it and submit:
 
     python --version
     
-To verify that you can run python through one of these prompts. We will use one of these prompts to run the Study Definition to update codelists and create dummy datasets using OpenSAFELY's `cohortextractor` command.
+You should use the _Anaconda Prompt_ to run the Study Definition to update codelists and create dummy datasets using OpenSAFELY's `cohortextractor` command.
 
 
 ### mac users
@@ -105,19 +103,14 @@ To verify that you can run python through one of these prompts. We will use one 
 `cohortextractor` is how OpenSAFELY converts the Study Definition into an actual (dummy or real) dataset. To install, go to your Anaconda prompt (or another prompt that can find `pip`) and submit:
 
 ```
-pip install git+https://github.com/opensafely/cohort-extractor/#opensafely-cohort-extractor-tool
+pip install opensafely-cohort-extractor
 ```
 
 To check this has installed successfully, submit `cohortextractor --help` and it should print some details of how it can be used.
 
-You won't be able to use `cohortextractor` until you have a local clone of a repository with a working Study Definition in it. 
-
-
-### Updating `cohortextractor`
-Submit:
+Update by submitting:
 
     pip install --upgrade opensafely-cohort-extractor
-
 
 
 ## Create repository for your study
@@ -203,7 +196,7 @@ This folder contains:
 
 #### `codelists/`
 
-This contains a `.txt` document listing the codelists that you want to retrieve from codelists.opensafely.org. and the `.csv` files of the retrieved codelists themselves.
+This contains a `.txt` document listing the codelists that you want to retrieve from [codelists.opensafely.org](https:\\codelists.opensafely.org). and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the Study Definition documentation for more on how to update the codelists.
 
 See the Study Definition documentation for more on how to update the codelists. 
 
@@ -220,7 +213,7 @@ When running in development, this folder contains everything (as run on the dumm
 
 #### `(other folders)/`
 
-Feel free to add more folders to the repo and organise your project as you wish. If you don't want these to be pushed to the remote repo, use `.gitignore`. 
+Feel free to add more folders to the repo and organise your project as you wish. However, make sure to include all active scripts and codelists in the `analysis/` and `codelists/` folders, otherwise they won't be run in the secure environment. If you don't want any additional folders to be pushed to the remote repo, use `.gitignore`. 
 
 #### `.gitignore`
 
@@ -233,31 +226,30 @@ Instructions for how to list ignored files properly in `.gitignore` are [here](h
 
 The repo contains a working Study Definition (`study_definition.py`) which you can use to retreive codelists and create dummy data. Before making any changes to `study_definition.py` to match your study (which will need to be properly version controlled in git), it's important to understand how the study definition is used by `cohortextractor`. Without `cohortextractor` you won't be able to run and test any changes that you've made to `study_definition.py` or the codelists.
 
-To confirm you can use `cohortextractor`, go to a terminal and submit `cohortextractor --help`, which will list all the ways in which you can use it. Some of these are discussed in detail below.
+To confirm you can use `cohortextractor`, go to a terminal and submit `cohortextractor --help`, which will list all the ways in which you can use it. You can also use `cohortextractor generate_cohort --help` to learn more about the `generate_cohort` command, for example. 
+
+Some of these commands are discussed in detail below. Remember that to run any of these commands for your specific local repository, you need to change the direct of your prompt to be the repo directory using for example `cd c:/my-repos-folder/my-repo`.
 
 #### `generate_cohort` 
-This will create a dummy dataset for you, based on the _expectations_ declared in the study definition. Use it for example like this:
+This will create a dummy dataset for you, `outputs/input.csv`, based on the _expectations_ declared in the study definition. Use it for example like this:
 
     cohortextractor generate_cohort --expectations-population 10000
 
-where `10000` is the number of rows you want to generate for your dataset. Running it will create the `outputs/input.csv` dummy dataset.
+where `10000` is the number of rows you want to generate for your dataset. 
 
-Try it! You should find that a new file has been added to the `outputs/` folder. Open `input.csv` in your favourite `.csv` viewer and have a look around. 
+Run it -- check that `outputs/input.csv` has been created. Run it again -- the file will be refreshed (check the file's _modified_ date) and will contain different data than previously (even if the `study_definition.py` didn't change) because the values are randomly generated. 
 
-Try it again -- oops! If you still had `input.csv` open, then running `generate_cohort` will give an error because it can't over-write the file. Make sure `input.csv` isn't open when you want to make a new one. 
-
-Close `input.csv` and run `generate_cohort` again. `input.csv` will now be refreshed (check the file's _modified_ date) and will contain different data than previously (even if the `study_definition.py` didn't change) because the values are randomly generated. 
-
+Beware that on Windows, you can't have `input.csv` open and generate a new one at the same time.
 
 
 #### `update_codelists` 
-This will retrieve the codelists from codelists.opensafely.org based on those listed in `/codelists/codelists.txt` and put them in the `codelist` repo folder. Use it like this: 
+This will retrieve the codelists from [codelists.opensafely.org](https:\\codelists.opensafely.org) based on those listed in `/codelists/codelists.txt` and put them in the same folder. Use it like this: 
    
     cohortextractor update_codelists
 
-Try it! It will add (or update) the codelist `.csv` files in the `codelists/` folder. If one or more of these codelist files is open, `update_codelists` won't be able to run properly. 
-See [here](https://github.com/opensafely/documentation/blob/master/study_definition.md#codelist-definitions) for more information about how to create codelists.
+Run it -- it will add (or update) the codelist `.csv` files in the `codelists/` folder. See [here](https://github.com/opensafely/documentation/blob/master/study_definition.md#codelist-definitions) for more information about how to create codelists.
 
+Beware again that in Windows, if one or more of these codelist files is open then `update_codelists` won't be able to run. 
 
 #### `cohort_report`
 
@@ -265,11 +257,7 @@ This will produce an `.html` document giving some summary statistics about each 
 
     cohortextractor cohort_report
     
-Re-run it each time you want to update the document using the latest version of the `input.csv` dataset.
-
-
-
-Assuming that your working directory is the repo folder, you should be able to run `cohortextractor` commands. 
+Re-run it each time you want to update the document using the latest version of the `input.csv` dataset. Assuming that your working directory is the repo folder, you should be able to run `cohortextractor` commands. 
 
 
 ## Editing the Study Definition and gitting changes
@@ -280,18 +268,18 @@ You should now have all the tools you need to being making changes to the study 
 
 The general workflow for updating the repo is as follows:
 
-* create a new branch
-* edit/add/delete files in the repo on that branch, committing regularly with informative commit messages
-* Push the changes to the remote repo, so that others can view the branch
-* continue to commit and push changes on that branch until you believe it's ready to be merged onto the master
-* submit a pull request (PR), requesting that the branch be reviewed by somebody else.
+* Create a new branch. A branch is a way for you to record and publish your own changes without breaking things for other people who are using the same code. It is also a good way of collecting changes ("commits") into a meaningful unit that can be reviewed by others.
+* Edit/add/delete files in the repo on that branch, committing regularly with informative commit messages.
+* Push the changes to GitHub, so that others can view the branch.
+* Continue to commit and push changes on that branch until you believe it's ready to be merged back into the main codebase that everyone uses.
+* Submit a pull request (PR), requesting that the branch be reviewed by somebody else. A PR is simply a way of viewing, commenting on, and approving branches.
 
 
 We'll demonstrate this workflow with a simple example. Say you want to add a new variable describing if the patient has recieved an organ transpant or not. Then follow these steps:
 
 ### Create a branch and publish it
 
-The first thing to think about before making any changes, whether adding, deleting, or editing files, is to `branch`. This ensures that any changes are kept separate from the _Master_ branch whilst they are still being tested. 
+The first thing to think about before making any changes, whether adding, deleting, or editing files, is to `branch`. This ensures that any changes are kept separate from the _Master_ branch (i.e. the main codebase that everyone uses) whilst they are still being tested. 
 
 Open GitHub Desktop, and make sure the current repository is the the one you're working on. Click `Branch > New branch` and choose a new name that reflects the changes you wish to make, e.g., `update-codelists`, or `exploratory-notebook`. In our example, this can be `add-transplant-var`.
 
@@ -299,11 +287,11 @@ Then publish the branch. It's a good idea to do straight way so that others know
 
 ### Add the relevant codelist and `commit`
 
-First take a look at the `codelists/codelist.txt` file in the repo, and note the structure of the existing example codelists that shipped with the research template: `opensafely/<codelist-name>/<YYYY-MM-DD>`. If you want a codelist from codelists.opensafely.org, then you need to put it in this format in the `codelist.txt` file. Alternatively, you can add a manual codelist directly into the `study_definition.py` file. 
+First take a look at the `codelists/codelist.txt` file in the repo, and note the structure of the existing example codelists that shipped with the research template: `opensafely/<codelist-name>/<YYYY-MM-DD>`. If you want a codelist from [codelists.opensafely.org](https:\\codelists.opensafely.org), then you need to put it in this format in the `codelist.txt` file. 
 
 Now find the codelist:
 
-* Go to codelists.opensafely.org and search "transplant". 
+* Go to [codelists.opensafely.org](https:\\codelists.opensafely.org) and search "transplant". 
 * Click on the "Solid Organ Transplantation" codelist.
 * Construct the codelist location from the **Codelist ID** and the **Version**. This should be `opensafely/solid-organ-transplantation/2020-04-10`
 * paste this into a new line in `codelists/codelist.txt`
@@ -319,7 +307,7 @@ You should see these changes appear in GitHub Desktop. This is a good time to `c
 * Write a brief commit message, e.g., "add transplant codelist". No need for a description.
 * Click `Commit to add-transplant-var`
 
-Now you have committed te changes to your local repo (but not yet pushed to the remote repo on GitHub.)
+Now you have committed the changes to your local repo but not yet pushed (published) to the remote repo on GitHub.
 
 ### Define the transplant variable in `study_definition.py` and `commit`
 
@@ -371,7 +359,7 @@ This will open a webpage on GitHub. Review the changes, fill in any extra detail
 
 Once the PR has been approved, you can click merge and then delete the branch on the remote. 
 
-You will also need to delete the branch on from your local repo, since branch deletions aren't copied across when fetching. 
+You may also want to delete the branch on your local repo to keep things tidy (since branch deletions aren't copied across when fetching) though this isn't essential. Just click `Branch > Delete` in GitHub Desktop. 
 
 
 ### (to be added)
