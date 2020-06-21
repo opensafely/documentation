@@ -258,7 +258,7 @@ This will produce an `.html` document giving some summary statistics about each 
     cohortextractor cohort_report
     
 Re-run it each time you want to update the document using the latest version of the `input.csv` dataset. Assuming that your working directory is the repo folder, you should be able to run `cohortextractor` commands. 
-
+This command can also be run on the real data, though for now this has to be requested from an OpenSAFELY developer. 
 
 ## Editing the Study Definition and gitting changes
 
