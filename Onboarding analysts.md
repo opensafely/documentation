@@ -253,7 +253,7 @@ Beware again that in Windows, if one or more of these codelist files is open the
 
 #### `remote`
 
-This will to run an extract on the real data, with the results of that extract saved within the secure environment. When using the `remote` function for the first time, you'll be propmted for a username and password. To start an extract, first check out the repo that you want to use, then switch to that repo in your terminal. The command is run like this:
+This will run an extract on the real data, with the results of that extract saved within the secure environment. When using the `remote` function for the first time, you'll be prompted for a username and password. To start an extract, first `checkout` the repo that you want to use, then switch to that repo in your terminal. The command is run like this:
 ```
 cohortextractor remote generate_cohort --ref <name of branch or tag to be run>
 ```
