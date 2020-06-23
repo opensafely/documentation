@@ -251,6 +251,22 @@ Run it -- it will add (or update) the codelist `.csv` files in the `codelists/` 
 
 Beware again that in Windows, if one or more of these codelist files is open then `update_codelists` won't be able to run. 
 
+#### `remote`
+
+This will to run an extract on the real data, with the results of that extract saved within the secure environment. When using the `remote` function for the first time, you'll be propmted for a username and password. To start an extract, first check out the repo that you want to use, then switch to that repo in your terminal. The command is run like this:
+```
+cohortextractor remote generate_cohort --ref <name of branch or tag to be run>
+```
+The branch or tag that you're running will most often be `master`, but could be the name of another branch, or the tag of a specific release.
+
+You can check whether running jobs have completed using:
+```
+cohortextractor remote log
+```
+As with [generate_cohort](https://github.com/opensafely/documentation/blob/new-onboarding/Onboarding%20analysts.md#generate_cohort), you cannot have the `input.csv` open in the secure environment and generate a new one at the same time.
+
+##### (to be added - instruction for specifying which database to run the analysis on i.e. full or sample)
+
 #### `cohort_report`
 
 This will produce an `.html` document giving some summary statistics about each variable in the study dataset. Use it like this:
@@ -378,3 +394,7 @@ You may also want to delete the branch on your local repo to keep things tidy (s
 Now that you have a dummy dataset on your local machine, you can develop any analytical code you like against this dataset, on a separate branch, of course. The current workflow only supports Stata code by running the `analysis/model.do` file. You should make sure any results produced by `model.do` are outputted to the `outputs/` folder. It's possible to create multiple `.do` files in the analysis folder, which can be called by the `model.do` script. 
 
 Once you are happy with the analysis branch and want to try to run it against the real data, push it to the remote repo and submit a pull request. This will be checked by a developer and run against the real data. Assuming no errors, the contents of `outputs/` will be available to the developer to check for disclosivity, censored where necessary, then transferred to a release folder and pushed to the remote repo for you to see.
+
+### Running a cohort extract remotely
+
+See `remote` [here](https://github.com/opensafely/documentation/blob/new-onboarding/Onboarding%20analysts.md#remote).
