@@ -383,12 +383,13 @@ Once the PR has been approved, you can click merge and then delete the branch on
 
 You may also want to delete the branch on your local repo to keep things tidy (since branch deletions aren't copied across when fetching) though this isn't essential. Just click `Branch > Delete` in GitHub Desktop. 
 
+### Fetching
 
-### (to be added)
-* fetch
-* branch, add, commit, push, fetch command line equivalents
+It's possible for the master branch to be updated independently of your current development branch, as a result of another branch being approved and merged. These could be behind-the-scenes updates made by OpenSAFELY's tech team, or updates to the Study Definition or analysis files by another researcher working on the repo. It's important to bring these changes into your development branch to avoid merge conflicts. We do this using `fetch`.
 
+* In GitHub desktop, click `Fetch origin`
 
+You should make a habit of `fetch`ing frequently to reduce the occurrence of [merge conflicts](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts. If you do get a warning about a merge conflict, try to understand what's causing it using the `Resolve conflicts` button on your PR on GitHub. Do not actually resolve these conflicts (by clicking `Mark as resolved`) unless you're absolutely sure what why the conflict is there and which version to accept. Speak to a member of the tech team if you have any doubts. 
 
 
 ## Study analysis
