@@ -299,7 +299,7 @@ The first thing to think about before making any changes, whether adding, deleti
 
 Open GitHub Desktop, and make sure the current repository is the the one you're working on. Click `Branch > New branch` and choose a new name that reflects the changes you wish to make, e.g., `update-codelists`, or `exploratory-notebook`. In our example, this can be `add-transplant-var`.
 
-Then publish the branch. It's a good idea to do straight way so that others know what you're working on. It's also necessary git housekeeping before being able to push commits to the remote repo.
+<!--Then publish the branch. It's a good idea to do straight way so that others know what you're working on. It's also necessary git housekeeping before being able to push commits to the remote repo.-->
 
 ### Add the relevant codelist and `commit`
 
@@ -357,11 +357,13 @@ This is a good time to `commit` again:
 
 * In GitHub Desktop, select the changed file, write a useful commit message, and click `Commit to add-transplant-var`. 
 
+For more guidance on making good git commit messages, and other good git practice, [read this](https://github.com/ebmdatalab/best_practice_guidance). 
+
 ### `push` the `commit`s to the remote repo
 
 You've now completed the required changes so this is good opportunity to `push` your set of `commit`s to the remote repo. 
 
-* In GitHub desktop, click `Push origin`. 
+* In GitHub desktop, click `Push origin` -- you may have to click `Publish Branch` first
 
 ### Create a `pull request` for review
 
