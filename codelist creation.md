@@ -38,13 +38,16 @@ Discuss and document each decision clearly and comprehensively in the issue. Exp
 
 The current coding systems available in opencodelists are listed below. 
 
-* Pseudo BNF -- `BNFCode`
-* CTV3 (Read v3) -- `CTV3Code`
-* CTV3 (Read v3) with TPP extensions-- `CTV3Code`
-* Dictionary of Medicines and Devises (dm+d) -- `DMDCode`
-* International Classification of Diseases 10 (ICD-10) -- `ICD10Code`
-* Read v2 -- `Read2Code`
-* SNOMED CT -- `SNOMEDCode`
+| Coding system  | CSV column name |
+| ---- | ---- |
+| [Pseudo BNF](https://ebmdatalab.net/prescribing-data-bnf-codes/)  | `BNFCode`  |
+| CTV3 (Read v3)  | `CTV3Code`  |
+| CTV3 (Read v3) with TPP extensions  | `CTV3Code`  |
+| [Dictionary of Medicines and Devises (dm+d)](https://ebmdatalab.net/what-is-the-dmd-the-nhs-dictionary-of-medicines-and-devices/)  | `DMDCode`  |
+| International Classification of Diseases 10 (ICD-10)  | `ICD10Code`  |
+| Read v2  | `Read2Code`  |
+| SNOMED CT  | `SNOMEDCode`  |
+
 
 Each codelist must use exactly one of these systems. 
 
