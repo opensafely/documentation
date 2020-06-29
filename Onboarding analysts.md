@@ -200,16 +200,18 @@ This contains a `.txt` document listing the codelists that you want to retrieve 
 
 See the Study Definition documentation for more on how to update the codelists. 
 
-#### `outputs/`
+#### `output/`
 This folder contains:
 *  the `input.csv` file containing the (dummy or real) dataset. You will only have access to the dummy version of this dataset.
 *  Any other files outputted by the `.do` scripts that convert `input.csv` into study results, tables, figures, etc.
 
 When running in development, this folder contains everything (as run on the dummy dataset). When running in production on the real data, the outputs will be manually checked for disclosivity, censored if necessary, and released to the remote repo. 
 
+Be aware that `input.csv` is included in the `.gitignore` file, so that it is never uploaded to the remote repo. Locally, you can always generate a new dummy dataset with `cohortextractor`. A dummy version is also automatically generated every time you push changes to the remote repo as part of a set of tests and checks that make sure the code will run to completion. This is available to download as an _asset_ from the _releases_ section of your repo. There's a different version for each branch. 
+
 #### `docs/`
 
-
+Used for documentation.
 
 #### `(other folders)/`
 
