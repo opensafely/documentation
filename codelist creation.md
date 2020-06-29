@@ -8,7 +8,7 @@ This document is intended for OpenSAFELY users who want to understand how create
 
 The general workflow for creating codelists is as follows:
 
-1. Search [codelists.opensafely.org](https://codelists.opensafely.org) for codelists that might meet or nearly meet your requirements and make sure that one doesn't already exist
+1. Search [codelists.opensafely.org](https://codelists.opensafely.org) for codelists that meet or nearly meet your requirements and make sure that one doesn't already exist
 2. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 3. Use the issue to discuss and agree the final codelist
 4. Once agreed, obtain sign-off
@@ -25,7 +25,7 @@ The issue title should start with either:
 * \*PATIENT\* -- non-clinical patient information (demographic, social, etc)
 * \*CONDITION\* -- specific clinical conditions / disorders / findings / symptoms
 * \*DISEASE\* -- specific diseases
-* \*MEDICINE\* -- medicines, treatments, or interventions
+* \*MEDICINE\* -- medicines, treatments, prescriptions, interventions
 * another codelist classification if relevant. 
 
 <!--are these appropriate classifications? disease versus condition is a notoriously poorly-understood distinction. what about symptoms, disorders, etc. does it matter?</font>-->
@@ -48,7 +48,7 @@ The current coding systems available in opencodelists are listed below.
 
 Each codelist must use exactly one of these systems. 
 
-The final codelist must be stored in CSV format to be imported into [codelists.opensafely.org](https://codelists.opensafely.org). The codes must be stored in exactly one column. You can include other columns (such as code descriptions) if useful. There is currently a soft requirement that the first column should contain the codes and this column should be named as per the list above, e.g., for CTV3 the column header should be `CTV3Code`. 
+The final codelist must be stored in CSV format to be imported into [codelists.opensafely.org](https://codelists.opensafely.org). The codes must be stored in exactly one column. You can include other columns (such as code descriptions) if useful. There is currently a soft requirement that the codes should be contained in the first column, which should be named as per the list above. For example, if using CTV3 then the column header should be `CTV3Code`. 
 
 ## Sign-off
 
@@ -75,8 +75,8 @@ Once the codelist is in [codelists.opensafely.org](https://codelists.opensafely.
 
 ## Codelist contributorship
 
-(how contributions to codelists are acknowledged -- to add)
+How contributions to codelists are acknowledged -- to be agreed.
 
 ## Editing existing codelists
 
-(to add)
+CUrrently undocumented.
