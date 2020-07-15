@@ -5,7 +5,7 @@ This document will take you through everything needed to use the OpenSAFELY plat
 * Create a new OpenSAFELY GitHub repository for your study
 * Clone the repository to a local folder
 * Update the Study Definition according to your study codelists, population, and variables
-* Create, edit, and retrieve codelists at [codelists.opensafely.org](https:\\codelists.opensafely.org)
+* Create, edit, and retrieve codelists at [codelists.opensafely.org](https://codelists.opensafely.org)
 * Create dummy datasets for testing analysis code based on the OpenSAFELY's _expectations_ framework
 * Commit these changes via git, then push them to the remote repository and create a pull request
 * Understand and use good practice for version control with git e.g., when using `branch`, `commit`, `push`, `pull`.
@@ -73,11 +73,11 @@ To set up 2FA [follow these instructions](https://help.github.com/en/github/auth
 
 
 
-## Install [**Python 3**](https://www.python.org/)
+## Install Python 3
 
 \* **Please read even if you already have Python installed** \* 
 
-For security, consistency, and readability, OpenSAFELY has an API for creating analysis datasets from the underlying patient data. The API is built in Python, and includes functions for selecting the patients and defining the variables that make up a study dataset. All the characteristics that define the dataset are referred to collectively as the _Study Definition_. Currently, Python must be installed on your machine if you want to develop and run test code locally. 
+For security, consistency, and readability, OpenSAFELY has an API for creating analysis datasets from the underlying patient data. The API is built in [**Python**](https://www.python.org/), and includes functions for selecting the patients and defining the variables that make up a study dataset. All the characteristics that define the dataset are referred to collectively as the _Study Definition_. Currently, Python must be installed on your machine if you want to develop and run test code locally. 
 
 ### Windows users
 For Windows users, we recommend that you install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual), a popular Python distribution that includes an recent version of Python 3, many useful Python packages, and an environment manager. This will help avoid some fiddly annoyances when dealing with multiple versions/installations of Python. 
@@ -196,7 +196,7 @@ This folder contains:
 
 #### `codelists/`
 
-This contains a `.txt` document listing the codelists that you want to retrieve from [codelists.opensafely.org](https:\\codelists.opensafely.org). and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the Study Definition documentation for more on how to update the codelists.
+This contains a `.txt` document listing the codelists that you want to retrieve from [codelists.opensafely.org](https://codelists.opensafely.org). and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the Study Definition documentation for more on how to update the codelists.
 
 See the Study Definition documentation for more on how to update the codelists. 
 
@@ -245,7 +245,7 @@ Beware that on Windows, you can't have `input.csv` open and generate a new one a
 
 
 #### `update_codelists` 
-This will retrieve the codelists from [codelists.opensafely.org](https:\\codelists.opensafely.org) based on those listed in `/codelists/codelists.txt` and put them in the same folder. Use it like this: 
+This will retrieve the codelists from [codelists.opensafely.org](https://codelists.opensafely.org) based on those listed in `/codelists/codelists.txt` and put them in the same folder. Use it like this: 
    
     cohortextractor update_codelists
 
@@ -305,11 +305,11 @@ Open GitHub Desktop, and make sure the current repository is the the one you're 
 
 ### Add the relevant codelist and `commit`
 
-First take a look at the `codelists/codelist.txt` file in the repo, and note the structure of the existing example codelists that shipped with the research template: `opensafely/<codelist-name>/<YYYY-MM-DD>`. If you want a codelist from [codelists.opensafely.org](https:\\codelists.opensafely.org), then you need to put it in this format in the `codelist.txt` file. 
+First take a look at the `codelists/codelist.txt` file in the repo, and note the structure of the existing example codelists that shipped with the research template: `opensafely/<codelist-name>/<YYYY-MM-DD>`. If you want a codelist from [codelists.opensafely.org](https://codelists.opensafely.org), then you need to put it in this format in the `codelist.txt` file. 
 
 Now find the codelist:
 
-* Go to [codelists.opensafely.org](https:\\codelists.opensafely.org) and search "transplant". 
+* Go to [codelists.opensafely.org](https://codelists.opensafely.org) and search "transplant". 
 * Click on the "Solid Organ Transplantation" codelist.
 * Construct the codelist location from the **Codelist ID** and the **Version**. This should be `opensafely/solid-organ-transplantation/2020-04-10`
 * paste this into a new line in `codelists/codelist.txt`
