@@ -26,7 +26,7 @@ dummy data.
 Multiple study definition files can be specified using a suffix like:
 ```
 study_definition_copd.py
-study_definition_astham.py
+study_definition_asthma.py
 ```
 
 And all the corresponding output files will have the same suffix e.g.
@@ -101,7 +101,16 @@ population=patients.satisfying(
 )
 ```
 
+To retrieve all patients currently available in OpenSAFELY in your study cohort, use:
+
+```py
+population=patients.all()
+```
+
 # Variable definitions
+
+All available functions for defining variables within a study definition can be viewed in [`patients.py`](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py) in the [`cohort-extractor`](https://github.com/opensafely/cohort-extractor) repository. New functions (or changes to existing functions) that are currently under consideration can be found on the `cohort-extractor` [issues page](https://github.com/opensafely/cohort-extractor/issues). 
+
 
 ## Clinical Events
 
