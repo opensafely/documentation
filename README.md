@@ -4,7 +4,7 @@ This repo contains documentation for the OpenSAFELY platform. **Documents are cu
 * info for prospective collaborators including pre-requisites, FAQs
 * onboarding instructions for new collaborators
 * the OpenSAFELY workflow
-* a lossary
+* a glossary
 * code/function documentation
 * code of conduct
 
