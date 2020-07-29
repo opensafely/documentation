@@ -15,6 +15,6 @@ OpenSAFELY is a rapidly changing platform and the user documentation should be u
 
 * Suggest improvements in an [issue](https://github.com/opensafely/documentation/issues).
 * Clone the repo locally, make edits on a new branch, then create a pull request for it.
-* Edit directly on Github, making sure to "Create a new branch for this commit and start a pull request".
+* [Edit directly on Github](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository), making sure to "Create a new branch for this commit and start a pull request".
 
 Please do not commit changes directly to the master branch.
