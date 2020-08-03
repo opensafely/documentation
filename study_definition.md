@@ -19,7 +19,7 @@ real patient data.
 
 When you run `cohortextractor generate_cohort`, the framework reads a
 study definition at `analysis/study_definition.py`, and writes the
-output dataframe to `analysis/input.csv`.  In a production environment
+output dataframe to `output/input.csv`.  In a production environment
 this will be real data; in a development environment this will be
 dummy data.
 
@@ -77,7 +77,7 @@ As such, codelists should not be added or edited by hand.  Instead:
 
 # Population definitions
 
-Most commonly, you will want to include only patients with a continuous history of (say) 12 months, so that you exclude patients who switch practices regularly.
+Most commonly, you will want to include only patients with a continuous history of (say) 12 months, so that you exclude patients who have switched practice recently and hence may have an incomplete record of their conditions.
 
 ```py
 
@@ -133,7 +133,7 @@ Returning a count:
 
 ```py
 asthma_count=patients.with_these_clinical_events(
-    astham_codes,
+    asthma_codes,
     between=["2001-12-01", "2002-06-01"],
     returning="number_of_matches_in_period",
 ),
@@ -361,7 +361,7 @@ code will throw an error if anything else is ever found in this field.
 
 ## Consultations
 
-in OpenSAFELY, a "consultation" means a GP-patient interactions, either
+In OpenSAFELY, a "consultation" means a GP-patient interactions, either
 in person or via phone/video call. However, the concept of a
 "consultation" in EHR systems is generally broader and might include
 things like updating a phone number with the receptionist.
