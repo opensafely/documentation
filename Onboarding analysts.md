@@ -243,6 +243,12 @@ Run it -- check that `outputs/input.csv` has been created. Run it again -- the f
 
 Beware that on Windows, you can't have `input.csv` open and generate a new one at the same time.
 
+If you have multiple study definitions in the repo (eg `study_definition_set1.py`, `study_definition_set2.py`) then `generate_cohort` will create dataset for each (eg `input_set1.csv`, `intput_set2.csv`). You can restrict it to a single study definition using the `study-definition` option, like this:
+
+    cohortextractor generate_cohort --expectations-population 10000 --study-definition study_definition_set2
+
+This is most useful when extracting real data on the server when only some study definitions have been updated, due to the time taken to run each study definition. 
+
 
 #### `update_codelists` 
 This will retrieve the codelists from [codelists.opensafely.org](https://codelists.opensafely.org) based on those listed in `/codelists/codelists.txt` and put them in the same folder. Use it like this: 
