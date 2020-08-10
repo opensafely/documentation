@@ -548,8 +548,8 @@ Many studies will require a flowchart to show inclusion/exclusion of patients in
 
 ## Common variables when using multiple study definitions
 
-When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. This makes it annoying because you then have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. With a bit of coder help I've made a way to share these common variables between study definitions:
-1. Make a file called common_variables.py containing the following code
+When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. To avoid this, there is a way to share these common variables between study definitions:
+1. Make a file called `common_variables.py` containing the following code
 ```py
 from cohortextractor import patients
 from codelists import *
