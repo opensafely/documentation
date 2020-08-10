@@ -544,3 +544,32 @@ Many studies will require a flowchart to show inclusion/exclusion of patients in
 
  - Make a copy of the study definition (called `study_definition_flow_chart.py`). The `population=patients.satisfying()` function should be replaced with `population=patients.all()`. Then all variables except for those that appeared in the population definition logic should be removed (this will mean that it runs much faster than the main study definition). An example of such a study definition is [here](https://github.com/opensafely/nsaids-covid-research/pull/24).
   - Then make a Stata .do file that reads the `input_flow_chart.csv` and then sequentially drops each of the variables and counts the remaining population, in whatever order you'd like to report them. For example [here](https://github.com/opensafely/nsaids-covid-research/blob/flowchart/analysis/flowchart_numbers.do)
+
+
+## Common variables when using multiple study definitions
+
+When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. To avoid this, there is a way to share these common variables between study definitions:
+1. Make a file called `common_variables.py` containing the following code
+```py
+from cohortextractor import patients
+from codelists import *
+common_variables = dict(
+    # LIST OF ALL COMMON VARIABLES IN THE SAME FORMAT THEY WOULD BE IN A NORMAL STUDY DEFINITION, E.G.
+    age=patients.age_as_of(
+        "2020-02-01",
+        return_expectations={
+            "rate": "universal",
+            "int": {"distribution": "population_ages"},
+        },
+    ),
+    sex=patients.sex(
+        return_expectations={
+            "rate": "universal",
+            "category": {"ratios": {"M": 0.49, "F": 0.51}},
+        }
+    ),
+)
+```
+2. Within each `study_definition.py`, add the line `from common_variables import common_variables` near the top with the other imports
+3. Just before the final closing brackets at the end of the file, add `**common_variables`
+An example of how this should look is [here](https://github.com/opensafely/post-covid-thrombosis-research/tree/4cc8bfcef94137e2aa65f9cd1d50fa9c9de8ce12)
