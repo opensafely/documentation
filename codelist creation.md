@@ -80,4 +80,9 @@ How contributions to codelists are acknowledged -- to be agreed.
 
 ## Editing existing codelists
 
-CUrrently undocumented.
+* Go to an existing Codelist page.
+* Click Edit metadata.
+* Edit the relevant fields
+	* Note: Changing the CSV data requires you Update the current Version or Create a new Version, both can be done from the Codelist page.
+	* Add, remove, or edit the References and SignOffs as needed.
+* Click Submit
