@@ -60,13 +60,11 @@ Once a draft codelist has been agreed, it must be signed-off by a "data expert" 
 
 ## Add to [codelists.opensafely.org](https://codelists.opensafely.org)
 
-* Go to the openSAFELY [codelist admin page](https://codelists.opensafely.org/admin). You will need an editor account.
-* Under "CODELISTS", click "Add".
+* Go to the openSAFELY [new codelist page](https://codelists.opensafely.org/codelist/opensafely/). You will need an editor account.
 * Fill in the fields. Include lots of detail (specific guidance to follow).
-	* **Version**: this should be the current date.
 	* **CSV data**: _DO NOT_ copy the data from within spreadsheet software such as Excel (this can reformat or revalue cells, for example with very long numeric codes that are interpreted as integers). Instead, open the CSV file in a text editor such as notepad and copy the raw text data.
 	* **References**: this should include a link to the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development), and any other relevant materials.
-* Click save and check the new codelist has appeared on the main site.
+* Click Submit and check the new codelist has appeared on the main site.
 
 ## Close the issue in the repo
 
