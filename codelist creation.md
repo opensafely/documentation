@@ -60,13 +60,21 @@ Once a draft codelist has been agreed, it must be signed-off by a "data expert" 
 
 ## Add to [codelists.opensafely.org](https://codelists.opensafely.org)
 
-* Go to the openSAFELY [codelist admin page](https://codelists.opensafely.org/admin). You will need an editor account.
-* Under "CODELISTS", click "Add".
+* Go to the openSAFELY [new codelist page](https://codelists.opensafely.org/codelist/opensafely/). You will need an editor account. Ask one of the tech team for one if you do not have one.
 * Fill in the fields. Include lots of detail (specific guidance to follow).
-	* **Version**: this should be the current date.
-	* **CSV data**: _DO NOT_ copy the data from within spreadsheet software such as Excel (this can reformat or revalue cells, for example with very long numeric codes that are interpreted as integers). Instead, open the CSV file in a text editor such as notepad and copy the raw text data.
+	* **CSV data**: [Export your Spreadsheet to a CSV](https://github.com/opensafely/documentation/blob/master/codelist%20creation.md#exporting-a-csv-from-a-spreadsheet) and choose that file.
 	* **References**: this should include a link to the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development), and any other relevant materials.
-* Click save and check the new codelist has appeared on the main site.
+* Click Submit and check the new codelist has appeared on the main site.
+
+
+## Exporting a CSV from a Spreadsheet
+* In Excel go to File
+* Click Export in the left-hand ribbon menu
+* Select Change File Type
+* Click CSV (Command delimited) (\*.csv)
+
+![](https://user-images.githubusercontent.com/40460354/90112253-a7737680-dd47-11ea-8271-a43b37a65bd5.png)
+
 
 ## Close the issue in the repo
 
@@ -82,4 +90,24 @@ How contributions to codelists are acknowledged -- to be agreed.
 
 ## Editing existing codelists
 
-CUrrently undocumented.
+* Go to an existing Codelist page.
+* Click Edit metadata.
+* Edit the relevant fields
+	* Note: Changing the CSV data requires you Update the current Version or Create a new Version, both can be done from the Codelist page.
+	* Add, remove, or edit the References and SignOffs as needed.
+* Click Submit
+
+
+## Publishing a Codelist Version
+
+* Go to an existing Codelist page.
+	* This will show you the latest version for a Codelist
+* If it's a draft version there will be a Publish version button on the left below Create new version.
+* If not, it's already published, good job!
+
+
+## Adding a Codelist Version
+
+* Go to an existing Codelist page.
+* Click Create new version
+* If you want to update the existing version, click Update version instead.
