@@ -71,7 +71,7 @@ Once a draft codelist has been agreed, it must be signed-off by a "data expert" 
 * In Excel go to File
 * Click Export in the left-hand ribbon menu
 * Select Change File Type
-* Click CSV (Command delimited) (\*.csv)
+* Click CSV (Comma delimited) (\*.csv)
 
 ![](https://user-images.githubusercontent.com/40460354/90112253-a7737680-dd47-11ea-8271-a43b37a65bd5.png)
 
