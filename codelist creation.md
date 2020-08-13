@@ -86,3 +86,11 @@ How contributions to codelists are acknowledged -- to be agreed.
 	* Note: Changing the CSV data requires you Update the current Version or Create a new Version, both can be done from the Codelist page.
 	* Add, remove, or edit the References and SignOffs as needed.
 * Click Submit
+
+
+## Publishing a Codelist Version
+
+* Go to an existing Codelist page.
+	* This will show you the latest version for a Codelist
+* If it's a draft version there will be a Publish version button on the left below Create new version.
+* If not, it's already published, good job!
