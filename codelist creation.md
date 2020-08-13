@@ -94,3 +94,10 @@ How contributions to codelists are acknowledged -- to be agreed.
 	* This will show you the latest version for a Codelist
 * If it's a draft version there will be a Publish version button on the left below Create new version.
 * If not, it's already published, good job!
+
+
+## Adding a Codelist Version
+
+* Go to an existing Codelist page.
+* Click Create new version
+* If you want to update the existing version, click Update version instead.
