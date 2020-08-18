@@ -1,13 +1,29 @@
 # User documentation
 
-This repo contains documentation for the OpenSAFELY platform. **Documents are currently a work-in-progress**. It will eventually contain:
-* info for prospective collaborators including pre-requisites, FAQs
-* onboarding instructions for new collaborators
-* the OpenSAFELY workflow
-* a glossary
-* code/function documentation
-* code of conduct
+This repo contains documentation for the OpenSAFELY platform. **Documents are a work-in-progress**. It currently contains:
 
+* [An introduction to OpenSAFELY platform](https://github.com/opensafely/documentation/blob/master/Introducing%20OpenSAFELY.md)
+* [Walkthrough instructions for using the platform for epidemiological research](https://github.com/opensafely/documentation/blob/master/Onboarding%20analysts.md)
+* [Instructions for creating and editing codelists](https://github.com/opensafely/documentation/blob/master/codelist%20creation.md)
+* [Instructions for writing a study definition](https://github.com/opensafely/documentation/blob/master/study_definition.md)
+* [Open Data Manifesto](https://github.com/opensafely/documentation/blob/master/Open%20Data%20Manifesto.md)
+
+## Useful links
+
+* [TPP Database Schema (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb)
+* [Variable extractor function skeleton documentation](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py)
+* [Variable extractor function python definitions](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/tpp_backend.py)
+* [Instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md)
+* [Latest available records in SystmOne and external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/latest-dates.ipynb)
+* [Ethnicity codes used by external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)
+
+## Planned additions
+
+* info for prospective collaborators including pre-requisites, FAQs
+* a glossary of terms
+* comprehensive code/function documentation
+* code of conduct
+* an overview of the OpenSAFELY workflow
 
 ## Updating the documentation
 
