@@ -228,9 +228,9 @@ Instructions for how to list ignored files properly in `.gitignore` are [here](h
 
 The repo contains a working Study Definition (`study_definition.py`) which you can use to retreive codelists and create dummy data. Before making any changes to `study_definition.py` to match your study (which will need to be properly version controlled in git), it's important to understand how the study definition is used by `cohortextractor`. Without `cohortextractor` you won't be able to run and test any changes that you've made to `study_definition.py` or the codelists.
 
-To confirm you can use `cohortextractor`, go to a terminal and submit `cohortextractor --help`, which will list all the ways in which you can use it. You can also use `cohortextractor generate_cohort --help` to learn more about the `generate_cohort` command, for example. 
+To use `cohortextractor` the directory of your terminal needs to be a research repo directory. You can do this using `cd c:/my-repos-folder/my-repo`. To confirm you can use `cohortextractor` submit `cohortextractor --help`, which will list all the ways in which you can use it. You can also use `cohortextractor generate_cohort --help` to learn more about the `generate_cohort` command, for example. 
 
-Some of these commands are discussed in detail below. Remember that to run any of these commands for your specific local repository, you need to change the direct of your prompt to be the repo directory using for example `cd c:/my-repos-folder/my-repo`.
+Some of these commands are discussed in detail below. 
 
 #### `generate_cohort` 
 This will create a dummy dataset for you, `outputs/input.csv`, based on the _expectations_ declared in the study definition. Use it for example like this:
