@@ -1,0 +1,14 @@
+site_name: OpenSAFELY documentation
+nav:
+    - Home: index.md
+    - Getting started checklist: getting_started_checklist.md
+    - First-time walkthrough: onboarding_analysts.md
+    - Study definition API: study_definition.md
+    - Codelists:
+        - Creating codelists: codelist_creation.md
+        - SNOMED codelists: snomed.md
+
+theme: material
+plugins:
+    - search
+    - mkdocstrings
