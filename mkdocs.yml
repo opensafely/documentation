@@ -7,6 +7,7 @@ nav:
     - Codelists:
         - Creating codelists: codelist_creation.md
         - SNOMED codelists: snomed.md
+    - The Datalab Open Manifesto: open_data_manifesto.md
 
 theme: material
 plugins:
