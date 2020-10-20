@@ -1,4 +1,6 @@
-# Overview
+# Study Definitions
+
+## Overview
 
 A _study definition_ describes all of the features of your study: the
 codelists, the population definitions, the dates, and the variables.
@@ -15,7 +17,7 @@ models their models during development, without ever having to touch
 real patient data.
 
 
-# Naming study definitions
+## Naming study definitions
 
 When you run `cohortextractor generate_cohort`, the framework reads a
 study definition at `analysis/study_definition.py`, and writes the
@@ -35,7 +37,7 @@ input_copd.csv
 input_asthma.csv
 ```
 
-# Codelist definitions
+## Codelist definitions
 
 Many functions for defining covarites take *codelists* as arguments.  Codelists live in CSV files in the `codelists/` directory, and are loaded into variables like this:
 
@@ -53,7 +55,7 @@ from datalab_cohorts import combine_codelists
 all_cardiac_disease_codes = combine_codelists(chronic_cardiac_disease_codes, acute_cardiac_disease_codes)
 ```
 
-## Defining and recording codelists
+### Defining and recording codelists
 
 The canonical source for codelists in OpenSAFELY is [codelists.opensafely.org](https://codelists.opensafely.org).
 
@@ -75,7 +77,7 @@ As such, codelists should not be added or edited by hand.  Instead:
 * Commit the changes and make a PR
 
 
-# Population definitions
+## Population definitions
 
 Most commonly, you will want to include only patients with a continuous history of (say) 12 months, so that you exclude patients who have switched practice recently and hence may have an incomplete record of their conditions.
 
@@ -85,6 +87,8 @@ population=patients.registered_with_one_practice_between(
         "2019-03-01", "2020-03-01"
 )
 ```
+
+::: cohortextractor.patients.registered_with_one_practice_between
 
 You can combine this with other criteria thus:
 
@@ -107,12 +111,15 @@ To retrieve all patients currently available in OpenSAFELY in your study cohort,
 population=patients.all()
 ```
 
-# Variable definitions
-
-All available functions for defining variables within a study definition can be viewed in [`patients.py`](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py) in the [`cohort-extractor`](https://github.com/opensafely/cohort-extractor) repository. New functions (or changes to existing functions) that are currently under consideration can be found on the `cohort-extractor` [issues page](https://github.com/opensafely/cohort-extractor/issues). 
 
 
-## Clinical Events
+
+## Variable definitions
+
+All available functions for defining variables within a study definition can be viewed in [`patients.py`](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py) in the [`cohort-extractor`](https://github.com/opensafely/cohort-extractor) repository. New functions (or changes to existing functions) that are currently under consideration can be found on the `cohort-extractor` [issues page](https://github.com/opensafely/cohort-extractor/issues).
+
+
+### Clinical Events
 
 The most common kind of variable query. It allows you to flag
 patients matching lists of codes.  The flag is typically a date, but
@@ -146,7 +153,7 @@ definition in a date definition like this:
 asthma_count_date=patients.date_of("asthma_count", date_format="YYYY-MM"),
 ```
 
-### Counting episodes
+#### Counting episodes
 
 We currently provide a single way to define an "episode": a continuous
 chain of coded events each of which are no more than a certain number
@@ -164,7 +171,7 @@ study = StudyDefinition(
     ),
 )
 ```
-#### Exclusions
+##### Exclusions
 
 For some definitions of "episode", you want to exclude some kinds of
 consultation. For example, a consultation that includes a COPD coding
@@ -200,7 +207,7 @@ study = StudyDefinition(
 )
 ```
 
-## Adding date columns to existing variables
+### Adding date columns to existing variables
 
 If you have already defined a variable, for which you also want to
 add a date column, you can wrap a definition with `date_of`.
@@ -224,7 +231,7 @@ latest_smoking_date=patients.date_of(
 )
 ```
 
-## with_tpp_vaccination_record
+### with_tpp_vaccination_record
 
 This is TPP-specfic, so the method name reflects that; it will not
 work against other backends.
@@ -268,7 +275,7 @@ Both arguments can either take either a single string or a list of
 strings, in which case it returns results matching _any_ of the items in
 the list.
 
-## Care Homes
+### Care Homes
 
 TPP have attempted to match patient addresses to care homes as stored in
 the CQC database. At its most simple the `care_home_status` query
@@ -313,7 +320,7 @@ care_home_type=patients.care_home_status_as_of(
 )
 ```
 
-## SGSS
+### SGSS
 
 This allows us to check COVID test results in the Second Generation
 Surveillance System. Example queries are:
@@ -359,7 +366,7 @@ The data we receive has an Organism_Species_Name field which is always
 "NEGATIVE SARS-CoV-2 (COVID-19)" in the case of a negative result. The
 code will throw an error if anything else is ever found in this field.
 
-## Consultations
+### Consultations
 
 In OpenSAFELY, a "consultation" means a GP-patient interactions, either
 in person or via phone/video call. However, the concept of a
@@ -395,7 +402,7 @@ has_history=patients.with_complete_gp_consultation_history_between(
 ...
 ```
 
-## Households
+### Households
 
 OpenSAFELY can return information about the household to which the
 patient belonged as of a reference date. This is inferred from address
@@ -425,11 +432,11 @@ household_size=patients.household_as_of(
 ),
 ```
 
-## Missing values
+### Missing values
 
-If a query returns no matching record for a patient &mdash; for example if there are no blood pressure values recorded in a given period, or if there is no death date because the patient hasn't died, or if there is no household size available &mdash; then a default value will be returned. For strings and dates, the default value is the empty string `""`. For booleans, integers, or floats, the default value is `0`. There is no universal `null` value outputted to `input.csv` because these may be handled inconsistently across different programs. 
+If a query returns no matching record for a patient &mdash; for example if there are no blood pressure values recorded in a given period, or if there is no death date because the patient hasn't died, or if there is no household size available &mdash; then a default value will be returned. For strings and dates, the default value is the empty string `""`. For booleans, integers, or floats, the default value is `0`. There is no universal `null` value outputted to `input.csv` because these may be handled inconsistently across different programs.
 
-# Expectations
+## Expectations
 
 Every element in a study definition must have `expectations` defined:
 that is, the general shape of the expected output data.
@@ -501,7 +508,7 @@ There is also a custom distribution matching a typical population-age distributi
     ),
 ```
 
-# Index Dates
+## Index Dates
 
 If you define an `index_date` on a study definition then everywhere that you might normally supply a date you can now supply a "date expression". Here is a simple example:
 
@@ -528,7 +535,7 @@ It's also possible to apply various functions to the index date. The available o
 first_day_of_month(index_date)
 last_day_of_month(index_date)
 first_day_of_year(index_date)
-last_day_of_year(index_date) 
+last_day_of_year(index_date)
 ```
 
 Finally, intervals of time can be added or subtracted from the index date (or from a function applied to the index date). The available units are `year(s)`, `month(s)` and `day(s)`. For example:
@@ -538,10 +545,10 @@ first_day_of_month(index_date) + 9 months
 index_date - 1 year
 ```
 
-Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown. Similarly, if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February. 
+Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown. Similarly, if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
 
 
-## Flowcharts (temporary workaround)
+### Flowcharts (temporary workaround)
 
 Many studies will require a flowchart to show inclusion/exclusion of patients in the study. Eventually the numbers of patients excluded/included will be summarised automatically following cohort extract, but for now, a slightly manual approach is required:
 
@@ -549,7 +556,7 @@ Many studies will require a flowchart to show inclusion/exclusion of patients in
   - Then make a Stata .do file that reads the `input_flow_chart.csv` and then sequentially drops each of the variables and counts the remaining population, in whatever order you'd like to report them. For example [here](https://github.com/opensafely/nsaids-covid-research/blob/flowchart/analysis/flowchart_numbers.do)
 
 
-## Common variables when using multiple study definitions
+### Common variables when using multiple study definitions
 
 When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. To avoid this, there is a way to share these common variables between study definitions:
 1. Make a file called `common_variables.py` containing the following code
