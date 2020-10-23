@@ -6,6 +6,8 @@ Some other resources that may be useful:
 
 ## Useful links
 
+Note, some of these are in private repos as they are under quick development pending release:
+
 * [TPP Database Schema (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb) (needs occasional refreshes)
 * [Variable extractor function skeleton documentation](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py)
 * [Variable extractor function python definitions](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/tpp_backend.py)
