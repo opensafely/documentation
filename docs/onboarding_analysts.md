@@ -19,8 +19,8 @@ OpenSAFELY maintains extremely high standards for data privacy, whilst ensuring 
 
 
 ### Essential
-* **Stata**. OpenSAFELY currently supports Stata v16.1 for statistical analysis. We are not able to provide Stata training. You need to be able to perform all stages of the statistical analysis in Stata, including statistical models and graphic and tabular outputs.
-Support for R and other languages is planned.
+* **Stata, R or Python**
+OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis. Available libraries are restricted by the framework (documentation to follow)
 * **Git** The workflow is strongly integrated into Git/GitHub. At a minimum you need to be able to <!--(clone, branch, commit, push, pull)--> clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, and create a pull request. We are not able to provide foundational Git/GitHub training, though this start up guide points to resources and runs through a basic edit-commit-push-pull workflow.
 <!--We provide a simple tutorial for navigating the OpenSAFELY workflow.-->
 
@@ -46,24 +46,6 @@ For Windows or macOS users new to git, the easiest way to do both is to install 
 If you already have git installed and prefer using your existing git workflow, then this is fine.
 
 If you're not sure if you already have git installed, type `git --version` into any command line terminal.
-
-<!--To install git [follow these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Select the default/recommended options unless you understand the consequences of changing them.-->
-
-<!-- ### Your GitHub account linked to git
-
-To do this, open a terminal and submit these two lines (without the _<>_, with or without the _""_):
-
-       git config --global user.name "<git_username>"
-       git config --global user.email "<github.email@domain.com>"
-
-The `<git_username>` doesn't have to be the same as your GitHub account username, but `<github.email@domain.com>` should be that used for your GitHub account if you want to associate any repo activity to your account.
-To check this has worked and that you used the correct details, submit:
-
-      git config --list
-
-For more info about how your git email address is used by GitHub, [read this](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address).
-
-<font color='red'>Do we want to set up authenticated accounts?</font> -->
 
 ### Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
 This is only necessary for running code against the real data. <font color='red'>Ask _?_ to be added</font>. If you're not sure if you already have access, go to [*settings > security*](https://github.com/settings/organizations) in GitHub and check that _opensafely_ is listed.
@@ -106,7 +88,9 @@ You should use the _Anaconda Prompt_ whenever you want to run OpenSAFELY's `coho
 pip install opensafely-cohort-extractor
 ```
 
-To check this has installed successfully, submit `cohortextractor --help` and it should print some details of how it can be used.
+To check this has installed successfully, submit `cohortextractor --help` and it should print some details of how it can be used. You can check the current version with:
+
+    cohortextractor --version
 
 Update by submitting:
 
@@ -141,41 +125,11 @@ Now we're going to download a copy of this repo to your machine so you can work 
 * test and run code without disturbing other contributors
 * ...
 
-<!--
-To get the repo on your machine:
-1. Select (or create) a folder on your machine where you would like to put repository. `C:/my-repos`, say. A new folder containing the repo will be added to this folder. Change the working directory in the Anaconda prompt to this folder by submitting:
-
-       cd C:/my-repos-folder
-
-   Alternatively, type `cd` and drag the folder into the prompt (to save copying or typing).
-
-2. Go to the repository's homepage on GitHub, click <span style="background-color: green; color: white">&nbsp;**Clone or download**&nbsp;</span> and copy the URL for the repo to your clipboard.
-
-3. Go back to the anaconda Prompt and type
-
-       git clone <https://github.com/<repo-owner>/<repo-name>.git>
-
-   where `<...>` is what you've just copied to the clipboard. <font color='red'>(It still works without `.git` at the end of the url. Is it better to do one or the other?)</font>
-
-
-4. Change the working directory to the repo folder by submitting:
-
-       cd <repo-name>
-
-5. verify that you're in the repo by submitting:
-
-       git status
-
-    You should get a message saying `Your branch is up to date with 'origin-master'`.
-
--->
-
 To clone your new repository to your machine, [follow these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) which explains cloning both via GitHub Deskop or via the command line. When this is done, you should have a folder whose name is the same as the repo on your machine.
 
 Before making any changes, try to understand the folder structure first...
 
 ## Understanding the repo structure
-
 
 #### `project.yaml`
 
