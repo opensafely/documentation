@@ -1,6 +1,20 @@
 site_name: OpenSAFELY documentation
 nav:
     - Home: index.md
+    - Updating the Documentation: updating_documentation.md
+    - Our Philosophy:
+        - Open Working Methods: our_philosophy.md
+        - The Datalab Open Manifesto: open_data_manifesto.md
+    - Overview:
+        - Workflow Overview: overview_pipeline.md
+        - Minimal Requirements: min_req.md
+        - Datasets: dataset_landing_page.md
+    - Setting up your Project:
+        - Developing a Research Question and Protocol: protocol.md
+        - Creating your Project Repo on Github: project_setup.md
+    - Codelists:
+        - Introduction to Codelists: codelist_intro.md
+        - Building a Codelist: codelist_creation.md
     - Getting started checklist: getting_started_checklist.md
     - First-time walkthrough: onboarding_analysts.md
     - Study definitions:
@@ -10,7 +24,6 @@ nav:
     - Codelists:
         - Creating codelists: codelist_creation.md
         - SNOMED codelists: snomed.md
-        - The Datalab Open Manifesto: open_data_manifesto.md
     - Installing Docker: installing_docker.md
 
 theme: material

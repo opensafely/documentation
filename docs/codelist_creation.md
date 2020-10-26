@@ -1,9 +1,3 @@
-# Codelist creation guidance in OpenSAFELY
-
-For transparency, replicability, and reproducibility, all codelists used in OpenSAFELY research projects should be taken from a specific dated version of a codelist recorded in [codelists.opensafely.org](https://codelists.opensafely.org). 
-
-This document is intended for OpenSAFELY users who want to understand how create and upload codelists to [codelists.opensafely.org](https://codelists.opensafely.org).
-
 ## Workflow
 
 The general workflow for creating codelists is as follows:
@@ -15,8 +9,6 @@ The general workflow for creating codelists is as follows:
 5. Add the codelist to [codelists.opensafely.org](https://codelists.opensafely.org)
 6. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 7. Import the codelist for use in your study definition
-
-
 
 ## Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 
