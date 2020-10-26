@@ -1,0 +1,6 @@
+# virtual environment
+/venv
+
+# IDE related files
+.idea/
+.DS_Store
