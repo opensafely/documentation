@@ -18,3 +18,4 @@ We provide easy-to-use Python functions to define your study population and stud
 However, some knowledge of Python may still be beneficial to create or modify existing functions.
 * **Docker**
 We use Docker containers to simulate the production environment on your machine, so you can [test locally](project_pipelines.md).
+

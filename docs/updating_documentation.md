@@ -1,4 +1,4 @@
-## Updating the documentation
+## How to Update
 
 OpenSAFELY is a rapidly changing platform and the user documentation should be updated frequently to keep pace. 
 If you are an OpenSAFELY user and want to contribute corrections, clarifications, or new materials to the documentation, 

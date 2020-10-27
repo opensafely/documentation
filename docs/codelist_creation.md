@@ -4,11 +4,17 @@ The general workflow for creating codelists is as follows:
 
 1. Search [codelists.opensafely.org](https://codelists.opensafely.org) for codelists that meet or nearly meet your requirements and make sure that one doesn't already exist
 2. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
-3. Use the issue to discuss and agree the final codelist
-4. Once agreed, obtain sign-off
-5. Add the codelist to [codelists.opensafely.org](https://codelists.opensafely.org)
-6. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
-7. Import the codelist for use in your study definition
+3. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
+previous research papers
+4. Search for your terms in the Codelist Builder and add/remove codelists to end up with a list. 
+5. Download this list as a CSV, convert to Excel and upload to the Github issue. 
+6. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
+as a group (i.e. at least 2). Detailed reasons are helpful in this issue for referencing in the future. 
+7. Once agreed, obtain sign-off
+8. Add the codelist to [codelists.opensafely.org](https://codelists.opensafely.org), summarise your discussion briefly, 
+and reference the issue on the website for more details.  This will initially be a draft. When ready, publish it. 
+9. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
+10. Import the codelist for use in your study definition
 
 ## Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 
@@ -20,13 +26,15 @@ The issue title should start with either:
 * \*MEDICINE\* -- medicines, treatments, prescriptions, interventions
 * another codelist classification if relevant. 
 
-<!--are these appropriate classifications? disease versus condition is a notoriously poorly-understood distinction. what about symptoms, disorders, etc. does it matter?</font>-->
+<!--are these appropriate classifications? disease versus condition is a notoriously poorly-understood distinction. 
+what about symptoms, disorders, etc. does it matter?</font>-->
 
 The rest of the title should be short and informative. 
 
 ## Discuss and document and review
 
-Discuss and document each decision clearly and comprehensively in the issue. Explain why codes have been included and why codes have been excluded. Link to relevant webpages and documents. Upload files. Involve domain experts. Iterate.
+Discuss and document each decision clearly and comprehensively in the issue. Explain why codes have been included and 
+why codes have been excluded. Link to relevant webpages and documents. Upload files. Involve domain experts. Iterate.
 
 The current coding systems available in opencodelists are listed below. 
 
@@ -43,19 +51,27 @@ The current coding systems available in opencodelists are listed below.
 
 Each codelist must use exactly one of these systems. 
 
-The final codelist must be stored in CSV format to be imported into [codelists.opensafely.org](https://codelists.opensafely.org). The codes must be stored in exactly one column. You can include other columns (such as code descriptions) if useful. There is currently a soft requirement that the codes should be contained in the first column, which should be named as per the list above. For example, if using CTV3 then the column header should be `CTV3Code`. 
+The final codelist must be stored in CSV format to be imported 
+into [codelists.opensafely.org](https://codelists.opensafely.org). The codes must be stored in exactly one column. 
+You can include other columns (such as code descriptions) if useful. There is currently a soft requirement that the 
+codes should be contained in the first column, which should be named as per the list above. For example, if using 
+CTV3 then the column header should be `CTV3Code`. Do not keep the original codelist in Excel and then filter by a include or exclude
+column as this will be lost when converted to CSV, and you will end up with all the codes again. 
 
 ## Sign-off
 
-Once a draft codelist has been agreed, it must be signed-off by a "data expert" (epidemiological sign-off) and "disease expert" (clinical sign-off) from at least two different people. 
+Once a draft codelist has been agreed, it must be signed-off by a "data expert" (epidemiological sign-off) and 
+"disease expert" (clinical sign-off) from at least two different people. 
 
 
 ## Add to [codelists.opensafely.org](https://codelists.opensafely.org)
 
-* Go to the openSAFELY [new codelist page](https://codelists.opensafely.org/codelist/opensafely/). You will need an editor account. Ask one of the tech team for one if you do not have one.
+* Go to the openSAFELY [new codelist page](https://codelists.opensafely.org/codelist/opensafely/). 
+You will need an editor account. Ask one of the tech team for one if you do not have one.
 * Fill in the fields. Include lots of detail (specific guidance to follow).
 	* **CSV data**: [Export your Spreadsheet to a CSV](https://github.com/opensafely/documentation/blob/master/codelist%20creation.md#exporting-a-csv-from-a-spreadsheet) and choose that file.
 	* **References**: this should include a link to the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development), and any other relevant materials.
+	* **Sign Off**: This should match the people signing off on the issue. You need at least 2 people and can have many more. 
 * Click Submit and check the new codelist has appeared on the main site.
 
 
@@ -70,11 +86,14 @@ Once a draft codelist has been agreed, it must be signed-off by a "data expert" 
 
 ## Close the issue in the repo
 
-Go to the codelist issue in the [codelist repo](https://github.com/opensafely/codelist-development) and close it. This issue serves as documentation of the choices made that determined the final codelist. The issue can be re-opened if revisions are required.
+Go to the codelist issue in the [codelist repo](https://github.com/opensafely/codelist-development) and close it. 
+This issue serves as documentation of the choices made that determined the final codelist. The issue can be 
+re-opened if revisions are required.
 
 ## Import the codelist for use in your study definition
 
-Once the codelist is in [codelists.opensafely.org](https://codelists.opensafely.org), you can retrieve it for use in your research repo. Follow [these instructions](https://github.com/opensafely/documentation/blob/master/Onboarding%20analysts.md#add-the-relevant-codelist-and-commit) if you're not sure how to do this.
+Once the codelist is in [codelists.opensafely.org](https://codelists.opensafely.org), you can retrieve it for use in 
+your research repo. Follow [these instructions](https://github.com/opensafely/documentation/blob/master/Onboarding%20analysts.md#add-the-relevant-codelist-and-commit) if you're not sure how to do this.
 
 ## Codelist contributorship
 
@@ -88,7 +107,6 @@ How contributions to codelists are acknowledged -- to be agreed.
 	* Note: Changing the CSV data requires you Update the current Version or Create a new Version, both can be done from the Codelist page.
 	* Add, remove, or edit the References and SignOffs as needed.
 * Click Submit
-
 
 ## Publishing a Codelist Version
 
