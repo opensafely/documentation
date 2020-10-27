@@ -1,17 +1,47 @@
 site_name: OpenSAFELY documentation
 nav:
     - Home: index.md
-    - Getting started checklist: getting_started_checklist.md
-    - First-time walkthrough: onboarding_analysts.md
-    - Study definitions:
-        - Study definition walkthrough: study_definition.md
-        - Full API: study_definition_api.md
-    - Project pipelines: project_pipelines.md
-    - Codelists:
-        - Creating codelists: codelist_creation.md
-        - SNOMED codelists: snomed.md
+    - Updating the Documentation: updating_documentation.md
+    - Our Philosophy:
+        - Open Working Methods: our_philosophy.md
         - The Datalab Open Manifesto: open_data_manifesto.md
-    - Installing Docker: installing_docker.md
+    - Overview:
+        - Workflow Overview: overview_pipeline.md
+        - Datasets: dataset_landing_page.md
+    - Technical Set Up:
+        - Minimal Requirements: min_req.md
+        - Github and Git: git.md
+        - Installing Python: python.md
+        - Installing Docker: installing_docker.md
+        - Installing cohortextractor: cohortextractor.md
+    - Git Workflow:
+          - Using Git Effectively: git_workflow.md
+          - Code Reviews: code_reviews.md
+    - Setting up your Project:
+        - Developing a Protocol: protocol.md
+        - Making a Project: project_setup.md
+        - Project Folder Structure: folder.md
+    - Codelists:
+        - Introduction to Codelists: codelist_intro.md
+        - Building a Codelist: codelist_creation.md
+        - Adding Codelists to Project: codelist_project.md
+        - SNOMED codelists: snomed.md
+    - Study definitions:
+        - Introduction to Study Definitions: study_def_intro.md
+        - Basic Set Up: study_definition.md
+        - Running Locally: running_local.md
+        - Defining Time Periods: time_periods.md
+        - Defining Variable Outputs: types_of_return_values.md
+        - Types of Variables Available: study_variables.md
+        - Defining a Precise Study Population: study_pop.md
+        - Combining Codelists: study_codelists.md
+        - Multiple Study Definitions: multiple_study_pop.md
+        - Flow Charts: flowcharts.md
+    - Measures: measures.md
+    - Project pipelines: project_pipelines.md
+    - Running on Server: job_server.md
+    - First-time walkthrough: onboarding_analysts.md
+
 
 theme: material
 plugins:

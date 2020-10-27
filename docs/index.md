@@ -1,8 +1,20 @@
 # OpenSAFELY documentation
 
- **These documents are a work-in-progress**.  Please use the main menu to navigate.
+ **These documents are a work-in-progress**.  Please see Updating the Documentation page for information on our process and 
+ planned additions. 
+ 
+## What is OpenSAFELY?
 
-Some other resources that may be useful:
+OpenSAFELY is a new secure analytics platform for electronic health records in the NHS, created to deliver urgent 
+results during the global COVID-19 emergency. It is now successfully delivering analyses across more than 24 million 
+patients’ full pseudonymised primary care NHS records, with more to follow shortly. 
+
+All our analytic software is open 
+for security review, scientific review, and re-use. OpenSAFELY uses a new model for enhanced security and timely 
+access to data: we don’t transport large volumes of potentially disclosive pseudonymised patient data outside of the 
+secure environments managed by the electronic health record software company; instead, trusted analysts can run large 
+scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health 
+records software company. 
 
 ## Useful links
 
@@ -16,20 +28,6 @@ Note, some of these are in private repos as they are under quick development pen
 * [Ethnicity codes used by external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)
 * [Dataset user guides](https://docs.google.com/document/d/1EzaRTiapjxxbj10wjN5iYjXbeyHMEErOoaV0tH6Mv1c/) (in restricted access gdrive folder)
 
-## Planned additions
 
-* info for prospective collaborators including pre-requisites, FAQs
-* a glossary of terms
-* comprehensive code/function documentation
-* code of conduct
-* an overview of the OpenSAFELY workflow
 
-## Updating the documentation
 
-OpenSAFELY is a rapidly changing platform and the user documentation should be updated frequently to keep pace. If you are an OpenSAFELY user and want to contribute corrections, clarifications, or new materials to the documentation, please do! You can either:
-
-* Suggest improvements in an [issue](https://github.com/opensafely/documentation/issues).
-* Clone the repo locally, make edits on a new branch, then create a pull request for it.
-* [Edit directly on Github](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository), making sure to "Create a new branch for this commit and start a pull request".
-
-Please do not commit changes directly to the master branch.
