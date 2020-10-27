@@ -1,6 +1,6 @@
 ## SNOMED CT Codelists generated from CTV3
 
-At the time of writing (26 Oct 2020), most SNOMED CT Codelists on [codelists.opensafely.org](codelists.opensafely.org)
+At the time of writing (26 Oct 2020), most SNOMED CT Codelists on [codelists.opensafely.org](https://codelists.opensafely.org/)
 have been generated from CTV3 Codelists using 
 a [mapper function](https://github.com/opensafely/opencodelists/blob/master/mappings/ctv3sctmap2/mappers.py).
 They have not been reviewed, or used in any research. They are clearly marked with 

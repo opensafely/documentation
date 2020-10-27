@@ -36,9 +36,10 @@ nav:
         - Defining a Precise Study Population: study_pop.md
         - Combining Codelists: study_codelists.md
         - Multiple Study Definitions: multiple_study_pop.md
+        - Flow Charts: flowcharts.md
     - Measures: measures.md
     - Project pipelines: project_pipelines.md
-    - Running on Server: server.md
+    - Running on Server: job_server.md
     - First-time walkthrough: onboarding_analysts.md
 
 
