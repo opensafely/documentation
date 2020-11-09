@@ -32,7 +32,7 @@ actions:
 
 The action can be called anything that is a valid YAML key, (e.g. no spaces). Here it is called `generate_cohorts`.
 
-Each action must contain a `run` command. This must be an officially-supported action (currently `stata-mp`, `python`, `r`, and `cohortextractor`), and it must include a version (in the above example, this is `latest`).
+Each action must contain a `run` command. This must be an officially-supported action (currently `stata-mp`, `python`, `r`, and `cohortextractor`), and it must include a version (`latest` will always select the most recent version, but following initial development you should always specify the version to ensure reproducibility).
 
 Each action must include an `outputs` section with at least one output. Here there is one `highly_sensitive` output called `cohort`, which is written to `output/input.csv`.
 
