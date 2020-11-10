@@ -8,6 +8,7 @@ Now find the codelist:
 * Download the new codelist into the `codelist/` folder using the `cohortextractor` by submitting `cohortextractor update_codelists` at the command line.
 
 At this point, there are two changes in the repository folder:
+
 1. a new line in `codelists/codelist.txt`
 2. a new file called `codelists/opensafely-solid-organ-transplantation.csv`.
 
@@ -29,6 +30,7 @@ Now you have committed the changes to your local repo but not yet pushed (publis
         system="ctv3",
         column="CTV3ID",
       )
+
 * Paste the following code chunk after the other variable declarations:
 
       organ_transplant = patients.with_these_clinical_events(
@@ -42,6 +44,7 @@ Now you have committed the changes to your local repo but not yet pushed (publis
       cohortextractor generate_cohort --expectations-population 10000
 
 At this point, there are two changes in the repository folder:
+
 1. the changes to `study_definition.py`
 2. a (new or updated) file called `analysis/input.csv`
 
