@@ -2,7 +2,7 @@ site_name: OpenSAFELY documentation
 nav:
     - Home: index.md
     - Updating the Documentation: updating_documentation.md
-    - Our Philosophy:
+    - Our Philosophy: our_philosophy.md
         - Open Working Methods: our_philosophy.md
         - The Datalab Open Manifesto: open_data_manifesto.md
     - Overview:
