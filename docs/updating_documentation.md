@@ -13,6 +13,5 @@ Please do not commit changes directly to the master branch.
 ## Planned additions
 
 * info for prospective collaborators including pre-requisites, FAQs
-* a glossary of terms
 * comprehensive code/function documentation
 * an overview of the OpenSAFELY workflow

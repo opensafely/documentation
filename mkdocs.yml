@@ -8,6 +8,7 @@ nav:
     - Overview:
         - Workflow Overview: overview_pipeline.md
         - Datasets: dataset_landing_page.md
+        - Glossary: glossary.md
     - Technical Set Up:
         - Minimal Requirements: min_req.md
         - Github and Git: git.md
