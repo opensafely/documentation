@@ -15,5 +15,4 @@ Please do not commit changes directly to the master branch.
 * info for prospective collaborators including pre-requisites, FAQs
 * a glossary of terms
 * comprehensive code/function documentation
-* code of conduct
 * an overview of the OpenSAFELY workflow
