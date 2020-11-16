@@ -41,6 +41,7 @@ nav:
     - Project pipelines: project_pipelines.md
     - Running on Server: job_server.md
     - First-time walkthrough: onboarding_analysts.md
+    - Code of conduct: code_of_conduct.md
 
 
 theme: material
