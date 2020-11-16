@@ -1,25 +1,23 @@
-# Workflow Overview
-The process of conducting an analysis via OpenSAFELY can be broken down into the following steps:
+To use the OpenSAFELY platform, a well-defined and ethically-approved research agenda must be specified. With this in place, the workflow for a single study can typically be broken down into the following steps:
 
-1. Design a study protocol with a clear research question. The protocol are discussed and written 
-(preferably in a google document so multiple authors can edit and review)
-2. Institutional Ethics Approval once protocol is finalised.
-3. Create a study-specific repository from the template provided, and upload the protocol to the repository. This provides
-a version control of a protocol. 
-4. Codelists that do not exist already are developed and put onto the opencodelist webpage
-5. Study population and study variables are defined within a Python script that is developed locally (i.e on your machine) and uploaded to Github for comments, reviews, and other contributions. This process is iterative.
-6. When the study definition script is “run” on a local computer, it creates a dummy dataset which approximates 
-the structure of the source data. This dummy dataset has all the necessary covariates, as specified in your 
-study definition script, with the right type of data (for example numbers, dates or count variables) 
-(but currently does not respect expected between-variable relationships such as metformin 
-prescriptions only for people with diabetes).
-7. Analytic code is developed against this dummy dataset. This can be using Stata, R or Python. As part of this, 
-researchers must highlight which files they will need access to and mark each file with a security-risk level.
-8. All code needs to be pushed to the corresponding research repo. It must pass some basic checks such as 
-pre-configured unit tests and be subject to code review before merging with master branch. 
-8. Once the analytic code and the study population code is finalised and uploaded to GitHub, the code is deployed and 
-executed securely by requesting a run in the [OpenSAFELY Job server](job_server.md). 
-The real study population is extracted, and the analytic code run.
-9. Analytic output files earmarked for publication (e.g.log files, PDFs, notebooks, graphics) are reviewed by 
-authorised users on the review server and any sensitive data is removed.
-10. Summary results are returned to the external researcher via GitHub and can be reviewed by the team.
+1.  **Create a git repository** from the template repository provided and clone it on your local machine.
+2.  **Create a Study Definition** that specifies what data you want to extract from the database:
+    -   specify the patient population (dataset rows) and variables (dataset columns)
+    -   specify the expected distributions of these variables for use in dummy data
+    -   specify the codelists required by the study definition, hosted by codelists.opensafely.org, and import them to the repo.
+3.  **Generate the dummy data** based on the Study Definition on your local machine. 
+4.  **Develop analysis scripts** using the dummy data in R, Stata, or Python. This will include:
+    -   importing and processing the dataset(s) created by the cohort extractor
+    -   importing any other external files needed for analysis
+    -   generating analysis outputs like tables and figures
+    -   generating log files to debug the scripts when run on the real data.
+5.  **Create a project pipeline** which specifies the execution order for data extracts and analysis scripts, and the outputs to be released.
+6.  **Execute the analysis on the real data** via the job runner. This will generate outputs on the secure server.
+7.  **Check the output for disclosivity** within the server, and redact if necessary.
+8.  **Release the outputs** via GitHub.
+
+Steps 2-5 (and to an extent also steps 6 and 7) are iterative and should proceed with frequent git commits and code reviews where appropriate. They can all be progressed on your local machine without accessing the real data. 
+
+It is possible to automatically test that the analytical pipeline defined in step 5 can be successfully executed on dummy data, using the `cohortextractor run` command. This pipeline is also [automatically tested]() against dummy data every time a new version of the repository is saved ("pushed") to GitHub.
+
+Other non-standard actions may be required. For example, it's possible to run a matching routine that extracts a matched control population to the population defined in the study definition, without having to extract all possible matches into a dataset first.
