@@ -1,4 +1,3 @@
-## Docker enviroment
 
 ### Why Docker?
 
@@ -10,7 +9,6 @@ OpenSAFELY uses Docker to run your code in a reproducible, safe manner.
 In order to test your code (specifically, your project pipeline) in the same way it is run on the server, you will need to get Docker running on your own computer. Unfortunately, Docker is happiest on Linux; on Windows and Mac OSX, installation can be a chore. These notes should help.
 
 ### Installation
-
 
 Windows and Macs have different installation processes. Regardless of machine, you will have to install
 Docker and make an account on the [Docker Website](https://docs.docker.com/).
@@ -62,8 +60,8 @@ Once this is running, you should be able to use Docker.
 
 #### Gotchas
 
-- The first time you use Docker or use a new Docker template, please be aware that it takes  a long time to make the build.
-It is easy to think that it has frozen, but it will make quite a while to get going.
+- The first time you use Docker or use a new Docker template, please be aware that it takes a long time to make the build.
+It is easy to think that it has frozen, but it will take quite a while to get going.
 
     If this is the case, look at this cat whilst you wait:
 

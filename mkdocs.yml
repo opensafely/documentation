@@ -8,13 +8,12 @@ nav:
     - Overview:
         - Workflow Overview: overview_pipeline.md
         - Glossary: glossary.md
-    - Data sources:
-        - Overview: dataset_landing_page.md
-    - Technical Set Up:
-        - Minimal Requirements: min_req.md
-        - Github and Git: git.md
+    - Data sources: dataset_landing_page.md
+    - Technical set up:
+        - Getting started: getting-started.md
+        - GitHub and Git: github-and-git.md
         - Installing Python: python.md
-        - Installing Docker: installing_docker.md
+        - Installing Docker: docker.md
         - Installing cohortextractor: cohortextractor.md
     - Git Workflow:
           - Using Git Effectively: git_workflow.md
