@@ -12,9 +12,9 @@ nav:
     - Technical set up:
         - Getting started: getting-started.md
         - GitHub and Git: github-and-git.md
-        - Installing Python: python.md
-        - Installing Docker: docker.md
-        - Installing cohortextractor: cohortextractor.md
+        - Python: python.md
+        - Docker: docker.md
+        - cohortextractor: cohortextractor.md
     - Git Workflow:
           - Using Git Effectively: git_workflow.md
           - Code Reviews: code_reviews.md
