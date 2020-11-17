@@ -51,3 +51,7 @@ plugins:
     - mkdocstrings:
         docstring_options:
             show_source: False
+
+markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.superfences
