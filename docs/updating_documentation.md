@@ -9,9 +9,3 @@ please do! You can either:
 * [Edit directly on Github](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository), making sure to "Create a new branch for this commit and start a pull request".
 
 Please do not commit changes directly to the master branch.
-
-## Planned additions
-
-* info for prospective collaborators including pre-requisites, FAQs
-* comprehensive code/function documentation
-* an overview of the OpenSAFELY workflow
