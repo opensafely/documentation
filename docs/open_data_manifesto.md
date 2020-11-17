@@ -1,4 +1,4 @@
-# The Open Analytics Manifesto
+
 ## Better Data for the NHS
 
 Operational research is key to understanding what works in the NHS. However the methods and code used to carry out this research are rarely seen in public. Standards are variable. One-off point-and-click analytics are common. This living document aims to start a discussion about best practice for research and analysis using NHS data. Send us your feedback! [ebmdatalab@phc.ox.ac.uk](mailto:ebmdatalab@phc.ox.ac.uk)

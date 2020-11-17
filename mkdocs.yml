@@ -7,8 +7,9 @@ nav:
         - The Datalab Open Manifesto: open_data_manifesto.md
     - Overview:
         - Workflow Overview: overview_pipeline.md
-        - Datasets: dataset_landing_page.md
         - Glossary: glossary.md
+    - Data sources:
+        - Overview: dataset_landing_page.md
     - Technical Set Up:
         - Minimal Requirements: min_req.md
         - Github and Git: git.md
