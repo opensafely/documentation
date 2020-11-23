@@ -1,6 +1,4 @@
 
-## Open Working Methods
-
 We are using modern open working methods to carry out important analyses whilst 
 preserving patient privacy and keeping all patient data secure. 
 
