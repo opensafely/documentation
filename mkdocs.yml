@@ -5,7 +5,8 @@ nav:
     
     - Our Philosophy:
         - Open Working Methods: open-methods.md
-        - The Datalab Open Manifesto: open-data-manifesto.md
+        
+        
     - Data sources: dataset-landing-page.md
     - Getting started:
         - Overview: getting-started.md
@@ -43,10 +44,10 @@ nav:
         - SNOMED codelists: codelist-snomed.md
     - Running and testing code:
         - Overview: pipelines-overview.md
-        - Project pipelines: project-pipelines.md
-        
+        - Project pipelines: pipelines-yaml.md
     - Good Practice:
         - Good practice: good-practice-intro.md
+        - The Datalab Open Manifesto: open-data-manifesto.md
         - Developing a Protocol: protocol.md
         - Using Git Effectively: git-workflow.md
         - Code Reviews: code-reviews.md

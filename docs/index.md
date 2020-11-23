@@ -3,18 +3,19 @@
  
 ## What is OpenSAFELY?
 
-OpenSAFELY is a new secure analytics platform for electronic health records in the NHS, created to deliver urgent 
-results during the global COVID-19 emergency. It is now successfully delivering analyses across more than 24 million 
-patients’ full pseudonymised primary care NHS records, with more to follow shortly. 
+OpenSAFELY is a new secure analytics platform for electronic health records in the NHS, created to deliver urgent results during the global COVID-19 emergency. 
+It is now successfully delivering analyses across more than 24 million patients’ full pseudonymised primary care NHS records, with more to follow shortly. 
 
-All our analytic software is open for security review, scientific review, and re-use. OpenSAFELY uses a new model for enhanced security and timely 
-access to data: we don’t transport large volumes of potentially disclosive pseudonymised patient data outside of the 
-secure environments managed by the electronic health record software company; instead, trusted analysts can run large 
-scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health records software company. 
+All our analytic software is open for security review, scientific review, and re-use. 
+OpenSAFELY uses a new model for enhanced security and timely access to data: 
+we don’t transport large volumes of potentially disclosive pseudonymised patient data outside of the secure environments managed by the electronic health record software company; 
+instead, trusted analysts can run large scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health records software company. 
 
 ## Getting started
 
-To use OpenSAFELY you need git, GitHub, Python, and Docker &mdash; see our [getting started](getting-started.md) pages for complete installation instructions. These tools are required for (or greatly simplify):
+To use OpenSAFELY you need git, GitHub, Python, and Docker &mdash; see our [getting started](getting-started.md) pages for complete installation instructions. 
+These tools are required for (or greatly simplify):
+
 * defining the data you want to extract from the database
 * creating dummy data for developing analysis scripts
 * testing analysis scripts
@@ -22,7 +23,7 @@ To use OpenSAFELY you need git, GitHub, Python, and Docker &mdash; see our [gett
 * running the analysis on the server
 * ensuring the same computing environment when developing code locally and deploying code on the server.
 
-For the analysis proper, you can use Stata, R or Python however you wish, as long as .
+For the analysis proper, you can use Stata, R, or Python (almost) however you wish &mdash; see the [Developing Analysis Scripts](workflow-develop-analysis-scripts.md) section for the exceptions.
 
 We strongly recommend you follow one of our OpenSAFELY walkthroughs to guide you through the platform using a typical workflow, rather than using the documentation pages alone. 
 
