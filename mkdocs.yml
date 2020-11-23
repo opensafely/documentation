@@ -21,7 +21,7 @@ nav:
         - Develop analysis scripts: develop-analysis-scripts.md
         - Write a project pipeline: write-project-pipeline.md
         - Test the code: testing-the-code.md
-        - Execute the analysis on the real data: job_server.md
+        - Execute the analysis on the real data: job-runner.md
         - Check the output for disclosivity: check-disclosivity.md
         - Project Folder Structure: folder-structure.md
         - Glossary: glossary.md
