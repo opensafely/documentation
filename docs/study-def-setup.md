@@ -1,7 +1,7 @@
 ## Importing code building blocks
 
-To create the study defintion, we first need to import the functions and code to create this. You will need
-to put this codeblock at the top of your python file. 
+To create the study definition, we first need to import the functions and code to create this.
+You will need to put this codeblock at the top of your python file. 
 
 ```py 
 from cohortextractor import (
@@ -14,34 +14,44 @@ from cohortextractor import (
 )
 ```
 
+This essential says we want to import the some functions from the `cohortextractor` module which will be used throughout the script.
+
 ## Basic Study Definition 
 
-The StudyDefinition (imported above) is used to define both the study population and all the important
-covariates.
+The `StudyDefinition` function (imported above) is used to define both the study population and the variables.
 
 ```py
 study = StudyDefinition(
+
+	# define default dummy behaviour
     default_expectations={
         "date": {"earliest": "1970-01-01", "latest": "today"},
         "rate": "uniform",
         "incidence": 0.2,
     },
 
-    # STUDY POPULATION
+   # define population
    population=patients.all(),
+   
+   # define variables here...
+   ...
+   
 )
 ```
 
-`default_expectations=` is needed to allow dummy data to be generated with some sensible dates. 
+`default_expectations=` is used to set default behaviour for the dummy data that is generated. 
+In this case, we want event dates to be between 1970-01-01 and today's date, uniformly distributed in that period, and occurring for 20\% of patients (returning `""` values otherwise).
+See the [dummy data section]() for more about this.
 
-`population=` is where the population is defined. In this case, we want all patients and are using the method `all()`
-to indicate this. 
+`population=` is where the population is defined. 
+In this case, we want all patients available in the OpenSAFELY database and so we use the method `all()` to indicate this. 
+See the [study population section]() for more details about this.
 
-See population section to see how this could be made more precise. 
+
 
 ## Pulling Codelists into your Study Definition
 
-Many functions for defining covarites take *codelists* as arguments.  
+Many functions for defining variables take *codelists* as arguments.  
 Codelists live in CSV files in the `codelists/` directory, and are loaded into variables like this:
 
 
