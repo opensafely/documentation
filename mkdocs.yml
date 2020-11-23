@@ -9,9 +9,9 @@ nav:
     - Data sources: dataset-landing-page.md
     - Getting started:
         - Overview: getting-started.md
-        - GitHub and Git: github-and-git.md
-        - Python: python.md
-        - Docker: docker.md
+        - GitHub and Git: install-github-and-git.md
+        - Python: install-python.md
+        - Docker: install-docker.md
     - cohortextractor: cohortextractor.md
     - Platform overview:
         - Workflow: workflow.md
