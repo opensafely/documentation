@@ -1,5 +1,5 @@
 
-**These documents are a work-in-progress**. Please see the Updating the Documentation page for information on our process and planned additions. 
+**These documents are a work-in-progress**. Please see the [Updating the Documentation page](updating-documentation.md) if you want to make improvements. 
  
 ## What is OpenSAFELY?
 
