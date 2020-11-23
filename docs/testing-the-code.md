@@ -1,1 +1,1 @@
-use `cohortextractor run`
+use `cohortextractor run dummy action expectations`
