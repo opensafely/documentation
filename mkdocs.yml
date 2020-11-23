@@ -1,36 +1,32 @@
 site_name: OpenSAFELY documentation
 nav:
-    - Home: index.md
+    - Introduction: index.md
     - Updating the Documentation: updating_documentation.md
+    
     - Our Philosophy:
         - Open Working Methods: our_philosophy.md
         - The Datalab Open Manifesto: open_data_manifesto.md
-    - Overview:
-        - Workflow Overview: overview_pipeline.md
-        - Glossary: glossary.md
     - Data sources: dataset_landing_page.md
-    - Technical set up:
-        - Getting started: getting-started.md
+    - Getting started:
+        - Overview: getting-started.md
         - GitHub and Git: github-and-git.md
         - Python: python.md
         - Docker: docker.md
-        - cohortextractor: cohortextractor.md
-    - Git Workflow:
-          - Using Git Effectively: git_workflow.md
-          - Code Reviews: code_reviews.md
-    - Setting up your Project:
-        - Developing a Protocol: protocol.md
-        - Making a Project: project_setup.md
-        - Project Folder Structure: folder.md
-    - Codelists:
-        - Introduction to Codelists: codelist_intro.md
-        - Building a Codelist: codelist_creation.md
-        - Adding Codelists to Project: codelist_project.md
-        - SNOMED codelists: snomed.md
+    - cohortextractor: cohortextractor.md
+    - Platform overview:
+        - Workflow: workflow.md
+        - Create a repository: make-repo.md
+        - Write a Study Definition: write-study-def.md
+        - Generate the dummy data: make-dummy-data.md
+        - Develop analysis scripts: develop-analysis-scripts.md
+        - Write a project pipeline: write-project-pipeline.md
+        - Execute the analysis on the real data: job_server.md
+        - Check the output for disclosivity: check-disclosivity.md
+        - Project Folder Structure: folder-structure.md
+        - Glossary: glossary.md
     - Study definitions:
-        - Introduction to Study Definitions: study_def_intro.md
-        - Basic Set Up: study_definition.md
-        - Running Locally: running_local.md
+        - Introduction: study-def-intro.md
+        - Basic Set Up: study-def-setup.md
         - Defining Time Periods: time_periods.md
         - Defining Variable Outputs: types_of_return_values.md
         - Types of Variables Available: study_variables.md
@@ -39,8 +35,17 @@ nav:
         - Multiple Study Definitions: multiple_study_pop.md
         - Flow Charts: flowcharts.md
     - Measures: measures.md
+    - Codelists:
+        - Introduction to Codelists: codelist_intro.md
+        - Building a Codelist: codelist_creation.md
+        - Adding Codelists to Project: codelist_project.md
+        - SNOMED codelists: snomed.md
     - Project pipelines: project_pipelines.md
-    - Running on Server: job_server.md
+    - Good Practice:
+        - Good practice: good-practice-intro.md
+        - Developing a Protocol: protocol.md
+        - Using Git Effectively: git_workflow.md
+        - Code Reviews: code_reviews.md
     - First-time walkthrough: onboarding_analysts.md
     - Code of conduct: code_of_conduct.md
 
@@ -53,5 +58,7 @@ plugins:
             show_source: False
 
 markdown_extensions:
+    - toc:
+        permalink: "&#128279;"
     - pymdownx.highlight
     - pymdownx.superfences
