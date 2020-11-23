@@ -24,7 +24,7 @@ expectations:
 
 actions:
   generate_cohorts:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
+    run: cohortextractor:1.3.8 generate_cohort --study-definition study_definition
     outputs:
       highly_sensitive:
         cohort: output/input.csv
@@ -72,7 +72,7 @@ licensed version).
 
 To run the single action in the example above, using dummy data, you would typically run:
 
-    cohortextractor run dummy generate_cohort expectations
+    cohortextractor run dummy generate_cohorts expectations
 
 By default, this is a `test` mode and throws away any generated outputs after running; investigate the `--medium-privacy-storage-base` and `--high-privacy-storage-base` options if you want to keep the outputs.
 
