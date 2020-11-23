@@ -114,9 +114,7 @@ definition in a date definition like this:
 
 ## Missing values
 
-If a query returns no matching record for a patient &mdash; for example if there are no blood pressure values 
-recorded in a given period, or if there is no death date because the patient hasn't died, or if 
-there is no household size available &mdash; then a default value will be returned. For strings and dates, 
-the default value is the empty string `""`. For booleans, integers, or floats, the default value is `0`. 
-There is no universal `null` value outputted to `input.csv` because these may be handled inconsistently across 
-different programs.
+If a query returns no matching record for a patient &mdash; for example if there are no blood pressure values recorded in a given period, or if there is no death date because the patient hasn't died, or if there is no household size available &mdash; then a default value will be returned. 
+For strings and dates, the default value is the empty string `""`. 
+For booleans, integers, or floats, the default value is `0`. 
+There is no universal `null` value outputted to `input.csv` because these may be handled inconsistently across different programs.

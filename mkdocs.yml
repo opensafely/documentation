@@ -15,29 +15,29 @@ nav:
     - cohortextractor: cohortextractor.md
     - Platform overview:
         - Workflow: workflow.md
-        - Create a repository: make-repo.md
-        - Write a Study Definition: write-study-def.md
-        - Generate the dummy data: make-dummy-data.md
-        - Develop analysis scripts: develop-analysis-scripts.md
-        - Write a project pipeline: write-project-pipeline.md
-        - Test the code: testing-the-code.md
-        - Execute the analysis on the real data: job-runner.md
-        - Check the output for disclosivity: check-disclosivity.md
-        - Project Folder Structure: folder-structure.md
+        - Create a repository: workflow-make-repo.md
+        - Write a Study Definition: workflow-write-study-def.md
+        - Generate the dummy data: workflow-make-dummy-data.md
+        - Develop analysis scripts: workflow-develop-analysis-scripts.md
+        - Write a project pipeline: workflow-write-project-pipeline.md
+        - Test the code: workflow-testing-the-code.md
+        - Execute the analysis on the real data: workflow-job-runner.md
+        - Check the output for disclosivity: workflow-check-disclosivity.md
+        - Project Folder Structure: workflow-folder-structure.md
         - Glossary: glossary.md
     - Study definitions:
         - Introduction: study-def-intro.md
-        - Basic Set Up: study-def-setup.md
-        - Defining Time Periods: time_periods.md
-        - Defining Variable Outputs: types_of_return_values.md
-        - Types of Variables Available: study_variables.md
-        - Defining a Precise Study Population: study_pop.md
-        - Combining Codelists: study_codelists.md
-        - Multiple Study Definitions: multiple_study_pop.md
-        - Flow Charts: flowcharts.md
+        - Basic structure: study-def-structure.md
+        - Codelists: study-def-codelists.md
+        - Defining Time Periods: study-def-time.md
+        - Defining dummy data: study-def-dummy-data.md
+        - Defining a Precise Study Population: study-def-population.md
+        - Multiple Study Definitions: study-def-multiple-populations.md
+        - Study Flow Charts: study-def-flowcharts.md
+        - Variable extractor functions: study-def-extractor-functions.md
     - Measures: measures.md
     - Codelists:
-        - Introduction to Codelists: codelist_intro.md
+        - Introduction to Codelists: codelist-intro.md
         - Building a Codelist: codelist_creation.md
         - Adding Codelists to Project: codelist_project.md
         - SNOMED codelists: snomed.md

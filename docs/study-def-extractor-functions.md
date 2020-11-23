@@ -1,0 +1,3 @@
+For more information on all supported variable extractor functions, see the [patients.py](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py) script for skeleton documentation, and see [tpp_backend.py](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/tpp_backend.py) for how the SQL created by these functions for querying the OpenSAFELY database.
+
+This section will updated soon.
