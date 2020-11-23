@@ -1,4 +1,6 @@
-When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. To avoid this, there is a way to share these common variables between study definitions:
+When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. 
+This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. 
+To avoid this, there is a way to share these common variables between study definitions:
 
 ## Define a common study definition 
 
@@ -11,8 +13,8 @@ from codelists import *
 
 ```
 
-You can then define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`. In this case 
-we use age and sex. 
+You can then define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`.
+In this case we use age and sex. 
 
 `common_variables.py`
 ```py
@@ -34,8 +36,9 @@ common_variables = dict(
 ```
 
 ## Define the specific study definitions
-Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the 
-other imports. You then need just before the final closing brackets at the end of the file, add `**common_variables`
+
+Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the other imports. 
+You then need just before the final closing brackets at the end of the file, add `**common_variables`
 
 `study_definition_copd.py`
 ```py 

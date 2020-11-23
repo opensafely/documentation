@@ -66,7 +66,7 @@ In lieu of comprehensive documentation about installed dependencies, the followi
 The `cohortextractor run` subcommand will execute your actions according to the `project.yaml`. To see its options, type `cohortextractor run --help`.
 
 For `cohortextractor run` to work, need at least version 1.6.1; you must also
-[install Docker](installing_docker.md); and you _may_ need credentials for our
+[install Docker](install-docker.md); and you _may_ need credentials for our
 docker registry (for example, if you are running Stata actions, which require a
 licensed version).
 

@@ -1,0 +1,1 @@
+use `cohortextractor run dummy action expectations`

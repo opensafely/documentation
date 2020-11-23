@@ -1,46 +1,54 @@
 site_name: OpenSAFELY documentation
 nav:
-    - Home: index.md
-    - Updating the Documentation: updating_documentation.md
+    - Introduction: index.md
+    - Updating the Documentation: updating-documentation.md
+    
     - Our Philosophy:
-        - Open Working Methods: our_philosophy.md
-        - The Datalab Open Manifesto: open_data_manifesto.md
-    - Overview:
-        - Workflow Overview: overview_pipeline.md
-        - Datasets: dataset_landing_page.md
-    - Technical Set Up:
-        - Minimal Requirements: min_req.md
-        - Github and Git: git.md
-        - Installing Python: python.md
-        - Installing Docker: installing_docker.md
-        - Installing cohortextractor: cohortextractor.md
-    - Git Workflow:
-          - Using Git Effectively: git_workflow.md
-          - Code Reviews: code_reviews.md
-    - Setting up your Project:
-        - Developing a Protocol: protocol.md
-        - Making a Project: project_setup.md
-        - Project Folder Structure: folder.md
+        - Open Working Methods: open-methods.md
+        - The Datalab Open Manifesto: open-data-manifesto.md
+    - Data sources: dataset-landing-page.md
+    - Getting started:
+        - Overview: getting-started.md
+        - GitHub and Git: install-github-and-git.md
+        - Python: install-python.md
+        - Docker: install-docker.md
+    - cohortextractor: cohortextractor.md
+    - Platform overview:
+        - Workflow: workflow.md
+        - Create a repository: workflow-make-repo.md
+        - Write a Study Definition: workflow-write-study-def.md
+        - Generate the dummy data: workflow-make-dummy-data.md
+        - Develop analysis scripts: workflow-develop-analysis-scripts.md
+        - Write a project pipeline: workflow-write-project-pipeline.md
+        - Test the code: workflow-testing-the-code.md
+        - Execute the analysis on the real data: workflow-job-runner.md
+        - Check the output for disclosivity: workflow-check-disclosivity.md
+        - Project Folder Structure: workflow-folder-structure.md
+        - Glossary: glossary.md
+    - Study definitions:
+        - Introduction: study-def-intro.md
+        - Basic structure: study-def-structure.md
+        - Codelists: study-def-codelists.md
+        - Defining Time Periods: study-def-time.md
+        - Defining dummy data: study-def-dummy-data.md
+        - Defining a Precise Study Population: study-def-population.md
+        - Multiple Study Definitions: study-def-multiple-populations.md
+        - Study Flow Charts: study-def-flowcharts.md
+        - Variable extractor functions: study-def-extractor-functions.md
+    - Measures: measures.md
     - Codelists:
-        - Introduction to Codelists: codelist_intro.md
+        - Introduction to Codelists: codelist-intro.md
         - Building a Codelist: codelist_creation.md
         - Adding Codelists to Project: codelist_project.md
         - SNOMED codelists: snomed.md
-    - Study definitions:
-        - Introduction to Study Definitions: study_def_intro.md
-        - Basic Set Up: study_definition.md
-        - Running Locally: running_local.md
-        - Defining Time Periods: time_periods.md
-        - Defining Variable Outputs: types_of_return_values.md
-        - Types of Variables Available: study_variables.md
-        - Defining a Precise Study Population: study_pop.md
-        - Combining Codelists: study_codelists.md
-        - Multiple Study Definitions: multiple_study_pop.md
-        - Flow Charts: flowcharts.md
-    - Measures: measures.md
-    - Project pipelines: project_pipelines.md
-    - Running on Server: job_server.md
+    - Project pipelines: project-pipelines.md
+    - Good Practice:
+        - Good practice: good-practice-intro.md
+        - Developing a Protocol: protocol.md
+        - Using Git Effectively: git-workflow.md
+        - Code Reviews: code-reviews.md
     - First-time walkthrough: onboarding_analysts.md
+    - Code of conduct: code-of-conduct.md
 
 
 theme: material
@@ -54,3 +62,9 @@ plugins:
     - mkdocstrings:
         docstring_options:
             show_source: False
+
+markdown_extensions:
+    - toc:
+        permalink: "&#128279;"
+    - pymdownx.highlight
+    - pymdownx.superfences
