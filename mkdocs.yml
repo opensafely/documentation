@@ -38,10 +38,13 @@ nav:
     - Measures: measures.md
     - Codelists:
         - Introduction to Codelists: codelist-intro.md
-        - Building a Codelist: codelist_creation.md
-        - Adding Codelists to Project: codelist_project.md
-        - SNOMED codelists: snomed.md
-    - Project pipelines: project-pipelines.md
+        - Building a Codelist: codelist-creation.md
+        - Adding Codelists to Project: codelist-project.md
+        - SNOMED codelists: codelist-snomed.md
+    - Running and testing code:
+        - Overview: pipelines-overview.md
+        - Project pipelines: project-pipelines.md
+        
     - Good Practice:
         - Good practice: good-practice-intro.md
         - Developing a Protocol: protocol.md
