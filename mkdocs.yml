@@ -20,6 +20,7 @@ nav:
         - Generate the dummy data: make-dummy-data.md
         - Develop analysis scripts: develop-analysis-scripts.md
         - Write a project pipeline: write-project-pipeline.md
+        - Test the code: testing-the-code.md
         - Execute the analysis on the real data: job_server.md
         - Check the output for disclosivity: check-disclosivity.md
         - Project Folder Structure: folder-structure.md

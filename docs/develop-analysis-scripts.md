@@ -1,4 +1,6 @@
-This part of the workflow is entirely project dependent. As long as you are able to create analysis code that can run on the server then you can submit it to the server. However, note the following restrictions:
+This part of the workflow is entirely project dependent. 
+You can write whatever code you like as long as it will run successfully on server, and it is possible to test this locally &mdash; see the [Testing the Code](testing-the-code) section for more details.
+However, note the following restrictions:
 
 * Currently OpenSAFELY supports analyses in Python, R, or Stata &mdash; see [here]() for the available packages and versions.
 * You cannot run any code that uses an internet connection. Any research objects (datasets, libraries, etc) requiring an internet connection should be imported to the repo locally first.
