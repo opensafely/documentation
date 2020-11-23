@@ -70,7 +70,7 @@ This will produce an `.html` document giving some summary statistics about each 
 
 Re-run it each time you want to update the document using the latest version of the `input.csv` dataset. Assuming that your working directory is the repo folder, you should be able to run `cohortextractor` commands.
 
-This command can also be run on the real data. For information on this, see the [Running on server](job-runner.md) page for further details.
+This command can also be run on the real data. For information on this, see the [Running on server](pipelines-overview.md) page for further details.
 
 
 #### `run`
@@ -79,4 +79,4 @@ This runs actions defined in the `project.yaml` file. For example,
 
     cohortextractor run dummy make_graph expectations
 	
-will run the `make_graph` action on dummy data. See the [project piplines section](project-pipelines.md) for more details.
+will run the `make_graph` action on dummy data. See the [piplines section](pipelines-overview.md) for more details.

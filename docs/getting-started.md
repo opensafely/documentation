@@ -22,4 +22,4 @@ However, some prior knowledge of Python may still be beneficial to create or mod
 * **SQL**
 Behind the scenes, SQL is the language that is used to extract data from the server. Some knowledge of SQL may be useful if you want to understand in more detail how the raw patient-level data held in the secure environment is converted into analysis-ready datasets.
 * **Docker**
-We use Docker containers to simulate the production environment on your machine, so you can [test locally](project-pipelines.md).
+We use Docker containers to simulate the production environment on your machine, so you can [test locally](pipelines-overview.md).

@@ -64,3 +64,5 @@ The `patients.age_as_of()` function returns the age of each patient as of the da
 
 All other variables are defined similarly. 
 To see the full list of currently available extractor functions, see the [Variable Extractor Functions]() section.
+
+

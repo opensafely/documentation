@@ -12,3 +12,9 @@ If this is not possible (for instance if the object size is too large to be tran
 	* readability
 	* bug-finding
 	* parallelisation via the project pipeline
+
+In lieu of comprehensive documentation about installed dependencies, the following links should provide you with clues about what is available:
+
+- [R](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L34-L79)
+- [Python](https://github.com/opensafely/jupyter-docker/blob/master/requirements.txt)
+- [Stata](https://github.com/opensafely/stata-docker/tree/master/libraries)

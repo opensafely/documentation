@@ -53,13 +53,10 @@ run_model:
 
 ## `run` commands
 
-Each `run` command (`stata-mp`, `python`, `r`) provides a locked-down execution environment. You can't install new libraries yourself.
+Each `run` command (`stata-mp`, `python`, `r`) provides a locked-down execution environment.
+You can't install new libraries yourself &mdash; see the [Develop Analysis Scripts](workflow-develop-analysis-scripts.md) section for details on what restrictions are in place.
 
-In lieu of comprehensive documentation about installed dependencies, the following links should provide you with clues about what is available:
 
-- [R](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L34-L79)
-- [Python](https://github.com/opensafely/jupyter-docker/blob/master/requirements.txt)
-- [Stata](https://github.com/opensafely/stata-docker/tree/master/libraries)
 
 # Testing your `project.yaml`
 
