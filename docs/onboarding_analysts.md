@@ -64,7 +64,7 @@ You've now completed the required changes so this is good opportunity to `push` 
 
 ### Create a `pull request` for review
 
-Now that you've pushed your commits to the remote repo, you can view them on GitHub. Go to your repository webpage -- you can click `View on GitHub` in GitHub Desktop, navigate to the repo from you GitHub profile page, or type `https://github.com/<user-or-organisation>/<repo-name>`. You can select either the (unchanged) `master` branch or the new `add-transplant-var` branch that you've just created.
+Now that you've pushed your commits to the remote repo, you can view them on GitHub. Go to your repository webpage &mdash; you can click `View on GitHub` in GitHub Desktop, navigate to the repo from you GitHub profile page, or type `https://github.com/<user-or-organisation>/<repo-name>`. You can select either the (unchanged) `master` branch or the new `add-transplant-var` branch that you've just created.
 
 If you're happy with the new branch, you can create a pull request to merge your development branch onto the master branch.
 
@@ -91,7 +91,7 @@ You should make a habit of `fetch`ing frequently to reduce the occurrence of [me
 
 ## Study analysis
 
-Now that you have a dummy dataset on your local machine, you can develop any analytical code you like against this dataset, on a separate branch, of course. The current workflow is quite new, so ask around for guidance, but [you can find the start of the documentation here](project_pipelines.md).
+Now that you have a dummy dataset on your local machine, you can develop any analytical code you like against this dataset, on a separate branch, of course. The current workflow is quite new, so ask around for guidance, but [you can find the start of the documentation here](project-pipelines.md).
 
 Once you are happy with the analysis branch and want to try to run it against the real data, push it to the remote repo and submit a pull request. This will be checked by a developer and run against the real data. Assuming no errors, the contents of `medium_security` outputs will copied to the Level 4 review server to check for disclosivity, censored where necessary, then transferred to a release folder and pushed to the remote repo for you to see.
 

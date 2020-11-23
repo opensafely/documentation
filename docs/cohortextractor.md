@@ -1,5 +1,5 @@
 
-`cohortextractor` is Python module built for OpenSAFELY. It contains functions relating to the OpenSAFELY workflow that can be run the command line, for example:
+`cohortextractor` is a Python module built for OpenSAFELY. It contains functions relating to the OpenSAFELY workflow that can be run the command line, for example:
 
 * converting the Study Definition into an actual (dummy or real) dataset
 * importing codelists from codelists.opensafely.org
@@ -57,7 +57,7 @@ This will retrieve the codelists from [codelists.opensafely.org](https://codelis
 
     cohortextractor update_codelists
 
-Run it &mdash; it will add (or update) the codelist `.csv` files in the `codelists/` folder. See [here](https://github.com/opensafely/documentation/blob/master/study_definition.md#codelist-definitions) for more information about how to create codelists.
+Run it &mdash; it will add (or update) the codelist `.csv` files in the `codelists/` folder. See the [Codelist](codelist-intro.md) section for more information about how to create codelists.
 
 Beware again that in Windows, if one or more of these codelist files is open then `update_codelists` won't be able to run.
 
@@ -70,7 +70,7 @@ This will produce an `.html` document giving some summary statistics about each 
 
 Re-run it each time you want to update the document using the latest version of the `input.csv` dataset. Assuming that your working directory is the repo folder, you should be able to run `cohortextractor` commands.
 
-This command can also be run on the real data. For information on this, see the [Running on server](job_server.md) page for further details.
+This command can also be run on the real data. For information on this, see the [Running on server](job-runner.md) page for further details.
 
 
 #### `run`
@@ -79,4 +79,4 @@ This runs actions defined in the `project.yaml` file. For example,
 
     cohortextractor run dummy make_graph expectations
 	
-will run the `make_graph` action on dummy data. See the [project piplines section]() for more details.
+will run the `make_graph` action on dummy data. See the [project piplines section](project-pipelines.md) for more details.
