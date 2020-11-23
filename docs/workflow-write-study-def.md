@@ -1,8 +1,6 @@
-
-
 ## What is a Study Definition?
 
-A _study definition_ specifies the data that you want to extract from the OpenSAFELY database. This includes 
+A _study definition_ specifies the data that you want to extract from the OpenSAFELY database. This includes
 
 * the patients of interest (dataset rows)
 * the variables (dataset columns)
