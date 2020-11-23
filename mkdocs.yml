@@ -1,12 +1,12 @@
 site_name: OpenSAFELY documentation
 nav:
     - Introduction: index.md
-    - Updating the Documentation: updating_documentation.md
+    - Updating the Documentation: updating-documentation.md
     
     - Our Philosophy:
-        - Open Working Methods: our_philosophy.md
-        - The Datalab Open Manifesto: open_data_manifesto.md
-    - Data sources: dataset_landing_page.md
+        - Open Working Methods: open-methods.md
+        - The Datalab Open Manifesto: open-data-manifesto.md
+    - Data sources: dataset-landing-page.md
     - Getting started:
         - Overview: getting-started.md
         - GitHub and Git: github-and-git.md
@@ -40,14 +40,14 @@ nav:
         - Building a Codelist: codelist_creation.md
         - Adding Codelists to Project: codelist_project.md
         - SNOMED codelists: snomed.md
-    - Project pipelines: project_pipelines.md
+    - Project pipelines: project-pipelines.md
     - Good Practice:
         - Good practice: good-practice-intro.md
         - Developing a Protocol: protocol.md
-        - Using Git Effectively: git_workflow.md
-        - Code Reviews: code_reviews.md
+        - Using Git Effectively: git-workflow.md
+        - Code Reviews: code-reviews.md
     - First-time walkthrough: onboarding_analysts.md
-    - Code of conduct: code_of_conduct.md
+    - Code of conduct: code-of-conduct.md
 
 
 theme: material
