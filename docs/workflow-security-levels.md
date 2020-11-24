@@ -1,10 +1,14 @@
-OpenSAFELY compartmentalises data into different levels depending on the level of disclosivity and the permissions required to access it.
+The OpenSAFELY platform is highly secure. 
+The data available follows a tiered structure of data of four different levels, each of which is permissioned separately. 
+Each stage is generated from the preceding stage &mdash; at each step, data privacy is increased through the removal of potentially identifiable data.
 
 ## Level 1
-This level includes the complete, raw, patient-identifiable, event-level data.
+This is the most level includes the complete, raw, fully-identifiable, event-level patient data.
+EHR vendor data engineers store data at an identifiable level as part of their business-as-usual; they are instructed to process this data by the GPs (who are in routine practice the data controllers) in order to manage and store this information.
+No-one outside the EHR vendor has any access to this data.
 
 ### Where is this data held?
-Data is held within the EHR vendor's secure environment as part of their business-as-usual.
+Data is held within the EHR vendor's secure environment.
 
 ### Who has access?
 Only data processor staff working for the EHR vendor have access at this level (as well as GP clinical staff who can access the data for the purposes of direct patient care). 
@@ -55,17 +59,17 @@ Data is held within the EHR vendor's secure environment on the OpenSAFELY server
 Currently, anyone with level 2 access.
 
 ## Level 4
-This level includes tables, figures, and other structured outputs produced as a result of the analysis of the level 3 data, for example summary statistics and statistical models. 
+This level includes tables, figures, and other structured files produced as a result of the analysis of the level 3 data, for example summary statistics and statistical models. 
+Following scrict disclosivity checks and redactions, files can be released out of the server to the remote git repository on GitHub for further processing and public consumption.
 
 ### Where is this data held?
 Data is held within the EHR vendor's secure environment on a specific server, separate from the level 2 and 3 server. 
-Following scrict disclosivity checks and redactions, these data may be released out of the server via GitHub for public consumption.
 
 ### Who has access?
 Anyone with level 2/3 access. In addition, researchers who hold honorary contracts with NHS England and have signed Data Access Agreements relevant to level 4 access (who do not have level 2/3 access) for the purposes of checking and redacting data prior to release. 
 
-## Unrestricted
-Any data not considered a disclosure risk which has been released from the level 4 server following strict disclosivity checks. 
+## Unrestricted data
+Any level 4 files that have undergone strict disclosivity checks and redaction, and therefore considered to have negligible disclosure risk, can be released. Files are released by committing them to the remote git repository on GitHub.
 
 ## Diagram
 
