@@ -1,4 +1,5 @@
-This section introduces the typical OpenSAFELY workflow. The workflow consists of a number of key steps which may be iterated over as the code is developed and the study evolves. 
+This section introduces the typical OpenSAFELY workflow for a single research project. 
+The workflow consists of a number of key steps which may be iterated over as the code is developed and the study evolves. 
 
 The following section assumes that a well-defined and ethically-approved research agenda has been specified, with an accompanying study protocol. 
 
@@ -6,12 +7,13 @@ The following section assumes that a well-defined and ethically-approved researc
 
 the workflow for a single study can typically be broken down into the following steps:
 
-1.  **Create a git repository** from the template repository provided and clone it on your local machine.
+1.  **Create a git repository** from the template repository provided and clone it on your local machine. 
+This repo will contain all the code relating to your project, and a history it's development over time.
 2.  **Write a Study Definition** that specifies what data you want to extract from the database:
     -   specify the patient population (dataset rows) and variables (dataset columns)
     -   specify the expected distributions of these variables for use in dummy data
     -   specify the codelists required by the study definition, hosted by codelists.opensafely.org, and import them to the repo.
-3.  **Generate the dummy data** on your local machine based on the Study Definition. 
+3.  **Generate dummy data** based on the Study Definition, for writing and testing code. 
 4.  **Develop analysis scripts** using the dummy data in R, Stata, or Python. This will include:
     -   importing and processing the dataset(s) created by the cohort extractor
     -   importing any other external files needed for analysis

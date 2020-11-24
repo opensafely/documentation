@@ -14,7 +14,7 @@ nav:
         - Python: install-python.md
         - Docker: install-docker.md
     - cohortextractor: cohortextractor.md
-    - Platform overview:
+    - Project workflows:
         - Workflow: workflow.md
         - Create a repository: workflow-make-repo.md
         - Write a Study Definition: workflow-write-study-def.md

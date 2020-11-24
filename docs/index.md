@@ -17,13 +17,12 @@ To use OpenSAFELY you need git, GitHub, Python, and Docker &mdash; see our [gett
 These tools are required for (or greatly simplify):
 
 * defining the data you want to extract from the database
-* creating dummy data for developing analysis scripts
-* testing analysis scripts
 * importing codelists
+* creating dummy data for developing analysis scripts
+* testing analysis scripts locally
 * running the analysis on the server
-* ensuring the same computing environment when developing code locally and deploying code on the server.
 
-For the analysis proper, you can use Stata, R, or Python (almost) however you wish &mdash; see the [Developing Analysis Scripts](workflow-develop-analysis-scripts.md) section for the exceptions.
+For the analysis proper, you can use Stata, R, or Python (almost) however you wish &mdash; see the [Developing Analysis Scripts](workflow-develop-analysis-scripts.md) section for guidance and exceptions.
 
 We strongly recommend you follow one of our OpenSAFELY walkthroughs to guide you through the platform using a typical workflow, rather than using the documentation pages alone. 
 
