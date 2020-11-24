@@ -11,6 +11,12 @@ OpenSAFELY uses a new model for enhanced security and timely access to data:
 we don’t transport large volumes of potentially disclosive pseudonymised patient data outside of the secure environments managed by the electronic health record software company; 
 instead, trusted analysts can run large scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health records software company. 
 
+## Using OpenSAFELY
+
+OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients’ records), working on behalf of NHS England and NHSX. 
+
+**We are now looking to onboard external research groups. If you are interested, get in touch.**
+
 ## Getting started
 
 To use OpenSAFELY you need git, GitHub, Python, and Docker &mdash; see our [getting started](getting-started.md) pages for complete installation instructions. 
@@ -24,7 +30,10 @@ These tools are required for (or greatly simplify):
 
 For the analysis proper, you can use Stata, R, or Python (almost) however you wish &mdash; see the [Developing Analysis Scripts](workflow-develop-analysis-scripts.md) section for guidance and exceptions.
 
-We strongly recommend you follow one of our OpenSAFELY walkthroughs to guide you through the platform using a typical workflow, rather than using the documentation pages alone. 
+We recommend following one of our OpenSAFELY walkthroughs (see [here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow, rather than using the documentation pages alone. 
+
+
+
 
 ## Useful links
 

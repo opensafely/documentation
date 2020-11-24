@@ -1,11 +1,10 @@
 This section introduces the typical OpenSAFELY workflow for a single research project. 
 The workflow consists of a number of key steps which may be iterated over as the code is developed and the study evolves. 
-
 The following section assumes that a well-defined and ethically-approved research agenda has been specified, with an accompanying study protocol. 
 
 ## High level overview
 
-the workflow for a single study can typically be broken down into the following steps:
+The workflow for a single study can typically be broken down into the following steps:
 
 1.  **Create a git repository** from the template repository provided and clone it on your local machine. 
 This repo will contain all the code relating to your project, and a history it's development over time.
@@ -24,9 +23,9 @@ This repo will contain all the code relating to your project, and a history it's
 7.  **Execute the analysis on the real data** via the job runner. This will generate outputs on the secure server.
 8.  **Check the output for disclosivity** within the server, and redact if necessary.
 9.  **Release the outputs** via GitHub.
+10. **Repeat and iterate as necessary**.
 
-Steps 2-6 (and to an extent steps 7 and 8) are iterative and should proceed with frequent git commits and code reviews where appropriate. 
-They can all be progressed on your local machine without accessing the real data. 
+These steps should always proceed with frequent git commits and code reviews where appropriate. Steps 2-6 can all be progressed on your local machine without accessing the real data. 
 
 It is possible to automatically test that the analytical pipeline defined in step 5 can be successfully executed on dummy data, using the `cohortextractor run` command. 
 This pipeline is also [automatically tested]() against dummy data every time a new version of the repository is saved ("pushed") to GitHub.

@@ -1,5 +1,6 @@
 
-`cohortextractor` is a Python module built for OpenSAFELY. It contains functions relating to the OpenSAFELY workflow that can be run the command line, for example:
+`cohortextractor` is a Python module built for OpenSAFELY. 
+It contains functions relating to the OpenSAFELY workflow that can be run the command line, for example:
 
 * converting the Study Definition into an actual (dummy or real) dataset
 * importing codelists from codelists.opensafely.org
