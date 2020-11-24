@@ -7,7 +7,9 @@ nav:
         - Open Working Methods: open-methods.md
         
         
-    - Data sources: dataset-landing-page.md
+    - Data sources: 
+        - Overview: dataset-landing-page.md
+        - SystmOne primary care database: dataset-systmone.md
     - Getting started:
         - Overview: getting-started.md
         - GitHub and Git: install-github-and-git.md
@@ -24,6 +26,7 @@ nav:
         - Test the code: workflow-testing-the-code.md
         - Execute the analysis on the real data: workflow-job-runner.md
         - Check the output for disclosivity: workflow-check-disclosivity.md
+        - Security levels: workflow-security-levels.md
         - Project Folder Structure: workflow-folder-structure.md
         - Glossary: glossary.md
     - Study definitions:
@@ -51,7 +54,6 @@ nav:
         - Developing a Protocol: protocol.md
         - Using Git Effectively: git-workflow.md
         - Code Reviews: code-reviews.md
-    - First-time walkthrough: onboarding_analysts.md
     - Code of conduct: code-of-conduct.md
 
 
