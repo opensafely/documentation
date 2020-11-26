@@ -3,8 +3,6 @@ This section contains information on the core primary care EHR systems on which 
 To see the TPP-OpenSAFELY database schema, see [here](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb).
 To see the variables available to extract from the TPP-OpenSAFELY database, see the [Variable extractor functions](study-def-extractor-functions) section.
 
-
-
 ## External sources and record linkage
 Currently, all data available for analysis are for patients registered at GP practices using the SystmOne clinical information system, managed by TPP. 
 External records are imported as follows:
@@ -19,7 +17,6 @@ External records are imported as follows:
 
 Matching quality is dependent on the quality of NHS numbers (they're good but not infallible). 
 Currently there is no direct evaluation of linkage quality because we don't have access to direct identifiers from external datasets, nor do we know in general if we should be expecting a match or not.
-
 
 ## TPP-OpenSAFELY database builds
 The TPP-OpenSAFELY database is typically built once per week. 
