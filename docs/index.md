@@ -15,7 +15,7 @@ instead, trusted analysts can run large scale computation across near real-time 
 
 OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients’ records), working on behalf of NHS England and NHSX. 
 
-**We are now looking to onboard external research groups. If you are interested, get in touch.**
+**We are now looking to onboard external research groups. If you are interested, read [this]().**
 
 ## Getting started
 
