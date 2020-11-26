@@ -1,6 +1,10 @@
 site_name: OpenSAFELY documentation
 nav:
     - Introduction: index.md
+    - How OpenSAFELY works: 
+        - Not just another TRE: coming-soon.md
+        - Security: workflow-security-levels.md
+        - 
     - Updating the Documentation: updating-documentation.md
     
     - Our Philosophy:
@@ -16,17 +20,15 @@ nav:
         - Python: install-python.md
         - Docker: install-docker.md
     - cohortextractor: cohortextractor.md
-    - Project workflows:
+    - Research workflows:
         - Workflow: workflow.md
         - Create a repository: workflow-make-repo.md
         - Write a Study Definition: workflow-write-study-def.md
         - Generate the dummy data: workflow-make-dummy-data.md
         - Develop analysis scripts: workflow-develop-analysis-scripts.md
-        - Write a project pipeline: workflow-write-project-pipeline.md
         - Test the code: workflow-testing-the-code.md
         - Execute the analysis on the real data: workflow-job-runner.md
         - Check the output for disclosivity: workflow-check-disclosivity.md
-        - Security levels: workflow-security-levels.md
         - Project Folder Structure: workflow-folder-structure.md
         - Glossary: glossary.md
     - Study definitions:

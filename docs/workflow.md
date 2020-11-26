@@ -18,14 +18,13 @@ This repo will contain all the code relating to your project, and a history it's
     -   importing any other external files needed for analysis
     -   generating analysis outputs like tables and figures
     -   generating log files to debug the scripts when they run on the real data.
-5.  **Create a project pipeline** which specifies the execution order for data extracts and analysis scripts, and the outputs to be released.
-6.  **Test the code** by running analysis steps specified in the project pipeline, or saving the code to GitHub which will test the code automatically.
-7.  **Execute the analysis on the real data** via the job runner. This will generate outputs on the secure server.
-8.  **Check the output for disclosivity** within the server, and redact if necessary.
-9.  **Release the outputs** via GitHub.
-10. **Repeat and iterate as necessary**.
+5.  **Test the code** by running the analysis steps specified in the _project pipeline_, which specifies the execution order for data extracts and analyses and the outputs to be released. 
+6.  **Execute the analysis on the real data** via the job runner. This will generate outputs on the secure server.
+7.  **Check the output for disclosivity** within the server, and redact if necessary.
+8.  **Release the outputs** via GitHub.
+9. **Repeat and iterate as necessary**.
 
-These steps should always proceed with frequent git commits and code reviews where appropriate. Steps 2-6 can all be progressed on your local machine without accessing the real data. 
+These steps should always proceed with frequent git commits and code reviews where appropriate. Steps 2-5 can all be progressed on your local machine without accessing the real data. 
 
 It is possible to automatically test that the analytical pipeline defined in step 5 can be successfully executed on dummy data, using the `cohortextractor run` command. 
 This pipeline is also [automatically tested]() against dummy data every time a new version of the repository is saved ("pushed") to GitHub.
