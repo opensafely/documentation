@@ -10,6 +10,10 @@ nav:
     - Data sources: 
         - Overview: dataset-landing-page.md
         - SystmOne primary care database: dataset-systmone.md
+        - Emergency Care Data Set: dataset-ecds.md
+        - Admitted Patient Care dataset:  dataset-apc.md
+        - 
+        - Covid-19 Patient Notification System: dataset-cpns.md
     - Getting started:
         - Overview: getting-started.md
         - GitHub and Git: install-github-and-git.md
