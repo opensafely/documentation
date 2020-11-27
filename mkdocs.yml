@@ -36,7 +36,7 @@ nav:
         - Defining a Precise Study Population: study-def-population.md
         - Multiple Study Definitions: study-def-multiple-populations.md
         - Study Flow Charts: study-def-flowcharts.md
-        - Missing values and unmatched records: missing.md
+        - Missing values and unmatched records: study-def-missing.md
         - Variable extractor functions: study-def-extractor-functions.md
     - Measures: measures.md
     - Codelists:
