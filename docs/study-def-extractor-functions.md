@@ -88,7 +88,7 @@ For more information, see the [ECDS data section](dataset-ecds).
 ::: cohortextractor.patients.attended_emergency_care
 &nbsp;
 
-## ICNARC-CMP
+## ICNARC
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
 For more information, see the [ICNARC data section](dataset-icnarc).
 &nbsp;
