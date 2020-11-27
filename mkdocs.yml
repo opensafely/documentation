@@ -4,13 +4,9 @@ nav:
     - How OpenSAFELY works: 
         - Not just another TRE: coming-soon.md
         - Security: workflow-security-levels.md
-        - 
     - Updating the Documentation: updating-documentation.md
-    
     - Our Philosophy:
         - Open Working Methods: open-methods.md
-        
-        
     - Data sources: 
         - Overview: dataset-landing-page.md
         - SystmOne primary care database: dataset-systmone.md
@@ -62,14 +58,22 @@ nav:
 theme: material
 
 markdown_extensions:
-  - pymdownx.highlight
-  - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.superfences
 
 plugins:
     - search
     - mkdocstrings:
-        docstring_options:
-            show_source: False
+        default_handler: python
+        handlers:
+          python:
+            rendering:
+                show_root_heading: true
+                show_root_toc_entry: false
+                show_root_full_path: false
+                show_source: false
+                show_if_no_docstring: true
+                heading_level: 4
 
 markdown_extensions:
     - toc:
