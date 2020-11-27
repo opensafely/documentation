@@ -7,7 +7,7 @@ As such there are some pre-requisites that collaborators must satisfy to use the
 
 ### Essential
 * **Stata, R or Python**
-OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis. Available libraries are restricted by the framework (documentation to follow)
+OpenSAFELY currently supports Stata v16.1, Python 3.8, and [R 4.0](working-with-r.md) for statistical analysis. Available libraries are restricted by the framework (documentation to follow)
 * **Git**
 The workflow is strongly integrated into Git/GitHub.
 At a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, and create a pull request.
