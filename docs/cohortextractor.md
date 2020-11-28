@@ -1,4 +1,3 @@
-
 `cohortextractor` is a Python module built for OpenSAFELY. 
 It contains functions relating to the OpenSAFELY workflow that can be run the command line, for example:
 
@@ -10,22 +9,22 @@ It contains functions relating to the OpenSAFELY workflow that can be run the co
 
 It also contains functions for use within a Study Definition &mdash; go to the [Study Definition section](study-def-intro.md) for more details.
 
-## Installation and updating
+## Installing `cohortextractor`
 
-To install, go to the Anaconda prompt (or another prompt that can find `pip`) and submit:
+To install, go to the Anaconda prompt and submit the following command (or use another method to install the module if you know how):
 
 ```
 pip install opensafely-cohort-extractor
 ```
 
-To check this has installed successfully, submit `cohortextractor --help` and it should print some details of 
-how it can be used. You can check the current version with:
+To check this has installed successfully, submit `cohortextractor --version`.
 
-    cohortextractor --version
-
+## Updating `cohortextractor`
 Update by submitting:
 
-    pip install --upgrade opensafely-cohort-extractor
+```
+pip install --upgrade opensafely-cohort-extractor
+```
 
 ## Using `cohortextractor` at the command line
 
