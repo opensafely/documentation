@@ -26,7 +26,9 @@ The main event data is in the `CodedEvent` dataset, which is formatted as follow
 * **Event date** is the date associated with the recorded event.
 -->
 
-All coded events should be accompanied by an event date. However, unknown dates are possible and may occur for a number of reasons. For instance, when a GP is coding an important event in the patient's medical history but the exact date is not known. 
+All coded events should be accompanied by an event date. 
+However, unknown dates are possible and may occur for a number of reasons. 
+For instance, when a GP is coding an important event in the patient's medical history but the exact date is not known. 
 
 ## Geographic and administrative regions
 A patient registers with a practice using their home address.

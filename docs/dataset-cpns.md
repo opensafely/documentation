@@ -3,7 +3,7 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 
 ## Metadata
 
-**Data controller** NHS England.
+**Data provider** NHS England.
 
 **Participation / Coverage** In-hospital covid-related deaths in England.
 
@@ -16,3 +16,8 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 **Collected information** Admission, test, result, and death dates; hospital and department of death; basic demographics.
 
 ## More information
+ 
+* [Press release from Arden&GEM](https://www.ardengemcsu.nhs.uk/showcase/news-events/news-events/supporting-providers-to-record-covid-19-patient-notifications/)
+* [Letter from NHSE to Trust chief execs regarding changes to data collection](https://www.england.nhs.uk/coronavirus/wp-content/uploads/sites/52/2020/04/C0389-update-to-cpns-reporting-letter-27-april-2020.pdf)
+* [Technical summary on data series on deaths in people with COVID-19](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/882565/Technical_Summary_PHE_Data_Series_COVID-19_Deaths_20200429.pdf)
+ 

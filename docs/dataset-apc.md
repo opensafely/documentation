@@ -3,7 +3,7 @@ APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 ## Metadata
 
-**Data controller** NHS England.
+**Data provider** NHS England.
 
 **Participation / Coverage** In-hospital patient admissions in NHS Trusts in England.
 
@@ -13,7 +13,7 @@ APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 **Collected information** Admission and discharge dates; admission and discharge locations; reason for admission; diagnoses; treatments; discharge destination.
 
-Diagnoses and procedures are coded using ICD-10.
+Diagnoses are coded using ICD-10. Procedures are coded in OPCS-4
 
 ## More information
 

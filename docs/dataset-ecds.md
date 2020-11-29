@@ -3,7 +3,7 @@ ECDS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 ## Metadata
 
-**Data controller** NHS England.
+**Data provider** NHS England.
 
 **Participation / Coverage** Emergency Department attendances in NHS Trusts in England.
 
@@ -11,9 +11,9 @@ ECDS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 **Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 months.
 
-**Available from** 
-
 **Collected information** Attendance, admission and discharge dates; locations; presenting complaints; diagnoses.
+
+Diagnoses and discharge destinations are coded using SNOMED-CT.
 
 ## More information
 

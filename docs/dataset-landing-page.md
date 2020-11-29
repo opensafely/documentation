@@ -1,8 +1,8 @@
 This section contains information on the core primary care EHR systems on which OpenSAFELY in based, as well as all external datasets imported to the secure EHR environment.
 
-To see the variables available to extract from the OpenSAFELY database, see the [Variable extractor functions](study-def-extractor-functions) section.
+To see the variables available to extract from the OpenSAFELY database, see the [Variable extractor functions](study-def-extractor-functions.md) section.
 
-To see the TPP-OpenSAFELY database schema, see [here](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb).
+To see the OpenSAFELY-TPP database schema, see [here](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb).
 
 To see access permissions for different levels of data access, see [here](workflow-security-levels.md).
 
@@ -21,8 +21,8 @@ Patient records from external datasets are imported as follows:
 Matching quality is dependent on the quality of NHS numbers (they're good but not infallible). 
 Currently there is no direct evaluation of linkage quality because we don't have access to direct identifiers from external datasets, nor do we know in general if we should be expecting a match or not.
 
-## TPP-OpenSAFELY database builds
-The TPP-OpenSAFELY database is typically built once per week. 
+## OpenSAFELY-TPP database builds
+The OpenSAFELY-TPP database is typically built once per week. 
 In essence, this involves refreshing records in SystmOne so that the records from the following groups are available for analysis:
 
 1. All patients currently registered at a TPP practice
