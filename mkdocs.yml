@@ -9,13 +9,13 @@ nav:
         - Open Working Methods: open-methods.md
     - Data sources: 
         - Overview: dataset-landing-page.md
-        - SystmOne primary care database: dataset-systmone.md
-        - Covid-19 testing dataset: dataset-sgsscovid.md
-        - Emergency Care Data Set: dataset-ecds.md
-        - Admitted Patient Care dataset:  dataset-apc.md
-        - Intensive Care dataset: dataset-icnarc.md
-        - Covid-19 Patient Notification System: dataset-cpns.md
-        - Registered Deaths dataset: dataset-onsdeaths.md
+        - Primary Care Records: dataset-systmone.md
+        - Covid-19 Test Results: dataset-sgsscovid.md
+        - Emergency Attendances: dataset-ecds.md
+        - Hospital Admissions:  dataset-apc.md
+        - Intensive Care Admissions (covid-19 only): dataset-icnarc.md
+        - In-hospital Deaths (covid-19 only): dataset-cpns.md
+        - Registered Deaths: dataset-onsdeaths.md
     - Getting started:
         - Overview: getting-started.md
         - GitHub and Git: install-github-and-git.md
