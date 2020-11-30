@@ -58,10 +58,6 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.with_death_recorded_in_primary_care
 &nbsp;
 
-### SystmOne only
-
-These variables are only available from primary care data in OpenSAFELY-TPP.
-&nbsp;
 
 ::: cohortextractor.patients.care_home_status_as_of
 &nbsp;
