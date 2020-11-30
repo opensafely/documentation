@@ -11,27 +11,41 @@ OpenSAFELY uses a new model for enhanced security and timely access to data:
 we don’t transport large volumes of potentially disclosive pseudonymised patient data outside of the secure environments managed by the electronic health record software company; 
 instead, trusted analysts can run large scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health records software company. 
 
-## Using OpenSAFELY
+## Who is OpenSAFELY?
 
 OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients’ records), working on behalf of NHS England and NHSX. 
 
-**We are now looking to onboard external research groups. If you are interested, read [this]().**
+**We are currently looking to onboard external research groups. If you are interested, read [this]().**
 
-## Getting started
+## Using OpenSAFELY
 
-To use OpenSAFELY you need git, GitHub, Python, and Docker &mdash; see our [getting started](getting-started.md) pages for complete installation instructions. 
-These tools are required for (or greatly simplify):
+OpenSAFELY maintains extremely high standards for data privacy, whilst ensuring complete computational and analytical transparency.
+As such OpenSAFELY requires users' to know, or be willing to learn, the following tools:
 
-* defining the data you want to extract from the database
-* importing codelists
-* creating dummy data for developing analysis scripts
-* testing analysis scripts locally
-* running the analysis on the server
+### Essential
+* **Stata, R or Python**
+OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis.
+Available libraries are restricted by the framework (documentation to follow).
+* **Git**
+The workflow is strongly integrated into Git/GitHub.
+As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches.
+See [git workflow](git-workflow.md) for advice about how to use git effectively.
+<!--We provide a simple tutorial for navigating the OpenSAFELY workflow.-->
 
-For the analysis proper, you can use Stata, R, or Python (almost) however you wish &mdash; see the [Developing Analysis Scripts](workflow-develop-analysis-scripts.md) section for guidance and exceptions.
+### Desirable
+* **Python**
+The way we specify the data to be extracted for analysis is written in Python, using what we call a **Study Definition**.
+We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody familiar with health research, even if you've neveer used python before.
+However, some prior knowledge of Python may still be beneficial to create or modify existing functions.
+* **SQL**
+Behind the scenes, SQL is the language that is used to extract data from the server. 
+Some knowledge of SQL may be useful if you want to understand in more detail how the raw patient-level data held in the secure environment is converted into analysis-ready datasets.
+* **Docker**
+We use Docker containers to simulate the production environment on your machine, so you can [test code locally](pipelines-overview.md).
+
+See our [installation](getting-started.md) pages for complete installation instructions. 
 
 We recommend following one of our OpenSAFELY walkthroughs (see [here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow, rather than using the documentation pages alone. 
-
 
 ## Useful links
 
@@ -44,7 +58,4 @@ Some of these are in private repos as they are under quick development pending r
 * [Latest available records in SystmOne and external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/latest-dates.ipynb) (needs weekly refreshes)
 * [Ethnicity codes used by external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)
 * [Dataset user guides](https://docs.google.com/document/d/1EzaRTiapjxxbj10wjN5iYjXbeyHMEErOoaV0tH6Mv1c/) (in restricted access gdrive folder)
-
-
-
 
