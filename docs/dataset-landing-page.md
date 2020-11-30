@@ -1,5 +1,3 @@
-[TOC]
-
 This section contains information on the core primary care EHR systems on which OpenSAFELY in based, as well as all external datasets imported to the secure EHR environment.
 
 To see the variables available to extract from the OpenSAFELY database, see the [Variable extractor functions](study-def-extractor-functions.md) section.
@@ -7,6 +5,8 @@ To see the variables available to extract from the OpenSAFELY database, see the 
 To see the OpenSAFELY-TPP database schema, see [here](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb).
 
 To see access permissions for different levels of data access, see [here](workflow-security-levels.md).
+
+Use the navigation pane on the left-hand side to view information on each dataset.
 
 ## External sources and record linkage
 Currently, all data available for analysis are for patients registered at GP practices using the SystmOne clinical information system, managed by TPP. 
