@@ -4,3 +4,5 @@
 # IDE related files
 .idea/
 .DS_Store
+
+site/

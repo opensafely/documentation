@@ -1,5 +1,3 @@
-
-
 ## Importing code building blocks
 
 To create the study definition, we first need to import the functions and code to create this.
