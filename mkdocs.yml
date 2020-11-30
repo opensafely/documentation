@@ -59,6 +59,7 @@ nav:
         - Using Git Effectively: git-workflow.md
         - Code Reviews: code-reviews.md
     - Code of conduct: code-of-conduct.md
+    - Working with R: working-with-r.md
 
 
 theme: material
