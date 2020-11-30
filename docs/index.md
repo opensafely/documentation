@@ -33,8 +33,6 @@ For the analysis proper, you can use Stata, R, or Python (almost) however you wi
 We recommend following one of our OpenSAFELY walkthroughs (see [here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow, rather than using the documentation pages alone. 
 
 
-
-
 ## Useful links
 
 Some of these are in private repos as they are under quick development pending release:
