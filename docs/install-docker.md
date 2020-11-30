@@ -17,21 +17,22 @@ These notes should help.
 Windows and Macs have different installation processes. 
 Regardless of machine, you will have to install Docker and make an account on the [Docker Website](https://docs.docker.com/).
 
-Please follow e installation instructions on the [Docker website](https://docs.docker.com/install/) for how to complete this step. 
 There are two flavours you can install, *Desktop* and *Toolbox*. 
 Docker Desktop is preferred over Docker Toolbox. 
-Docker Desktop offers native support via Hyper-V containers, and so is preferred, but requires Windows 10 64-bit Pro, Enterprise, or Education (Build 15063 or later), and Hyper-V and Containers Windows features must be enabled (all of which are the case on our standard university laptop installs; 
-if Hyper-V has not been enabled, [follow the instructions here](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-
 
 #### Windows
 
-First install Docker Desktop onto your machine.
-Windows users who log into an Active Directory domain (i.e., a network login) may find they lack permissions to start Docker correctly. 
-If so, follow [these instructions](https://github.com/docker/for-win/issues/785#issuecomment-344805180).
+Docker Desktop in Windows offers native support via Hyper-V containers, and so is preferred.
 
+To install Docker Desktop on Windows 10 64-bit Pro, Enterprise, or Education build 15063 or later (i.e., most university of institution managed machines) [follow these installation instructions](https://docs.docker.com/docker-for-windows/install/)
+To install Docker Desktop on Windows Home [follow these installation instructions](https://docs.docker.com/docker-for-windows/install-windows-home/).
+
+Windows users who log into an Active Directory domain (i.e., a network login) may find they lack permissions to start Docker correctly. 
+If so, [follow these instructions](https://github.com/docker/for-win/issues/785#issuecomment-344805180).
 It is best to install using the default settings. 
-You may be asked to enable Hyper-V and Containers, which you should do. 
+
+You may be asked to enable the Hyper-V and Containers features, which you should do. 
+You can do this by [following these instructions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v). 
 At least one user has had the box ticked on the screen but had to untick and tick again to get this to enable correctly (Detailed in issue [#4](https://github.com/ebmdatalab/custom-docker/issues/4)).
 
 Starting Docker can take a while &mdash; up to 5 minutes. 
