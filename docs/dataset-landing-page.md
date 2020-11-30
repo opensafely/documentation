@@ -1,3 +1,5 @@
+[TOC]
+
 This section contains information on the core primary care EHR systems on which OpenSAFELY in based, as well as all external datasets imported to the secure EHR environment.
 
 To see the variables available to extract from the OpenSAFELY database, see the [Variable extractor functions](study-def-extractor-functions.md) section.
