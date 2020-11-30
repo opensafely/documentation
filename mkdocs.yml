@@ -2,11 +2,8 @@ site_name: OpenSAFELY documentation
 nav:
     - Introduction: index.md
     - Updating the Documentation: updating-documentation.md
-    
     - Our Philosophy:
         - Open Working Methods: open-methods.md
-        
-        
     - Data sources: dataset-landing-page.md
     - Getting started:
         - Overview: getting-started.md
@@ -53,6 +50,7 @@ nav:
         - Code Reviews: code-reviews.md
     - First-time walkthrough: onboarding_analysts.md
     - Code of conduct: code-of-conduct.md
+    - Working with R: working-with-r.md
 
 
 theme: material
