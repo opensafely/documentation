@@ -51,6 +51,8 @@ nav:
     - Running and testing code:
         - Overview: pipelines-intro.md
         - Project pipelines: pipelines-yaml.md
+        - Running locally: pipelines-development.md
+        - Running remotely: pipelines-productions.md
     - Good Practice:
         - Good practice: good-practice-intro.md
         - The Datalab Open Manifesto: open-data-manifesto.md
