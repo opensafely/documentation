@@ -60,7 +60,7 @@ nav:
     - Feature requests and bug reports:
         - Overview: requests-intro.md
         - Adding packages: requests-packages.md
-        - Adding Study Definition variables: request-variables.md
+        - Adding Study Definition variables: requests-variables.md
         - Updating the Documentation: requests-documentation.md
     - Code of conduct: code-of-conduct.md
 
