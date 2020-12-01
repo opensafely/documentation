@@ -59,10 +59,10 @@ nav:
         - Code reviews: code-reviews.md
     - Feature requests and bug reports:
         - Overview: requests-intro.md
-#        - New packages: requests-packages.md
+        - Adding packages: requests-packages.md
+        - Adding Study Definition variables: request-variables.md
         - Updating the Documentation: requests-documentation.md
     - Code of conduct: code-of-conduct.md
-    - Working with R: working-with-r.md
 
 theme: material
 
