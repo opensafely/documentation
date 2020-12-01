@@ -5,7 +5,6 @@ nav:
         - Our philosophy: open-methods.md
         - Not just another TRE: coming-soon.md
         - Security: workflow-security-levels.md
-        - Updating the Documentation: updating-documentation.md
     - Data sources: 
         - Overview: dataset-landing-page.md
         - Primary Care Records: dataset-systmone.md
@@ -58,6 +57,10 @@ nav:
         - Developing a Protocol: protocol.md
         - Using Git Effectively: git-workflow.md
         - Code Reviews: code-reviews.md
+    - Feature requests and bug reports:
+        - Introduction: requests-intro.md
+#        - New packages: requests-packages.md
+        - Updating the Documentation: updating-documentation.md
     - Code of conduct: code-of-conduct.md
 
 
