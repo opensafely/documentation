@@ -5,18 +5,17 @@ nav:
         - Our philosophy: open-methods.md
         - Not just another TRE: coming-soon.md
         - Security: workflow-security-levels.md
-        - Updating the Documentation: updating-documentation.md
     - Data sources: 
-        - Overview: dataset-landing-page.md
-        - Primary Care Records: dataset-systmone.md
-        - Covid-19 Test Results: dataset-sgsscovid.md
-        - Emergency Attendances: dataset-ecds.md
-        - Hospital Admissions:  dataset-apc.md
-        - Intensive Care Admissions (covid-19 only): dataset-icnarc.md
-        - In-hospital Deaths (covid-19 only): dataset-cpns.md
-        - Registered Deaths: dataset-onsdeaths.md
+        - Overview: dataset-intro.md
+        - Primary care records: dataset-systmone.md
+        - Covid-19 test results: dataset-sgsscovid.md
+        - Emergency attendances: dataset-ecds.md
+        - Hospital admissions:  dataset-apc.md
+        - Intensive care admissions (covid-19 only): dataset-icnarc.md
+        - In-hospital deaths (covid-19 only): dataset-cpns.md
+        - Registered deaths: dataset-onsdeaths.md
     - Installation:
-        - Overview: getting-started.md
+        - Overview: install-intro.md
         - GitHub and Git: install-github-and-git.md
         - Python: install-python.md
         - Docker: install-docker.md
@@ -30,37 +29,40 @@ nav:
         - Test the code: workflow-testing-the-code.md
         - Execute the analysis on the real data: workflow-job-runner.md
         - Check the output for disclosivity: workflow-check-disclosivity.md
-        - Project Folder Structure: workflow-folder-structure.md
+        - Project folder structure: workflow-folder-structure.md
         - Glossary: glossary.md
     - Study definitions:
-        - Introduction: study-def-intro.md
+        - Overview: study-def-intro.md
         - Basic structure: study-def-structure.md
         - Codelists: study-def-codelists.md
-        - Defining Time Periods: study-def-time.md
+        - Defining time periods: study-def-time.md
         - Defining dummy data: study-def-dummy-data.md
-        - Defining a Precise Study Population: study-def-population.md
-        - Multiple Study Definitions: study-def-multiple-populations.md
-        - Study Flow Charts: study-def-flowcharts.md
+        - Defining the study population: study-def-population.md
+        - Multiple study definitions: study-def-multiple-populations.md
+        - Defining variables: study-def-variables.md
         - Missing values and unmatched records: study-def-missing.md
-        - Variable extractor functions: study-def-extractor-functions.md
+        - Study flow charts: study-def-flowcharts.md
     - Measures: measures.md
     - Codelists:
-        - Introduction to Codelists: codelist-intro.md
-        - Building a Codelist: codelist-creation.md
-        - Adding Codelists to Project: codelist-project.md
+        - Introduction to codelists: codelist-intro.md
+        - Building a codelist: codelist-creation.md
+        - Adding codelists to Project: codelist-project.md
         - SNOMED codelists: codelist-snomed.md
     - Running and testing code:
-        - Overview: pipelines-overview.md
+        - Overview: pipelines-intro.md
         - Project pipelines: pipelines-yaml.md
     - Good Practice:
         - Good practice: good-practice-intro.md
         - The Datalab Open Manifesto: open-data-manifesto.md
-        - Developing a Protocol: protocol.md
-        - Using Git Effectively: git-workflow.md
-        - Code Reviews: code-reviews.md
+        - Developing a protocol: protocol.md
+        - Using Git effectively: git-workflow.md
+        - Code reviews: code-reviews.md
+    - Feature requests and bug reports:
+        - Overview: requests-intro.md
+#        - New packages: requests-packages.md
+        - Updating the Documentation: requests-documentation.md
     - Code of conduct: code-of-conduct.md
     - Working with R: working-with-r.md
-
 
 theme: material
 

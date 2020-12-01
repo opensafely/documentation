@@ -86,7 +86,7 @@ cohortextractor cohort_report
 Re-run it each time you want to update the document using the latest version of the `input.csv` dataset. 
 This command can also be run on the real data. 
 
-For information on this, see the [Running on server](pipelines-overview.md) page for further details.
+For information on this, see the [Running on server](pipelines-intro.md) page for further details.
 
 
 #### `run`
@@ -98,7 +98,7 @@ cohortextractor run dummy make_graph expectations
 ```
 
 will run the `make_graph` action on dummy data. 
-See the [piplines section](pipelines-overview.md) for more details.
+See the [piplines section](pipelines-intro.md) for more details.
 
 ## Using `cohortextractor` in a Study Definition
 

@@ -39,9 +39,11 @@ Other viruses/organisms may have a finite episode length, so that any tests occu
 Negative test data is unreliable &mdash; DO NOT USE
 
 SARS-CoV-2 test result data also available in SystmOne and use the following Read v3 (ctv3) codes:
+
 * **Y20d1** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result positive_
 * **Y20d2** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result negative_
 * **Y23f6** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result unknown_
+
 These codes can be queried in primary care data separately. 
 
 
