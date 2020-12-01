@@ -6,7 +6,7 @@ nav:
         - Not just another TRE: coming-soon.md
         - Security: workflow-security-levels.md
     - Data sources: 
-        - Overview: dataset-landing-page.md
+        - Overview: dataset-intro.md
         - Primary care records: dataset-systmone.md
         - Covid-19 test results: dataset-sgsscovid.md
         - Emergency attendances: dataset-ecds.md
@@ -15,7 +15,7 @@ nav:
         - In-hospital deaths (covid-19 only): dataset-cpns.md
         - Registered deaths: dataset-onsdeaths.md
     - Installation:
-        - Overview: getting-started.md
+        - Overview: install-intro.md
         - GitHub and Git: install-github-and-git.md
         - Python: install-python.md
         - Docker: install-docker.md
@@ -32,16 +32,16 @@ nav:
         - Project folder structure: workflow-folder-structure.md
         - Glossary: glossary.md
     - Study definitions:
-        - Introduction: study-def-intro.md
+        - Overview: study-def-intro.md
         - Basic structure: study-def-structure.md
         - Codelists: study-def-codelists.md
         - Defining time periods: study-def-time.md
         - Defining dummy data: study-def-dummy-data.md
         - Defining the study population: study-def-population.md
         - Multiple study definitions: study-def-multiple-populations.md
-        - Study flow charts: study-def-flowcharts.md
+        - Defining variables: study-def-variables.md
         - Missing values and unmatched records: study-def-missing.md
-        - Variable extractor functions: study-def-extractor-functions.md
+        - Study flow charts: study-def-flowcharts.md
     - Measures: measures.md
     - Codelists:
         - Introduction to codelists: codelist-intro.md
@@ -49,7 +49,7 @@ nav:
         - Adding codelists to Project: codelist-project.md
         - SNOMED codelists: codelist-snomed.md
     - Running and testing code:
-        - Overview: pipelines-overview.md
+        - Overview: pipelines-intro.md
         - Project pipelines: pipelines-yaml.md
     - Good Practice:
         - Good practice: good-practice-intro.md
@@ -60,7 +60,7 @@ nav:
     - Feature requests and bug reports:
         - Overview: requests-intro.md
 #        - New packages: requests-packages.md
-        - Updating the Documentation: updating-documentation.md
+        - Updating the Documentation: requests-documentation.md
     - Code of conduct: code-of-conduct.md
 
 theme: material
