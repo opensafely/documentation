@@ -81,6 +81,7 @@ To see its options, type `cohortextractor run --help`.
 
 For `cohortextractor run` to work, you need at least version `1.6.1` and docker. 
 You _may_ need credentials for our docker registry (for example, if you are running Stata actions, which require a licensed version).
+If you have access, you can see instructions for this here (https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
 
 This command will create outputs in the location specified by the outputs
 
