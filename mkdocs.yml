@@ -87,3 +87,4 @@ markdown_extensions:
         permalink: "&#128279;"
     - pymdownx.highlight
     - pymdownx.superfences
+    - admonition
