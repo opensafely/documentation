@@ -1,6 +1,6 @@
 The Measures framework enables the extraction of multiple study cohorts each covering different time periods, and calculates a set of _measures_ (proportions) for each period.
 
-A simple example is to calculate, for each month in 2020 and each region, the proportion of patients who were admitted to hospital at least once; and the proportion of patients who died.
+A simple example is to calculate, for each month in 2020 and each region, the proportion of patients who were admitted to hospital at least once and the proportion of patients who died.
 Without Measures, this would require creating a set of variables (or a study definition) for each month of interest containing: the region; whether or not they were admitted to hospital; whether or not they died.
 We would then need to use these datasets to calculate the desired proportion and aggregate the results. 
 Measures makes this process simple.
