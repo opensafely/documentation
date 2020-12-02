@@ -20,7 +20,7 @@ Arranging your code like this also has several other advantages:
 - Thinking about your analysis in terms of actions makes it more readable and therefore easier to review and test. For example, being explicit about what the inputs and outputs of each actions are ensures you don't overwrite files by accident.
 - The pipeline forces you to declare which outputs may be more or less disclosive.
 
-### `project.yaml` format
+## `project.yaml` format
 
 The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory.
 
@@ -59,6 +59,7 @@ It will output two moderately sensitive files `cox-model.txt` and `survival-plot
 
 Every `project.yaml` requires a `version`, `expectations`, and `actions` section.
 In general, actions are composed as follows:
+
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
 * Each action must include a `run` key which includes an officially-supported command and a version (`latest` will always select the most recent version, but following initial development you should specify the version to ensure reproducibility). 
 	* The `cohortextractor` command has the same options as described in the [cohortextractor section](cohortextractor.md), though the `expectations-population` option should not be used.
@@ -142,6 +143,7 @@ For those with Level 4 access:
 * outputs labelled `highly_sensitive` are not visible
 
 For those with Level 3 access:
+
 * all outputs will be saved in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`
 * there's also a directory called `metadata`, containing log files for each action e.g. generate_chorts.log, run_model.log
 

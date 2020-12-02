@@ -324,13 +324,10 @@ population = patients.with_these_clinical_events(
 Researchers often want to exclude patients who have switched practice recently and hence may have an incomplete record of their conditions as it can take some time for their records to come from their previous practice. 
 
 ```py
-population=patients.registered_with_one_practice_between(
+population = patients.registered_with_one_practice_between(
         "2019-03-01", "2020-03-01"
 )
 ```
-
-::: cohortextractor.patients.registered_with_one_practice_between
-
 
 ### Combining population criteria
 
@@ -342,7 +339,8 @@ Here we have combined both COPD and registration details to find only patients w
 population = patients.satisfying(
     "has_follow_up AND has_copd",
     has_copd=patients.with_these_clinical_events(
-        copd_codes, on_or_before="2017-03-01"
+        copd_codes, 
+		on_or_before = "2017-03-01"
     ),
     has_follow_up = patients.registered_with_one_practice_between(
         "2019-03-01", "2020-03-01"

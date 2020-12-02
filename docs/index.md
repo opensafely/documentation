@@ -1,4 +1,3 @@
-'pipelines-intro.md'
 **These documents are a work-in-progress**. Please see the [Updating the Documentation page](requests-documentation.md) if you want to make improvements. 
  
 ## What is OpenSAFELY?
