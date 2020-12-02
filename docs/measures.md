@@ -1,13 +1,17 @@
-The Measures framework enables the extraction of multiple study cohorts each covering different time periods, and calculates a set of _measures_ (proportions) for each period.
+The Measures framework allows you to extract multiple datasets covering different time periods, and calculates a set of _measures_ for each period.
 
-A simple example is to calculate, for each month in 2020 and each region, the proportion of patients who were admitted to hospital at least once and the proportion of patients who died.
-Without Measures, this would require creating a set of variables (or a study definition) for each month of interest containing: the region; whether or not they were admitted to hospital; whether or not they died.
-We would then need to use these datasets to calculate the desired proportion and aggregate the results. 
+Measure are expressed as a quotient (i.e., a numerator divided by a denominator) which in practice could be used to calculate proportions, ratios, means, counts, and so on.
+
+For example, we may wish to calculate, for each month in 2020 and each STP (administrative health regions in England), the proportion of patients who were admitted to hospital at least once and the proportion of patients who died.
+
+Without Measures, this would require creating a set of variables (or a study definition) for each month of interest containing: the region; whether or not they were admitted to hospital; whether or not they died, 
+and we would then need to use these datasets to calculate the desired proportion and aggregate the results. 
+
 Measures makes this process simple.
 
 ## Defining measures
 
-Generating measures is three step process:
+Generating measures is a three step process:
 
  1. **Define a study definition** that includes a `measures` variable, which should be a list calls to the `Measure()` function.
  2. **Extract the data** by running `generate_cohort` using the `--index-date-range` option to cover the range of time periods we want to calculate the measure for.
@@ -16,7 +20,7 @@ Generating measures is three step process:
 
 ### Define a study definition
 
-The `study_definition.py` file for the example above is:
+The `study_definition.py` script for the example above is:
 
 ```py
 
@@ -65,7 +69,7 @@ measures = [
 This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure.
 
 * `id` is just a string used to identify the measure output file. 
-* `numerator` and `denominator` columns must be numeric or boolean (encoded as 0 or 1). 
+* `numerator` and `denominator` are the columns in the dataset that define the measure. They must be numeric or boolean (encoded as 0 or 1). 
 * `group_by` column can be of any type. 
 
 ## Extract the data
@@ -114,9 +118,7 @@ For each defined measure, and for each file extracted in step 2, this generates 
     output/measure_death_by_stp_2020-01-01.csv
     output/measure_hosp_admission_by_stp_2020-02-01.csv
     output/measure_death_by_stp_2020-02-01.csv
-	
 	...
-	
     output/measure_hosp_admission_by_stp_2020-12-01.csv
     output/measure_death_by_stp_2020-12-01.csv
 
