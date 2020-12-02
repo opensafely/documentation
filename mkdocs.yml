@@ -40,7 +40,7 @@ nav:
         #- Defining the study population: study-def-population.md
         #- Multiple study definitions: study-def-multiple-populations.md
         #- Missing values and unmatched records: study-def-missing.md
-    - Study Definition variables: study-def-variables.md
+    - Study definition variables: study-def-variables.md
     - Study flow charts: study-def-flowcharts.md
     - Measures: measures.md
     - Codelists:
