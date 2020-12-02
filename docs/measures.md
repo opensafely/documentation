@@ -1,6 +1,6 @@
 The Measures framework allows you to extract multiple datasets covering different time periods, and calculates a set of _measures_ for each period.
 
-Measure are expressed as a quotient (i.e., a numerator divided by a denominator) which in practice could be used to calculate proportions, ratios, means, counts, and so on.
+Measures are expressed as a quotient (i.e., a numerator divided by a denominator) which in practice could be used to calculate proportions, ratios, means, counts, and so on.
 
 For example, we may wish to calculate, for each month in 2020 and each STP (administrative health regions in England), the proportion of patients who were admitted to hospital at least once and the proportion of patients who died.
 
