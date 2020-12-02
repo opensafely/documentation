@@ -47,14 +47,6 @@ See our [installation](install-intro.md) pages for complete installation instruc
 
 We recommend following one of our OpenSAFELY walkthroughs (see [here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow, rather than using the documentation pages alone.
 
-## Useful links
 
-Some of these are in private repos as they are under quick development pending release:
 
-- [TPP Database Schema (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb) (needs occasional refreshes)
-- [Variable extractor function skeleton documentation](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/patients.py)
-- [Variable extractor function python definitions](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/tpp_backend.py)
-- [Instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md) (in restricted access repo)
-- [Latest available records in SystmOne and external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/latest-dates.ipynb) (needs weekly refreshes)
-- [Ethnicity codes used by external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)
-- [Dataset user guides](https://docs.google.com/document/d/1EzaRTiapjxxbj10wjN5iYjXbeyHMEErOoaV0tH6Mv1c/) (in restricted access gdrive folder)
+

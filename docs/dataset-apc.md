@@ -1,5 +1,5 @@
-Admitted Patient Care (APC) is the national data set for hospital admissions. 
-APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY via NHS Digital's Secondary Use Service (SUS). 
+Admitted Patient Care (APC) is the national data set for hospital admissions.
+APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY via NHS Digital's Secondary Use Service (SUS).
 
 ## Metadata
 
@@ -17,6 +17,7 @@ Diagnoses are coded using ICD-10. Procedures are coded in OPCS-4
 
 ## More information
 
+* [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)) - (private, pending review & publication)
 * [NHS Digital SUS site](https://digital.nhs.uk/services/secondary-uses-service-sus/secondary-uses-services-sus-guidance)
 * [NHS Digital HES site](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics)
 * [Hospital APC Activity reports](https://digital.nhs.uk/data-and-information/publications/statistical/hospital-admitted-patient-care-activity)

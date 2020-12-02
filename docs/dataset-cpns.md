@@ -1,4 +1,4 @@
-The Covid-19 Patient Notification System (CPNS) is the route by which NHS England are informed of positive COVID-19 in-hospital deaths. 
+The Covid-19 Patient Notification System (CPNS) is the route by which NHS England are informed of positive COVID-19 in-hospital deaths.
 Initially this was lab-confirmed covid deaths only, but also includes suspected cases from 28 April 2020 onwards.
 
 ## Metadata
@@ -16,8 +16,8 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 **Collected information** Admission, test, result, and death dates; hospital and department of death; basic demographics.
 
 ## More information
- 
+* [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)) - (private, pending review & publication)
 * [Press release from Arden&GEM](https://www.ardengemcsu.nhs.uk/showcase/news-events/news-events/supporting-providers-to-record-covid-19-patient-notifications/)
 * [Letter from NHSE to Trust chief execs regarding changes to data collection](https://www.england.nhs.uk/coronavirus/wp-content/uploads/sites/52/2020/04/C0389-update-to-cpns-reporting-letter-27-april-2020.pdf)
 * [Technical summary on data series on deaths in people with COVID-19](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/882565/Technical_Summary_PHE_Data_Series_COVID-19_Deaths_20200429.pdf)
- 
+
