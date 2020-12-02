@@ -18,13 +18,13 @@ OpenSAFELY is a collaboration between the DataLab at the University of Oxford, t
 ## Using OpenSAFELY
 
 OpenSAFELY maintains extremely high standards for data privacy, whilst ensuring complete computational and analytical transparency.
-As such OpenSAFELY requires users' to know, or be willing to learn, the following tools:
+As such OpenSAFELY requires users to know, or be willing to learn, the following tools:g
 
 ### Essential
 
 - **Stata, R or Python**
   OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis.
-  Available libraries are restricted by the framework (documentation to follow).
+  For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](pipelines/#execution-environments) for more information.
 - **Git**
 The workflow is strongly integrated into Git/GitHub.
 As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches.
