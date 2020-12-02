@@ -31,17 +31,17 @@ nav:
         - Check the output for disclosivity: workflow-check-disclosivity.md
         - Project folder structure: workflow-folder-structure.md
         - Glossary: glossary.md
-    - Study definitions:
-        - Overview: study-def-intro.md
-        - Basic structure: study-def-structure.md
-        - Codelists: study-def-codelists.md
-        - Defining time periods: study-def-time.md
-        - Defining dummy data: study-def-dummy-data.md
-        - Defining the study population: study-def-population.md
-        - Multiple study definitions: study-def-multiple-populations.md
-        - Defining variables: study-def-variables.md
-        - Missing values and unmatched records: study-def-missing.md
-        - Study flow charts: study-def-flowcharts.md
+    - Study definitions: study-def.md
+        #- Overview: study-def-intro.md
+        #- Basic structure: study-def-structure.md
+        #- Codelists: study-def-codelists.md
+        #- Defining time periods: study-def-time.md
+        #- Defining dummy data: study-def-dummy-data.md
+        #- Defining the study population: study-def-population.md
+        #- Multiple study definitions: study-def-multiple-populations.md
+        #- Missing values and unmatched records: study-def-missing.md
+    - Study Definition variables: study-def-variables.md
+    - Study flow charts: study-def-flowcharts.md
     - Measures: measures.md
     - Codelists:
         - Introduction to codelists: codelist-intro.md
