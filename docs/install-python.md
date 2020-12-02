@@ -3,7 +3,7 @@
 \* **Please read even if you already have Python installed** \*
 
 For security, consistency, and readability, OpenSAFELY provides an API built in [**Python**](https://www.python.org/) for using the platform. 
-This API includes script-based functions for specifiying the patients and variables that make up a study dataset (using a [Study Definition](study-def-intro.md)),
+This API includes script-based functions for specifiying the patients and variables that make up a study dataset (using a [Study Definition](study-def.md)),
 and command line functions for importing codelists, generating dummy data, and testing that the study definition can be run successfully on the server. 
 Python must be installed on your machine to perform these tasks. 
 The functions are provided in a Python module called `cohortextractor` which will need to be installed too &mdash; see the [cohortextractor section](cohortextractor.md) for more details.

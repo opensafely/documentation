@@ -1,4 +1,5 @@
 This section describes each available function for creating variables within a study definition. 
+For more information on constructing your study definition, go to the [Study Definition](study-def.md) page.
 
 The [tpp_backend.py](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/tpp_backend.py) python script is where these functions are actually defined &mdash; go there to see the SQL these functions generate for querying the OpenSAFELY backends.
 

@@ -1,1 +1,1 @@
-Write a `project.yaml` (see [here](pipelines-intro.md)) and use `cohortextractor run dummy <action> expectations`
+Write a `project.yaml` (see [here](pipelines.md)) and use `cohortextractor run dummy <action> expectations`

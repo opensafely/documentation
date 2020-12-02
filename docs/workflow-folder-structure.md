@@ -1,6 +1,6 @@
 #### `project.yaml`
 
-This file defines how all the components of your analysis can run together, efficiently, on the server, or locally.  This is a brand-new feature, so [the documentation](pipelines-intro.md) is currently minimal and you may need to ask for help.
+This file defines how all the components of your analysis can run together, efficiently, on the server, or locally.  This is a brand-new feature, so [the documentation](pipelines.md) is currently minimal and you may need to ask for help.
 
 
 #### `.github/`

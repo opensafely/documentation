@@ -7,7 +7,7 @@ It contains functions relating to the OpenSAFELY workflow that can be run the co
 * generating Measures
 * plus a few other utility functions
 
-It also contains functions for use within a Study Definition &mdash; go to the [Study Definition section](study-def-intro.md) for more details.
+It also contains functions for use within a Study Definition &mdash; go to the [Study Definition section](study-def.md) for more details.
 
 ## Installing `cohortextractor`
 
@@ -86,9 +86,6 @@ cohortextractor cohort_report
 Re-run it each time you want to update the document using the latest version of the `input.csv` dataset. 
 This command can also be run on the real data. 
 
-For information on this, see the [Running on server](pipelines-intro.md) page for further details.
-
-
 #### `run`
 
 This runs actions defined in the `project.yaml` file. For example,
@@ -98,8 +95,7 @@ cohortextractor run dummy make_graph expectations
 ```
 
 will run the `make_graph` action on dummy data. 
-See the [piplines section](pipelines-intro.md) for more details.
 
 ## Using `cohortextractor` in a Study Definition
 
-See [the Study Definition section](study-def-intro) for more details.
+See [the Study Definition section](study-def) for more details.
