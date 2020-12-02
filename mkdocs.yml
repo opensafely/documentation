@@ -48,11 +48,7 @@ nav:
         - Building a codelist: codelist-creation.md
         - Adding codelists to Project: codelist-project.md
         - SNOMED codelists: codelist-snomed.md
-    - Running and testing code:
-        - Overview: pipelines-intro.md
-        - Project pipelines: pipelines-yaml.md
-        - Running locally: pipelines-development.md
-        - Running remotely: pipelines-productions.md
+    - Running and testing code: pipelines.md
     - Good Practice:
         - Good practice: good-practice-intro.md
         - The Datalab Open Manifesto: open-data-manifesto.md
