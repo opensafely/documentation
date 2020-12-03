@@ -32,3 +32,6 @@ This pipeline is also [automatically tested]() against dummy data every time a n
 Other non-standard actions may be required. 
 For example, it's possible to run a matching routine that extracts a matched control population to the population defined in the study definition, without having to extract all candidate matches into a dataset first.
 
+
+
+---8<-- 'includes/glossary.md'

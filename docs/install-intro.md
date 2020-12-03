@@ -11,3 +11,5 @@ For the analysis proper, you can use Stata, R, or Python (almost) however you wi
 
 Additionally, to use OpenSAFELY fully you will need some platform-specific permissions, for instance to be able to submit analyses to run on the server.
 We will issue these as required.
+
+---8<-- 'includes/glossary.md'

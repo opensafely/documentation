@@ -3,3 +3,5 @@ Here you select a repo+branch, a set of actions to run (definined in the project
 The Job Runner will take care of the rest.
 It will produce the desired outputs on the server, which must be reviewed before release via GitHub.
 See the [Project Pipelines section](pipelines.md) for more details. 
+
+---8<-- 'includes/glossary.md'

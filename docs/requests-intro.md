@@ -9,3 +9,6 @@ It's often useful to also check _closed_ issues, as it may be for example that y
 
 The remaining pages provide details on how to submit issues for specific requests in OpenSAFELY.
 
+
+
+---8<-- 'includes/glossary.md'

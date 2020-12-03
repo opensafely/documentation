@@ -33,3 +33,6 @@ A coder may also manually assign these codes to a death record._
 * **Primary / secondary cause of death** These are not concepts used in ONS cause of death data. 
 There is the underlying cause, and then a list of up to 15 medical conditions (ICD10001 to ICD10015, given as ICD10 codes) mentioned on the death certificate. 
 These codes are not ordered meaningfully. 
+
+
+---8<-- 'includes/glossary.md'

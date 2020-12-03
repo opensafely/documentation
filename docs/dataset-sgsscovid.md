@@ -47,6 +47,7 @@ SARS-CoV-2 test result data also available in SystmOne and use the following Rea
 These codes can be queried in primary care data separately. 
 
 
+--8<-- "includes/glossary.md"
 
 ## More information
 

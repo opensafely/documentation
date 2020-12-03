@@ -20,3 +20,6 @@ The first thing to think about before making any changes, whether adding, deleti
 Open GitHub Desktop, and make sure the current repository is the the one you're working on. Click `Branch > New branch` and choose a new name that reflects the changes you wish to make, e.g., `update-codelists`, or `exploratory-notebook`. In our example, this can be `add-transplant-var`.
 
 <!--Then publish the branch. It's a good idea to do straight way so that others know what you're working on. It's also necessary git housekeeping before being able to push commits to the remote repo.-->
+
+
+---8<-- 'includes/glossary.md'

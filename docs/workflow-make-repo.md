@@ -30,3 +30,6 @@ Now we're going to download a copy of this repo to your machine so you can work 
 * ...
 
 To clone your new repository to your machine, [follow these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) which explains cloning both via GitHub Deskop or via the command line. When this is done, you should have a folder whose name is the same as the repo on your machine.
+
+
+---8<-- 'includes/glossary.md'

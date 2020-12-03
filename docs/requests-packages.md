@@ -23,3 +23,6 @@ Whilst the long-term solution in most cases should be to install additional pack
 This will only be feasible if the functions do not have a complex hierachy of dependencies. 
 Either way, you should make an Issue for the package so that other users are aware of the package's history in OpenSAFELY.
 
+
+
+---8<-- 'includes/glossary.md'

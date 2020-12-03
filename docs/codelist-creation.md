@@ -121,3 +121,6 @@ How contributions to codelists are acknowledged -- to be agreed.
 * Go to an existing Codelist page.
 * Click Create new version
 * If you want to update the existing version, click Update version instead.
+
+
+---8<-- 'includes/glossary.md'

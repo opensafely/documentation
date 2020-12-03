@@ -69,3 +69,6 @@ If you want to create an empty folder to place files into and you _never_ want t
 This can be useful if you want to for example add a `outputs/plots/` subfolder to put your analysis plots into without having to check and create that folder explicitly every time in the analysis script. 
 This is necessary because the contents `output/` folder is ignored by `.gitignore`.
 
+
+
+---8<-- 'includes/glossary.md'

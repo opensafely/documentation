@@ -24,3 +24,5 @@ the `cohortextractor` by
 submitting `cohortextractor update_codelists` at the command line.
 
 You will need to add and commit these changes to Git. 
+
+---8<-- 'includes/glossary.md'

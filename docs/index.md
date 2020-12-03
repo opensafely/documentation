@@ -50,3 +50,6 @@ We recommend following one of our OpenSAFELY walkthroughs (see [here](https://gi
 
 
 
+
+
+---8<-- 'includes/glossary.md'

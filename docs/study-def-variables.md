@@ -148,3 +148,6 @@ These variables create new variable from existing variables. They do not extract
 &nbsp;
 
 
+
+
+---8<-- 'includes/glossary.md'

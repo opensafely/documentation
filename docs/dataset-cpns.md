@@ -21,3 +21,6 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 * [Letter from NHSE to Trust chief execs regarding changes to data collection](https://www.england.nhs.uk/coronavirus/wp-content/uploads/sites/52/2020/04/C0389-update-to-cpns-reporting-letter-27-april-2020.pdf)
 * [Technical summary on data series on deaths in people with COVID-19](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/882565/Technical_Summary_PHE_Data_Series_COVID-19_Deaths_20200429.pdf)
 
+
+
+---8<-- 'includes/glossary.md'

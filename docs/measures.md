@@ -87,3 +87,5 @@ Finally, for each measure, it combines all the output into a single file with an
     output/measure_death_by_stp.csv
 
 This command also respects the `--skip-existing` flag. This will prevent it from recalculating the measure for any months or weeks which have already been calculated. However the final step, which combines output across time periods, will always be run.
+
+---8<-- 'includes/glossary.md'

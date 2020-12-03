@@ -19,3 +19,6 @@ This helps with:
 	* readability
 	* bug-finding
 	* parallelisation via the project pipeline
+
+
+---8<-- 'includes/glossary.md'

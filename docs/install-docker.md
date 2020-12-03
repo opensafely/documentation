@@ -73,3 +73,6 @@ It is easy to think that it has frozen, but it will take quite a while to get go
     If this is the case, look at this cat whilst you wait:
 
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+
+---8<-- 'includes/glossary.md'

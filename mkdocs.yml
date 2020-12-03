@@ -83,8 +83,11 @@ plugins:
                 heading_level: 4
 
 markdown_extensions:
+    - pymdownx.snippets:
+        check_paths: true
     - toc:
         permalink: "&#128279;"
     - pymdownx.highlight
     - pymdownx.superfences
     - admonition
+    - abbr

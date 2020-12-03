@@ -473,3 +473,6 @@ study = StudyDefinition(
 )
 ```
 
+
+
+---8<-- 'includes/glossary.md'

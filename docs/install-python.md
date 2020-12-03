@@ -31,3 +31,6 @@ Go to the [`cohortextractor` section](cohortextractor.md) for instructions on ho
 ### mac users
 
 <font color='red'>not yet documented</font>
+
+
+---8<-- 'includes/glossary.md'

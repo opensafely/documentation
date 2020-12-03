@@ -11,3 +11,6 @@ To request new functions that create variables via a Study Definition, follow th
 * Where possible, provide example SQL code for the underlying database query (it doesn't have to be perfect).
 
 
+
+
+---8<-- 'includes/glossary.md'

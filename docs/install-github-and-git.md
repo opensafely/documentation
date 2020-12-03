@@ -35,3 +35,6 @@ You will need [**Two-factor authentication**](https://help.github.com/en/github/
 To set up 2FA [follow these instructions](https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
 If you're not sure if you already have 2FA enabled, go to [*settings > security > Two-factor authentication*](https://github.com/settings/security) in GitHub and check that at least one method is *Configured*.
 
+
+
+---8<-- 'includes/glossary.md'

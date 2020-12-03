@@ -32,3 +32,6 @@ discussion and conversations will be available for examination
 - These discussions should be linked to from the website - i.e. link the issue to the
 final product
 
+
+
+---8<-- 'includes/glossary.md'

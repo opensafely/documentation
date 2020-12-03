@@ -9,3 +9,6 @@ Our tools are build using Python, SQL and Docker. Analyses can be carried out in
 All our code including analytic code is shared on Github and is open access for efficiency, reuse and collaboration. 
 We encourage external review and reuse of our code. 
 
+
+
+---8<-- 'includes/glossary.md'
