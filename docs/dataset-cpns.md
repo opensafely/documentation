@@ -3,17 +3,12 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 
 ## Metadata
 
-**Data provider** NHS England.
-
-**Participation / Coverage** In-hospital covid-related deaths in England.
-
-**Update frequency in OpenSAFELY** Weeekly.
-
-**Delay between event occurring and event appearing in OpenSAFELY** Within 2 weeks.
-
-**Available from** 24/03/2020 onwards (all test-positive deaths); 28/04/2020 onwards (test-positive and covid documented as underlying cause).
-
-**Collected information** Admission, test, result, and death dates; hospital and department of death; basic demographics.
+* **Data provider** NHS England.
+* **Participation / Coverage** In-hospital covid-related deaths in England.
+* **Update frequency in OpenSAFELY** Weeekly.
+* **Delay between event occurring and event appearing in OpenSAFELY** Within 2 weeks.
+* **Available from** 24/03/2020 onwards (all test-positive deaths); 28/04/2020 onwards (test-positive and covid documented as underlying cause).
+* **Collected information** Admission, test, result, and death dates; hospital and department of death; basic demographics.
 
 ## More information
 * [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)) - (private, pending review & publication)

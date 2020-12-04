@@ -2,9 +2,9 @@
 
 ## Use a Template
 
-For ease of use, we have created a research template that you should use for your study. 
-Go to the [OpenSAFELY research template repo](https://github.com/opensafely/research-template) on GitHub. 
-Click the green button that says <span style="background-color: green; color: white">&nbsp;**Use this template**&nbsp;</span>. 
+For ease of use, we have created a research template that you should use for your study.
+Go to the [OpenSAFELY research template repo](https://github.com/opensafely/research-template) on GitHub.
+Click the green button that says <span style="background-color: green; color: white">&nbsp;**Use this template**&nbsp;</span>.
 
 Fill in the details:
 
@@ -24,10 +24,10 @@ The README is written in Markdown. If you're not familiar with Markdown syntax, 
 You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's not need to write more than "_first README update_", but typically commits should have a bit more detail than that.
 
 ## Clone the repo locally
-Now we're going to download a copy of this repo to your machine so you can work on it locally. This is useful because you can:
+Now we're going to download a copy of this repo to your machine so you can work on it locally. This is necessary because you can:
+
 * develop your code using familiar editing tools
 * test and run code without disturbing other contributors
-* ...
 
 To clone your new repository to your machine, [follow these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) which explains cloning both via GitHub Deskop or via the command line. When this is done, you should have a folder whose name is the same as the repo on your machine.
 

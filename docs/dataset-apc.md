@@ -3,15 +3,11 @@ APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 ## Metadata
 
-**Data provider** NHS England.
-
-**Participation / Coverage** In-hospital patient admissions in NHS Trusts in England.
-
-**Update frequency in OpenSAFELY** Approximately monthly.
-
-**Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 months.
-
-**Collected information** Admission and discharge dates; admission and discharge locations; reason for admission; diagnoses; treatments; discharge destination.
+* **Data provider** NHS England.
+* **Participation / Coverage** In-hospital patient admissions in NHS Trusts in England.
+* **Update frequency in OpenSAFELY** Approximately monthly.
+* **Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 months.
+* **Collected information** Admission and discharge dates; admission and discharge locations; reason for admission; diagnoses; treatments; discharge destination.
 
 Diagnoses are coded using ICD-10. Procedures are coded in OPCS-4
 
