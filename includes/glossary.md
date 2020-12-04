@@ -15,6 +15,7 @@
 *[SUS]: Secondary Uses Service - NHS hospital activity data pseudonymised and used for purposes other than direct care, such as analytics and service planning
 *[ECDS]: Emergency Care Data Set - the national data set for urgent and emergency care
 *[SNOMED-CT]: SNOMED Clinical Terms, a structured clinical vocabulary for use in an electronic health record, the current standard for coding in the NHS and many jurisdictions globally
+*[SNOMED]: SNOMED Clinical Terms, a structured clinical vocabulary for use in an electronic health record, the current standard for coding in the NHS and many jurisdictions globally
 *[CTV3]: Clinical Terms Version 3; a version of clinical coding that supercedes Read v2, used natively in TPP SystmOne
 *[APC]: Admitted Patient Care is the national data set for hospital admissions. It is part of HES
 *[ICD-10]: the 10th revision of the International Statistical Classification of Diseases and Related Health Problems (ICD), a medical classification list by the World Health Organization (WHO)
@@ -23,3 +24,6 @@
 *[ICNARC-CMP]: data on covid-related intensive care admissions in England
 *[CPNS]: Covid-19 Patient Notification System - the route by which NHS England are informed of COVID-19-positive, deaths in hospital
 *[ONS]: Office for National Statistics - the UK's largest independent producer of official statistics and the recognised national statistical institute of the UK
+*[Level 3]: intermediate data, required for running a study, which may contain identifiable information, and which should never be considered for publication; usually a CSV produced from a study definition. Most OpenSAFELY users will not have (or need) permission to see this data directly
+*[Level 4]: tables, figures, and other structured files produced as a result of the analysis of Level 3 data, for example summary statistics and statistical models. OpenSAFELY users with the appropriate permission can view this data, and publish it to the internet if they consider it safe to do so
+*[TPP]: The Phoenix Partnership, the company behind the SystmOne EHR

@@ -3,11 +3,7 @@ You can write whatever code you like as long as it will run successfully on serv
 However, note the following restrictions / guidance:
 
 * **Write analyses in Python, R, or Stata.**
-You can can use more than one language in a single project if necessary.
-In lieu of comprehensive documentation about installed dependencies, the following links should provide you with clues about what is available:
-	- [R](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L34-L79)
-	- [Python](https://github.com/opensafely/jupyter-docker/blob/master/requirements.txt)
-	- [Stata](https://github.com/opensafely/stata-docker/tree/master/libraries)
+You can can use more than one language in a single project if necessary.  You can find more information about the available libraries [here](pipelines.md#execution-environments).
 * **Do not write code that requires an internet connection to run.**
 Any research objects (datasets, libraries, etc) that are retrieved via the internet should be imported to the repo locally first.
 If this is not possible (for instance if the object size is too large to be transferred via GitHub) then get in touch.
