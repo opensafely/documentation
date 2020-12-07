@@ -81,7 +81,7 @@ OpenSAFELY currently supports Stata, Python, and R for statistical analysis.
 
 For security reasons, available libraries are restricted to those provided by the framework.
 
-The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries.  These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would help, get in touch!
+The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries. These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would like to help, get in touch!
 
 ### Stata
 
@@ -99,6 +99,7 @@ The R image provided is R 4.0, with [this list of libraries installed](https://g
 
 
 ## Running your code locally
+Whilst you can develop and run code locally using your own installations of R, Stata or Python, it's important to check that these will also successfully run on the real data in an identical execution environment. 
 
 The `cohortextractor run` command will execute one or more actions according to the `project.yaml`.
 To see its options, type `cohortextractor run --help`.
@@ -116,42 +117,52 @@ cohortextractor run dummy generate_cohorts expectations
 This will generate the `input.csv` file as explained in the [cohortextractor](cohortextractor.md) section.
 
 To run the second action you can use:
-```
+```sh
 cohortextractor run dummy run_model expectations
 ```
 As this action depends on the `generate_cohorts` action, it will cause `generate_cohorts` to be run first, followed by `run_model`.
-It will create the two files
+It will create the two files.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
-```
+```sh
 cohortextractor run dummy run_all expectations
 ```
 
 You will also find a new folder, `metadata/`, which contains logging information about your run. If any of your actions fail, you may find clues here as to why.
+
+Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R session is restarted for each action. 
+
+### Dependencies
+
+If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependent actions will be run on the old outputs. To force the dependencies to be run, use the `--force-run-dependencies` option.
+
+For example `cohortextractor run run_model --force-dependencies` will ensure that both the `run_model` and `generate_cohorts` actions are run, even if `input.csv` already exists.
+
 
 ## Running your code with GitHub actions
 
 Every time you create a pull request to merge a development branch onto the main remote branch, GitHub will automatically run a series of tests on the code; specifically, that your codelists are up-to-date, and that `run_all` completes successfully.
 Depending on your settings, you may receive email notifications about the results of these tests.
 You can view the tests, including any errors or failures, by going to the pull request page on GitHub and clicking the `checks` tab.
+
 You can re-run these tests by clicking the `re-run jobs` button.
 
 ## Running your code on the server
 
 To run code for real in the production environment, use the [https://jobs.opensafely.org](https://jobs.opensafely.org) site.
-Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ (or actions) that have run on the server.
-To submit a job, the general process is as follows:
+Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ that have been run on the server.
+To submit jobs (i.e., to run actions), the general process is as follows:
 
 *  **Login** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation).
 * **Create a workspace** (or select an existing workspace):
 	* click the `Add a New WorkSpace` button
 	* choose a name, for example the name of the repo
 	* select a database to run against (either dummy data, real data, or a small sample of the real data)
-	* select you repo and branch
+	* select the repo and branch that you want to run actions with
 	* click `Submit`.
 *  **Select actions** to run:
-	* select a many actions as you like by clicking the `Run` buttons
-	* any actions with dependencies will also be run, unless they have already been run
+	* select the actions you want to run by clicking the `Run` buttons
+	* if any of these actions have dependencies then they will also be run, unless their outputs already exist
 	* dependencies can be viewed by clicking the `Needs` button
 	* you can force dependencies to be run by clicking `Force run dependencies`, even if those actions have already been run
 	* when you're ready, click `Submit`.
@@ -159,32 +170,34 @@ To submit a job, the general process is as follows:
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`.
 
+### Accessing the outputs
+
 If the actions run successfully, the outputs will be created on the server.
 For security reasons, they will be in a different directory than if you had run locally.
 
-For those with Level 4 access:
+No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
+
+#### Level 4 access
 
 * For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`
 * outputs labelled `highly_sensitive` are not visible
 
 These outputs can be [reviewed on the server](workflow-check-disclosivity.md) and released via GitHub if they are deemed non-disclosive.
 
-For those with Level 3 access:
+#### Level 3 access
 
 * all outputs will be saved in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`
 * there's also a directory called `metadata`, containing log files for each action e.g. generate_chorts.log, run_model.log
 
-No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
-
 
 ## Running your code manually in the server
 
-This is only possible for people with Level 3 access.  You'll want to refer to [instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md) (in restricted access repo).
+This is only possible for people with Level 3 access. You'll want to refer to [instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md) (in restricted access repo).
 
 The live environment is set up via a wrapper script; instead of `cohortextractor`, you should run `/e/bin/actionrunner.sh`.
 For example, to run `run_model` on the Level 3 server, against the `full` database, you'd type:
 
-```
+```sh
 /e/bin/actionrunner.sh run full run_model tpp
 ```
 
