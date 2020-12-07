@@ -132,6 +132,21 @@ You will also find a new folder, `metadata/`, which contains logging information
 
 Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R session is restarted for each action. 
 
+<details>
+  <summary>Click here for information on the exact steps that occur when each job is run locally</summary>
+  
+  1. Create a new, empty temporary directory for the job
+  2. Copy in any files in the local repo that _do not_ match the output patterns in the `project.yaml`
+  3. Go through each of the job's dependencies and copy in any output files from these jobs
+  4. Run the job
+  5. Find all the files matching the specified output patterns
+  6. Copy these files into the local repo
+  7. Save the log files for the job into the `metadata/` directory
+  8. Delete the temporary directory
+</details>
+
+
+
 ### Dependencies
 
 If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependent actions will be run on the old outputs. To force the dependencies to be run, use the `--force-run-dependencies` option.
@@ -170,6 +185,19 @@ To submit jobs (i.e., to run actions), the general process is as follows:
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`.
 
+<details>
+  <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
+  
+  1. Create a new, empty temporary directory for the job
+  2. Copy in all files on the selected branch
+  3. Run the job
+  4. Find all the files matching the specified output patterns
+  5. Copy these files into the highly sensitive and moderately sensitive holding directories on the server
+  6. Save the log files for the job into the `metadata/` directory
+  7. Delete the temporary directory
+</details>
+
+
 ### Accessing the outputs
 
 If the actions run successfully, the outputs will be created on the server.
@@ -180,14 +208,14 @@ No data should ever be published from the Level 3 server. Access is only for per
 #### Level 4 access
 
 * For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`
-* outputs labelled `highly_sensitive` are not visible
+* Outputs labelled `highly_sensitive` are not visible
 
 These outputs can be [reviewed on the server](workflow-check-disclosivity.md) and released via GitHub if they are deemed non-disclosive.
 
 #### Level 3 access
 
-* all outputs will be saved in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`
-* there's also a directory called `metadata`, containing log files for each action e.g. generate_chorts.log, run_model.log
+* All outputs will be saved in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`
+* There's also a directory called `metadata`, containing log files for each action e.g. generate_chorts.log, run_model.log
 
 
 ## Running your code manually in the server
