@@ -15,3 +15,6 @@ To convert a new SNOMED code to CTV3, please contact the tech team. This is curr
 be automated soon.  
 
  
+
+
+---8<-- 'includes/glossary.md'

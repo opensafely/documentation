@@ -1,28 +1,28 @@
 
-This section covers how to run and test your code, including generating datasets using Study Definitions and analysing that data with R, Stata, or Python.
+This section covers how to run and test your code to ensure it will work end-to-end within the secure framework.
 
-The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets with the `cohortextractor generate_cohorts` command using the instructions in a `study_definition.py` script.
-These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets. 
+The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets with the `cohortextractor generate_cohorts` command. This generates a CSV of data based on the instructions [defined in your `study_definition.py` script](study-def.md).
+These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
-However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. 
+However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there.
 
 To do this, you should use the Project Pipeline.
 
 ## Project pipelines
 
-The Project Pipeline is a system for executing your code using a series of _actions_ i.e., a discrete analytical step within the analysis, each of which may depend on previous actions. 
+The Project Pipeline is a system for executing your code using a series of _actions_ i.e., a discrete analytical step within the analysis, each of which may depend on previous actions.
 
-The primary purpose of the pipeline is to specify the execution order for all your code, so that it can be automatically run and tested from start to finish both using dummy data and in the ecure environment.
+The primary purpose of the pipeline is to specify the execution order for all your code, so that it can be automatically run and tested from start to finish both using dummy data and in the secure environment, using identical software configuration.
 Arranging your code like this also has several other advantages:
 
-- For slow actions, you can use previously-generated outputs rather than running them again
+- The pipeline can tell if outputs for given actions already exist, and by default skips running them if so. This greatly speeds up the debugging cycle when testing against live data
 - In production, actions that can be executed in parallel will be, automatically
 - Thinking about your analysis in terms of actions makes it more readable and therefore easier to review and test. For example, being explicit about what the inputs and outputs of each actions are ensures you don't overwrite files by accident.
 - The pipeline forces you to declare which outputs may be more or less disclosive.
 
 ## `project.yaml` format
 
-The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory.
+The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory.  It is written using a configuration format called [YAML](https://yaml.org/), which uses indentation to indicate groupings of related variables.
 
 A simple example of a `project.yaml` is as follows:
 
@@ -39,7 +39,7 @@ actions:
     outputs:
       highly_sensitive:
         cohort: output/input.csv
-		
+
   run_model:
     run: stata-mp:latest analysis/model.do
     needs: [generate_cohorts]
@@ -51,9 +51,11 @@ actions:
 
 This example declares the pipeline `version`, the `population_size` for the dummy data, and two actions, `generate_cohorts` and `run_model`.
 
-The `generate_cohorts` action will create the highly sensitive `input.csv` dataset. 
-It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment. 
-The `run_model` action will run a Stata script called `model.do` based on the the `input.csv` created by the previous action. 
+You only need to change `version` if you want to take advantage of features of newer versions of the pipeline framework.
+
+The `generate_cohorts` action will create the highly sensitive `input.csv` dataset.
+It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment.
+The `run_model` action will run a Stata script called `model.do` based on the the `input.csv` created by the previous action.
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
@@ -61,56 +63,78 @@ Every `project.yaml` requires a `version`, `expectations`, and `actions` section
 In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
-* Each action must include a `run` key which includes an officially-supported command and a version (`latest` will always select the most recent version, but following initial development you should specify the version to ensure reproducibility). 
-	* The `cohortextractor` command has the same options as described in the [cohortextractor section](cohortextractor.md), though the `expectations-population` option should not be used.
+* Each action must include a `run` key which includes an officially-supported command and a version (`latest` will always select the most recent version, but following initial development you should specify the version to ensure reproducibility).
+	* The `cohortextractor` command has the same options as described in the [cohortextractor section](cohortextractor.md), though the `expectations-population` option should not be used, as this is supplied via the YAML.
 	* The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
 	* `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
 	* `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](workflow-security-levels.md)) and potentially for publication back to Github.
-* Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. The actions must be defined elsewhere in the `project.yaml` but do not necessarily have to be defined above.
+* Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
 All file paths must be declared relative to the repository's root directory. So for example use `outputs/figures/`, not `C:/users/elvis/documents/myrepo/outputs/figures`.
 
-The location of each action's output is determined by the underlying code, not by `outputs`.
-The purpose of `outputs` is to label the disclosivity of each output &mdash; **any outputs not labelled will be deleted.**
+The location of each action's output is determined by the underlying code that the action invoked, not by the value of the `outputs` configuration. The purpose of `outputs` is to label the disclosivity of each output and indicate that it should be stored securely &mdash; **any outputs not labelled will be deleted.**
+
+## Execution environments
+
+OpenSAFELY currently supports Stata, Python, and R for statistical analysis.
+
+For security reasons, available libraries are restricted to those provided by the framework.
+
+The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries.  These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would help, get in touch!
+
+### Stata
+
+We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker Github repository](https://github.com/opensafely/stata-docker/tree/master/libraries).
+
+As Stata is a commercial product, and the image incorporates our license key, the Docker image and [Github repository](https://github.com/opensafely/stata-docker/) are currently private, pending work to separate the license from the image.  Get in touch if you need to apply your own license and we can accelerate this work.
+
+### Python
+
+The docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely/python-docker/blob/main/requirements.txt).
+
+### R
+
+The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L30). Currently our configuration doesn't list the precise versions of the libraries. If you need this, get in touch and we will accelerate this work.
+
 
 ## Running your code locally
 
-The `cohortextractor run` command will execute one or more actions according to the `project.yaml`. 
+The `cohortextractor run` command will execute one or more actions according to the `project.yaml`.
 To see its options, type `cohortextractor run --help`.
 
-For `cohortextractor run` to work, you need at least version `1.6.1` and docker. 
+For `cohortextractor run` to work, you need at least version `1.6.1` and Docker installed.
 You _may_ need credentials for our docker registry (for example, if you are running Stata actions, which require a licensed version).
-If you have access, you can see instructions for this here (https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
-
-This command will create outputs in the location specified by the outputs
+If you have access, you can see [instructions for this here](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
 
 To run the first action in the example above, using dummy data, you can use:
 
-```
+```sh
 cohortextractor run dummy generate_cohorts expectations
 ```
 
-This will generate the `input.csv` file as explained in the [cohortextractor](cohortextractor.md) section. 
+This will generate the `input.csv` file as explained in the [cohortextractor](cohortextractor.md) section.
 
 To run the second action you can use:
 ```
 cohortextractor run dummy run_model expectations
 ```
 As this action depends on the `generate_cohorts` action, it will cause `generate_cohorts` to be run first, followed by `run_model`.
-It will create the two files 
+It will create the two files
 
-To run all actions, you can use `run_all`:
+To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 ```
-cohortextractor run_all dummy run_model expectations
+cohortextractor run dummy run_all expectations
 ```
+
+You will also find a new folder, `metadata/`, which contains logging information about your run. If any of your actions fail, you may find clues here as to why.
 
 ## Running your code with GitHub actions
 
-Every time you create a pull request to merge a development branch onto the main remote branch, GitHub will automatically run a series of tests on the code.
+Every time you create a pull request to merge a development branch onto the main remote branch, GitHub will automatically run a series of tests on the code; specifically, that your codelists are up-to-date, and that `run_all` completes successfully.
 Depending on your settings, you may receive email notifications about the results of these tests.
 You can view the tests, including any errors or failures, by going to the pull request page on GitHub and clicking the `checks` tab.
-You can re-run these tests by clicking the `re-run jobs` button. 
+You can re-run these tests by clicking the `re-run jobs` button.
 
 ## Running your code on the server
 
@@ -118,7 +142,7 @@ To run code for real in the production environment, use the [https://jobs.opensa
 Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ (or actions) that have run on the server.
 To submit a job, the general process is as follows:
 
-*  **Login** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation). 
+*  **Login** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation).
 * **Create a workspace** (or select an existing workspace):
 	* click the `Add a New WorkSpace` button
 	* choose a name, for example the name of the repo
@@ -129,31 +153,33 @@ To submit a job, the general process is as follows:
 	* select a many actions as you like by clicking the `Run` buttons
 	* any actions with dependencies will also be run, unless they have already been run
 	* dependencies can be viewed by clicking the `Needs` button
-	* you can force dependencies to be run by clicking `Force run dependencies`, even if those actions ave already been run
+	* you can force dependencies to be run by clicking `Force run dependencies`, even if those actions have already been run
 	* when you're ready, click `Submit`.
 
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`.
 
 If the actions run successfully, the outputs will be created on the server.
-These will be in a different directory than if you had run locally. 
+For security reasons, they will be in a different directory than if you had run locally.
 
 For those with Level 4 access:
 
-* outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`
+* For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`
 * outputs labelled `highly_sensitive` are not visible
+
+These outputs can be [reviewed on the server](workflow-check-disclosivity.md) and released via GitHub if they are deemed non-disclosive.
 
 For those with Level 3 access:
 
 * all outputs will be saved in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`
 * there's also a directory called `metadata`, containing log files for each action e.g. generate_chorts.log, run_model.log
 
-These outputs can be reviewed on the server and released via GitHub if they are deemed non-disclosive. 
-There are detailed reviewing guidelines for approved researchers.
+No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
+
 
 ## Running your code manually in the server
 
-This is only possible for people with level 3 access.
+This is only possible for people with Level 3 access.  You'll want to refer to [instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md) (in restricted access repo).
 
 The live environment is set up via a wrapper script; instead of `cohortextractor`, you should run `/e/bin/actionrunner.sh`.
 For example, to run `run_model` on the Level 3 server, against the `full` database, you'd type:
@@ -161,3 +187,7 @@ For example, to run `run_model` on the Level 3 server, against the `full` databa
 ```
 /e/bin/actionrunner.sh run full run_model tpp
 ```
+
+
+
+---8<-- 'includes/glossary.md'

@@ -1,15 +1,13 @@
-This section describes each available function for creating variables within a study definition. 
+This section describes each available function for creating variables within a study definition.
 
-The [tpp_backend.py](https://github.com/opensafely/cohort-extractor/blob/master/cohortextractor/tpp_backend.py) python script is where these functions are actually defined &mdash; go there to see the SQL these functions generate for querying the OpenSAFELY backends.
-
-For more information on the datasets contained within the OpenSAFELY database, go to the [Data sources](dataset-intro.md) pages.
+For more information on the datasets contained within the OpenSAFELY database, see [Data sources](dataset-intro.md).
 
 For more information on writing a study definition, go to the [Study Definition](study-def.md) page.
 
 
 ## Primary Care Record
 
-These variables are derived from data held in the patients' primary care records. 
+These variables are derived from data held in the patients' primary care records.
 &nbsp;
 
 ::: cohortextractor.patients.random_sample
@@ -72,7 +70,7 @@ These variables are derived from data held in the patients' primary care records
 
 ::: cohortextractor.patients.household_as_of
 &nbsp;
-    
+
 ## APCS
 These variables are derived from Admitted Patient Care Statistics (APCS) data on in-patient hospital admissions across England.
 For more information, see the [APCS data section](dataset-apcs).
@@ -148,3 +146,6 @@ These variables create new variable from existing variables. They do not extract
 &nbsp;
 
 
+
+
+---8<-- 'includes/glossary.md'

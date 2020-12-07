@@ -1,30 +1,42 @@
 ## What is a Study Definition?
 
-A _study definition_ specifies the data that you want to extract from the OpenSAFELY database. This includes
+A _study definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
 
 * the patient population (dataset rows)
 * the variables (dataset columns)
 * the expected distributions of these variables for use in dummy data
 
-It is written in a python script using an OpenSAFELY-specific format which is intended to be easily written, read, and reviewed by anyone with some epidemiological knowledge. 
-The OpenSAFELY framework uses the study definition to query different vendor EHR databases, and returns the results to the secure server in a CSV file of tabular data.
+It is written in the Python programming language, using an OpenSAFELY-specific
+format which is intended to be easily written, read, and reviewed by anyone with
+some epidemiological knowledge.
 
-A study definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data. 
+!!! note "Some knowledge of python is helpful!"
+
+    The following documentation should get you through most cases, but
+    some will make little sense to a non-Python programmer.  It is on our
+    roadmap to replace the Python-based approach with a configuration-based
+    approach which is more secure, and can be driven from a graphical user interface.
+
+The OpenSAFELY framework case use a single study definition to query different
+vendor EHR databases, and saves the results to the secure server in a CSV file
+of tabular data.
+
+A study definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
 This allows the framework to generate dummy data which the researcher can use to develop and test their analysis scripts, without ever having to touch real patient data.
 
-When you generate a study population from your study definition, the framework reads a study definition from the python script (usually `analysis/study_definition.py`), and writes the output dataframe in a tabular CSV file (usually `output/input.csv`). 
-In a production environment this will be real data; in a development environment this will be dummy data. 
+When you generate a study population from your study definition, the framework reads a study definition from the python script (usually `analysis/study_definition.py`), and writes the output dataframe in a tabular CSV file (usually `output/input.csv`).
+In a production environment this file will contain real data; in a development environment this will be dummy data.
 
-Currently the framework supports one row per patient datasets. 
+Currently the framework supports one row per patient datasets.
 
 ## `study_definition.py` structure
 
 ### Importing code building blocks
 
 To create the study definition, we first need to import the functions and code to create this.
-You will need to put this codeblock at the top of your python file. 
+You will need to put this codeblock at the top of your python file.
 
-```py 
+```py
 from cohortextractor import (
     StudyDefinition,
     patients,
@@ -50,51 +62,50 @@ study = StudyDefinition(
         "rate": "uniform",
         "incidence": 0.2,
     },
-	
+
 	# define the study index date
 	index_date = "2020-01-01"
-	
+
 	# define the study population
 	population = patients.all(),
-   
+
 	# define the study variables
-	
+
 	age = patients.age_as_of(index_date)
-   
+
 	# more variables ...
-   
+
 )
 ```
 
-* `default_expectations=` is used to set default behaviour for the dummy data that is generated. 
-In this case, we want event dates to be between 1970-01-01 and today's date, uniformly distributed in that period, and occurring for 20% of patients (returning `""` values otherwise).
-See the [dummy data section]() for more details.
-* `index_date=` is used to set the index date against which all other dates can be defined. 
-See [Defining time periods](study-def.md#defining_time_periods) for more details on how the index date is used. 
-* `population=` is where the population is defined. 
-In this case, we want all patients available in the OpenSAFELY database and so we use the method `all()` to indicate this. 
+* `default_expectations=` is used to set default behaviour for the dummy data that is generated.
+In this case, we expect event dates to be between `1970-01-01` and today's date, uniformly distributed in that period, and to be recorded for 20% of patients (returning empty `""` values otherwise).
+See [Defining dummy data](#defining-dummy-data) for more details.
+* `index_date=` is used to set the index date against which all other dates can be defined.
+See [Defining time periods](#defining_time_periods) for more details on how the index date is used.
+* `population=` is where the population is defined.
+In this case, we want all patients available in the OpenSAFELY database and so we use the method `all()` to indicate this.
 See the [study population section]() for more details on how to select a specific subset of patients in the OpenSAFELY database.
 
 The `default_expectations`, `index_date`, and `population` arguments are reserved names within `StudyDefinition()`.
 All other names are used to define the variables that will appear in the outputted dataset, using _variable extractor functions_ of the form `patients.function_name`.
 
-`age=` is a simple example of an extractor function in use. 
-The `patients.age_as_of()` function returns the age of each patient as of the date provided (in this case the `index_date`). 
+`age=` is a simple example of an extractor function in use.
+The `patients.age_as_of()` function returns the age of each patient as of the date provided (in this case the `index_date`).
 
-All other variables are defined similarly. 
-To see the full list of currently available extractor functions, see the [Variable Extractor Functions]() section.
+All other variables are defined similarly.
+To see the full list of currently available extractor functions, see [Study definition variables reference](study-def-variables.md).
 
 
 
 ## Codelists
 
-For more information about how to create and edit codelists, so to the [Codelists](codelist-intro.md) section
-For more information about how to import codelists into your project folder using `cohortextractor` [here](cohortextractor.md#update_codelists).
+For more information about how to create and edit codelists on the [OpenSAFELY Codelists](https://codelists.opensafely.org) website, see [Codelists](codelist-intro.md).
 
 ### Pulling Codelists into your Study Definition
 
-Many functions for defining variables take *codelists* as arguments. 
-Codelists live in CSV files in the `codelists/` directory, and are loaded into variables like this:
+Many functions for defining variables take *codelists* as arguments.
+Codelists live as CSV files in the `codelists/` directory, and are loaded into variables like this:
 
 ```py
 chronic_cardiac_disease_codes = codelist_from_csv(
@@ -102,28 +113,29 @@ chronic_cardiac_disease_codes = codelist_from_csv(
 )
 ```
 
-This code needs to come before your `StudyDefinition()`. 
-You can do this in `analysis/study_definition.py` but we recommend that you put all your codelist definitions into a file called `codelists.py` and importing it in at the top of your file:
+You should put code that creates codelist variables before your `StudyDefinition()`, so it can refer to them, and users know where to look.
 
-```py 
+You can do this in `analysis/study_definition.py`, but we recommend that you put all your codelist definitions into a file called `codelists.py` and importing it in at the top of your file:
+
+```py
 from codelists import *
 ```
 
-This just keeps it cleaner and easier to read. 
+This keeps it cleaner and easier to read.
 
-### combining codelists
+### Combining codelists
 
-Codelists can be combined where appropriate. 
-This has the advantage of keeping codeslists separate for some studies but easily combining them for others. 
-This removes the need for manually combining two or more into a new codelist, and naming it and uploading it to [codelists.opensafely.org](https://codelists.opensafely.org).
+Codelists can be combined where appropriate.
+This has the advantage of keeping codeslists separate for some studies but easily combining them for others.
 
-Codelists can be combined using the `combine_codelist` function from `cohortextractor` for example as follows:
+
+Codelists can be combined using the `combine_codelist` function from `cohortextractor`, for example:
 
 ```py
 from cohortextractor import combine_codelists
 
 all_cardiac_disease_codes = combine_codelists(
-    chronic_cardiac_disease_codes, 
+    chronic_cardiac_disease_codes,
     acute_cardiac_disease_codes
 )
 ```
@@ -134,7 +146,7 @@ all_cardiac_disease_codes = combine_codelists(
 
 ### Index Dates
 
-If you define an `index_date` on a study definition then everywhere that you might normally supply a date you can now supply a "date expression". 
+If you define an `index_date` on a study definition then everywhere that you might normally supply a date you can now supply a "date expression".
 
 Here is a simple example:
 
@@ -158,30 +170,32 @@ The simplest date expression is just `index_date`, which gets replaced by whatev
 
 It's also possible to apply various functions to the index date.
 The available options (hopefully self-explanatory) are:
-```
+
+```py
 first_day_of_month(index_date)
 last_day_of_month(index_date)
 first_day_of_year(index_date)
 last_day_of_year(index_date)
 ```
 
-Finally, intervals of time can be added or subtracted from the index date (or from a function applied to the index date). 
-The available units are `year(s)`, `month(s)` and `day(s)`. 
+Finally, intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
+The available units are `year(s)`, `month(s)` and `day(s)`.
 For example:
-```
+
+```py
 index_date + 90 days
 first_day_of_month(index_date) + 9 months
 index_date - 1 year
 ```
 
-Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown. 
-Similarly, if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
+Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
+An error will also be show if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
 
 ### Time periods
 
-Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information. 
-Most commonly this is `on_or_before=`, `on_or_after=`, or `between=`. 
-You must use at most one. 
+Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information.
+Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference]("study-def-variables.md) for full documentation).
+You must use at most one.
 If no option is given then it will use all dates (including possibly future dates).
 
 As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, you can use the date expressions discussed above.
@@ -191,26 +205,26 @@ As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, y
 
 All variables that you want to include in your dataset are declared within the `StudyDefinition()` function, using functions of the form `patients.function_name()`.
 
-To see the full documentation for all the variables that can be extracted with queries to the OpenSAFELY database, go to the [Study Definition Variables](study-def-variables.md) page.
+To see the full documentation for all the variables that can be extracted with queries to the OpenSAFELY database, see [Study Definition variable reference](study-def-variables.md).
 
 ### Missing values and unmatched records
 
-If a query returns no matching record for a patient &mdash; for example if there are no blood pressure values recorded in a given period, or if there is no death date because the patient hasn't died, or if there is no household size available &mdash; then a default value will be returned. 
-For strings and dates, the default value is the empty string `""`. 
-For booleans, integers, or floats, the default value is `0`. 
+If a query returns no matching record for a patient &mdash; for example if there are no blood pressure values recorded in a given period, or if there is no death date because the patient hasn't died, or if there is no household size available &mdash; then a default value will be returned.
+For strings and dates, the default value is the empty string `""`.
+For booleans, integers, or floats, the default value is `0`.
 
 There is no universal `null` value outputted to `input.csv` because these may be handled inconsistently across different programs.
 
-It's possible that a record is matched, but the value is not valid. 
-In this case, the value will be returned as is. 
-For example, a date set to `"9999-99-99"` or a blood pressure reading set to `-1`. 
-These will indicate missing / unknown / unrecorded / not applicable values in the source dataset. 
-The meaning of these values will depend on the data source.
+It's possible that a record is matched, but the value is not valid.
+In this case, the value will be returned as-is.
+For example, a date set to `"9999-99-99"` or a blood pressure reading set to `-1`.
+These will indicate missing / unknown / unrecorded / not applicable values in the source dataset.
+The meaning of these values will depend on the data source, and this should be documented in the [dataset documentation](dataset-intro.md).
 
 
 ### Variables that return value-date pairs
 
-Some functions will produce two variables: a value and the corresponding date. 
+Some functions will produce two variables: a value and the corresponding date.
 In this case, expectations for both the value and the date can be specified, for example as follows:
 
 ```py
@@ -228,13 +242,13 @@ sbp = patients.mean_recorded_value(
 	},
 )
 ```
-This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients from the `index_date` and `"today"`'s date. The date of the most recent measurement is distributed uniformly between those dates.
+This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients, at dates between the `index_date` and `"today"`'s date. The date of the most recent measurement is distributed uniformly between those dates.
 
 
 ## Defining dummy data
 
-Every variable in a study definition must have a `return_expectations` argument defined (with the exception of the `population` variable). 
-This defines the general shape or distribution of the variables in the dummy data used for developing the code.
+Every variable in a study definition must have a `return_expectations` argument defined (with the exception of the `population` variable).
+This defines the general shape or distribution of the variables in the dummy data used for developing the code.  It is currently relatively unsophisticated; each variable is generated independently of all others. This is sufficient for testing that it is possible to run your study from start to finish in most cases, but sometimes not. You can find (and contribute to!) discussions on improving the dummy data framework [here](https://github.com/opensafely/cohort-extractor/issues/221)
 
 ### Specifying default distributions
 
@@ -276,7 +290,7 @@ This overrides the 50% default incidence for the binary variable `copd` to be 20
 ### All options
 The following options are currently available for dummy data:
 
-**integers** 
+**integers**
 
 * `{"int" : {"distribution": "normal", "mean": 25, "stddev": 5}, "incidence" : 0.5}`
 * `{"int" : {"distribution": "population_ages"}, "incidence" : 1}`
@@ -299,7 +313,7 @@ The following options are currently available for dummy data:
 *	`{"date": {"earliest": "1900-01-01", "latest": "today"}, "rate" : "uniform"}`
 
 Note that `"incidence"` is used either for the actual incidence of a binary variable (`returning="binary_flag"`), or to indicate non-missingness for other variable types.
-`"rate"` is used for the distribution of date values (with either `"exponential_increase"` or `"uniform"`), but can also be used as an alias for `incidence=1` by specifying `rate="universal"` for non-date values. 
+`"rate"` is used for the distribution of date values (with either `"exponential_increase"` or `"uniform"`), but can also be used as an alias for `incidence=1` by specifying `rate="universal"` for non-date values.
 
 `population_ages` samples from the distribution of ages in the UK taken from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/tablea21principalprojectionukpopulationinagegroups).
 
@@ -307,21 +321,21 @@ Note that `"incidence"` is used either for the actual incidence of a binary vari
 
 Most commonly, you will want to include only patients with certain characteristics, rather than every patient in the database.
 
-### Using variables to define your population 
+### Using variables to define your population
 
-To define a study population with one particular characteristic, you need to define the characteristic within the study 
-population. 
+To define a study population with one particular characteristic, you need to define the characteristic within the study
+population.
 
-```py 
+```py
 population = patients.with_these_clinical_events(
-    copd_codes, 
+    copd_codes,
     on_or_before = "2017-03-01",
 )
 ```
 
-### Using time registered in one practice 
+### Using time registered in one practice
 
-Researchers often want to exclude patients who have switched practice recently and hence may have an incomplete record of their conditions as it can take some time for their records to come from their previous practice. 
+Researchers often want to exclude patients who have switched practice recently and hence may have an incomplete record of their conditions as it can take some time for their records to come from their previous practice.
 
 ```py
 population = patients.registered_with_one_practice_between(
@@ -331,15 +345,15 @@ population = patients.registered_with_one_practice_between(
 
 ### Combining population criteria
 
-Population criteria may need to be combined. 
-Here we have combined both COPD and registration details to find only patients who have COPD and have been registered at a practice for more than a year. 
+Population criteria may need to be combined.
+Here we have combined both COPD and registration details to find only patients who have COPD and have been registered at a practice for more than a year.
 
 ```py
 
 population = patients.satisfying(
     "has_follow_up AND has_copd",
     has_copd=patients.with_these_clinical_events(
-        copd_codes, 
+        copd_codes,
 		on_or_before = "2017-03-01"
     ),
     has_follow_up = patients.registered_with_one_practice_between(
@@ -348,14 +362,14 @@ population = patients.satisfying(
 )
 ```
 
-If a variable has been defined elsewhere in `StudyDefinition()`, then that variable can be used in the `patients.satisfying()` function without needing to be defined again. 
+If a variable has been defined elsewhere in `StudyDefinition()`, then that variable can be used in the `patients.satisfying()` function without needing to be defined again.
 For example,
 
 ```py
 study = StudyDefinition(
 	population = patients.satisfying(
 		"""
-		has_follow_up AND 
+		has_follow_up AND
 		(sex = "M" OR sex = "F")
 		""",
 		has_follow_up = patients.registered_with_one_practice_between(
@@ -369,13 +383,13 @@ study = StudyDefinition(
 )
 ```
 
-Here `sex` is _defined_ outside of `patients.satisfying()` but can still be _used_ inside of it. 
+Here `sex` is _defined_ outside of `patients.satisfying()` but can still be _used_ inside of it.
 In this case, it's being used to exclude patients without a "valid" sex category (`"M"` or `"F"`) from the study population.
 
 ### Dummy data versus real data
 
-The `population=` argument has no bearing at all on the dummy data. It is just used to select patients in the real data. 
-If in the example above we had `"incidence" : 0.95`, then 5% of patients in the dummy data would have missing sex values, but 0% of patients in the real data would have missing sex values because they have been excluded with `population=`. 
+The `population=` argument has no bearing at all on the dummy data. It is just used to select patients in the real data.
+If in the example above we had `"incidence" : 0.95`, then 5% of patients in the dummy data would have missing sex values, but 0% of patients in the real data would have missing sex values because they have been excluded with `population=`.
 It's important therefore to match the dummy data with what you would expect to see _conditional on_ the chosen patient population, rather than in the data as a whole.
 
 ## Multiple study definitions
@@ -383,9 +397,10 @@ It's important therefore to match the dummy data with what you would expect to s
 ### Naming
 
 A `study_definition.py` will produce a file called `input.csv`.
-If you only require one study population, we recommend you stick with this. 
+If you only require one study population, we recommend you stick with this.
 
 Multiple study definition files can be specified using a suffix like:
+
 ```
 study_definition_copd.py
 study_definition_asthma.py
@@ -397,9 +412,32 @@ input_copd.csv
 input_asthma.csv
 ```
 
-### Using a common study definition 
-When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ. 
-This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing. 
+You should reflect this by creating two cohortextractor actions in your [project pipeline](pipelines.md), one for each study definition:
+
+```yaml
+version: "3.0"
+
+expectations:
+  population_size: 1000
+
+actions:
+
+  generate_copd_cohort:
+    run: cohortextractor:1.11.0 generate_cohort --study-definition study_definition_copd
+    outputs:
+      highly_sensitive:
+        cohort: output/input_copd.csv
+
+  generate_asthma_cohort:
+    run: cohortextractor:1.11.0 generate_cohort --study-definition study_definition_asthma
+    outputs:
+      highly_sensitive:
+        cohort: output/input_asthma.csv
+```
+
+### Sharing common study definition variables
+When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ.
+This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing.
 To avoid this, there is a way to share these common variables between study definitions:
 
 
@@ -413,7 +451,7 @@ from codelists import *
 ```
 
 You can then define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`.
-In this case we use age and sex. 
+In this case we use age and sex.
 
 `common_variables.py`
 ```py
@@ -436,11 +474,11 @@ common_variables = dict(
 
 ### Define the specific study definitions
 
-Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the other imports. 
+Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the other imports.
 You then need just before the final closing brackets at the end of the file, add `**common_variables`
 
 `study_definition_copd.py`
-```py 
+```py
 from cohortextractor import (
     StudyDefinition,
     patients,
@@ -462,14 +500,17 @@ study = StudyDefinition(
     # STUDY POPULATION
    population=patients.all(),
 
-    # COPD 
+    # COPD
     copd=patients.with_these_clinical_events(
     copd_codes,
     find_first_match_in_period=True,
     date_format="YYYY-MM",
     ),
 
-    **common_variables 
+    **common_variables
 )
 ```
 
+
+
+---8<-- 'includes/glossary.md'

@@ -1,11 +1,11 @@
 site_name: OpenSAFELY documentation
 nav:
     - Introduction: index.md
-    - How OpenSAFELY works: 
+    - How OpenSAFELY works:
         - Our philosophy: open-methods.md
         - Not just another TRE: coming-soon.md
         - Security: workflow-security-levels.md
-    - Data sources: 
+    - Data sources:
         - Overview: dataset-intro.md
         - Primary care records: dataset-systmone.md
         - Covid-19 test results: dataset-sgsscovid.md
@@ -30,18 +30,9 @@ nav:
         - Execute the analysis on the real data: workflow-job-runner.md
         - Check the output for disclosivity: workflow-check-disclosivity.md
         - Project folder structure: workflow-folder-structure.md
-        - Glossary: glossary.md
     - Study definitions: study-def.md
-        #- Overview: study-def-intro.md
-        #- Basic structure: study-def-structure.md
-        #- Codelists: study-def-codelists.md
-        #- Defining time periods: study-def-time.md
-        #- Defining dummy data: study-def-dummy-data.md
-        #- Defining the study population: study-def-population.md
-        #- Multiple study definitions: study-def-multiple-populations.md
-        #- Missing values and unmatched records: study-def-missing.md
-    - Study definition variables: study-def-variables.md
-    - Study flow charts: study-def-flowcharts.md
+    - Study definition variable reference: study-def-variables.md
+    - Inclusion/exclusion flow charts: study-def-flowcharts.md
     - Measures: measures.md
     - Codelists:
         - Introduction to codelists: codelist-intro.md
@@ -83,7 +74,12 @@ plugins:
                 heading_level: 4
 
 markdown_extensions:
+    - pymdownx.snippets:
+        check_paths: true
     - toc:
         permalink: "&#128279;"
     - pymdownx.highlight
     - pymdownx.superfences
+    - admonition
+    - footnotes
+    - abbr
