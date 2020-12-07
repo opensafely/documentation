@@ -18,7 +18,7 @@ OpenSAFELY is a collaboration between the DataLab at the University of Oxford, t
 ## Using OpenSAFELY
 
 OpenSAFELY maintains extremely high standards for data privacy, whilst ensuring complete computational and analytical transparency.
-As such OpenSAFELY requires users to know, or be willing to learn, the following tools:g
+As such OpenSAFELY requires users to know, or be willing to learn, the following tools:
 
 ### Essential
 
