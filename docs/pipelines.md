@@ -71,9 +71,16 @@ In general, actions are composed as follows:
 	* `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](workflow-security-levels.md)) and potentially for publication back to Github.
 * Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
-All file paths must be declared relative to the repository's root directory. So for example use `outputs/figures/`, not `C:/users/elvis/documents/myrepo/outputs/figures`.
+When writing and running your pipeline, note that:
 
-The location of each action's output is determined by the underlying code that the action invoked, not by the value of the `outputs` configuration. The purpose of `outputs` is to label the disclosivity of each output and indicate that it should be stored securely &mdash; **any outputs not labelled will be deleted.**
+* All file paths must be declared relative to the repository's root directory. So for example use `outputs/figures/`, not `C:/users/elvis/documents/myrepo/outputs/figures`.
+
+* The location of each action's output is determined by the underlying code that the action invoked, not by the value of the `outputs` configuration. The purpose of `outputs` is to label the disclosivity of each output and indicate that it should be stored securely &mdash; **any outputs not labelled will not be saved.**
+
+* Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R is restarted for each action. 
+
+* If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs. 
+
 
 ## Execution environments
 
@@ -104,9 +111,13 @@ Whilst you can develop and run code locally using your own installations of R, S
 The `cohortextractor run` command will execute one or more actions according to the `project.yaml`.
 To see its options, type `cohortextractor run --help`.
 
-For `cohortextractor run` to work, you need at least version `1.6.1` and Docker installed.
-You _may_ need credentials for our docker registry (for example, if you are running Stata actions, which require a licensed version).
-If you have access, you can see [instructions for this here](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
+For `cohortextractor run` to work:
+* `cohortextractor` version `1.6.1` or higher must be installed.
+* [Docker must be installed](install-docker.md).
+* The Docker daemon must be running on your machine: 
+  * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
+  * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
+* You _may_ need credentials for our docker registry (for example, if you are running Stata actions, which require a licensed version). If you have access, you can see [instructions for this here](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
 
 To run the first action in the example above, using dummy data, you can use:
 
@@ -121,37 +132,30 @@ To run the second action you can use:
 cohortextractor run dummy run_model expectations
 ```
 As this action depends on the `generate_cohorts` action, it will cause `generate_cohorts` to be run first, followed by `run_model`.
-It will create the two files.
+It will create the two files as specified in the `analysis/model.do` script.
+
+To force the dependencies to be run you can use for example `cohortextractor run run_model --force-run --force-dependencies`. This will ensure that both the `run_model` and `generate_cohorts` actions are run, even if `input.csv` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 ```sh
 cohortextractor run dummy run_all expectations
 ```
 
-You will also find a new folder, `metadata/`, which contains logging information about your run. If any of your actions fail, you may find clues here as to why.
+Each time an action is run, logging information about your run will be put into the  `metadata/` folder. If any of your actions fail, you may find clues here as to why.
 
-Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R session is restarted for each action. 
+
 
 <details>
   <summary>Click here for information on the exact steps that occur when each job is run locally</summary>
   
-  1. Create a new, empty temporary directory for the job
-  2. Copy in any files in the local repo that _do not_ match the output patterns in the `project.yaml`
-  3. Go through each of the job's dependencies and copy in any output files from these jobs
-  4. Run the job
-  5. Find all the files matching the specified output patterns
-  6. Copy these files into the local repo
-  7. Save the log files for the job into the `metadata/` directory
-  8. Delete the temporary directory
+  1. A new, empty temporary directory for the job is created
+  2. Any files in the local repo that _do not_ match the output patterns in the `project.yaml` are copied into the temporary folder
+  3. Any output files from the job's dependencies are copied into the temporary folder
+  4. The job is run
+  5. All the files matching the specified output patterns are copied into the local repo
+  6. The log files for the job are saved into the `metadata/` directory
+  7. The temporary directory is deleted
 </details>
-
-
-
-### Dependencies
-
-If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependent actions will be run on the old outputs. To force the dependencies to be run, use the `--force-run-dependencies` option.
-
-For example `cohortextractor run run_model --force-dependencies` will ensure that both the `run_model` and `generate_cohorts` actions are run, even if `input.csv` already exists.
 
 
 ## Running your code with GitHub actions
@@ -187,35 +191,32 @@ You can view the progress of these actions by click the `Logs` button from the w
 
 <details>
   <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
-  
-  1. Create a new, empty temporary directory for the job
+  1. A new, empty temporary directory for the job is created
   2. Copy in all files on the selected branch
-  3. Run the job
-  4. Find all the files matching the specified output patterns
-  5. Copy these files into the highly sensitive and moderately sensitive holding directories on the server
-  6. Save the log files for the job into the `metadata/` directory
-  7. Delete the temporary directory
+  3. The job is run
+  4. All the files matching the specified output patterns are copied into the local repo
+  5. The log files for the job are saved into the `metadata/` directory
+  6. The temporary directory is deleted
 </details>
 
 
 ### Accessing the outputs
 
-If the actions run successfully, the outputs will be created on the server.
-For security reasons, they will be in a different directory than if you had run locally.
+If the actions run successfully, the outputs will be created on the server. Only users with access to Level 4 can view output files that are labelled as moderately sensitive.
+
+For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](workflow-check-disclosivity.md) and released via GitHub if they are deemed non-disclosive.
+
+Outputs labelled `highly_sensitive` are not visible.
+
+#### If you have Level 3 access
 
 No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
 
-#### Level 4 access
+Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. There's also a directory called `metadata`, containing log files for each action e.g. `generate_chorts.log`, `run_model.log`.
 
-* For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`
-* Outputs labelled `highly_sensitive` are not visible
 
-These outputs can be [reviewed on the server](workflow-check-disclosivity.md) and released via GitHub if they are deemed non-disclosive.
 
-#### Level 3 access
 
-* All outputs will be saved in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`
-* There's also a directory called `metadata`, containing log files for each action e.g. generate_chorts.log, run_model.log
 
 
 ## Running your code manually in the server
