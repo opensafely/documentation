@@ -75,6 +75,8 @@ When writing and running your pipeline, note that:
 
 * All file paths must be declared relative to the repository's root directory. So for example use `outputs/figures/`, not `C:/users/elvis/documents/myrepo/outputs/figures`.
 
+* File paths are case-sensitive as everything is run inside a Linux Docker container.
+
 * The location of each action's output is determined by the underlying code that the action invoked, not by the value of the `outputs` configuration. The purpose of `outputs` is to label the disclosivity of each output and indicate that it should be stored securely &mdash; **any outputs not labelled will not be saved.**
 
 * Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R is restarted for each action. 
@@ -212,11 +214,9 @@ Outputs labelled `highly_sensitive` are not visible.
 
 No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
 
-Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. There's also a directory called `metadata`, containing log files for each action e.g. `generate_chorts.log`, `run_model.log`.
+Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_chorts.log`, `run_model.log`.
 
-
-
-
+Moderately sensitive outputs can be seen in `E:/FILESFORL4/workspaces/<WORKSPACE_NAME>`.
 
 
 ## Running your code manually in the server
