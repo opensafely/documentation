@@ -9,7 +9,16 @@ APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 * **Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 months.
 * **Collected information** Admission and discharge dates; admission and discharge locations; reason for admission; diagnoses; treatments; discharge destination.
 
-Diagnoses are coded using ICD-10. Procedures are coded in OPCS-4
+Diagnoses are coded using ICD-10. Procedures are coded in OPCS-4.
+
+Each row is a in-hospital Spell. In-hospital episodes cannot be queried.
+
+* An **episode** is a period of continuous care under a single responsible consultant.
+* A **spell** is a period of continuous care within a single trust.
+
+Essentially, a spell is a collection of episodes (often just one episode) denoting the entirety of a patient's stay in hospital from admission to discharge or death. An episode denotes time within a spell spent under the responsibility of a single consultant. So for example if within your hospital stay you are transferred from a medical to surgical ward, or transferred to another site (within the same trust), there will be at least two episodes within your spell.
+
+The dataset does not include any patients who have not been discharged (i.e., patients who have an incomplete spell) at the data extraction date. In other words, the data will be missing admissions of the patients with the longest stay for the most recent admissions.
 
 ## More information
 
