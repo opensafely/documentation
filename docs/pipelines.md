@@ -114,6 +114,7 @@ The `cohortextractor run` command will execute one or more actions according to 
 To see its options, type `cohortextractor run --help`.
 
 For `cohortextractor run` to work:
+
 * `cohortextractor` version `1.6.1` or higher must be installed.
 * [Docker must be installed](install-docker.md).
 * The Docker daemon must be running on your machine: 
