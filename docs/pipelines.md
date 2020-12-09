@@ -1,7 +1,7 @@
 
 This section covers how to run and test your code to ensure it will work end-to-end within the secure framework.
 
-The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets with the `cohortextractor generate_cohorts` command. This generates a CSV of data based on the instructions [defined in your `study_definition.py` script](study-def.md).
+The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets with the `cohortextractor generate_study_population` command. This generates a CSV of data based on the instructions [defined in your `study_definition.py` script](study-def.md).
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
 However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there.
@@ -34,7 +34,7 @@ expectations:
 
 actions:
 
-  generate_cohorts:
+  generate_study_population:
     run: cohortextractor:1.11.0 generate_cohort --study-definition study_definition
     outputs:
       highly_sensitive:
@@ -42,18 +42,18 @@ actions:
 
   run_model:
     run: stata-mp:latest analysis/model.do
-    needs: [generate_cohorts]
+    needs: [generate_study_population]
     outputs:
       moderately_sensitive:
         model: models/cox-model.txt
 		figure: figures/survival-plot.png
 ```
 
-This example declares the pipeline `version`, the `population_size` for the dummy data, and two actions, `generate_cohorts` and `run_model`.
+This example declares the pipeline `version`, the `population_size` for the dummy data, and two actions, `generate_study_population` and `run_model`.
 
 You only need to change `version` if you want to take advantage of features of newer versions of the pipeline framework.
 
-The `generate_cohorts` action will create the highly sensitive `input.csv` dataset.
+The `generate_study_population` action will create the highly sensitive `input.csv` dataset.
 It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment.
 The `run_model` action will run a Stata script called `model.do` based on the the `input.csv` created by the previous action.
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
@@ -79,9 +79,9 @@ When writing and running your pipeline, note that:
 
 * The location of each action's output is determined by the underlying code that the action invoked, not by the value of the `outputs` configuration. The purpose of `outputs` is to label the disclosivity of each output and indicate that it should be stored securely &mdash; **any outputs not labelled will not be saved.**
 
-* Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R is restarted for each action. 
+* Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R is restarted for each action.
 
-* If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs. 
+* If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs.
 
 
 ## Execution environments
@@ -108,7 +108,7 @@ The R image provided is R 4.0, with [this list of libraries installed](https://g
 
 
 ## Running your code locally
-Whilst you can develop and run code locally using your own installations of R, Stata or Python, it's important to check that these will also successfully run on the real data in an identical execution environment. 
+Whilst you can develop and run code locally using your own installations of R, Stata or Python, it's important to check that these will also successfully run on the real data in an identical execution environment.
 
 The `cohortextractor run` command will execute one or more actions according to the `project.yaml`.
 To see its options, type `cohortextractor run --help`.
@@ -117,7 +117,7 @@ For `cohortextractor run` to work:
 
 * `cohortextractor` version `1.6.1` or higher must be installed.
 * [Docker must be installed](install-docker.md).
-* The Docker daemon must be running on your machine: 
+* The Docker daemon must be running on your machine:
   * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
   * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
 * You _may_ need credentials for our docker registry (for example, if you are running Stata actions, which require a licensed version). If you have access, you can see [instructions for this here](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
@@ -125,7 +125,7 @@ For `cohortextractor run` to work:
 To run the first action in the example above, using dummy data, you can use:
 
 ```sh
-cohortextractor run dummy generate_cohorts expectations
+cohortextractor run dummy generate_study_population expectations
 ```
 
 This will generate the `input.csv` file as explained in the [cohortextractor](cohortextractor.md) section.
@@ -134,10 +134,10 @@ To run the second action you can use:
 ```sh
 cohortextractor run dummy run_model expectations
 ```
-As this action depends on the `generate_cohorts` action, it will cause `generate_cohorts` to be run first, followed by `run_model`.
+As this action depends on the `generate_study_population` action, it will cause `generate_study_population` to be run first, followed by `run_model`.
 It will create the two files as specified in the `analysis/model.do` script.
 
-To force the dependencies to be run you can use for example `cohortextractor run run_model --force-run --force-dependencies`. This will ensure that both the `run_model` and `generate_cohorts` actions are run, even if `input.csv` already exists.
+To force the dependencies to be run you can use for example `cohortextractor run run_model --force-run --force-dependencies`. This will ensure that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 ```sh
@@ -150,14 +150,17 @@ Each time an action is run, logging information about your run will be put into 
 
 <details>
   <summary>Click here for information on the exact steps that occur when each job is run locally</summary>
-  
-  1. A new, empty temporary directory for the job is created
-  2. Any files in the local repo that _do not_ match the output patterns in the `project.yaml` are copied into the temporary folder
-  3. Any output files from the job's dependencies are copied into the temporary folder
-  4. The job is run
-  5. All the files matching the specified output patterns are copied into the local repo
-  6. The log files for the job are saved into the `metadata/` directory
-  7. The temporary directory is deleted
+
+What happens:
+
+1. A new, empty temporary directory for the job is created
+2. Any files in the local repo that _do not_ match the output patterns in the `project.yaml` are copied into the temporary folder
+3. Any output files from the job's dependencies are copied into the temporary folder
+4. The job is run
+5. All the files matching the specified output patterns are copied into the local repo
+6. The log files for the job are saved into the `metadata/` directory
+7. The temporary directory is deleted
+
 </details>
 
 
@@ -193,13 +196,16 @@ The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`.
 
 <details>
-  <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
-  1. A new, empty temporary directory for the job is created
-  2. Copy in all files on the selected branch
-  3. The job is run
-  4. All the files matching the specified output patterns are copied into the local repo
-  5. The log files for the job are saved into the `metadata/` directory
-  6. The temporary directory is deleted
+<summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
+
+This:
+
+1. A new, empty temporary directory for the job is created
+2. Copy in all files on the selected branch
+3. The job is run
+4. All the files matching the specified output patterns are copied into the local repo
+5. The log files for the job are saved into the `metadata/` directory
+6. The temporary directory is deleted
 </details>
 
 

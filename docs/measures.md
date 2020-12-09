@@ -139,7 +139,7 @@ To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_d
 
 ```yaml
 
-  generate_cohort:
+  generate_study_population:
     run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01 to 2020-12-01 by month" --skip-existing --output-dir=output/measures
     outputs:
       highly_sensitive:
@@ -147,7 +147,7 @@ To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_d
 
   generate_measures:
     run: cohortextractor:latest generate_measures --study-definition study_definition --skip-existing --output-dir=output/measures
-    needs: [generate_cohort]
+    needs: [generate_study_population]
     outputs:
       moderately_sensitive:
         measure_csv: output/measures/measure_*.csv
