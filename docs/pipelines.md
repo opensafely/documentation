@@ -198,7 +198,7 @@ You can view the progress of these actions by click the `Logs` button from the w
 <details>
 <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
 
-This:
+What happens:
 
 1. A new, empty temporary directory for the job is created
 2. Copy in all files on the selected branch
