@@ -72,6 +72,7 @@ plugins:
                 show_source: false
                 show_if_no_docstring: true
                 heading_level: 4
+        custom_templates: templates
 
 markdown_extensions:
     - pymdownx.snippets:
