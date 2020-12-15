@@ -208,12 +208,14 @@ What happens:
 6. The temporary directory is deleted
 </details>
 
+The job will either succeed or fail. 
+In either case, the output and log files are only visible in the secure environment. 
 
 ### Accessing the outputs
 
-If the actions run successfully, the outputs will be created on the server. Only users with access to Level 4 can view output files that are labelled as moderately sensitive.
+Only users with access to Level 4 can view output files that are labelled as moderately sensitive and the automatically created log files of the run.
 
-For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](workflow-check-disclosivity.md) and released via GitHub if they are deemed non-disclosive.
+For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](release-files.md) and released via GitHub if they are deemed non-disclosive.
 
 Outputs labelled `highly_sensitive` are not visible.
 
