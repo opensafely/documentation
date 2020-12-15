@@ -24,7 +24,7 @@ of tabular data.
 A study definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
 This allows the framework to generate dummy data which the researcher can use to develop and test their analysis scripts, without ever having to touch real patient data.
 
-When you generate a study population from your study definition, the framework reads a study definition from the python script (usually `analysis/study_definition.py`), and writes the output dataframe in a tabular CSV file (usually `output/input.csv`).
+When you generate a study population from your study definition, the framework reads a study definition from the python script (usually `analysis/study_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
 In a production environment this file will contain real data; in a development environment this will be dummy data.
 
 Currently the framework supports one row per patient datasets.

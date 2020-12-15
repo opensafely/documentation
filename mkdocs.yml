@@ -4,7 +4,8 @@ nav:
     - How OpenSAFELY works:
         - Our philosophy: open-methods.md
         - Not just another TRE: coming-soon.md
-        - Security: workflow-security-levels.md
+        - Security: security-levels.md
+        - Analysis workflow: workflow.md
     - Data sources:
         - Overview: dataset-intro.md
         - Primary care records: dataset-systmone.md
@@ -20,15 +21,7 @@ nav:
         - Python: install-python.md
         - Docker: install-docker.md
     - cohortextractor: cohortextractor.md
-    - Research workflows:
-        - Workflow: workflow.md
-        - Create a repository: workflow-make-repo.md
-        - Write a Study Definition: workflow-write-study-def.md
-        - Generate the dummy data: workflow-make-dummy-data.md
-        - Develop analysis scripts: workflow-develop-analysis-scripts.md
-        - Test the code: workflow-testing-the-code.md
-        - Execute the analysis on the real data: workflow-job-runner.md
-        - Project folder structure: workflow-folder-structure.md
+    - Project repositories: repositories.md
     - Study definitions: study-def.md
     - Study definition variable reference: study-def-variables.md
     - Inclusion/exclusion flow charts: study-def-flowcharts.md
@@ -46,7 +39,7 @@ nav:
         - Developing a protocol: protocol.md
         - Using Git effectively: git-workflow.md
         - Code reviews: code-reviews.md
-    - Feature requests and bug reports:
+    - Feature requests, bug reports:
         - Overview: requests-intro.md
         - Adding packages: requests-packages.md
         - Adding Study Definition variables: requests-variables.md

@@ -48,7 +48,7 @@ Some of these commands are discussed in detail below.
 
 To run any of these commands for a specific OpenSAFELY project, you need to change the directory of your prompt to be the repositiory of the project. For example,  `cd C:/Users/me/my-git-repos/my-repo`.
 
-**The rest of this section assumes you have a working OpenSAFELY research repository** &mdash; see [this section](workflow-make-repo.md) for guidance on how to create or clone a research repo.
+**The rest of this section assumes you have a working OpenSAFELY research repository** &mdash; see the [Project repositories](repositories.md) section for guidance on how to create or clone a research repo.
 
 Your project repo contains a Study Definition (`study_definition.py`) which is used to define the study population and the variables of interest.
 Before making any changes to `study_definition.py` to match your study (which will need to be properly version controlled in git), it's important to understand how the study definition is used by `cohortextractor`.

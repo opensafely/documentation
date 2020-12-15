@@ -8,7 +8,7 @@ The reviewer publishes outputs back to the original repo using git.
 ## Redacting and releasing output files from analysis runs
 
 Output and log files created by [running code against the live database](pipelines.md#running-your-code-on-the-server) will [appear in the secure environment](pipelines.md#accessing-the-outputs).
-You will need [Level 4 access or higher](workflow-security-levels.md) to view these files and follow the instructions below.
+You will need [Level 4 access or higher](security-levels.md) to view these files and follow the instructions below.
 
 1. Log in to the server &mdash; if you have access you will have been provided instructions on how to do this.
 

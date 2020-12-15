@@ -1,28 +1,47 @@
 
-This section covers how to run and test your code to ensure it will work end-to-end within the secure framework.
+This section covers how to develop, run, and test your code to ensure it will work end-to-end within the secure framework.
 
-The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets with the `cohortextractor generate_study_population` command. This generates a CSV of data based on the instructions [defined in your `study_definition.py` script](study-def.md).
-These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
-The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
-However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there.
+## General code-writing guidance
 
-To do this, you should use the Project Pipeline.
+Generally-speaking, you can write whatever code you like as long as it will run successfully on server, and it is possible to [test this locally](pipelines.md#running-your-code-locally).
+However, note the following restrictions and guidance:
+
+* **Write analyses in Python, R, or Stata.**
+You can can use more than one language in a single project if necessary.  You can find more information about the available libraries [here](pipelines.md#execution-environments).
+* **Do not write code that requires an internet connection to run.**
+Any research objects (datasets, libraries, etc) that are retrieved via the internet should be imported to the repo locally first.
+If this is not possible (for instance if the object size is too large to be transferred via GitHub) then get in touch.
+* **Avoid code that consumes a lot of time or memory.** The server is not an infinite resource. We can advise on code optimisation if run-times become problematic.  A good strategy is to split you processing into separate project pipeline actions; the job runner can then choose to run them in parallel if sufficient resources are available.
+* **Write code that runs across different platforms.**
+Since code will be run both locally and within a Linux-based Docker environment. For example use forward-slashes `/` for directories.
+* **Structure your code into discrete chunks, both within scripts, and by splitting into different pipeline actions.**
+This helps with:
+	* readability
+	* bug-finding
+	* parallelisation via the project pipeline
 
 ## Project pipelines
 
-The Project Pipeline is a system for executing your code using a series of _actions_ i.e., a discrete analytical step within the analysis, each of which may depend on previous actions.
 
-The primary purpose of the pipeline is to specify the execution order for all your code, so that it can be automatically run and tested from start to finish both using dummy data and in the secure environment, using identical software configuration.
+The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
+These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
+The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
+However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the Project Pipeline.
+
+The project pipeline, defined entirely in a `project.yaml` file, is a system for executing your code using a series of _actions_ i.e., a discrete analytical step within the analysis, each of which may depend on previous actions.
+
+The primary purpose of the pipeline is to specify the execution order for all your code, so that it can be automatically run and tested from start to finish using dummy data and using the live database in the secure environment, using an identical software configuration.
 Arranging your code like this also has several other advantages:
 
-- The pipeline can tell if outputs for given actions already exist, and by default skips running them if so. This greatly speeds up the debugging cycle when testing against live data
+- The pipeline knows if outputs for given actions already exist, and by default skips running them if so. This greatly speeds up the debugging cycle when testing against live data
 - In production, actions that can be executed in parallel will be, automatically
 - Thinking about your analysis in terms of actions makes it more readable and therefore easier to review and test. For example, being explicit about what the inputs and outputs of each actions are ensures you don't overwrite files by accident.
 - The pipeline forces you to declare which outputs may be more or less disclosive.
 
 ## `project.yaml` format
 
-The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory.  It is written using a configuration format called [YAML](https://yaml.org/), which uses indentation to indicate groupings of related variables.
+The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory. 
+It is written using a configuration format called [YAML](https://yaml.org/), which uses indentation to indicate groupings of related variables.
 
 A simple example of a `project.yaml` is as follows:
 
@@ -68,7 +87,7 @@ In general, actions are composed as follows:
 	* The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
 	* `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
-	* `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](workflow-security-levels.md)) and potentially for publication back to Github.
+	* `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](security-levels.md)) and potentially for publication back to Github.
 * Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
 When writing and running your pipeline, note that:
@@ -172,6 +191,7 @@ You can view the tests, including any errors or failures, by going to the pull r
 
 You can re-run these tests by clicking the `re-run jobs` button.
 
+
 ## Running your code on the server
 
 To run code for real in the production environment, use the [https://jobs.opensafely.org](https://jobs.opensafely.org) site.
@@ -209,13 +229,14 @@ What happens:
 </details>
 
 The job will either succeed or fail. 
-In either case, the output and log files are only visible in the secure environment. 
+In either case, the output and log files are only visible in the secure environment to avoid disclosure of potentially sensitive information.
+
 
 ### Accessing the outputs
 
 Only users with access to Level 4 can view output files that are labelled as moderately sensitive and the automatically created log files of the run.
 
-For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](release-files.md) and released via GitHub if they are deemed non-disclosive.
+For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](releasing-files.md) and released via GitHub if they are deemed non-disclosive.
 
 Outputs labelled `highly_sensitive` are not visible.
 
