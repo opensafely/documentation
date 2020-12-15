@@ -28,7 +28,6 @@ nav:
         - Develop analysis scripts: workflow-develop-analysis-scripts.md
         - Test the code: workflow-testing-the-code.md
         - Execute the analysis on the real data: workflow-job-runner.md
-        - Check the output for disclosivity: workflow-check-disclosivity.md
         - Project folder structure: workflow-folder-structure.md
     - Study definitions: study-def.md
     - Study definition variable reference: study-def-variables.md
@@ -40,6 +39,7 @@ nav:
         - Adding codelists to Project: codelist-project.md
         - SNOMED codelists: codelist-snomed.md
     - Running and testing code: pipelines.md
+    - Releasing files from the server: releasing-files.md
     - Good Practice:
         - Good practice: good-practice-intro.md
         - The Datalab Open Manifesto: open-data-manifesto.md

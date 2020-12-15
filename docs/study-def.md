@@ -194,7 +194,7 @@ An error will also be show if adding or subtracting months leads to a month with
 ### Time periods
 
 Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information.
-Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference]("study-def-variables.md) for full documentation).
+Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference](study-def-variables.md) for full documentation).
 You must use at most one.
 If no option is given then it will use all dates (including possibly future dates).
 
