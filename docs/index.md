@@ -4,16 +4,16 @@
 ## What is OpenSAFELY?
 
 OpenSAFELY is a secure analytics platform for electronic health records in the NHS, created to deliver urgent results during the global COVID-19 emergency.
-It is now successfully delivering analyses across more than 24 million patients’ full pseudonymised primary care NHS records, with more to follow shortly.
+It is now successfully delivering analyses across more than 24 million patients' full pseudonymised primary care NHS records, with more to follow shortly.
 
 All our analytic software is open for security review, scientific review, and re-use.
 OpenSAFELY uses a new model for enhanced security and timely access to data:
-we don’t transport large volumes of potentially disclosive pseudonymised patient data outside of the secure environments managed by the electronic health record software company;
+we don't transport large volumes of potentially disclosive pseudonymised patient data outside of the secure environments managed by the electronic health record software company;
 instead, trusted analysts can run large scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health records software company.
 
 ## Who is OpenSAFELY?
 
-OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients’ records), working on behalf of NHS England and NHSX.
+OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients' records), working on behalf of NHS England and NHSX.
 
 ## Using OpenSAFELY
 
