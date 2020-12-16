@@ -3,18 +3,20 @@
 The general workflow for creating codelists is as follows:
 
 1. Search [codelists.opensafely.org](https://codelists.opensafely.org) for codelists that meet or nearly meet your requirements and make sure that one doesn't already exist
-2. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
-3. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
+2. If you need to build a new codelist [sign up for an account on codelists.opensafely](https://codelists.opensafely.org/accounts/register/)
+3. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
+4. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
 previous research papers
-4. Search for your terms in the Codelist Builder and add/remove codelists to end up with a list. 
-5. Download this list as a CSV, convert to Excel and upload to the Github issue. 
-6. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
+5. Start a new codelist using [Codelist Builder](https://codelists.opensafely.org/accounts/login/) which you now have access to once step 1 is completed
+6. Add/remove terms to your codelists to end up with a list. 
+7. Save the list as a draft and share the link to your the Github issue. 
+8. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
 as a group (i.e. at least 2). Detailed reasons are helpful in this issue for referencing in the future. 
-7. Once agreed, obtain sign-off
-8. Add the codelist to [codelists.opensafely.org](https://codelists.opensafely.org), summarise your discussion briefly, 
+9. Once agreed, obtain sign-off
+10. Add the codelist to [codelists.opensafely.org](https://codelists.opensafely.org), summarise your discussion briefly, 
 and reference the issue on the website for more details.  This will initially be a draft. When ready, publish it. 
-9. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
-10. Import the codelist for use in your study definition
+11. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
+12. Import the codelist for use in your study definition
 
 ## Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 
