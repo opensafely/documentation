@@ -9,7 +9,6 @@ certifi==2020.6.20        # via matplotlib, requests
 chardet==3.0.4            # via requests
 click==7.1.2              # via mkdocs, nltk
 cycler==0.10.0            # via matplotlib
-decorator==4.4.2          # via networkx
 future==0.18.2            # via lunr
 idna==2.10                # via requests
 jinja2==2.11.2            # via mkdocs
@@ -24,13 +23,11 @@ mkdocs-material-extensions==1.0.1  # via mkdocs-material
 mkdocs-material==6.1.0    # via -r requirements.in, mkdocs-material-extensions
 mkdocs==1.1.2             # via -r requirements.in, mkdocs-material, mkdocstrings
 mkdocstrings==0.13.6      # via -r requirements.in
-networkx==2.5             # via opensafely-jobrunner
 nltk==3.5                 # via lunr
 numpy==1.19.2             # via matplotlib, pandas, scipy, seaborn
-opensafely-cohort-extractor==1.11.1  # via -r requirements.in
-opensafely-jobrunner==1.11.0  # via opensafely-cohort-extractor
+opensafely-cohort-extractor==1.14.0  # via -r requirements.in
+opensafely-jobrunner==2.1.6  # via opensafely-cohort-extractor
 pandas==1.1.3             # via opensafely-cohort-extractor, seaborn
-pebble==4.5.3             # via opensafely-jobrunner
 pillow==8.0.0             # via matplotlib
 prettytable==2.0.0        # via opensafely-cohort-extractor
 pygments==2.7.1           # via mkdocs-material
@@ -39,9 +36,11 @@ pyparsing==2.4.7          # via matplotlib
 python-dateutil==2.8.1    # via matplotlib, pandas
 pytkdocs==0.9.0           # via mkdocstrings
 pytz==2020.1              # via pandas
-pyyaml==5.3.1             # via mkdocs, opensafely-cohort-extractor, opensafely-jobrunner
+pyyaml==5.3.1             # via mkdocs, opensafely-cohort-extractor
 regex==2020.10.15         # via nltk
 requests==2.24.0          # via opensafely-cohort-extractor, opensafely-jobrunner
+ruamel.yaml.clib==0.2.2   # via ruamel.yaml
+ruamel.yaml==0.16.12      # via opensafely-jobrunner
 scipy==1.5.3              # via seaborn
 seaborn==0.11.0           # via opensafely-cohort-extractor
 six==1.15.0               # via livereload, lunr, python-dateutil
