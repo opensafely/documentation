@@ -36,6 +36,13 @@ study = StudyDefinition(
 		returning="stp_code",
 		returning_expectations = {"category": {"ratios": {"stp1": 0.1, "stp2": 0.2, "stp3": 0.7}}, "incidence" : 1}
 	),
+	
+	sex=patients.sex(
+    return_expectations={
+      "rate": "universal",
+      "category": {"ratios": {"M": 0.49, "F": 0.51}},
+    }
+  ),
 
 	admitted = patients.admitted_to_hospital(
 		returning = "binary_flag",
@@ -71,6 +78,25 @@ This differs from a normal study definition due to the addition of the `measures
 * `id` is just a string used to identify the measure output file.
 * `numerator` and `denominator` are the columns in the dataset that define the measure. They must be numeric or boolean (encoded as 0 or 1).
 * `group_by` column can be of any type.
+
+You can calculate measures for more than one group at a time by specifying multiple variables as follows: 
+
+```py
+measures = [
+    Measure(
+        id = "hosp_admission_by_stp",
+        numerator = "admitted",
+        denominator = "population",
+        group_by = ["stp", "sex"],
+    ),
+    Measure(
+        id = "death_by_stp",
+        numerator = "died",
+        denominator =" population",
+        group_by = ["stp", "sex"],
+    ),
+]
+```
 
 ## Extract the data
 
