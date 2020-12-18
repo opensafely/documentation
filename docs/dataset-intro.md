@@ -31,7 +31,17 @@ Note that any primary care events occurring in de-registered patients after the 
 Every time the database is re-built there will be slight differences in study populations, either due to new registrations or changes to patient records that include/exclude them from the study cohort.
 Old database builds cannot be recovered, and due to the differences between successive database builds, old study populations are unlikely to be re-extracted exactly as before.
 
+When TPP receive data from external data sources (eg ONS), the data in the relevant tables is completely replaced.
+
 For those with access to the OpenSAFELY database, the latest database build time is available in the `LatestBuildTime` table, and the history of builds for each dataset is available in the `BuildInfo` table.
+
+## OpenSAFELY-EMIS database builds
+
+This section is a work in progress.
+
+When EMIS receive data from external data sources (eg ONS), records are appended to the
+relevant tables.  The relevant tables have an `upload_date` column, and to get the
+latest data, we have to query for on `upload_date`.
 
 
 [^1]:
