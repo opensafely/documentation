@@ -11,14 +11,19 @@ OpenSAFELY uses a new model for enhanced security and timely access to data:
 we don't transport large volumes of potentially disclosive pseudonymised patient data outside of the secure environments managed by the electronic health record software company;
 instead, trusted analysts can run large scale computation across near real-time pseudonymised patient records inside the data centre of the electronic health records software company.
 
+As such, the platform maintains extremely high standards for data privacy whilst ensuring complete computational and analytical transparency.
+
 ## Who is OpenSAFELY?
 
 OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients' records), working on behalf of NHS England and NHSX.
 
 ## Using OpenSAFELY
 
-OpenSAFELY maintains extremely high standards for data privacy, whilst ensuring complete computational and analytical transparency.
-As such OpenSAFELY requires users to know, or be willing to learn, the following tools:
+**Only approved users can execute code against the real OpenSAFELY database**.
+
+However, all the OpenSAFELY-specific tools needed to define analysis datasets, generate dummy data, and run analysis scripts in a computational environment that mimics the secure environment where real analyses are run, are available now for use by anyone.
+
+To use OpenSAFELY, users must know, or be willing to learn, the following programs and tools:
 
 ### Essential
 
@@ -34,7 +39,7 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
 ### Desirable
 
 - **Python**
-  The way we specify the data to be extracted for analysis is written in Python, using what we call a **Study Definition**.
+  The way we specify the data to be extracted for analysis is written in Python, using what we call a **study definition**.
   We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody familiar with health research, even if you've neveer used python before.
   However, some prior knowledge of Python may still be beneficial to create or modify existing functions.
 - **SQL**
