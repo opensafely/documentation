@@ -1,25 +1,20 @@
-All outputs from OpenSAFELY pipelines are subject to tiered levels of scrutiny, to provide assurance that identifiable data is not leaked accidentally, or maliciously.
+All outputs from OpenSAFELY pipelines are subject to [tiered levels of scrutiny](security-levels.md), to provide assurance that identifiable data is not leaked accidentally, or maliciously.
 
 The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
-Level 4 outputs can only be published by authorised users, who have permission to log in to the secure server.
+Level 4 outputs can only be released by authorised users who have permission to log in to the secure server.
 Such users have responsibility for redacting sensitive information or choosing not to publish it at all. 
 The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
 
 
 ## Releasing output files from analysis runs
 
-The output and log files for a single workspace created by [running code against the live database](pipelines.md#running-your-code-on-the-server) will [appear in the secure environment](pipelines.md#accessing-the-outputs) in a workspace-specific folder.
-You will need [Level 4 access or higher](security-levels.md) to view these files.
+The output and log files that are created by [running code against the live database](pipelines.md#running-your-code-on-the-server) will [appear in the secure environment](pipelines.md#accessing-the-outputs) in a workspace-specific folder.
 
-The reviewer publishes outputs back to the original repo using git. 
-To make this process easier and to reduce the likelihood of sensitive information being accidentally released, there is a script-based procedure to follow, listed below. 
+The reviewer releases outputs back to the original repo using git. 
+To make this process easier and to reduce the likelihood of sensitive information being accidentally released, there is a script-based procedure to follow. In essence, the process is: create a git repo in the folder where the outputs were created; check and redact them as necessary; commit the safe files to the repo; run the `osrelease` command and follow the instructions. This last step will create a new branch containing the released outputs which can then be merged onto another branch in the repo via a pull request.
 
-Essentially, the process is to create a git repo in the folder where the outputs were created, check the outputs for disclosivity and edit them if necessary, commit the edits to the repo, then run the `osrelease` command and follow its instructions. 
-This last step will create a new branch on the remote repo with the released outputs in the `released_outputs` folder. 
-This branch should then be merged onto another branch in the repo via a pull request.
-
-These instructions assume you have submitted one or more jobs which have created outputs on the Level 4 server, including log files from failed runs:
+The following instructions assume you have submitted one or more jobs which have created outputs on the Level 4 server, including log files from failed runs:
 
 1. Log in to the Level 4 server &mdash; if you have access you will have been provided instructions on how to do this.
 
@@ -39,7 +34,7 @@ These instructions assume you have submitted one or more jobs which have created
     * Any previously-applied redactions from previously-run actions will need to be reapplied &mdash; these will be easy to spot in GitHub desktop, and you can choose to simply not commit any files if the redacted version will be identical between the previous and current runs.
 8. Only once you're satisfied that the outputs are safe to release, run `osrelease <github_remote_https_url>` (e.g. `osrelease https://github.com/opensafely/my-amazing-research`) and follow the instructions. 
 
-Once finished, any files you have committed locally will be visible on the `release-candidates` branch on your repo (e.g., `https://github.com/opensafely/my-amazing-research/tree/release-candidates`). 
+Once finished, any files you have committed locally will be visible in the `released_ouputs` folder on the `release-candidates` branch on your repo (e.g., `https://github.com/opensafely/my-amazing-research/tree/release-candidates`). 
 This branch won't contain any of the intermediate git history, just the state of the redaction repo when you ran the `osrelease` command. 
 
 You can merge the `released-candidates` branch onto another branch by creating a pull request. 
