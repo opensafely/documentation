@@ -1,9 +1,6 @@
-All outputs from OpenSAFELY pipelines are subject to tiered levels of scrutiny,
-to provide assurance that identifiable data is not leaked accidentally, or
-maliciously.
+All outputs from OpenSAFELY pipelines are subject to tiered levels of scrutiny, to provide assurance that identifiable data is not leaked accidentally, or maliciously.
 
-The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY
-framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
+The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
 Level 4 outputs can only be published by authorised users, who have permission to log in to the secure server.
 Such users have responsibility for redacting sensitive information or choosing not to publish it at all. 
