@@ -25,16 +25,16 @@ These instructions assume you have submitted one or more jobs which have created
 
 2. Go to `/d/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>` (or `/e/FILESFORL4/workspaces/<NAME_OF_YOUR_WORKSPACE>` if you are in Level 3, _which you shouldn't be_). You should see:
     * a `metadata/` folder containing logs for each action,
-    * an `outputs/` folder (by convention but this could be something else) containing the `moderately_sensitive` files intended for release.
-
-If these don't exist or haven't updated as you expect, double-check the workspace name and the status of the jobs on the [job server](https://jobs.opensafely.org).
+    * an `outputs/` folder (by convention but this could be something else) containing the `moderately_sensitive` files intended for release. 
+    
+    If these don't exist or haven't updated as you expect, double-check the workspace name and the status of the jobs on the [job server](https://jobs.opensafely.org).
     
 3. Open a console with this folder as root directory, using `cd /d/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`.
 4. If this is the first time any releases have been made for this workspace, run `git init` to create a new git repo there.
 5. Run `git status` to see the changes made by the job(s) (if this says `fatal: not a git repository` then you need to run `git init`).
 6. Run `git add <names-of-files>` to add any new files, or changes to any existing files, to the local repo.
 7. Edit or delete files to redact as necessary:
-    * [**read the redaction instructions below**](releasing-files.md#disclosivity-checks-and-redaction).
+    * [**Read the redaction instructions below**](releasing-files.md#disclosivity-checks-and-redaction).
     * Use `GitHub desktop` or command line `git` to view the diffs and commit changes to the repo.
     * Any previously-applied redactions from previously-run actions will need to be reapplied &mdash; these will be easy to spot in GitHub desktop, and you can choose to simply not commit any files if the redacted version will be identical between the previous and current runs.
 8. Only once you're satisfied that the outputs are safe to release, run `osrelease <github_remote_https_url>` (e.g. `osrelease https://github.com/opensafely/my-amazing-research`) and follow the instructions. 
