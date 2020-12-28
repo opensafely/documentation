@@ -17,7 +17,7 @@ Essentially, the process is to create a git repo in the folder where the outputs
 * This folder should be maintained as a local git repo (which we'll call the *redaction repo*). 
 The redaction repos will never leave the server: it only exists for reviewers to track redaction activity over time. The git history may, therefore, contain identifying information.
 * Whenever new outputs are generated in the workspace folder, a reviewer will use their usual git tools (typically Github Desktop) to examine the outputs. Outputs intended for public release should be redacted (as necessary) and then committed to the redaction repo.
-* The `report.py` script should then be run in a command terminal, from the root folder of the workspace folder. It:
+* The `release.py` script should then be run in a command terminal, from the root folder of the workspace folder. It:
   * prompts the review for the URL of a github repo to where the redacted outputs should be published (the *study repo*)
   * checks out the *study repo* and creates a branch `release-candidates` (if it doesn't already exist)
   * copies every file that has been committed to the *redaction repo* into a subfolder `released_outputs`
