@@ -51,12 +51,22 @@ will run the `make_graph` action.
 
 
 ### `codelists`
-This will retrieve each codelist listed in `/codelists/codelists.txt` from [codelists.opensafely.org](https://codelists.opensafely.org), and save them its latest version in the same folder.
+This command is for working with codelists. 
 
-Use it like this:
+Use
 ```bash
 opensafely codelists update
 ```
-Running it will add (or update) the codelist `.csv` files in the `codelists/` folder.
+
+to retrieve each codelist listed in `/codelists/codelists.txt` from [codelists.opensafely.org](https://codelists.opensafely.org).
+It will add (or update) the codelist `.csv` files to the `codelists/` folder.
+
+Use
+```bash
+opensafely codelists check
+```
+
+to check if the codelist files are up-to-date with thse listed in `./codelists/codelists.txt`.
+
 See the [Codelist](codelist-intro.md) section for more information on codelists.
 
