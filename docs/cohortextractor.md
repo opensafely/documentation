@@ -78,7 +78,7 @@ generate_study_cohort
       data: output/input_cohort2.csv
 ```
 
-You can change the location of the outputted `.csv` file using the `--ouput-dir` option, for example `run: cohortextractor:latest generate_cohort --ouput-dir /output/cohorts`
+You can change the location of the outputted `.csv` file using the `--ouput-dir` option, for example `run: cohortextractor:latest generate_cohort --ouput-dir output/cohorts`
 
 
 ---8<-- 'includes/glossary.md'
