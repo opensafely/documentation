@@ -23,7 +23,7 @@ Download the new codelists into the `codelist/` folder using the `opensafely` pr
 opensafely codelists update
 ```
 
-Beware that in Windows, if one or more of these codelist files is open then this command won't be able to run.
+Beware that in Windows, if one or more of these codelist files is open then this command won't be able to run; close them first.
 
 You will need to add and commit these changes and push to Github. 
 If you don't, or a newer version is available than that committed, the automated tests will fail with an error message.
