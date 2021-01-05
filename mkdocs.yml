@@ -20,10 +20,11 @@ nav:
         - GitHub and Git: install-github-and-git.md
         - Python: install-python.md
         - Docker: install-docker.md
-    - cohortextractor: cohortextractor.md
+        - OpenSAFELY CLI: opensafely-cli.md
     - Project repositories: repositories.md
     - Study definitions: study-def.md
     - Study definition variable reference: study-def-variables.md
+    - cohortextractor: cohortextractor.md
     - Inclusion/exclusion flow charts: study-def-flowcharts.md
     - Measures: measures.md
     - Codelists:
@@ -44,7 +45,6 @@ nav:
         - Adding packages: requests-packages.md
         - Adding Study Definition variables: requests-variables.md
         - Updating the Documentation: requests-documentation.md
-#    - Code of conduct: code-of-conduct.md
 
 theme: material
 

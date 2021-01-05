@@ -22,8 +22,7 @@ This helps with:
 
 ## Project pipelines
 
-
-The [cohortextractor](cohortextractor.md) section describes how to generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
+The [cohortextractor](cohortextractor.md) section describes how to write commands to generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
 However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the Project Pipeline.
@@ -38,7 +37,7 @@ Arranging your code like this also has several other advantages:
 - Thinking about your analysis in terms of actions makes it more readable and therefore easier to review and test. For example, being explicit about what the inputs and outputs of each actions are ensures you don't overwrite files by accident.
 - The pipeline forces you to declare which outputs may be more or less disclosive.
 
-## `project.yaml` format
+### `project.yaml` format
 
 The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory. 
 It is written using a configuration format called [YAML](https://yaml.org/), which uses indentation to indicate groupings of related variables.
@@ -54,7 +53,7 @@ expectations:
 actions:
 
   generate_study_population:
-    run: cohortextractor:1.11.0 generate_cohort --study-definition study_definition
+    run: cohortextractor:latest generate_cohort --study-definition study_definition
     outputs:
       highly_sensitive:
         cohort: output/input.csv
@@ -83,7 +82,7 @@ In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
 * Each action must include a `run` key which includes an officially-supported command and a version (`latest` will always select the most recent version, but following initial development you should specify the version to ensure reproducibility).
-	* The `cohortextractor` command has the same options as described in the [cohortextractor section](cohortextractor.md), though the `expectations-population` option should not be used, as this is supplied via the YAML.
+	* The `cohortextractor` command has the same options as described in the [cohortextractor section](cohortextractor.md).
 	* The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
 	* `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
@@ -107,15 +106,17 @@ When writing and running your pipeline, note that:
 
 OpenSAFELY currently supports Stata, Python, and R for statistical analysis.
 
-For security reasons, available libraries are restricted to those provided by the framework.
+For security reasons, available libraries are restricted to those provided by the framework, though you can [request additions](requests-packages.md).
 
-The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries. These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would like to help, get in touch!
+The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries. 
+These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would like to help, get in touch!
 
 ### Stata
 
 We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker Github repository](https://github.com/opensafely/stata-docker/tree/master/libraries).
 
-As Stata is a commercial product, and the image incorporates our license key, the Docker image and [Github repository](https://github.com/opensafely/stata-docker/) are currently private, pending work to separate the license from the image.  Get in touch if you need to apply your own license and we can accelerate this work.
+As Stata is a commercial product, and the image incorporates our license key, the Docker image and [Github repository](https://github.com/opensafely/stata-docker/) are currently private, pending work to separate the license from the image.
+Get in touch if you need to apply your own license and we can accelerate this work.
 
 ### Python
 
@@ -123,19 +124,21 @@ The docker image provided is Python 3.8, with [this list of packages installed](
 
 ### R
 
-The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L30). Currently our configuration doesn't list the precise versions of the libraries. If you need this, get in touch and we will accelerate this work.
+The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L30). 
+Currently our configuration doesn't list the precise versions of the libraries. 
+If you need this, get in touch and we will accelerate this work.
 
 
 ## Running your code locally
+
 Whilst you can develop and run code locally using your own installations of R, Stata or Python, it's important to check that these will also successfully run on the real data in an identical execution environment.
 
-The `cohortextractor run` command will execute one or more actions according to the `project.yaml`.
-To see its options, type `cohortextractor run --help`.
+The `opensafely run` command will execute one or more actions according to the `project.yaml`.
+To see its options, type `opensafely run --help`.
 
-For `cohortextractor run` to work:
+For `opensafely run` to work:
 
-* `cohortextractor` version `1.6.1` or higher must be installed.
-* [Docker must be installed](install-docker.md).
+* You need to have both [Python](install-python) and [Docker](install-docker.md) installed.
 * The Docker daemon must be running on your machine:
   * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
   * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
@@ -143,28 +146,31 @@ For `cohortextractor run` to work:
 
 To run the first action in the example above, using dummy data, you can use:
 
-```sh
-cohortextractor run dummy generate_study_population expectations
+```bash
+opensafely run generate_study_population
 ```
 
 This will generate the `input.csv` file as explained in the [cohortextractor](cohortextractor.md) section.
 
 To run the second action you can use:
-```sh
-cohortextractor run dummy run_model expectations
+
+```bash
+opensafely run run_model
 ```
-As this action depends on the `generate_study_population` action, it will cause `generate_study_population` to be run first, followed by `run_model`.
+
 It will create the two files as specified in the `analysis/model.do` script.
 
-To force the dependencies to be run you can use for example `cohortextractor run run_model --force-run --force-dependencies`. This will ensure that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
+To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short. 
+This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
-```sh
-cohortextractor run dummy run_all expectations
+
+```bash
+opensafely run run_all
 ```
 
-Each time an action is run, logging information about your run will be put into the  `metadata/` folder. If any of your actions fail, you may find clues here as to why.
-
+Each time an action is run, logging information about your run will be put into the  `metadata/` folder. 
+If any of your actions fail, you may find clues here as to why.
 
 
 <details>
@@ -256,7 +262,7 @@ This is only possible for people with Level 3 access. You'll want to refer to [i
 The live environment is set up via a wrapper script; instead of `cohortextractor`, you should run `/e/bin/actionrunner.sh`.
 For example, to run `run_model` on the Level 3 server, against the `full` database, you'd type:
 
-```sh
+```bash
 /e/bin/actionrunner.sh run full run_model tpp
 ```
 

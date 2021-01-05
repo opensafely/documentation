@@ -412,7 +412,7 @@ input_copd.csv
 input_asthma.csv
 ```
 
-You should reflect this by creating two cohortextractor actions in your [project pipeline](pipelines.md), one for each study definition:
+You should reflect this by creating two cohortextractor actions in the [`project.yaml`](pipelines.md), one for each study definition:
 
 ```yaml
 version: "3.0"
@@ -423,13 +423,13 @@ expectations:
 actions:
 
   generate_copd_cohort:
-    run: cohortextractor:1.11.0 generate_cohort --study-definition study_definition_copd
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_copd
     outputs:
       highly_sensitive:
         cohort: output/input_copd.csv
 
   generate_asthma_cohort:
-    run: cohortextractor:1.11.0 generate_cohort --study-definition study_definition_asthma
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_asthma
     outputs:
       highly_sensitive:
         cohort: output/input_asthma.csv
