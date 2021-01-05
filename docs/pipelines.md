@@ -138,8 +138,7 @@ To see its options, type `opensafely run --help`.
 
 For `opensafely run` to work:
 
-* Python version `1.7` or higher must be installed.
-* [Docker must be installed](install-docker.md).
+* You need to have both [Python](install-python) and [Docker](install-docker.md) installed.
 * The Docker daemon must be running on your machine:
   * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
   * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
@@ -161,8 +160,8 @@ opensafely run run_model
 
 It will create the two files as specified in the `analysis/model.do` script.
 
-To force the dependencies to be run you can use for example `opensafely run run_model -f`. 
-This will ensure that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
+To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short. 
+This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 
