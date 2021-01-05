@@ -14,7 +14,15 @@ The output and log files that are created by [running code against the live data
 The reviewer releases outputs back to the original repo using git. 
 To make this process easier and to reduce the likelihood of sensitive information being accidentally released, there is a script-based procedure to follow. In essence, the process is: create a git repo in the folder where the outputs were created; check and redact them as necessary; commit the safe files to the repo; run the `osrelease` command and follow the instructions. This last step will create a new branch containing the released outputs which can then be merged onto another branch in the repo via a pull request.
 
-The following instructions assume you have submitted one or more jobs which have created outputs on the Level 4 server, including log files from failed runs:
+### Install
+* Log into L4 server
+* Run `/d/bin/install-osrelease.bat` (or `/e/bin/install-osrelease.bat` on the L3 server)
+* Close the console and reopen it
+* Check you can run `osrelease --help` (you'll get some help text)
+
+### Instructions
+
+The following instructions assume you have submitted one or more jobs which have created outputs on the Level 4 server, including log files from failed runs.
 
 1. Log in to the Level 4 server &mdash; if you have access you will have been provided instructions on how to do this.
 
