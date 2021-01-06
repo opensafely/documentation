@@ -1,8 +1,8 @@
 This section describes each available function for creating variables within a study definition.
 
-For more information on the datasets contained within the OpenSAFELY database, see [Data sources](dataset-intro.md).
+For more information on the datasets contained within the OpenSAFELY database, see the [Data sources section](dataset-intro.md).
 
-For more information on writing a study definition, go to the [Study Definition](study-def.md) page.
+For more information on writing a study definition, go to the [study definition section](study-def.md).
 
 
 ## Primary Care Record

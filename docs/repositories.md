@@ -44,7 +44,7 @@ It should be updated to briefly describe the intended study and to reflect the r
 The README should also be updated frequently to reflect changes to the repo, and should certainly be up-to-date before publication of any research outputs.
 
 The README is written in Markdown. 
-If you're not familiar with Markdown syntax, [read this](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github). 
+If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github). 
 There's a handy cheatsheet for the most useful Markdown syntax [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's not need to write more than "_first README update_", but typically commits should have a bit more detail than that.

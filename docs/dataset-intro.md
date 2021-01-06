@@ -1,4 +1,4 @@
-This section provides contextual information on the core primary care EHR systems on which OpenSAFELY in based, as well as all external datasets imported to the secure EHR environment.  To query the data, see [Study definitions](study-def.md).
+This section provides contextual information on the core primary care EHR systems on which OpenSAFELY in based, as well as all external datasets imported to the secure EHR environment.  To query the data, see the [study definition section](study-def.md).
 
 Use the navigation pane on the left-hand side to view information on each dataset.
 
