@@ -1,7 +1,7 @@
 \* **Please read even if you already have Python installed** \*
 
 For security, consistency, and readability, OpenSAFELY provides an API built in [**Python**](https://www.python.org/) for using the platform. 
-This API includes script-based functions for specifying the patients and variables that make up a study dataset (using a [Study Definition](study-def.md)),
+This API includes script-based functions for specifying the patients and variables that make up a study dataset (using a [study definition](study-def.md)),
 and command line functions for importing codelists, generating dummy data, and testing that the study definition can be run successfully on the server. 
 **Python version 3.7 or higher** must be installed on your machine to perform these tasks. 
 

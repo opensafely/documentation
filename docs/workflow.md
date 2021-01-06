@@ -25,7 +25,7 @@ This repo will contain all the code relating to your project, and a history it's
 
 These steps should always proceed with frequent git commits and code reviews where appropriate. Steps 2-5 can all be progressed on your local machine without accessing the real data.
 
-It is possible to automatically test that the analytical pipeline defined in step 5 can be successfully executed on dummy data, using the `cohortextractor run` command.
+It is possible to automatically test that the analytical pipeline defined in step 5 can be successfully executed on dummy data, using the `opensafely run` command.
 This pipeline is also [automatically tested](pipelines.md#running-your-code-with-GitHub-actions) against dummy data every time a new version of the repository is saved ("pushed") to GitHub.
 
 As well as your own Python, R or Stata scripts, other non-standard actions are available. 
