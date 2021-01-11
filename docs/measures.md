@@ -41,7 +41,7 @@ study = StudyDefinition(
 	stp = patients.registered_practice_as_of(
 		"index_date",
 		returning="stp_code",
-		returning_expectations = {"category": {"ratios": {"stp1": 0.1, "stp2": 0.2, "stp3": 0.7}}, "incidence" : 1}
+		return_expectations = {"category": {"ratios": {"stp1": 0.1, "stp2": 0.2, "stp3": 0.7}}, "incidence" : 1}
 	),
 	
 	sex=patients.sex(
