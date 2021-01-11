@@ -27,9 +27,16 @@ The `study_definition.py` script for the example above is:
 from cohortextractor import StudyDefinition, Measure, patients
 
 study = StudyDefinition(
+    # Configure the expectations framework
+    default_expectations={
+        "date": {"earliest": "2020-01-01", "latest": "today"},
+        "rate": "exponential_increase",
+        "incidence" : 0.2
+    },
+
     index_date = "2020-01-01",
 
-    population = patients.registered_as_of(index_date),
+    population = patients.registered_as_of("index_date"),
 
 	stp = patients.registered_practice_as_of(
 		"index_date",
