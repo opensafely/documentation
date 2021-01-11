@@ -32,7 +32,7 @@ study = StudyDefinition(
     population = patients.registered_as_of(index_date),
 
 	stp = patients.registered_practice_as_of(
-		index_date,
+		"index_date",
 		returning="stp_code",
 		returning_expectations = {"category": {"ratios": {"stp1": 0.1, "stp2": 0.2, "stp3": 0.7}}, "incidence" : 1}
 	),
@@ -46,12 +46,12 @@ study = StudyDefinition(
 
 	admitted = patients.admitted_to_hospital(
 		returning = "binary_flag",
-		between = [index_date, last_day_of_month(index_date)],
+		between = ["index_date", "last_day_of_month(index_date)"],
 		return_expectations = {"incidence": 0.1},
 	),
 
 	died = patients.died_from_any_cause(
-      between = [index_date, last_day_of_month(index_date)],
+      between = ["index_date", "last_day_of_month(index_date)"],
       returning = "binary_flag",
 	  return_expectations = {"incidence": 0.05},
     ),
