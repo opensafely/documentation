@@ -48,12 +48,5 @@ If a patient's postcode is not recorded, then these geographic variables are not
 
 Content to be written
 
-## Descriptive metadata
-
-These links are private pending permissions review, but we aim to publish them as soon as possible
-
-- [TPP Database Schema (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb) (needs occasional refreshes)
-- [Latest available records in SystmOne and external datasets](https://github.com/opensafely/rapid-reports/blob/master/notebooks/latest-dates.ipynb) (needs weekly refreshes)
-
 
 ---8<-- 'includes/glossary.md'

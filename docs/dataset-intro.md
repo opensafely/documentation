@@ -35,9 +35,13 @@ When TPP receive data from external data sources (eg ONS), the data in the relev
 
 For those with access to the OpenSAFELY database, the latest database build time is available in the `LatestBuildTime` table, and the history of builds for each dataset is available in the `BuildInfo` table.
 
-For more information on the latest available import dates for SystmOne and external data, see [the database builds notebook](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-builds.ipynb).
 
-For more information on database table schema for SystmOne and external data, see [the database schema notebook](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-schema.ipynb).
+## Descriptive metadata
+
+- [OpenSAFELY-TPP database table examples (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb) (private, needs occasional refreshes)
+- [OpenSAFELY-TPP Database Schema](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-schema.ipynb)
+- [Latest available records in SystmOne and external datasets](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-builds.ipynb)
+
 
 ## OpenSAFELY-EMIS database builds
 
