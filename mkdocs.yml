@@ -15,6 +15,7 @@ nav:
         - Intensive care admissions (covid-19 only): dataset-icnarc.md
         - In-hospital deaths (covid-19 only): dataset-cpns.md
         - Registered deaths: dataset-onsdeaths.md
+        - Data import dates: import-dates.md
     - Installation:
         - Overview: install-intro.md
         - GitHub and Git: install-github-and-git.md
@@ -66,6 +67,8 @@ plugins:
                 show_if_no_docstring: true
                 heading_level: 4
         custom_templates: templates
+    - snippet:
+          base_path: docs
 
 markdown_extensions:
     - pymdownx.snippets:
