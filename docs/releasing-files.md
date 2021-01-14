@@ -92,7 +92,25 @@ It may be possible for exceptions to be made if they can be justified as being b
 
 If you are unsure about anything, ask.
 
+## Redaction data breaches and how to recover from them
 
+### The issues
+
+One of the great strengths of using git is that it is easy to recreate the contents of any file in the repository exactly as it appeared at any point in the repository's stored history. However, this means that if any sensitive data is inadvertently committed to a repository, we need to be careful to completely remove that data from the history.
+
+Access to `output-publisher` repositories is intended to be restricted, and their histories are not transferred to study repos in the release process. However, study repos are intended to eventually become public, so if sensitive data is committed then care should be taken to fully clean up. From the moment that the `osrelease` command is run in an `output-publisher` repo, we need to be careful with the study repo's git history.
+
+For example, if sensitive data was committed to a study repo, it is explicitly not safe to use either git's `revert` command, or to delete the file and commit the deletion. Both of these methods would leave the commit containing the sensitive data in the history of the git repository - and would be trivial for anyone to recover in the future.
+
+Another aspect of git is that it uses a decentralised model. This means that everyone that has a copy of a git repository has their own copy of the entire history. So, if there is a sensitive data leak, it is not sufficient to clean just your own copy of the git history & the history on github, you should also clean the git histories of all other copies.
+
+## What to do if you find a data breach
+
+If you discover files in a study repository that have been insufficiently redacted and still contain sensitive information, you should contact Amir Mehrkahr or Ben Goldacre as soon as possible.
+
+If you are able, you can attempt to make the repository safe by temporarily restricting access to it. For instance, if the repository is public (accessible to the world), make it private (accessible only to the OpenSAFELY team). If the repository has external contributors that are not authorised to handle sensitive data, consider temporarily removing their access to the repository. This will reduce the scope for harm until the sensitive information can be removed from the repository.
+
+If you are an author of the study, you should also liaise with an engineer from the OpenSAFELY team as soon as possible to safely clean the sensitive information from the repository. Depending on the exact situation this may be relatively straightforward or relatively complicated. You should also attempt to trace all copies of the repository for cleaning or deletion.
 
 
 ---8<-- 'includes/glossary.md'
