@@ -73,7 +73,7 @@ These variables are derived from data held in the patients' primary care records
 
 ## APCS
 These variables are derived from Admitted Patient Care Statistics (APCS) data on in-patient hospital admissions across England.
-For more information, see the [APCS data section](dataset-apcs).
+For more information, see the [APCS data section](dataset-apc.md).
 &nbsp;
 
 ::: cohortextractor.patients.admitted_to_hospital
@@ -81,7 +81,7 @@ For more information, see the [APCS data section](dataset-apcs).
 
 ## ECDS
 These variables are derived from Emergency Care Data Set (ECDS) data on emergency department attendances across England.
-For more information, see the [ECDS data section](dataset-ecds).
+For more information, see the [ECDS data section](dataset-ecds.md).
 &nbsp;
 
 ::: cohortextractor.patients.attended_emergency_care
@@ -89,7 +89,7 @@ For more information, see the [ECDS data section](dataset-ecds).
 
 ## ICNARC
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
-For more information, see the [ICNARC data section](dataset-icnarc).
+For more information, see the [ICNARC data section](dataset-icnarc.md).
 &nbsp;
 
 ::: cohortextractor.patients.admitted_to_icu
@@ -97,7 +97,7 @@ For more information, see the [ICNARC data section](dataset-icnarc).
 
 ## SGSS
 These variables are derived from Second Generation Surveillance System (SGSS) data which captures routine laboratory surveillance data on infectious diseases across England.
-For more information, see the [SGSS data section](dataset-sgsscovid).
+For more information, see the [SGSS data section](dataset-sgsscovid.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_test_result_in_sgss
@@ -107,7 +107,7 @@ For more information, see the [SGSS data section](dataset-sgsscovid).
 ## CPNS
 
 These variables are derived from the COVID-19 Patient Notification System (CPNS), which collects info on all in-hospital covid-related deaths.
-For more information, see the [CPNS data section](dataset-cpns).
+For more information, see the [CPNS data section](dataset-cpns.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_death_recorded_in_cpns
@@ -115,7 +115,7 @@ For more information, see the [CPNS data section](dataset-cpns).
 
 ## ONS deaths
 These variables are derived from the Death Registry data provided by the Office for National Statistics.
-For more information, see the [ONS deaths section](dataset-onsdeaths).
+For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 &nbsp;
 
 ::: cohortextractor.patients.died_from_any_cause
