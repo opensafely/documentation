@@ -3,7 +3,7 @@ The data available follows a tiered structure of data of four different levels, 
 Each stage is generated from the preceding stage &mdash; at each step, data privacy is increased through the removal of potentially identifiable data.
 
 ## Level 1
-This is the most level includes the complete, raw, fully-identifiable, event-level patient data.
+This is the most restrictive level and includes the complete, raw, fully-identifiable, event-level patient data.
 EHR vendor data engineers store data at an identifiable level as part of their business-as-usual; they are instructed to process this data by the GPs (who are in routine practice the data controllers) in order to manage and store this information.
 No-one outside the EHR vendor has any access to this data.
 
