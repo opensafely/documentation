@@ -33,6 +33,7 @@ The postcode from this address is mapped to an Output Area, from which other lar
 
 #### MSOA
 According to our identifiable data minimimisation principles, only representations as large or larger than MSOA are available to be extracted into a study cohort for analysis.
+Of ~36 million active patient addresses, less than 55,000 have no MSOA code set. These are a split of no postcode entered, an invalid postcode entered, and no fixed abode.
 
 #### IMD
 IMD (the English Index of Multiple Deprivation) is a ranking of LSOAs based on various characteristics of the region.
