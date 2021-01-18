@@ -16,8 +16,8 @@ To make this process easier and to reduce the likelihood of sensitive informatio
 
 ### Install
 * Log into L4 server
-* Run `/d/bin/install-osrelease.bat` (or `/e/bin/install-osrelease.bat` on the L3 server)
-* Close the console and reopen it
+* In a git-bash terminal, run `/d/bin/install-osrelease.bat` (or `/e/bin/install-osrelease.bat` on the L3 server). You can run this command multiple times without any problems if needed.  
+* Close the git-bash terminal and reopen it
 * Check you can run `osrelease --help` (you'll get some help text)
 
 ### Instructions
