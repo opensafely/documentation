@@ -125,6 +125,13 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 &nbsp;
 
 
+## High Cost Drugs
+(Documentation on the source of this data will be forthcoming later.)
+
+::: cohortextractor.patients.with_high_cost_drugs
+&nbsp;
+
+
 ## Utility functions
 
 These variables create new variable from existing variables. They do not extract any data directly.
