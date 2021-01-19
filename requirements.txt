@@ -63,7 +63,7 @@ numpy==1.19.2
     #   pandas
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.14.0
+opensafely-cohort-extractor==1.19.2
     # via -r requirements.in
 opensafely-jobrunner==2.1.6
     # via opensafely-cohort-extractor
@@ -121,6 +121,8 @@ soupsieve==2.0.1
 sqlalchemy==1.3.20
     # via opensafely-cohort-extractor
 sqlparse==0.4.1
+    # via opensafely-cohort-extractor
+structlog==20.2.0
     # via opensafely-cohort-extractor
 tinynetrc==1.3.0
     # via opensafely-cohort-extractor
