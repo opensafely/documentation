@@ -6,8 +6,27 @@ for formatting documentation.
 
 View it at https://docs.opensafely.org
 
-To build / test:
+## Building locally and testing
 
 - Create a virtual environment
 - `pip install -r requirements.txt`
 - `mkdocs serve`
+
+To pull in the latest version of the cohortextractor docstrings run:
+
+    pip-compile -P opensafely-cohort-extractor
+    pip install -r requirements.txt
+
+If you have added new functions you will need to add an explicit
+reference to them in [docs/study-def-variables.md](./docs/study-def-variables.md).
+
+
+## Deploying
+
+The site is served by Github Pages. We run mkdocs locally to compile the
+HTML, which is then committed to a `gh-pages` branch and pushed to
+Github.
+
+This is all handled for us by running the command:
+
+    mkdocs gh-deploy
