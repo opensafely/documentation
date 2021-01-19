@@ -2,3 +2,5 @@ mkdocs
 mkdocstrings
 mkdocs-material
 opensafely-cohort-extractor
+
+pip-tools
