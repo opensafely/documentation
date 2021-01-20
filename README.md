@@ -30,3 +30,9 @@ Github.
 This is all handled for us by running the command:
 
     mkdocs gh-deploy
+
+Note: if this is your first deploy, you may wish to set up the `gh-pages` branch before running mkdocs:
+
+    % git checkout gh-pages
+    Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+    Switched to a new branch 'gh-pages'
