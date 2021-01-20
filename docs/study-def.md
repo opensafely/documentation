@@ -160,7 +160,7 @@ study = StudyDefinition(
             "last_day_of_year(index_date)",
         ],
     ),
-    age = patients.age_as_of("index_date"),
+    age = patients.age_as_of(index_date),
 )
 ```
 
