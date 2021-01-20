@@ -21,6 +21,7 @@ nav:
         - Python: install-python.md
         - Docker: install-docker.md
         - OpenSAFELY CLI: opensafely-cli.md
+        - macOS: install-macos.md
     - Project repositories: repositories.md
     - Study definitions: study-def.md
     - Study definition variable reference: study-def-variables.md
