@@ -27,8 +27,6 @@ If the package you need is not available, you can request it as follows:
 * Get another member of the suppoRt group to chip in on the issue (e.g. do they agree; do they think a different package might do the same thing better)
 * Assign to Simon when discussion finished.
 
-### 
-
 
 ## Requesting additional Stata packages
 In many cases Stata packages can be added by copying the relevant `ado` files into the project repo. 
