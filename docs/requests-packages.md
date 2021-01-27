@@ -22,7 +22,7 @@ This will create a CSV file containing the version of available packages in Open
 
 If the package you need is not available, you can request it as follows:
 
-* Make a new Issue in [https://github.com/opensafely/r-docker/issues](https://github.com/opensafely/r-docker/issues)
+* Make a new Issue in [https://github.com/opensafely-core/r-docker/issues](https://github.com/opensafely-core/r-docker/issues)
 * Explain the rationale
 * Get another member of the suppoRt group to chip in on the issue (e.g. do they agree; do they think a different package might do the same thing better)
 * Assign to Simon when discussion finished.

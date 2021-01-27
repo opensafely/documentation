@@ -120,11 +120,11 @@ Get in touch if you need to apply your own license and we can accelerate this wo
 
 ### Python
 
-The docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely/python-docker/blob/main/requirements.txt).
+The docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/requirements.txt).
 
 ### R
 
-The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely/r-docker/blob/master/Dockerfile#L30). 
+The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely-core/r-docker/blob/master/Dockerfile#L30). 
 Currently our configuration doesn't list the precise versions of the libraries. 
 If you need this, get in touch and we will accelerate this work.
 
