@@ -52,7 +52,7 @@ If you want to merge onto a branch that isn't the `main` branch, don't forget to
 <details>
   <summary>Click here to read in more detail about the `osrelease` command.</summary>
 
-The `osrelease` command runs the `release.py` script in the [`output-publisher` repo](https://github.com/opensafely/output-publisher). It:
+The `osrelease` command runs the `release.py` script in the [`output-publisher` repo](https://github.com/opensafely-core/output-publisher). It:
 
 * prompts the reviewer for the URL of a github repo to where the redacted outputs should be published (the *study repo*)
 * checks out the *study repo* and creates a branch `release-candidates` (if it doesn't already exist)
