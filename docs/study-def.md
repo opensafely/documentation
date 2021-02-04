@@ -178,7 +178,7 @@ first_day_of_year(index_date)
 last_day_of_year(index_date)
 ```
 
-Finally, intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
+Intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
 The available units are `year(s)`, `month(s)` and `day(s)`.
 For example:
 
@@ -190,6 +190,28 @@ index_date - 1 year
 
 Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
 An error will also be show if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
+
+### Dynamic index dates
+
+Index dates can also be dynamic, different for each patient based on another criteria, rather than a common fixed value. For example, we may want to define an index date by the first occurence of a positive test result. In this case we define the dynamic index date as a variable in the study definition, then refer to this variable name as the index date.
+For example:
+
+```py
+study = StudyDefinition(
+    first_pos_index_date = patients.with_test_result_in_sgss(
+       pathogen="SARS-CoV-2",
+       test_result="positive",
+       find_first_match_in_period=True,
+       returning="date",
+       date_format="YYYY-MM-DD",,
+    
+    age = patients.age_as_of("first_pos_index_date"),
+)
+```
+
+Here the index date is defined as the first SARS-CoV-2 positive test result in SGSS, which will differ for each patient. The age variable is now defined relative to this dynamic date, i.e. age is age at the time of the positive SARS-CoV-2 test.
+
+Where the dynamic index date is null, in this case when a patient doesn't have a positive test result, any variables that reference the dynamic date will take the null value for their variable type (0 for continuous variables; an empty string for string variables).
 
 ### Time periods
 
