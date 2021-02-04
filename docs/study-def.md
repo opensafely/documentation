@@ -475,7 +475,8 @@ common_variables = dict(
 ### Define the specific study definitions
 
 Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the other imports.
-You then need just before the final closing brackets at the end of the file, add `**common_variables`
+You then add `**common_variables` just before the final closing brackets at the end of the file.
+This approach can also use different index dates, that are then passed to variables in `common_variables.py`.
 
 `study_definition_copd.py`
 ```py
@@ -496,9 +497,11 @@ study = StudyDefinition(
         "rate": "uniform",
         "incidence": 0.2,
     },
+    # define the study index date
+    index_date = "2020-01-01"
 
     # STUDY POPULATION
-   population=patients.all(),
+    population=patients.all(),
 
     # COPD
     copd=patients.with_these_clinical_events(
@@ -510,7 +513,29 @@ study = StudyDefinition(
     **common_variables
 )
 ```
+### Identical study definitions with different index dates
+Though the `common_variables` approach described above can be used to make cohorts using different index dates, if you want two cohorts that are entirely identical except for the index date, we can do this more simply.
+We start by using just one study definition, then within the [`project.yaml`](https://docs.opensafely.org/en/latest/pipelines/#projectyaml-format) we define two actions, one for each index date you want to use. We then borrow the `--index-date-range` argument from the [measures](https://docs.opensafely.org/en/latest/measures/#extract-the-data) function to specify the index dates:
+```yaml
+version: "3.0"
 
+expectations:
+  population_size: 1000
+
+actions:
+
+  generate_study_population_1:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01"
+    outputs:
+      highly_sensitive:
+        cohort: output/input-2020-01-01.csv
+
+  generate_study_population_2:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-09-01"
+    outputs:
+      highly_sensitive:
+        cohort: output/input-2020-09-01.csv
+```
 
 
 ---8<-- 'includes/glossary.md'
