@@ -203,7 +203,7 @@ study = StudyDefinition(
        test_result="positive",
        find_first_match_in_period=True,
        returning="date",
-       date_format="YYYY-MM-DD",,
+       date_format="YYYY-MM-DD",
     
     age = patients.age_as_of("first_pos_index_date"),
 )
