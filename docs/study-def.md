@@ -172,24 +172,48 @@ It's also possible to apply various functions to the index date.
 The available options (hopefully self-explanatory) are:
 
 ```py
-first_day_of_month(index_date)
-last_day_of_month(index_date)
-first_day_of_year(index_date)
-last_day_of_year(index_date)
+"first_day_of_month(index_date)"
+"last_day_of_month(index_date)"
+"first_day_of_year(index_date)"
+"last_day_of_year(index_date)"
 ```
 
-Finally, intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
+Intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
 The available units are `year(s)`, `month(s)` and `day(s)`.
 For example:
 
 ```py
-index_date + 90 days
-first_day_of_month(index_date) + 9 months
-index_date - 1 year
+"index_date + 90 days"
+"first_day_of_month(index_date) + 9 months"
+"index_date - 1 year"
 ```
 
 Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
 An error will also be show if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
+
+### Dynamic dates
+
+Dates used in variable definitions can also be taken from date variables defined elsewhere in the study definition, rather than using a common fixed value. 
+For example, we may want to define a patient's age as at a thier first positive test result, rather than a fixed index date. In this case we first define positive test date as a variable in the study definition, then refer to this variable name in the age definition:
+
+```py
+study = StudyDefinition(
+    pos_test_date = patients.with_test_result_in_sgss(
+       pathogen="SARS-CoV-2",
+       test_result="positive",
+       find_first_match_in_period=True,
+       returning="date",
+       date_format="YYYY-MM-DD",
+    
+    age = patients.age_as_of("pos_test_date"),
+)
+```
+
+Here, the patient-specific date `pos_test_date` is defined as the first SARS-CoV-2 positive test result in SGSS, which will differ for each patient. 
+The age variable is now defined relative to this date, i.e. age is given at the time of the positive SARS-CoV-2 test. Note the need for the variable name to be passed as a string rather than unquoted.
+We can also use date expressions on these dates, for example `"pos_test_date - 1 year"`
+
+Wherever the inputted date is null, in this case when a patient doesn't have a positive test result, any variables that reference the date will take the [null value for their variable type](study-def.md#missing-values-and-unmatched-records) (0 for numeric variables; an empty string for character and date variables).
 
 ### Time periods
 
