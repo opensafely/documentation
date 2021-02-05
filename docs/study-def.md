@@ -536,6 +536,6 @@ actions:
       highly_sensitive:
         cohort: output/input-2020-09-01.csv
 ```
-
+Currently the study definition called above must have the index date defined within the StudyDefinition (e.g. `index_date="2020-01-01",`), though the date defined is arbitrary and is replaced by the arguments defined above.
 
 ---8<-- 'includes/glossary.md'
