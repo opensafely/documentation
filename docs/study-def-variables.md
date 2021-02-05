@@ -10,9 +10,6 @@ For more information on writing a study definition, go to the [study definition 
 These variables are derived from data held in the patients' primary care records.
 &nbsp;
 
-::: cohortextractor.patients.random_sample
-&nbsp;
-
 ::: cohortextractor.patients.registered_as_of
 &nbsp;
 
@@ -137,6 +134,9 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 These variables create new variable from existing variables. They do not extract any data directly.
 &nbsp;
 
+::: cohortextractor.patients.random_sample
+&nbsp;
+
 ::: cohortextractor.patients.categorised_as
 &nbsp;
 
@@ -146,7 +146,7 @@ These variables create new variable from existing variables. They do not extract
 ::: cohortextractor.patients.date_of
 &nbsp;
 
-::: cohortextractor.patients.maximum_of
+::: cohortextractor.patients.minimum_of
 &nbsp;
 
 ::: cohortextractor.patients.maximum_of
