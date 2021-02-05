@@ -1,3 +1,5 @@
+# OpenSAFELY Documentation
+
 Documentation built using [mkdocs](https://www.mkdocs.org/).
 
 includes [lots of very nice
