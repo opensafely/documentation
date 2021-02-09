@@ -84,7 +84,7 @@ This differs from a normal study definition due to the addition of the `measures
 
 * `id` is just a string used to identify the measure output file.
 * `numerator` and `denominator` are the columns in the dataset that define the measure. They must be numeric or boolean (encoded as 0 or 1).
-* `group_by` column can be of any type.
+* `group_by` column can be of any type. To calculate the measure across the entire population, you can set `group_by="population"`. If not specified, `group_by` will default to `None` and the measure will be calculated at the individual patient level. 
 
 You can calculate measures for more than one group at a time by specifying multiple variables as follows: 
 
