@@ -25,15 +25,15 @@ reference to them in [docs/study-def-variables.md](./docs/study-def-variables.md
 
 ## Deploying
 
-The site is served by Github Pages. We run mkdocs locally to compile the
-HTML, which is then committed to a `gh-pages` branch and pushed to
-Github.
+The site is served by Github Pages, and deployed continuously by [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages).
 
-This is all handled for us by running the command:
+### deployment from your local environment
+
+Previously, we would run mkdocs locally to compile the HTML, commit the output to a `gh-pages` branch and push to Github. This was all handled for us by running the command:
 
     mkdocs gh-deploy
 
-Note: if this is your first deploy, you may wish to set up the `gh-pages` branch before running mkdocs:
+Note: if you are deploying from a local environment for the first time, you may wish to set up the `gh-pages` branch before running mkdocs:
 
     % git checkout gh-pages
     Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
