@@ -11,7 +11,7 @@ You can can use more than one language in a single project if necessary.  You ca
 * **Do not write code that requires an internet connection to run.**
 Any research objects (datasets, libraries, etc) that are retrieved via the internet should be imported to the repo locally first.
 If this is not possible (for instance if the object size is too large to be transferred via GitHub) then get in touch.
-* **Avoid code that consumes a lot of time or memory.** The server is not an infinite resource. We can advise on code optimisation if run-times become problematic.  A good strategy is to split you processing into separate project pipeline actions; the job runner can then choose to run them in parallel if sufficient resources are available.
+* **Avoid code that consumes a lot of time or memory.** The server is not an infinite resource. We can advise on code optimisation if run-times become problematic.  A good strategy is to split your processing into separate project pipeline actions; the job runner can then choose to run them in parallel if sufficient resources are available.
 * **Write code that runs across different platforms.**
 Since code will be run both locally and within a Linux-based Docker environment. For example use forward-slashes `/` for directories.
 * **Structure your code into discrete chunks, both within scripts, and by splitting into different pipeline actions.**
