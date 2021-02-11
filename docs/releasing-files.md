@@ -49,7 +49,7 @@ You can merge the `released-candidates` branch onto another branch by creating a
 If you want to merge onto a branch that isn't the `main` branch, don't forget to select the correct `base:` branch from the drop-down box when creating the pull request.
 
 
-<details>
+<details markdown="1">
   <summary>Click here to read in more detail about the `osrelease` command.</summary>
 
 The `osrelease` command runs the `release.py` script in the [`output-publisher` repo](https://github.com/opensafely-core/output-publisher). It:
