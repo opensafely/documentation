@@ -173,7 +173,7 @@ Each time an action is run, logging information about your run will be put into 
 If any of your actions fail, you may find clues here as to why.
 
 
-<details>
+<details markdown="1">
   <summary>Click here for information on the exact steps that occur when each job is run locally</summary>
 
 What happens:
@@ -221,7 +221,7 @@ To submit jobs (i.e., to run actions), the general process is as follows:
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`.
 
-<details>
+<details markdown="1">
 <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
 
 What happens:
