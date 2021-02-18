@@ -113,10 +113,12 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 
 ### Stata
 
-We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker Github repository](https://github.com/opensafely/stata-docker/tree/master/libraries).
+We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker Github repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
 
-As Stata is a commercial product, and the image incorporates our license key, the Docker image and [Github repository](https://github.com/opensafely/stata-docker/) are currently private, pending work to separate the license from the image.
-Get in touch if you need to apply your own license and we can accelerate this work.
+As Stata is a commercial product, a license key is needed to use it. If you are
+a member of the opensafely Github organisation, then the tooling will
+automatically use the OpenSAFELY stata license. If not, get in touch if you
+need to apply your own license and we can help.
 
 ### Python
 
@@ -124,9 +126,7 @@ The docker image provided is Python 3.8, with [this list of packages installed](
 
 ### R
 
-The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely-core/r-docker/blob/master/Dockerfile#L30). 
-Currently our configuration doesn't list the precise versions of the libraries. 
-If you need this, get in touch and we will accelerate this work.
+The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely-core/r-docker/blob/master/packages.csv). 
 
 
 ## Running your code locally
@@ -142,7 +142,7 @@ For `opensafely run` to work:
 * The Docker daemon must be running on your machine:
   * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
   * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
-* You _may_ need credentials for our docker registry (for example, if you are running Stata actions, which require a licensed version). If you have access, you can see [instructions for this here](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md#log-in-to-docker).
+
 
 To run the first action in the example above, using dummy data, you can use:
 
