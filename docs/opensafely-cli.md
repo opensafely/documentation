@@ -18,12 +18,11 @@ To check this has installed successfully, submit `opensafely --version`.
 
 ## Updating `opensafely`
 
-If you need to install a new version of `opensafely`, update with:
+You should keep the tool up to date as much as possible. You can upgrade to a new version of `opensafely`, update with:
 
 ```bash
 pip install --upgrade opensafely
 ```
-
 
 ## Using `opensafely` at the command line
 
