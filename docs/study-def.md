@@ -291,6 +291,7 @@ study = StudyDefinition(
 ```
 
 In this case, we are saying that:
+
 * Events dates are expected to be distributed between 1900 and today, with exponentially-increasing frequenc, with events occurring for 50% of patients.
 * Values for binary variables are expected to be positive 50% of the time.
 * Values for categorical variables are expected to be present (i.e., non-missing) 50% of the time.
