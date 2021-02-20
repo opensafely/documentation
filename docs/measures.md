@@ -116,7 +116,7 @@ The range is specified as:
 --index-date-range "YYYY-MM-DD to YYYY-MM-DD by (week|month)"
 ```
 
-It also excepts `today` in place of a date.
+It also accepts `today` in place of a date.
 
 Output files are named like: `output/input_YYYY-MM-DD.csv`
 
