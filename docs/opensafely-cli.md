@@ -21,6 +21,18 @@ To check this has installed successfully, submit `opensafely --version`.
 You should keep the tool up to date as much as possible. You can upgrade to a new version of `opensafely`, update with:
 
 ```bash
+opensafely upgrade
+```
+
+The above command only works with opensafely version 1.6.0 or newer. If you are
+using an older version, you will first need to upgrade it with:
+
+```bash
+pip install --upgrade opensafely
+```
+
+
+```bash
 pip install --upgrade opensafely
 ```
 
@@ -69,3 +81,16 @@ to check if the codelist files are up-to-date with thse listed in `./codelists/c
 
 See the [Codelist](codelist-intro.md) section for more information on codelists.
 
+
+### Updating Docker Images
+
+
+To run your code on your machine, the `opensafely` tool uses the same docker
+images that run in the secure server environments. These are updated
+periodically, for example when new libraries are installed. If you have error
+messages about missing libraries, your docker images may need upgrading.
+To pull the most recent release to your machine, run:
+
+```bash
+opensafely pull
+```
