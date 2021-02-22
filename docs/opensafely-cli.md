@@ -31,11 +31,6 @@ using an older version, you will first need to upgrade it with:
 pip install --upgrade opensafely
 ```
 
-
-```bash
-pip install --upgrade opensafely
-```
-
 ## Using `opensafely` at the command line
 
 To view the in-built documentation for each command, submit `opensafely --help` at the terminal, which will list all the ways in which you can use it.
