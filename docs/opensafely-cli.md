@@ -24,7 +24,12 @@ You should keep the tool up to date as much as possible. You can upgrade to a ne
 opensafely upgrade
 ```
 
-Note: if you are on an older verion of opensafely, you may need to upgrade the older way to get the upgrade command:
+The above command only works with opensafely version 1.6.0 or newer. If you are
+using an older version, you will first need to upgrade it with:
+
+```bash
+pip install --upgrade opensafely
+```
 
 
 ```bash
@@ -80,9 +85,9 @@ See the [Codelist](codelist-intro.md) section for more information on codelists.
 ### Updating Docker Images
 
 
-To run your code on your machine, the opensafely tool uses the same docker
+To run your code on your machine, the `opensafely` tool uses the same docker
 images that run in the secure server environments. These are updated
-periodically, for example with new libraries installed. If you have error
+periodically, for example when new libraries are installed. If you have error
 messages about missing libraries, your docker images may need upgrading.
 To pull the most recent release to your machine, run:
 
