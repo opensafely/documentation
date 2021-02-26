@@ -52,7 +52,7 @@ You can update the README directly in GitHub. Click the edit button (a little pe
 
 #### `project.yaml`
 
-This file defines a "pipeline": how all the components of your analysis can run together, efficiently, either on the server or locally on your computer.   See the [pipeline documentation](pipelines.md) for more information.
+This file defines a "pipeline": how all the components of your analysis can run together, efficiently, either on the server or locally on your computer.   See the [pipeline documentation](actions-pipelines.md) for more information.
 
 
 #### `.github/`

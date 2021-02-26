@@ -26,8 +26,11 @@ nav:
             - Adding codelists to Project: codelist-project.md
             - SNOMED codelists: codelist-snomed.md
         - Actions:
-            - Running actions in a pipeline: pipelines.md
-            - The `cohortextractor` action: cohortextractor.md
+            - Overview: actions-intro.md
+            - Scripted actions: actions-scripts.md
+            - The `cohortextractor` action: actions-cohortextractor.md
+            - The project pipeline: actions-pipelines.md
+        - Job server: job-server.md
         - Data sources:
             - Overview: dataset-intro.md
             - Systmone primary care: dataset-systmone.md
