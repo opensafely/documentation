@@ -6,11 +6,30 @@ It captures symptoms, test results, diagnoses, prescriptions, onward referrals, 
 
 The SystmOne database contains various tables for events, medications, registrations, and so on, and some additional custom tables have been created specifically for OpenSAFELY. This is typically to make administrative and geographic grouping information available (like household membership) without disclosing of identifiable patient data (like addresses).
 
-### Event coding
+## OpenSAFELY-TPP database builds
+The OpenSAFELY-TPP database is typically built once per week.
+In essence, this involves refreshing records in SystmOne so that the records from the following groups are available for analysis:
+
+1. All patients currently registered [^1] at a TPP practice
+2. All patients registered at any time from 2009-01-01 onwards, but having since de-registered
+3. All patients registered at any time from 2009-01-01 onwards, but having since died.
+
+These three groups constitute the patient population available for analysis within OpenSAFELY.
+Note that any primary care events occurring in de-registered patients after the de-registration date will not be available in the TPP patient record, though any events recorded in external linked datasets (such as hospitals admissions or deaths) will be visible.
+
+Every time the database is re-built there will be slight differences in study populations, either due to new registrations or changes to patient records that include/exclude them from the study cohort.
+Old database builds cannot be recovered, and due to the differences between successive database builds, old study populations are unlikely to be re-extracted exactly as before.
+
+When TPP receive data from external data sources (eg ONS), the data in the relevant tables is completely replaced.
+
+For those with access to the OpenSAFELY database, the latest database build time is available in the `LatestBuildTime` table, and the history of builds for each dataset is available in the `BuildInfo` table.
+
+
+## Event coding
 
 SystmOne uses an augmented version of CTV3 Read Codes to classify clinical events, and only data that is associated with a Read Code can be accessed in OpenSAFELY &mdash; we do not have access to free text data.
 
-#### SARS-CoV-2 test results
+### SARS-CoV-2 test results
 
 SARS-CoV-2 test result data is incorporated into SystmOne and uses the following CTV3 codes:
 
@@ -48,6 +67,13 @@ If a patient's postcode is not recorded, then these geographic variables are not
 ### Household membership
 
 Content to be written
+
+## Descriptive metadata
+
+- [OpenSAFELY-TPP database table examples (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb) (private, needs occasional refreshes)
+- [OpenSAFELY-TPP Database Schema](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-schema.ipynb)
+- [Latest available records in SystmOne and external datasets](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-builds.ipynb)
+- [Historical coverage of records in SystmOne and external datasets](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-history.ipynb)
 
 
 ---8<-- 'includes/glossary.md'
