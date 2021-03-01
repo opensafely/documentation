@@ -40,7 +40,7 @@ The following instructions assume you have submitted one or more jobs which have
     * [**Read the redaction instructions below**](releasing-files.md#disclosivity-checks-and-redaction).
     * Use `GitHub desktop` or command line `git` to view the diffs and commit changes to the repo.
     * Any previously-applied redactions from previously-run actions will need to be reapplied &mdash; these will be easy to spot in GitHub desktop, and you can choose to simply not commit any files if the redacted version will be identical between the previous and current runs.
-8. Only once you're satisfied that the committed changes are safe to release, run `osrelease <github_remote_https_url>` (e.g. `osrelease https://github.com/opensafely/my-amazing-research`) and follow the instructions. 
+8. Only once you're satisfied that the committed changes are safe to release, run `osrelease` from the directory with your changes in and follow the instructions.
 
 Once finished, any files you have committed locally will be visible in the `released_ouputs` folder on the `release-candidates` branch on your repo (e.g., `https://github.com/opensafely/my-amazing-research/tree/release-candidates`). 
 This branch won't contain any of the intermediate git history, just the state of the redaction repo when you ran the `osrelease` command. 
