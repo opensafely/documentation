@@ -12,12 +12,14 @@ both quality and speed in programming.
 Github has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
 that you use this tool. 
 
-In this screenshot, the user is making a new Pull Request. In the top right-hand corner, marked by the 
-red box, there is a tagging function when you can search or select collaborators to do a code review. 
+
+
+In this screenshot, the user is making a new Pull Request. In the top right-hand corner (marked by the 
+red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review. 
 Once you have tagged them and made the Pull Request, the person will receive a notification to their 
 email, and it will also come up in the Pull Request section of their Github main screen. 
 
-Whilst this is minimum for requesting a review, it is strongly encouraged to add some information to 
+It is strongly encouraged to add some information to 
 your request to aid the reviewer. Thinking about the purpose of the review can be helpful as this may 
 vary from review to review. Naming the pull request something informative and useful is a good start, 
 and even better is filling in the textbox of the Pull Request with information about what you are 
