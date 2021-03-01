@@ -38,11 +38,14 @@ Merging a new branch should not be your only trigger for a review. If you are st
 ## How can I be a good review-ee?
 Experiences of reviewing were gathered during the code review survey, and some best practices are listed below. 
 
-- Good descriptive names for Pull Requests and commits help the reviewer follow the logic of the code and the changes made
+- Good descriptive names for Pull Requests and commits help the reviewer follow the logic of the code and the changes made (see example of commits below)
 - A clear description of the expectations of the review is helpful, for example, are you expected to run the code or just review it in the browser?
 - Multiple smaller Pull Requests are easier than one large 
 - Code comments and documentations make the logic easier to follow 
 - Naming the order of the files, for example, `01_Data_Extraction.py`, `02_Data_Cleaning.py`, etc. 
+
+#### Examples of good commit messages
+![image](https://user-images.githubusercontent.com/25401512/109499651-166aaf80-7a8d-11eb-86de-f4a0b549fc90.png)
 
 
 ## How can I be a good reviewer?
