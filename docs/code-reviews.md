@@ -29,12 +29,17 @@ review of how well you document your code and if it is clear and understandable?
 will help your reviewer do a better job quicker. 
  
 ## When to ask for Code Review?
-This question's answer will vary from user to user, but it is most useful with every change to the code. In fact, when we surveyed the OpenSAFELY team, most people reported they would like reviews to be as frequent as possible. A good way of conceptualising when to ask for a review is to think about commits and branches. A user makes a branch to change a feature or adding some new analysis, and while making that change, they do several commits to the new branch. When the time comes to merge this back to master, there is a natural inflexion point to do a code review. When you are making a Pull Request, you can tag a reviewer easily. 
+
+Code reviews should be the default. A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to 
+merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to master, there is a natural inflexion point to do a code review, and each merge should be 
+accompanied with a code review. If you are in a hurry, and no-one has time to a more thorough 
+code review, bear in mind that even a cursory code review is better than no code review. 
 
 Merging a new branch should not be your only trigger for a review. If you are stuck or unsure what direction to take, a code review can clarify what path to take. In general, the more frequent the reviews, the better quality the code tends to be. 
 
-## How can I be a good review-ee?
-Experiences of reviewing were gathered during the code review survey, and some best practices are listed below. 
+## How can I write a good Pull Request?
+Some best practice gathered from current users of OpenSAFELY are described below:
+
 
 - Good descriptive names for Pull Requests and commits help the reviewer follow the logic of the code and the changes made
 - A clear description of the expectations of the review is helpful, for example, are you expected to run the code or just review it in the browser?
@@ -48,6 +53,9 @@ A survey of the OpenSAFELY team about code reviewers revealed some excellent pra
 
 - Code review should be a collaborative conversation and don't be afraid to check assumptions or clarify intentions within the review (you can add messages to the end of the review request). 
 - Actionable feedback with suggestions is helpful. 
+- It can be helpful to highlight the levels of code review comments. For example, 
+if something is nice-to-have-but-not-important, you can prefix it with `Nit:`. For example, 
+`Nit: I think this would be cleared if you didn't use an underscore in this variable name`
 - Being clear about what exactly you have reviewed or how thorough the review was—for example, being clear if you read through the code but did not run it (and therefore may miss running errors). 
 - Answer specific questions in the review request.
 - Avoiding jabs on coding style. 
@@ -56,7 +64,7 @@ A survey of the OpenSAFELY team about code reviewers revealed some excellent pra
 ## Team Suggestions
 These suggestions again come from the team survey and various conversations within the team. 
 
-Code reviews should be normalised within the team by the PIs or team leads by offers to review code where possible or to identify like reviewers. 
-New projects can have a "buddy" who can help to review the code, and means they will be familiar with the protocol and code changes from the start
-Multiple reviewers can be helpful 
-Code comments and good documentation with linked protocols speed everything up.
+- Those in leadership roles should volunteer their time do code reviews, or help find code reviewers, to help embed the culture of code-reviews widely
+- New projects can have a "buddy" who can help to review the code, and means they will be familiar with the protocol and code changes from the start
+- Multiple reviewers can be helpful 
+- Code comments and good documentation with linked protocols speed everything up.
