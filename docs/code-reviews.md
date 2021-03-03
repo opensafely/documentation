@@ -12,12 +12,14 @@ both quality and speed in programming.
 Github has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
 that you use this tool. 
 
-
+![image](https://user-images.githubusercontent.com/25401512/109499428-cdb2f680-7a8c-11eb-9d77-4e53f7f1c57c.png)
 
 In this screenshot, the user is making a new Pull Request. In the top right-hand corner (marked by the 
 red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review. 
 Once you have tagged them and made the Pull Request, the person will receive a notification to their 
 email, and it will also come up in the Pull Request section of their Github main screen. 
+
+![image](https://user-images.githubusercontent.com/25401512/109499512-e91e0180-7a8c-11eb-8f7a-5024f7753366.png)
 
 It is strongly encouraged to add some information to 
 your request to aid the reviewer. Thinking about the purpose of the review can be helpful as this may 
@@ -41,11 +43,14 @@ Merging a new branch should not be your only trigger for a review. If you are st
 Some best practice gathered from current users of OpenSAFELY are described below:
 
 
-- Good descriptive names for Pull Requests and commits help the reviewer follow the logic of the code and the changes made
+- Good descriptive names for Pull Requests and commits help the reviewer follow the logic of the code and the changes made (see example of commits below)
 - A clear description of the expectations of the review is helpful, for example, are you expected to run the code or just review it in the browser?
 - Multiple smaller Pull Requests are easier than one large 
 - Code comments and documentations make the logic easier to follow 
 - Naming the order of the files, for example, `01_Data_Extraction.py`, `02_Data_Cleaning.py`, etc. 
+
+#### Examples of good commit messages
+![image](https://user-images.githubusercontent.com/25401512/109499651-166aaf80-7a8d-11eb-86de-f4a0b549fc90.png)
 
 
 ## How can I be a good reviewer?
@@ -68,3 +73,4 @@ These suggestions again come from the team survey and various conversations with
 - New projects can have a "buddy" who can help to review the code, and means they will be familiar with the protocol and code changes from the start
 - Multiple reviewers can be helpful 
 - Code comments and good documentation with linked protocols speed everything up.
+
