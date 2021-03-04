@@ -1,16 +1,16 @@
 ## What is a code review?
 
 A code review is a critical quality assurance practice. It involves systematically
-checking a fellow programmer's (or researcher's) code for errors or possible 
+checking a fellow programmer's (or researcher's) code for potential errors or possible 
 improvements. 
 
 It is an everyday activity in the software development world and improves
-both quality and speed in programming. 
+both quality and speed in programming. Code reviews are standard practice within OpenSAFELY studies and the default should be to always get your code reviewed. 
 
 ## How to ask for a review
 
 Github has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
-that you use this tool. 
+that you use this tool. [Github](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) has a some documentation on Pull Requests and Code Reviews which we recommend for background reading. 
 
 ![image](https://user-images.githubusercontent.com/25401512/109499428-cdb2f680-7a8c-11eb-9d77-4e53f7f1c57c.png)
 
@@ -34,7 +34,7 @@ will help your reviewer do a better job quicker.
 
 Code reviews should be the default. A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to 
 merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to master, there is a natural inflexion point to do a code review, and each merge should be 
-accompanied with a code review. If you are in a hurry, and no-one has time to a more thorough 
+accompanied with a code review. If you are in a hurry, and no-one has time to do a more thorough 
 code review, bear in mind that even a cursory code review is better than no code review. 
 
 Merging a new branch should not be your only trigger for a review. If you are stuck or unsure what direction to take, a code review can clarify what path to take. In general, the more frequent the reviews, the better quality the code tends to be. 
