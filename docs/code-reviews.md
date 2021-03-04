@@ -10,7 +10,7 @@ both quality and speed in programming. Code reviews are standard practice within
 ## How to ask for a review
 
 Github has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
-that you use this tool. [Github](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) has a some documentation on Pull Requests and Code Reviews which we recommend for background reading. 
+that you use this tool. Github has some [documentation on Pull Requests and Code Reviews]((https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) which we recommend for background reading.
 
 ![image](https://user-images.githubusercontent.com/25401512/109499428-cdb2f680-7a8c-11eb-9d77-4e53f7f1c57c.png)
 
