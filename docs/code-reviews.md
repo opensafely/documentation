@@ -22,13 +22,7 @@ email, and it will also come up in the Pull Request section of their Github main
 ![image](https://user-images.githubusercontent.com/25401512/109499512-e91e0180-7a8c-11eb-8f7a-5024f7753366.png)
 
 It is strongly encouraged to add some information to 
-your request to aid the reviewer. Thinking about the purpose of the review can be helpful as this may 
-vary from review to review. Naming the pull request something informative and useful is a good start, 
-and even better is filling in the textbox of the Pull Request with information about what you are 
-seeking. For example, are you looking for a check of the implementation of the logic or methods 
-outlined in the protocol (in which case, linking the protocol can aid this), or are you looking for a 
-review of how well you document your code and if it is clear and understandable? Being transparent 
-will help your reviewer do a better job quicker. 
+your request to aid the reviewer. 
  
 ## When to ask for Code Review?
 
@@ -42,16 +36,19 @@ Merging a new branch should not be your only trigger for a review. If you are st
 ## How can I write a good Pull Request?
 Some best practice gathered from current users of OpenSAFELY are described below:
 
-
+ - Thinking about the purpose of the review can be helpful as this may 
+vary from review to review. For example, are you looking for a check of the implementation of the logic or methods 
+outlined in the protocol (in which case, linking the protocol can aid this), or are you looking for a 
+review of how well you document your code and if it is clear and understandable? Being transparent 
+will help your reviewer do a better job quicker. 
 - Good descriptive names for Pull Requests and commits help the reviewer follow the logic of the code and the changes made (see example of commits below)
-- A clear description of the expectations of the review is helpful, for example, are you expected to run the code or just review it in the browser?
 - Multiple smaller Pull Requests are easier than one large 
 - Code comments and documentations make the logic easier to follow 
 - Naming the order of the files, for example, `01_Data_Extraction.py`, `02_Data_Cleaning.py`, etc. 
+- Allow sufficient time for the review
 
 #### Examples of good commit messages
 ![image](https://user-images.githubusercontent.com/25401512/109499651-166aaf80-7a8d-11eb-86de-f4a0b549fc90.png)
-
 
 ## How can I be a good reviewer?
 A survey of the OpenSAFELY team about code reviewers revealed some excellent practices for going forward, and adopting these as a team will improve our overall reviewing procedure and quality. 
