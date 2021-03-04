@@ -51,23 +51,20 @@ will help your reviewer do a better job quicker.
 ![image](https://user-images.githubusercontent.com/25401512/109499651-166aaf80-7a8d-11eb-86de-f4a0b549fc90.png)
 
 ## How can I be a good reviewer?
-A survey of the OpenSAFELY team about code reviewers revealed some excellent practices for going forward, and adopting these as a team will improve our overall reviewing procedure and quality. 
+Some best practices gathered from current users of OpenSAFELY are described below: 
 
 - Code review should be a collaborative conversation and don't be afraid to check assumptions or clarify intentions within the review (you can add messages to the end of the review request). 
 - Actionable feedback with suggestions is helpful. 
 - It can be helpful to highlight the levels of code review comments. For example, 
 if something is nice-to-have-but-not-important, you can prefix it with `Nit:`. For example, 
 `Nit: I think this would be cleared if you didn't use an underscore in this variable name`
-- Being clear about what exactly you have reviewed or how thorough the review was—for example, being clear if you read through the code but did not run it (and therefore may miss running errors). 
+- Being clear about what exactly you have reviewed or how thorough the review was—for example, being clear if you read through the code but did not run it (and therefore may miss running errors in implementation). Unit tests should catch that the code is runnable, but will not necessarily check it is correct.  
 - Answer specific questions in the review request.
 - Avoiding jabs on coding style. 
 - Being clear if you do not have time to do a thorough review 
 
-## Team Suggestions
-These suggestions again come from the team survey and various conversations within the team. 
+## What actions can we take as a team to encourage code reviews?
 
 - Those in leadership roles should volunteer their time do code reviews, or help find code reviewers, to help embed the culture of code-reviews widely
 - New projects can have a "buddy" who can help to review the code, and means they will be familiar with the protocol and code changes from the start
-- Multiple reviewers can be helpful 
-- Code comments and good documentation with linked protocols speed everything up.
 
