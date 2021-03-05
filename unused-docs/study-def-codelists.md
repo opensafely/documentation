@@ -21,7 +21,7 @@ from codelists import *
 
 This just keeps it cleaner and easier to read. 
 
-You can read more about how to create and edit codelists in the [Codelists](codelist-intro.md) section, and you can read more about how to import codelists into your project folder using `cohortextractor` [here](cohortextractor.md#update_codelists).
+You can read more about how to create and edit codelists in the [Codelists](codelist-intro.md) section, and you can read more about how to import codelists into your project folder using `cohortextractor` [here](actions-cohortextractor.md#update_codelists).
 
 ## combining codelists
 

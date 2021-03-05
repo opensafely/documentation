@@ -1,10 +1,10 @@
 
-`cohortextractor` is a Python module built for OpenSAFELY. 
+`cohortextractor` is an action provided by the OpenSAFELY framework. Every pipeline will start with this as its first action.
 It is used to convert the study definition into an actual analysis-ready dataset based on dummy or real data.
 
 The dataset it creates can be either:
 
-* A dummy dataset used for developing and testing analysis code on the user's own machine. 
+* A dummy dataset used for developing and testing analysis code on the user's own machine.
   Users have control over the characteristics of each dummy variable, which are defined inside the study definition.
 * A real dataset created from the OpenSAFELY database, used for the analysis proper.
   Real datasets never leave the secure server, only summary data and other outputs that are derived from them can be released (after disclosivity checks).
@@ -14,8 +14,8 @@ The dataset it creates can be either:
 
 ## Installing `cohortextractor`
 
-**In most cases you won't need to install `cohortextractor` directly**. 
-Instead, you create an action in your [project.yaml](pipelines.md#project-yaml-format) file and run it via `opensafely run <action>`. 
+**In most cases you won't need to install `cohortextractor` directly**.
+Instead, you create an action in your [project.yaml](actions-pipelines.md#project-yaml-format) file and run it via `opensafely run <action>`.
 This will use `cohortextractor` via a Docker image rather than a local installation.
 
 <details>
@@ -42,7 +42,7 @@ pip install --upgrade opensafely-cohort-extractor
 
 ## Using `cohortextractor` in the `project.yaml`
 
-Typically, you will be writing `cohortextractor` commands inside the `project.yaml` and executing them using the `opensafely run` command. 
+Typically, you will be writing `cohortextractor` commands inside the `project.yaml` and executing them using the `opensafely run` command.
 The available `cohortextractor` commands and how they are declared in the `project.yaml` are detailed below.
 
 
@@ -59,7 +59,7 @@ generate_study_cohort
       data: output/input.csv
 ```
 
-The size of the dummy dataset is determined by the `population_size` option [in the `project.yaml`](pipelines.md#project-yaml-format). 
+The size of the dummy dataset is determined by the `population_size` option [in the `project.yaml`](actions-pipelines.md#project-yaml-format).
 
 Running the action with `opensafely run generate_study_population` will create the file `output/input.csv`.
 

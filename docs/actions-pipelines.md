@@ -1,28 +1,11 @@
 
 This section covers how to develop, run, and test your code to ensure it will work end-to-end within the secure framework.
 
-## General code-writing guidance
 
-Generally-speaking, you can write whatever code you like as long as it will run successfully on server, and it is possible to [test this locally](pipelines.md#running-your-code-locally).
-However, note the following restrictions and guidance:
-
-* **Write analyses in Python, R, or Stata.**
-You can can use more than one language in a single project if necessary.  You can find more information about the available libraries [here](pipelines.md#execution-environments).
-* **Do not write code that requires an internet connection to run.**
-Any research objects (datasets, libraries, etc) that are retrieved via the internet should be imported to the repo locally first.
-If this is not possible (for instance if the object size is too large to be transferred via GitHub) then get in touch.
-* **Avoid code that consumes a lot of time or memory.** The server is not an infinite resource. We can advise on code optimisation if run-times become problematic.  A good strategy is to split your processing into separate project pipeline actions; the job runner can then choose to run them in parallel if sufficient resources are available.
-* **Write code that runs across different platforms.**
-Since code will be run both locally and within a Linux-based Docker environment. For example use forward-slashes `/` for directories.
-* **Structure your code into discrete chunks, both within scripts, and by splitting into different pipeline actions.**
-This helps with:
-	* readability
-	* bug-finding
-	* parallelisation via the project pipeline
 
 ## Project pipelines
 
-The [cohortextractor](cohortextractor.md) section describes how to write commands to generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
+The [cohortextractor](actions-cohortextractor.md) section describes how to make an action which generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
 However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the Project Pipeline.
@@ -39,7 +22,7 @@ Arranging your code like this also has several other advantages:
 
 ### `project.yaml` format
 
-The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory. 
+The project pipeline is defined in a single file, `project.yaml`, which lives in the repository's root directory.
 It is written using a configuration format called [YAML](https://yaml.org/), which uses indentation to indicate groupings of related variables.
 
 A simple example of a `project.yaml` is as follows:
@@ -82,7 +65,7 @@ In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
 * Each action must include a `run` key which includes an officially-supported command and a version (`latest` will always select the most recent version, but following initial development you should specify the version to ensure reproducibility).
-	* The `cohortextractor` command has the same options as described in the [cohortextractor section](cohortextractor.md).
+	* The `cohortextractor` command has the same options as described in the [cohortextractor section](actions-cohortextractor.md).
 	* The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
 	* `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
@@ -100,33 +83,6 @@ When writing and running your pipeline, note that:
 * Each action is run in its own isolated environment in a temporary working directory. This means that all the necessary libraries and data must be imported within the script for each action &mdash; For R users, this essentially means that the R is restarted for each action.
 
 * If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs.
-
-
-## Execution environments
-
-OpenSAFELY currently supports Stata, Python, and R for statistical analysis.
-
-For security reasons, available libraries are restricted to those provided by the framework, though you can [request additions](requests-packages.md).
-
-The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries. 
-These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would like to help, get in touch!
-
-### Stata
-
-We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker Github repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
-
-As Stata is a commercial product, a license key is needed to use it. If you are
-a member of the opensafely Github organisation, then the tooling will
-automatically use the OpenSAFELY stata license. If not, get in touch if you
-need to apply your own license and we can help.
-
-### Python
-
-The docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/requirements.txt).
-
-### R
-
-The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely-core/r-docker/blob/master/packages.csv). 
 
 
 ## Running your code locally
@@ -150,7 +106,7 @@ To run the first action in the example above, using dummy data, you can use:
 opensafely run generate_study_population
 ```
 
-This will generate the `input.csv` file as explained in the [cohortextractor](cohortextractor.md) section.
+This will generate the `input.csv` file as explained in the [cohortextractor](actions-cohortextractor.md) section.
 
 To run the second action you can use:
 
@@ -160,7 +116,7 @@ opensafely run run_model
 
 It will create the two files as specified in the `analysis/model.do` script.
 
-To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short. 
+To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short.
 This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
@@ -169,7 +125,7 @@ To run all actions, you can use a special `run_all` action which is created for 
 opensafely run run_all
 ```
 
-Each time an action is run, logging information about your run will be put into the  `metadata/` folder. 
+Each time an action is run, logging information about your run will be put into the  `metadata/` folder.
 If any of your actions fail, you may find clues here as to why.
 
 
@@ -200,47 +156,13 @@ You can re-run these tests by clicking the `re-run jobs` button.
 
 ## Running your code on the server
 
-To run code for real in the production environment, use the [https://jobs.opensafely.org](https://jobs.opensafely.org) site.
-Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ that have been run on the server.
-To submit jobs (i.e., to run actions), the general process is as follows:
+To run code for real in the production environment, use the [job server website](job-server.md).
 
-*  **Log in** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation).
-* **Create a workspace** (or select an existing workspace):
-	* click the `Add a New WorkSpace` button
-	* choose a name, for example the name of the repo
-	* select a database to run against (either dummy data, real data, or a small sample of the real data)
-	* select the repo and branch that you want to run actions with
-	* click `Submit`.
-*  **Select actions** to run:
-	* select the actions you want to run by clicking the `Run` buttons
-	* if any of these actions have dependencies then they will also be run, unless their outputs already exist
-	* dependencies can be viewed by clicking the `Needs` button
-	* you can force dependencies to be run by clicking `Force run dependencies`, even if those actions have already been run
-	* when you're ready, click `Submit`.
+## Accessing outputs
 
-The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
-You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`.
+After your project has been executed via the [job server](job-server.md), its outputs will be stored on a secure server.
 
-<details markdown="1">
-<summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
-
-What happens:
-
-1. A new, empty temporary directory for the job is created
-2. Copy in all files on the selected branch
-3. The job is run
-4. All the files matching the specified output patterns are copied into the local repo
-5. The log files for the job are saved into the `metadata/` directory
-6. The temporary directory is deleted
-</details>
-
-The job will either succeed or fail. 
-In either case, the output and log files are only visible in the secure environment to avoid disclosure of potentially sensitive information.
-
-
-### Accessing the outputs
-
-Only users with access to Level 4 can view output files that are labelled as moderately sensitive and the automatically created log files of the run.
+Users with permission to access to Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 
 For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](releasing-files.md) and released via GitHub if they are deemed non-disclosive.
 

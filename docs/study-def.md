@@ -437,7 +437,7 @@ input_copd.csv
 input_asthma.csv
 ```
 
-You should reflect this by creating two cohortextractor actions in the [`project.yaml`](pipelines.md), one for each study definition:
+You should reflect this by creating two cohortextractor actions in the [`project.yaml`](actions-pipelines.md), one for each study definition:
 
 ```yaml
 version: "3.0"

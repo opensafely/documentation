@@ -29,7 +29,7 @@ To use OpenSAFELY, users must know, or be willing to learn, the following progra
 
 - **Stata, R or Python**
   OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis.
-  For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](pipelines/#execution-environments) for more information.
+  For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](actions-pipelines/#execution-environments) for more information.
 - **Git**
 The workflow is strongly integrated into Git/GitHub.
 As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches.
@@ -46,7 +46,7 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
   Behind the scenes, SQL is the language that is used to extract data from the server.
   Some knowledge of SQL may be useful if you want to understand in more detail how the raw patient-level data held in the secure environment is converted into analysis-ready datasets.
 - **Docker**
-  We use Docker containers to simulate the production environment on your machine, so you can [test code locally](pipelines.md).
+  We use Docker containers to simulate the production environment on your machine, so you can [test code locally](actions-pipelines.md).
 
 See our [installation](install-intro.md) pages for complete installation instructions.
 

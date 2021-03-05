@@ -7,7 +7,7 @@ It creates "containers" that are guaranteed to be identical on any system that c
 OpenSAFELY uses Docker to run your code in a reproducible, safe manner. 
 This is most helpful for checking that you will be able to successfully run your code on the OpenSAFELY server on real data.
 If you only run your code locally using your own installation of R, say, then you won't know if the version of R (and the packages) installed on the server will run your code without errors or unexpected behaviours.
-See the [Testing Your Code section](pipelines.md) for more details on how to test your code in practice.
+See the [Testing Your Code section](actions-pipelines.md) for more details on how to test your code in practice.
 
 Unfortunately, Docker is happiest on Linux; on Windows and Mac OSX, installation can be a chore. 
 These notes should help.

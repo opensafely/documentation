@@ -1,6 +1,6 @@
 The main tool for using the OpenSAFELY platform locally is the `opensafely` Python module, which is run via the command-line. 
 
-It's main function is to run data extraction and analysis scripts that are specified in the [project pipeline](pipelines.md), in a way that mimics the production environment where real data is accessed. 
+It's main function is to run data extraction and analysis scripts that are specified in the [project pipeline](actions-pipelines.md), in a way that mimics the production environment where real data is accessed. 
 
 It also contains other functions relating to the OpenSAFELY workflow, such as updating codelists from [codelists.opensafely.org](https://codelists.opensafely.org).
 
@@ -45,7 +45,7 @@ More information on how to use the `opensafely` module is available in specific 
 ### `run`
 
 The most common command you'll run. 
-This runs actions defined in the [`project.yaml` file](pipelines.md) and is the main way of testing your code. 
+This runs actions defined in the [`project.yaml` file](actions-pipelines.md) and is the main way of testing your code. 
 
 For example,
 
