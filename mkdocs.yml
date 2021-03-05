@@ -14,6 +14,10 @@ nav:
         - Docker: install-docker.md
         - OpenSAFELY CLI: opensafely-cli.md
         - macOS: install-macos.md
+
+    - How-to guides:
+        - Inclusion/exclusion flow charts: study-def-flowcharts.md
+        - Releasing files from the server: releasing-files.md
     - Reference:
         - Github repository layout: repositories.md
         - Study definitions:
@@ -41,17 +45,13 @@ nav:
             - Intensive care admissions (covid-19 only): dataset-icnarc.md
             - In-hospital deaths (covid-19 only): dataset-cpns.md
             - Registered deaths: dataset-onsdeaths.md
-    - How-to guides:
-        - Inclusion/exclusion flow charts: study-def-flowcharts.md
-        - Releasing files from the server: releasing-files.md
-        - Good Practice:
-            - Good practice: good-practice-intro.md
-            - The Datalab Open Manifesto: open-data-manifesto.md
-            - Developing a protocol: protocol.md
-            - Using Git effectively: git-workflow.md
-            - Code reviews: code-reviews.md
-
-        - Updating the Documentation: requests-documentation.md
+    - Good Practice:
+        - Good practice: good-practice-intro.md
+        - The Datalab Open Manifesto: open-data-manifesto.md
+        - Developing a protocol: protocol.md
+        - Using Git effectively: git-workflow.md
+        - Code reviews: code-reviews.md
+    - Updating the Documentation: requests-documentation.md
     - Support:
         - Overview: requests-intro.md
         - Requesting new libraries: requests-packages.md
