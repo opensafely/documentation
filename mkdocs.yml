@@ -60,6 +60,9 @@ nav:
 
 theme: material
 
+extra_css:
+    - css/youtube.css
+
 markdown_extensions:
     - pymdownx.highlight
     - pymdownx.superfences
