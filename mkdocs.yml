@@ -37,6 +37,7 @@ nav:
         - Job server: job-server.md
         - Data sources:
             - Overview: dataset-intro.md
+            - How records are linked: dataset-linkage.md
             - Systmone primary care: dataset-systmone.md
             - EMIS primary care: dataset-emis.md
             - Covid-19 test results: dataset-sgsscovid.md
