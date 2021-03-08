@@ -12,14 +12,14 @@ both quality and speed in programming. Code reviews are standard practice within
 Github has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
 that you use this tool. Github has some [documentation on Pull Requests and Code Reviews](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) which we recommend for background reading.
 
-![image](https://user-images.githubusercontent.com/25401512/109499428-cdb2f680-7a8c-11eb-9d77-4e53f7f1c57c.png)
+![image](./images/code-review-main.png)
 
 In this screenshot, the user is making a new Pull Request. In the top right-hand corner (marked by the 
 red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review. 
 Once you have tagged them and made the Pull Request, the person will receive a notification to their 
 email, and it will also come up in the Pull Request section of their Github main screen. 
 
-![image](https://user-images.githubusercontent.com/25401512/109499512-e91e0180-7a8c-11eb-8f7a-5024f7753366.png)
+![image](./images/pr-desc.png)
 
 It is strongly encouraged to add some information to 
 your request to aid the reviewer. 
@@ -48,7 +48,7 @@ will help your reviewer do a better job quicker.
 - Allow sufficient time for the review
 
 #### Examples of good commit messages
-![image](https://user-images.githubusercontent.com/25401512/109499651-166aaf80-7a8d-11eb-86de-f4a0b549fc90.png)
+![image](./images/good-pr-pic.png)
 
 ## How can I be a good reviewer?
 Some best practices gathered from current users of OpenSAFELY are described below: 
@@ -58,7 +58,7 @@ Some best practices gathered from current users of OpenSAFELY are described belo
 - It can be helpful to highlight the levels of code review comments. For example, 
 if something is nice-to-have-but-not-important, you can prefix it with `Nit:`. For example, 
 `Nit: I think this would be cleared if you didn't use an underscore in this variable name`
-- Being clear about what exactly you have reviewed or how thorough the review was—for example, being clear if you read through the code but did not run it (and therefore may miss running errors in implementation). Unit tests should catch that the code is runnable, but will not necessarily check it is correct.  
+- Being clear about what exactly you have reviewed or how thorough the review was - for example, being clear if you read through the code but did not run it (and therefore may miss running errors in implementation). Unit tests should catch that the code is runnable, but will not necessarily check it is correct.  
 - Answer specific questions in the review request.
 - Avoiding jabs on coding style. 
 - Being clear if you do not have time to do a thorough review 
