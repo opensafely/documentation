@@ -129,6 +129,13 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 &nbsp;
 
 
+## SUS
+These variable are derived from the Secondary Uses Services (SUS) data.
+
+::: cohortextractor.patients.with_ethnicity_from_sus
+&nbsp;
+
+
 ## Utility functions
 
 These variables create new variable from existing variables. They do not extract any data directly.
