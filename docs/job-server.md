@@ -8,7 +8,7 @@ To submit jobs (i.e., to run actions), the general process is as follows:
 * **Create a workspace** (or select an existing workspace):
 	* click the `Add a New WorkSpace` button
 	* choose a name, for example the name of the repo
-	* select a database to run against (either the full database, or a ~20% sample of it)
+	* select a database to run against: either the full database, or a ~20% sample of it (note - the sample is not intended to be representative/random - sampling is based on an arbitrary selection of practices)
 	* select the repo and branch that you want to run actions with
 	* click `Submit`.
 *  **Select actions** to run:
