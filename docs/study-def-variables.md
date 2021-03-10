@@ -118,6 +118,7 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 
 * [APCS](dataset-apc.md)
 * [ECDS](dataset-ecds.md)
+* OPA
 
 ::: cohortextractor.patients.admitted_to_hospital
 &nbsp;
