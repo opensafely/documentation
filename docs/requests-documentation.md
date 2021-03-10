@@ -9,6 +9,9 @@ please do! You can either:
 Do not commit changes directly to the master branch.
 
 If you want to make changes to the study definition variables, edit the docstrings in the [`patients.py` file in the `cohort-extractor` repository](https://github.com/opensafely-core/cohort-extractor/blob/master/cohortextractor/patients.py).
+
+!!! note "Variable docstrings follow the [Google style guide](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods)."
+
 If you don't have write access, you can fork the repo, make a change, and submit a pull request.
 Editing directly in GitHub will take you through these steps automatically.
 At least one commit in the pull request should be named using the prefix `fix: ` or `feature: `. For example `fix: typo in age_as_of docstring`. 
