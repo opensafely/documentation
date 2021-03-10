@@ -68,22 +68,6 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.household_as_of
 &nbsp;
 
-## APCS
-These variables are derived from Admitted Patient Care Statistics (APCS) data on in-patient hospital admissions across England.
-For more information, see the [APCS data section](dataset-apc.md).
-&nbsp;
-
-::: cohortextractor.patients.admitted_to_hospital
-&nbsp;
-
-## ECDS
-These variables are derived from Emergency Care Data Set (ECDS) data on emergency department attendances across England.
-For more information, see the [ECDS data section](dataset-ecds.md).
-&nbsp;
-
-::: cohortextractor.patients.attended_emergency_care
-&nbsp;
-
 ## ICNARC
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
 For more information, see the [ICNARC data section](dataset-icnarc.md).
@@ -130,7 +114,16 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 
 
 ## SUS
-These variable are derived from the Secondary Uses Services (SUS) data.
+These variables are derived from the Secondary Uses Services (SUS) data, and their underlying datasets:
+
+* [APCS](dataset-apc.md)
+* [ECDS](dataset-ecds.md)
+
+::: cohortextractor.patients.admitted_to_hospital
+&nbsp;
+
+::: cohortextractor.patients.attended_emergency_care
+&nbsp;
 
 ::: cohortextractor.patients.with_ethnicity_from_sus
 &nbsp;
