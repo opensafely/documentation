@@ -27,3 +27,5 @@
 *[Level 3]: intermediate data, required for running a study, which may contain identifiable information, and which should never be considered for publication; usually a CSV produced from a study definition. Most OpenSAFELY users will not have (or need) permission to see this data directly
 *[Level 4]: tables, figures, and other structured files produced as a result of the analysis of Level 3 data, for example summary statistics and statistical models. OpenSAFELY users with the appropriate permission can view this data, and publish it to the internet if they consider it safe to do so
 *[TPP]: The Phoenix Partnership, the company behind the SystmOne EHR
+*[APCS]: Admitted Patient Care Statistics - the national data set for in-patient hospital admissions across England.
+*[OPA]: Outpatient Attendances is the national data set for hospital outpatient appointments. It is part of HES
