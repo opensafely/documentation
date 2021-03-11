@@ -51,11 +51,13 @@ few things. Most important is the `opensafely` tool; to install this, you must
 2. When you've done, to verify your installation, open Anaconda Prompt by
    clicking Start, search, or selecting Anaconda Prompt from the menu. ![Finding
    Anaconda Prompt on Windows](./images/win-anaconda-prompt.png)
-3. Install the OpenSAFELY command line tool. Type `pip install opensafely`, and
-   press ++enter++
-4. You should see some output. To check this has installed successfully, type
+3. To install the OpenSAFELY command line tool, you first need to install a tool
+   called `pip`.  Do this by typing `conda install pip` and pressing ++enter++.
+4. Now you can install the comment line tool, by typing `pip install opensafely`, and
+   pressing ++enter++
+5. You should see some output. To check this has installed successfully, type
    `opensafely --version` and press ++enter++.
-5. This should show you the currently-installed version of `opensafely`.
+6. This should show you the currently-installed version of `opensafely`.
 
 ### Install Docker
 
@@ -72,7 +74,7 @@ few things. Most important is the `opensafely` tool; to install this, you must
    Home](https://docs.docker.com/docker-for-windows/install-windows-home/).
 2. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
    so, an animation runs in the notification area:<br>
-   ![image](https://user-images.githubusercontent.com/211271/72052991-14a8c000-32be-11ea-948f-575a3c84bc3b.png)
+   ![image](images/docker-windows-starting.png)
 3. When Docker has finished starting up, share your hard drive with Docker:
    click system tray docker icon; select "settings"; select "shared drives".
 4. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
@@ -221,7 +223,8 @@ When executed, a study definition generates a CSV of patient data.
 A real analysis will have several further steps after this. Each step can be
 written in [any of the programming languages supported in
 OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
-histogram of ages, using four lines of Python.
+histogram of ages, using four lines of Python ([other programming
+languages](actions-scripts.md) are supported).
 
 1. Using Visual Studio Code, create a new file (**File > New File**), and add
    the following:
@@ -282,18 +285,18 @@ with tests to verify the project is runnable, each time you push.
    checkbox at the top of the list ticked.<br>
   ![image](images/commit-all.png)
 2. At the bottom of the list of changes, in the **Summary** field, type a short,
-   meaningful *commit message*. Optionally, you can add more information about
-   the change in the **Description** field. Press the blue button to make the
-   commit.<br>
+   meaningful description of the changes (this is called the *commit message*).
+   Optionally, you can add more information about the change in the
+   **Description** field. Press the blue button to make the commit.<br>
   ![image](images/commit-message.png)
 3. Click **Push origin** to push your local changes to the remote repository on
    Github ![image](images/push-to-github.png)
 4. In a web browser, visit your repository in Github. Click on the **Actions**
    tab ![image](images/github-actions-tab.png)
-5. You'll see a *Workflow* running with the title of your last commit. This
-   workflow verifies that the command `opensafely run run_all` can complete
-   successfully. If it's yellow, it's still running. If it's red, it has failed.
-   If it's green, it has succeeded. You want it to be green!
+5. You'll see a *Workflow* running with the *commit message* of your last
+   commit. The workflow verifies that the command `opensafely run run_all` can
+   run successfully. If it's yellow, it's still running. If it's red, it
+   has failed. If it's green, it has succeeded. You want it to be green!
    ![image](images/github-running-workflow.png)
 
 ## 5. Next steps

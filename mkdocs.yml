@@ -6,18 +6,18 @@ nav:
       - Security: security-levels.md
       - Analysis workflow: workflow.md
   - Getting Started guide: getting-started.md
-  - Installation guides:
-      - Overview: install-intro.md
-      - GitHub and Git: install-github-and-git.md
-      - Python: install-python.md
-      - Docker: install-docker.md
-      - OpenSAFELY CLI: opensafely-cli.md
-      - macOS: install-macos.md
 
   - How-to guides:
       - Inclusion/exclusion flow charts: study-def-flowcharts.md
       - Releasing files from the server: releasing-files.md
   - Reference:
+      - Detailed installation guides:
+          - Overview: install-intro.md
+          - GitHub and Git: install-github-and-git.md
+          - Python: install-python.md
+          - Docker: install-docker.md
+          - OpenSAFELY CLI: opensafely-cli.md
+          - macOS: install-macos.md
       - Github repository layout: repositories.md
       - Study definitions:
           - Overview: study-def.md
