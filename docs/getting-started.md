@@ -53,7 +53,7 @@ few things. Most important is the `opensafely` tool; to install this, you must
    Anaconda Prompt on Windows](./images/win-anaconda-prompt.png)
 3. To install the OpenSAFELY command line tool, you first need to install a tool
    called `pip`.  Do this by typing `conda install pip` and pressing ++enter++.
-4. Now you can install the comment line tool, by typing `pip install opensafely`, and
+4. Now you can install the command line tool, by typing `pip install opensafely`, and
    pressing ++enter++
 5. You should see some output. To check this has installed successfully, type
    `opensafely --version` and press ++enter++.
