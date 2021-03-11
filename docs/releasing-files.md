@@ -9,7 +9,7 @@ The study author should do everything they can to make this easy; for example, c
 
 ## Releasing output files from analysis runs
 
-The output and log files that are created by [running code against the live database](actions-pipelines.md#running-your-code-on-the-server) will [appear in the secure environment](pipelines.md#accessing-the-outputs) in a workspace-specific folder.
+The output and log files that are created by [running code against the live database](actions-pipelines.md#running-your-code-on-the-server) will [appear in the secure environment](actions-pipelines.md#accessing-the-outputs) in a workspace-specific folder.
 
 The reviewer releases outputs back to the original repo using git. 
 To make this process easier and to reduce the likelihood of sensitive information being accidentally released, there is a script-based procedure to follow. In essence, the process is: create a git repo in the folder where the outputs were created; check and redact them as necessary; commit the safe files to the repo; run the `osrelease` command and follow the instructions. This last step will create a new branch containing the released outputs which can then be merged onto another branch in the repo via a pull request.
