@@ -154,7 +154,8 @@ generate_study_population: Cleaning up container and volume
 The final line tells you a file of (random) patient data has been created at
 `output/input.csv`, and that it would normally be considered highly sensitive
 data. What you see here reproduces exactly what would happen on a real, secure
-server, but with *dummy data* which contains no real patient information.
+server, but with *dummy data* which contains no real patient information. 
+Remember this is a blank study, read on below to generate *dummy data* values.
 1. If you run `opensafely run run_all` for a second time, you'll see the command
    does nothing (because there's already a file at `output/input.csv`):
 ```shell-session
