@@ -242,7 +242,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 2. Save this file as `analysis/report.py`
 3. In Visual Studio Code, open `project.yaml`. This file describes how each step
    in your analysis should be run. It's in a format called YAML: the way it's
-   indented matters!
+   indented matters, so be careful to copy and paste the following carefully.
 4. Add a `describe` action to the file, so the entire file looks like this:
 ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
 version: "3.0"
