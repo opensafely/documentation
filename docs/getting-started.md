@@ -328,12 +328,7 @@ detail on the subjects covered in this tutorial. For example:
   test your repository against dummy data.
 * You'll be using `git` and Github a lot, and it's a critical but complex part
   of the OpenSAFELY ecosystem. If you're not familiar with these concepts, it's
-  a good idea to read some [of the official Github
-  guides](https://guides.github.com/), starting with the [Hello World
-  tutorial](https://guides.github.com/activities/hello-world/).  If you prefer
-  learning via video, there is also a [Github Youtube
-  Channel](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw).
-
+  a good idea to read our [git workflow page](git-workflow.md) and its linked content.
 
 
 
