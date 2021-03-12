@@ -95,7 +95,7 @@ re-opened if revisions are required.
 ## Import the codelist for use in your study definition
 
 Once the codelist is in [codelists.opensafely.org](https://codelists.opensafely.org), you can retrieve it for use in 
-your research repo. Follow [these instructions](https://github.com/opensafely/documentation/blob/master/Onboarding%20analysts.md#add-the-relevant-codelist-and-commit) if you're not sure how to do this.
+your research repo. Follow the [adding codelists to project instructions](codelist-project.md) if you're not sure how to do this.
 
 ## Codelist contributorship
 
