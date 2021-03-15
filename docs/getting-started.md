@@ -1,9 +1,9 @@
 
 
 This tutorial will walk you through the minimum steps needed to run an
-OpenSAFELY-compliant study against "dummy" (random) patient data.  We ask all
-potential collaborators to successfully complete this tutorial, before
-applying to run their project against real data.
+OpenSAFELY-compliant study against "dummy" (randomly-generated) patient data.
+We ask all potential collaborators to successfully complete this tutorial,
+before applying to run their project against real data.
 
 This is a first draft of the tutorial, and may have errors or omissions.
 Please don't be afraid to ask questions in our [Q&A
@@ -134,7 +134,7 @@ Now you'll want to get a copy of that code on your computer, in order to start d
    C:/Users/me/my-git-repos/hello-world` and press ++enter++.
 3. Now you're ready to run your first study. Type `opensafely run run_all` and
    press ++enter++
-4. The first time you run this command, it will take a while to download
+4. The first time you run this command, it will take a while to download the
    required software. Eventually, you should see output that ends something like
    this:
 ```shell-session
@@ -151,12 +151,12 @@ generate_study_population: Cleaning up container and volume
    outputs:
      output/input.csv  - highly_sensitive
 ```
-The final line tells you a file of (random) patient data has been created at
-`output/input.csv`, and that it would normally be considered highly sensitive
+The final line tells you a file of (randomly-generated) patient data has been created at
+`output/input.csv`, and that it should be considered highly sensitive
 data. What you see here reproduces exactly what would happen on a real, secure
 server, but with *dummy data* which contains no real patient information. 
-Because we haven't modified the template blank study yet, this 
-file is empty - we'll generate some dummy data values in the next section.
+Because we haven't modified the template blank study yet, this file only contains
+random patient IDs &mdash; we'll generate more dummy data in the next section.
 1. If you run `opensafely run run_all` for a second time, you'll see the command
    does nothing (because there's already a file at `output/input.csv`):
 ```shell-session
@@ -167,8 +167,8 @@ $ opensafely run run_all
 
 ## 3. Make changes to your study
 
-You've successfully run a study, but at the moment, it just creates an output
-file containing a random list of patient ids. Now we'll add some code to do
+You've successfully run the code in your study, but at the moment it just creates an output
+file containing a random list of patient IDs. Now we'll add some code to do
 something slightly more interesting.
 
 In order to write code in the OpenSAFELY framework, a code editor will make your
@@ -180,8 +180,8 @@ install [Visual Studio Code](https://code.visualstudio.com/download).
 1. Start Visual Studio Code, and use the menu to open your research repository
    (**File > Open Folder...**)
 2. In the "Explorer" on the left hand side, find and click on the file at
-   `analysis/study_definition.py`. This file defines the attributes of the
-   population that you'd like to study.
+   `analysis/study_definition.py`. This file specifies the population that 
+   you'd like to study (dataset rows) and what you need to know about them (dataset columns).
 3. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="14 15 16 17 18 19 20"
 from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv
@@ -207,9 +207,9 @@ study = StudyDefinition(
 )
 
 ```
-Line 10 means, "*I'm interested in all patients who have never changed practice,
+Line 10 means "*I'm interested in all patients who have never changed practice,
 between these two dates*"; lines 14-15 "*Give me a column of data corresponding
-to the age of each patient on the given date*"; and lines 16-18, "*I expect
+to the age of each patient on the given date*"; and lines 16-18 "*I expect
 every patient to have a value, and the distribution of ages to match that of the
 real UK population*"
 1. In an Anaconda Prompt, run `opensafely run run_all --force`. A new file will
@@ -225,8 +225,7 @@ When executed, a study definition generates a CSV of patient data.
 A real analysis will have several further steps after this. Each step can be
 written in [any of the programming languages supported in
 OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
-histogram of ages, using four lines of Python ([other programming
-languages](actions-scripts.md) are supported).
+histogram of ages, using four lines of Python.
 
 1. Using Visual Studio Code, create a new file (**File > New File**), and add
    the following:
@@ -277,14 +276,14 @@ file, which will be found at `output/descriptive.png`.
 
 ## 4. Push your study to github, and watch the automated tests pass
 
-Now your study does something interesting, you should "*push*" it to Github,
+Now that your study does something interesting, you should "*push*" it to Github,
 where it can be viewed by others. Your repository is automatically configured
 with tests to verify the project is runnable, each time you push.
 
 1. Open Github Desktop to view your repository. When you make changes to files in
    your text editor and save them locally, you also see the changes in
-   GitHub Desktop. To add all changes in all files to a single "*commit*", keep the
-   checkbox at the top of the list ticked.<br>
+   GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
+   checkbox at the top of the list.<br>
   ![image](images/commit-all.png)
 2. At the bottom of the list of changes, in the **Summary** field, type a short,
    meaningful description of the changes (this is called the *commit message*).
