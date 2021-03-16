@@ -5,7 +5,7 @@ Installing packages via commands that pull the package from the internet (e.g `i
 
 The OpenSAFELY R Image ships with a given set of packages baked in. You can view all installed packages and their versions here:
 
-https://github.com/opensafely-core/r-docker/blob/master/packages.csv
+[https://github.com/opensafely-core/r-docker/blob/master/packages.csv](https://github.com/opensafely-core/r-docker/blob/master/packages.csv)
 
 If the package you need is not available, you can request it as follows:
 
