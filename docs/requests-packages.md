@@ -3,7 +3,7 @@ Installing packages via commands that pull the package from the internet (e.g `i
 
 ## Requesting additional R packages
 
-The OpenSAFELY R Image ships with a given set of packages baked in. You can view the packages and their verions here:
+The OpenSAFELY R Image ships with a given set of packages baked in. You can view all installed packages and their versions here:
 
 https://github.com/opensafely-core/r-docker/blob/master/packages.csv
 
