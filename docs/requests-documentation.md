@@ -3,12 +3,12 @@ If you are an OpenSAFELY user and want to contribute corrections, clarifications
 please do! You can either:
 
 * Suggest improvements in an [issue](https://github.com/opensafely/documentation/issues).
-* Clone the repo locally, make edits on a new branch, then create a pull request for it.
-* [Edit directly on Github](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository), making sure to "Create a new branch for this commit and start a pull request".
+* Clone [the repo](https://github.com/opensafely/documentation) locally, make edits on a new branch, then create a pull request for it.
+* [Edit directly on Github](https://github.com/opensafely/documentation/tree/master/docs) (instructions [here](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository)), making sure to "Create a new branch for this commit and start a pull request".
 
 Do not commit changes directly to the master branch.
 
-If you want to make changes to the study definition variables, edit the docstrings in the [`patients.py` file in the `cohort-extractor` repository](https://github.com/opensafely-core/cohort-extractor/blob/master/cohortextractor/patients.py).
+If you want to make changes to the **study definition variables**, edit the docstrings in the [`patients.py` file in the `cohort-extractor` repository](https://github.com/opensafely-core/cohort-extractor/blob/master/cohortextractor/patients.py).
 
 !!! note "Variable docstrings follow the [Google style guide](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods)."
 
