@@ -126,8 +126,11 @@ How contributions to codelists are acknowledged -- to be agreed.
 
 ## <a name="medvid"></a>Build a simple medication codelist
 
+This is a short video shoing how to build a pseudoBNF medication codelist. For OpenSAFELY studies you can convert this
+to NHS dictionary of medicines and devices codelist which we breifly mention at the end of the video. More on this soon!
+
 <div class="video-wrapper">
-  <iframe width="1280" height="720" src="xx" frameborder="0" allowfullscreen></iframe>
+  <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
