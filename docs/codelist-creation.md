@@ -7,7 +7,7 @@ The general workflow for creating codelists is as follows:
 1. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 1. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
 previous research papers
-1. When logged into [Codelist Builder](https://codelists.opensafely.org/accounts/login/)  click "my codelists" and then "create new codelist"
+1. When logged into [Codelist Builder](https://codelists.opensafely.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
 1. Add/remove terms to your codelists to end up with a list. 
 1. Save the list as a draft and share the link to your the Github issue. 
 1. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
@@ -123,6 +123,13 @@ How contributions to codelists are acknowledged -- to be agreed.
 * Go to an existing Codelist page.
 * Click Create new version
 * If you want to update the existing version, click Update version instead.
+
+## <a name="medvid"></a>Build a simple medication codelist
+
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="xx" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 
 ---8<-- 'includes/glossary.md'
