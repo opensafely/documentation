@@ -36,15 +36,15 @@ nav:
       - Job server: job-server.md
       - Data sources:
           - Overview: dataset-intro.md
-          - How records are linked: dataset-linkage.md
           - Systmone primary care: dataset-systmone.md
           - EMIS primary care: dataset-emis.md
-          - Covid-19 test results: dataset-sgsscovid.md
-          - Emergency attendances: dataset-ecds.md
-          - Hospital admissions: dataset-apc.md
-          - Intensive care admissions (covid-19 only): dataset-icnarc.md
-          - In-hospital deaths (covid-19 only): dataset-cpns.md
-          - Registered deaths: dataset-onsdeaths.md
+          - Externally linked data:
+              - Covid-19 test results: dataset-sgsscovid.md
+              - Emergency attendances: dataset-ecds.md
+              - Hospital admissions: dataset-apc.md
+              - Intensive care admissions (covid-19 only): dataset-icnarc.md
+              - In-hospital deaths (covid-19 only): dataset-cpns.md
+              - Registered deaths: dataset-onsdeaths.md
   - Good Practice:
       - Good practice: good-practice-intro.md
       - The Datalab Open Manifesto: open-data-manifesto.md
