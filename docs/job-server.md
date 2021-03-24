@@ -2,14 +2,14 @@
 
 To run code for real in the production environment, use the [https://jobs.opensafely.org](https://jobs.opensafely.org) site.
 Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ that have been run on the server.
-To submit jobs (i.e., to run actions), the general process is as follows:
+To submit job-requests (i.e., to run one or more actions), the general process is as follows:
 
 *  **Log in** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation).
 * **Create a workspace** (or select an existing workspace):
 	* click the `Add a New WorkSpace` button
 	* choose a name, for example the name of the repo
-	* select a database to run against: either the full database, or a ~20% sample of it (note - the sample is not intended to be representative/random - sampling is based on an arbitrary selection of practices)
-	* select the repo and branch that you want to run actions with
+	* select a database to run against: either the full database, or a ~20% sample of it (sampling is based on an arbitrary selection of practices and not guaranteed to be representative)
+	* select the repo and branch whose action you want to run
 	* click `Submit`.
 *  **Select actions** to run:
 	* select the actions you want to run by clicking the `Run` buttons
@@ -21,6 +21,8 @@ To submit jobs (i.e., to run actions), the general process is as follows:
 
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`. If you selected to receive notifications, you will also receive an email to notify you when each job completes.
+
+When you submit a job-request you are competing with other users for resources on the server. As such, jobs can sometimes take a while to start even if their dependencies have successfully completed.
 
 <details markdown="1">
 <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
@@ -35,5 +37,5 @@ What happens:
 6. The temporary directory is deleted
 </details>
 
-The job will either succeed or fail.
+Each job will either succeed or fail.
 In either case, the output and log files are only visible in the secure environment to avoid disclosure of potentially sensitive information.
