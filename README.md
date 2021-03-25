@@ -25,9 +25,11 @@ reference to them in [docs/study-def-variables.md](./docs/study-def-variables.md
 
 ## Deploying
 
-The site is served by Github Pages, and deployed continuously by [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages).
+The [docs site](https://docs.opensafely.org) is served by [readthedocs](https://readthedocs.org/), using a webhook to build the [latest version](https://readthedocs.org/projects/opensafely-documentation/versions/) from the `master` branch when it is updated. 
 
-### deployment from your local environment
+There are a [few redirects](https://readthedocs.org/dashboard/opensafely-documentation/redirects/) from old `stable` urls to current `latest` urls.
+
+### Github Pages deployment
 
 Previously, we would run mkdocs locally to compile the HTML, commit the output to a `gh-pages` branch and push to Github. This was all handled for us by running the command:
 
