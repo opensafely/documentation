@@ -1,4 +1,5 @@
 site_name: OpenSAFELY documentation
+repo_url: https://github.com/opensafely/documentation
 nav:
   - Introduction: index.md
   - How OpenSAFELY works:
