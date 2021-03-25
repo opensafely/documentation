@@ -15,13 +15,17 @@ precisely, though not always consistently, in their every day work. This means
 that to find all the patients with Type 1 diabetes, you may have to search for
 30 plus codes in the clinical record.
 
-## How did we deal with Codelists?
-
+## OpenCodelists
 We built a system for building, reviewing and maintaining codelists at
 [codelists.opensafely.org](https://codelists.opensafely.org/).
+We've made an introductory video to help explain OpenCodelists in more detail. Codelists 
+that are hosted on this website can be used directly in the Study Definition. This means 
+there is no need to download or alter these codelists in the study definition, and 
+they can be reused.
 
-Codelists that are hosted on this website can be used directly in the Study Definition. This means there is no need
-to download or alter these codelists in the study definition, and they can be reused.
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=ayRtpbcPFLA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Applying the principle of open working to making codelists
 

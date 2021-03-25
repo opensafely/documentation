@@ -7,7 +7,7 @@ The general workflow for creating codelists is as follows:
 1. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 1. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
 previous research papers
-1. When logged into [Codelist Builder](https://codelists.opensafely.org/accounts/login/)  click "my codelists" and then "create new codelist"
+1. When logged into [Codelist Builder](https://codelists.opensafely.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
 1. Add/remove terms to your codelists to end up with a list. 
 1. Save the list as a draft and share the link to your the Github issue. 
 1. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
@@ -45,7 +45,7 @@ The current coding systems available in opencodelists are listed below.
 | [Pseudo BNF](https://ebmdatalab.net/prescribing-data-bnf-codes/)  | `BNFCode`  |
 | CTV3 (Read v3)  | `CTV3Code`  |
 | CTV3 (Read v3) with TPP extensions  | `CTV3Code`  |
-| [Dictionary of Medicines and Devises (dm+d)](https://ebmdatalab.net/what-is-the-dmd-the-nhs-dictionary-of-medicines-and-devices/)  | `DMDCode`  |
+| [Dictionary of Medicines and Devices (dm+d)](https://ebmdatalab.net/what-is-the-dmd-the-nhs-dictionary-of-medicines-and-devices/)  | `DMDCode`  |
 | International Classification of Diseases 10 (ICD-10)  | `ICD10Code`  |
 | Read v2  | `Read2Code`  |
 | SNOMED CT  | `SNOMEDCode`  |
@@ -123,6 +123,16 @@ How contributions to codelists are acknowledged -- to be agreed.
 * Go to an existing Codelist page.
 * Click Create new version
 * If you want to update the existing version, click Update version instead.
+
+## <a name="medvid"></a>Build a simple medication codelist
+
+This is a short video shoing how to build a pseudoBNF medication codelist. For OpenSAFELY studies you can convert this
+to NHS dictionary of medicines and devices codelist which we breifly mention at the end of the video. More on this soon!
+
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 
 ---8<-- 'includes/glossary.md'
