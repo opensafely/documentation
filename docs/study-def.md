@@ -80,12 +80,12 @@ study = StudyDefinition(
 
 * `default_expectations=` is used to set default behaviour for the dummy data that is generated.
 In this case, we expect event dates to be between `1970-01-01` and today's date, uniformly distributed in that period, and to be recorded for 20% of patients (returning empty `""` values otherwise).
-See [Defining dummy data](#defining-dummy-data) for more details.
+See [Dummy data and expectations](study-def-expectations.md) for more details.
 * `index_date=` is used to set the index date against which all other dates can be defined.
-See [Defining time periods](#defining_time_periods) for more details on how the index date is used.
+See [Working with dates](study-def-dates.md) for more details on how the index date is used.
 * `population=` is where the population is defined.
 In this case, we want all patients available in the OpenSAFELY database and so we use the method `all()` to indicate this.
-See the [study population section]() for more details on how to select a specific subset of patients in the OpenSAFELY database.
+See the [study population section](#defining-study-populations) for more details on how to select a specific subset of patients in the OpenSAFELY database.
 
 The `default_expectations`, `index_date`, and `population` arguments are reserved names within `StudyDefinition()`.
 All other names are used to define the variables that will appear in the outputted dataset, using _variable extractor functions_ of the form `patients.function_name`.
@@ -97,132 +97,6 @@ All other variables are defined similarly.
 To see the full list of currently available extractor functions, see [Study definition variables reference](study-def-variables.md).
 
 
-
-## Codelists
-
-For more information about how to create and edit codelists on the [OpenSAFELY Codelists](https://codelists.opensafely.org) website, see [Codelists](codelist-intro.md).
-
-### Pulling Codelists into your Study Definition
-
-Many functions for defining variables take *codelists* as arguments.
-Codelists live as CSV files in the `codelists/` directory, and are loaded into variables like this:
-
-```py
-chronic_cardiac_disease_codes = codelist_from_csv(
-    "codelists/opensafely-chronic-cardiac-disease.csv", system="ctv3", column="CTV3ID"
-)
-```
-
-You should put code that creates codelist variables before your `StudyDefinition()`, so it can refer to them, and users know where to look.
-
-You can do this in `analysis/study_definition.py`, but we recommend that you put all your codelist definitions into a file called `codelists.py` and importing it in at the top of your file:
-
-```py
-from codelists import *
-```
-
-This keeps it cleaner and easier to read.
-
-### Combining codelists
-
-Codelists can be combined where appropriate.
-This has the advantage of keeping codeslists separate for some studies but easily combining them for others.
-
-
-Codelists can be combined using the `combine_codelist` function from `cohortextractor`, for example:
-
-```py
-from cohortextractor import combine_codelists
-
-all_cardiac_disease_codes = combine_codelists(
-    chronic_cardiac_disease_codes,
-    acute_cardiac_disease_codes
-)
-```
-
-
-
-## Defining time periods
-
-### Index Dates
-
-If you define an `index_date` on a study definition then everywhere that you might normally supply a date you can now supply a "date expression".
-
-Here is a simple example:
-
-```py
-study = StudyDefinition(
-    index_date = "2015-06-01",
-    population = patients.with_these_clinical_events(
-        copd_codes,
-        between = [
-            "first_day_of_year(index_date) - 2 years",
-            "last_day_of_year(index_date)",
-        ],
-    ),
-    age = patients.age_as_of("index_date"),
-)
-```
-
-This can make it easier to change the index date of a study by making sure it is only defined in once place.
-
-The simplest date expression is just `index_date`, which gets replaced by whatever the index date is set to.
-
-It's also possible to apply various functions to the index date.
-The available options (hopefully self-explanatory) are:
-
-```py
-"first_day_of_month(index_date)"
-"last_day_of_month(index_date)"
-"first_day_of_year(index_date)"
-"last_day_of_year(index_date)"
-```
-
-Intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
-The available units are `year(s)`, `month(s)` and `day(s)`.
-For example:
-
-```py
-"index_date + 90 days"
-"first_day_of_month(index_date) + 9 months"
-"index_date - 1 year"
-```
-
-Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
-An error will also be show if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
-
-### Dynamic dates
-
-Dates used in variable definitions can also be taken from date variables defined elsewhere in the study definition, rather than using a common fixed value. 
-For example, we may want to define a patient's age as at a thier first positive test result, rather than a fixed index date. In this case we first define positive test date as a variable in the study definition, then refer to this variable name in the age definition:
-
-```py
-study = StudyDefinition(
-    pos_test_date = patients.with_test_result_in_sgss(
-       pathogen="SARS-CoV-2",
-       test_result="positive",
-       find_first_match_in_period=True,
-       returning="date",
-       date_format="YYYY-MM-DD",
-    
-    age = patients.age_as_of("pos_test_date"),
-)
-```
-
-Here, the patient-specific date `pos_test_date` is defined as the first SARS-CoV-2 positive test result in SGSS, which will differ for each patient. 
-The age variable is now defined relative to this date, i.e. age is given at the time of the positive SARS-CoV-2 test. Note the need for the variable name to be passed as a string rather than unquoted.
-We can also use date expressions on these dates, for example `"pos_test_date - 1 year"`
-
-Wherever the inputted date is null, in this case when a patient doesn't have a positive test result, any variables that reference the date will take the [null value for their variable type](study-def.md#missing-values-and-unmatched-records) (0 for numeric variables; an empty string for character and date variables).
-
-### Time periods
-
-Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information.
-Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference](study-def-variables.md) for full documentation).
-You must use at most one.
-If no option is given then it will use all dates (including possibly future dates).
-
-As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, you can use the date expressions discussed above.
 
 
 ## Defining and extracting variables
@@ -269,78 +143,6 @@ sbp = patients.mean_recorded_value(
 This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients, at dates between the `index_date` and `"today"`'s date. The date of the most recent measurement is distributed uniformly between those dates.
 
 
-## Defining dummy data
-
-Every variable in a study definition must have a `return_expectations` argument defined (with the exception of the `population` variable).
-This defines the general shape or distribution of the variables in the dummy data used for developing the code.  It is currently relatively unsophisticated; each variable is generated independently of all others. This is sufficient for testing that it is possible to run your study from start to finish in most cases, but sometimes not. You can find (and contribute to!) discussions on improving the dummy data framework [here](https://github.com/opensafely/cohort-extractor/issues/221)
-
-### Specifying default distributions
-
-All variables use a default defined at the top of the study definition, with the `default_expectations` argument, as follows:
-
-```py
-study = StudyDefinition(
-    # Configure the expectations framework
-    default_expectations = {
-        "date": {"earliest": "1900-01-01", "latest": "today"},
-        "rate": "exponential_increase",
-		"incidence": 0.5
-    },
-    ...
-
-```
-
-In this case, we are saying that:
-
-* Events dates are expected to be distributed between 1900 and today, with exponentially-increasing frequenc, with events occurring for 50% of patients.
-* Values for binary variables are expected to be positive 50% of the time.
-* Values for categorical variables are expected to be present (i.e., non-missing) 50% of the time.
-* Values for numeric variables are expected to be present (i.e., non-missing) 50% of the time.
-
-### Specifying variable-specific distributions
-If the defaults need to be overridden, then use the `return_expectations` argument within the variable extractor function, for example as follows:
-
-```py
-    copd = patients.with_these_clinical_events(
-		copd_codes,
-		returning = "binary_flag",
-		find_first_match_in_period = True,
-		between = [index_date, "today"],
-		return_expectations = {"incidence": 0.2},
-    ),
-```
-This overrides the 50% default incidence for the binary variable `copd` to be 20% instead.
-
-
-### All options
-The following options are currently available for dummy data:
-
-**integers**
-
-* `{"int" : {"distribution": "normal", "mean": 25, "stddev": 5}, "incidence" : 0.5}`
-* `{"int" : {"distribution": "population_ages"}, "incidence" : 1}`
-
-**numeric**
-
-* `{"float" : {"distribution": "normal", "mean": 25, "stddev": 5}, "incidence" : 0.75}`
-
-**binary**
-
-* `{"incidence": 0.33}`
-
-**categorical**
-
-* `{"category": {"ratios": {"cat1": 0.1, "cat2": 0.2, "cat3": 0.7}}, "incidence" : 1}`
-
-**date**
-
-*	`{"date": {"earliest": "1900-01-01", "latest": "today"}, "rate" : "exponential_increase"}`
-*	`{"date": {"earliest": "1900-01-01", "latest": "today"}, "rate" : "uniform"}`
-
-Note that `"incidence"` is used either for the actual incidence of a binary variable (`returning="binary_flag"`), or to indicate non-missingness for other variable types.
-`"rate"` is used for the distribution of date values (with either `"exponential_increase"` or `"uniform"`), but can also be used as an alias for `incidence=1` by specifying `rate="universal"` for non-date values.
-
-`population_ages` samples from the distribution of ages in the UK taken from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/tablea21principalprojectionukpopulationinagegroups).
 
 ## Defining study populations
 
