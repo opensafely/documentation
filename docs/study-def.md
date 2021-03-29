@@ -97,8 +97,6 @@ All other variables are defined similarly.
 To see the full list of currently available extractor functions, see [Study definition variables reference](study-def-variables.md).
 
 
-
-
 ## Defining and extracting variables
 
 All the variables that you want to include in your dataset are declared within the `StudyDefinition()` function, using functions of the form `patients.function_name()`.
@@ -121,7 +119,7 @@ The meaning of these values will depend on the data source, and this should be d
 
 
 
-## Defining study populations
+## Defining the study population
 
 Each study definition must have a `population` variable defined. This is a special variable used to select all the patients for whom you want to extract information. Most likely, there will be multiple criteria used to include or exclude your study population, in which case you'll need to combine information from multiple different variables. We can do this using the [`patients.satisfying()`](study-def-variables.md#cohortextractor.patients.satisfying) function.
 
