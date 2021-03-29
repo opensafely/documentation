@@ -49,15 +49,16 @@ few things. Most important is the `opensafely` tool; to install this, you must
 1. [Download and run the Anaconda Python
    installer](https://docs.anaconda.com/anaconda/install/windows/).
 2. When you've done, to verify your installation, open Anaconda Prompt by
-   clicking Start, search, or selecting Anaconda Prompt from the menu. ![Finding
-   Anaconda Prompt on Windows](./images/win-anaconda-prompt.png)
+   clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
+   from the menu. ![Finding Anaconda Prompt on
+   Windows](./images/win-anaconda-prompt.png)
 3. To install the OpenSAFELY command line tool, you first need to install a tool
    called `pip`.  Do this by typing `conda install pip` and pressing ++enter++.
 4. Now you can install the command line tool, by typing `pip install opensafely`, and
    pressing ++enter++
 5. You should see some output. To check this has installed successfully, type
-   `opensafely --version` and press ++enter++.
-6. This should show you the currently-installed version of `opensafely`.
+   `opensafely --help` and press ++enter++.
+6. This should show help text on how to use the `opensafely` command.
 
 ### Install Docker
 
@@ -72,6 +73,9 @@ few things. Most important is the `opensafely` tool; to install this, you must
    these instructions](https://docs.docker.com/docker-for-windows/install/).
    Otherwise, follow the instructions for [installing on Windows
    Home](https://docs.docker.com/docker-for-windows/install-windows-home/).
+   Unfortunately, we've had reports that installing in Windows Home can be very
+   challenging. Please let us know if you can help us improve the documentation
+   here.
 2. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
    so, an animation runs in the notification area:<br>
    ![image](images/docker-windows-starting.png)
