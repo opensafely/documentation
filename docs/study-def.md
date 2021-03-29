@@ -101,7 +101,7 @@ To see the full list of currently available extractor functions, see [Study defi
 
 ## Defining and extracting variables
 
-All variables that you want to include in your dataset are declared within the `StudyDefinition()` function, using functions of the form `patients.function_name()`.
+All the variables that you want to include in your dataset are declared within the `StudyDefinition()` function, using functions of the form `patients.function_name()`.
 
 To see the full documentation for all the variables that can be extracted with queries to the OpenSAFELY database, see [Study Definition variable reference](study-def-variables.md).
 
@@ -135,12 +135,12 @@ sbp = patients.mean_recorded_value(
 	return_expectations = {
 		"incidence" : 0.8,
 		"float" : {"distribution": "normal", "mean": 110, "stddev": 20},
-		"date" : {"earliest": index_date, "latest": "today"},
+		"date" : {"earliest": index_date, "latest": "index_date + 1 year"},
 		"rate" : "uniform"
 	},
 )
 ```
-This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients, at dates between the `index_date` and `"today"`'s date. The date of the most recent measurement is distributed uniformly between those dates.
+This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients, at dates between the `index_date` and one year later. The date of the most recent measurement is distributed uniformly between those dates.
 
 
 
@@ -227,9 +227,9 @@ It's important therefore to match the dummy data with what you would expect to s
 
 ## Multiple study definitions
 
-### Naming
+### File names
 
-A `study_definition.py` will produce a file called `input.csv`.
+A study definition called `study_definition.py` will create a file called `input.csv`.
 If you only require one study population, we recommend you stick with this.
 
 Multiple study definition files can be specified using a suffix like:
@@ -245,7 +245,7 @@ input_copd.csv
 input_asthma.csv
 ```
 
-You should reflect this by creating two cohortextractor actions in the [`project.yaml`](actions-pipelines.md), one for each study definition:
+You should then create two coresponding cohortextractor actions in the [`project.yaml`](actions-pipelines.md):
 
 ```yaml
 version: "3.0"
@@ -271,10 +271,9 @@ actions:
 ### Sharing common study definition variables
 When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ.
 This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing.
-To avoid this, there is a way to share these common variables between study definitions:
+To avoid this, you can use the following approach to share common variables between study definitions:
 
-
-Make a file called `common_variables.py` containing the following code:
+Make a Python script called `common_variables.py` containing the following code:
 
 ```py
 from cohortextractor import patients
@@ -283,7 +282,7 @@ from codelists import *
 
 ```
 
-You can then define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`.
+In this script, define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`.
 In this case we use age and sex.
 
 `common_variables.py`
@@ -305,10 +304,8 @@ common_variables = dict(
 )
 ```
 
-### Define the specific study definitions
-
 Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the other imports.
-You then add `**common_variables` just before the final closing brackets at the end of the file.
+You then add `**common_variables` just before the final closing brackets at the end of the script.
 This approach can also use different index dates, that are then passed to variables in `common_variables.py`.
 
 `study_definition_copd.py`
@@ -346,9 +343,12 @@ study = StudyDefinition(
     **common_variables
 )
 ```
+
 ### Identical study definitions with different index dates
-Though the `common_variables` approach described above can be used to make cohorts using different index dates, if you want two cohorts that are entirely identical except for the index date, we can do this more simply.
-We start by using just one study definition, then within the [`project.yaml`](https://docs.opensafely.org/en/latest/pipelines/#projectyaml-format) we define two actions, one for each index date you want to use. We then borrow the `--index-date-range` argument from the [measures](https://docs.opensafely.org/en/latest/measures/#extract-the-data) function to specify the index dates:
+Though the `common_variables` approach described above can be used to make cohorts using different index dates, if you want two cohorts that are entirely identical except for the index date, there is a simpler way.
+We start by creating the study definition defining the variables you want to extract. 
+Then within the [`project.yaml`](https://docs.opensafely.org/en/latest/pipelines/#projectyaml-format) we define two or more actions, one for each index date you want to use. 
+We then borrow the `--index-date-range` argument from the [measures](https://docs.opensafely.org/en/latest/measures/#extract-the-data) function to specify the index dates:
 ```yaml
 version: "3.0"
 
@@ -369,6 +369,6 @@ actions:
       highly_sensitive:
         cohort: output/input-2020-09-01.csv
 ```
-Currently the study definition called above must have the index date defined within the StudyDefinition (e.g. `index_date="2020-01-01",`), though the date defined is arbitrary and is replaced by the arguments defined above.
+Currently the study definition called above must have the index date defined within the StudyDefinition (e.g. `index_date="2020-01-01"`), though the date defined is arbitrary and is replaced by the arguments defined above.
 
 ---8<-- 'includes/glossary.md'
