@@ -22,6 +22,9 @@ nav:
       - Github repository layout: repositories.md
       - Study definitions:
           - Overview: study-def.md
+          - Working with dates: study-def-dates.md
+          - Working with codelists: study-def-codelists.md
+          - Dummy data and expectations: study-def-expectations.md
           - Variable reference: study-def-variables.md
           - Measures: measures.md
       - Codelists:
