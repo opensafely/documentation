@@ -159,8 +159,8 @@ The final line tells you a file of (randomly-generated) patient data has been cr
 `output/input.csv`, and that it should be considered highly sensitive
 data. What you see here reproduces exactly what would happen on a real, secure
 server, but with *dummy data* which contains no real patient information. 
-Because we haven't modified the template blank study yet, this file only contains
-random patient IDs &mdash; we'll generate more dummy data in the next section.
+Because we haven't modified the template blank study yet, this file is empty &mdash; 
+we'll generate more dummy data in the next section.
 1. If you run `opensafely run run_all` for a second time, you'll see the command
    does nothing (because there's already a file at `output/input.csv`):
 ```shell-session
