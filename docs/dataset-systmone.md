@@ -2,13 +2,19 @@
 
 [SystmOne](https://www.tpp-uk.com/products/systmone) is a Primary Care clinical information system run by The Phoenix Partnership, used by roughly one third of GP practices in England, with records for approximately 44% of the English population. Its primary purpose is patient management, though the data may be used for research.
 
-It captures symptoms, test results, diagnoses, prescriptions, onward referrals, demographic and social characteristics, etc. Essentially everything about a patient that is electronically recorded or accessed by GPs.
+It captures symptoms, test results, diagnoses, prescriptions, onward referrals, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
 
-The SystmOne database contains various tables for events, medications, registrations, and so on, and some additional custom tables have been created specifically for OpenSAFELY. This is typically to make administrative and geographic grouping information available (like household membership) without disclosing of identifiable patient data (like addresses).
+## The OpenSAFELY-TPP database
 
-## Event coding
+The SystmOne database contains various tables for events, medications, registrations, and so on, which have been processed, pseudonymised, and made available within the OpenSAFELY-TPP database. Some additional custom tables are also created, for instance to make administrative and geographic grouping information available (like household membership) without disclosing of identifiable patient data (like addresses).
 
-SystmOne uses an augmented version of CTV3 Read Codes to classify clinical events, and only data that is associated with a Read Code can be accessed in OpenSAFELY &mdash; we do not have access to free text data.
+Clinical, referral, and consultation events are coded in SystmOne using an augmented version of CTV3 Read codes. These are available in the OpenSAFELY-TPP database in the `CodedEvent` table. Each row is made up of a patient identifier, an event code, an event date, and an additional interaction identifier linking the event to a specific patient&ndash;service interaction, such as a GP consultation, getting bloods, receiving test results, updating contact details, and so on (perhaps confusingly, this is called the "consultation" identifier). There may also be an additional numeric value stored, for instance if the code relates to a physiological measurement.
+
+Medications are coded using DM+D codes, and are available in the `MedicationIssue` table which is structured similarly to `CodedEvent`.
+
+The `Vaccination` table contains information on administered vaccinations, identified using either the target disease (e.g., influenza), or the vaccine product (e.g., Optaflu). 
+
+Only coded or other structured data can be accessed in OpenSAFELY &mdash; we do not have access to free text data.
 
 ### SARS-CoV-2 test results
 
@@ -18,12 +24,15 @@ SARS-CoV-2 test result data is incorporated into SystmOne and uses the following
 * **Y20d2** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result negative_
 * **Y23f6** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result unknown_
 
-These are coded in response to data flowing from Pillar 1 and Pillar 2. (At the time of writing, Dec 2020, Moonshot community tests are also planned to be incorporated)
+These are coded in response to data flowing from Pillar 1 and Pillar 2. (At the time of writing, Dec 2020, Moonshot community tests are also planned to be incorporated).
+
+!!! note "National coronavirus testing data are also available from SGSS"
+    We recommend you use linked [SGSS](dataset-sgsscovid.md) data for SARS-CoV-2 test results.
 
 ### Dates
 
 All coded events should be accompanied by an event date.
-However, invalid or highly unusual dates are possible and may occur for a number of reasons; for instance, when a GP is coding an important event in the patient's medical history but the exact date is not known.
+However, invalid or unusual dates are possible and may occur for a number of reasons; for instance, when a GP is coding an important event in the patient's medical history but the exact date is not known.
 
 ## Additional derived data
 
