@@ -171,9 +171,8 @@ $ opensafely run run_all
 
 ## 3. Make changes to your study
 
-You've successfully run the code in your study, but at the moment it just creates an output
-file containing a random list of patient IDs. Now we'll add some code to do
-something slightly more interesting.
+You've successfully run the code in your study, but at the moment it just creates an empty output
+file. Now we'll add some code to do something slightly more interesting.
 
 In order to write code in the OpenSAFELY framework, a code editor will make your
 life much easier. If you don't already have one, we recommend you download and
