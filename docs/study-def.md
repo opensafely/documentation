@@ -146,48 +146,29 @@ This says that we expect the returned systolic blood pressure values to be norma
 
 ## Defining study populations
 
-Most commonly, you will want to include only patients with certain characteristics, rather than every patient in the database.
+Each study definition must have a `population` variable defined. This is a special variable used to select all the patients for whom you want to extract information. Most likely, there will be multiple criteria used to include or exclude your study population, in which case you'll need to combine information from multiple different variables. We can do this using the [`patients.satisfying()`](study-def-variables.md#cohortextractor.patients.satisfying) function.
 
-### Using variables to define your population
-
-To define a study population with one particular characteristic, you need to define the characteristic within the study
-population.
+For example, here we have combined both COPD and registration details to find only patients who have COPD and have been registered at a practice for more than a year.
 
 ```py
-population = patients.with_these_clinical_events(
-    copd_codes,
-    on_or_before = "2017-03-01",
-)
-```
-
-### Using time registered in one practice
-
-Researchers often want to exclude patients who have switched practice recently and hence may have an incomplete record of their conditions as it can take some time for their records to come from their previous practice.
-
-```py
-population = patients.registered_with_one_practice_between(
-        "2019-03-01", "2020-03-01"
-)
-```
-
-### Combining population criteria
-
-Population criteria may need to be combined.
-Here we have combined both COPD and registration details to find only patients who have COPD and have been registered at a practice for more than a year.
-
-```py
-
 population = patients.satisfying(
-    "has_follow_up AND has_copd",
+    """
+    has_follow_up AND 
+    has_copd
+    """,
     has_copd=patients.with_these_clinical_events(
         copd_codes,
-		on_or_before = "2017-03-01"
+		    on_or_before = "2017-03-01"
     ),
     has_follow_up = patients.registered_with_one_practice_between(
         "2019-03-01", "2020-03-01"
     ),
 )
 ```
+
+The first argument to `patients.satisfying()` is a string defining the population of interest using elementary logic syntax.
+Acceptable operators in this string are currently `=`, `!=`, `<`, `<=`, `>=`, `>`, `AND`, `OR`, `NOT`, `+`, `-`, `*`, `/`. 
+All subsequent arguments are variable definitions. These are used just as you would use them in the higher-level `StudyDefinition()` call, except that there's no need to define `returning_expectations` arguments since these variables are extracted explicitly.
 
 If a variable has been defined elsewhere in `StudyDefinition()`, then that variable can be used in the `patients.satisfying()` function without needing to be defined again.
 For example,
@@ -212,6 +193,31 @@ study = StudyDefinition(
 
 Here `sex` is _defined_ outside of `patients.satisfying()` but can still be _used_ inside of it.
 In this case, it's being used to exclude patients without a "valid" sex category (`"M"` or `"F"`) from the study population.
+To match the `population` definition, the `return_expectations` for `sex` only includes `"M"` and `"F"` (not `U` or `I`, the other two valid values that can be returned by `patients.sex()`). 
+
+
+### Using a single variables to define your population
+
+If your population is defined by just one variable, you can use this variable directly instead of passing it through `patients.satisfying()`. 
+For example, 
+
+```py
+population = patients.with_these_clinical_events(
+    copd_codes,
+    on_or_before = "2017-03-01",
+)
+```
+Again, there's no need here to use the `return_expectations` argument.
+
+### Extracting data for all variables
+
+Occassionally, it may be necessary to extract data for all patients available for analysis within the database. To do this, you can use 
+
+```py
+population = patients.all()
+```
+
+Be aware that this will include a mix of registered, deregistered, and deceased patients. 
 
 ### Dummy data versus real data
 
