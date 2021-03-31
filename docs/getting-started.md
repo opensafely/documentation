@@ -111,7 +111,7 @@ you through the process of creating an account, if you don't already have one.
    ![image](images/use-this-template-button.png)
 4. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![image](create-repository-owner.png)
+   ![image](images/create-repository-owner.png)
 5. Type a name for your repository, and an optional description.
    ![image](images/create-repository-name.png)
 6. Choose a repository visibility.  This would usually be "Public".
