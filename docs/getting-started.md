@@ -216,7 +216,7 @@ between these two dates*"; lines 14-15 "*Give me a column of data corresponding
 to the age of each patient on the given date*"; and lines 16-18 "*I expect
 every patient to have a value, and the distribution of ages to match that of the
 real UK population*"
-1. In an Anaconda Prompt, run `opensafely run run_all --force`. A new file will
+1. In an Anaconda Prompt, run `opensafely run run_all --force-run-dependencies`. A new file will
    be created in the folder `output/input.csv`. Open that file (using Visual
    Studio Code, or Excel) and you'll see it now contains an age for 1000
    randomly generated patients.
@@ -275,7 +275,7 @@ the action creates. Line 17 says that the items indented below it are
 *moderately* sensitive, that is they may be released to the public after a
 careful review (and possible redaction). Line 18 says that there's one output
 file, which will be found at `output/descriptive.png`.
-5. Type `opensafely run run_all --force`. This should end by telling you a file
+5. Type `opensafely run run_all --force-run-dependencies`. This should end by telling you a file
    containing the histogram has been created. Open it, and check it looks right.
 
 ## 4. Push your study to github, and watch the automated tests pass
