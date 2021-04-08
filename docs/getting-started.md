@@ -82,10 +82,11 @@ few things. Most important is the `opensafely` tool; to install this, you must
 3. When Docker has finished starting up, share your hard drive with Docker:
    click system tray docker icon; select "settings"; select "shared drives".
 4. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
-   `opensafely pull`.  The first time you run it, this may take a long time,
-   depending on your network connection. It is downloading a reproducible
-   environment identical to that installed in the OpenSAFELY secure
-   environment.
+   `opensafely pull cohortextractor`. This will pull down the OpenSAFELY
+   cohortextractor images, which can be used to run actions in your study.  The
+   first time you run it, this may take a little time, depending on your
+   network connection. It is downloading a reproducible environment identical
+   to that installed in the OpenSAFELY secure environment.
 
 ### Set up Github and Github Desktop
 
