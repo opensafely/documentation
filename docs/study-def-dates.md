@@ -10,7 +10,14 @@ If no option is given then it will use all dates (including possibly future date
 
 As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, you can use the date expressions discussed above.
 
-You should be aware that "impossible" dates are sometimes recorded by accident in clinical systems; for example dates far in the future, or in the distant past, or before a patient was born.  You should take this into account in your analysis; for example, you might want to discard blood pressure values that are in the future, but you might want to keep an ethnicity category as these are less likely to change over time.
+### Setting date ranges to filter out 'impossible' dates
+
+You should be aware that events can be recorded in clinical systems without a date:
+- These default to "1900-01-01" in OpenSAFELY but other dates around and before this date are also possible. 
+- These often relate to demographic information; and sometimes events or diagnoses (e.g. Asthma), which may have been imported from other systems, originally recorded on paper, or reported by patients relating to past experiences but not knowing the precise date. 
+- In addition, occasionally "impossible" dates may be recorded by accident; for example far in the future, or before a patient was born.  
+ 
+You should take this into account in your analysis; for example, you might want to discard blood pressure values that are in the future, but you might want to keep an ethnicity category which was recorded with no date, as these are less likely to change over time. 
 
 ## Index Dates
 
@@ -59,7 +66,7 @@ For example:
 Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
 An error will also be shown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
 
-Any index date you've defined in your study definition can be overridden in your `project.yaml`, by providing an `--index-date-range` argument, like this:
+Any `index_date` you've defined in your study definition can be overridden in your `project.yaml`, by providing an `--index-date-range` argument, like this:
 
 ```yaml
 actions:
@@ -70,6 +77,8 @@ actions:
       highly_sensitive:
         cohort: output/input-2020-01-01.csv
 ```
+
+This can also be used to define a range of dates over which to run the study_definition, usually when working with [Measures](https://docs.opensafely.org/en/latest/measures/).
 
 ## Dynamic dates
 
