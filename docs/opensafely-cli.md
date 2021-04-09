@@ -55,6 +55,42 @@ opensafely run make_graph
 
 will run the `make_graph` action.
 
+<details markdown="1">
+<summary>To run or to force run?</summary>
+
+The `run` command takes `--force-run-dependencies` or `-f` arguments,
+where the latter is the short form of the former.
+However, what do these arguments do?
+
+When an action is a dependency of another action,
+the `run` command uses the dependency action's outputs
+-- and one of these arguments, if one is present --
+to determine whether the dependency action should also run.
+
+If you specify the action to run but don't pass one of these arguments, then:
+
+* The action is run, whether or not its outputs exist.
+* Its dependencies are also run, if their outputs do not exist.
+  Conversely, its dependencies are not run, if their outputs exist.
+
+If you specify the action to run and pass one of these arguments, then:
+
+* The action is run, whether or not its outputs exist.
+* Its dependencies are also run, whether or not their outputs exist.
+
+What about the `run_all` action?
+Think of all actions as dependencies of the `run_all` action.
+
+If you specify the `run_all` action but don't pass one of these arguments,
+then for each action:
+
+* If the action's outputs exist, then it is not run.
+* If the action's outputs do not exist, then it is run.
+
+If you specify the `run_all` action and pass one of these arguments, then:
+
+* All actions are run, whether or not their outputs exist.
+</details>
 
 ### `codelists`
 This command is for working with codelists. 
