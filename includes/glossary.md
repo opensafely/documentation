@@ -29,3 +29,4 @@
 *[TPP]: The Phoenix Partnership, the company behind the SystmOne EHR
 *[APCS]: Admitted Patient Care Statistics - the national data set for in-patient hospital admissions across England.
 *[OPA]: Outpatient Attendances is the national data set for hospital outpatient appointments. It is part of HES
+*[EMIS]: EMIS Health, formerly known as Egton Medical Information Systems
