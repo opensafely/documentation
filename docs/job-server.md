@@ -4,12 +4,12 @@ To run code for real in the production environment, use the [https://jobs.opensa
 Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ that have been run on the server.
 To submit job-requests (i.e., to run one or more actions), the general process is as follows:
 
-*  **Log in** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation).
+* **Log in** using your GitHub credentials (this should happen automatically if you have access to the OpenSAFELY GitHub organisation).
 * **Create a workspace** (or select an existing workspace):
 	* click the `Add a New WorkSpace` button
 	* choose a name, for example the name of the repo
 	* select a database to run against: either the full database, or a ~20% sample of it (sampling is based on an arbitrary selection of practices and not guaranteed to be representative)
-	* select the repo and branch whose action you want to run
+	* select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`)
 	* click `Submit`.
 *  **Select actions** to run:
 	* select the actions you want to run by clicking the `Run` buttons
