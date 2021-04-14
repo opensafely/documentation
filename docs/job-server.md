@@ -9,7 +9,7 @@ To submit job-requests (i.e., to run one or more actions), the general process i
 	* click the `Add a New WorkSpace` button
 	* choose a name, for example the name of the repo
 	* select a database to run against: either the full database, or a ~20% sample of it (sampling is based on an arbitrary selection of practices and not guaranteed to be representative)
-	* select the repo and branch whose action you want to run
+	* select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`)
 	* click `Submit`.
 *  **Select actions** to run:
 	* select the actions you want to run by clicking the `Run` buttons
