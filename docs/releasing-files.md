@@ -10,6 +10,9 @@ The study author should do everything they can to make this easy; for example, c
 
 ## Releasing output files from analysis runs
 
+!!! note "The following information is for OpenSAFELY's internal output-checkers only"
+    Researchers MUST NOT release their output files themselves - contact <disclosurecontrol@opensafely.org> to make an release request.
+
 The output and log files that are created by [running code against the live database](actions-pipelines.md#running-your-code-on-the-server) will [appear in the secure environment](actions-pipelines.md#accessing-the-outputs) in a workspace-specific folder.
 
 The reviewer releases outputs back to the original repo using git. 
