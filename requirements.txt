@@ -40,6 +40,8 @@ livereload==2.6.3
     # via mkdocs
 lunr[languages]==0.5.8
     # via mkdocs
+lz4==3.1.3
+    # via opensafely-cohort-extractor
 markdown==3.3.2
     # via
     #   mkdocs
@@ -68,9 +70,10 @@ numpy==1.19.2
     # via
     #   matplotlib
     #   pandas
+    #   pyarrow
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.28.2
+opensafely-cohort-extractor==1.29.8
     # via -r requirements.in
 opensafely-jobrunner==2.1.6
     # via opensafely-cohort-extractor
@@ -88,6 +91,8 @@ prettytable==2.0.0
     # via opensafely-cohort-extractor
 py==1.10.0
     # via retry
+pyarrow==3.0.0
+    # via opensafely-cohort-extractor
 pycparser==2.20
     # via cffi
 pygments==2.8.1
