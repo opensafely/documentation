@@ -2,7 +2,7 @@ All outputs from OpenSAFELY pipelines are subject to [tiered levels of scrutiny]
 
 The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
-Level 4 outputs can only be released by authorised users who have permission to log in to the secure server.
+Level 4 outputs can only be released by specific members of the OpenSAFELY team; please contact them using.... to request a release.
 Such users have responsibility for redacting sensitive information or choosing not to publish it at all. 
 The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
 
