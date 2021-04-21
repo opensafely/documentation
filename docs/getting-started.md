@@ -12,7 +12,7 @@ forum](https://github.com/opensafely/documentation/discussions)!
 !!! note "Windows-only!"
     This version of the tutorial is aimed at Windows users.
     Mac users should be able to follow along as well, with a few
-    hopefully-obvious alterations; see also the [macOS Install Guide](docs/install-macos.md)!
+    hopefully-obvious alterations; see also the [macOS Install Guide](install-macos.md)!
 
 
 ## Motivation
