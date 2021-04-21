@@ -110,7 +110,7 @@ Another aspect of git is that it uses a decentralised model. This means that eve
 
 ## What to do if you find a data breach
 
-If you discover files in a study repository that have been insufficiently redacted and still contain sensitive information, you should contact Amir Mehrkahr or Ben Goldacre as soon as possible.
+If you discover files in a study repository that have been insufficiently redacted and still contain sensitive information, you should contact Amir Mehrkar or Ben Goldacre as soon as possible.
 
 If you are able, you can attempt to make the repository safe by temporarily restricting access to it. For instance, if the repository is public (accessible to the world), make it private (accessible only to the OpenSAFELY team). If the repository has external contributors that are not authorised to handle sensitive data, consider temporarily removing their access to the repository. This will reduce the scope for harm until the sensitive information can be removed from the repository.
 
