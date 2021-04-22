@@ -55,10 +55,10 @@ Each codelist must use exactly one of these systems.
 
 The final codelist must be stored in CSV format to be imported 
 into [codelists.opensafely.org](https://codelists.opensafely.org). The codes must be stored in exactly one column. 
-You can include other columns (such as code descriptions) if useful. There is currently a soft requirement that the 
-codes should be contained in the first column, which should be named as per the list above. For example, if using 
-CTV3 then the column header should be `CTV3Code`. Do not keep the original codelist in Excel and then filter by a include or exclude
-column as this will be lost when converted to CSV, and you will end up with all the codes again. 
+There is currently a soft requirement that the codes should be contained in the first column, preferably named according to the CSV column names provided in the table above. The second column is typically a text description of the code. Before uploading a codelist CSV under your OpenSAFELY codelist profile, you should remove the header row as these will be automatically added in a standardised manner. The codelist page will allow you to upload two columns (a code, and a text description of the code), however, some codelists may require a 'classification' or 'type' column, which classifies the codes into subcategories. For example, when using a codelist for venous thromboemobolism you may wish to classify these codes into deep vein thromboses and pulmonary embolisms, and keep this within a single codelist rather than uploading separate lists for each subcategory of the clinical condition. You can access subcategories of a codelist by using the `filter_codes_by_category` functionality when calling `with_these_clinical_events` as part of your `study_definition`. Uploading more than two columns is currently only possible for the OpenSAFELY core team, so in case this is required for your study please get in touch. 
+
+Finally, please avoid filtering on an include or exclude column in Excel when finalising a codelist. Any filters applied will be lost when converted to CSV, and you will end up with all of the codes being uploaded. 
+
 
 ## Sign-off
 
