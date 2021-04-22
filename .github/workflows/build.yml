@@ -1,0 +1,29 @@
+---
+name: 'build-check'
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+      - name: Upgrade pip
+        run: |
+          python3 -m pip install --upgrade pip
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install -r ./requirements.txt
+
+      - name: Check site builds
+        run: mkdocs build --strict
