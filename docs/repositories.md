@@ -79,7 +79,7 @@ This folder contains:
 *  By convention, any other files outputted by the analysis scripts that convert `input.csv` into study results, tables, figures, etc.
 
 
-Be aware that `input.csv` is included in the `.gitignore` file (see below), which means it can't be committed and uploaded to Github.
+Be aware that `input.csv` is included in the `.gitignore` file (see below), which means it can't be committed and uploaded to GitHub.
 
 You don't *have* to store things in these locations, but that's the convention we suggest.
 

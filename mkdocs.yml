@@ -19,7 +19,7 @@ nav:
           - Docker: install-docker.md
           - OpenSAFELY CLI: opensafely-cli.md
           - macOS: install-macos.md
-      - Github repository layout: repositories.md
+      - GitHub repository layout: repositories.md
       - Study definitions:
           - Overview: study-def.md
           - Working with dates: study-def-dates.md

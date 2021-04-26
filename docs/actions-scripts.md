@@ -29,10 +29,10 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 
 ### Stata
 
-We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker Github repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
+We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker GitHub repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
 
 As Stata is a commercial product, a license key is needed to use it. If you are
-a member of the opensafely Github organisation, then the tooling will
+a member of the opensafely GitHub organisation, then the tooling will
 automatically use the OpenSAFELY stata license. If not, get in touch if you
 need to apply your own license and we can help.
 

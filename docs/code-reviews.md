@@ -9,15 +9,15 @@ both quality and speed in programming. Code reviews are standard practice within
 
 ## How to ask for a review
 
-Github has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
-that you use this tool. Github has some [documentation on Pull Requests and Code Reviews](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) which we recommend for background reading.
+GitHub has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
+that you use this tool. GitHub has some [documentation on Pull Requests and Code Reviews](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) which we recommend for background reading.
 
 ![image](./images/code-review-main.png)
 
 In this screenshot, the user is making a new Pull Request. In the top right-hand corner (marked by the 
 red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review. 
 Once you have tagged them and made the Pull Request, the person will receive a notification to their 
-email, and it will also come up in the Pull Request section of their Github main screen. 
+email, and it will also come up in the Pull Request section of their GitHub main screen. 
 
 ![image](./images/pr-desc.png)
 

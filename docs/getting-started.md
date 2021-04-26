@@ -88,22 +88,22 @@ few things. Most important is the `opensafely` tool; to install this, you must
    network connection. It is downloading a reproducible environment identical
    to that installed in the OpenSAFELY secure environment.
 
-### Set up Github and Github Desktop
+### Set up GitHub and GitHub Desktop
 
-To use OpenSAFELY, you must have a Github account. Github is a widely-used
+To use OpenSAFELY, you must have a GitHub account. GitHub is a widely-used
 website for storing and collaborating on software, using the version control
-software `git`. Github is where your open, reproducible research will be
+software `git`. GitHub is where your open, reproducible research will be
 published.
 
-The quickest way to get started is to [install Github
+The quickest way to get started is to [install GitHub
 Desktop](https://desktop.github.com/). The installation process will also walk
 you through the process of creating an account, if you don't already have one.
 
 ## 2. Set up your first study
 
-### Create a new repository in Github
+### Create a new repository in GitHub
 
-1. Go to the [Github website](https://github.com), and ensure you're logged in.
+1. Go to the [GitHub website](https://github.com), and ensure you're logged in.
    You'll be able to tell by looking for your profile at the top right of the
    page.
 2. Visit our [research template
@@ -280,11 +280,11 @@ file, which will be found at `output/descriptive.png`.
 
 ## 4. Push your study to github, and watch the automated tests pass
 
-Now that your study does something interesting, you should "*push*" it to Github,
+Now that your study does something interesting, you should "*push*" it to GitHub,
 where it can be viewed by others. Your repository is automatically configured
 with tests to verify the project is runnable, each time you push.
 
-1. Open Github Desktop to view your repository. When you make changes to files in
+1. Open GitHub Desktop to view your repository. When you make changes to files in
    your text editor and save them locally, you also see the changes in
    GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
    checkbox at the top of the list.<br>
@@ -295,8 +295,8 @@ with tests to verify the project is runnable, each time you push.
    **Description** field. Press the blue button to make the commit.<br>
   ![image](images/commit-message.png)
 3. Click **Push origin** to push your local changes to the remote repository on
-   Github ![image](images/push-to-github.png)
-4. In a web browser, visit your repository in Github. Click on the **Actions**
+   GitHub ![image](images/push-to-github.png)
+4. In a web browser, visit your repository in GitHub. Click on the **Actions**
    tab ![image](images/github-actions-tab.png)
 5. You'll see a *Workflow* running with the *commit message* of your last
    commit. The workflow verifies that the command `opensafely run run_all` can
@@ -308,7 +308,7 @@ with tests to verify the project is runnable, each time you push.
 
 Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it
-to Github.
+to GitHub.
 
 To write a real study and run it against actual patient data, you will first
 need to get permission for your project from NHS England, the data controllers
@@ -329,7 +329,7 @@ detail on the subjects covered in this tutorial. For example:
   automatically within the secure EHR vendor environments. Right now you can
   only use this to run real jobs, but we're working on adding the ability to
   test your repository against dummy data.
-* You'll be using `git` and Github a lot, and it's a critical but complex part
+* You'll be using `git` and GitHub a lot, and it's a critical but complex part
   of the OpenSAFELY ecosystem. If you're not familiar with these concepts, it's
   a good idea to read our [git workflow page](git-workflow.md) and its linked content.
 

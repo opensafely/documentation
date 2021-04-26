@@ -36,8 +36,8 @@ they can be reused.
 - Make an issue in [codelist repo](https://github.com/opensafely/codelist-development) for the Codelist to be discussed
 - Discuss all decisions along the way in the issue, for example, why you decided to exclude
 "historical asthma" from an asthma codelist
-- Who signed off the codelist should be easy to find and transparent. It should be in the Github issue (preferably
-by the person signing off so they can be contacted via Github) and on the published website.
+- Who signed off the codelist should be easy to find and transparent. It should be in the GitHub issue (preferably
+by the person signing off so they can be contacted via GitHub) and on the published website.
 - Write a good description for the website on what it does and does not include and summarise
 any key decisions
 - All study repos will at some point become public (if they are not already), so bear in mind the

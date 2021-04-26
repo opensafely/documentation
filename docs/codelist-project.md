@@ -25,7 +25,7 @@ opensafely codelists update
 
 Beware that in Windows, if one or more of these codelist files is open then this command won't be able to run; close them first.
 
-You will need to add and commit these changes and push to Github. 
+You will need to add and commit these changes and push to GitHub. 
 If you don't, or a newer version is available than that committed, the automated tests will fail with an error message.
 
 ---8<-- 'includes/glossary.md'
