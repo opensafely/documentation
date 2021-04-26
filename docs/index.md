@@ -48,9 +48,13 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
 - **Docker**
   We use Docker containers to simulate the production environment on your machine, so you can [test code locally](actions-pipelines.md).
 
+## How should I start learning to use OpenSAFELY?
+
+The [Analysis workflow](workflow) gives a high-level view of the steps involved in an OpenSAFELY research project.
+
 See our [installation](install-intro.md) pages for complete installation instructions.
 
-We recommend following one of our OpenSAFELY walkthroughs (see [here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow, rather than using the documentation pages alone.
+We recommend following one of our OpenSAFELY walkthroughs (see the [notebook here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
 
 
 
