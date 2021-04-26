@@ -60,7 +60,7 @@ Currently, anyone with Level 2 access.
 
 ## Level 4
 This level includes tables, figures, and other structured files produced as a result of the analysis of the Level 3 data, for example summary statistics and statistical models.
-Following scrict disclosivity checks and redactions, files can be released out of the server to the remote git repository on GitHub for further processing and public consumption.
+Following strict disclosivity checks and redactions, files can be released out of the server to the remote git repository on GitHub for further processing and public consumption.
 
 ### Where is this data held?
 Data is held within the EHR vendor's secure environment on a specific server, separate from the Level 2 and 3 server.
