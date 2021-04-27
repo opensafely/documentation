@@ -71,7 +71,7 @@ study = StudyDefinition(
 
 	# define the study variables
 
-	age = patients.age_as_of(index_date)
+	age = patients.age_as_of("index_date")
 
 	# more variables ...
 
