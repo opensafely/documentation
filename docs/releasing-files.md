@@ -2,10 +2,13 @@ All outputs from OpenSAFELY pipelines are subject to [tiered levels of scrutiny]
 
 The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
-Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>. DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
+Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>**.
 
-NOTE: Individual researchers who have L4 access have responsibility for redacting sensitive information or choosing not to publish it at all. 
-The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
+!!! warning
+    ** DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
+
+!!! note
+    Individual researchers who have Level 4 access have responsibility for redacting sensitive information or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
 
 ## Disclosivity checks and redaction
 
@@ -28,7 +31,7 @@ If they are there, delete them.
 This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls. 
 It may be possible for exceptions to be made if they can be justified as being both analytically necessary and definitely non-disclosive. This must be discussed with the OpenSAFELY team.
 
-If you are unsure about anything, ask.
+**If you are unsure about anything, please email us: <disclosurecontrol@opensafely.org>.**
 
 ## Redaction data breaches and how to recover from them
 
@@ -49,5 +52,4 @@ If you discover files in a study repository that have been insufficiently redact
 If you are able, you can attempt to make the repository safe by temporarily restricting access to it. For instance, if the repository is public (accessible to the world), make it private (accessible only to the OpenSAFELY team). If the repository has external contributors that are not authorised to handle sensitive data, consider temporarily removing their access to the repository. This will reduce the scope for harm until the sensitive information can be removed from the repository.
 
 If you are an author of the study, you should also liaise with an engineer from the OpenSAFELY team as soon as possible to safely clean the sensitive information from the repository. Depending on the exact situation this may be relatively straightforward or relatively complicated. You should also attempt to trace all copies of the repository for cleaning or deletion.
-
 
