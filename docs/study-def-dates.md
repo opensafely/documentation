@@ -13,6 +13,7 @@ As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, y
 ### Setting date ranges to filter out 'impossible' dates
 
 You should be aware that events can be recorded in clinical systems without a date:
+
 - These default to "1900-01-01" in OpenSAFELY but other dates around and before this date are also possible. 
 - These often relate to demographic information; and sometimes events or diagnoses (e.g. Asthma), which may have been imported from other systems, originally recorded on paper, or reported by patients relating to past experiences but not knowing the precise date. 
 - In addition, occasionally "impossible" dates may be recorded by accident; for example far in the future, or before a patient was born.  
