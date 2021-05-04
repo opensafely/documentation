@@ -62,6 +62,7 @@ nav:
       - Requesting Study Definition variables: requests-variables.md
 
 theme: material
+site_dir: site/en/latest/
 
 extra_css:
   - css/youtube.css
