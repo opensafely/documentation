@@ -20,7 +20,7 @@ For example:
   * Summaries of numeric variables describing 5 or fewer patients should be redacted. 
   * Graphical figures whose underlying values describe 5 or fewer patients should be redacted. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. 
   * Counts of zero can be retained. 
-  * Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary.
+  * Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. **It is very unlikely that outputs such as log files should be required for publication outside the secure environment.**
 
 Where possible it should be clear what has been redacted, so for example do not redact table titles and category names. 
 By convention redactions take the form `[REDACTED]` to make redacted elements easier to search for.
