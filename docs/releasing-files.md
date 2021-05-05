@@ -2,7 +2,7 @@ All outputs from OpenSAFELY pipelines are subject to [tiered levels of scrutiny]
 
 The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
-Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please email us at <disclosurecontrol@opensafely.org> . DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
+Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <disclosurecontrol@opensafely.org>. DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
 
 NOTE: Individual researchers who have L4 access have responsibility for redacting sensitive information or choosing not to publish it at all. 
 The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
