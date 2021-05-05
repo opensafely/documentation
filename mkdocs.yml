@@ -61,12 +61,13 @@ nav:
       - Requesting new libraries: requests-packages.md
       - Requesting Study Definition variables: requests-variables.md
 
-theme:
-  name: material
-  custom_dir: overrides
+theme: material
 
 extra_css:
   - css/youtube.css
+
+extra_javascript:
+  - javascripts/extra.js
 
 plugins:
   - search
