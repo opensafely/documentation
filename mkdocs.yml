@@ -61,7 +61,9 @@ nav:
       - Requesting new libraries: requests-packages.md
       - Requesting Study Definition variables: requests-variables.md
 
-theme: material
+theme:
+  name: material
+  custom_dir: overrides
 
 extra_css:
   - css/youtube.css
