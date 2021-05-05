@@ -66,6 +66,9 @@ theme: material
 extra_css:
   - css/youtube.css
 
+extra_javascript:
+  - javascripts/extra.js
+
 plugins:
   - search
   - mkdocstrings:
