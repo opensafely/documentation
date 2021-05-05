@@ -28,12 +28,13 @@ If you already have git installed and prefer using your existing git workflow, t
 If you're not sure if you already have git installed, type `git --version` into any command line terminal.
 
 ### Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
-This is only necessary for running code against the real data. <font color='red'>Ask us to be added</font>.
-If you're not sure if you already have access, go to [*settings > security*](https://github.com/settings/organizations) in GitHub and see if _opensafely_ is listed.
+This is only necessary for running code against the real data. **Ask us for access.**
+If you're not sure if you already have access, go to [*Settings > Organizations*](https://github.com/settings/organizations) in GitHub and see if _opensafely_ is listed.
 
-You will need [**Two-factor authentication**](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa) for your GitHub account to join the organisation.
-To set up 2FA [follow these instructions](https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
-If you're not sure if you already have 2FA enabled, go to [*settings > security > Two-factor authentication*](https://github.com/settings/security) in GitHub and check that at least one method is *Configured*.
+You will need [**two-factor authentication (2FA)**](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa) for your GitHub account to join the organisation. This provides extra security for your account by requiring something you have (for example, an authenticator application on your phone) as well as something you know (your password).
+
+To set up 2FA, [follow these instructions](https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
+If you're not sure if you already have 2FA enabled, go to [*Settings > Security > Two-factor authentication*](https://github.com/settings/security) in GitHub and check that at least one method is *Configured*.
 
 
 
