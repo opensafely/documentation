@@ -77,6 +77,7 @@ measures = [
         numerator="died",
         denominator="population",
         group_by="stp",
+        small_number_suppression=True,
     ),
 ]
 ```
@@ -84,9 +85,10 @@ This differs from a normal study definition due to the addition of the `measures
 
 * `id` is just a string used to identify the measure output file.
 * `numerator` and `denominator` are the columns in the dataset that define the measure. They must be numeric or boolean (encoded as 0 or 1).
-* `group_by` column can be of any type. To calculate the measure across the entire population, you can set `group_by="population"`. If not specified, `group_by` will default to `None` and the measure will be calculated at the individual patient level. 
+* `group_by` column can be of any type. To calculate the measure across the entire population, you can set `group_by="population"`. If not specified, `group_by` will default to `None` and the measure will be calculated at the individual patient level.
+* `small_number_suppression` is an optional boolean that defaults to `False`. If set to `True`, small numbers (greater than zero, less than or equal to five) in numerators and denominators will be replaced with blanks. If a numerator or denominator has been suppressed then the corresponding value will also be blank. In cases where numerators or denominators are suppressed but the total suppressed in a column is not greater than five, additional values will be suppressed to bring the total above five.
 
-You can calculate measures for more than one group at a time by specifying multiple variables as follows: 
+You can calculate measures for more than one group at a time by specifying multiple variables as follows:
 
 ```py
 measures = [
