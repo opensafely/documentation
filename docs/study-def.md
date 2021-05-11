@@ -47,7 +47,7 @@ from cohortextractor import (
 )
 ```
 
-This essentially says we want to import the some functions from the `cohortextractor` package which will be used throughout the script.
+This essentially says we want to import some functions from the `cohortextractor` package which will be used throughout the script.
 
 ### A simple example
 
@@ -70,7 +70,6 @@ study = StudyDefinition(
 	population = patients.all(),
 
 	# define the study variables
-
 	age = patients.age_as_of("index_date")
 
 	# more variables ...
@@ -85,7 +84,7 @@ See [Dummy data and expectations](study-def-expectations.md) for more details.
 See [Working with dates](study-def-dates.md) for more details on how the index date is used.
 * `population=` is where the population is defined.
 In this case, we want all patients available in the OpenSAFELY database and so we use the method `all()` to indicate this.
-See the [study population section](#defining-study-populations) for more details on how to select a specific subset of patients in the OpenSAFELY database.
+See the [study population section](#defining-the-study-population) for more details on how to select a specific subset of patients in the OpenSAFELY database.
 
 The `default_expectations`, `index_date`, and `population` arguments are reserved names within `StudyDefinition()`.
 All other names are used to define the variables that will appear in the outputted dataset, using _variable extractor functions_ of the form `patients.function_name`.
@@ -94,7 +93,7 @@ All other names are used to define the variables that will appear in the outputt
 The `patients.age_as_of()` function returns the age of each patient as of the date provided (in this case the `index_date`).
 
 All other variables are defined similarly.
-To see the full list of currently available extractor functions, see [Study definition variables reference](study-def-variables.md).
+To see the full list of currently available extractor functions, see [Study Definition variables reference](study-def-variables.md).
 
 
 ## Defining and extracting variables
@@ -220,7 +219,7 @@ input_copd.csv
 input_asthma.csv
 ```
 
-You should then create two coresponding cohortextractor actions in the [`project.yaml`](actions-pipelines.md):
+You should then create two corresponding cohortextractor actions in the [`project.yaml`](actions-pipelines.md):
 
 ```yaml
 version: "3.0"
@@ -322,8 +321,8 @@ study = StudyDefinition(
 ### Identical study definitions with different index dates
 Though the `common_variables` approach described above can be used to make cohorts using different index dates, if you want two cohorts that are entirely identical except for the index date, there is a simpler way.
 We start by creating the study definition defining the variables you want to extract. 
-Then within the [`project.yaml`](https://docs.opensafely.org/en/latest/pipelines/#projectyaml-format) we define two or more actions, one for each index date you want to use. 
-We then borrow the `--index-date-range` argument from the [measures](https://docs.opensafely.org/en/latest/measures/#extract-the-data) function to specify the index dates:
+Then within the [`project.yaml`](actions-pipelines.md#projectyaml-format) we define two or more actions, one for each index date you want to use.
+We then borrow the `--index-date-range` argument from the [measures](measures.md#extract-the-data) function to specify the index dates:
 ```yaml
 version: "3.0"
 
