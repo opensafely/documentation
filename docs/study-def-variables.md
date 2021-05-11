@@ -68,6 +68,9 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.household_as_of
 &nbsp;
 
+::: cohortextractor.patients.with_these_decision_support_values
+&nbsp;
+
 ## ICNARC
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
 For more information, see the [ICNARC data section](dataset-icnarc.md).
