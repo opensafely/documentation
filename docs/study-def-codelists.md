@@ -1,10 +1,10 @@
-A *Codelist* is a collection of clinical codes that classifies patients as having certain conditions or demographic properties. For example, in an clinical system, an asthma diagnoses may be indicated by [any of more than 100 codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/ast/v1/#full-list).
+A *Codelist* is a collection of clinical codes that classifies patients as having certain conditions or demographic properties. For example, in an clinical system, an asthma diagnosis may be indicated by [any of more than 100 codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/ast/v1/#full-list).
 
 Codelists must be stored as data within your study repository, from where they can be used in your study definition.
 
-To help you create, edit, and manage codelists, OpenSAFELY provides a web-based tool called [OpenSAFELY Codelists](https://codelists.opensafely.org). For more information about how to create and edit codelists on the  website, see the [Codelists documentation](codelist-intro.md).
+To help you create, edit, and manage codelists, OpenSAFELY provides a web-based tool called [OpenCodelists](https://codelists.opensafely.org). For more information about how to create and edit codelists on the  website, see the [codelists documentation](codelist-intro.md).
 
-### Pulling Codelists into your Study Definition
+### Pulling codelists into your study definition
 
 Many functions for defining variables take *codelists* as arguments.
 Codelists live as CSV files in the `codelists/` directory, and are loaded into variables like this:
