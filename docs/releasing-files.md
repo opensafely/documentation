@@ -53,3 +53,4 @@ If you are able, you can attempt to make the repository safe by temporarily rest
 
 If you are an author of the study, you should also liaise with an engineer from the OpenSAFELY team as soon as possible to safely clean the sensitive information from the repository. Depending on the exact situation this may be relatively straightforward or relatively complicated. You should also attempt to trace all copies of the repository for cleaning or deletion.
 
+---8<-- 'includes/glossary.md'
