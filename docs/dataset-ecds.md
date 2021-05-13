@@ -12,7 +12,7 @@ ECDS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 Diagnoses and discharge destinations are coded using SNOMED-CT.
 
 ## More information
-* [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)) - (private, pending review & publication)
+* [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb) - (private, pending review & publication)
 * [NHS Digital ECDS site](https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/emergency-care-data-set-ecds)
 * [NHS Digital SUS site](https://digital.nhs.uk/services/secondary-uses-service-sus/secondary-uses-services-sus-guidance)
 * [NHS Digital HES site](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics)
