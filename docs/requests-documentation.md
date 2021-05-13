@@ -4,7 +4,7 @@ please do! You can either:
 
 * Suggest improvements in an [issue](https://github.com/opensafely/documentation/issues).
 * Clone [the repo](https://github.com/opensafely/documentation) locally, make edits on a new branch, then create a pull request for it.
-* [Edit directly on GitHub](https://github.com/opensafely/documentation/tree/master/docs) (instructions [here](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository)), making sure to "Create a new branch for this commit and start a pull request".
+* [Edit directly on GitHub](https://github.com/opensafely/documentation/tree/master/docs) ([instructions](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository)), making sure to "Create a new branch for this commit and start a pull request".
 
 Do not commit changes directly to the master branch.
 

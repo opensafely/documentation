@@ -13,8 +13,7 @@ If the package you need is not available, you can request it as follows:
 ### Requesting additional R packages
 
 You can view all installed packages and their versions for the
-[OpenSAFELY R image
-here](https://github.com/opensafely-core/r-docker/blob/master/packages.csv) and [open an
+[OpenSAFELY R image](https://github.com/opensafely-core/r-docker/blob/master/packages.csv) and [open an
 issue](https://github.com/opensafely-core/r-docker/issues).
 
 ### Requesting additional Stata packages
@@ -25,8 +24,7 @@ issue](https://github.com/opensafely-core/stata-docker/issues).
 ### Requesting additional Python packages
 
 You can view all installed packages and their versions for the
-[OpenSAFELY Python image
-here](https://github.com/opensafely-core/python-docker/blob/main/requirements.in) and [open an
+[OpenSAFELY Python image](https://github.com/opensafely-core/python-docker/blob/main/requirements.in) and [open an
 issue](https://github.com/opensafely-core/python-docker/issues).
 
 ## Manual installation

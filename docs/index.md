@@ -54,7 +54,7 @@ The [Analysis workflow](workflow) gives a high-level view of the steps involved 
 
 See our [installation](install-intro.md) pages for complete installation instructions.
 
-We recommend following one of our OpenSAFELY walkthroughs (see the [notebook here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
+We recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
 
 
 

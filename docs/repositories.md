@@ -45,7 +45,7 @@ The README should also be updated frequently to reflect changes to the repo, and
 
 The README is written in Markdown. 
 If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github). 
-There's a handy cheatsheet for the most useful Markdown syntax [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+There's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the most useful Markdown syntax.
 
 You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's no need to write more than "_first README update_", but typically commits should have a bit more detail than that.
 
@@ -103,7 +103,7 @@ If you don't want any additional files or folders to be accidentally pushed to t
 This is a text document, used by git, which lists all the files and folders that you *don't* want to be uploaded to the remote repo on GitHub when you push changes from your local repo (_untracked_ files).
 As a system for keeping private files private, it's vulnerable to human error so don't rely on it for this purpose.
 
-Instructions for how to list ignored files properly in `.gitignore` are [here](https://git-scm.com/docs/gitignore).
+[Instructions for how to list ignored files properly in `.gitignore`](https://git-scm.com/docs/gitignore).
 
 If you need to create an empty folder to save files in, put a file in the folder that is tracked by git &mdash; by convention this is a [`.gitkeep`](https://stackoverflow.com/a/7229996/4269699) file.
 
