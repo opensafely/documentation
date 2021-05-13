@@ -5,7 +5,7 @@ Take a look at the `codelists/codelist.txt` file in the repo, and note the struc
 opensafely/<codelist-name>/<YYYY-MM-DD>
 ```
 
-If you want a codelist from [codelists.opensafely.org](https://codelists.opensafely.org), then you need to put it in this format in the `codelist.txt` file.
+If you want a codelist from [OpenCodelists](https://codelists.opensafely.org), then you need to put it in this format in the `codelist.txt` file.
 
 For example:
 

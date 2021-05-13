@@ -68,7 +68,7 @@ By convention, this folder contains:
 
 #### `codelists/`
 
-This contains a `.txt` document listing the codelists that you want to retrieve from [codelists.opensafely.org](https://codelists.opensafely.org), and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the [codelists documentation](codelist-intro.md) for more on how to update the codelists.
+This contains a `.txt` document listing the codelists that you want to retrieve from [OpenCodelists](https://codelists.opensafely.org), and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the [codelists documentation](codelist-intro.md) for more on how to update the codelists.
 
 
 #### `output/`

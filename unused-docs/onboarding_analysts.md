@@ -1,7 +1,7 @@
 
 Now find the codelist:
 
-* Go to [codelists.opensafely.org](https://codelists.opensafely.org) and search "transplant".
+* Go to [OpenCodelists](https://codelists.opensafely.org) and search "transplant".
 * Click on the "Solid Organ Transplantation" codelist.
 * Construct the codelist location from the **Codelist ID** and the **Version**. This should be `opensafely/solid-organ-transplantation/2020-04-10`
 * paste this into a new line in `codelists/codelist.txt`

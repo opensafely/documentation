@@ -2,7 +2,7 @@ The main tool for using the OpenSAFELY platform locally is the `opensafely` Pyth
 
 Its main function is to run data extraction and analysis scripts that are specified in the [project pipeline](actions-pipelines.md), in a way that mimics the production environment where real data is accessed.
 
-It also contains other functions relating to the OpenSAFELY workflow, such as updating codelists from [codelists.opensafely.org](https://codelists.opensafely.org).
+It also contains other functions relating to the OpenSAFELY workflow, such as updating codelists from [OpenCodelists](https://codelists.opensafely.org).
 
 ## Installing `opensafely`
 
@@ -100,7 +100,7 @@ Use
 opensafely codelists update
 ```
 
-to retrieve each codelist listed in `/codelists/codelists.txt` from [codelists.opensafely.org](https://codelists.opensafely.org).
+to retrieve each codelist listed in `/codelists/codelists.txt` from [OpenCodelists](https://codelists.opensafely.org).
 It will add (or update) the codelist `.csv` files to the `codelists/` folder.
 
 Use

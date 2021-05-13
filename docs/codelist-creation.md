@@ -2,18 +2,18 @@
 
 The general workflow for creating codelists is as follows:
 
-1. Search [codelists.opensafely.org](https://codelists.opensafely.org) for codelists that meet or nearly meet your requirements and make sure that one doesn't already exist.
-1. If you need to build a new codelist [sign up for an account on codelists.opensafely.org](https://codelists.opensafely.org/accounts/register/).
+1. Search [OpenCodelists](https://codelists.opensafely.org) for codelists that meet or nearly meet your requirements and make sure that one doesn't already exist.
+1. If you need to build a new codelist [sign up for an account on OpenCodelists](https://codelists.opensafely.org/accounts/register/).
 1. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development).
 1. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
 previous research papers.
-1. When logged into [Codelist Builder](https://codelists.opensafely.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
+1. When logged into [OpenCodelists](https://codelists.opensafely.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
 1. Add/remove terms to your codelists to end up with a list.
 1. Save the list as a draft and share the link to your the GitHub issue.
 1. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
 as a group (i.e. at least 2). Detailed reasons are helpful in this issue for referencing in the future.
 1. Once agreed, obtain sign-off.
-1. Clicking "Save changes" makes the codelist available on [codelists.opensafely.org](https://codelists.opensafely.org). Summarise your discussion briefly for the metadata,
+1. Clicking "Save changes" makes the codelist available on [OpenCodelists](https://codelists.opensafely.org). Summarise your discussion briefly for the metadata,
 and reference the issue on the website for more details. This will initially be a draft. When ready, publish it.
 1. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development).
 1. Import the codelist for use in your study definition.
@@ -54,7 +54,7 @@ The current coding systems available in opencodelists are listed below.
 Each codelist must use exactly one of these systems.
 
 The final codelist must be stored in CSV format to be imported 
-into [codelists.opensafely.org](https://codelists.opensafely.org). The codes must be stored in exactly one column.
+into [OpenCodelists](https://codelists.opensafely.org). The codes must be stored in exactly one column.
 There is currently a soft requirement that the codes should be contained in the first column, preferably named according to the CSV column names provided in the table above. The second column is typically a text description of the code. Before uploading a codelist CSV under your OpenSAFELY codelist profile, you should remove the header row as these will be automatically added in a standardised manner.
 
 The codelist page will allow you to upload two columns (a code, and a text description of the code), however, some codelists may require a 'classification' or 'type' column, which classifies the codes into subcategories. For example, when using a codelist for venous thromboemobolism you may wish to classify these codes into deep vein thromboses and pulmonary embolisms, and keep this within a single codelist rather than uploading separate lists for each subcategory of the clinical condition. You can access subcategories of a codelist by using the `filter_codes_by_category` functionality when calling `with_these_clinical_events` as part of your `study_definition`. Uploading more than two columns is currently only possible for the OpenSAFELY core team, so in case this is required for your study please get in touch.
@@ -68,9 +68,9 @@ Once a draft codelist has been agreed, it must be signed-off by a "data expert" 
 "disease expert" (clinical sign-off) from at least two different people. 
 
 
-## Add to [codelists.opensafely.org](https://codelists.opensafely.org)
+## Add to [OpenCodelists](https://codelists.opensafely.org)
 
-* Go to the OpenSAFELY [new codelist page](https://codelists.opensafely.org/codelist/opensafely/).
+* Go to the OpenCodelists [new codelist page](https://codelists.opensafely.org/codelist/opensafely/).
 You will need an editor account. Ask one of the tech team for one if you do not have one.
 * Fill in the fields. Include lots of detail (specific guidance to follow).
     * **CSV data**: [Export your Spreadsheet to a CSV](https://github.com/opensafely/documentation/blob/master/codelist%20creation.md#exporting-a-csv-from-a-spreadsheet) and choose that file.
@@ -96,7 +96,7 @@ re-opened if revisions are required.
 
 ## Import the codelist for use in your study definition
 
-Once the codelist is in [codelists.opensafely.org](https://codelists.opensafely.org), you can retrieve it for use in 
+Once the codelist is in [OpenCodelists](https://codelists.opensafely.org), you can retrieve it for use in 
 your research repo. Follow the [adding codelists to project instructions](codelist-project.md) if you're not sure how to do this.
 
 ## Codelist contributorship
