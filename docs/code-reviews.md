@@ -47,7 +47,7 @@ will help your reviewer do a better job quicker.
 - Naming the order of the files, for example, `01_Data_Extraction.py`, `02_Data_Cleaning.py`, etc.
 - Allow sufficient time for the review.
 
-#### Examples of good commit messages
+### Examples of good commit messages
 ![image](./images/good-pr-pic.png)
 
 ## How can I be a good reviewer?

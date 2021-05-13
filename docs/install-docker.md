@@ -1,5 +1,5 @@
 
-### Why Docker?
+## Why Docker?
 
 Docker allows you to run identical software on all platforms. 
 It creates "containers" that are guaranteed to be identical on any system that can run Docker.
@@ -12,7 +12,7 @@ See the [Testing Your Code section](actions-pipelines.md) for more details on ho
 Unfortunately, Docker is happiest on Linux; on Windows and Mac OSX, installation can be a chore. 
 These notes should help.
 
-### Installation
+## Installation
 
 Windows and Macs have different installation processes. 
 Regardless of machine, you will have to install Docker and make an account on the [Docker Website](https://docs.docker.com/).
@@ -20,7 +20,7 @@ Regardless of machine, you will have to install Docker and make an account on th
 There are two flavours you can install, *Desktop* and *Toolbox*. 
 Docker Desktop is preferred over Docker Toolbox. 
 
-#### Windows
+### Windows
 
 Docker Desktop in Windows offers native support via Hyper-V containers, and so is preferred.
 
@@ -47,13 +47,13 @@ You can check it's up and running by opening a Terminal and entering `docker inf
 
 To be able to access the Windows filesystem from the Docker container (and therefore do development inside the Docker container with results appearing in a place visible to Git), you must explicitly share your hard drive in the Docker settings (click the Docker icon in the Windows system tray; select "Settings"; select "Shared drives").
 
-##### Network login issues
+#### Network login issues
 
 When logged in as a network user, there have been permission problems that have been solved by adding the special "Authenticated Users" group to the `docker-users` group, per [this comment](https://github.com/docker/for-win/issues/785#issuecomment-327237998) ([screenshot of place to do this](https://github.com/docker/for-win/issues/785#issuecomment-344805180)).
 
 Finally, note that when authentication changes (e.g., different logins), you sometimes have to reauthorise Docker's "Shared Drives" (click system tray Docker icon; select "Settings"; select "Shared drives"; click "Reset credentials"; retick the drive to share; click "Apply").
 
-#### Macs
+### Macs
 
 Follow the instructions from the Docker website. 
 You may have to restart your computer during installation.
@@ -65,7 +65,7 @@ This can be accessed via the Applications Folder and once you have logged in, yo
 
 Once this is running, you should be able to use Docker.
 
-#### Gotchas
+## Gotchas
 
 - The first time you use Docker or use a new Docker template, please be aware that it takes a long time to make the build.
 It is easy to think that it has frozen, but it will take quite a while to get going.

@@ -4,7 +4,7 @@ Codelists must be stored as data within your study repository, from where they c
 
 To help you create, edit, and manage codelists, OpenSAFELY provides a web-based tool called [OpenCodelists](https://codelists.opensafely.org). For more information about how to create and edit codelists on the  website, see the [codelists documentation](codelist-intro.md).
 
-### Pulling codelists into your study definition
+## Pulling codelists into your study definition
 
 Many functions for defining variables take *codelists* as arguments.
 Codelists live as CSV files in the `codelists/` directory, and are loaded into variables like this:
@@ -25,7 +25,7 @@ from codelists import *
 
 This keeps it cleaner and easier to read.
 
-### Combining codelists
+## Combining codelists
 
 Codelists can be combined where appropriate.
 This has the advantage of keeping codeslists separate for some studies but easily combining them for others.

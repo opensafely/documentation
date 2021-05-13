@@ -12,7 +12,7 @@ To get set up, you will need:
 * [**git**](https://git-scm.com/) installed on your local machine
 
 
-### New to git
+## New to git
 For Windows or macOS users new to git, the easiest way to do both is to install [**GitHub Desktop**](https://desktop.github.com/).
 This includes a command line version of git and a useful GUI for editing files and gitting.
 To install GitHub Desktop, visit the [GitHub Desktop homepage](https://desktop.github.com/) and click install for your operating system.
@@ -22,12 +22,12 @@ Follow the instructions as appropriate.
 Once signed in, you'll be taken to a _Let's get started_ page.
 You'll need to install other OpenSAFELY requirements before diving in.
 
-### Old to git
+## Old to git
 If you already have git installed and prefer using your existing git workflow, then this is fine.
 
 If you're not sure if you already have git installed, type `git --version` into any command line terminal.
 
-### Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
+## Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
 This is only necessary for running code against the real data. **Ask us for access.**
 If you're not sure if you already have access, go to [*Settings > Organizations*](https://github.com/settings/organizations) in GitHub and see if _opensafely_ is listed.
 

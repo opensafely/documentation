@@ -1,4 +1,4 @@
-### Pre-specifying your Research Question and Writing a Study Protocol
+## Pre-specifying your Research Question and Writing a Study Protocol
 
 !!! note
     This section is a work in progress, and will be further developed.

@@ -35,7 +35,7 @@ When this is done, you should have a folder whose name is the same as the repo o
 
 ## Repository structure
 
-#### `README.md`
+### `README.md`
 
 This file introduces your project, helps people understand the purpose of the repo, and how to navigate and use the code. 
 
@@ -50,28 +50,28 @@ There's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdo
 You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's no need to write more than "_first README update_", but typically commits should have a bit more detail than that.
 
 
-#### `project.yaml`
+### `project.yaml`
 
 This file defines a "pipeline": how all the components of your analysis can run together, efficiently, either on the server or locally on your computer.   See the [pipeline documentation](actions-pipelines.md) for more information.
 
 
-#### `.github/`
+### `.github/`
 
 This is an important folder, used internally by GitHub, that you can happily ignore. **Do not delete**.
 
-#### `analysis/`
+### `analysis/`
 
 By convention, this folder contains:
 
 * Any `study_definition.py` script that defines the study definition
 * Analysis scripts in R, Python or Stata
 
-#### `codelists/`
+### `codelists/`
 
 This contains a `.txt` document listing the codelists that you want to retrieve from [OpenCodelists](https://codelists.opensafely.org), and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the [codelists documentation](codelist-intro.md) for more on how to update the codelists.
 
 
-#### `output/`
+### `output/`
 
 This folder contains:
 
@@ -83,22 +83,22 @@ Be aware that `input.csv` is included in the `.gitignore` file (see below), whic
 
 You don't *have* to store things in these locations, but that's the convention we suggest.
 
-#### `released_outputs/`
+### `released_outputs/`
 
 Outputs that have been reviewed (and possibly edited) to ensure they are not disclosive are stored here.
 
-#### `docs/`
+### `docs/`
 
 Used for documentation.
 
-#### `(other folders)/`
+### `(other folders)/`
 
 Feel free to add more folders to the repo and organise your project as you wish.
 However, we recommend including all active scripts and codelists in the `analysis/` and `codelists/` folders.
 
 If you don't want any additional files or folders to be accidentally pushed to the remote repo, use `.gitignore`.
 
-#### `.gitignore`
+### `.gitignore`
 
 This is a text document, used by git, which lists all the files and folders that you *don't* want to be uploaded to the remote repo on GitHub when you push changes from your local repo (_untracked_ files).
 As a system for keeping private files private, it's vulnerable to human error so don't rely on it for this purpose.

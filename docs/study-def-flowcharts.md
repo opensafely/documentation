@@ -1,4 +1,4 @@
-### Flowcharts (temporary workaround)
+## Flowcharts (temporary workaround)
 
 Many studies will require a flowchart to show inclusion/exclusion of patients in the study. Eventually the numbers of patients excluded/included will be summarised automatically following cohort extract, but for now, a slightly manual approach is required:
 
