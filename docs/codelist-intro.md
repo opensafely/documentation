@@ -24,7 +24,7 @@ there is no need to download or alter these codelists in the study definition, a
 they can be reused.
 
 <div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=ayRtpbcPFLA" frameborder="0" allowfullscreen></iframe>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/ayRtpbcPFLA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ## Applying the principle of open working to making codelists

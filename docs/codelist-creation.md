@@ -132,7 +132,7 @@ This is a short video showing how to build a pseudoBNF medication codelist. For 
 to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video. More on this soon!
 
 <div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
