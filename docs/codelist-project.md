@@ -1,4 +1,4 @@
-## Adding Codelist
+## Adding a codelist
 Take a look at the `codelists/codelist.txt` file in the repo, and note the structure of the existing example codelists that shipped with the research template:
 
 ```bash
@@ -16,7 +16,7 @@ opensafely/asplenia/2020-06-02
 opensafely/current-asthma/2020-05-06
 ```
 
-## Adding CSV to file
+## Adding a CSV to a file
 Download the new codelists into the `codelist/` folder using the `opensafely` program by running
 
 ```bash
