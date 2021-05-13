@@ -11,7 +11,7 @@ APCS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 Diagnoses are coded using ICD-10. Procedures are coded in OPCS-4.
 
-Each row is a in-hospital Spell. In-hospital episodes cannot be queried.
+Each row is a in-hospital spell. In-hospital episodes cannot be queried.
 
 * An **episode** is a period of continuous care under a single responsible consultant.
 * A **spell** is a period of continuous care within a single trust.
@@ -22,7 +22,7 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 
 ## More information
 
-* [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb)) - (private, pending review & publication)
+* [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb) - (private, pending review & publication)
 * [NHS Digital SUS site](https://digital.nhs.uk/services/secondary-uses-service-sus/secondary-uses-services-sus-guidance)
 * [NHS Digital HES site](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/hospital-episode-statistics)
 * [Hospital APC Activity reports](https://digital.nhs.uk/data-and-information/publications/statistical/hospital-admitted-patient-care-activity)
