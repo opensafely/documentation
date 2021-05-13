@@ -8,7 +8,7 @@ This section covers how to develop, run, and test your code to ensure it will wo
 The [cohortextractor](actions-cohortextractor.md) section describes how to make an action which generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
-However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the Project Pipeline.
+However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the project pipeline.
 
 The project pipeline, defined entirely in a `project.yaml` file, is a system for executing your code using a series of _actions_ i.e., a discrete analytical step within the analysis, each of which may depend on previous actions.
 
@@ -65,11 +65,11 @@ In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
 * Each action must include a `run` key which includes an officially-supported command and a version (`latest` will always select the most recent version, but following initial development you should specify the version to ensure reproducibility).
-	* The `cohortextractor` command has the same options as described in the [cohortextractor section](actions-cohortextractor.md).
-	* The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment can take one or more `inputs` which are passed to the code.
+    * The `cohortextractor` command has the same options as described in the [cohortextractor section](actions-cohortextractor.md).
+    * The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment that can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
-	* `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
-	* `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](security-levels.md)) and potentially for publication back to GitHub.
+    * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
+    * `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](security-levels.md)) and potentially for publication back to GitHub.
 * Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
 When writing and running your pipeline, note that:
@@ -94,10 +94,10 @@ To see its options, type `opensafely run --help`.
 
 For `opensafely run` to work:
 
-* You need to have both [Python](install-python) and [Docker](install-docker.md) installed.
+* You need to have both [Python](install-python.md) and [Docker](install-docker.md) installed.
 * The Docker daemon must be running on your machine:
-  * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
-  * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
+    * For Windows users using Docker Desktop, there should be a Docker icon in your system tray.
+    * For Mac users using Docker Desktop, there should be a Docker icon in the top status bar.
 
 
 To run the first action in the example above, using dummy data, you can use:
@@ -162,7 +162,7 @@ To run code for real in the production environment, use the [job server website]
 
 After your project has been executed via the [job server](job-server.md), its outputs will be stored on a secure server.
 
-Users with permission to access to Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
+Users with permission to access Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 
 For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](releasing-files.md) and released via GitHub if they are deemed non-disclosive.
 
@@ -172,7 +172,7 @@ Outputs labelled `highly_sensitive` are not visible.
 
 No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
 
-Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_chorts.log`, `run_model.log`.
+Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_cohorts.log`, `run_model.log`.
 
 Moderately sensitive outputs can be seen in `E:/FILESFORL4/workspaces/<WORKSPACE_NAME>`.
 
