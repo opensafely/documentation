@@ -17,7 +17,7 @@ Some SARS-CoV-2 testing info also flows directly into the primary care record fr
 
 
 ## Overview
-SGSS contains Information on patients receiving a swab test for SARS-CoV-2, from Pillar 1 (NHS and PHE labs) and Pillar 2 (commercial partners).
+SGSS contains information on patients receiving a swab test for SARS-CoV-2, from Pillar 1 (NHS and PHE labs) and Pillar 2 (commercial partners).
 
 It includes "earliest specimen date" (when the sample was taken); "lab report date" (when the result was uploaded to SGSS system); pillar 2 or "other"; result (pos/neg); some demographics.
 
@@ -28,7 +28,7 @@ Multiple tests for the same person are treated as a single 'infection episode', 
 However, negative testing data appears to be incomplete.
 Other viruses/organisms may have a finite episode length, so that any tests occurring within say the first 14 days of the first test are dropped, but for coronavirus the episode length is indefinite, though this may change in future.
 
-Negative test data is unreliable &mdash; DO NOT USE
+**Negative test data is unreliable &mdash; DO NOT USE**
 
 SARS-CoV-2 test results from various sources are also coded [within SystmOne](dataset-systmone.md).
 
