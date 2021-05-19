@@ -40,17 +40,21 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
 
 - **Python**
   The way we specify the data to be extracted for analysis is written in Python, using what we call a **study definition**.
-  We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody familiar with health research, even if you've neveer used python before.
+  We provide easy-to-use Python functions to define your study population and study variables that are designed to be used and understood by anybody familiar with health research, even if you've never used Python before.
   However, some prior knowledge of Python may still be beneficial to create or modify existing functions.
 - **SQL**
-  Behind the scenes, SQL is the language that is used to extract data from the server.
+  Behind the scenes, SQL is the database query language that is used to extract data from the server.
   Some knowledge of SQL may be useful if you want to understand in more detail how the raw patient-level data held in the secure environment is converted into analysis-ready datasets.
 - **Docker**
   We use Docker containers to simulate the production environment on your machine, so you can [test code locally](actions-pipelines.md).
 
+## How should I start learning to use OpenSAFELY?
+
+The [Analysis workflow](workflow) gives a high-level view of the steps involved in an OpenSAFELY research project.
+
 See our [installation](install-intro.md) pages for complete installation instructions.
 
-We recommend following one of our OpenSAFELY walkthroughs (see [here](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow, rather than using the documentation pages alone.
+We recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
 
 
 

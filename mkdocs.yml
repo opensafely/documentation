@@ -9,8 +9,8 @@ nav:
   - Getting Started guide: getting-started.md
 
   - How-to guides:
-      - Inclusion/exclusion flow charts: study-def-flowcharts.md
-      - Releasing files from the server: releasing-files.md
+      - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
+      - Release files from the server: releasing-files.md
   - Reference:
       - Detailed installation guides:
           - Overview: install-intro.md
@@ -19,7 +19,7 @@ nav:
           - Docker: install-docker.md
           - OpenSAFELY CLI: opensafely-cli.md
           - macOS: install-macos.md
-      - Github repository layout: repositories.md
+      - GitHub repository layout: repositories.md
       - Study definitions:
           - Overview: study-def.md
           - Working with dates: study-def-dates.md
@@ -30,7 +30,7 @@ nav:
       - Codelists:
           - Introduction to codelists: codelist-intro.md
           - Building a codelist: codelist-creation.md
-          - Adding codelists to Project: codelist-project.md
+          - Adding codelists to a project: codelist-project.md
           - SNOMED codelists: codelist-snomed.md
       - Actions:
           - Overview: actions-intro.md
@@ -40,7 +40,7 @@ nav:
       - Job server: job-server.md
       - Data sources:
           - Overview: dataset-intro.md
-          - Systmone primary care: dataset-systmone.md
+          - SystmOne primary care: dataset-systmone.md
           - EMIS primary care: dataset-emis.md
           - Externally linked data:
               - Covid-19 test results: dataset-sgsscovid.md
@@ -49,17 +49,17 @@ nav:
               - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Registered deaths: dataset-onsdeaths.md
-  - Good Practice:
-      - Good practice: good-practice-intro.md
-      - The Datalab Open Manifesto: open-data-manifesto.md
+  - Good practice:
+      - Overview: good-practice-intro.md
+      - The DataLab Open Manifesto: open-data-manifesto.md
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
-  - Updating the Documentation: requests-documentation.md
   - Support:
       - Overview: requests-intro.md
       - Requesting new libraries: requests-packages.md
-      - Requesting Study Definition variables: requests-variables.md
+      - Requesting study definition variables: requests-variables.md
+  - Updating the documentation: requests-documentation.md
 
 theme: material
 

@@ -2,10 +2,13 @@ All outputs from OpenSAFELY pipelines are subject to [tiered levels of scrutiny]
 
 The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
-Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>. DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
+Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>**.
 
-NOTE: Individual researchers who have L4 access have responsibility for redacting sensitive information or choosing not to publish it at all. 
-The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
+!!! warning
+    ** DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
+
+!!! note
+    Individual researchers who have Level 4 access have responsibility for redacting sensitive information or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
 
 ## Disclosivity checks and redaction
 
@@ -17,7 +20,7 @@ For example:
   * Summaries of numeric variables describing 5 or fewer patients should be redacted. 
   * Graphical figures whose underlying values describe 5 or fewer patients should be redacted. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. 
   * Counts of zero can be retained. 
-  * Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary.
+  * Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. **It is very unlikely that outputs such as log files should be required for publication outside the secure environment.**
 
 Where possible it should be clear what has been redacted, so for example do not redact table titles and category names. 
 By convention redactions take the form `[REDACTED]` to make redacted elements easier to search for.
@@ -28,7 +31,7 @@ If they are there, delete them.
 This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls. 
 It may be possible for exceptions to be made if they can be justified as being both analytically necessary and definitely non-disclosive. This must be discussed with the OpenSAFELY team.
 
-If you are unsure about anything, ask.
+**If you are unsure about anything, please email us: <disclosurecontrol@opensafely.org>.**
 
 ## Redaction data breaches and how to recover from them
 
@@ -40,7 +43,7 @@ Access to `output-publisher` repositories is intended to be restricted, and thei
 
 For example, if sensitive data was committed to a study repo, it is explicitly not safe to use either git's `revert` command, or to delete the file and commit the deletion. Both of these methods would leave the commit containing the sensitive data in the history of the git repository - and would be trivial for anyone to recover in the future.
 
-Another aspect of git is that it uses a decentralised model. This means that everyone that has a copy of a git repository has their own copy of the entire history. So, if there is a sensitive data leak, it is not sufficient to clean just your own copy of the git history & the history on github, you should also clean the git histories of all other copies.
+Another aspect of git is that it uses a decentralised model. This means that everyone that has a copy of a git repository has their own copy of the entire history. So, if there is a sensitive data leak, it is not sufficient to clean just your own copy of the git history & the history on GitHub, you should also clean the git histories of all other copies.
 
 ## What to do if you find a data breach
 
@@ -50,4 +53,4 @@ If you are able, you can attempt to make the repository safe by temporarily rest
 
 If you are an author of the study, you should also liaise with an engineer from the OpenSAFELY team as soon as possible to safely clean the sensitive information from the repository. Depending on the exact situation this may be relatively straightforward or relatively complicated. You should also attempt to trace all copies of the repository for cleaning or deletion.
 
-
+---8<-- 'includes/glossary.md'

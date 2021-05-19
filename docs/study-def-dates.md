@@ -79,7 +79,7 @@ actions:
         cohort: output/input-2020-01-01.csv
 ```
 
-This can also be used to define a range of dates over which to run the study_definition, usually when working with [Measures](measures.md).
+This can also be used to define a range of dates over which to run the study definition, usually when working with [Measures](measures.md).
 
 ## Dynamic dates
 

@@ -13,7 +13,7 @@ Measures makes this process simple.
 
 Generating measures is a three step process:
 
- 1. **Define a study definition** that includes a `measures` variable, which should be a list calls to the `Measure()` function.
+ 1. **Define a study definition** that includes a `measures` variable, which should be a list of calls to the `Measure()` function.
  2. **Extract the data** by running `generate_cohort` using the `--index-date-range` option to cover the range of time periods we want to calculate the measure for.
  3. **Calculate the measures** by running `generate_measures` which takes the files extracted in step 2 and produces files like `measure_<measure_id>.csv`.
 

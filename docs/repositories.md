@@ -5,7 +5,7 @@ Changes to the repo are audited using `git`, a version control system for record
 The repo's canonical location is on GitHub, a website that makes it easy to use git, and adds extra collaboration and security tools on top.
 You can download a copy of the repo ("clone"), create a development "branch", make changes ("commit") on that branch, then upload these changes ("push") back to the remote repo on GitHub &mdash; for more details see the [GitHub and Git](install-github-and-git.md) section.
 
-GitHub is the means by which code in the repository is passed to the server to be run against the OpenSAFELY database &mdash; it is the only entry point between the secure server and the outside world.
+GitHub is the means by which code in the repository is passed to the server to be run against the OpenSAFELY database &mdash; it is the only entry point between the secure server and the outside world. GitHub is also the means by which approved disclosure-safe outputs are released from the secure server to researchers.
 
 ## Creating a repository for a new project
 
@@ -29,13 +29,13 @@ This is necessary because you can:
 * develop your code using familiar editing tools
 * test and run code without disturbing other contributors
 
-To clone your new repository to your machine, [follow these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) which explains cloning both via GitHub Deskop or via the command line. 
+To clone your new repository to your machine, [follow these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) which explains cloning both via GitHub Desktop or via the command line.
 When this is done, you should have a folder whose name is the same as the repo on your machine.
 
 
 ## Repository structure
 
-#### `README.md`
+### `README.md`
 
 This file introduces your project, helps people understand the purpose of the repo, and how to navigate and use the code. 
 
@@ -45,33 +45,33 @@ The README should also be updated frequently to reflect changes to the repo, and
 
 The README is written in Markdown. 
 If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github). 
-There's a handy cheatsheet for the most useful Markdown syntax [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+There's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the most useful Markdown syntax.
 
-You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's not need to write more than "_first README update_", but typically commits should have a bit more detail than that.
+You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's no need to write more than "_first README update_", but typically commits should have a bit more detail than that.
 
 
-#### `project.yaml`
+### `project.yaml`
 
 This file defines a "pipeline": how all the components of your analysis can run together, efficiently, either on the server or locally on your computer.   See the [pipeline documentation](actions-pipelines.md) for more information.
 
 
-#### `.github/`
+### `.github/`
 
-This is an important folder, used internally by git, that you can happily ignore. **Do not delete**.
+This is an important folder, used internally by GitHub, that you can happily ignore. **Do not delete**.
 
-#### `analysis/`
+### `analysis/`
 
 By convention, this folder contains:
 
 * Any `study_definition.py` script that defines the study definition
 * Analysis scripts in R, Python or Stata
 
-#### `codelists/`
+### `codelists/`
 
-This contains a `.txt` document listing the codelists that you want to retrieve from [codelists.opensafely.org](https://codelists.opensafely.org), and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the [codelists documentation](codelist-intro.md) for more on how to update the codelists.
+This contains a `.txt` document listing the codelists that you want to retrieve from [OpenCodelists](https://www.opencodelists.org), and the `.csv` files of the retrieved codelists themselves. You should not edit the CSV files directly; see the [codelists documentation](codelist-intro.md) for more on how to update the codelists.
 
 
-#### `output/`
+### `output/`
 
 This folder contains:
 
@@ -79,31 +79,31 @@ This folder contains:
 *  By convention, any other files outputted by the analysis scripts that convert `input.csv` into study results, tables, figures, etc.
 
 
-Be aware that `input.csv` is included in the `.gitignore` file (see below), which means it can't be committed and uploaded to Github.
+Be aware that `input.csv` is included in the `.gitignore` file (see below), which means it can't be (easily) committed and uploaded to GitHub.
 
 You don't *have* to store things in these locations, but that's the convention we suggest.
 
-#### `released-output/`
+### `released_outputs/`
 
 Outputs that have been reviewed (and possibly edited) to ensure they are not disclosive are stored here.
 
-#### `docs/`
+### `docs/`
 
 Used for documentation.
 
-#### `(other folders)/`
+### `(other folders)/`
 
 Feel free to add more folders to the repo and organise your project as you wish.
 However, we recommend including all active scripts and codelists in the `analysis/` and `codelists/` folders.
 
-If you don't want any additional files or folders to be pushed to the remote repo, use `.gitignore`.
+If you don't want any additional files or folders to be accidentally pushed to the remote repo, use `.gitignore`.
 
-#### `.gitignore`
+### `.gitignore`
 
 This is a text document, used by git, which lists all the files and folders that you *don't* want to be uploaded to the remote repo on GitHub when you push changes from your local repo (_untracked_ files).
 As a system for keeping private files private, it's vulnerable to human error so don't rely on it for this purpose.
 
-Instructions for how to list ignored files properly in `.gitignore` are [here](https://git-scm.com/docs/gitignore).
+[Instructions for how to list ignored files properly in `.gitignore`](https://git-scm.com/docs/gitignore).
 
 If you need to create an empty folder to save files in, put a file in the folder that is tracked by git &mdash; by convention this is a [`.gitkeep`](https://stackoverflow.com/a/7229996/4269699) file.
 
@@ -117,7 +117,7 @@ If you want to create an empty folder to save files in, but you _never_ want its
 !/.gitignore
 ```
 
-This can be useful if you want to for example add a `output/plots/` subfolder to put your analysis plots into without having to check and create that folder explicitly every time in the analysis script.  This is necessary because the contents `output/` folder is ignored by `.gitignore`.
+This can be useful if you want to, for example, add a `output/plots/` subfolder to put your analysis plots into without having to check and create that folder explicitly every time in the analysis script.  This is necessary because the contents of the `output/` folder is ignored by the default `.gitignore` in the root (the top-level) of the repository.
 
 
 

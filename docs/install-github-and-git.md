@@ -12,7 +12,7 @@ To get set up, you will need:
 * [**git**](https://git-scm.com/) installed on your local machine
 
 
-### New to git
+## New to git
 For Windows or macOS users new to git, the easiest way to do both is to install [**GitHub Desktop**](https://desktop.github.com/).
 This includes a command line version of git and a useful GUI for editing files and gitting.
 To install GitHub Desktop, visit the [GitHub Desktop homepage](https://desktop.github.com/) and click install for your operating system.
@@ -22,18 +22,19 @@ Follow the instructions as appropriate.
 Once signed in, you'll be taken to a _Let's get started_ page.
 You'll need to install other OpenSAFELY requirements before diving in.
 
-### Old to git
+## Old to git
 If you already have git installed and prefer using your existing git workflow, then this is fine.
 
 If you're not sure if you already have git installed, type `git --version` into any command line terminal.
 
-### Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
-This is only necessary for running code against the real data. <font color='red'>Ask us to be added</font>.
-If you're not sure if you already have access, go to [*settings > security*](https://github.com/settings/organizations) in GitHub and see if _opensafely_ is listed.
+## Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
+This is only necessary for running code against the real data. **Ask us for access.**
+If you're not sure if you already have access, go to [*Settings > Organizations*](https://github.com/settings/organizations) in GitHub and see if _opensafely_ is listed.
 
-You will need [**Two-factor authentication**](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa) for your GitHub account to join the organisation.
-To set up 2FA [follow these instructions](https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
-If you're not sure if you already have 2FA enabled, go to [*settings > security > Two-factor authentication*](https://github.com/settings/security) in GitHub and check that at least one method is *Configured*.
+You will need [**two-factor authentication (2FA)**](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa) for your GitHub account to join the organisation. This provides extra security for your account by requiring something you have (for example, an authenticator application on your phone) as well as something you know (your password).
+
+To set up 2FA, [follow these instructions](https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
+If you're not sure if you already have 2FA enabled, go to [*Settings > Security > Two-factor authentication*](https://github.com/settings/security) in GitHub and check that at least one method is *Configured*.
 
 
 

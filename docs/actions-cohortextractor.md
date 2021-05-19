@@ -9,7 +9,7 @@ The dataset it creates can be either:
 * A real dataset created from the OpenSAFELY database, used for the analysis proper.
   Real datasets never leave the secure server, only summary data and other outputs that are derived from them can be released (after disclosivity checks).
 
-`cohortextractor` also performs some other tasks, like creating [Measures](measures.md), and many of the functions that are needed within the a study definition script.
+`cohortextractor` also performs some other tasks, like creating [Measures](measures.md), and many of the functions that are needed within a study definition script.
 
 
 ## Installing `cohortextractor`
@@ -22,15 +22,18 @@ This will use `cohortextractor` via a Docker image rather than a local installat
   <summary>If you need to install, follow these instructions</summary>
 
 
-Go to the Anaconda prompt and submit the following command (or use another method to install the module if you know how):
+Go to the Anaconda prompt and run the following command (or use another method to install the module if you know how):
 
 ```
 pip install opensafely-cohort-extractor
 ```
 
-To check this has installed successfully, submit `cohortextractor --version`.
+To check this has installed successfully, run:
 
-## Updating `cohortextractor`
+```
+cohortextractor --version
+```
+
 If you need to install a new version, update with:
 
 ```
@@ -78,7 +81,7 @@ generate_study_cohort
       data: output/input_cohort2.csv
 ```
 
-You can change the location of the outputted `.csv` file using the `--ouput-dir` option, for example `run: cohortextractor:latest generate_cohort --ouput-dir output/cohorts`
+You can change the location of the outputted `.csv` file using the `--output-dir` option, for example `run: cohortextractor:latest generate_cohort --output-dir output/cohorts`
 
 
 ---8<-- 'includes/glossary.md'

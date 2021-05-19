@@ -30,7 +30,7 @@ in **exactly the same way** it is run in the secure environment: even a slight
 mismatch in the versions of the software could cause bugs and delays.
 
 OpenSAFELY is also designed to encourage analysts to adopt best-practice
-software development processes, like using the `git` for version control.  If
+software development processes, like using `git` for version control.  If
 you're new to these concepts, there may be quite a lot to learn, and you'll need
 to use further software to work with them. The investment will be worthwhile:
 you'll find your software quality and efficiency will benefit hugely.
@@ -52,13 +52,16 @@ few things. Most important is the `opensafely` tool; to install this, you must
    clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
    from the menu. ![Finding Anaconda Prompt on
    Windows](./images/win-anaconda-prompt.png)
-3. To install the OpenSAFELY command line tool, you first need to install a tool
-   called `pip`.  Do this by typing `conda install pip` and pressing ++enter++.
-4. Now you can install the command line tool, by typing `pip install opensafely`, and
-   pressing ++enter++
-5. You should see some output. To check this has installed successfully, type
-   `opensafely --help` and press ++enter++.
-6. This should show help text on how to use the `opensafely` command.
+3. To install the OpenSAFELY command line tool, you first need to
+   install a tool called `pip`. ([`pip`](https://pip.pypa.io/en/stable/)
+   is used for installing Python software and libraries.)
+   Do this by typing `conda install pip` and pressing ++enter++.
+4. Now you can install the OpenSAFELY command line tool, by typing `pip
+   install opensafely`, and pressing ++enter++. You should see a message
+   to the effect of `Successfully installed opensafely`.
+5. To confirm everything is working, type `opensafely` and press
+   ++enter++. If the OpenSAFELY tool is working, this will show help
+   text on how to use the `opensafely` command.
 
 ### Install Docker
 
@@ -73,9 +76,9 @@ few things. Most important is the `opensafely` tool; to install this, you must
    these instructions](https://docs.docker.com/docker-for-windows/install/).
    Otherwise, follow the instructions for [installing on Windows
    Home](https://docs.docker.com/docker-for-windows/install-windows-home/).
-   Unfortunately, we've had reports that installing in Windows Home can be very
-   challenging. Please let us know if you can help us improve the documentation
-   here.
+   Unfortunately, we've had reports that installing in Windows Home can
+   be very challenging. Please let us know if you can help us [improve
+   the documentation](requests-documentation.md) here.
 2. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
    so, an animation runs in the notification area:<br>
    ![image](images/docker-windows-starting.png)
@@ -88,22 +91,30 @@ few things. Most important is the `opensafely` tool; to install this, you must
    network connection. It is downloading a reproducible environment identical
    to that installed in the OpenSAFELY secure environment.
 
-### Set up Github and Github Desktop
+### Set up GitHub and GitHub Desktop
 
-To use OpenSAFELY, you must have a Github account. Github is a widely-used
+To use OpenSAFELY, you must have a GitHub account. GitHub is a widely-used
 website for storing and collaborating on software, using the version control
-software `git`. Github is where your open, reproducible research will be
+software `git`. GitHub is where your open, reproducible research will be
 published.
 
-The quickest way to get started is to [install Github
+The quickest way to get started is to [install GitHub
 Desktop](https://desktop.github.com/). The installation process will also walk
 you through the process of creating an account, if you don't already have one.
 
+(If you already have `git` configured and are reasonably confident using
+it, GitHub Desktop is not required. You need to be able to `clone` the
+template repository that you will create, then `add`, `commit` and
+`push` changes to that repository to GitHub.)
+
 ## 2. Set up your first study
 
-### Create a new repository in Github
+### Create a new repository in GitHub
 
-1. Go to the [Github website](https://github.com), and ensure you're logged in.
+Here, you'll copy our OpenSAFELY research template to your own GitHub
+account, for developing your own study:
+
+1. Go to the [GitHub website](https://github.com), and ensure you're logged in.
    You'll be able to tell by looking for your profile at the top right of the
    page.
 2. Visit our [research template
@@ -117,7 +128,10 @@ you through the process of creating an account, if you don't already have one.
    ![image](images/create-repository-name.png)
 6. Choose a repository visibility.  This would usually be "Public".
    ![image](images/create-repository-public-private.png)
-7. Click **Create repository from template**
+7. There is an "Include all branches" option: it can be left disabled.
+   (You only need the main branch; the other branches are
+   work-in-progress changes.)
+8. Click **Create repository from template**
 
 ### Clone it to your computer
 
@@ -275,16 +289,17 @@ the action creates. Line 17 says that the items indented below it are
 *moderately* sensitive, that is they may be released to the public after a
 careful review (and possible redaction). Line 18 says that there's one output
 file, which will be found at `output/descriptive.png`.
-5. Type `opensafely run run_all --force-run-dependencies`. This should end by telling you a file
-   containing the histogram has been created. Open it, and check it looks right.
+5. Type `opensafely run run_all --force-run-dependencies` and press ++enter++.
+   This should end by telling you a file containing the histogram has been
+   created. Open it, and check it looks right.
 
 ## 4. Push your study to github, and watch the automated tests pass
 
-Now that your study does something interesting, you should "*push*" it to Github,
+Now that your study does something interesting, you should "*push*" it to GitHub,
 where it can be viewed by others. Your repository is automatically configured
 with tests to verify the project is runnable, each time you push.
 
-1. Open Github Desktop to view your repository. When you make changes to files in
+1. Open GitHub Desktop to view your repository. When you make changes to files in
    your text editor and save them locally, you also see the changes in
    GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
    checkbox at the top of the list.<br>
@@ -295,8 +310,8 @@ with tests to verify the project is runnable, each time you push.
    **Description** field. Press the blue button to make the commit.<br>
   ![image](images/commit-message.png)
 3. Click **Push origin** to push your local changes to the remote repository on
-   Github ![image](images/push-to-github.png)
-4. In a web browser, visit your repository in Github. Click on the **Actions**
+   GitHub ![image](images/push-to-github.png)
+4. In a web browser, visit your repository in GitHub. Click on the **Actions**
    tab ![image](images/github-actions-tab.png)
 5. You'll see a *Workflow* running with the *commit message* of your last
    commit. The workflow verifies that the command `opensafely run run_all` can
@@ -308,7 +323,7 @@ with tests to verify the project is runnable, each time you push.
 
 Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it
-to Github.
+to GitHub.
 
 To write a real study and run it against actual patient data, you will first
 need to get permission for your project from NHS England, the data controllers
@@ -316,7 +331,7 @@ for OpenSAFELY's data. We are currently developing an online application
 process, but for now just drop us an email at
 [team@opensafely.org](mailto:team@opensafely.org).
 
-In the mean time, to a look at the rest of our documentation for more
+In the meantime, take a look at the rest of our documentation for more
 detail on the subjects covered in this tutorial. For example:
 
 * The [full study definition reference](study-def.md) describes all the
@@ -329,7 +344,7 @@ detail on the subjects covered in this tutorial. For example:
   automatically within the secure EHR vendor environments. Right now you can
   only use this to run real jobs, but we're working on adding the ability to
   test your repository against dummy data.
-* You'll be using `git` and Github a lot, and it's a critical but complex part
+* You'll be using `git` and GitHub a lot, and it's a critical but complex part
   of the OpenSAFELY ecosystem. If you're not familiar with these concepts, it's
   a good idea to read our [git workflow page](git-workflow.md) and its linked content.
 

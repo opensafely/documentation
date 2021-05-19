@@ -1,4 +1,5 @@
-\* **Please read even if you already have Python installed** \*
+!!! warning
+    **Please read even if you already have Python installed**
 
 For security, consistency, and readability, OpenSAFELY provides an API built in [**Python**](https://www.python.org/) for using the platform. 
 This API includes script-based functions for specifying the patients and variables that make up a study dataset (using a [study definition](study-def.md)),
@@ -16,20 +17,19 @@ This will help avoid some fiddly annoyances when dealing with multiple versions/
 
 <!--If you already have Python installed on your machine, you should still be able install Anaconda without any inteference. <font color='red'>(is this true?)</font> Alternatively, you're welcome to use any existing or fresh Python installation you want if you're happy to troubleshoot problems yourself. -->
 
-To install, [follow these instructions](https://docs.anaconda.com/anaconda/install/).  
-Accept the default/recommended settings unless you understand the consequences of changing them.
+To install, [follow these instructions](https://docs.anaconda.com/anaconda/install/). Accept the default/recommended settings unless you understand the consequences of changing them.
 
 This should have added Python and Anaconda Prompt to your machine (as well as a few other things). 
-To to verify that you can run Python with Anaconda Prompt, open it and submit `python --version`.
+To verify that you can run Python with Anaconda Prompt, open it and run `python --version`.
 
 <!--If you installed a version of python earlier than `python 3.8` then you should submit `conda install -c anaconda python=3.8` to update your installation. It can take a while (up to an hour) as it needs to identify and resolve incompatible packages from the previous installation. -->
 
 You should use the _Anaconda Prompt_ whenever you want to use the `opensafely` package. 
 Go to the [`opensafely` CLI section](opensafely-cli.md) for instructions on how to install this module. 
 
-## mac users
+## Mac users
 
-<font color='red'>not yet documented</font>
+**Not yet documented**
 
 
 ---8<-- 'includes/glossary.md'

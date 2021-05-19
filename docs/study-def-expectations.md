@@ -5,7 +5,7 @@ OpenSAFELY requires you to define *expectations* in your study definition: these
 ## Defining `return_expectations`
 
 Every variable in a study definition must have a `return_expectations` argument defined (with the exception of the `population` variable).
-This defines the general shape or distribution of the variables in the dummy data used for developing the code.  It is currently relatively unsophisticated; each variable is generated independently of all others. This is sufficient for testing that it is possible to run your study from start to finish in most cases, but sometimes not. You can find (and contribute to!) discussions on improving the dummy data framework [here](https://github.com/opensafely/cohort-extractor/issues/221)
+This defines the general shape or distribution of the variables in the dummy data used for developing the code.  It is currently relatively unsophisticated; each variable is generated independently of all others. This is sufficient for testing that it is possible to run your study from start to finish in most cases, but sometimes not. You can find (and contribute to!) discussions on improving the [dummy data framework](https://github.com/opensafely/cohort-extractor/issues/221).
 
 ### Specifying default distributions
 
@@ -25,7 +25,7 @@ study = StudyDefinition(
 
 In this case, we are saying that:
 
-* Events dates are expected to be distributed between 1900 and today, with exponentially-increasing frequenc, with events occurring for 50% of patients.
+* Events dates are expected to be distributed between 1900 and today, with exponentially-increasing frequency, with events occurring for 50% of patients.
 * Values for binary variables are expected to be positive 50% of the time.
 * Values for categorical variables are expected to be present (i.e., non-missing) 50% of the time.
 * Values for numeric variables are expected to be present (i.e., non-missing) 50% of the time.

@@ -6,7 +6,7 @@ We are using modern open working methods to carry out important analyses whilst 
 We believe that researchers should be openly sharing all analytic cods and development insights in order to accelerate development of analyses and tools by other groups with other datasets. 
 
 Our tools are build using Python, SQL and Docker. Analyses can be carried out in Python, R or Stata. 
-All our code including analytic code is shared on Github and is open access for efficiency, reuse and collaboration. 
+All our code including analytic code is shared on GitHub and is open access for efficiency, reuse and collaboration. 
 We encourage external review and reuse of our code. 
 
 
