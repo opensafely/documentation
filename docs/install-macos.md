@@ -57,7 +57,7 @@ available commands:
     help      Show this help message and exit
     run       Run project.yaml actions locally
     codelists
-              Commands for interacting with https://codelists.opensafely.org/
+              Commands for interacting with https://www.opencodelists.org/
 ```
 
 Set up Docker by opening the app you installed earlier:

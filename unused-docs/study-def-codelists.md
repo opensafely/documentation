@@ -27,7 +27,7 @@ You can read more about how to create and edit codelists in the [Codelists](code
 
 Codelists can be combined where appropriate. 
 This has the advantage of keeping codeslists separate for some studies but easily combining them for others. 
-This removes the need for manually combining two or more into a new codelist, and naming it and uploading it to [OpenCodelists](https://codelists.opensafely.org).
+This removes the need for manually combining two or more into a new codelist, and naming it and uploading it to [OpenCodelists](https://www.opencodelists.org).
 
 Codelists can be combined using the `combine_codelist` function from `cohortextractor` for example as follows:
 
