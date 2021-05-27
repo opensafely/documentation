@@ -1,39 +1,5 @@
 ## Background
 
-In its current form, OpenSAFELY can be trickier for people who are not
-software developers to get running.
-
-This draft document is currently written in parallel to the [Getting
-Started guide](getting-started.md); *please reference that guide* to
-follow along. This, therefore, is a more terse document explaining an
-alternative route to following the tutorial, but without duplicating the
-tutorial content.
-
-There are several online environments for editing and running code, and
-publishing code changes to GitHub that are accessible in browser and
-don't require installation of extra tools on your own computer.
-
-[Gitpod](https://gitpod.io) is an online service that provides a coding
-environment. It interacts with GitHub and other code collaboration
-services to allow you to develop code entirely online using just a
-modern web browser. *This is by no means an endorsement of Gitpod over
-other available alternatives; other services may well support
-OpenSAFELY.* However, DataLab developers investigated have followed the
-Getting Started tutorial and found that Gitpod is sufficient for trying
-OpenSAFELY out.
-
-## What is *not* required
-
-**If you follow this guide, you do not need to install any software or
-clone repository files to your own computer.**
-
-## Requirements
-
-* A network connection with access to [Gitpod](https://gitpod.io).
-* A modern browser.
-* A GitHub account. (Other code platform accounts can be used with Gitpod, but
-  OpenSAFELY uses GitHub.)
-
 ## Gitpod details and limitations
 
 * The free Gitpod service currently has a 50 hours per month usage
@@ -52,27 +18,8 @@ clone repository files to your own computer.**
 * If you go to `https://gitpod.io` while logged in, the page will show
   you your Gitpod workspaces.
 
-## Setting up a repository on GitHub
-
-* Create a public repository from the OpenSAFELY study template for you
-  to work in, as in the ["Create a new repository in
-  GitHub"](getting-started/#2-set-up-your-first-study) section.
-  * *You do not need to clone the repository to your own machine.* We
-    will later access this repository from GitHub via Gitpod.
-
 ## Setting up an account on Gitpod
 
-* Visit Gitpod's site and click the "Try now" button, and then "Continue
-  with GitHub".
-* If you are already logged into GitHub, it will ask you to confirm
-  whether you want Gitpod to access some of your details on GitHub
-  (initially, this should just be your email address). This is necessary
-  to create a Gitpod account.
-  * If you are not logged into GitHub, you will be prompted to login to
-    GitHub first.
-* If you copy the GitHub URL for your study repository, you can now
-  create a URL of the form:
-  `https://gitpod.io/#https://github.com/<your_username>/<your_repository_name>`
 * This opens an interactive Visual Studio Code environment for editing
   the files in your study repository. This environment includes a
   command-line shell for actually installing software and running
@@ -85,36 +32,6 @@ clone repository files to your own computer.**
     `/workspace/<name of your repository>`.
 
 ## OpenSafely tutorial
-
-### Install and test setup
-
-Python 3 is already installed, so we can use the Python package
-manager, `pip` to install the OpenSAFELY package that we need.
-
-Inside the terminal in the bottom right of the Visual Studio Code
-environment, run `pip install opensafely`. The output should look like:
-
-```
-$ pip install opensafely
-Collecting opensafely
-…
-Installing collected packages: opensafely
-Successfully installed opensafely-1.8.1
-```
-
-We can follow the [test in the Getting Started guide](getting-started/#install-docker) to ensure everything
-works. Just run `opensafely pull cohortextractor` and you should see
-something like:
-
-```
-$ opensafely pull cohortextractor
-…
-Status: Downloaded newer image for ghcr.io/opensafely-core/cohortextractor:latest
-ghcr.io/opensafely-core/cohortextractor:latest
-Cleaning up old images
-Total reclaimed space: 0B
-```
-
 As this works, we can [test the blank
 study](getting-started.md#test-the-blank-study-on-your-computer) via
 `opensafely run run_all`:
