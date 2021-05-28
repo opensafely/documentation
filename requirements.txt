@@ -73,7 +73,7 @@ numpy==1.19.2
     #   pyarrow
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.31.0
+opensafely-cohort-extractor==1.32.0
     # via -r requirements.in
 opensafely-jobrunner==2.1.6
     # via opensafely-cohort-extractor
