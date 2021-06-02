@@ -11,7 +11,6 @@ nav:
   - How-to guides:
       - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
       - Release files from the server: releasing-files.md
-      - Run OpenSAFELY in browser via gitpod.io: gitpod.md
   - Reference:
       - Detailed installation guides:
           - Overview: install-intro.md
