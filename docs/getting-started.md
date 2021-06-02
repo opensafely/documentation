@@ -194,22 +194,25 @@ account, for developing your own study:
     working with OpenSAFELY are the same regardless of using Windows,
     Linux or macOS.
 
+    To preserve usage minutes on Gitpod, you can manually stop a Gitpod
+    workspace as soon as you have finished with it. A workspace can be
+    stopped either in the workspace via the orange Gitpod button and
+    then selecting "Gitpod: Stop workspace" in the dropdown menu. or via
+    visiting `https://gitpod.io`, hovering on the workspace,
+    left-clicking on the vertical dots (`⋮`) and selecting "Stop".
+
     On the free plan, Gitpod workspaces allow 30 minutes of inactivity
-    before the workspace stops running. The workspace is not immediately
-    deleted; you have several days to open a stopped workspace before it
-    is deleted. You can see which Gitpod workspaces you have open by
+    before the workspace stops running. Stopped workspaces are not
+    immediately deleted; you have several days to open a stopped
+    workspace before its deletion.
+
+    You can see which Gitpod workspaces you have open by
     visiting `https://gitpod.io` when logged into Gitpod, or clicking
     the orange Gitpod button in the bottom-left of the screen and
     selecting "Gitpod: Open dashboard". The stopped workspaces are
     visible by changing the search filter from "Active" to "All", and
     you can open a stopped workspace by hovering on the workspace,
     left-clicking on the vertical dots (`⋮`) and selecting "Open".
-
-    To preserve usage minutes on Gitpod, you can manually stop a Gitpod
-    workspace, either in the workspace via the orange Gitpod button
-    ("Gitpod: Stop workspace" in the menu) or via visiting
-    `https://gitpod.io`, hovering on the workspace, left-clicking on the
-    vertical dots (`⋮`) and selecting "Stop".
 
     <h3>Install **opensafely**</h3>
 
@@ -252,6 +255,7 @@ account, for developing your own study:
     (currently) first install the Python programming language.
 
     <h3>Install Python and **opensafely**</h3>
+
     1. [Download and run the Anaconda Python
        installer](https://docs.anaconda.com/anaconda/install/windows/).
     2. When you've done, to verify your installation, open Anaconda Prompt by
@@ -271,7 +275,7 @@ account, for developing your own study:
 
     <h3>Install Docker</h3>
 
-    !!! note "Windows alert"
+    !!! note
         On Windows, installing Docker is usually
         straightforward, but can sometimes be complicated, depending on your exact
         version and configure of Windows. If you run into problems, our more
@@ -306,7 +310,7 @@ study.
 === "Web browser (online)"
 
     When you open the Gitpod workspace, the associated code from GitHub
-    will already be there.
+    will already be cloned and available in the code editor.
 
 === "Windows (local)"
 
@@ -325,8 +329,8 @@ study.
 === "Web browser (online)"
 
     The study will already be prepared to run. Run the `opensafely`
-    commands in the "terminal" available at the bottom-right of the
-    Gitpod workspace.
+    commands in the terminal available at the bottom-right of the Gitpod
+    workspace.
 
 === "Windows (local)"
 
@@ -381,10 +385,10 @@ Use -f option to force everything to re-run
 
     <h4>Opening files</h4>
 
-    The Visual Studio code editor has a file Explorer that you can use
+    The Visual Studio Code editor has a file Explorer that you can use
     to browse the files and appears when first starting the Workspace.
     
-    You can press ++Control+Shift+E++ to switch to it, or select it via
+    You can press ++ctrl+shift+e++ to switch to it, or select it via
     the icons at the side.
 
     Clicking on a file name in the Explorer will open the file in a tab
@@ -394,7 +398,7 @@ Use -f option to force everything to re-run
 
     <h4>Downloading files from Gitpod to your local machine</h4>
 
-    Right-click a file in the Explorer and select "Download".
+    Right-click a file in Visual Studio Code's Explorer and select "Download".
 
 === "Windows (local)"
 
@@ -411,11 +415,11 @@ make your life much easier. The steps here use Visual Studio Code, which
 is free of charge and available for Windows, macOS and Linux. If you are
 already comfortable using another editor, that will also be suitable.
 
-=== Web browser (online)
+=== "Web browser (online)"
 
     Gitpod's workspaces use Visual Studio Code as the default editor.
 
-=== Windows (local)
+=== "Windows (local)"
 
     Download and install
     [Visual Studio Code](https://code.visualstudio.com/download).
@@ -459,9 +463,9 @@ every patient to have a value, and the distribution of ages to match that of the
 real UK population*"
 1. At the command line, run `opensafely run run_all
    --force-run-dependencies`. A new file will be created in the folder
-   `output/input.csv`. Open that file (using Visual Studio Code's
-   Explorer, or software like Excel) and you'll see it now contains an
-   age for 1000 randomly generated patients.
+   `output/input.csv`. Open that file (by left-clicking the filename in
+   Visual Studio Code's Explorer, or software like Excel) and you'll see
+   it now contains an age for 1000 randomly generated patients.
 
 ### Add a chart
 
@@ -529,9 +533,9 @@ Now that your study does something interesting, you should "*push*" it to GitHub
 where it can be viewed by others. Your repository is automatically configured
 with tests to verify the project is runnable, each time you push.
 
-=== Web browser (online)
+=== "Web browser (online)"
 
-    <h3>Enable Gitpod to be able to push your changes to GitHub</h3>
+    <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
     
     1. When logged into Gitpod, visit their [Settings
        page](https://gitpod.io/settings). Or, alternatively, in a Gitpod
@@ -542,39 +546,45 @@ with tests to verify the project is runnable, each time you push.
        GitHub details, click the three vertical dots (`⋮`) and select
        "Edit Permissions". In the list, tick "public\_repo", which gives
        your Gitpod account "write access to code in public repositories
-       and organizations" on GitHub. (There is an another permission
-       that you have to enable for access to code in private
-       repositories, though this is not necessary for this walkthrough.)
+       and organizations" on GitHub. (There is another permission that
+       you have to enable for access to code in private repositories,
+       though this is not necessary for this walkthrough.)
 
     <h3>Add your changes to the local repository</h3>
 
-    (If you know how to use command-line Git, those commands work within
-    Gitpod's terminal for `add`ing, `commit`ting and `push`ing.)
+    (If you know how to use command-line Git, this works within
+    Gitpod's terminal if you do not want to use Visual Studio Code's
+    Source Control feature.)
 
     Back in the Gitpod workspace, open Source Control either by
     selecting the icon that has dots connected by lines on the left-hand
-    side, or by pressing Ctrl+Shift+G together. (**TODO: use keyboard
-    formatting with double plus.)
+    side, or by pressing ++ctrl+shift+g++ together.
 
-    Source Control should list the changes to the files that are saved
-    (**TODO: Visual Studio Code in Gitpod has Auto Save enabled.**). If
-    you left-click on a file, you'll see the changes to the file from
-    the current repository state. Right-click on the files that you want
-    to add the changes to the repository and select "Stage Changes".
-    These move into the "Staged Changes" section.
+    When files in the repository are edited and then saved, Source
+    Control should list those changes.  (**TODO: Visual Studio Code in
+    Gitpod has Auto Save enabled.**). If you left-click on a file in
+    Source Control, you'll see how your copy of the file has changed
+    from the previous repository state. Right-click on the files that you
+    want to add the changes to the repository and select "Stage
+    Changes". "Staged" changes then appear in the "Staged Changes"
+    section.
     
     Now type a message into the text box above that will describe the
-    changes.  When ready, you
-    can then press Ctrl+Enter to *commit* the changes to the repository
-    to add them to version control.
+    staged changes. When ready, you can then press ++ctrl+enter++ to
+    *commit* the staged changes to the repository to add them to the
+    repository as stored in the workspace.
 
     <h3>Push the changes to GitHub</h3>
+
+    The changes have been stored in the workspace's local copy of the
+    repository. We now need to *push* the repository's changes to
+    GitHub.
 
     Hover over "Source Control", click the three horizontal dots (`⋯`)
     next to "Source Control" and then select "Push". This should submit
     your changes to the GitHub repository that you created earlier.
 
-=== Windows (local)
+=== "Windows (local)"
 
     <h3>Push the changes to GitHub with GitHub Desktop</h3>
 
@@ -593,6 +603,7 @@ with tests to verify the project is runnable, each time you push.
 
 In a web browser, visit your repository in GitHub. Click on the **Actions**
 tab ![image](images/github-actions-tab.png)
+
 You'll see a *Workflow* running with the *commit message* of your last
 commit. The workflow verifies that the command `opensafely run run_all` can
 run successfully. If it's yellow, it's still running. If it's red, it
