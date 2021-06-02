@@ -165,9 +165,10 @@ account, for developing your own study:
 
 ## 3. Setup the required software
 
+<!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
 === "Web browser (online)"
 
-    ### Opening your repository with Gitpod
+    <h3>Opening your repository with Gitpod</h3>
 
     **TODO: Install the software in the template via a `.gitpod.yml` to
     remove the need for these instructions.**
@@ -184,7 +185,7 @@ account, for developing your own study:
     you'll see a "Log in" screen. You can use your GitHub account to
     login: click "Continue with GitHub".
 
-    ### Gitpod workspaces
+    <h3>Gitpod workspaces</h3>
 
     A Gitpod workspace containing a code editor, defaulting to Visual
     Studio Code and command-line interface "terminal" should then
@@ -210,7 +211,7 @@ account, for developing your own study:
     `https://gitpod.io`, hovering on the workspace, left-clicking on the
     vertical dots (`⋮`) and selecting "Stop".
 
-    ### Install **opensafely**
+    <h3>Install **opensafely**</h3>
 
     OpenSAFELY uses the Python programming language. Python is already
     installed in Gitpod, so we can use the Python package manager, `pip`
@@ -229,7 +230,7 @@ account, for developing your own study:
     Successfully installed opensafely-1.8.1
     ```
 
-    ### Check `opensafely` is working
+    <h3>Check `opensafely` is working</h3>
 
     Run `opensafely pull cohortextractor` and you should see something like:
 
@@ -250,7 +251,7 @@ account, for developing your own study:
     few things. Most important is the `opensafely` tool; to install this, you must
     (currently) first install the Python programming language.
 
-    ### Install Python and **opensafely**
+    <h3>Install Python and **opensafely**</h3>
     1. [Download and run the Anaconda Python
        installer](https://docs.anaconda.com/anaconda/install/windows/).
     2. When you've done, to verify your installation, open Anaconda Prompt by
@@ -268,7 +269,7 @@ account, for developing your own study:
        ++enter++. If the OpenSAFELY tool is working, this will show help
        text on how to use the `opensafely` command.
 
-    ### Install Docker
+    <h3>Install Docker</h3>
 
     !!! note "Windows alert"
         On Windows, installing Docker is usually
@@ -309,7 +310,7 @@ study.
 
 === "Windows (local)"
 
-    ### Clone it to your computer
+    <h3>Clone it to your computer</h3>
 
     1. Look above the list of files in your new repo for a **Code** button. ![image](images/code-button.png)
     2. Click **Open with GitHub Desktop** to clone and open the repository with
@@ -378,7 +379,7 @@ Use -f option to force everything to re-run
 
 === "Web browser (online)"
 
-    #### Opening files
+    <h4>Opening files</h4>
 
     The Visual Studio code editor has a file Explorer that you can use
     to browse the files and appears when first starting the Workspace.
@@ -391,7 +392,7 @@ Use -f option to force everything to re-run
 
     TODO: screenshot showing selecting the Explorer.
 
-    #### Downloading files from Gitpod to your local machine
+    <h4>Downloading files from Gitpod to your local machine</h4>
 
     Right-click a file in the Explorer and select "Download".
 
@@ -530,7 +531,7 @@ with tests to verify the project is runnable, each time you push.
 
 === Web browser (online)
 
-    ### Enable Gitpod to be able to push your changes to GitHub
+    <h3>Enable Gitpod to be able to push your changes to GitHub</h3>
     
     1. When logged into Gitpod, visit their [Settings
        page](https://gitpod.io/settings). Or, alternatively, in a Gitpod
@@ -545,7 +546,7 @@ with tests to verify the project is runnable, each time you push.
        that you have to enable for access to code in private
        repositories, though this is not necessary for this walkthrough.)
 
-    ### Add your changes to the local repository
+    <h3>Add your changes to the local repository</h3>
 
     (If you know how to use command-line Git, those commands work within
     Gitpod's terminal for `add`ing, `commit`ting and `push`ing.)
@@ -567,7 +568,7 @@ with tests to verify the project is runnable, each time you push.
     can then press Ctrl+Enter to *commit* the changes to the repository
     to add them to version control.
 
-    ### Push the changes to GitHub
+    <h3>Push the changes to GitHub</h3>
 
     Hover over "Source Control", click the three horizontal dots (`⋯`)
     next to "Source Control" and then select "Push". This should submit
@@ -575,7 +576,7 @@ with tests to verify the project is runnable, each time you push.
 
 === Windows (local)
 
-    ### Push the changes to GitHub with GitHub Desktop
+    <h3>Push the changes to GitHub with GitHub Desktop</h3>
 
     1. Open GitHub Desktop to view your repository. When you make changes to files in
        your text editor and save them locally, you also see the changes in
