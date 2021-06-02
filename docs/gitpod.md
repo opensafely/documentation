@@ -11,12 +11,6 @@
 * The free Gitpod service only allows working with *public*
   repositories, although there is a 30 day trial for working with
   *private* repositories.
-* There are paid Gitpod options and, if you're very keen, a self-hosted
-  option.
-* You have to allow some limited access to GitHub from your own GitHub
-  account.
-* If you go to `https://gitpod.io` while logged in, the page will show
-  you your Gitpod workspaces.
 
 ## Setting up an account on Gitpod
 
@@ -30,41 +24,6 @@
     regardless of running on Windows, macOS or Linux.)
   * The working directory for your repository on the virtual server is
     `/workspace/<name of your repository>`.
-
-## OpenSafely tutorial
-As this works, we can [test the blank
-study](getting-started.md#test-the-blank-study-on-your-computer) via
-`opensafely run run_all`:
-
-```
-$ opensafely run run_all
-…
-=> generate_study_population
-   Completed successfully
-
-   log file: metadata/generate_study_population.log
-   outputs:
-     output/input.csv  - highly_sensitive
-```
-
-This generates `output/input.csv` which has no data. It can be viewed in
-the Visual Studio interface by clicking in the file Explorer to the
-left-hand side, clicking the `output` directory to open it and then
-clicking on the file. This opens a new tab containing the file.
-
-It is also possible to download files in this environment by
-right-clicking on a file and selecting "Download".
-
-As the [blank study
-test](getting-started.md#test-the-blank-study-on-your-computer) does, we
-can run the `opensafely` command again to confirm everything is
-up-to-date:
-
-```
-$ opensafely run run_all
-=> All actions already completed successfully
-   Use -f option to force everything to re-run
-```
 
 ### Modify the study to add an "age" column
 
