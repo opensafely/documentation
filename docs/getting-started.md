@@ -21,15 +21,18 @@ To use the OpenSAFELY framework effectively, you need to:
 
 ## Running OpenSAFELY
 
-There are two options to work with OpenSAFELY:
+### Options for running OpenSAFELY
 
-1. *Use an online environment where much of the needed software is
-   already installed for you*.
+In this guide, we've documented two different ways to work with OpenSAFELY:
 
-     **TODO: add configuration so that we can change "much of" to "all
-     of".** Services such as [Gitpod](https://gitpod.io) provide online
+1. *Use an online environment where the needed software is already
+   installed for you*.
+
+     Services such as [Gitpod](https://gitpod.io) provide online
      computing environments; Gitpod currently has a free plan with a
-     generous monthly usage limit for working with public code.
+     generous monthly usage limit for working with public code. We've
+     adapted our demonstration research study and this guide such that
+     you can follow along with Gitpod, should you choose to do so.
 
      For this option, the only requirement is a modern web browser (e.g.
      Chrome, Edge, Firefox, Safari).
@@ -43,8 +46,8 @@ There are two options to work with OpenSAFELY:
        work computer;
      * you are not sure about whether your computer supports Docker,
        which OpenSAFELY uses;
-     * you want to try OpenSAFELY via a device other than a computer,
-       e.g. a tablet.
+     * you want to try OpenSAFELY via a device other than a desktop or
+       laptop computer, e.g. a tablet.
 
 2. *Install the required software to your own computer*.
 
@@ -58,16 +61,19 @@ There are two options to work with OpenSAFELY:
      * you want to have more control on the tools you use to develop
        studies for OpenSAFELY.
 
-    The current local installation instructions is aimed at Windows
+    The current local installation guide is aimed at Windows
     users. Mac users should be able to follow along as well, with a few
     hopefully-obvious alterations; see also the [macOS Install
     Guide](install-macos.md)! We aim to integrate macOS instructions
     into this guide in future.
 
+### Following this Getting Started guide
+
 !!!note
-    Tabbed sections like the example immediately below split the
-    configuration instructions into web browser and local Windows installation.
-    Where these tabbed sections appear, follow just the relevant section.
+    *Tabbed* sections like the example immediately below split the
+    configuration instructions into web browser and local Windows
+    installation.  Where these tabbed sections appear, select the
+    relevant tab and follow just the instructions for that section.
 
 === "Web browser (online)"
 
@@ -81,7 +87,7 @@ There are two options to work with OpenSAFELY:
     are not necessary to follow if you are using a web browser to run
     OpenSAFELY, even if that web browser is running on Windows.
 
-### Options for running OpenSAFELY
+### Why OpenSAFELY requires several pieces of software to run
 
 Some of the software needed is so you can execute code on your computer
 in **exactly the same way** it is run in the secure environment: even a slight
@@ -168,10 +174,7 @@ account, for developing your own study:
 <!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
 === "Web browser (online)"
 
-    <h3>Opening your repository with Gitpod</h3>
-
-    **TODO: Install the software in the template via a `.gitpod.yml` to
-    remove the need for these instructions.**
+    <h3>Open your repository with Gitpod</h3>
 
     For the repository you just created, it will have a URL of the form:
     `https://github.com/<your_username>/<your_research_repository>`
@@ -183,9 +186,7 @@ account, for developing your own study:
 
     and visit that URL. If it is the first time you have used Gitpod,
     you'll see a "Log in" screen. You can use your GitHub account to
-    login: click "Continue with GitHub".
-
-    <h3>Gitpod workspaces</h3>
+    login to Gitpod: click "Continue with GitHub".
 
     A Gitpod workspace containing a code editor, defaulting to Visual
     Studio Code and command-line interface "terminal" should then
@@ -194,12 +195,29 @@ account, for developing your own study:
     working with OpenSAFELY are the same regardless of using Windows,
     Linux or macOS.
 
+    <h3>Install **opensafely**</h3>
+
+    The `opensafely` software should already be installed if you start
+    Gitpod for the OpenSAFELY research template.
+
+    You can confirm this by typing `opensafely` in the terminal and
+    pressing ++enter++. You should see an output that starts:
+
+    ```sh
+    $ opensafely
+    usage: opensafely [-h] [--version] COMMAND ...
+    …
+    ```
+
+    <h3>How Gitpod workspaces operate</h3>
+
     To preserve usage minutes on Gitpod, you can manually stop a Gitpod
     workspace as soon as you have finished with it. A workspace can be
-    stopped either in the workspace via the orange Gitpod button and
-    then selecting "Gitpod: Stop workspace" in the dropdown menu. or via
-    visiting `https://gitpod.io`, hovering on the workspace,
-    left-clicking on the vertical dots (`⋮`) and selecting "Stop".
+    stopped either in the workspace via the Gitpod button in the
+    bottom-left corner and then selecting "Gitpod: Stop workspace" in
+    the dropdown menu. or via visiting `https://gitpod.io`, hovering on
+    the workspace, left-clicking on the vertical dots (`⋮`) and
+    selecting "Stop".
 
     On the free plan, Gitpod workspaces allow 30 minutes of inactivity
     before the workspace stops running. Stopped workspaces are not
@@ -208,45 +226,12 @@ account, for developing your own study:
 
     You can see which Gitpod workspaces you have open by
     visiting `https://gitpod.io` when logged into Gitpod, or clicking
-    the orange Gitpod button in the bottom-left of the screen and
+    the Gitpod button in the bottom-left of the screen and
     selecting "Gitpod: Open dashboard". The stopped workspaces are
     visible by changing the search filter from "Active" to "All", and
     you can open a stopped workspace by hovering on the workspace,
     left-clicking on the vertical dots (`⋮`) and selecting "Open".
 
-    <h3>Install **opensafely**</h3>
-
-    OpenSAFELY uses the Python programming language. Python is already
-    installed in Gitpod, so we can use the Python package manager, `pip`
-    to install the OpenSAFELY package that we need.
-
-    Inside the terminal in the bottom right of the Visual Studio Code
-    environment, run `pip install opensafely`. The output should
-    something like the following (though the `opensafely` version number
-    may differ):
-
-    ```
-    $ pip install opensafely
-    Collecting opensafely
-    …
-    Installing collected packages: opensafely
-    Successfully installed opensafely-1.8.1
-    ```
-
-    <h3>Check `opensafely` is working</h3>
-
-    Run `opensafely pull cohortextractor` and you should see something like:
-
-    ```
-    $ opensafely pull cohortextractor
-    …
-    Status: Downloaded newer image for ghcr.io/opensafely-core/cohortextractor:latest
-    ghcr.io/opensafely-core/cohortextractor:latest
-    Cleaning up old images
-    Total reclaimed space: 0B
-    ```
-
-    This tells us that `opensafely` is working!
 
 === "Windows (local)"
 
@@ -307,14 +292,14 @@ In a previous step, you previously created a copy of the research code
 in GitHub. You need to have a copy, or "clone", of that code to develop your own
 study.
 
+### Clone the study code to your computer
+
 === "Web browser (online)"
 
     When you open the Gitpod workspace, the associated code from GitHub
     will already be cloned and available in the code editor.
 
 === "Windows (local)"
-
-    <h3>Clone it to your computer</h3>
 
     1. Look above the list of files in your new repo for a **Code** button. ![image](images/code-button.png)
     2. Click **Open with GitHub Desktop** to clone and open the repository with
@@ -346,7 +331,7 @@ study.
 Now you're ready to run your first study. Type `opensafely run run_all`
 and press ++enter++
 
-The first time you run this command, it will take a while to download the
+The first time you run this command, it may take a while to download the
 required software. Eventually, you should see output that ends something like
 this:
 
@@ -394,8 +379,6 @@ Use -f option to force everything to re-run
     Clicking on a file name in the Explorer will open the file in a tab
     within the editor.
 
-    TODO: screenshot showing selecting the Explorer.
-
     <h4>Downloading files from Gitpod to your local machine</h4>
 
     Right-click a file in Visual Studio Code's Explorer and select "Download".
@@ -410,14 +393,17 @@ Use -f option to force everything to re-run
 You've successfully run the code in your study, but at the moment it just creates an empty output
 file. Now we'll add some code to do something slightly more interesting.
 
+### Install a code editor
+
 In order to write code in the OpenSAFELY framework, a code editor will
 make your life much easier. The steps here use Visual Studio Code, which
-is free of charge and available for Windows, macOS and Linux. If you are
-already comfortable using another editor, that will also be suitable.
+is free of charge and available for Windows, macOS and Linux. (If you are
+already comfortable using another code editor, that will be suitable.)
 
 === "Web browser (online)"
 
-    Gitpod's workspaces use Visual Studio Code as the default editor.
+    When you open a Gitpod workspace, Visual Studio Code is ready to use
+    as the default editor.
 
 === "Windows (local)"
 
@@ -527,7 +513,7 @@ file, which will be found at `output/descriptive.png`.
    created. Open it — you can do this via Visual Studio Code's Explorer,
    or use another tool — and check it looks right.
 
-## 6. Push your study to github, and watch the automated tests pass
+## 6. Test your study on GitHub
 
 Now that your study does something interesting, you should "*push*" it to GitHub,
 where it can be viewed by others. Your repository is automatically configured
@@ -539,9 +525,9 @@ with tests to verify the project is runnable, each time you push.
     
     1. When logged into Gitpod, visit their [Settings
        page](https://gitpod.io/settings). Or, alternatively, in a Gitpod
-       workspace, press the orange Gitpod button in the bottom-left of
-       Visual Studio Code and then select "Gitpod: Open Settings" from
-       the list of options.
+       workspace, press the Gitpod button in the bottom-left of Visual
+       Studio Code and then select "Gitpod: Open Settings" from the list
+       of options.
     2. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
        "Edit Permissions". In the list, tick "public\_repo", which gives
@@ -561,11 +547,11 @@ with tests to verify the project is runnable, each time you push.
     side, or by pressing ++ctrl+shift+g++ together.
 
     When files in the repository are edited and then saved, Source
-    Control should list those changes.  (**TODO: Visual Studio Code in
-    Gitpod has Auto Save enabled.**). If you left-click on a file in
-    Source Control, you'll see how your copy of the file has changed
-    from the previous repository state. Right-click on the files that you
-    want to add the changes to the repository and select "Stage
+    Control should list those changes. Note that Gitpod's Visual Studio
+    Code has Auto Save enabled by default. If you left-click on a file
+    in Source Control, you'll see how your copy of the file has changed
+    from the previous repository state. Right-click on the files that
+    you want to add the changes to the repository and select "Stage
     Changes". "Staged" changes then appear in the "Staged Changes"
     section.
     
@@ -600,6 +586,8 @@ with tests to verify the project is runnable, each time you push.
       ![image](images/commit-message.png)
     3. Click **Push origin** to push your local changes to the remote repository on
        GitHub ![image](images/push-to-github.png)
+
+### Check that the automated tests pass
 
 In a web browser, visit your repository in GitHub. Click on the **Actions**
 tab ![image](images/github-actions-tab.png)
