@@ -188,12 +188,22 @@ account, for developing your own study:
     you'll see a "Log in" screen. You can use your GitHub account to
     login to Gitpod: click "Continue with GitHub".
 
-    A Gitpod workspace containing a code editor, defaulting to Visual
-    Studio Code and command-line interface "terminal" should then
-    appear. The terminal that Gitpod provides runs commands on a Linux
-    computer, but, don't worry, the few command-line instructions for
-    working with OpenSAFELY are the same regardless of using Windows,
-    Linux or macOS.
+    A Gitpod workspace containing the Visual Studio code editor with a
+    command-line interface "terminal" should then appear:
+
+    ![Gitpod's workspace showing the editor, terminal and
+    Explorer.](images/gitpod-workspace.png)
+
+    The terminal at the bottom-right of the Gitpod workspace runs
+    commands on a Linux computer, but, don't worry, the few command-line
+    instructions for working with OpenSAFELY are the same regardless of
+    using Windows, Linux or macOS.
+
+    The large, upper-right area holds the main editor and where you will
+    view and edit files that you are working on. The left "side bar"
+    holds the Explorer when you first start the workspace. There are
+    other useful menus in this area that can be switched with the icons
+    to the far left side.
 
     <h3>Install **opensafely**</h3>
 
@@ -299,6 +309,8 @@ study.
     When you open the Gitpod workspace, the associated code from GitHub
     will already be cloned and available in the code editor.
 
+    ![Study code files in a Gitpod workspace.](images/gitpod-clone.png)
+
 === "Windows (local)"
 
     1. Look above the list of files in your new repo for a **Code** button. ![image](images/code-button.png)
@@ -316,6 +328,9 @@ study.
     The study will already be prepared to run. Run the `opensafely`
     commands in the terminal available at the bottom-right of the Gitpod
     workspace.
+
+    ![Running the OpenSAFELY software in a Gitpod
+    workspace.](images/gitpod-opensafely-command.png)
 
 === "Windows (local)"
 
@@ -371,10 +386,9 @@ Use -f option to force everything to re-run
     <h4>Opening files</h4>
 
     The Visual Studio Code editor has a file Explorer that you can use
-    to browse the files and appears when first starting the Workspace.
-    
-    You can press ++ctrl+shift+e++ to switch to it, or select it via
-    the icons at the side.
+    to browse the files and appears when first starting the Gitpod
+    workspace. It is accessed by the file icon in the bar on the
+    left-hand side of the editor.
 
     Clicking on a file name in the Explorer will open the file in a tab
     within the editor.
@@ -382,6 +396,8 @@ Use -f option to force everything to re-run
     <h4>Downloading files from Gitpod to your local machine</h4>
 
     Right-click a file in Visual Studio Code's Explorer and select "Download".
+
+    ![Downloading a file in Gitpod.](images/gitpod-download-file.png)
 
 === "Windows (local)"
 
@@ -399,6 +415,11 @@ In order to write code in the OpenSAFELY framework, a code editor will
 make your life much easier. The steps here use Visual Studio Code, which
 is free of charge and available for Windows, macOS and Linux. (If you are
 already comfortable using another code editor, that will be suitable.)
+
+Here we'll only use Visual Studio Code as a simple editor. There are
+several [short videos and written
+guides](https://code.visualstudio.com/docs#first-steps) elsewhere on how
+to use more of Visual Studio Code's features.
 
 === "Web browser (online)"
 
@@ -528,13 +549,23 @@ with tests to verify the project is runnable, each time you push.
        workspace, press the Gitpod button in the bottom-left of Visual
        Studio Code and then select "Gitpod: Open Settings" from the list
        of options.
+
+       ![Opening Gitpod's settings in their code
+       editor.](images/gitpod-open-settings.png)
     2. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
-       "Edit Permissions". In the list, tick "public\_repo", which gives
+       "Edit Permissions".
+
+       ![Opening Gitpod's settings in their code
+       editor.](images/gitpod-git-providers.png)
+    3. In the list, tick "public\_repo", which gives
        your Gitpod account "write access to code in public repositories
        and organizations" on GitHub. (There is another permission that
        you have to enable for access to code in private repositories,
        though this is not necessary for this walkthrough.)
+
+       ![Opening Gitpod's settings in their code
+       editor.](images/gitpod-edit-permissions.png)
 
     <h3>Add your changes to the local repository</h3>
 
@@ -544,7 +575,10 @@ with tests to verify the project is runnable, each time you push.
 
     Back in the Gitpod workspace, open Source Control either by
     selecting the icon that has dots connected by lines on the left-hand
-    side, or by pressing ++ctrl+shift+g++ together.
+    side.
+
+    ![Opening Source Control in
+    Gitpod.](images/gitpod-source-control.png)
 
     When files in the repository are edited and then saved, Source
     Control should list those changes. Note that Gitpod's Visual Studio
@@ -555,20 +589,39 @@ with tests to verify the project is runnable, each time you push.
     Changes". "Staged" changes then appear in the "Staged Changes"
     section.
     
+    ![Staging changes in Gitpod.](images/gitpod-stage-changes.png)
+
+    Staged changes are changes that you are proposing to include in the next *commit* of
+    this study repository. These could be modifications of existing
+    files or entirely new files that you include.
+
+    It is also possible to "Unstage Changes" if you accidentally stage a
+    file that you do not want to include:
+
+    ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
+
     Now type a message into the text box above that will describe the
-    staged changes. When ready, you can then press ++ctrl+enter++ to
-    *commit* the staged changes to the repository to add them to the
+    staged changes. When ready, you can then click the tick icon that
+    will *commit* the staged changes to the repository to add them to the
     repository as stored in the workspace.
+
+    ![Committing changes in Gitpod.](images/gitpod-commit.png)
 
     <h3>Push the changes to GitHub</h3>
 
-    The changes have been stored in the workspace's local copy of the
-    repository. We now need to *push* the repository's changes to
-    GitHub.
+    The changes have been stored as a new commit in the workspace's
+    *local* copy of the repository. We now need to *push* the
+    repository's to GitHub to make the changes show up there.
 
     Hover over "Source Control", click the three horizontal dots (`⋯`)
     next to "Source Control" and then select "Push". This should submit
     your changes to the GitHub repository that you created earlier.
+
+    ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
+
+    (You may see a prompt: "Would you like Code to periodically run `git
+    fetch`?" You can ignore this or select "Ask me later" for the
+    purposes of this demonstration.)
 
 === "Windows (local)"
 
