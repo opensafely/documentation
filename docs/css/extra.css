@@ -1,36 +1,18 @@
 :root {
   --colorPrimary: #002147;
-  --colorSecondary: #a79d96;
-  --colorTertiary: #f3f1ee;
   --colorLightPrimary: #122f53;
 
   --colorDarkBlue: #001c3d;
   --colorWashedOutBlue: #193658;
-  --colorCopyrightGrey: #c7c2bc;
-  --colorBeigeGrey: #f3f1ec;
-  --colorBrownGrey: #001c3d;
-  --colorFilterFormGreen: #043946;
-  --colorIconBlueGrey: #a1c4d0;
-  --colorTeal: #003947;
   --colorVeryLightBlue: #f0f5f8;
-  --colorCookieBar: #00152e;
-  --colorBlueGrey: #353c47;
 
   --colorLink: #2f72a8;
   --colorLinkHover: #44687d;
-  --colorAltLinkHover: #be0f34;
   --colorLinkHeader: #70a9d6;
-  --colorLinkOverlay: #98c1e1;
 
-  --colorStatus: #7dbc23;
   --colorWarning: #bc9a23;
-  --colorError: #be0f34;
-  --colorErrorLight: #fff0f3;
 
-  --colorBlack: #000000;
   --colorOffBlack: #333333;
-  --colorMidGrey: #7a736e;
-  --colorDarkGrey: #a6a6a6;
   --colorLightGrey: #e0ded9;
   --colorVLightGrey: #f9f8f5;
   --colorWhite: #ffffff;
