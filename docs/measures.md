@@ -88,18 +88,18 @@ This differs from a normal study definition due to the addition of the `measures
 * `group_by` column can be of any type. To calculate the measure across the entire population, you can set `group_by="population"`. If not specified, `group_by` will default to `None` and the measure will be calculated at the individual patient level.
 * `small_number_suppression` is an optional boolean that defaults to `False`. If set to `True`, small numbers (greater than zero, less than or equal to five) in numerators and denominators will be replaced with blanks. If a numerator or denominator has been suppressed then the corresponding value will also be blank. In cases where numerators or denominators are suppressed but the total suppressed in a column is not greater than five, additional values will be suppressed to bring the total above five.
 
-You can calculate measures for more than one group at a time by specifying multiple variables as follows:
+You can calculate measures for more than one group in a single measure by specifying multiple variables as follows:
 
 ```py
 measures = [
     Measure(
-        id = "hosp_admission_by_stp",
+        id = "hosp_admission_by_stp_and_sex",
         numerator = "admitted",
         denominator = "population",
         group_by = ["stp", "sex"],
     ),
     Measure(
-        id = "death_by_stp",
+        id = "death_by_stp_and_sex",
         numerator = "died",
         denominator =" population",
         group_by = ["stp", "sex"],
