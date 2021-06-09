@@ -195,9 +195,7 @@ account, for developing your own study:
     Explorer.](images/gitpod-workspace.png)
 
     The terminal at the bottom-right of the Gitpod workspace runs
-    commands on a Linux computer, but, don't worry, the few command-line
-    instructions for working with OpenSAFELY are the same regardless of
-    using Windows, Linux or macOS.
+    commands on a computer (virtual machine) provided by Gitpod.
 
     The large, upper-right area holds the main editor and where you will
     view and edit files that you are working on. The left "side bar"
