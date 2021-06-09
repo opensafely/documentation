@@ -52,17 +52,11 @@
 
 body {
   color: var(--colorOffBlack);
-  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing:-0.02em;
   -webkit-font-smoothing: unset;
   -moz-osx-font-smoothing: unset;
-}
-
-.md-typeset p,
-.md-typeset ul,
-.md-typeset ol,
-.md-typeset blockquote {
-  font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
 }
 
 .md-header[data-md-state="shadow"] {
@@ -70,7 +64,7 @@ body {
 }
 
 .md-header-nav__topic {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .md-nav__link:focus,
@@ -94,7 +88,7 @@ body {
 
 .md-typeset a {
   color: var(--colorLink);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--colorLinkHeader);
@@ -160,6 +154,10 @@ body {
 
 .md-typeset .note .admonition-title {
   background-color: var(--colorLightPrimary);
+  color: var(--colorWhite);
+}
+
+.md-typeset .note .admonition-title a {
   color: var(--colorWhite);
 }
 
