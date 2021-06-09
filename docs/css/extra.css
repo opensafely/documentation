@@ -1,16 +1,29 @@
+:root {
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-600: #2563eb;
+  --blue-900: #1e3a8a;
+  --coolGray-50: #f9fafb;
+  --coolGray-600: #4b5563;
+  --coolGray-800: #1f2937;
+  --coolGray-900: #111827;
+}
+
 body {
-  font-family: inter, ui-sans-serif, system-ui, -apple-system,
-    blinkmacsystemfont, segoe ui, roboto, helvetica neue, arial, noto sans,
-    sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol,
-    noto color emoji;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: unset;
+  -moz-osx-font-smoothing: unset;
 }
 
 [data-md-color-scheme="opensafely"] {
-  --md-primary-fg-color: #1f2937;
-  --md-accent-fg-color: #1e3a8a;
+  --md-primary-fg-color: var(--coolGray-800);
+  --md-accent-fg-color: var(--blue-900);
   --md-primary-fg-color--light: var(--md-primary-fg-color);
   --md-primary-fg-color--dark: var(--md-primary-fg-color);
-  --md-admonition-bg-color: #eff6ff;
+  --md-admonition-bg-color: var(--blue-50);
+  --md-footer-bg-color: var(--md-primary-fg-color);
+  --md-footer-bg-color--dark: var(--coolGray-900);
 }
 
 .md-nav__link,
@@ -29,18 +42,18 @@ body {
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  color: #1f2937;
+  color: var(--coolGray-800);
   font-weight: 600;
 }
 
 .md-typeset a {
-  color: #2563eb;
+  color: var(--blue-600);
   font-weight: 600;
   text-decoration: none;
 }
 
 .md-typeset a:hover {
-  color: #1e3a8a;
+  color: var(--blue-900);
   text-decoration: underline;
 }
 
@@ -54,23 +67,33 @@ body {
 
 .md-typeset .admonition,
 .md-typeset details {
-  border-color: #2563eb;
-  color: #4b5563;
+  border-color: var(--blue-600);
+  color: var(--coolGray-600);
   font-size: 0.9em;
 }
 
 .md-typeset .admonition-title,
 .md-typeset summary {
-  color: #111827;
+  color: var(--coolGray-900);
 }
 
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
-  background-color: #dbeafe;
-  border-color: #2563eb;
+  background-color: var(--blue-100);
+  border-color: var(--blue-600);
 }
 
 .md-typeset .note > .admonition-title::before,
 .md-typeset .note > summary::before {
-  background-color: #2563eb;
+  background-color: var(--blue-600);
+}
+
+.md-main {
+  background-color: var(--coolGray-50);
+}
+
+.md-content {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background: white;
+  border-radius: 8px;
 }
