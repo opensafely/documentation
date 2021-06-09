@@ -1,0 +1,76 @@
+body {
+  font-family: inter, ui-sans-serif, system-ui, -apple-system,
+    blinkmacsystemfont, segoe ui, roboto, helvetica neue, arial, noto sans,
+    sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol,
+    noto color emoji;
+}
+
+[data-md-color-scheme="opensafely"] {
+  --md-primary-fg-color: #1f2937;
+  --md-accent-fg-color: #1e3a8a;
+  --md-primary-fg-color--light: var(--md-primary-fg-color);
+  --md-primary-fg-color--dark: var(--md-primary-fg-color);
+  --md-admonition-bg-color: #eff6ff;
+}
+
+.md-nav__link,
+.md-header-nav__topic {
+  font-weight: 500;
+}
+
+.md-nav__link:focus,
+.md-nav__link:hover {
+  text-decoration: underline;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.md-typeset a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+.md-typeset .headerlink {
+  text-decoration: none;
+}
+
+.md-content {
+  margin-bottom: 2rem;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: #2563eb;
+  color: #4b5563;
+  font-size: 0.9em;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  color: #111827;
+}
+
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: #dbeafe;
+  border-color: #2563eb;
+}
+
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before {
+  background-color: #2563eb;
+}

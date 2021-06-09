@@ -61,10 +61,18 @@ nav:
       - Requesting study definition variables: requests-variables.md
   - Updating the documentation: requests-documentation.md
 
-theme: material
+theme:
+  name: material
+  font: false
+  logo: img/icon.svg
+  favicon: img/favicon.svg
+  palette:
+    scheme: opensafely
+  custom_dir: overrides
 
 extra_css:
   - css/youtube.css
+  - css/extra.css
 
 extra_javascript:
   - javascripts/extra.js
