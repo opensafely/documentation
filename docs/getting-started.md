@@ -406,10 +406,17 @@ to use more of Visual Studio Code's features.
     When you open a Gitpod workspace, Visual Studio Code is ready to use
     as the default editor.
 
+    By default, Visual Studio Code in Gitpod is configured to
+    automatically save the edits to files that you make.
+
 === "Windows (local)"
 
     Download and install
     [Visual Studio Code](https://code.visualstudio.com/download).
+
+    By default, Visual Studio Code on a desktop is not configured to
+    automatically save the edits to files that you make. To save changes
+    to files, you can do this manually, via File > Save in the menu bar.
 
 ### Add an `age` column
 
