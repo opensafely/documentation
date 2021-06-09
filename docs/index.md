@@ -1,6 +1,3 @@
-!!! note "These documents are a work-in-progress"
-    Please see the [Updating the Documentation page](requests-documentation.md) if you want to make improvements.
-
 ## What is OpenSAFELY?
 
 OpenSAFELY is a secure analytics platform for electronic health records in the NHS, created to deliver urgent results during the global COVID-19 emergency.
@@ -56,9 +53,7 @@ See our [installation](install-intro.md) pages for complete installation instruc
 
 We recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
 
-
-
-
-
+!!! note "These documents are a work-in-progress"
+    Please see the [Updating the Documentation page](requests-documentation.md) if you want to make improvements.
 
 ---8<-- 'includes/glossary.md'
