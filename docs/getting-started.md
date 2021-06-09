@@ -323,6 +323,8 @@ study.
 
     Run the `opensafely` commands in the Anaconda Prompt.
 
+### Run your first study
+
 Now you're ready to run your first study. Type `opensafely run run_all`
 and press ++enter++
 
@@ -516,9 +518,15 @@ file, which will be found at `output/descriptive.png`.
 
 ## 6. Test your study on GitHub
 
-Now that your study does something interesting, you should "*push*" it to GitHub,
-where it can be viewed by others. Your repository is automatically configured
-with tests to verify the project is runnable, each time you push.
+Now that your study does something interesting, you should "*push*" it
+to GitHub, where it can be viewed by others. Your repository is
+automatically configured with tests to verify the project is runnable,
+each time you push.
+
+In this section, you will first add the study changes that you've made
+to a new *commit* in your repository — a commit represents a stored
+version of your work — and then send that commit to GitHub by *pushing*
+the new commit.
 
 === "Web browser (online)"
 
