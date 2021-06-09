@@ -77,6 +77,17 @@ extra_css:
 extra_javascript:
   - javascripts/extra.js
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/opensafely
+      name: OpenSAFELY on GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/opensafely
+      name: OpenSAFELY on Twitter
+
+copyright: © University of Oxford for the The DataLab 2021. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to ebmdatalab@phc.ox.ac.uk.
+
 plugins:
   - search
   - mkdocstrings:
