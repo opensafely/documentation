@@ -97,3 +97,22 @@ body {
   background: white;
   border-radius: 8px;
 }
+
+.md-footer-copyright__highlight {
+  margin: 1em 0;
+}
+
+.md-header-nav__title {
+  padding-left: 0.5rem;
+}
+
+.md-logo {
+  display: none !important;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title[for=__drawer] {
+    height: auto;
+    padding-top: 0;
+  }
+}
