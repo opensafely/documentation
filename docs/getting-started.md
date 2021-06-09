@@ -422,7 +422,7 @@ to use more of Visual Studio Code's features.
    you'd like to study (dataset rows) and what you need to know about them (dataset columns).
 3. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="14 15 16 17 18 19 20"
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv
+from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
 
 
 study = StudyDefinition(
