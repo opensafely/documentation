@@ -29,7 +29,7 @@ To use OpenSAFELY, users must know, or be willing to learn, the following progra
   For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](actions-pipelines/#execution-environments) for more information.
 - **Git**
 The workflow is strongly integrated into Git/GitHub.
-As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches.
+As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches. We have simple guidance in our [Getting Started guide](getting-started.md) on this if you have never used this tooling before.
 See [git workflow](git-workflow.md) for advice about how to use git effectively.
 <!--We provide a simple tutorial for navigating the OpenSAFELY workflow.-->
 
@@ -43,7 +43,7 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
   Behind the scenes, SQL is the database query language that is used to extract data from the server.
   Some knowledge of SQL may be useful if you want to understand in more detail how the raw patient-level data held in the secure environment is converted into analysis-ready datasets.
 - **Docker**
-  We use Docker containers to simulate the production environment on your machine, so you can [test code locally](actions-pipelines.md).
+  We use Docker containers to simulate the production environment on your machine, so you can [test code locally](actions-pipelines.md). This is not essential as we also describe how to run OpenSAFELY in your web browser, which does not require any software installation on your own computer.
 
 ## How should I start learning to use OpenSAFELY?
 
