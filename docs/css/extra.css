@@ -22,11 +22,36 @@
   --colorLinkHeader: #70a9d6;
   --colorLinkOverlay: #98c1e1;
 
-  --colorBodyCopy: #2c2c2c;
+  --colorStatus: #7dbc23;
+  --colorWarning: #bc9a23;
+  --colorError: #be0f34;
+  --colorErrorLight: #fff0f3;
+
+  --colorBlack: #000000;
+  --colorOffBlack: #333333;
+  --colorMidGrey: #7a736e;
+  --colorDarkGrey: #a6a6a6;
+  --colorLightGrey: #e0ded9;
+  --colorVLightGrey: #f9f8f5;
+  --colorWhite: #ffffff;
+}
+
+[data-md-color-scheme="opensafely"] {
+  --md-accent-fg-color: var(--colorWashedOutBlue);
+  --md-admonition-bg-color: var(--colorVeryLightBlue);
+  --md-code-bg-color: var(--colorVLightGrey);
+  --md-default-fg-color--light: #77706b;
+  --md-footer-bg-color--dark: var(--colorDarkBlue);
+  --md-footer-bg-color: var(--colorPrimary);
+  --md-primary-fg-color--dark: var(--md-primary-fg-color);
+  --md-primary-fg-color--light: var(--md-primary-fg-color);
+  --md-primary-fg-color: var(--colorPrimary);
+  --md-code-hl-generic-color: #77706b;
+  --md-code-hl-variable-color: #756e69;
 }
 
 body {
-  color: var(--colorBodyCopy);
+  color: var(--colorOffBlack);
   font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: unset;
@@ -40,17 +65,7 @@ body {
   font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
 }
 
-[data-md-color-scheme="opensafely"] {
-  --md-primary-fg-color: var(--colorPrimary);
-  --md-accent-fg-color: var(--colorWashedOutBlue);
-  --md-primary-fg-color--light: var(--md-primary-fg-color);
-  --md-primary-fg-color--dark: var(--md-primary-fg-color);
-  --md-admonition-bg-color: var(--colorVeryLightBlue);
-  --md-footer-bg-color: var(--colorPrimary);
-  --md-footer-bg-color--dark: var(--colorDarkBlue);
-}
-
-.md-header[data-md-state=shadow] {
+.md-header[data-md-state="shadow"] {
   box-shadow: none;
 }
 
@@ -101,40 +116,18 @@ body {
   margin-bottom: 2rem;
 }
 
-.md-typeset .admonition,
-.md-typeset details {
-  border-color: var(--colorLinkHeader);
-  color: var(--colorBlueGrey);
-  font-size: 0.9em;
-}
-
-.md-typeset .note > .admonition-title,
-.md-typeset .note > summary {
-  background-color: var(--colorPrimary);
-  color: var(--colorTertiary);
-}
-
-.md-typeset .admonition.note, .md-typeset details.note {
-  border-color: var(--colorLink);
-}
-
-.md-typeset .note > .admonition-title::before,
-.md-typeset .note > summary::before {
-  background-color: var(--colorTertiary);
-}
-
 .md-main {
   background-color: var(--colorVeryLightBlue);
 }
 
 .md-content {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  background: white;
+  background: var(--colorWhite);
   border-radius: 8px;
 }
 
 .md-footer-copyright {
-  color: var(--colorCopyrightGrey)
+  color: var(--colorCopyrightGrey);
 }
 
 .md-footer-copyright__highlight {
@@ -155,4 +148,25 @@ body {
     height: auto;
     padding-top: 0;
   }
+}
+
+/* Details element */
+.md-typeset .admonition {
+  background-color: var(--colorVLightGrey);
+  box-shadow: none;
+  border-color: var(--colorLightGrey) !important;
+  font-size: 0.95em;
+}
+
+.md-typeset .note .admonition-title {
+  background-color: var(--colorLightPrimary);
+  color: var(--colorWhite);
+}
+
+.md-typeset .note > .admonition-title::before {
+  background-color: var(--colorWhite);
+}
+
+.md-typeset .warning > .admonition-title::before {
+  background-color: var(--colorWarning);
 }
