@@ -87,21 +87,21 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
     are not necessary to follow if you are using a web browser to run
     OpenSAFELY, even if that web browser is running on Windows.
 
-### Why OpenSAFELY requires several pieces of software to run
+    <h3>Why OpenSAFELY requires several pieces of software to run</h3>
 
-Some of the software needed is so you can execute code on your computer
-in **exactly the same way** it is run in the secure environment: even a slight
-mismatch in the versions of the software could cause bugs and delays.
+    Some of the software needed is so you can execute code on your computer
+    in **exactly the same way** it is run in the secure environment: even a slight
+    mismatch in the versions of the software could cause bugs and delays.
 
-OpenSAFELY is also designed to encourage analysts to adopt best-practice
-software development processes, like using `git` for version control.  If
-you're new to these concepts, there may be quite a lot to learn, and you'll need
-to use further software to work with them. The investment will be worthwhile:
-you'll find your software quality and efficiency will benefit hugely.
+    OpenSAFELY is also designed to encourage analysts to adopt best-practice
+    software development processes, like using `git` for version control.  If
+    you're new to these concepts, there may be quite a lot to learn, and you'll need
+    to use further software to work with them. The investment will be worthwhile:
+    you'll find your software quality and efficiency will benefit hugely.
 
-This tutorial is, therefore, a very fast tour through all the **essential**
-components required to get up and running. When you've finished, you'll have
-all the basics in place to continue your learning.
+    This tutorial is, therefore, a very fast tour through all the **essential**
+    components required to get up and running. When you've finished, you'll have
+    all the basics in place to continue your learning.
 
 ## 1. Set up GitHub
 
@@ -180,16 +180,18 @@ account, for developing your own study:
     `https://github.com/<your_username>/<your_research_repository>`
     where the username and repository name are as you chose.
 
-    Place `https://gitpod.io/#` in front of that URL:
+    Add `https://gitpod.io/#` (including the `#` character) in front
+    of the URL of your new research repository.
 
     `https://gitpod.io/#https://github.com/<your_username>/<your_research_repository>`
 
-    and visit that URL. If it is the first time you have used Gitpod,
-    you'll see a "Log in" screen. You can use your GitHub account to
-    login to Gitpod: click "Continue with GitHub".
+    and then visit that new Gitpod URL. If it is the first time you have
+    used Gitpod, you'll see a "Log in" screen. You can use your GitHub
+    account to login to Gitpod: click "Continue with GitHub".
 
     A Gitpod workspace containing the Visual Studio code editor with a
-    command-line interface "terminal" should then appear:
+    command-line interface "terminal" should then appear. This may take
+    a little bit longer the first time a workspace is started.
 
     ![Gitpod's workspace showing the editor, terminal and
     Explorer.](images/gitpod-workspace.png)
@@ -197,28 +199,44 @@ account, for developing your own study:
     The terminal at the bottom-right of the Gitpod workspace runs
     commands on a computer (virtual machine) provided by Gitpod.
 
-    The large, upper-right area holds the main editor and where you will
-    view and edit files that you are working on. The left "side bar"
+    The large, upper-right area holds the **main editor** and where you will
+    view and edit files that you are working on. The left **"side bar"**
     holds the Explorer when you first start the workspace. There are
     other useful menus in this area that can be switched with the icons
-    to the far left side.
+    to the far left side. Finally, the button at the top-left with three
+    horizontal lines (`≡`) is the **menu button**, which allows you to
+    access many more options.
 
     If you find yourself using Gitpod regularly for working on research,
     we have a brief guide to [managing Gitpod
     workspaces](gitpod-workspaces.md).
 
-    <h3>Install **opensafely**</h3>
+    <h3>Running **opensafely**</h3>
 
     The `opensafely` software should already be installed if you start
     Gitpod for the OpenSAFELY research template.
 
-    You can confirm this by typing `opensafely` in the terminal and
-    pressing ++enter++. You should see an output that starts:
+    You can confirm this by typing `opensafely` in the terminal at the
+    prompt `$` and pressing ++enter++. You should see an output that looks
+    something like:
 
-    ```sh
+    ```
     $ opensafely
     usage: opensafely [-h] [--version] COMMAND ...
-    …
+
+    optional arguments:
+      -h, --help  show this help message and exit
+      --version   show program's version number and exit
+
+    available commands:
+
+      COMMAND
+	help      Show this help message and exit
+	run       Run project.yaml actions locally
+	codelists
+              Commands for interacting with https://codelists.opensafely.org/
+	pull      Command for updating the docker images used to run OpenSAFELY studies locally
+	upgrade   Upgrade the opensafely cli tool.
     ```
 
 === "Windows (local)"
@@ -284,10 +302,9 @@ study.
 
 === "Web browser (online)"
 
-    When you open the Gitpod workspace, the associated code from GitHub
-    will already be cloned and available in the code editor.
-
-    ![Study code files in a Gitpod workspace.](images/gitpod-clone.png)
+    There's nothing to do here! When you open the Gitpod workspace, the
+    associated code from GitHub will already be cloned and available in the code
+    editor. You'll see the files and folders in the Explorer.
 
 === "Windows (local)"
 
@@ -303,12 +320,9 @@ study.
 
 === "Web browser (online)"
 
-    The study will already be prepared to run. Run the `opensafely`
-    commands in the terminal available at the bottom-right of the Gitpod
-    workspace.
-
-    ![Running the OpenSAFELY software in a Gitpod
-    workspace.](images/gitpod-opensafely-command.png)
+    There's nothing to do here! In the following sections, just type any
+    `opensafely` commands in the terminal available at the bottom-right of the
+    Gitpod workspace. Copy the commands and then press ++enter++ to run them.
 
 === "Windows (local)"
 
@@ -319,19 +333,25 @@ study.
        do this, use the `cd` command. For example, `cd
        C:/Users/me/my-git-repos/hello-world` and press ++enter++.
 
-    Run the `opensafely` commands in the Anaconda Prompt.
+    Run the `opensafely` commands in the Anaconda Prompt. In Windows, note that
+    the command-line prompt may be something like `>` instead of `$`; any
+    commands written here with the `$` prompt will also work on Windows.
 
 ### Run your first study
 
-Now you're ready to run your first study. Type `opensafely run run_all`
-and press ++enter++
+Now you're ready to run your first study. Run:
+
+```sh
+$ opensafely run run_all
+```
+
+pressing ++enter++ once you've typed the command.
 
 The first time you run this command, it may take a while to download the
 required software. Eventually, you should see output that ends something like
 this:
 
 ```shell-session
-$ opensafely run run_all
 <...several lines of output...>
 generate_study_population: Extracting output file: output/input.csv
 generate_study_population: Completed successfully
@@ -346,24 +366,16 @@ outputs:
 ```
 The final line tells you a file of (randomly-generated) patient data has been created at
 `output/input.csv`, and that it should be considered highly sensitive
-data. What you see here reproduces exactly what would happen on a real, secure
-server, but with *dummy data* which contains no real patient information. 
-Because we haven't modified the template blank study yet, this file is empty &mdash; 
-we'll generate more dummy data in the next section.
+data. What you see here is exactly the same process that would happen on a real, secure
+server.
 
-If you run `opensafely run run_all` for a second time, you'll see the command
-does nothing (because there's already a file at `output/input.csv`):
-```shell-session
-$ opensafely run run_all
-=> All actions already completed successfully
-Use -f option to force everything to re-run
-```
+**Because we haven't modified the template blank study yet, this CSV file is
+still empty &mdash; we'll generate *dummy data* that contains no real patient
+information in the next section.**
 
 ### Accessing files
 
 === "Web browser (online)"
-
-    <h4>Opening files</h4>
 
     The Visual Studio Code editor has a file Explorer that you can use
     to browse the files and appears when first starting the Gitpod
@@ -372,12 +384,6 @@ Use -f option to force everything to re-run
 
     Clicking on a file name in the Explorer will open the file in a tab
     within the editor.
-
-    <h4>Downloading files from Gitpod to your local machine</h4>
-
-    Right-click a file in Visual Studio Code's Explorer and select "Download".
-
-    ![Downloading a file in Gitpod.](images/gitpod-download-file.png)
 
 === "Windows (local)"
 
@@ -389,12 +395,15 @@ Use -f option to force everything to re-run
 You've successfully run the code in your study, but at the moment it just creates an empty output
 file. Now we'll add some code to do something slightly more interesting.
 
-### Install a code editor
+### Visual Studio Code as a code editor
 
 In order to write code in the OpenSAFELY framework, a code editor will
-make your life much easier. The steps here use Visual Studio Code, which
-is free of charge and available for Windows, macOS and Linux. (If you are
-already comfortable using another code editor, that will be suitable.)
+make your life much easier. The steps here use Visual Studio Code.
+Gitpod users already use Visual Studio Code by default in workspaces.
+
+Visual Studio Code is also available free of charge for Windows, macOS
+and Linux. If you are already comfortable using another code editor,
+that will be suitable.
 
 Here we'll only use Visual Studio Code as a simple editor. There are
 several [short videos and written
@@ -404,28 +413,31 @@ to use more of Visual Studio Code's features.
 === "Web browser (online)"
 
     When you open a Gitpod workspace, Visual Studio Code is ready to use
-    as the default editor.
+    as the default editor and has your research repository opened.
 
-    By default, Visual Studio Code in Gitpod is configured to
-    automatically save the edits to files that you make.
+    **By default, Visual Studio Code in Gitpod is configured to
+    automatically save the edits to files that you make.**
 
 === "Windows (local)"
 
     Download and install
     [Visual Studio Code](https://code.visualstudio.com/download).
 
-    By default, Visual Studio Code on a desktop is not configured to
-    automatically save the edits to files that you make. To save changes
-    to files, you can do this manually, via File > Save in the menu bar.
+    **By default, Visual Studio Code on a desktop is not configured to
+    automatically save the edits to files that you make.** To save changes to
+    files, you can do this manually, via **File > Save** in the menu bar.
+
+    Start Visual Studio Code and use the menu to open your research repository
+    (**File > Open Folder...**)
 
 ### Add an `age` column
 
-1. Start Visual Studio Code and use the menu to open your research repository
-   (**File > Open Folder...**)
-2. In the "Explorer" on the left hand side, find and click on the file at
-   `analysis/study_definition.py`. This file specifies the population that 
-   you'd like to study (dataset rows) and what you need to know about them (dataset columns).
-3. Add some text so that the file looks like this (new text highlighted):
+1. The "Explorer" on the left hand side lists the files and folders in
+   your research repository. Find and click on the `study_definition.py`
+   file inside the `analysis` folder. This file specifies the population
+   that you'd like to study (dataset rows) and what you need to know
+   about them (dataset columns).
+2. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="14 15 16 17 18 19 20"
 from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
 
@@ -455,11 +467,33 @@ between these two dates*"; lines 14-15 "*Give me a column of data corresponding
 to the age of each patient on the given date*"; and lines 16-18 "*I expect
 every patient to have a value, and the distribution of ages to match that of the
 real UK population*"
-1. At the command line, run `opensafely run run_all
-   --force-run-dependencies`. A new file will be created in the folder
-   `output/input.csv`. Open that file (by left-clicking the filename in
-   Visual Studio Code's Explorer, or software like Excel) and you'll see
-   it now contains an age for 1000 randomly generated patients.
+3. Save the file. As mentioned above, in Gitpod, the file changes should be
+   saved automatically. In Windows, you'll need to go to the **File** menu and
+   select **Save**.
+4. If you run:
+
+   ```sh
+   $ opensafely run run_all
+   ```
+
+   you'll see the command does nothing (because there's already a file at `output/input.csv`):
+
+   ```shell-session
+   => All actions already completed successfully
+   Use -f option to force everything to re-run
+   ```
+
+   We can use the `--force-run-dependencies` option to force the CSV file to be
+   created again..
+
+   ```
+   $ opensafely run run_all --force-run-dependencies`
+   ```
+
+   A new `input.csv` file will be created in the `output` folder. Open that
+   file (by left-clicking the filename in Visual Studio Code's Explorer, or
+   software like Excel). This time, you'll see it now synthetic data: an age
+   for 1000 randomly generated patients.
 
 ### Add a chart
 
@@ -471,8 +505,9 @@ written in [any of the programming languages supported in
 OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
 histogram of ages, using four lines of Python.
 
-1. Using Visual Studio Code, create a new file (**File > New File**), and add
-   the following:
+1. Right-click on the `analysis` folder in the editor's Explorer and select
+   "New file". Type "report.py" as the filename and press ++enter++.
+2. Add the following to `report.py`:.
 ```python
 import pandas as pd
 
@@ -482,10 +517,10 @@ fig = data.age.plot.hist().get_figure()
 fig.savefig("output/descriptive.png")
 ```
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
-2. Save this file as `analysis/report.py`
-3. In Visual Studio Code, open `project.yaml`. This file describes how each step
-   in your analysis should be run. It's in a format called YAML: the way it's
-   indented matters, so be careful to copy and paste the following carefully.
+3. Open `project.yaml` in the editor. This file will be near the end of the
+   list of files and folders. This file describes how each step in your
+   analysis should be run. It's in a format called YAML: the way it's indented
+   matters, so be careful to copy and paste the following carefully.
 4. Add a `describe` action to the file, so the entire file looks like this:
 ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
 version: "3.0"
@@ -538,13 +573,8 @@ the new commit.
     <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
     
     1. When logged into Gitpod, visit their [Settings
-       page](https://gitpod.io/settings). Or, alternatively, in a Gitpod
-       workspace, press the Gitpod button in the bottom-left of Visual
-       Studio Code and then select "Gitpod: Open Settings" from the list
-       of options.
+       page](https://gitpod.io/settings).
 
-       ![Opening Gitpod's settings in their code
-       editor.](images/gitpod-open-settings.png)
     2. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
        "Edit Permissions".
@@ -559,6 +589,9 @@ the new commit.
 
        ![Opening Gitpod's settings in their code
        editor.](images/gitpod-edit-permissions.png)
+    4. When you select "Update Permissions", you will see a prompt from
+       GitHub asking you to approve the changes, which you will need to
+       do to allow Gitpod to push your work on Gitpod to GitHub.
 
     <h3>Add your changes to the local repository</h3>
 
@@ -566,9 +599,9 @@ the new commit.
     Gitpod's terminal if you do not want to use Visual Studio Code's
     Source Control feature.)
 
-    Back in the Gitpod workspace, open Source Control either by
-    selecting the icon that has dots connected by lines on the left-hand
-    side.
+    Back in the Gitpod workspace, open the Source Control panel by
+    selecting the icon that has round dots connected by lines on the
+    left-hand side. It should be below the magnifying glass icon.
 
     ![Opening Source Control in
     Gitpod.](images/gitpod-source-control.png)
@@ -577,10 +610,10 @@ the new commit.
     Control should list those changes. Note that Gitpod's Visual Studio
     Code has Auto Save enabled by default. If you left-click on a file
     in Source Control, you'll see how your copy of the file has changed
-    from the previous repository state. Right-click on the files that
-    you want to add the changes to the repository and select "Stage
-    Changes". "Staged" changes then appear in the "Staged Changes"
-    section.
+    from the previous repository state. If you hover over a file in
+    Source Control under "Changes", you can propose to add the changes
+    to the repository by clicking the `+` icon next to the filename.
+    These "staged" changes then appear in the "Staged Changes" section.
     
     ![Staging changes in Gitpod.](images/gitpod-stage-changes.png)
 
@@ -589,14 +622,17 @@ the new commit.
     files or entirely new files that you include.
 
     It is also possible to "Unstage Changes" if you accidentally stage a
-    file that you do not want to include:
+    file that you do not want to include. You can do this by hovering
+    over a file listed in the "Staged Changes" section and clicking the
+    `-` icon next to the filename.
 
     ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
 
-    Now type a message into the text box above that will describe the
-    staged changes. When ready, you can then click the tick icon that
-    will *commit* the staged changes to the repository to add them to the
-    repository as stored in the workspace.
+    When you've finished staging all your changes, you are now ready to
+    make the new commit. Type a message into the text box above that
+    will describe the staged changes. When ready, you can then click the
+    tick icon that will *commit* the staged changes to the repository to
+    add them to the repository as stored in the workspace.
 
     ![Committing changes in Gitpod.](images/gitpod-commit.png)
 
@@ -606,9 +642,9 @@ the new commit.
     *local* copy of the repository. We now need to *push* the
     repository's to GitHub to make the changes show up there.
 
-    Hover over "Source Control", click the three horizontal dots (`⋯`)
-    next to "Source Control" and then select "Push". This should submit
-    your changes to the GitHub repository that you created earlier.
+    Click the three horizontal dots (`⋯`) that is one of the icons next
+    to "Source Control" and then select "Push". This should submit your
+    changes to the GitHub repository that you created earlier.
 
     ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
 
