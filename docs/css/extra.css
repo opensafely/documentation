@@ -36,6 +36,10 @@ body {
   text-decoration: underline;
 }
 
+.md-nav__item .md-nav__link--active {
+  color: var(--blue-600);
+}
+
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
