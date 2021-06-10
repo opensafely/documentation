@@ -150,24 +150,25 @@ authentication](https://docs.github.com/en/github/authenticating-to-github/secur
 Here, you'll copy our OpenSAFELY research template to your own GitHub
 account, for developing your own study:
 
-1. Go to the [GitHub website](https://github.com), and ensure you're logged in.
-   You'll be able to tell by looking for your profile at the top right of the
-   page.
-2. Visit our [research template
-   repository](https://github.com/opensafely/research-template)
-3. Above the file list, click **Use this template**
-   ![image](images/use-this-template-button.png)
-4. Use the **Owner** drop-down menu, and select the account you want to own the
+1. Click on the link below to create new repository based from our template.
+   You may need to log in to Github if you are not already logged in:
+   <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
+2. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
    ![image](images/create-repository-owner.png)
-5. Type a name for your repository, and an optional description.
+3. Type a name for your repository, and an optional description.
    ![image](images/create-repository-name.png)
-6. Choose a repository visibility.  This would usually be "Public".
+4. Choose a repository visibility.  This would usually be "Public".
    ![image](images/create-repository-public-private.png)
-7. There is an "Include all branches" option: it can be left disabled.
+5. There is an "Include all branches" option: it can be left disabled.
    (You only need the main branch; the other branches are
    work-in-progress changes.)
-8. Click **Create repository from template**
+6. Click **Create repository from template**
+7. The new Github repository will take a moment to initialise, as it is running
+   some setup in background. Wait about 1 minute, then reload the page, and you
+   should see the README displayed now reflects the name you gave to the new
+   repository.
+
 
 ## 3. Setup the required software
 
@@ -176,18 +177,13 @@ account, for developing your own study:
 
     <h3>Open your repository with Gitpod</h3>
 
-    For the repository you just created, it will have a URL of the form:
-    `https://github.com/<your_username>/<your_research_repository>`
-    where the username and repository name are as you chose.
+    For the repository you just created, there should be a `Gitpod: ready to
+    code` button displayed in the README.  Click on that button to open your
+    new repository in Gitpod.
 
-    Add `https://gitpod.io/#` (including the `#` character) in front
-    of the URL of your new research repository.
-
-    `https://gitpod.io/#https://github.com/<your_username>/<your_research_repository>`
-
-    and then visit that new Gitpod URL. If it is the first time you have
-    used Gitpod, you'll see a "Log in" screen. You can use your GitHub
-    account to login to Gitpod: click "Continue with GitHub".
+    If it is the first time you have used Gitpod, you'll see a "Log in" screen.
+    You can use your GitHub account to login to Gitpod: click "Continue with
+    GitHub".
 
     A Gitpod workspace containing the Visual Studio code editor with a
     command-line interface "terminal" should then appear. This may take
