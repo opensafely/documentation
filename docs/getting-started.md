@@ -186,8 +186,9 @@ account, for developing your own study:
     GitHub".
 
     A Gitpod workspace containing the Visual Studio code editor with a
-    command-line interface "terminal" should then appear. This may take
-    a little bit longer the first time a workspace is started.
+    command-line interface "terminal" should then appear. **This may take
+    a little bit longer the first time a workspace is started, perhaps
+    30 seconds to a minute.**
 
     ![Gitpod's workspace showing the editor, terminal and
     Explorer.](images/gitpod-workspace.png)
@@ -365,6 +366,12 @@ The final line tells you a file of (randomly-generated) patient data has been cr
 data. What you see here is exactly the same process that would happen on a real, secure
 server.
 
+This is what the `input.csv` should look like:
+
+```
+patient_id
+```
+
 **Because we haven't modified the template blank study yet, this CSV file is
 still empty &mdash; we'll generate *dummy data* that contains no real patient
 information in the next section.**
@@ -398,32 +405,29 @@ make your life much easier. The steps here use Visual Studio Code.
 Gitpod users already use Visual Studio Code by default in workspaces.
 
 Visual Studio Code is also available free of charge for Windows, macOS
-and Linux. If you are already comfortable using another code editor,
-that will be suitable.
+and Linux. If you are working on your own computer and **not** in
+Gitpod, and already comfortable using another code editor, then that
+editor will be suitable.
 
 Here we'll only use Visual Studio Code as a simple editor. There are
 several [short videos and written
 guides](https://code.visualstudio.com/docs#first-steps) elsewhere on how
 to use more of Visual Studio Code's features.
 
+**By default, the Visual Studio Code configuration we provide will
+automatically save the edits to files that you make.**
+
 === "Web browser (online)"
 
-    When you open a Gitpod workspace, Visual Studio Code is ready to use
-    as the default editor and has your research repository opened.
-
-    **By default, Visual Studio Code in Gitpod is configured to
-    automatically save the edits to files that you make.**
+    There's nothing to do here! When you open a Gitpod workspace, Visual
+    Studio Code is ready to use as the default editor and has your
+    research repository opened.
 
 === "Windows (local)"
 
-    Download and install
-    [Visual Studio Code](https://code.visualstudio.com/download).
-
-    **By default, the templated repository has a Visual Studio Code
-    configuration provided that automatically saves the edits to files
-    that you make.**
-
-    Start Visual Studio Code and use the menu to open your research repository
+    Download and install [Visual Studio
+    Code](https://code.visualstudio.com/download). Then start Visual
+    Studio Code and use the menu to open your research repository
     (**File > Open Folder...**)
 
 ### Add an `age` column
@@ -463,10 +467,7 @@ between these two dates*"; lines 14-15 "*Give me a column of data corresponding
 to the age of each patient on the given date*"; and lines 16-18 "*I expect
 every patient to have a value, and the distribution of ages to match that of the
 real UK population*"
-3. Save the file. As mentioned above, in Gitpod, the file changes should be
-   saved automatically. In Windows, you'll need to go to the **File** menu and
-   select **Save**.
-4. If you run:
+3. If you run:
 
    ```sh
    $ opensafely run run_all
@@ -479,8 +480,8 @@ real UK population*"
    Use -f option to force everything to re-run
    ```
 
-   We can use the `--force-run-dependencies` option to force the CSV file to be
-   created again..
+   We can use the `--force-run-dependencies` (or `-f`) option to force
+   the CSV file to be created again.
 
    ```
    $ opensafely run run_all --force-run-dependencies`
@@ -550,7 +551,7 @@ file, which will be found at `output/descriptive.png`.
    --force-run-dependencies` and press ++enter++.  This should end by
    telling you a file containing the histogram has been
    created. Open it — you can do this via Visual Studio Code's Explorer,
-   or use another tool — and check it looks right.
+   — and check it looks right.
 
 ## 6. Test your study on GitHub
 
@@ -667,8 +668,8 @@ the new commit.
 
 ### Check that the automated tests pass
 
-In a web browser, visit your repository in GitHub. Click on the **Actions**
-tab ![image](images/github-actions-tab.png)
+Visit your repository on GitHub's site. Click on the **Actions** tab
+![image](images/github-actions-tab.png)
 
 You'll see a *Workflow* running with the *commit message* of your last
 commit. The workflow verifies that the command `opensafely run run_all` can

@@ -47,11 +47,15 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
 
 ## How should I start learning to use OpenSAFELY?
 
+**For new users, the best place to begin is the [Getting
+Started](getting-started.md) guide.**
+
 The [Analysis workflow](workflow) gives a high-level view of the steps involved in an OpenSAFELY research project.
 
-See our [installation](install-intro.md) pages for complete installation instructions.
+See our [installation](install-intro.md) pages for complete installation
+instructions if you wish to install on your own computer.
 
-We recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
+When you are more comfortable with how OpenSAFELY works, We recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
 
 !!! note "These documents are a work-in-progress"
     Please see the [Updating the Documentation page](requests-documentation.md) if you want to make improvements.
