@@ -151,7 +151,7 @@ Here, you'll copy our OpenSAFELY research template to your own GitHub
 account, for developing your own study:
 
 1. Click on the link below to create new repository based from our template.
-   You may need to log in to Github if you are not already logged in:
+   You may need to log in to GitHub if you are not already logged in:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 2. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
@@ -164,7 +164,7 @@ account, for developing your own study:
    (You only need the main branch; the other branches are
    work-in-progress changes.)
 6. Click **Create repository from template**
-7. The new Github repository will take a moment to initialise, as it is running
+7. The new GitHub repository will take a moment to initialise, as it is running
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
