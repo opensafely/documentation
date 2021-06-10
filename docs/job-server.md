@@ -6,12 +6,12 @@ To submit job-requests (i.e., to run one or more actions), the general process i
 
 * **Log in** using your GitHub credentials
 * **Create a project** (or select an existing one):
-    * Click the `Add a New WorkSpace` button.
+    * Click the `Add a New Workspace` button.
     * Click the `Register Project` button.
     * Choose a name, this will be the public facing name for your project.
     * Click `Save`.
 * **Create a workspace**:
-    * Click the `Create a WorkSpace` button.
+    * Click the `Create a Workspace` button.
     * Choose a name, for example the name of the repo.
     * Select a database to run against: either the full database, or a ~20% sample of it (sampling is based on an arbitrary selection of practices and not guaranteed to be representative).
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
