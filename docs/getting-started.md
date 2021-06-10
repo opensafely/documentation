@@ -423,9 +423,9 @@ to use more of Visual Studio Code's features.
     Download and install
     [Visual Studio Code](https://code.visualstudio.com/download).
 
-    **By default, Visual Studio Code on a desktop is not configured to
-    automatically save the edits to files that you make.** To save changes to
-    files, you can do this manually, via **File > Save** in the menu bar.
+    **By default, the templated repository has a Visual Studio Code
+    configuration provided that automatically saves the edits to files
+    that you make.**
 
     Start Visual Studio Code and use the menu to open your research repository
     (**File > Open Folder...**)
