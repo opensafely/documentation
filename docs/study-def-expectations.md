@@ -14,13 +14,13 @@ All variables use a default defined at the top of the study definition, with the
 ```py
 study = StudyDefinition(
     # Configure the expectations framework
-    default_expectations = {
+    default_expectations={
         "date": {"earliest": "1900-01-01", "latest": "today"},
         "rate": "exponential_increase",
-		"incidence": 0.5
+        "incidence": 0.5,
     },
     ...
-
+)
 ```
 
 In this case, we are saying that:
@@ -34,12 +34,12 @@ In this case, we are saying that:
 If the defaults need to be overridden, then use the `return_expectations` argument within the variable extractor function, for example as follows:
 
 ```py
-    copd = patients.with_these_clinical_events(
-		copd_codes,
-		returning = "binary_flag",
-		find_first_match_in_period = True,
-		between = [index_date, "today"],
-		return_expectations = {"incidence": 0.2},
+    copd=patients.with_these_clinical_events(
+        copd_codes,
+        returning="binary_flag",
+        find_first_match_in_period=True,
+        between=[index_date, "today"],
+        return_expectations={"incidence": 0.2},
     ),
 ```
 This overrides the 50% default incidence for the binary variable `copd` to be 20% instead.

@@ -28,15 +28,15 @@ Here is a simple example:
 
 ```py
 study = StudyDefinition(
-    index_date = "2015-06-01",
-    population = patients.with_these_clinical_events(
+    index_date="2015-06-01",
+    population=patients.with_these_clinical_events(
         copd_codes,
-        between = [
+        between=[
             "first_day_of_year(index_date) - 2 years",
             "last_day_of_year(index_date)",
         ],
     ),
-    age = patients.age_as_of("index_date"),
+    age=patients.age_as_of("index_date"),
 )
 ```
 
@@ -88,14 +88,14 @@ For example, we may want to define a patient's age on their first positive test 
 
 ```py
 study = StudyDefinition(
-    pos_test_date = patients.with_test_result_in_sgss(
-       pathogen="SARS-CoV-2",
-       test_result="positive",
-       find_first_match_in_period=True,
-       returning="date",
-       date_format="YYYY-MM-DD",
-
-    age = patients.age_as_of("pos_test_date"),
+    pos_test_date=patients.with_test_result_in_sgss(
+        pathogen="SARS-CoV-2",
+        test_result="positive",
+        find_first_match_in_period=True,
+        returning="date",
+        date_format="YYYY-MM-DD",
+    ),
+    age=patients.age_as_of("pos_test_date"),
 )
 ```
 
@@ -113,19 +113,19 @@ Some functions will produce two variables: a value and the corresponding date.
 In this case, expectations for both the value and the date can be specified, for example as follows:
 
 ```py
-sbp = patients.mean_recorded_value(
-	systolic_blood_pressure_codes,
-	on_most_recent_day_of_measurement = True,
-	include_measurement_date = True,
-	on_or_after = index_date,
-	date_format = "YYYY-MM-DD",
-	return_expectations = {
-		"incidence" : 0.8,
-		"float" : {"distribution": "normal", "mean": 110, "stddev": 20},
-		"date" : {"earliest": index_date, "latest": "index_date + 1 year"},
-		"rate" : "uniform"
-	},
-)
+    sbp=patients.mean_recorded_value(
+        systolic_blood_pressure_codes,
+        on_most_recent_day_of_measurement=True,
+        include_measurement_date=True,
+        on_or_after="index_date",
+        date_format="YYYY-MM-DD",
+        return_expectations={
+            "incidence": 0.8,
+            "float": {"distribution": "normal", "mean": 110, "stddev": 20},
+            "date": {"earliest": "index_date", "latest": "index_date + 1 year"},
+            "rate": "uniform",
+        },
+    )
 ```
-This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients, at dates between the `index_date` and one year later. The date of the most recent measurement is distributed uniformly between those dates.
 
+This says that we expect the returned systolic blood pressure values to be normally distributed and available for 80% of patients, at dates between the `index_date` and one year later. The date of the most recent measurement is distributed uniformly between those dates.

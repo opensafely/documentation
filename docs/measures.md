@@ -23,7 +23,6 @@ Generating measures is a three step process:
 The `study_definition.py` script for the example above is:
 
 ```py
-
 from cohortextractor import StudyDefinition, Measure, patients
 
 study = StudyDefinition(
@@ -31,46 +30,48 @@ study = StudyDefinition(
     default_expectations={
         "date": {"earliest": "2020-01-01", "latest": "today"},
         "rate": "exponential_increase",
-        "incidence" : 0.2
+        "incidence": 0.2,
     },
 
-    index_date = "2020-01-01",
+    index_date="2020-01-01",
 
-    population = patients.registered_as_of("index_date"),
+    population=patients.registered_as_of("index_date"),
 
-	stp = patients.registered_practice_as_of(
-		"index_date",
-		returning="stp_code",
-		return_expectations = {"category": {"ratios": {"stp1": 0.1, "stp2": 0.2, "stp3": 0.7}}, "incidence" : 1}
-	),
-	
-	sex=patients.sex(
-    return_expectations={
-      "rate": "universal",
-      "category": {"ratios": {"M": 0.49, "F": 0.51}},
-    }
-  ),
-
-	admitted = patients.admitted_to_hospital(
-		returning = "binary_flag",
-		between = ["index_date", "last_day_of_month(index_date)"],
-		return_expectations = {"incidence": 0.1},
-	),
-
-	died = patients.died_from_any_cause(
-      between = ["index_date", "last_day_of_month(index_date)"],
-      returning = "binary_flag",
-	  return_expectations = {"incidence": 0.05},
+    stp=patients.registered_practice_as_of(
+        "index_date",
+        returning="stp_code",
+        return_expectations={
+            "category": {"ratios": {"stp1": 0.1, "stp2": 0.2, "stp3": 0.7}},
+            "incidence": 1,
+        },
     ),
 
+    sex=patients.sex(
+        return_expectations={
+            "rate": "universal",
+            "category": {"ratios": {"M": 0.49, "F": 0.51}},
+        }
+    ),
+
+    admitted=patients.admitted_to_hospital(
+        returning="binary_flag",
+        between=["index_date", "last_day_of_month(index_date)"],
+        return_expectations={"incidence": 0.1},
+    ),
+
+    died=patients.died_from_any_cause(
+        between=["index_date", "last_day_of_month(index_date)"],
+        returning="binary_flag",
+        return_expectations={"incidence": 0.05},
+    ),
 )
 
 measures = [
     Measure(
-        id = "hosp_admission_by_stp",
-        numerator = "admitted",
-        denominator = "population",
-        group_by = "stp",
+        id="hosp_admission_by_stp",
+        numerator="admitted",
+        denominator="population",
+        group_by="stp",
     ),
     Measure(
         id="death_by_stp",
@@ -81,6 +82,7 @@ measures = [
     ),
 ]
 ```
+
 This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure.
 
 * `id` is just a string used to identify the measure output file.
@@ -93,16 +95,16 @@ You can calculate measures for more than one group in a single measure by specif
 ```py
 measures = [
     Measure(
-        id = "hosp_admission_by_stp_and_sex",
-        numerator = "admitted",
-        denominator = "population",
-        group_by = ["stp", "sex"],
+        id="hosp_admission_by_stp_and_sex",
+        numerator="admitted",
+        denominator="population",
+        group_by=["stp", "sex"],
     ),
     Measure(
-        id = "death_by_stp_and_sex",
-        numerator = "died",
-        denominator =" population",
-        group_by = ["stp", "sex"],
+        id="death_by_stp_and_sex",
+        numerator="died",
+        denominator=" population",
+        group_by=["stp", "sex"],
     ),
 ]
 ```

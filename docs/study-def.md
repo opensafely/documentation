@@ -39,11 +39,11 @@ You will need to put this codeblock at the top of your python file.
 ```py
 from cohortextractor import (
     StudyDefinition,
-    patients,
-    codelist_from_csv,
     codelist,
+    codelist_from_csv,
+    combine_codelists,
     filter_codes_by_category,
-    combine_codelists
+    patients,
 )
 ```
 
@@ -55,25 +55,23 @@ The `StudyDefinition()` function (imported above) is used to define both the stu
 
 ```py
 study = StudyDefinition(
-
-	# define default dummy data behaviour
-	default_expectations = {
+    # define default dummy data behaviour
+    default_expectations={
         "date": {"earliest": "1970-01-01", "latest": "today"},
         "rate": "uniform",
         "incidence": 0.2,
     },
 
-	# define the study index date
-	index_date = "2020-01-01"
+    # define the study index date
+    index_date="2020-01-01",
 
-	# define the study population
-	population = patients.all(),
+    # define the study population
+    population=patients.all(),
 
-	# define the study variables
-	age = patients.age_as_of("index_date")
+    # define the study variables
+    age=patients.age_as_of("index_date")
 
-	# more variables ...
-
+    # more variables ...
 )
 ```
 
@@ -125,18 +123,17 @@ Each study definition must have a `population` variable defined. This is a speci
 For example, here we have combined both COPD and registration details to find only patients who have COPD and have been registered at a practice for more than a year.
 
 ```py
-population = patients.satisfying(
-    """
-    has_follow_up AND 
-    has_copd
-    """,
-    has_copd=patients.with_these_clinical_events(
-        copd_codes,
-		    on_or_before = "2017-03-01"
+study = StudyDefinition(
+    population=patients.satisfying(
+        "has_follow_up AND has_copd",
+        has_follow_up=patients.registered_with_one_practice_between(
+            "2019-03-01", "2020-03-01"
+        ),
+        has_copd=patients.with_these_clinical_events(
+            copd_codes, on_or_before="2017-03-01"
+        ),
     ),
-    has_follow_up = patients.registered_with_one_practice_between(
-        "2019-03-01", "2020-03-01"
-    ),
+    ...
 )
 ```
 
@@ -149,19 +146,18 @@ For example,
 
 ```py
 study = StudyDefinition(
-	population = patients.satisfying(
-		"""
-		has_follow_up AND
-		(sex = "M" OR sex = "F")
-		""",
-		has_follow_up = patients.registered_with_one_practice_between(
-			"2019-03-01", "2020-03-01"
-		),
-	)
-	sex = patients.sex(
-		"incidence" : 1,
-		returning_expectations={"category": {"ratios": {"M": 0.49, "F": 0.51}}}
-	),
+    population=patients.satisfying(
+        'has_follow_up AND (sex = "M" OR sex = "F")',
+        has_follow_up=patients.registered_with_one_practice_between(
+            "2019-03-01", "2020-03-01"
+        ),
+    ),
+    sex=patients.sex(
+        returning_expectations={
+            "category": {"ratios": {"M": 0.49, "F": 0.51}},
+            "incidence": 1,
+        }
+    ),
 )
 ```
 
@@ -176,11 +172,11 @@ If your population is defined by just one variable, you can use this variable di
 For example, 
 
 ```py
-population = patients.with_these_clinical_events(
-    copd_codes,
-    on_or_before = "2017-03-01",
-)
+    population=patients.with_these_clinical_events(
+        copd_codes, on_or_before="2017-03-01",
+    )
 ```
+
 Again, there's no need here to use the `return_expectations` argument.
 
 ### Extracting data for all variables
@@ -188,7 +184,7 @@ Again, there's no need here to use the `return_expectations` argument.
 Occassionally, it may be necessary to extract data for all patients available for analysis within the database. To do this, you can use 
 
 ```py
-population = patients.all()
+    population=patients.all(),
 ```
 
 Be aware that this will include a mix of registered, deregistered, and deceased patients. 
@@ -253,7 +249,6 @@ Make a Python script called `common_variables.py` containing the following code:
 from cohortextractor import patients
 
 from codelists import *
-
 ```
 
 In this script, define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`.
@@ -289,7 +284,7 @@ from cohortextractor import (
     patients,
     codelist_from_csv,
     codelist,
-    combine_codelists
+    combine_codelists,
 )
 
 from common_variables import common_variables
@@ -302,18 +297,15 @@ study = StudyDefinition(
         "incidence": 0.2,
     },
     # define the study index date
-    index_date = "2020-01-01"
+    index_date="2020-01-01",
 
     # STUDY POPULATION
     population=patients.all(),
 
     # COPD
     copd=patients.with_these_clinical_events(
-    copd_codes,
-    find_first_match_in_period=True,
-    date_format="YYYY-MM",
+        copd_codes, find_first_match_in_period=True, date_format="YYYY-MM",
     ),
-
     **common_variables
 )
 ```
