@@ -14,6 +14,7 @@ nav:
   - Reference:
       - Detailed installation guides:
           - Overview: install-intro.md
+          - Managing Gitpod workspaces: gitpod-workspaces.md
           - GitHub and Git: install-github-and-git.md
           - Python: install-python.md
           - Docker: install-docker.md
@@ -110,6 +111,7 @@ markdown_extensions:
       permalink: "&#128279;"
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.keys
   - admonition
   - footnotes
