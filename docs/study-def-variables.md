@@ -133,6 +133,12 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 &nbsp;
 
 
+## NHS England COVID-19 data store
+(Documentation on the source of this data will be forthcoming later.)
+
+:::cohortextractor.patients.with_healthcare_worker_flag_on_covid_vaccine_record
+
+
 ## Utility functions
 
 These variables create new variable from existing variables. They do not extract any data directly.

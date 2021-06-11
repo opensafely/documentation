@@ -73,7 +73,7 @@ numpy==1.19.2
     #   pyarrow
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.32.0
+opensafely-cohort-extractor==1.34.0
     # via -r requirements.in
 opensafely-jobrunner==2.1.6
     # via opensafely-cohort-extractor
@@ -89,6 +89,8 @@ presto-python-client==0.7.0
     # via opensafely-cohort-extractor
 prettytable==2.0.0
     # via opensafely-cohort-extractor
+py4j==0.10.9
+    # via pyspark
 py==1.10.0
     # via retry
 pyarrow==4.0.0
@@ -105,6 +107,8 @@ pyopenssl==20.0.1
     # via requests-pkcs12
 pyparsing==2.4.7
     # via matplotlib
+pyspark==3.1.2
+    # via opensafely-cohort-extractor
 python-dateutil==2.8.1
     # via
     #   matplotlib
