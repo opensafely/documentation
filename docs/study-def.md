@@ -1,5 +1,7 @@
 ## What is a Study Definition?
 
+(Know what you're doing and just looking for a quick reference? Go to the [variable reference](study-def-variables.md))
+
 A _study definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
 
 * the patient population (dataset rows)
@@ -17,14 +19,14 @@ some epidemiological knowledge.
     roadmap to replace the Python-based approach with a configuration-based
     approach which is more secure, and can be driven from a graphical user interface.
 
-The OpenSAFELY framework case use a single study definition to query different
+The OpenSAFELY framework uses a single study definition to query different
 vendor EHR databases, and saves the results to the secure server in a CSV file
 of tabular data.
 
 A study definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
 This allows the framework to generate dummy data which the researcher can use to develop and test their analysis scripts, without ever having to touch real patient data.
 
-When you generate a study population from your study definition, the framework reads a study definition from the python script (usually `analysis/study_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
+When you generate a study population, the framework reads your study definition from the python script (usually `analysis/study_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
 In a production environment this file will contain real data; in a development environment this will be dummy data.
 
 Currently the framework supports one row per patient datasets.

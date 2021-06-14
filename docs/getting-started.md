@@ -168,6 +168,8 @@ account, for developing your own study:
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
+   
+   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload. 
 
 
 ## 3. Setup the required software
@@ -266,14 +268,15 @@ account, for developing your own study:
     !!! note
         On Windows, installing Docker is usually
         straightforward, but can sometimes be complicated, depending on your exact
-        version and configure of Windows. If you run into problems, our more
+        version and configuration of Windows. If you run into problems, our more
         [detailed installation notes](install-docker.md) may help.
 
 
-    1. If you are using Windows 10 Pro, Enterprise or Education, you should [follow
-       these instructions](https://docs.docker.com/docker-for-windows/install/).
-       Otherwise, follow the instructions for [installing on Windows
-       Home](https://docs.docker.com/docker-for-windows/install-windows-home/).
+    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).  
+       If you are using Windows 10 Pro, Enterprise or Education, you should 
+       follow the instructions for Hyper-V backend and Windows containers.  If you are using
+       Windows Home or an earlier build of Pro or Education, follow the instructions for 
+       WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
        be very challenging. Please let us know if you can help us [improve
        the documentation](requests-documentation.md) here.
@@ -281,7 +284,7 @@ account, for developing your own study:
        so, an animation runs in the notification area:<br>
        ![image](images/docker-windows-starting.png)
     3. When Docker has finished starting up, share your hard drive with Docker:
-       click system tray docker icon; select "settings"; select "shared drives".
+       click the system tray docker icon; select "settings"; select "shared drives".
     4. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
        `opensafely pull cohortextractor`. This will pull down the OpenSAFELY
        cohortextractor images, which can be used to run actions in your study.  The
@@ -291,7 +294,7 @@ account, for developing your own study:
 
 ## 4. Set up your first study
 
-In a previous step, you previously created a copy of the research code
+In a previous step, you created a copy of the research code
 in GitHub. You need to have a copy, or "clone", of that code to develop your own
 study.
 
@@ -336,7 +339,8 @@ study.
 
 ### Run your first study
 
-Now you're ready to run your first study. Run:
+Now you're ready to run your first study. Ensure your current directory is your newly-cloned 
+study repository, and run:
 
 ```sh
 $ opensafely run run_all
@@ -390,8 +394,8 @@ information in the next section.**
 
 === "Windows (local)"
 
-    The newly created output files are created in the local copy of the
-    repository in the `output/` directory.
+    The new output files are created in the local copy of the
+    repository in the `output/` directory, e.g. `C:/Users/me/my-git-repos/hello-world/output/`.
 
 ## 5. Make changes to your study
 
@@ -406,7 +410,7 @@ Gitpod users already use Visual Studio Code by default in workspaces.
 
 Visual Studio Code is also available free of charge for Windows, macOS
 and Linux. If you are working on your own computer and **not** in
-Gitpod, and already comfortable using another code editor, then that
+Gitpod, and are already comfortable using another code editor, then that
 editor will be suitable.
 
 Here we'll only use Visual Studio Code as a simple editor. There are
@@ -489,58 +493,111 @@ real UK population*"
 
    A new `input.csv` file will be created in the `output` folder. Open that
    file (by left-clicking the filename in Visual Studio Code's Explorer, or
-   software like Excel). This time, you'll see it now synthetic data: an age
-   for 1000 randomly generated patients.
+   software like Excel). This time, you'll see it now contains synthetic data: an age
+   for 1000 randomly generated patients (we'll see shortly how this is defined).
 
 ### Add a chart
 
 **Every** study starts with a *study definition* like the one you just edited.
 When executed, a study definition generates a CSV of patient data.
 
-A real analysis will have several further steps after this. Each step can be
-written in [any of the programming languages supported in
+A real analysis will have several further steps after this. Each step is defined 
+in a separate file, and can be written in [any of the programming languages supported in
 OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
-histogram of ages, using four lines of Python.
+histogram of ages, using either four lines of Python or just a few more lines of R.
 
-1. Right-click on the `analysis` folder in the editor's Explorer and select
-   "New file". Type "report.py" as the filename and press ++enter++.
-2. Add the following to `report.py`:.
-```python
-import pandas as pd
+=== "Python"
 
-data = pd.read_csv("output/input.csv")
+    1. Right-click on the `analysis` folder in the editor's Explorer and select
+       "New file". Type "report.py" as the filename and press ++enter++.
+    2. Add the following to `report.py`:.
+    ```python
+    import pandas as pd
+    
+    data = pd.read_csv("output/input.csv")
+    
+    fig = data.age.plot.hist().get_figure()
+    fig.savefig("output/descriptive.png")
+    ```
 
-fig = data.age.plot.hist().get_figure()
-fig.savefig("output/descriptive.png")
-```
+=== "R"
+
+    1. Right-click on the `analysis` folder in the editor's Explorer and select
+       "New file". Type "report.R" as the filename and press ++enter++.
+    2. Add the following to `report.R`:.
+    ```R
+    library('tidyverse')
+    
+    df_input <- read_csv(
+      here::here("output", "input.csv"),
+      col_types = cols(patient_id = col_integer(),age = col_double())
+    )
+    
+    plot_age <- ggplot(data=df_input, aes(df_input$age)) + geom_histogram()
+    
+    ggsave(
+      plot= plot_age,
+      filename="descriptive.png", path=here::here("output"),
+    )
+    ```
+
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
 3. Open `project.yaml` in the editor. This file will be near the end of the
    list of files and folders. This file describes how each step in your
-   analysis should be run. It's in a format called YAML: the way it's indented
+   analysis should be run. It already defines the expected `population_size` (1000),
+   and a single `generate_study_population` action which defines the output that we've 
+   generated so far.  This file is in a format called YAML: the way it's indented
    matters, so be careful to copy and paste the following carefully.
 4. Add a `describe` action to the file, so the entire file looks like this:
-```yaml linenums="1" hl_lines="13 14 15 16 17 18"
-version: "3.0"
 
-expectations:
-  population_size: 1000
+=== "Python"
 
-actions:
-  generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
-    outputs:
-      highly_sensitive:
-        cohort: output/input.csv
+    ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
+    version: "3.0"
+    
+    expectations:
+      population_size: 1000
+    
+    actions:
+      generate_study_population:
+        run: cohortextractor:latest generate_cohort --study-definition study_definition
+        outputs:
+          highly_sensitive:
+            cohort: output/input.csv
+    
+      describe:
+        run: python:latest python analysis/report.py
+        needs: [generate_study_population]
+        outputs:
+          moderately_sensitive:
+            cohort: output/descriptive.png
+    ```
 
-  describe:
-    run: python:latest python analysis/report.py
-    needs: [generate_study_population]
-    outputs:
-      moderately_sensitive:
-        cohort: output/descriptive.png
-```
+=== "R"
+
+    ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
+    version: "3.0"
+    
+    expectations:
+      population_size: 1000
+    
+    actions:
+      generate_study_population:
+        run: cohortextractor:latest generate_cohort --study-definition study_definition
+        outputs:
+          highly_sensitive:
+            cohort: output/input.csv
+    
+      describe:
+        run: r:latest analysis/report.R
+        needs: [generate_study_population]
+        outputs:
+          moderately_sensitive:
+            cohort: output/descriptive.png
+    ```
+
 Line 13 tells the system we want to create a new action called `describe`. Line
-14 says how to run the script (using the `python` runner). Line 15 tells the
+14 says how to run the script (using the `python` or `R` runner). Line 15 tells the
 system that this action depends on the outputs of the
 `generate_study_population` being present. Lines 16-18 describe the files that
 the action creates. Line 17 says that the items indented below it are
@@ -550,7 +607,7 @@ file, which will be found at `output/descriptive.png`.
 5. At the command line, type `opensafely run run_all
    --force-run-dependencies` and press ++enter++.  This should end by
    telling you a file containing the histogram has been
-   created. Open it — you can do this via Visual Studio Code's Explorer,
+   created. Open it — you can do this via Visual Studio Code's Explorer
    — and check it looks right.
 
 ## 6. Test your study on GitHub
@@ -569,8 +626,8 @@ the new commit.
 
     <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
     
-    1. When logged into Gitpod, visit their [Settings
-       page](https://gitpod.io/settings).
+    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).  
+       (Note this is different to the settings in your Gitpod workspace.)
 
     2. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
@@ -626,10 +683,10 @@ the new commit.
     ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
 
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Type a message into the text box above that
-    will describe the staged changes. When ready, you can then click the
-    tick icon that will *commit* the staged changes to the repository to
-    add them to the repository as stored in the workspace.
+    make the new commit. Type a message into the text box above the list 
+    of staged files that will describe the staged changes. When ready, you 
+    can then click the tick icon that will *commit* the staged changes to 
+    to add them to the repository as stored in the workspace.
 
     ![Committing changes in Gitpod.](images/gitpod-commit.png)
 
@@ -637,11 +694,11 @@ the new commit.
 
     The changes have been stored as a new commit in the workspace's
     *local* copy of the repository. We now need to *push* the
-    repository's to GitHub to make the changes show up there.
+    repository to GitHub to make the changes show up there.
 
-    Click the three horizontal dots (`⋯`) that is one of the icons next
-    to "Source Control" and then select "Push". This should submit your
-    changes to the GitHub repository that you created earlier.
+    Click the ellipsis (`⋯`) icon next to "Source Control" and then 
+    select "Push". This should submit your changes to the GitHub 
+    repository that you created earlier.
 
     ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
 
@@ -696,6 +753,8 @@ detail on the subjects covered in this tutorial. For example:
   different ways to define new variables in your study definition.
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
+* OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) 
+  to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone
 * There is a final step we've not described here: [a
   website](https://jobs.opensafely.org/) called the ["OpenSAFELY Job
   Server"](job-server.md) where you can submit your repository actions to be run
