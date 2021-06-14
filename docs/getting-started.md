@@ -272,8 +272,8 @@ account, for developing your own study:
         [detailed installation notes](install-docker.md) may help.
 
 
-    1. Follow the instructions [here](https://docs.docker.com/docker-for-windows/install/) 
-       to install Docker.  If you are using Windows 10 Pro, Enterprise or Education, you should 
+    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).  
+       If you are using Windows 10 Pro, Enterprise or Education, you should 
        follow the instructions for Hyper-V backend and Windows containers.  If you are using
        Windows Home or an earlier build of Pro or Education, follow the instructions for 
        WSL 2 backend.
@@ -394,7 +394,7 @@ information in the next section.**
 
 === "Windows (local)"
 
-    The newly output files are created in the local copy of the
+    The new output files are created in the local copy of the
     repository in the `output/` directory, e.g. `C:/Users/me/my-git-repos/hello-world/output/`.
 
 ## 5. Make changes to your study
@@ -626,9 +626,8 @@ the new commit.
 
     <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
     
-    1. When logged into Gitpod, use [this link](https://gitpod.io/settings) 
-       to visit their Settings page.  (Note this is different to the settings
-       in your Gitpod workspace.)
+    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).  
+       (Note this is different to the settings in your Gitpod workspace.)
 
     2. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
