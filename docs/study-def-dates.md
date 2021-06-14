@@ -8,7 +8,7 @@ Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [v
 You must use at most one.
 If no option is given then it will use all dates (including possibly future dates).
 
-As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, you can use the date expressions discussed above.
+As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, you can use the date expressions discussed [below](#index-dates).
 
 ### Setting date ranges to filter out 'impossible' dates
 
@@ -40,7 +40,7 @@ study = StudyDefinition(
 )
 ```
 
-This can make it easier to change the index date of a study by making sure it is only defined in once place.
+This can make it easier to change the index date of a study by making sure it is only defined in one place.
 
 The simplest date expression is just `index_date`, which gets replaced by whatever the index date is set to.
 

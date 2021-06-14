@@ -18,7 +18,9 @@ OpenSAFELY is a collaboration between the DataLab at the University of Oxford, t
 
 **Only approved users can execute code against the real OpenSAFELY database**.
 
-However, all the OpenSAFELY-specific tools needed to define analysis datasets, generate dummy data, and run analysis scripts in a computational environment that mimics the secure environment where real analyses are run, are available now for use by anyone.
+However, anyone can access and use all the OpenSAFELY-specific tools needed to define analysis datasets, generate dummy data, and run analysis scripts in a computational environment that mimics the secure environment where real analyses are run.
+
+All steps in the [Getting Started](getting-started.md) guide can be run by anyone interested in learning more about how code is written and executed in OpenSAFELY.
 
 To use OpenSAFELY, users must know, or be willing to learn, the following programs and tools:
 
