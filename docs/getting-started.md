@@ -542,13 +542,20 @@ histogram of ages, using either four lines of Python or just a few more lines of
     ```
 
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
-3. Open `project.yaml` in the editor. This file will be near the end of the
-   list of files and folders. This file describes how each step in your
-   analysis should be run. It already defines the expected `population_size` (1000),
-   and a single `generate_study_population` action which defines the output that we've 
-   generated so far.  This file is in a format called YAML: the way it's indented
-   matters, so be careful to copy and paste the following carefully.
-4. Add a `describe` action to the file, so the entire file looks like this:
+
+<ol start=3>
+  <li>
+    Open <code>project.yaml</code> in the editor. This file will be near the end of the
+    list of files and folders. This file describes how each step in your analysis should
+    be run. It already defines the expected <code>population_size</code> (1000), and a
+    single <code>generate_study_population</code> action which defines the output that
+    we've generated so far. This file is in a format called YAML: the way it's indented
+    matters, so be careful to copy and paste the following carefully.
+  </li>
+  <li>
+    Add a <code>describe</code> action to the file, so the entire file looks like this:
+  </li>
+</ol>
 
 === "Python"
 
