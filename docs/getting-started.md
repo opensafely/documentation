@@ -546,10 +546,10 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 <ol start=3>
   <li>
     Open <code>project.yaml</code> in the editor. This file will be near the end of the
-    list of files and folders. This file describes how each step in your
-    analysis should be run. It already defines the expected <code>population_size</code> (1000),
-    and a single <code>generate_study_population</code> action which defines the output that we've
-    generated so far. This file is in a format called YAML: the way it's indented
+    list of files and folders. This file describes how each step in your analysis should
+    be run. It already defines the expected <code>population_size</code> (1000), and a
+    single <code>generate_study_population</code> action which defines the output that
+    we've generated so far. This file is in a format called YAML: the way it's indented
     matters, so be careful to copy and paste the following carefully.
   </li>
   <li>
