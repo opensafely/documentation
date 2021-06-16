@@ -285,6 +285,10 @@ account, for developing your own study:
        ![image](images/docker-windows-starting.png)
     1. When Docker has finished starting up, share your hard drive with Docker:
        click the system tray docker icon; select "settings"; select "shared drives".
+    1. If you have ended up with the *Hyper-V* backend, then when Docker has
+       finished starting up, you will need share your hard drive with Docker: click
+       system tray docker icon; select "settings"; select "shared drives".  This
+       setting does not exist in the *WSL 2* backend.
     1. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
        `opensafely pull cohortextractor`. This will pull down the OpenSAFELY
        cohortextractor images, which can be used to run actions in your study.  The
