@@ -27,7 +27,7 @@ your request to aid the reviewer.
 ## When to ask for code review?
 
 Code reviews should be the default. A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to 
-merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to master, there is a natural inflexion point to do a code review, and each merge should be 
+merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to main, there is a natural inflexion point to do a code review, and each merge should be 
 accompanied with a code review. If you are in a hurry, and no-one has time to do a more thorough 
 code review, bear in mind that even a cursory code review is better than no code review. 
 
