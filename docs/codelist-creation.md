@@ -73,7 +73,7 @@ Once a draft codelist has been agreed, it must be signed-off by a "data expert" 
 * Go to the OpenCodelists [new codelist page](https://www.opencodelists.org/codelist/opensafely/).
 You will need an editor account. Ask one of the tech team for one if you do not have one.
 * Fill in the fields. Include lots of detail (specific guidance to follow).
-    * **CSV data**: [Export your Spreadsheet to a CSV](https://github.com/opensafely/documentation/blob/master/codelist%20creation.md#exporting-a-csv-from-a-spreadsheet) and choose that file.
+    * **CSV data**: [Export your Spreadsheet to a CSV](#exporting-a-csv-from-a-spreadsheet) and choose that file.
     * **References**: this should include a link to the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development), and any other relevant materials.
     * **Sign Off**: This should match the people signing off on the issue. You need at least 2 people and can have many more.
 * Click Submit and check the new codelist has appeared on the main site.
