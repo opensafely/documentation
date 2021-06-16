@@ -153,23 +153,23 @@ account, for developing your own study:
 1. Click on the link below to create new repository based from our template.
    You may need to log in to GitHub if you are not already logged in:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
-2. Use the **Owner** drop-down menu, and select the account you want to own the
+1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
    ![image](images/create-repository-owner.png)
-3. Type a name for your repository, and an optional description.
+1. Type a name for your repository, and an optional description.
    ![image](images/create-repository-name.png)
-4. Choose a repository visibility.  This would usually be "Public".
+1. Choose a repository visibility.  This would usually be "Public".
    ![image](images/create-repository-public-private.png)
-5. There is an "Include all branches" option: it can be left disabled.
+1. There is an "Include all branches" option: it can be left disabled.
    (You only need the main branch; the other branches are
    work-in-progress changes.)
-6. Click **Create repository from template**
-7. The new GitHub repository will take a moment to initialise, as it is running
+1. Click **Create repository from template**
+1. The new GitHub repository will take a moment to initialise, as it is running
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
-   
-   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload. 
+
+   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
 
 ## 3. Setup the required software
@@ -248,18 +248,18 @@ account, for developing your own study:
 
     1. [Download and run the Anaconda Python
        installer](https://docs.anaconda.com/anaconda/install/windows/).
-    2. When you've done, to verify your installation, open Anaconda Prompt by
+    1. When you've done, to verify your installation, open Anaconda Prompt by
        clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
        from the menu. ![Finding Anaconda Prompt on
        Windows](./images/win-anaconda-prompt.png)
-    3. To install the OpenSAFELY command line tool, you first need to
+    1. To install the OpenSAFELY command line tool, you first need to
        install a tool called `pip`. ([`pip`](https://pip.pypa.io/en/stable/)
        is used for installing Python software and libraries.)
        Do this by typing `conda install pip` and pressing ++enter++.
-    4. Now you can install the OpenSAFELY command line tool, by typing `pip
+    1. Now you can install the OpenSAFELY command line tool, by typing `pip
        install opensafely`, and pressing ++enter++. You should see a message
        to the effect of `Successfully installed opensafely`.
-    5. To confirm everything is working, type `opensafely` and press
+    1. To confirm everything is working, type `opensafely` and press
        ++enter++. If the OpenSAFELY tool is working, this will show help
        text on how to use the `opensafely` command.
 
@@ -272,20 +272,24 @@ account, for developing your own study:
         [detailed installation notes](install-docker.md) may help.
 
 
-    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).  
-       If you are using Windows 10 Pro, Enterprise or Education, you should 
+    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
+       If you are using Windows 10 Pro, Enterprise or Education, you should
        follow the instructions for Hyper-V backend and Windows containers.  If you are using
-       Windows Home or an earlier build of Pro or Education, follow the instructions for 
+       Windows Home or an earlier build of Pro or Education, follow the instructions for
        WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
        be very challenging. Please let us know if you can help us [improve
        the documentation](requests-documentation.md) here.
-    2. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
+    1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
        so, an animation runs in the notification area:<br>
        ![image](images/docker-windows-starting.png)
-    3. When Docker has finished starting up, share your hard drive with Docker:
+    1. When Docker has finished starting up, share your hard drive with Docker:
        click the system tray docker icon; select "settings"; select "shared drives".
-    4. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
+    1. If you have ended up with the *Hyper-V* backend, then when Docker has
+       finished starting up, you will need share your hard drive with Docker: click
+       system tray docker icon; select "settings"; select "shared drives".  This
+       setting does not exist in the *WSL 2* backend.
+    1. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
        `opensafely pull cohortextractor`. This will pull down the OpenSAFELY
        cohortextractor images, which can be used to run actions in your study.  The
        first time you run it, this may take a little time, depending on your
@@ -309,12 +313,12 @@ study.
 === "Windows (local)"
 
     1. Look above the list of files in your new repo for a **Code** button. ![image](images/code-button.png)
-    2. Click **Open with GitHub Desktop** to clone and open the repository with
+    1. Click **Open with GitHub Desktop** to clone and open the repository with
        GitHub Desktop. ![image](images/open-with-desktop.png)
-    3. Click **Choose...** and, using Windows Explorer, navigate to a local path
+    1. Click **Choose...** and, using Windows Explorer, navigate to a local path
        where you want to clone the repository.
        ![image](images/clone-choose-button-url-win.png)
-    4. Click **Clone**  ![image](images/clone-button-url-win.png)
+    1. Click **Clone**  ![image](images/clone-button-url-win.png)
 
 ### Test the blank study on your computer
 
@@ -329,7 +333,7 @@ study.
     You can open a prompt to run the study code:
 
     1. Open Anaconda Prompt (or use an already-open one)
-    2. Change your current directory to the location of your cloned, local path. To
+    1. Change your current directory to the location of your cloned, local path. To
        do this, use the `cd` command. For example, `cd
        C:/Users/me/my-git-repos/hello-world` and press ++enter++.
 
@@ -339,7 +343,7 @@ study.
 
 ### Run your first study
 
-Now you're ready to run your first study. Ensure your current directory is your newly-cloned 
+Now you're ready to run your first study. Ensure your current directory is your newly-cloned
 study repository, and run:
 
 ```sh
@@ -441,7 +445,7 @@ automatically save the edits to files that you make.**
    file inside the `analysis` folder. This file specifies the population
    that you'd like to study (dataset rows) and what you need to know
    about them (dataset columns).
-2. Add some text so that the file looks like this (new text highlighted):
+1. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="14 15 16 17 18 19 20"
 from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
 
@@ -501,7 +505,7 @@ real UK population*"
 **Every** study starts with a *study definition* like the one you just edited.
 When executed, a study definition generates a CSV of patient data.
 
-A real analysis will have several further steps after this. Each step is defined 
+A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
 OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
 histogram of ages, using either four lines of Python or just a few more lines of R.
@@ -513,9 +517,9 @@ histogram of ages, using either four lines of Python or just a few more lines of
     2. Add the following to `report.py`:.
     ```python
     import pandas as pd
-    
+
     data = pd.read_csv("output/input.csv")
-    
+
     fig = data.age.plot.hist().get_figure()
     fig.savefig("output/descriptive.png")
     ```
@@ -527,14 +531,14 @@ histogram of ages, using either four lines of Python or just a few more lines of
     2. Add the following to `report.R`:.
     ```R
     library('tidyverse')
-    
+
     df_input <- read_csv(
       here::here("output", "input.csv"),
       col_types = cols(patient_id = col_integer(),age = col_double())
     )
-    
+
     plot_age <- ggplot(data=df_input, aes(df_input$age)) + geom_histogram()
-    
+
     ggsave(
       plot= plot_age,
       filename="descriptive.png", path=here::here("output"),
@@ -561,17 +565,17 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
     version: "3.0"
-    
+
     expectations:
       population_size: 1000
-    
+
     actions:
       generate_study_population:
         run: cohortextractor:latest generate_cohort --study-definition study_definition
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-    
+
       describe:
         run: python:latest python analysis/report.py
         needs: [generate_study_population]
@@ -584,17 +588,17 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
     version: "3.0"
-    
+
     expectations:
       population_size: 1000
-    
+
     actions:
       generate_study_population:
         run: cohortextractor:latest generate_cohort --study-definition study_definition
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-    
+
       describe:
         run: r:latest analysis/report.R
         needs: [generate_study_population]
@@ -632,17 +636,17 @@ the new commit.
 === "Web browser (online)"
 
     <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
-    
-    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).  
+
+    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).
        (Note this is different to the settings in your Gitpod workspace.)
 
-    2. Select Integrations and under Git Providers, hover over your
+    1. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
        "Edit Permissions".
 
        ![Opening Gitpod's settings in their code
        editor.](images/gitpod-git-providers.png)
-    3. In the list, tick "public\_repo", which gives
+    1. In the list, tick "public\_repo", which gives
        your Gitpod account "write access to code in public repositories
        and organizations" on GitHub. (There is another permission that
        you have to enable for access to code in private repositories,
@@ -650,7 +654,7 @@ the new commit.
 
        ![Opening Gitpod's settings in their code
        editor.](images/gitpod-edit-permissions.png)
-    4. When you select "Update Permissions", you will see a prompt from
+    1. When you select "Update Permissions", you will see a prompt from
        GitHub asking you to approve the changes, which you will need to
        do to allow Gitpod to push your work on Gitpod to GitHub.
 
@@ -675,7 +679,7 @@ the new commit.
     Source Control under "Changes", you can propose to add the changes
     to the repository by clicking the `+` icon next to the filename.
     These "staged" changes then appear in the "Staged Changes" section.
-    
+
     ![Staging changes in Gitpod.](images/gitpod-stage-changes.png)
 
     Staged changes are changes that you are proposing to include in the next *commit* of
@@ -690,9 +694,9 @@ the new commit.
     ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
 
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Type a message into the text box above the list 
-    of staged files that will describe the staged changes. When ready, you 
-    can then click the tick icon that will *commit* the staged changes to 
+    make the new commit. Type a message into the text box above the list
+    of staged files that will describe the staged changes. When ready, you
+    can then click the tick icon that will *commit* the staged changes to
     to add them to the repository as stored in the workspace.
 
     ![Committing changes in Gitpod.](images/gitpod-commit.png)
@@ -703,8 +707,8 @@ the new commit.
     *local* copy of the repository. We now need to *push* the
     repository to GitHub to make the changes show up there.
 
-    Click the ellipsis (`⋯`) icon next to "Source Control" and then 
-    select "Push". This should submit your changes to the GitHub 
+    Click the ellipsis (`⋯`) icon next to "Source Control" and then
+    select "Push". This should submit your changes to the GitHub
     repository that you created earlier.
 
     ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
@@ -722,12 +726,12 @@ the new commit.
        GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
        checkbox at the top of the list.<br>
       ![image](images/commit-all.png)
-    2. At the bottom of the list of changes, in the **Summary** field, type a short,
+    1. At the bottom of the list of changes, in the **Summary** field, type a short,
        meaningful description of the changes (this is called the *commit message*).
        Optionally, you can add more information about the change in the
        **Description** field. Press the blue button to make the commit.<br>
       ![image](images/commit-message.png)
-    3. Click **Push origin** to push your local changes to the remote repository on
+    1. Click **Push origin** to push your local changes to the remote repository on
        GitHub ![image](images/push-to-github.png)
 
 ### Check that the automated tests pass
@@ -760,7 +764,7 @@ detail on the subjects covered in this tutorial. For example:
   different ways to define new variables in your study definition.
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
-* OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) 
+* OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
   to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone
 * There is a final step we've not described here: [a
   website](https://jobs.opensafely.org/) called the ["OpenSAFELY Job
