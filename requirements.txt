@@ -125,7 +125,7 @@ regex==2020.10.15
     # via nltk
 requests-pkcs12==1.9
     # via opensafely-cohort-extractor
-requests==2.24.0
+requests==2.25.0
     # via
     #   opensafely-cohort-extractor
     #   opensafely-jobrunner
@@ -167,7 +167,7 @@ tornado==6.0.4
     #   mkdocs
 tqdm==4.50.2
     # via nltk
-urllib3==1.25.11
+urllib3==1.26.5
     # via requests
 wcwidth==0.2.5
     # via prettytable
