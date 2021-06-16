@@ -168,8 +168,8 @@ account, for developing your own study:
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
-   
-   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload. 
+
+   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
 
 ## 3. Setup the required software
@@ -272,10 +272,10 @@ account, for developing your own study:
         [detailed installation notes](install-docker.md) may help.
 
 
-    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).  
-       If you are using Windows 10 Pro, Enterprise or Education, you should 
+    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
+       If you are using Windows 10 Pro, Enterprise or Education, you should
        follow the instructions for Hyper-V backend and Windows containers.  If you are using
-       Windows Home or an earlier build of Pro or Education, follow the instructions for 
+       Windows Home or an earlier build of Pro or Education, follow the instructions for
        WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
        be very challenging. Please let us know if you can help us [improve
@@ -339,7 +339,7 @@ study.
 
 ### Run your first study
 
-Now you're ready to run your first study. Ensure your current directory is your newly-cloned 
+Now you're ready to run your first study. Ensure your current directory is your newly-cloned
 study repository, and run:
 
 ```sh
@@ -501,7 +501,7 @@ real UK population*"
 **Every** study starts with a *study definition* like the one you just edited.
 When executed, a study definition generates a CSV of patient data.
 
-A real analysis will have several further steps after this. Each step is defined 
+A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
 OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
 histogram of ages, using either four lines of Python or just a few more lines of R.
@@ -513,9 +513,9 @@ histogram of ages, using either four lines of Python or just a few more lines of
     2. Add the following to `report.py`:.
     ```python
     import pandas as pd
-    
+
     data = pd.read_csv("output/input.csv")
-    
+
     fig = data.age.plot.hist().get_figure()
     fig.savefig("output/descriptive.png")
     ```
@@ -527,14 +527,14 @@ histogram of ages, using either four lines of Python or just a few more lines of
     2. Add the following to `report.R`:.
     ```R
     library('tidyverse')
-    
+
     df_input <- read_csv(
       here::here("output", "input.csv"),
       col_types = cols(patient_id = col_integer(),age = col_double())
     )
-    
+
     plot_age <- ggplot(data=df_input, aes(df_input$age)) + geom_histogram()
-    
+
     ggsave(
       plot= plot_age,
       filename="descriptive.png", path=here::here("output"),
@@ -561,17 +561,17 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
     version: "3.0"
-    
+
     expectations:
       population_size: 1000
-    
+
     actions:
       generate_study_population:
         run: cohortextractor:latest generate_cohort --study-definition study_definition
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-    
+
       describe:
         run: python:latest python analysis/report.py
         needs: [generate_study_population]
@@ -584,17 +584,17 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
     version: "3.0"
-    
+
     expectations:
       population_size: 1000
-    
+
     actions:
       generate_study_population:
         run: cohortextractor:latest generate_cohort --study-definition study_definition
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-    
+
       describe:
         run: r:latest analysis/report.R
         needs: [generate_study_population]
@@ -632,8 +632,8 @@ the new commit.
 === "Web browser (online)"
 
     <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
-    
-    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).  
+
+    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).
        (Note this is different to the settings in your Gitpod workspace.)
 
     1. Select Integrations and under Git Providers, hover over your
@@ -675,7 +675,7 @@ the new commit.
     Source Control under "Changes", you can propose to add the changes
     to the repository by clicking the `+` icon next to the filename.
     These "staged" changes then appear in the "Staged Changes" section.
-    
+
     ![Staging changes in Gitpod.](images/gitpod-stage-changes.png)
 
     Staged changes are changes that you are proposing to include in the next *commit* of
@@ -690,9 +690,9 @@ the new commit.
     ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
 
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Type a message into the text box above the list 
-    of staged files that will describe the staged changes. When ready, you 
-    can then click the tick icon that will *commit* the staged changes to 
+    make the new commit. Type a message into the text box above the list
+    of staged files that will describe the staged changes. When ready, you
+    can then click the tick icon that will *commit* the staged changes to
     to add them to the repository as stored in the workspace.
 
     ![Committing changes in Gitpod.](images/gitpod-commit.png)
@@ -703,8 +703,8 @@ the new commit.
     *local* copy of the repository. We now need to *push* the
     repository to GitHub to make the changes show up there.
 
-    Click the ellipsis (`⋯`) icon next to "Source Control" and then 
-    select "Push". This should submit your changes to the GitHub 
+    Click the ellipsis (`⋯`) icon next to "Source Control" and then
+    select "Push". This should submit your changes to the GitHub
     repository that you created earlier.
 
     ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
@@ -760,7 +760,7 @@ detail on the subjects covered in this tutorial. For example:
   different ways to define new variables in your study definition.
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
-* OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) 
+* OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
   to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone
 * There is a final step we've not described here: [a
   website](https://jobs.opensafely.org/) called the ["OpenSAFELY Job
