@@ -1,5 +1,7 @@
 # Deploying
 
-The [docs site](https://docs.opensafely.org) is served by [readthedocs](https://readthedocs.org/), using a webhook to build the [latest version](https://readthedocs.org/projects/opensafely-documentation/versions/) from the `master` branch when it is updated. 
+[Production](https://docs.opensafely.org) is served by CloudFlare Pages [here](https://opensafely-docs.pages.dev/).
 
-There are a [few redirects](https://readthedocs.org/dashboard/opensafely-documentation/redirects/) from old `stable` urls to current `latest` urls.
+PRs will generate a [preview deployment](https://developers.cloudflare.com/pages/platform/preview-deployments) of your changes.
+
+Redirects are handled by [this file](https://github.com/opensafely/documentation/blob/c95511ac48453359fcb0a375c9b26a497712dfc1/docs/_redirects) using [CloudFlare Pages' Redirect config](https://developers.cloudflare.com/pages/platform/redirects).
