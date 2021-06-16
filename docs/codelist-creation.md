@@ -9,12 +9,12 @@ The general workflow for creating codelists is as follows:
 previous research papers.
 1. When logged into [OpenCodelists](https://www.opencodelists.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
 1. Add/remove terms to your codelists to end up with a list.
-1. Save the list as a draft and share the link to your the GitHub issue.
+1. Save the list as a draft.
+1. Clicking "Save changes" makes the codelist available on codelists.opensafely.org as a draft. Share this link to the GitHub issue.
 1. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
 as a group (i.e. at least 2). Detailed reasons are helpful in this issue for referencing in the future.
 1. Once agreed, obtain sign-off.
-1. Clicking "Save changes" makes the codelist available on [OpenCodelists](https://www.opencodelists.org). Summarise your discussion briefly for the metadata,
-and reference the issue on the website for more details. This will initially be a draft. When ready, publish it.
+1. Summarise your discussion and methodology briefly for the metadata, and reference the issue on the website for more details.  This will initially be a draft. When ready, publish it.
 1. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development).
 1. Import the codelist for use in your study definition.
 
