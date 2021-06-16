@@ -87,7 +87,7 @@ extra:
       link: https://twitter.com/opensafely
       name: OpenSAFELY on Twitter
 
-copyright: © University of Oxford for the DataLab 2021. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to ebmdatalab@phc.ox.ac.uk.
+copyright: © University of Oxford for the DataLab. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to ebmdatalab@phc.ox.ac.uk.
 
 plugins:
   - search
