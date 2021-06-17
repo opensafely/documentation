@@ -38,7 +38,8 @@ At least one user has had the box ticked on the screen but had to untick and tic
 Starting Docker can take a while &mdash; up to 5 minutes.
 While it's doing so, an animation runs in the notification area:
 
-![The Docker icon in the Windows notification area.](images/win-notification-area.png)
+![The Docker icon in the Windows notification
+area.](images/win-docker-starting.png)
 
 Another notification appears when it's finished.
 

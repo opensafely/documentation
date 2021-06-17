@@ -281,7 +281,7 @@ account, for developing your own study:
        the documentation](requests-documentation.md) here.
     1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
        so, an animation runs in the notification area:<br>
-       ![The Docker icon in the Windows notification area.](images/docker-windows-starting.png)
+       ![The Docker icon in the Windows notification area.](images/win-docker-starting.png)
     1. When Docker has finished starting up, share your hard drive with Docker:
        click the system tray docker icon; select "settings"; select "shared drives".
     1. If you have ended up with the *Hyper-V* backend, then when Docker has
