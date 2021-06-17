@@ -85,7 +85,7 @@ You will need an editor account. Ask one of the tech team for one if you do not 
 * Select Change File Type
 * Click CSV (Comma delimited) (\*.csv)
 
-![](images/90112253-a7737680-dd47-11ea-8271-a43b37a65bd5.png)
+![](images/excel-export-csv.png)
 
 
 ## Close the issue in the repo
