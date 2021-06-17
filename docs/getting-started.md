@@ -155,9 +155,8 @@ account, for developing your own study:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![image](images/create-repository-owner.png)
+   ![image](images/create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description.
-   ![image](images/create-repository-name.png)
 1. Choose a repository visibility.  This would usually be "Public".
    ![image](images/create-repository-public-private.png)
 1. There is an "Include all branches" option: it can be left disabled.
@@ -312,13 +311,8 @@ study.
 
 === "Windows (local)"
 
-    1. Look above the list of files in your new repo for a **Code** button. ![image](images/code-button.png)
-    1. Click **Open with GitHub Desktop** to clone and open the repository with
-       GitHub Desktop. ![image](images/open-with-desktop.png)
-    1. Click **Choose...** and, using Windows Explorer, navigate to a local path
-       where you want to clone the repository.
-       ![image](images/clone-choose-button-url-win.png)
-    1. Click **Clone**  ![image](images/clone-button-url-win.png)
+    Please follow [GitHub's instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
+    for cloning the study code with GitHub Desktop.
 
 ### Test the blank study on your computer
 
