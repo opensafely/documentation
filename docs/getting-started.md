@@ -155,10 +155,10 @@ account, for developing your own study:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![image](images/create-repository-owner-name.png)
+   ![Entering a name, owner and description, when creating a repository from the research template.](images/create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description.
 1. Choose a repository visibility.  This would usually be "Public".
-   ![image](images/create-repository-public-private.png)
+   ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](images/create-repository-public-private.png)
 1. There is an "Include all branches" option: it can be left disabled.
    (You only need the main branch; the other branches are
    work-in-progress changes.)
@@ -281,7 +281,7 @@ account, for developing your own study:
        the documentation](requests-documentation.md) here.
     1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
        so, an animation runs in the notification area:<br>
-       ![image](images/docker-windows-starting.png)
+       ![The Docker icon in the Windows notification area.](images/docker-windows-starting.png)
     1. When Docker has finished starting up, share your hard drive with Docker:
        click the system tray docker icon; select "settings"; select "shared drives".
     1. If you have ended up with the *Hyper-V* backend, then when Docker has
@@ -719,25 +719,25 @@ the new commit.
        your text editor and save them locally, you also see the changes in
        GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
        checkbox at the top of the list.<br>
-      ![image](images/commit-all.png)
+      ![Committing files with GitHub Desktop.](images/commit-all.png)
     1. At the bottom of the list of changes, in the **Summary** field, type a short,
        meaningful description of the changes (this is called the *commit message*).
        Optionally, you can add more information about the change in the
        **Description** field. Press the blue button to make the commit.<br>
-      ![image](images/commit-message.png)
+      ![Writing a commit message with GitHub Desktop.](images/commit-message.png)
     1. Click **Push origin** to push your local changes to the remote repository on
-       GitHub ![image](images/push-to-github.png)
+       GitHub ![Pushing changes to GitHub with GitHub Desktop.](images/push-to-github.png)
 
 ### Check that the automated tests pass
 
 Visit your repository on GitHub's site. Click on the **Actions** tab
-![image](images/github-actions-tab.png)
+![The GitHub Actions tab in a repository.](images/github-actions-tab.png)
 
 You'll see a *Workflow* running with the *commit message* of your last
 commit. The workflow verifies that the command `opensafely run run_all` can
 run successfully. If it's yellow, it's still running. If it's red, it
 has failed. If it's green, it has succeeded. You want it to be green!
-![image](images/github-running-workflow.png)
+![A list of workflows in GitHub Actions.](images/github-running-workflow.png)
 
 ## 7. Next steps
 

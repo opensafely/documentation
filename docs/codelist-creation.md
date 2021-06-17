@@ -85,7 +85,7 @@ You will need an editor account. Ask one of the tech team for one if you do not 
 * Select Change File Type
 * Click CSV (Comma delimited) (\*.csv)
 
-![](images/excel-export-csv.png)
+![Exporting a CSV from a spreadsheet in Microsoft Excel.](images/excel-export-csv.png)
 
 
 ## Close the issue in the repo

@@ -38,7 +38,7 @@ At least one user has had the box ticked on the screen but had to untick and tic
 Starting Docker can take a while &mdash; up to 5 minutes.
 While it's doing so, an animation runs in the notification area:
 
-![image](images/win-notification-area.png)
+![The Docker icon in the Windows notification area.](images/win-notification-area.png)
 
 Another notification appears when it's finished.
 
@@ -61,7 +61,7 @@ You may have to restart your computer during installation.
 Once you have Docker installed, you will need to log in.
 This can be accessed via the Applications Folder and once you have logged in, you should have the Docker icon on the top taskbar (next to battery icon, etc.)
 
-![image](images/macos-menu-bar.png)
+![The Docker icon in the macOS menu bar.](images/macos-menu-bar.png)
 
 Once this is running, you should be able to use Docker.
 
