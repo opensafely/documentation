@@ -71,6 +71,8 @@ theme:
     scheme: opensafely
   custom_dir: overrides
 
+edit_uri: "edit/main/docs"
+
 extra_css:
   - css/youtube.css
   - css/extra.css
