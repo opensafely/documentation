@@ -68,18 +68,18 @@ open /Applications/Docker.app
 
 You'll be warned about the system dialogue which is about to pop up, choose "OK".
 
-![macOS Docker Privileges Escalation Warning Image](./images/macos-docker-privileges-escalation-warning.png)
+![macOS prompting for Docker's privileged access.](./images/macos-docker-privileges-escalation-warning.png)
 
 
 Enter your password and click "Install Helper".
 
-![macOS Docker Privileges Escalation Image](./images/macos-docker-privileges-escalation.png)
+![macOS prompting that Docker is installing a new helper tool.](./images/macos-docker-privileges-escalation.png)
 
 
 Now that the Docker application is open you can click "Skip tutorial" and close the window.
 The Docker service will continue to run in the background and can be accessed from the Docker icon in your menu bar.
 
-![macOS Docker Privileges Escalation Image](./images/macos-docker-skip-intro.png)
+![macOS Docker's getting started screen.](./images/macos-docker-skip-intro.png)
 
 
 You're done!

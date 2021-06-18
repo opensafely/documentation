@@ -73,6 +73,6 @@ Any level 4 files that have undergone strict disclosivity checks and redaction, 
 
 ## Diagram
 
-![](./images/OpenSAFELY-security-levels.svg)
+![A diagram of the OpenSAFELY platform.](./images/OpenSAFELY-security-levels.svg)
 
 ---8<-- 'includes/glossary.md'

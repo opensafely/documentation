@@ -38,7 +38,8 @@ At least one user has had the box ticked on the screen but had to untick and tic
 Starting Docker can take a while &mdash; up to 5 minutes.
 While it's doing so, an animation runs in the notification area:
 
-![image](https://user-images.githubusercontent.com/211271/72052991-14a8c000-32be-11ea-948f-575a3c84bc3b.png)
+![The Docker icon in the Windows notification
+area.](images/win-docker-starting.png)
 
 Another notification appears when it's finished.
 
@@ -61,7 +62,7 @@ You may have to restart your computer during installation.
 Once you have Docker installed, you will need to log in.
 This can be accessed via the Applications Folder and once you have logged in, you should have the Docker icon on the top taskbar (next to battery icon, etc.)
 
-![image](https://user-images.githubusercontent.com/25401512/75257439-dff4b780-57dc-11ea-9ae8-592e1570bc71.png)
+![The Docker icon in the macOS menu bar.](images/macos-menu-bar.png)
 
 Once this is running, you should be able to use Docker.
 
@@ -69,10 +70,5 @@ Once this is running, you should be able to use Docker.
 
 - The first time you use Docker or use a new Docker template, please be aware that it takes a long time to make the build.
 It is easy to think that it has frozen, but it will take quite a while to get going.
-
-    If this is the case, look at this cat whilst you wait:
-
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-
 
 ---8<-- 'includes/glossary.md'

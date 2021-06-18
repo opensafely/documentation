@@ -12,14 +12,14 @@ both quality and speed in programming. Code reviews also offer opportunities for
 GitHub has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
 that you use this tool. GitHub has some [documentation on pull requests and code reviews](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) which we recommend for background reading.
 
-![image](./images/code-review-main.png)
+![An example of GitHub's pull request feature.](./images/code-review-main.png)
 
 In this screenshot, the user is making a new pull request. In the top right-hand corner (marked by the
 red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review. 
 Once you have tagged them and made the pull request, the person will receive a notification to their
 email, and it will also come up in the pull request section of their GitHub main screen.
 
-![image](./images/pr-desc.png)
+![An example of a pull request description as shown on GitHub.](./images/pr-desc.png)
 
 It is strongly encouraged to add some information to 
 your request to aid the reviewer. 
@@ -48,7 +48,7 @@ will help your reviewer do a better job quicker.
 - Allow sufficient time for the review.
 
 ### Examples of good commit messages
-![image](./images/good-pr-pic.png)
+![An example of a good commit message as shown on GitHub.](./images/good-pr-pic.png)
 
 ## How can I be a good reviewer?
 Some best practices gathered from current users of OpenSAFELY are described below:
