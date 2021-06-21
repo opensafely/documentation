@@ -23,3 +23,8 @@
   />
 </noscript>
 {% endblock %}
+
+{% block analytics %}
+<script type="module" defer data-domain="docs.opensafely.org" data-api="/pa/api/event" src="/pa/js/script.js"></script>
+<script nomodule id="plausible" defer data-domain="docs.opensafely.org" src="https://plausible.io/js/plausible.compat.js"></script>
+{% endblock %}
