@@ -486,7 +486,7 @@ real UK population*"
    the CSV file to be created again.
 
    ```
-   $ opensafely run run_all --force-run-dependencies`
+   $ opensafely run run_all --force-run-dependencies
    ```
 
    A new `input.csv` file will be created in the `output` folder. Open that
