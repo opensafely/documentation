@@ -170,7 +170,7 @@ This will prevent it from recalculating the measure for any months or weeks whic
 However the final step, which combines output across time periods, will always be run.
 
 This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created. 
-If this is configured, the command will also look for the input files in this directory, and so both this and the generate_cohort command in step 2 must be configured identically.
+If the `--output-dir` argument is configured, `generate_measures` expects the input cohort files to also be in the output directory. To ensure this, include the same `--output-dir` argument in the previous `generate_cohort` step.
 
 ## Putting it all together in a pipeline
 
