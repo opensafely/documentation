@@ -50,6 +50,9 @@ nav:
               - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Registered deaths: dataset-onsdeaths.md
+      - Accessing Secure Backend Environments:
+          - EMIS Backend: emis-backend.md
+          - TPP Backend: tpp-backend.md
   - Good practice:
       - Overview: good-practice-intro.md
       - The DataLab Open Manifesto: open-data-manifesto.md
