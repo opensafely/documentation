@@ -10,6 +10,9 @@ instead, trusted analysts can run large scale computation across near real-time 
 
 As such, the platform maintains extremely high standards for data privacy whilst ensuring complete computational and analytical transparency.
 
+!!! note "OpenSAFELY is still a relatively new project"
+    OpenSAFELY is under constant development; we suggest you regularly check our [Platform News page](https://docs.opensafely.org/news) to learn about significant improvements.
+
 ## Who is OpenSAFELY?
 
 OpenSAFELY is a collaboration between the DataLab at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients' records), working on behalf of NHS England and NHSX.
