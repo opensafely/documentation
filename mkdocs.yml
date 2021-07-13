@@ -63,6 +63,7 @@ nav:
       - Requesting study definition variables: requests-variables.md
   - Updating the documentation: requests-documentation.md
   - Platform News: news.md
+
 theme:
   name: material
   font: false
