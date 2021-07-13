@@ -158,3 +158,7 @@ body {
 .md-nav--secondary .md-nav {
   background-color: transparent;
 }
+
+.md-header-nav__source .md-source__facts {
+  display: none;
+}
