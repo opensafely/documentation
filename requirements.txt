@@ -15,7 +15,6 @@ chardet==3.0.4
 click==7.1.2
     # via
     #   mkdocs
-    #   nltk
     #   pip-tools
 cryptography==3.4.4
     # via pyopenssl
@@ -23,26 +22,21 @@ cycler==0.10.0
     # via matplotlib
 decorator==4.4.2
     # via retry
-future==0.18.2
-    # via lunr
+ghp-import==2.0.1
+    # via mkdocs
 idna==2.10
     # via requests
 importlib-metadata==4.6.1
     # via
     #   markdown
+    #   mkdocs
     #   pep517
 jinja2==2.11.3
     # via
     #   mkdocs
     #   mkdocstrings
-joblib==0.17.0
-    # via nltk
 kiwisolver==1.2.0
     # via matplotlib
-livereload==2.6.3
-    # via mkdocs
-lunr[languages]==0.5.8
-    # via mkdocs
 lz4==3.1.3
     # via opensafely-cohort-extractor
 markdown==3.3.2
@@ -58,7 +52,9 @@ markupsafe==1.1.1
     #   mkdocstrings
 matplotlib==3.3.2
     # via seaborn
-mkdocs==1.1.2
+mergedeep==1.3.4
+    # via mkdocs
+mkdocs==1.2.2
     # via
     #   -r requirements.in
     #   mkdocs-autorefs
@@ -74,8 +70,6 @@ mkdocs-material-extensions==1.0.1
     # via mkdocs-material
 mkdocstrings==0.15.2
     # via -r requirements.in
-nltk==3.5
-    # via lunr
 numpy==1.19.2
     # via
     #   matplotlib
@@ -85,6 +79,8 @@ numpy==1.19.2
     #   seaborn
 opensafely-cohort-extractor==1.37.2
     # via -r requirements.in
+packaging==21.0
+    # via mkdocs
 pandas==1.1.3
     # via
     #   opensafely-cohort-extractor
@@ -110,9 +106,12 @@ pymdown-extensions==8.0.1
 pyopenssl==20.0.1
     # via requests-pkcs12
 pyparsing==2.4.7
-    # via matplotlib
+    # via
+    #   matplotlib
+    #   packaging
 python-dateutil==2.8.1
     # via
+    #   ghp-import
     #   matplotlib
     #   pandas
 pytkdocs==0.9.0
@@ -123,8 +122,9 @@ pyyaml==5.4.1
     # via
     #   mkdocs
     #   opensafely-cohort-extractor
-regex==2020.10.15
-    # via nltk
+    #   pyyaml-env-tag
+pyyaml-env-tag==0.1
+    # via mkdocs
 requests==2.25.0
     # via
     #   opensafely-cohort-extractor
@@ -140,8 +140,6 @@ seaborn==0.11.0
 six==1.15.0
     # via
     #   cycler
-    #   livereload
-    #   lunr
     #   pyopenssl
     #   python-dateutil
 sqlalchemy==1.3.20
@@ -156,18 +154,14 @@ tinynetrc==1.3.0
     # via opensafely-cohort-extractor
 toml==0.10.2
     # via pep517
-tornado==6.0.4
-    # via
-    #   livereload
-    #   mkdocs
-tqdm==4.50.2
-    # via nltk
 typing-extensions==3.10.0.0
     # via
     #   importlib-metadata
     #   structlog
 urllib3==1.26.5
     # via requests
+watchdog==2.1.3
+    # via mkdocs
 wheel==0.36.2
     # via pip-tools
 zipp==3.5.0
