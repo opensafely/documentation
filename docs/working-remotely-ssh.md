@@ -35,6 +35,15 @@ Once installed, connect to the server by opening the Command Palette (Ctrl+Shift
 Visual Studio Code will then guide you through logging in to the server and will automatically install its own requirements on the server.
 Once connected, you may open a folder on the server within Visual Studio code, edit files, and issue commands to the terminal as if working on your local machine. 
 
-## 3. Further Information
+## 3. (Optional) Connecting to GitPod
+
+Using Visual Studio Code to connect to Gitpod over SSH is possible via [Gitpod's Local Companion app](https://www.gitpod.io/blog/local-app#installation). Once installed, and authenticated to your Gitpod account, the local companion app will create a temporary SSH configuration file with an entry for each one of your workspaces. On Linux and MacOS, this file is located at `/tmp/gitpod_ssh_config` and on Windows in `%TEMP%\gitpod_ssh_config`.
+The Remote - SSH extension for Visual Studio Code can be configured to use this temporary configuration file via the `Remote.SSH: Config File` setting.
+
+![Visual Studio Code Remote SSH Config File Setting for Gitpod](images/vs_code_gitpod_ssh_config.png "Visual Studio Code Remote SSH Config File Setting for Gitpod")
+
+Once this is set, your Gitpod workspaces will then appear within the Connect to Remote SSH Host menu described in the previous step. 
+
+## 4. Further Information
 
 Further information is available from Microsoft on the [VS Code Remote Development](https://code.visualstudio.com/docs/remote/) page.
