@@ -2,6 +2,8 @@ Because OpenSAFELY doesn't allow direct access to individual patient records, re
 
 OpenSAFELY requires you to define *expectations* in your study definition: these describe the properties of each variable, and are used to generate random data that match the expectations.
 
+You can also [provide your own dummy data](#providing-your-own-dummy-data).
+
 ## Defining `return_expectations`
 
 Every variable in a study definition must have a `return_expectations` argument defined (with the exception of the `population` variable).
@@ -98,3 +100,27 @@ The following options are currently available for dummy data (note numeric value
 `"distribution"`(numeric variables) currently has two possible options:
 * `normal`
 * `population_ages`: samples from the distribution of ages in the UK taken from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/tablea21principalprojectionukpopulationinagegroups).
+
+## Providing your own dummy data
+
+If the expectations framework does not offer enough control over the dummy data that is generated, you can provide your own.
+
+In your `project.yaml`, you can add a `dummy_data_file` value to a `cohortextractor` action.
+
+For instance:
+
+```
+generate_cohort:
+  run: cohortextractor:latest generate_cohort
+  dummy_data_file: test-data/dummy-data.csv
+  outputs:
+    highly_sensitive:
+      cohort: output/input.csv
+
+```
+
+The dummy data file must be committed to the repo.
+You should generate the dummy data using a script, and commit the script to the repo.
+
+!!! warning
+You must not use real clinical data for dummy data!
