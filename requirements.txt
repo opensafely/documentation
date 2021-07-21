@@ -77,7 +77,7 @@ numpy==1.19.2
     #   pyarrow
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.37.2
+opensafely-cohort-extractor==1.37.4
     # via -r requirements.in
 packaging==21.0
     # via mkdocs
