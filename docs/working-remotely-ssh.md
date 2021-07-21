@@ -7,7 +7,7 @@ This guide walks you through the steps required to set up the machine running th
 
 ## 1. Server setup
 
-First, ensure that the opensafely software and all of its pre-requisites have been installed using the [Getting Started guide](..\getting-started). If using this guide to connect to Gitpod, please skip to step 2.
+First, ensure that the opensafely software and all of its pre-requisites have been installed using the [Getting Started guide](getting-started). If using this guide to connect to Gitpod, please skip to step 2.
 
 ### SSH server installation and configuration
 The steps in this guide require enabling access to the server using secure shell protocol (SSH).
@@ -16,7 +16,7 @@ On Windows, this requires installation of the [OpenSSH Server optional feature](
 On Linux, this requires installation of the OpenSSH Server such as is described in these [instructions for Ubuntu Linux](https://ubuntu.com/server/docs/service-openssh).
 
 ### Git configuration
-This guide assumes you have set up a GitHub user account as per the [Getting Started guide](../getting-started).  
+This guide assumes you have set up a GitHub user account as per the [Getting Started guide](getting-started).  
 If you have not already set up git and logged into GitHub from the server it may be neccesary to [configure your identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity).
 If problems are encountered with logging into github when working remotely, it may be helpful to make use of the [git credential caching](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git) feature, or to [connect to GitHub using SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
 
