@@ -50,6 +50,7 @@ nav:
               - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Registered deaths: dataset-onsdeaths.md
+      - Permissions in OpenSAFELY: permissions.md
   - Good practice:
       - Overview: good-practice-intro.md
       - The DataLab Open Manifesto: open-data-manifesto.md
@@ -62,6 +63,7 @@ nav:
       - Requesting new libraries: requests-packages.md
       - Requesting study definition variables: requests-variables.md
   - Updating the documentation: requests-documentation.md
+  - Platform News: news.md
 
 theme:
   name: material

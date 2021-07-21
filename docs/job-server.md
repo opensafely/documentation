@@ -18,7 +18,8 @@ To submit job-requests (i.e., to run one or more actions), the general process i
     * Click `Submit`.
 *  **Select actions** to run:
     * Select the actions you want to run by clicking the `Run` buttons.
-    * If any of these actions have dependencies then they will also be run, unless their outputs already exist.
+    * If any of these actions have dependencies then they will also be run, unless their outputs already exist. 
+      * If any dependencies have already been set to run, your current job will be queued until dependencies have completed.
     * Dependencies can be viewed by clicking the `Needs` button.
     * You can force dependencies to be run by clicking `Force run dependencies`, even if those actions have already been run.
     * You can choose to send notifications for the selected actions to your email address.

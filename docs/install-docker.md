@@ -70,5 +70,9 @@ Once this is running, you should be able to use Docker.
 
 - The first time you use Docker or use a new Docker template, please be aware that it takes a long time to make the build.
 It is easy to think that it has frozen, but it will take quite a while to get going.
+- If Docker is not running on Windows, a few OpenSAFELY users have found that
+  checking Control Panel > Administrative Tools > Services > Server
+  was **Disabled**. Setting this to **Automatic** — the default in
+  Windows — then started Docker running again.
 
 ---8<-- 'includes/glossary.md'
