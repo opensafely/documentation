@@ -7,7 +7,7 @@ This guide walks you through the steps required to set up the machine running th
 
 ## 1. Server setup
 
-First, ensure that the opensafely software and all of its pre-requisites have been installed using the [Getting Started guide](..\getting-started)
+First, ensure that the opensafely software and all of its pre-requisites have been installed using the [Getting Started guide](..\getting-started). If using this guide to connect to Gitpod, please skip to step 2.
 
 ### SSH server installation and configuration
 The steps in this guide require enabling access to the server using secure shell protocol (SSH).
