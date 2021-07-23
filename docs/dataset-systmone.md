@@ -98,7 +98,7 @@ For those with access to the OpenSAFELY database, the latest database build time
 
 - [Most recent coverage of records in SystmOne and external datasets](https://reports.opensafely.org/reports/opensafely-tpp-database-builds/)
 - [Historical coverage of records in SystmOne and external datasets](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-history.ipynb)
-- [OpenSAFELY-TPP database schema]https://reports.opensafely.org/reports/opensafely-tpp-database-schema/)
+- [OpenSAFELY-TPP database schema](https://reports.opensafely.org/reports/opensafely-tpp-database-schema/)
 - [OpenSAFELY-TPP database table examples (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb)
 
 
