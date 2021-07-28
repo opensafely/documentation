@@ -113,7 +113,7 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
   - toc:
-      permalink: "&#128279;"
+      permalink: "🔗"
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tabbed
