@@ -9,3 +9,17 @@ Additionally, the OpenSAFELY framework requires a user to be a member of the `op
 While your repository is private, you may need to add new collaborators who are not named in your original application. Any new collaborators have the same information governance obligations as the original study authors, and must therefore sign the same access agreements; please send any such requests to [team@opensafely.org](mailto:team@opensafely.org).
 
 
+## Project Member Management
+
+When they are approved to use the platform, every OpenSAFELY user is assigned roles that define what they are permitted to do.
+By default, most researchers using the platform will have the ProjectDeveloper role, which permits them to:
+
+* run jobs
+* cancel jobs
+* view job outputs
+
+Additionally, users with the ProjectCoordinator role can:
+
+* Invite users to a project, with the desired roles
+* Modify roles for any existing members of a project
+* Remove members from a project
