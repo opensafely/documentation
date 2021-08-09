@@ -32,3 +32,4 @@
 *[EMIS]: EMIS Health, formerly known as Egton Medical Information Systems
 *[CLI]: Command-line interface, a text interface used by some computer software that is usually run via a "terminal" or "command-line shell".
 *[2FA]: Two-factor authentication, a means of verifying a user is authorised to access a service by checking for something that only the user should know (e.g. a password) and something the user should have (e.g. an authenticator application installed on the user's phone).
+*[API]: Application Programming Interface. An agreed way for one system to communicate with another system.
