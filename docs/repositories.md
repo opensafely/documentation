@@ -32,6 +32,7 @@ This is necessary because you can:
 To clone your new repository to your machine, [follow these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) which explains cloning both via GitHub Desktop or via the command line.
 When this is done, you should have a folder whose name is the same as the repo on your machine.
 
+Note that if someone else wants to commit to your recently created OpenSAFELY repo, they may need to wait up to an hour for the necessary write permissions to be granted.
 
 ## Repository structure
 
