@@ -1,4 +1,4 @@
-The most common kind of action is a scripting action.
+The most common kind of action is a scripted action.
 
 Generally-speaking, you can write whatever code you like as long as it will run successfully on server, and it is possible to [test this locally](actions-pipelines.md#running-your-code-locally).
 However, note the following restrictions and guidance:
