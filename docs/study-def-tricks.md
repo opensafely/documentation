@@ -1,4 +1,8 @@
-This section introduces some tricks for working more efficiently with the study definition API, by helping you to avoid copy-and-pasting chunks of code unnecessarily. 
+This section introduces some tricks for working more efficiently with the study definition API, by helping you to avoid copy-pasting chunks of code unnecessarily. 
+
+A study definition is a Python script which uses some friendly OpenSAFELY functions to specify the data that you want to extract from the database. But it's still just a Python script, so you can push beyond this API to run other bits of Python code such as importing additional libraries and data, or creating functions and loops. The examples below do exactly this. For users without any Python experience these tricks could be hard to understand and adapt, so you should only incorporate them into your own study definition if you are confident about what they do. If unsure, ask for a code review.
+
+If you have devised a trick of your own then please share it with us. It helps us to understand how people are using OpenSAFELY and whether there are any commonly-used patterns that could be intergrated into the framework. 
 
 ## Create a variable for each code in a codelist
 
@@ -10,7 +14,7 @@ study = StudyDefinition(
     ...
 
     count_code1 = patients.with_these_clinical_events(
-        codelist(code1, system="snomed"),
+        codelist(["code1"], system="snomed"),
         on_or_after="index_date",
         returning = "number_of_matches_in_period",
         return_expectations={
@@ -20,7 +24,7 @@ study = StudyDefinition(
     ),
 
     count_code2 = patients.with_these_clinical_events(
-        codelist(code2, system="snomed"),
+        codelist(["code2"], system="snomed"),
         on_or_after="index_date",
         returning = "number_of_matches_in_period",
         return_expectations={
@@ -35,7 +39,7 @@ study = StudyDefinition(
 
 ```
 
-A neater way of doing this is to wrap the variable signature in a function and loop that function over each code in the codelist:
+A neater way of doing this is to wrap the variable in a function and loop that function over each code in the codelist:
 
 ```py
 
@@ -63,7 +67,7 @@ def loop_over_codes(code_list):
 
 ```
 
-This function is then invoked inside the `StudyDefinition` call for example as follows:
+This function can be invoked inside the `StudyDefinition` section as follows:
 
 ```py
 study = StudyDefinition(
@@ -77,7 +81,7 @@ study = StudyDefinition(
 
 ```
 
-This pattern can be used for any type of variable that uses codelists. For instance to extract the first admission date for a set of diagnoses in a codelist, use the following variable signature function:
+This pattern can be used for any type of variable that uses codelists. For instance to extract the first admission date for a set of diagnoses in a codelist, use the following function:
 
 ```py
 def make_variable(code):
@@ -97,7 +101,7 @@ def make_variable(code):
     }
 ```
 
-Example code: https://github.com/opensafely/long-covid/blob/master/analysis/study_definition_cohort.py
+An example of this can be seen in the [long-covid repository](https://github.com/opensafely/long-covid/blob/5923ebc09b898fac132c39ae7c980bf11d821e4d/analysis/study_definition_cohort.py).
 
 ## Extracting a series of consecutive events
 
@@ -133,7 +137,7 @@ admission_date5 = patients.with_these_clinical_events(
                     return_expectations = {...}
                 ),
 ```
-This is ok for 5 events, but if you need more it becomes quite cumbersome. An alternative is to wrap the variable signature in a function and loop that signature over the number of events required:
+This is ok for 5 events, but if you need more it becomes quite cumbersome. An alternative is to wrap the variable in a function and loop it over the number of events required:
 
 
 ```py
@@ -185,9 +189,9 @@ This can be used for any variable where you want to return information for a ser
 
 The will create `n` columns in the dataset. A few things to be aware of:
 
-* This does not make for efficient SQL queries. It is creating a new query for each event, rather than a query for each set of events. This will slow down extraction time considerably.
-* The dummy data won't necessarily appear in date order. It may be possible to tinker with the function to make this work. Another workaround is to reorder the columns post-extraction, for example here: https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/be747894e1fadf525e391c01477a8ac532613b42/analysis/R/data_process.R#L229 
-* It's likely that you'll want to to convert this wide-formatted data to long format, 
+* Behind the scenes, this creates a new SQL query for each variable rather than a single query for everything. This can be inefficient and could slow down extraction time considerably. You should therefore only extract the minimum `n` events needed for your study.
+* The dummy data won't appear in date order. You could write a more sophisticated function, with different expectations for each `i`. Or you could reorder the columns post-extraction, for example in [covid-vaccine-effectiveness-research repository](https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/be747894e1fadf525e391c01477a8ac532613b42/analysis/R/data_process.R#L229). 
+* Many routines for analysing this sort of data, for example in R or Stata, require the data to be in long-form, not wide-form as they are returned here. In that case, you'll need to reshape the columns. 
 
 ## Better dummy data for categorical variables
 For categorical variables with a small number of categories, the standard way of creating dummy data is easy to use, for example:
@@ -201,7 +205,7 @@ sex=patients.sex(
     )
 ```
 
-However, if the number of categories is large, for instance small geographical regions like MSOAs, then it's a pain to have to write out all these by hand. An alternative is to create an external file containing the category levels, import this as a python dict, and pass this dict to the `return_expectations` argument. For example:
+However, if the number of categories is large, for instance small geographical regions like MSOAs, then it's a pain to have to write out all these by hand. An alternative is to create an external file containing the category levels, import this as a python [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) (or "dict"), and pass this to the `return_expectations` argument. For example:
 
 ```py
 import pandas as pd
@@ -230,7 +234,7 @@ study = StudyDefinition(
 
 ```
 
-If the category levels are named with a predictable structure for example (`["stage 1", "stage 2", ...]`, or [`100, 200, 300, ...`]) then a dict comprehension can be used to create the levels, without having to import them. For example for IMD ranks rounded to the nearest 100:
+If the category levels are named with a predictable structure for example (`["stage 1", "stage 2", ...]`, or [`100, 200, 300, ...`]) then a [dict](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) [comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) can be used to create the levels, without having to import them. For example for IMD ranks rounded to the nearest 100:
 
 ```py
  imd=patients.address_as_of(
