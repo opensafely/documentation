@@ -12,14 +12,35 @@ While your repository is private, you may need to add new collaborators who are 
 ## Project Member Management
 
 When they are approved to use the platform, every OpenSAFELY user is assigned roles that define what they are permitted to do.
-By default, most researchers using the platform will have the ProjectDeveloper role, which permits them to:
+By default, most researchers using the platform will have the **ProjectDeveloper** role, which permits them to:
 
+* create workspaces
 * run jobs
 * cancel jobs
 * view job outputs
+* publish draft outputs
 
-Additionally, users with the ProjectCoordinator role can:
+Additionally, users with the **ProjectCoordinator** role can:
 
 * Invite users to a project, with the desired roles
 * Modify roles for any existing members of a project
 * Remove members from a project
+
+
+## Releasing Outputs
+
+For releasing outputs we have some additional roles:
+
+**ProjectCollaborator:**
+
+* View released outputs
+* View draft published outputs
+
+**OutputChecker:**
+
+* Release outputs from Level 4 environments
+* Delete outputs in a release
+
+**OutputPublisher:**
+
+* Confirm publication of outputs
