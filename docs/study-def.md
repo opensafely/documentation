@@ -240,80 +240,9 @@ actions:
         cohort: output/input_asthma.csv
 ```
 
-### Sharing common study definition variables
-When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ.
-This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing.
-To avoid this, you can use the following approach to share common variables between study definitions:
-
-Make a Python script called `common_variables.py` containing the following code:
-
-```py
-from cohortextractor import patients
-
-from codelists import *
-```
-
-In this script, define your common variables in a dictionary (`dict`) rather than in a `StudyDefinition`.
-In this case we use age and sex.
-
-`common_variables.py`
-```py
-common_variables = dict(
-    age=patients.age_as_of(
-        "2020-02-01",
-        return_expectations={
-            "rate": "universal",
-            "int": {"distribution": "population_ages"},
-        },
-    ),
-    sex=patients.sex(
-        return_expectations={
-            "rate": "universal",
-            "category": {"ratios": {"M": 0.49, "F": 0.51}},
-        }
-    ),
-)
-```
-
-Within each `study_definition_*.py`, add the line `from common_variables import common_variables` near the top with the other imports.
-You then add `**common_variables` just before the final closing brackets at the end of the script.
-This approach can also use different index dates, that are then passed to variables in `common_variables.py`.
-
-`study_definition_copd.py`
-```py
-from cohortextractor import (
-    StudyDefinition,
-    patients,
-    codelist_from_csv,
-    codelist,
-    combine_codelists,
-)
-
-from common_variables import common_variables
-from codelists import *
-
-study = StudyDefinition(
-    default_expectations={
-        "date": {"earliest": "1970-01-01", "latest": "today"},
-        "rate": "uniform",
-        "incidence": 0.2,
-    },
-    # define the study index date
-    index_date="2020-01-01",
-
-    # STUDY POPULATION
-    population=patients.all(),
-
-    # COPD
-    copd=patients.with_these_clinical_events(
-        copd_codes, find_first_match_in_period=True, date_format="YYYY-MM",
-    ),
-    **common_variables
-)
-```
-
 ### Identical study definitions with different index dates
-Though the `common_variables` approach described above can be used to make cohorts using different index dates, if you want two cohorts that are entirely identical except for the index date, there is a simpler way.
+If the only difference between two study definitions is the index date, then you can avoid having to create two separate study definition files as follows.
+
 We start by creating the study definition defining the variables you want to extract. 
 Then within the [`project.yaml`](actions-pipelines.md#projectyaml-format) we define two or more actions, one for each index date you want to use.
 We then borrow the `--index-date-range` argument from the [measures](measures.md#extract-the-data) function to specify the index dates:

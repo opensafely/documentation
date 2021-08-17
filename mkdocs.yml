@@ -28,6 +28,7 @@ nav:
           - Dummy data and expectations: study-def-expectations.md
           - Variable reference: study-def-variables.md
           - Measures: measures.md
+          - Programming tricks: study-def-tricks.md
       - Codelists:
           - Introduction to codelists: codelist-intro.md
           - Building a codelist: codelist-creation.md
