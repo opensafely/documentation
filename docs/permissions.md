@@ -50,3 +50,5 @@ For releasing outputs we have some additional roles:
 **OutputPublisher:**
 
 * Confirm publication of outputs
+
+---8<-- 'includes/glossary.md'
