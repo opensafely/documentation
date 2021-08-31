@@ -14,12 +14,12 @@ actions:
     run: cohortextractor:latest generate_cohort
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
+        cohort: output/input.csv.gz
 
   run_a_reusable_action:
     # We will run version `v1.0.0` of the reusable action called `a_reusable_action`.
     # The reusable action accepts an argument; in this case, a path to a file.
-    run: a_reusable_action:v1.0.0 output/input.csv
+    run: a_reusable_action:v1.0.0 output/input.csv.gz
     # The reusable action accepts a configuration option;
     # in this case, an output format.
     config:
