@@ -56,32 +56,34 @@ A basic `generate_cohort` action looks like this:
 
 ```yaml
 generate_study_cohort
-  run: cohortextractor:latest generate_cohort
+  run: cohortextractor:latest generate_cohort --output-format=csv.gz
   outputs:
     highly_sensitive:
-      data: output/input.csv
+      data: output/input.csv.gz
 ```
+
+This produces a zipped file to reduce storage space required in the backend. Missing the `--output-format=csv.gz` argument allows an uncompressed csv to be produced which may be useful while testing in dummy data. To import this file in python, use `pd.read_csv(<file>, compression='gzip')`. 
 
 The size of the dummy dataset is determined by the `population_size` option [in the `project.yaml`](actions-pipelines.md#project-yaml-format).
 
-Running the action with `opensafely run generate_study_population` will create the file `output/input.csv`.
+Running the action with `opensafely run generate_study_population` will create the file `output/input.csv.gz`.
 
 Running the action again will overwrite the existing dataset with a new one (check the file's _modified_ date) which will contain different data than previously (even if the `study_definition.py` didn't change) because the values are randomly generated.
-Beware that on Windows, you can't have `input.csv` open and generate a new one at the same time.
+Beware that on Windows, you can't have `input.csv(.gz)` open and generate a new one at the same time.
 
-If you have multiple study definitions in the repo (e.g., `study_definition_cohort1.py` and `study_definition_cohort2.py`) then `generate_cohort` will by default create a dataset for each and name them appropriately (e.g., `input_cohort1.csv` and `input_cohort2.csv`).
+If you have multiple study definitions in the repo (e.g., `study_definition_cohort1.py` and `study_definition_cohort2.py`) then `generate_cohort` will by default create a dataset for each and name them appropriately (e.g., `input_cohort1.csv.gz` and `input_cohort2.csv.gz`).
 You can restrict the command to produce a single study definition using the `study-definition` option, like this:
 
 
 ```yaml
 generate_study_cohort
-  run: cohortextractor:latest generate_cohort --study-definition study_definition_cohort2
+  run: cohortextractor:latest generate_cohort --study-definition study_definition_cohort2 --output-format=csv.gz
   outputs:
     highly_sensitive:
-      data: output/input_cohort2.csv
+      data: output/input_cohort2.csv.gz
 ```
 
-You can change the location of the outputted `.csv` file using the `--output-dir` option, for example `run: cohortextractor:latest generate_cohort --output-dir output/cohorts`
+You can change the location of the outputted `.csv.gz` file using the `--output-dir` option, for example `run: cohortextractor:latest generate_cohort --output-dir output/cohorts`
 
 
 ---8<-- 'includes/glossary.md'
