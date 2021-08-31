@@ -62,7 +62,7 @@ generate_study_cohort
       data: output/input.csv.gz
 ```
 
-This produces a zipped file to reduce storage space required in the backend. Missing the `--output-format=csv.gz` argument allows an uncompressed csv to be produced which may be useful while testing in dummy data. To import this file in python, use `pd.read_csv(<file>, compression='gzip')`. 
+This produces a zipped file to reduce storage space required in the backend. Missing the `--output-format=csv.gz` argument allows an uncompressed CSV to be produced which may be useful while testing in dummy data. To import the compressed file in Python, you can use `pd.read_csv(<file>, compression='gzip')`. 
 
 The size of the dummy dataset is determined by the `population_size` option [in the `project.yaml`](actions-pipelines.md#project-yaml-format).
 
