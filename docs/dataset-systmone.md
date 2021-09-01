@@ -1,6 +1,6 @@
 ## Overview
 
-[SystmOne](https://www.tpp-uk.com/products/systmone) is a primary care clinical information system run by The Phoenix Partnership, used by roughly one third of GP practices in England, with records for approximately 44% of the English population. Its primary purpose is patient management, though the data may be used for research.
+[SystmOne](https://www.tpp-uk.com/products/systmone) is a primary care clinical information system run by TPP (Leeds), used by roughly one third of GP practices in England, with records for approximately 44% of the English population. Its primary purpose is patient management, though the data may be used for research.
 
 It captures symptoms, test results, diagnoses, prescriptions, onward referrals, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
 
