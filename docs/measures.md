@@ -122,7 +122,7 @@ The range is specified as:
 
 It also accepts `today` in place of a date.
 
-Output files are named like: `output/input_YYYY-MM-DD.csv`
+Output files are named like: `output/input_YYYY-MM-DD.csv.gz`
 
 There is also a `--skip-existing` option which will cause the cohortextractor to skip the extraction step for any dates where the corresponding file already exists.
 This makes it easier to incrementally extract data for new months/weeks without having to re-extract everything.
@@ -130,16 +130,17 @@ This makes it easier to incrementally extract data for new months/weeks without 
 Example:
 
 ```
-cohortextractor generate_cohort --index-date-range "2020-01-01 to 2020-12-01 by month"
+cohortextractor generate_cohort --index-date-range "2020-01-01 to 2020-12-01 by month" --output-format=csv.gz
+
 ```
 
 ...which will output:
 
 ```
-output/input_2020-01-01.csv
-output/input_2020-02-01.csv
+output/input_2020-01-01.csv.gz
+output/input_2020-02-01.csv.gz
 ...
-output/input_2020-12-01.csv
+output/input_2020-12-01.csv.gz
 ```
 
 ## Calculate the measures
@@ -177,10 +178,10 @@ To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_d
 ```yaml
 
   generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01 to 2020-12-01 by month" --skip-existing --output-dir=output/measures
+    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01 to 2020-12-01 by month" --skip-existing --output-dir=output/measures --output-format=csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/measures/input_*.csv
+        cohort: output/measures/input_*.csv.gz
 
   generate_measures:
     run: cohortextractor:latest generate_measures --study-definition study_definition --skip-existing --output-dir=output/measures
