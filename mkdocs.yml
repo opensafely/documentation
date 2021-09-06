@@ -2,16 +2,24 @@ site_name: OpenSAFELY documentation
 repo_url: https://github.com/opensafely/documentation
 nav:
   - Introduction: index.md
-  - How OpenSAFELY works:
+  - About OpenSAFELY:
       - Our philosophy: open-methods.md
       - Security: security-levels.md
-      - Analysis workflow: workflow.md
+      - Data sources:
+          - Overview: dataset-intro.md
+          - SystmOne primary care: dataset-systmone.md
+          - EMIS primary care: dataset-emis.md
+          - Externally linked data:
+              - Covid-19 test results: dataset-sgsscovid.md
+              - Emergency attendances: dataset-ecds.md
+              - Hospital admissions: dataset-apc.md
+              - Intensive care admissions (covid-19 only): dataset-icnarc.md
+              - In-hospital deaths (covid-19 only): dataset-cpns.md
+              - Registered deaths: dataset-onsdeaths.md
   - Getting Started guide: getting-started.md
-
-  - How-to guides:
-      - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
-      - Release files from the server: releasing-files.md
-  - Reference:
+  - Using OpenSAFELY:
+      - Analysis workflow: workflow.md
+      - GitHub repository layout: repositories.md
       - Detailed installation guides:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
@@ -20,7 +28,6 @@ nav:
           - Docker: install-docker.md
           - OpenSAFELY CLI: opensafely-cli.md
           - macOS: install-macos.md
-      - GitHub repository layout: repositories.md
       - Study definitions:
           - Overview: study-def.md
           - Working with dates: study-def-dates.md
@@ -28,6 +35,7 @@ nav:
           - Dummy data and expectations: study-def-expectations.md
           - Variable reference: study-def-variables.md
           - Measures: measures.md
+          - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
           - Programming tricks: study-def-tricks.md
       - Codelists:
           - Introduction to codelists: codelist-intro.md
@@ -41,30 +49,19 @@ nav:
           - The `cohortextractor` action: actions-cohortextractor.md
           - The project pipeline: actions-pipelines.md
       - Job server: job-server.md
-      - Data sources:
-          - Overview: dataset-intro.md
-          - SystmOne primary care: dataset-systmone.md
-          - EMIS primary care: dataset-emis.md
-          - Externally linked data:
-              - Covid-19 test results: dataset-sgsscovid.md
-              - Emergency attendances: dataset-ecds.md
-              - Hospital admissions: dataset-apc.md
-              - Intensive care admissions (covid-19 only): dataset-icnarc.md
-              - In-hospital deaths (covid-19 only): dataset-cpns.md
-              - Registered deaths: dataset-onsdeaths.md
-      - Permissions in OpenSAFELY: permissions.md
-  - Good practice:
-      - Overview: good-practice-intro.md
+      - Release files from the server: releasing-files.md
+      - Permissions: permissions.md
+  - OpenSAFELY best practice:
       - The DataLab Open Manifesto: open-data-manifesto.md
+      - Publishing your GitHub Repository: publishing-repo.md
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
-      - Publishing your GitHub Repository: publishing-repo.md
-  - Support:
+  - Requesting changes:
       - Overview: requests-intro.md
       - Requesting new libraries: requests-packages.md
       - Requesting study definition variables: requests-variables.md
-  - Updating the documentation: requests-documentation.md
+      - Updating the documentation: requests-documentation.md
   - Platform News: news.md
 
 theme:
