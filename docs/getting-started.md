@@ -61,9 +61,9 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
      * you want to have more control on the tools you use to develop
        studies for OpenSAFELY.
 
-    The current local installation guide is aimed at Windows
-    users. Mac users should be able to follow along as well, with a few
-    hopefully-obvious alterations; see also the [macOS Install
+    The [current local installation guide](install-intro.md) is aimed at
+    Windows users. Mac users should be able to follow along as well, with
+    a few hopefully-obvious alterations; see also the [macOS Install
     Guide](install-macos.md)! We aim to integrate macOS instructions
     into this guide in future.
 
