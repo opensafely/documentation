@@ -52,7 +52,6 @@ nav:
       - Release files from the server: releasing-files.md
       - Permissions: permissions.md
   - OpenSAFELY best practice:
-      - Overview: good-practice-intro.md
       - The DataLab Open Manifesto: open-data-manifesto.md
       - Publishing your GitHub Repository: publishing-repo.md
       - Developing a protocol: protocol.md
