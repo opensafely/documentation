@@ -1,5 +1,8 @@
 The ICNARC-CMP  dataset contains information on covid-related intensive care admissions in England.
 
+!!! warning
+    Data from ICNARC were last imported on 21-Jan-2021, with no further imports currently planned. Alternative data on ICU admission can be gleaned from SUS (i.e. returning=days_in_critical_care).
+
 From ICNARC's website:
 
 > The Case Mix Programme (CMP) is an audit of patient outcomes from adult, general critical care units (intensive care and combined intensive care/high dependency units) covering England, Wales and Northern Ireland.

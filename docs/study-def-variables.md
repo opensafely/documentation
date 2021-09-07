@@ -72,7 +72,8 @@ These variables are derived from data held in the patients' primary care records
 &nbsp;
 
 ## ICNARC
-*Data from ICNARC were last imported on 21-Jan-2021, with no further imports currently planned. Alternative data on ICU admission can be gleaned from SUS (i.e. returning=days_in_critical_care)*.
+!!! warning
+    Data from ICNARC were last imported on 21-Jan-2021, with no further imports currently planned. Alternative data on ICU admission can be gleaned from SUS (i.e. returning=days_in_critical_care).
 
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
 For more information, see the [ICNARC data section](dataset-icnarc.md).
