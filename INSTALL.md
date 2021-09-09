@@ -16,7 +16,7 @@ in their docs includes lots of very nice customisations for formatting documenta
 ## Updating Cohort Extractor
 To pull in the latest version of the cohortextractor docstrings run:
 
-    pip-compile -P opensafely-cohort-extractor
+    pip-compile --generate-hashes -P opensafely-cohort-extractor
     pip install -r requirements.txt
 
 If you have added new functions you will need to add an explicit
