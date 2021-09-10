@@ -664,9 +664,9 @@ sqlalchemy==1.4.22 \
     --hash=sha256:f814d80844969b0d22ea63663da4de5ca1c434cfbae226188901e5d368792c17 \
     --hash=sha256:fd2102a8f8a659522719ed73865dff3d3cc76eb0833039dc473e0ad3041d04be
     # via opensafely-cohort-extractor
-sqlparse==0.4.1 \
-    --hash=sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0 \
-    --hash=sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8
+sqlparse==0.4.2 \
+    --hash=sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae \
+    --hash=sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d
     # via opensafely-cohort-extractor
 structlog==21.1.0 \
     --hash=sha256:62f06fc0ee32fb8580f0715eea66cb87271eb7efb0eaf9af6b639cba8981de47 \
