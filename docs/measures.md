@@ -83,8 +83,12 @@ measures = [
 ]
 ```
 
-This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure.
+This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure. Use of `index_date` is also required.
 
+#### The `index_date`
+Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. (Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time). Read more about using index_date [here](/study-def-dates.md/#index-dates).
+
+#### The `Measure()` function
 * `id` is just a string used to identify the measure output file.
 * `numerator` and `denominator` are the columns in the dataset that define the measure. They must be numeric or boolean (encoded as 0 or 1).
 * `group_by` column can be of any type. To calculate the measure across the entire population, you can set `group_by="population"`. If not specified, `group_by` will default to `None` and the measure will be calculated at the individual patient level.
@@ -112,7 +116,9 @@ measures = [
 ## Extract the data
 
 To run multiple study definitions over a series of dates, use the `--index-date-range` option of the `generate_cohort` command.
-Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time.
+Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time. 
+
+Note this can be resource intensive and thus slow to run. It is therefore recommended to: use months rather than weeks if appropriate; use a shorter period for testing if applicable; and use a compressed output format (e.g. `csv.gz` as below).
 
 The range is specified as:
 
