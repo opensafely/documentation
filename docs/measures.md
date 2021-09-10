@@ -118,7 +118,7 @@ measures = [
 To run multiple study definitions over a series of dates, use the `--index-date-range` option of the `generate_cohort` command.
 Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time. 
 
-Note this can be resource intensive and thus slow to run. It is therefore recommended to: use months rather than weeks if appropriate; use a shorter period for testing if applicable; and use a compressed output format (e.g. `csv.gz` as below).
+Note this can be resource intensive and thus slow to run. It is therefore recommended to: use months rather than weeks if appropriate; use a shorter period for testing if applicable; minimise the population size (e.g. apply all necessary exclusions to your population, e.g. age limits, in the study definition rather than filtering in a later step) and use a compressed output format (e.g. `csv.gz` as below).
 
 The range is specified as:
 
