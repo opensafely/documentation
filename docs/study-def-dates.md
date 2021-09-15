@@ -105,7 +105,7 @@ We can also use date expressions on these dates, for example `"pos_test_date - 1
 
 Wherever the inputted date is null, in this case when a patient doesn't have a positive test result, any variables that reference the date will take the [null value for their variable type](study-def.md#missing-values-and-unmatched-records) (0 for numeric variables; an empty string for character and date variables).
 
-
+Take particular care that the dates are in the correct order if you are using `between` with dynammic dates, i.e. `[min, max]`, as it will not give the expected results the opposite way around. 
 
 ## Variables that return value-date pairs
 
