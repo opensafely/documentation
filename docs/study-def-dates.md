@@ -5,8 +5,9 @@ In study definitions, dates are described in `"YYYY-MM-DD"` format; so, for exam
 
 Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information.
 Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference](study-def-variables.md) for full documentation).
-You must use at most one.
+You can set one or both of `on_or_before=` / `on_or_after=`; but these cannot be mixed with `between=` (which is equivalent to setting both `on_or_before=` AND `on_or_after=`). 
 If no option is given then it will use all dates (including possibly future dates).
+
 
 As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, you can use the date expressions discussed [below](#index-dates).
 
@@ -40,7 +41,7 @@ study = StudyDefinition(
 )
 ```
 
-This can make it easier to change the index date of a study by making sure it is only defined in one place.
+This can make it easier to change the index date of a study by making sure it is only defined in one place. (Note that if using `between`, ensure that the dates are given in chronological order as in the example above).
 
 The simplest date expression is just `index_date`, which gets replaced by whatever the index date is set to.
 
@@ -105,7 +106,7 @@ We can also use date expressions on these dates, for example `"pos_test_date - 1
 
 Wherever the inputted date is null, in this case when a patient doesn't have a positive test result, any variables that reference the date will take the [null value for their variable type](study-def.md#missing-values-and-unmatched-records) (0 for numeric variables; an empty string for character and date variables).
 
-
+Take particular care that the dates are in the correct order if you are using `between` with dynammic dates, i.e. `[min, max]`, as it will not give the expected results if they are the opposite way around. 
 
 ## Variables that return value-date pairs
 
