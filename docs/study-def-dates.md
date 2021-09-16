@@ -5,7 +5,7 @@ In study definitions, dates are described in `"YYYY-MM-DD"` format; so, for exam
 
 Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information.
 Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference](study-def-variables.md) for full documentation).
-You must use at most one. 
+You can set one or both of `on_or_before=` / `on_or_after=`; but these cannot be mixed with `between=` (which is equivalent to setting both `on_or_before=` AND `on_or_after=`). 
 If no option is given then it will use all dates (including possibly future dates).
 
 
@@ -41,7 +41,7 @@ study = StudyDefinition(
 )
 ```
 
-This can make it easier to change the index date of a study by making sure it is only defined in one place. (Note that if using `between`, ensure that the dates are given in chronological order).
+This can make it easier to change the index date of a study by making sure it is only defined in one place. (Note that if using `between`, ensure that the dates are given in chronological order as in the example above).
 
 The simplest date expression is just `index_date`, which gets replaced by whatever the index date is set to.
 
