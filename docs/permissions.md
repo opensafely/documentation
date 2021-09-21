@@ -8,6 +8,7 @@ Additionally, the OpenSAFELY framework requires a user to be a member of the `op
 
 While your repository is private, you may need to add new collaborators who are not named in your original application. Any new collaborators have the same information governance obligations as the original study authors, and must therefore sign the same access agreements; please send any such requests to [team@opensafely.org](mailto:team@opensafely.org).
 
+When you add a new repository in the opensafely organisation, it may take up to 15 mintutes for it to be available to select at https://jobs.opensafely.org
 
 ## Project Member Management
 
