@@ -391,9 +391,9 @@ mkdocs-material-extensions==1.0.1 \
     # via
     #   -r requirements.txt
     #   mkdocs-material
-mkdocstrings==0.15.2 \
-    --hash=sha256:8d6cbe64c07ae66739010979ca01d49dd2f64d1a45009f089d217b9cd2a65e36 \
-    --hash=sha256:c2fee9a3a644647c06eb2044fdfede1073adfd1a55bf6752005d3db10705fe73
+mkdocstrings==0.16.0 \
+    --hash=sha256:58016945a348e03cc92bbd11cbacb3e41b064ddfc33d4b02ff4304fb45eab104 \
+    --hash=sha256:cfc99bc7850fb2ae00519c33f7ae5274609857631822eda561d8a9fb8adb6d79
     # via -r requirements.txt
 numpy==1.21.1 \
     --hash=sha256:01721eefe70544d548425a07c80be8377096a54118070b8a62476866d5208e33 \
