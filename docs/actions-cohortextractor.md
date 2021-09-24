@@ -56,15 +56,15 @@ A basic `generate_cohort` action looks like this:
 
 ```yaml
 generate_study_cohort
-  run: cohortextractor:latest generate_cohort --output-format =csv.gz
+  run: cohortextractor:latest generate_cohort --output-format=csv.gz
   outputs:
     highly_sensitive:
       data: output/input.csv.gz
-    ### This file is produced in compressed format. If using Stata for your analysis you may need to remove 
-    ### the --output-format option and the .gz file extension to produce an uncompressed CSV instead.
+    ### This file is produced in compressed format. If using Stata for your analysis you may need to change
+    ### the --output-format option to 'csv' and the .gz file extension to produce an uncompressed CSV instead.
 ```
 
-This produces a zipped file to reduce storage space required in the backend. Missing the `--output-format=csv.gz` argument allows an uncompressed CSV to be produced which may be useful while testing in dummy data or if using Stata for analysis of this file. To import the compressed file in Python, you can use `pd.read_csv(<file>, compression='gzip')`. 
+This produces a zipped file to reduce storage space required in the backend. Changing to `--output-format=csv` argument allows an uncompressed CSV to be produced which may be useful while testing in dummy data or if using Stata for analysis of this file. To import the compressed file in Python, you can use `pd.read_csv(<file>, compression='gzip')`. 
 
 The size of the dummy dataset is determined by the `population_size` option [in the `project.yaml`](actions-pipelines.md#project-yaml-format).
 
