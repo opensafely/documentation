@@ -19,9 +19,6 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.date_deregistered_from_all_supported_practices
 &nbsp;
 
-::: cohortextractor.patients.with_complete_history_between
-&nbsp;
-
 ::: cohortextractor.patients.with_complete_gp_consultation_history_between
 &nbsp;
 
