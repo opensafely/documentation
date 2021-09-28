@@ -15,6 +15,8 @@ Level 4 outputs **can only be released by specific members of the OpenSAFELY tea
 
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
+    
+Once released, your results will be available in a new branch (`release-candidates`). This branch should be merged into `main`. A new branch of the same name will be created with any further releases so there is no need to keep the branch open.
 
 ## Disclosivity checks and redaction
 
