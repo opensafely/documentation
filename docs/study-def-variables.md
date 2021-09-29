@@ -52,9 +52,17 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.with_these_clinical_events
 &nbsp;
 
-::: cohortextractor.patients.with_death_recorded_in_primary_care
+::: cohortextractor.patients.comparator_from
 &nbsp;
 
+::: cohortextractor.patients.reference_range_lower_bound_from
+&nbsp;
+
+::: cohortextractor.patients.reference_range_upper_bound_from
+&nbsp;
+
+::: cohortextractor.patients.with_death_recorded_in_primary_care
+&nbsp;
 
 ::: cohortextractor.patients.care_home_status_as_of
 &nbsp;
