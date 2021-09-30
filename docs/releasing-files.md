@@ -13,7 +13,7 @@ However, prior to any open publication (e.g. MedRxiv), or circulation of the fin
 
 
 !!! warning
-    ** Data may only be shared with individuals without Level 4 access after they have been released outside of the secure area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.**
+    ** Data may only be shared **in confidence** with wider members of the research team, including external collaborators, **after** they have been released outside of the secure Level 4 area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.**
 
 !!! warning
     ** DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
