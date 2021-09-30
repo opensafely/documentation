@@ -7,11 +7,19 @@ You will find your files to review in `D:\Level4Files\workspaces\<workspacename>
 
 Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>**.
 
+Once these Level 4 outputs have been released, you can share the data **in confidence** with wider members of the research team, including external collaborators. For example, the study author may copy the outputs from the GitHub repository to a document being prepared for publication, or to seek feedback and contribution from other colleagues to inform the final paper or report. 
+
+However, prior to any open publication (e.g. MedRxiv), or circulation of the findings outside of the immediate research team or collaborators (e.g. presentations given to interested groups), **the final paper/report/presentation (etc.), including a brief lay summary of the important conclusions, MUST FIRST BE EMAILED to amir.mehrkar@phc.ox.ac.uk who will seek final approval for release from NHS England.** The purpose of this approval step is to check that the paper/report aligns with the stated application purpose.
+
+
 !!! warning
     ** Data may only be shared with individuals without Level 4 access after they have been released outside of the secure area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.**
 
 !!! warning
     ** DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
+    
+!!! warning
+    ** YOU MUST NOT publish any results (or related content) with journals or online, or circulate findings (e.g. presentations) with any interested groups outside of the immediate research team, **until you have received approval from NHS England.** To obtain approval email <amir.mehrkar@phc.oc.ac.uk> with your paper/report/presentation including a brief lay summary of the important conclusions.
 
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
