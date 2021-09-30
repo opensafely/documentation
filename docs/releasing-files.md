@@ -53,7 +53,7 @@ However, prior to any open publication (e.g. MedRxiv), or circulation of the fin
 Similarly, **the study repository must be kept private until project completion and NHS England approval has been obtained**; however, the OpenSAFELY Oversight Board has recommended that all study GitHub repositories (to include the study definition code, codelists and released results) be make public 12 months after any code has been executed against the underlying patient data.
 
 !!! warning
-    ** YOU MUST NOT publish any results or circulate findings with any interested groups outside of the immediate research team, or make public your study GitHub repository,  until you have received approval from NHS England. To obtain approval email <amir.mehrkar@phc.oc.ac.uk> with your paper/report/presentation including a brief lay summary of the important conclusions.
+    ** YOU MUST NOT publish any results or circulate findings with any interested groups outside of the immediate research team / collaborators, or make public your study GitHub repository, until you have received approval from NHS England. To obtain approval email <amir.mehrkar@phc.oc.ac.uk> with your paper/report/presentation including a brief lay summary of the important conclusions.**
 
 ## Redaction data breaches and how to recover from them
 
