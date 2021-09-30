@@ -8,7 +8,7 @@ You will find your files to review in `D:\Level4Files\workspaces\<workspacename>
 Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request an OUTPUT REVIEW and RELEASE of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>**.
 
 !!! warning
-    ** Data may only be shared in confidence with wider members of the research team, including external collaborators, after they have been released outside of the secure Level 4 area. You MUST NOT screen share (or share via any other means) any results from the Level 4 environment that have not been submitted for OUTPUT REVIEW.**
+    ** Data may only be shared IN CONFIDENCE with wider members of the research team, including external collaborators, after they have been released outside of the secure Level 4 area. You MUST NOT screen share (or share via any other means) any results from the Level 4 environment that have not been submitted for OUTPUT REVIEW. See below for publication guidance.**
 
 !!! warning
     ** DO NOT release your aggregated study results to your GitHub repository yourself (unless you have been given permission by OpenSAFELY).**
@@ -41,19 +41,19 @@ It may be possible for exceptions to be made if they can be justified as being b
 
 **If you are unsure about anything, please email us: <disclosurecontrol@opensafely.org>.**
 
-## Sharing and Publication of your study results (released from the Level 4 environment) and GitHub repository
+## Publication of your study results (released from the Level 4 environment) and GitHub repository
 
 ### Study results
 Once the Level 4 outputs have been released (as per the above process), you can share the data **in confidence** with wider members of the research team, including external collaborators. For example, the study author may copy the outputs from the GitHub repository to a document being prepared for publication, or to seek feedback and contribution from other colleagues to inform the final paper or report. 
 
-However, prior to any open publication (e.g. MedRxiv), or circulation of the findings outside of the immediate research team or collaborators (e.g. presentations given to interested groups), the final paper/report/presentation (etc.), including a brief lay summary of the important conclusions, **must first be emailed to <amir.mehrkar@phc.ox.ac.uk> who will seek final approval for release from NHS England.** The purpose of this approval step is to check that the paper/report aligns with the stated application purpose.
+However, **for publication (e.g. MedRxiv), or circulation of the findings outside of the immediate research team or collaborators** (e.g. presentations given to interested groups), the final paper/report/presentation (etc.), including a brief lay summary of the important conclusions, **must first be emailed to <amir.mehrkar@phc.ox.ac.uk> who will seek final approval for release from NHS England.** The purpose of this approval step is to check that the paper/report aligns with the stated application purpose.
 
 ### Study GitHub repository
 
 Similarly, **the study repository must be kept private until project completion and NHS England approval has been obtained**; however, the OpenSAFELY Oversight Board has recommended that all study GitHub repositories (to include the study definition code, codelists and released results) be make public 12 months after any code has been executed against the underlying patient data.
 
 !!! warning
-    ** YOU MUST NOT publish any results or circulate findings with any interested groups outside of the immediate research team / collaborators, or make public your study GitHub repository, until you have received approval from NHS England. To obtain approval email <amir.mehrkar@phc.oc.ac.uk> with your paper/report/presentation including a brief lay summary of the important conclusions.**
+    ** YOU MUST NOT publish any results or circulate findings with any interested groups outside of the immediate research team / collaborators, or make public your study GitHub repository, until you have received approval from NHS England. To obtain approval email <amir.mehrkar@phc.ox.ac.uk> with your paper/report/presentation including a brief lay summary of the important conclusions.**
 
 ## Redaction data breaches and how to recover from them
 
