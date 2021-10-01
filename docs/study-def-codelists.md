@@ -7,7 +7,10 @@ To help you create, edit, and manage codelists, OpenSAFELY provides a web-based 
 ## Pulling codelists into your study definition
 
 Many functions for defining variables take *codelists* as arguments.
-Codelists live as CSV files in the `codelists/` directory, and are loaded into variables like this:
+
+Codelists live as CSV files in the `codelists/` directory (see instructions in the [Adding codelists to a project](codelists-project) page).
+
+Codelists are loaded into variables as follows:
 
 ```py
 chronic_cardiac_disease_codes = codelist_from_csv(
