@@ -32,6 +32,6 @@ If necessary, you can also import CSVs not via OpenCodelists - just manually cop
 You will need to add and commit these changes and push to GitHub. 
 If you don't, or a newer version is available than that committed, the automated tests will fail with an error message.
 
-See more on using Codelists in your study definition can be found in [Working with codelists](study-def-codelists).
+See more on using Codelists in your study definition in [Working with codelists](study-def-codelists).
 
 ---8<-- 'includes/glossary.md'
