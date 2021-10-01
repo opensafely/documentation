@@ -18,7 +18,7 @@ opensafely/current-asthma/2020-05-06
 
 If necessary, during initial development you can even import codelists this way while they are in draft, but ensure they are finalised and updated in your study before running in the real data. (They may take the form `username/[your_username]/your_codelist/XYZ`)
 
-## Adding/updating a codelist CSV
+## Adding/updating a codelist CSV file
 Download the new codelists into the `codelist/` folder using the `opensafely` program by running
 
 ```bash
@@ -32,6 +32,6 @@ If necessary, you can also import CSVs not via OpenCodelists - just manually cop
 You will need to add and commit these changes and push to GitHub. 
 If you don't, or a newer version is available than that committed, the automated tests will fail with an error message.
 
-See more on using Codelists in your study definition in [Working with codelists](study-def-codelists).
+See more on using Codelists in your study definition in [Working with codelists](study-def-codelists.md).
 
 ---8<-- 'includes/glossary.md'
