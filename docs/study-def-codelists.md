@@ -8,7 +8,7 @@ To help you create, edit, and manage codelists, OpenSAFELY provides a web-based 
 
 Many functions for defining variables take *codelists* as arguments.
 
-Codelists live as CSV files in the `codelists/` directory (see instructions in the [Adding codelists to a project](codelists-project.md) page).
+Codelists live as CSV files in the `codelists/` directory (see instructions in the [Adding codelists to a project](codelist-project.md) page).
 
 Codelists are loaded into variables as follows:
 
