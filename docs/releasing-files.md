@@ -18,6 +18,10 @@ Level 4 outputs **can only be released by specific members of the OpenSAFELY tea
     
 Once released, your results will be available in a new branch (`release-candidates`). This branch should be merged into `main`. A new branch of the same name will be created with any further releases so there is no need to keep the branch open.
 
+## How output checkers release files
+
+Outputs are reviewed and approved on the secure servers, using a command-line tool. This can only be done by users with the [`OutputChecker` role](permissions.md). Approved users can request to access [the work-in-progress documentation here](https://docs.google.com/document/d/16E-TBeK19njc5-SfvWG60AihmpieIscCm_kFG7JeeP8/edit).
+
 ## Disclosivity checks and redaction
 
 Work through the moderately sensitive files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. 
