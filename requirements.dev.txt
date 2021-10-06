@@ -379,9 +379,9 @@ mkdocs-autorefs==0.2.1 \
     # via
     #   -r requirements.txt
     #   mkdocstrings
-mkdocs-material==7.3.0 \
-    --hash=sha256:07db0580fa96c3473aee99ec3fb4606a1a5a1e4f4467e64c0cd1ba8da5b6476e \
-    --hash=sha256:b183c27dc0f44e631bbc32c51057f61a3e2ba8b3c1080e59f944167eeba9ff1d
+mkdocs-material==7.3.1 \
+    --hash=sha256:8d59c8ac241d59eef1a883c49ca685c8d8446eb054675a212fb748daff24099c \
+    --hash=sha256:d1ab269da2025f22b8fba079d7eadc05cd97ac2a21d87b09d414e69915f247a7
     # via
     #   -r requirements.txt
     #   mkdocs-material-extensions
@@ -580,9 +580,9 @@ pygments==2.9.0 \
     # via
     #   -r requirements.txt
     #   mkdocs-material
-pymdown-extensions==8.2 \
-    --hash=sha256:141452d8ed61165518f2c923454bf054866b85cf466feedb0eb68f04acdc2560 \
-    --hash=sha256:b6daa94aad9e1310f9c64c8b1f01e4ce82937ab7eb53bfc92876a97aca02a6f4
+pymdown-extensions==9.0 \
+    --hash=sha256:01e4bec7f4b16beaba0087a74496401cf11afd69e3a11fe95cb593e5c698ef40 \
+    --hash=sha256:430cc2fbb30cef2df70edac0b4f62614a6a4d2b06462e32da4ca96098b7c1dfb
     # via
     #   -r requirements.txt
     #   mkdocs-material
