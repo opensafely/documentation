@@ -195,6 +195,7 @@ jinja2==3.0.1 \
     # via
     #   -r requirements.txt
     #   mkdocs
+    #   mkdocs-material
     #   mkdocstrings
 kiwisolver==1.3.1 \
     --hash=sha256:0cd53f403202159b44528498de18f9285b04482bab2a6fc3f5dd8dbb9352e30d \
@@ -379,9 +380,9 @@ mkdocs-autorefs==0.2.1 \
     # via
     #   -r requirements.txt
     #   mkdocstrings
-mkdocs-material==7.3.1 \
-    --hash=sha256:8d59c8ac241d59eef1a883c49ca685c8d8446eb054675a212fb748daff24099c \
-    --hash=sha256:d1ab269da2025f22b8fba079d7eadc05cd97ac2a21d87b09d414e69915f247a7
+mkdocs-material==7.3.2 \
+    --hash=sha256:02aeb2f9d9826b5c5ba4e320b4008bdc89f7b30ca00ded72ee43385a1690eaa4 \
+    --hash=sha256:a9b7c6432ebadd0e192e3b341b25bd41bd1c1b167061ea629a9887a1e4129176
     # via
     #   -r requirements.txt
     #   mkdocs-material-extensions
