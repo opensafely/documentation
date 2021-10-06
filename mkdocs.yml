@@ -57,8 +57,8 @@ nav:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
-  - Requesting changes:
-      - Overview: requests-intro.md
+  - Support:
+      - How to get help: requests-intro.md
       - Requesting new libraries: requests-packages.md
       - Requesting study definition variables: requests-variables.md
       - Updating the documentation: requests-documentation.md
