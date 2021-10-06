@@ -16,7 +16,7 @@ The general workflow for making changes to your code is as follows:
 * Submit a pull request (PR), requesting that the branch be reviewed by somebody else. A PR is simply a way of viewing, commenting on, and approving code to be merged, "pulled" into the main codebase.
 * Watch out for the automated tests passing or failing!
 
-
+For a more generic overview, see [GitHub's own guidance](https://guides.github.com/introduction/flow/).
 
 
 ---8<-- 'includes/glossary.md'
