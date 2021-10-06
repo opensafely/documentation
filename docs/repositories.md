@@ -7,6 +7,15 @@ You can download a copy of the repo ("clone"), create a development "branch", ma
 
 GitHub is the means by which code in the repository is passed to the server to be run against the OpenSAFELY database &mdash; it is the only entry point between the secure server and the outside world. GitHub is also the means by which approved disclosure-safe outputs are released from the secure server to researchers.
 
+## Repository access
+
+During the development stage of a project, a repository is typically private, so that only core OpenSAFELY members and project-specific collaborators will have access. See the [permissions page](permissions.md) for more details.
+
+Once a project is complete, or retired, the repository will be made public. 
+
+!!! warning
+    You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
+
 ## Creating a repository for a new project
 
 For ease of use, we have created a research template that you should use for your study.

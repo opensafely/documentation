@@ -19,7 +19,7 @@ nav:
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
-      - GitHub repository layout: repositories.md
+      - GitHub repositories: repositories.md
       - Detailed installation guides:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
