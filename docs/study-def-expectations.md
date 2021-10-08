@@ -83,21 +83,24 @@ The following options are currently available for dummy data (note numeric value
 *	`{"date": {"earliest": "1900-01-01", "latest": "today"}, "rate" : "uniform"}`
 
 
-### Specifc parameters/variable notes
+### Specific parameters/variable notes
 
 `"incidence"` has a slightly different meaning dependent on the variable type it is applied to:
+
 * binary: describes actual incidence (0.5 means values are expected to be positive 50% of the time)
 * int/float/categorical: indicates non-missingness (0.5 means values are expected to be present - non-missing - 50% of the time)
 
 `"rate"` 
+
 * used for the distribution of date values, with either:
-  * `"exponential_increase"`
-  * `"uniform"`
+    * `"exponential_increase"`
+    * `"uniform"`
     
 * or for non-date values:
-  * `"universal"`: indicates every patient is expected to have a value (i.e. an alias for `incidence=1`)
+    * `"universal"`: indicates every patient is expected to have a value (i.e. an alias for `incidence=1`)
     
 `"distribution"`(numeric variables) currently has two possible options:
+
 * `normal`
 * `population_ages`: samples from the distribution of ages in the UK taken from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/tablea21principalprojectionukpopulationinagegroups).
 
