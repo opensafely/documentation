@@ -2,8 +2,8 @@
 
 Your example research template doesn't include any codelists but the folder strucure and text files that are needed to include codelists already exist. 
 Take a look at the `codelists/codelist.txt` file in the repo, this file is currently empty but you can add one (or more) strings to this file that specify the codelists that need for your research project. 
-The naming convention of the string that you need to add to the `codelists/codelist.txt` file follows this structure: a `<codelist-id> `is followed by a `<tag>`,
-Note that the tag is a date (YYYY-MM-DD) in most cases but can also be a version number (e.g., v1).
+The naming convention of the string that you need to add to the `codelists/codelist.txt` file follows this structure: a `<codelist-id> `is followed by `/` and a `<tag>`.
+Note that the tag is usually a date (YYYY-MM-DD) but can also be a version number (e.g., v1.2).
 
 ```bash
 <codelist-id>/<tag>
@@ -11,10 +11,10 @@ Note that the tag is a date (YYYY-MM-DD) in most cases but can also be a version
 
 If you want to add a codelist from [OpenCodelists](https://www.opencodelists.org) to your project you can find this information on the page for each of the codelists, see orange boxes in the screenshot below.
 
-[[ADD SCREENSHOT HERE]]
+![Finding the codelist id and tag on OpenCodelists.](images/adding-codelist-id-tag.png)
 
-You need to add the string in this into a new line of the `codelist.txt` file. 
-The next time you run the command `opensafely codelists update` in your terminal, the codelists you specified earlier will be added the the `codelists/` subfolder in your project automatically so you don't need to add these files manually to your project.
+You need to add each string into a new line of the `codelist.txt` file. 
+The next time you run the command `opensafely codelists update` in your terminal, the codelists you specified earlier will be added to the the `codelists/` subfolder in your project automatically so you don't need to add these files manually to your project.
 
 For example, a `codelist.txt`: file of a project may consist of four different strings:
 
