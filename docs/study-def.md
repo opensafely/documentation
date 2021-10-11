@@ -141,7 +141,7 @@ study = StudyDefinition(
 
 The first argument to `patients.satisfying()` is a string defining the population of interest using elementary logic syntax.
 Acceptable operators in this string are currently `=`, `!=`, `<`, `<=`, `>=`, `>`, `AND`, `OR`, `NOT`, `+`, `-`, `*`, `/`. 
-All subsequent arguments are variable definitions. These are used just as you would use them in the higher-level `StudyDefinition()` call, except that there's no need to define `returning_expectations` arguments since these variables are extracted explicitly.
+All subsequent arguments are variable definitions. These are used just as you would use them in the higher-level `StudyDefinition()` call, except that there's no need to define `return_expectations` arguments since these variables are extracted explicitly.
 
 If a variable has been defined elsewhere in `StudyDefinition()`, then that variable can be used in the `patients.satisfying()` function without needing to be defined again.
 For example,
@@ -155,7 +155,7 @@ study = StudyDefinition(
         ),
     ),
     sex=patients.sex(
-        returning_expectations={
+        return_expectations={
             "category": {"ratios": {"M": 0.49, "F": 0.51}},
             "incidence": 1,
         }
