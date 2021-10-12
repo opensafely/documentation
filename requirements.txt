@@ -340,9 +340,9 @@ mkdocs-autorefs==0.2.1 \
     --hash=sha256:b8156d653ed91356e71675ce1fa1186d2b2c2085050012522895c9aa98fca3e5 \
     --hash=sha256:f301b983a34259df90b3fcf7edc234b5e6c7065bd578781e66fd90b8cfbe76be
     # via mkdocstrings
-mkdocs-material==7.3.2 \
-    --hash=sha256:02aeb2f9d9826b5c5ba4e320b4008bdc89f7b30ca00ded72ee43385a1690eaa4 \
-    --hash=sha256:a9b7c6432ebadd0e192e3b341b25bd41bd1c1b167061ea629a9887a1e4129176
+mkdocs-material==7.3.3 \
+    --hash=sha256:3444b681f47e62c0ec7166bfb6f12360a26c751224cd6d3b3816f7310827073f \
+    --hash=sha256:56bcc4e43356b97caa07706b0f446a3d9c39eb9aa1ad64131686d555270fc65e
     # via
     #   -r requirements.in
     #   mkdocs-material-extensions
