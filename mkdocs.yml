@@ -17,6 +17,7 @@ nav:
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Registered deaths: dataset-onsdeaths.md
   - Getting Started guide: getting-started.md
+  - Apply for access: apply-for-access.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - GitHub repositories: repositories.md
