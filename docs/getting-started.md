@@ -167,6 +167,7 @@ account, for developing your own study:
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
+1. Once created, select the "Settings" tab and scroll down to the option to the option to "Automatically delete head branches". This should be turned ON so that when you merge a branch it is automatically deleted, keeping your branches neat and tidy. Deleted branches can be restored if needed later. 
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
