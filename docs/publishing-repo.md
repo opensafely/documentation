@@ -7,7 +7,7 @@ When you're ready to tell the world about your GitHub repo, consider the followi
 * Try to ensure your automated tests (on the repo's _Actions_ tab) are green. It's not essential, but it is a better look to be able to demonstrate your code is minimally runnable.
 * Review your GitHub repository to make it simpler for people to explore:
     * Merge or close all open Pull Requests (unless they are ongoing work in progress). 
-    * Ensure that all branches are merged or deleted. Old branches may contain draft work or previous ideas that are no longer needed. Note that deleting them does not delete the files permanently, they will still be in the repository history if you need to revisit them later. You may need to leave one or two branches open if they are ongoing work in progress (try to make sure they are named clearly). 
+    * Ensure that all branches are merged or deleted apart from the `main` or `master` branch. Old branches may contain draft work or previous ideas that are no longer needed. Note that deleting them does not delete the files permanently, they will still be in the repository history if you need to revisit them later. You may need to leave one or two branches open if they are ongoing work in progress (try to make sure they are named clearly). 
     * Delete any files that were not used/experimental and not used in final analysis, e.g. old versions of study definitions. Again they will still be in the repository history if you need them later. 
     * Are there old issues that can be closed? Some issues may have been fixed, or may be no longer relevant.
     
