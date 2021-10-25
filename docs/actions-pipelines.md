@@ -72,6 +72,14 @@ In general, actions are composed as follows:
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
     * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
     * `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](security-levels.md)) and potentially for publication back to GitHub.
+    * Outputs should be separated onto different lines, each with a unique 'key', but related outputs can be combined using a wildcard (`*`). E.g.:
+        ```yaml
+           outputs:
+              moderately_sensitive:
+                table: output/summary_results.txt
+	            survival_figure: output/figures/survival-plot.png
+	            time_series_figures: output/figures/time_series_*.png
+        ```
 * Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
 When writing and running your pipeline, note that:
