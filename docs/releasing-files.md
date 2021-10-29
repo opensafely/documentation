@@ -16,6 +16,8 @@ Level 4 outputs **can only be released by specific members of the OpenSAFELY tea
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
     
+TIP: Our resources for checking outputs are not unlimited, therefore it is advised to ensure you have all of your outputs ready at the same time for your project (or its current phase) so they can be reviewed together. Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppresion which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5). 
+
 Once released, your results will be available in a new branch (`release-candidates`). This branch should be merged into `main`. A new branch of the same name will be created with any further releases so there is no need to keep the branch open.
 
 ## How output checkers release files
