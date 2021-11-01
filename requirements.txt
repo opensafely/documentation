@@ -340,9 +340,9 @@ mkdocs-autorefs==0.2.1 \
     --hash=sha256:b8156d653ed91356e71675ce1fa1186d2b2c2085050012522895c9aa98fca3e5 \
     --hash=sha256:f301b983a34259df90b3fcf7edc234b5e6c7065bd578781e66fd90b8cfbe76be
     # via mkdocstrings
-mkdocs-material==7.3.4 \
-    --hash=sha256:6a9c5a2f18a39ac0b6af73d23c452cdb1f9a07bf6365d43ee54cb796b1d2c7eb \
-    --hash=sha256:9cc0ea54933322792855150ffb89401ff4eaf7737aadca5155fa679195ad803a
+mkdocs-material==7.3.6 \
+    --hash=sha256:1b1dbd8ef2508b358d93af55a5c5db3f141c95667fad802301ec621c40c7c217 \
+    --hash=sha256:1b6b3e9e09f922c2d7f1160fe15c8f43d4adc0d6fb81aa6ff0cbc7ef5b78ec75
     # via
     #   -r requirements.in
     #   mkdocs-material-extensions
@@ -513,9 +513,9 @@ pycparser==2.20 \
     --hash=sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0 \
     --hash=sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705
     # via cffi
-pygments==2.9.0 \
-    --hash=sha256:a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f \
-    --hash=sha256:d66e804411278594d764fc69ec36ec13d9ae9147193a1740cd34d272ca383b8e
+pygments==2.10.0 \
+    --hash=sha256:b8e67fe6af78f492b3c4b3e2970c0624cbf08beb1e493b2c99b9fa1b67a20380 \
+    --hash=sha256:f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6
     # via mkdocs-material
 pymdown-extensions==9.0 \
     --hash=sha256:01e4bec7f4b16beaba0087a74496401cf11afd69e3a11fe95cb593e5c698ef40 \
