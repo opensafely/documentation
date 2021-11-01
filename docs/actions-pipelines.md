@@ -77,8 +77,8 @@ In general, actions are composed as follows:
            outputs:
               moderately_sensitive:
                 table: output/summary_results.txt
-	            survival_figure: output/figures/survival-plot.png
-	            time_series_figures: output/figures/time_series_*.png
+                survival_figure: output/figures/survival-plot.png
+                time_series_figures: output/figures/time_series_*.png
         ```
 * Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
