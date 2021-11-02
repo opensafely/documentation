@@ -34,7 +34,8 @@ opensafely-current-asthma.csv
 primis-covid19-vacc-uptake-bmi_stage.csv
 ```
 
-If necessary, during initial development you can even import codelists this way while they are in draft, but ensure they are finalised and updated in your study before running in the real data. (They may take the form `username/[your_username]/your_codelist/XYZ`)
+If necessary, during initial development you can even import codelists this way while they are in draft, but ensure they are finalised and updated in your study before running in the real data. 
+To use codelists that are in draft you need to add a new line to the `codelists.txt` file using this structure `user/<your_username>/<your-codelist-id>/<tag>`).
 
 ## Adding/updating a codelist CSV file
 Once you have listed the codelists you need from OpenCodelists in the `codelists.txt` file, you can download the specified files into the `codelist/` folder using the `opensafely` program by running
