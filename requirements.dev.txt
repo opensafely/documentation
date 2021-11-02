@@ -380,9 +380,9 @@ mkdocs-autorefs==0.2.1 \
     # via
     #   -r requirements.txt
     #   mkdocstrings
-mkdocs-material==7.3.4 \
-    --hash=sha256:6a9c5a2f18a39ac0b6af73d23c452cdb1f9a07bf6365d43ee54cb796b1d2c7eb \
-    --hash=sha256:9cc0ea54933322792855150ffb89401ff4eaf7737aadca5155fa679195ad803a
+mkdocs-material==7.3.6 \
+    --hash=sha256:1b1dbd8ef2508b358d93af55a5c5db3f141c95667fad802301ec621c40c7c217 \
+    --hash=sha256:1b6b3e9e09f922c2d7f1160fe15c8f43d4adc0d6fb81aa6ff0cbc7ef5b78ec75
     # via
     #   -r requirements.txt
     #   mkdocs-material-extensions
@@ -575,9 +575,9 @@ pycparser==2.20 \
     # via
     #   -r requirements.txt
     #   cffi
-pygments==2.9.0 \
-    --hash=sha256:a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f \
-    --hash=sha256:d66e804411278594d764fc69ec36ec13d9ae9147193a1740cd34d272ca383b8e
+pygments==2.10.0 \
+    --hash=sha256:b8e67fe6af78f492b3c4b3e2970c0624cbf08beb1e493b2c99b9fa1b67a20380 \
+    --hash=sha256:f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6
     # via
     #   -r requirements.txt
     #   mkdocs-material
