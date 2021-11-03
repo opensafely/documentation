@@ -118,8 +118,8 @@ The meaning of these values will depend on the data source, and this should be d
 
 In some instances, 0s will be returned for missing values when there are also numeric values of 0. Distinguishing true 0s from missing values can't be done 100% reliably within TPPs data model as, as stated above, the numeric value isn't nullable. Possible workarounds for this include:
 
-1. For values which are normally expected to be associated with comparators (i.e. lab data values) fetch the comparator into a separate column and then, if that column is empty, you can assume that there is no associated value.
-2. For values not associated comparators, a similar result could be achieved using the `date_of()` function to pull the date (even just the year) of the value into a separate column. If there is no associated year then you know that it was not a true zero.
+1. For values which are normally expected to be associated with comparators (i.e. lab data values), fetch the comparator into a separate column. If that comparator column is empty, you can assume that there is no associated value.
+2. For values not associated with comparators, a similar result could be achieved using the `date_of()` function to pull the date (even just the year) of the value into a separate column. If there is no associated year, then you know that it was not a true zero.
 
 ## Defining the study population
 
