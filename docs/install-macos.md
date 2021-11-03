@@ -20,6 +20,18 @@ Once homebrew is installed use it to install [pipx](https://pipxproject.github.i
 brew install pipx pyenv
 ```
 
+Add pipx to your path with:
+
+```bash
+echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.bashrc
+```
+
+and reload your shell environment with:
+
+```bash
+source ~/.bashrc
+```
+
 Next, install [Docker for Mac](https://docs.docker.com/docker-for-mac/install/), [GitHub Desktop](https://desktop.github.com/), and [Visual Studio Code](https://code.visualstudio.com/):
 
 ```bash
