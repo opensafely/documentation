@@ -59,7 +59,7 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
      virtual private network (VPN) — it may be that [corporate firewalls
      prevent access to
      Gitpod](https://github.com/opensafely/documentation/discussions/311);
-     please contact the IT staff who manage the network for help.
+     please contact the IT staff who manage your internet connection for help.
 
 2. *Install the required software to your own computer*.
 
