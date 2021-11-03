@@ -179,6 +179,9 @@ This command also respects the `--skip-existing` flag.
 This will prevent it from recalculating the measure for any months or weeks which have already been calculated.
 However the final step, which combines output across time periods, will always be run.
 
+This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created. 
+If the `--output-dir` argument is configured, `generate_measures` expects the input cohort files to also be in the output directory. To ensure this, include the same `--output-dir` argument in the previous `generate_cohort` step.
+
 ## Putting it all together in a pipeline
 
 To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_death_by_stp.csv` in a project pipeline, you would use the following actions:
