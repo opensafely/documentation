@@ -11,7 +11,7 @@ Consider the following extract from a study's *project.yaml*:
 ```yaml
 actions:
   generate_my_cohort:
-    run: cohortextractor:latest generate_cohort
+    run: cohortextractor:latest generate_cohort --output-format=csv.gz
     outputs:
       highly_sensitive:
         cohort: output/input.csv.gz
