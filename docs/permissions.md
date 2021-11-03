@@ -30,6 +30,12 @@ Additionally, users with the **ProjectCoordinator** role can:
 
 ## Releasing Outputs
 
+!!! note
+    Releasing of outputs to the job server is currently being rolled out.
+    See [team manual](https://bennettinstitute-team-manual.pages.dev/tech-team/playbooks/job-server-releasing-outputs/) for instructions on setting up a user.
+    The new release process is described separately in [Google Docs](https://docs.google.com/document/d/1PSzMoCFov2olJpxrFGT1DccWUqGDA67mUvPIyIhOcew/edit#heading=h.aokkzsfuxo4n).
+
+
 For releasing outputs we have some additional roles:
 
 **ProjectCollaborator:**
@@ -45,3 +51,5 @@ For releasing outputs we have some additional roles:
 **OutputPublisher:**
 
 * Confirm publication of outputs
+
+---8<-- 'includes/glossary.md'
