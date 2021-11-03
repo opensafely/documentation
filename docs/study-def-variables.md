@@ -140,6 +140,9 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 ::: cohortextractor.patients.with_ethnicity_from_sus
 &nbsp;
 
+::: cohortextractor.patients.outpatient_appointment_date
+&nbsp;
+
 
 ## NHS England COVID-19 data store
 (Documentation on the source of this data will be forthcoming later.)
