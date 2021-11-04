@@ -29,13 +29,11 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
    installed for you*.
 
      Services such as [Gitpod](https://gitpod.io) provide online
-     computing environments; Gitpod currently has a free plan with a
-     generous monthly usage limit for working with public code. We've
-     adapted our demonstration research study and this guide such that
-     you can follow along with Gitpod, should you choose to do so.
-
-     For this option, the only requirement is a modern web browser (e.g.
-     Chrome, Edge, Firefox, Safari).
+     computing environments. Gitpod has a free plan with a generous
+     monthly usage limit — 50 hours — for working with code in public or
+     private repositories. We've adapted our demonstration research
+     study and this guide such that you can follow along with Gitpod,
+     should you choose to do so.
 
      You might prefer an online environment if one or more of the
      following apply:
@@ -48,6 +46,20 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
        which OpenSAFELY uses;
      * you want to try OpenSAFELY via a device other than a desktop or
        laptop computer, e.g. a tablet.
+
+     To use Gitpod, the only requirements are:
+
+     * you have a current version of a modern web browser (e.g. Chrome,
+       Edge, Firefox, Safari);
+     * your network connection does not block access to the Gitpod
+       development environment.
+
+     If your internet connection is not managed by you directly —
+     perhaps you are in the office or connecting via your employer's
+     virtual private network (VPN) — it may be that [corporate firewalls
+     prevent access to
+     Gitpod](https://github.com/opensafely/documentation/discussions/311);
+     please contact the IT staff who manage your internet connection for help.
 
 2. *Install the required software to your own computer*.
 
