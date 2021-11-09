@@ -357,7 +357,7 @@ You can then join the outputs of this study definition using a function like thi
 ```py
     from pathlib import Path
 
-    def join_ethnicity_region(directory: str) -> None:
+    def join_ethnicity(directory: str) -> None:
     """Finds 'input_ethnicity.feather' in directory and combines with each input file."""
     
         dirpath = Path(directory)
@@ -376,4 +376,6 @@ You can then join the outputs of this study definition using a function like thi
             
                 df['ethnicity'] = df['patient_id'].map(ethnicity_dict)
                 df.to_feather(dirpath / file.name) # overwrites existing dataframe with ones which include ethnicity
+
+    join_ethnicity('output')
 ```
