@@ -182,6 +182,18 @@ However the final step, which combines output across time periods, will always b
 This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created. 
 If the `--output-dir` argument is configured, `generate_measures` expects the input cohort files to also be in the output directory. To ensure this, include the same `--output-dir` argument in the previous `generate_cohort` step.
 
+!!! note
+    As we saw, you can extract the data in a compressed output format, such as `csv.gz`, `feather`, `dta`, or `dta.gz`.
+    For example:
+
+    ```sh
+    cohortextractor generate_cohort --output-format=csv.gz
+    ```
+    
+    If you do, then the `generate_measures` command will automatically work with this compressed output format;
+    you need not pass `--output-format` to `generate_measures`, in other words.
+    However, the `generate_measures` command will always output CSV files.
+
 ## Putting it all together in a pipeline
 
 To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_death_by_stp.csv` in a project pipeline, you would use the following actions:
