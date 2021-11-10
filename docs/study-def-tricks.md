@@ -379,3 +379,5 @@ You can then join the outputs of this study definition using a function like thi
 
     join_ethnicity('output')
 ```
+
+You can find an example of this in [this repo](https://github.com/opensafely/sro-template).
