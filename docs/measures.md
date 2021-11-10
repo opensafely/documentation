@@ -86,7 +86,7 @@ measures = [
 This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure. 
 
 #### The `index_date`
-Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time. Read more about using index_date [here](/study-def-dates.md/#index-dates).
+Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time.
 
 #### The `Measure()` function
 * `id` is just a string used to identify the measure output file.
