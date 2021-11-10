@@ -86,7 +86,7 @@ measures = [
 This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure. 
 
 #### The `index_date`
-Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time. Read more about using index_date [here](/study-def-dates.md/#index-dates).
+Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time.
 
 #### The `Measure()` function
 * `id` is just a string used to identify the measure output file.
@@ -181,6 +181,18 @@ However the final step, which combines output across time periods, will always b
 
 This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created. 
 If the `--output-dir` argument is configured, `generate_measures` expects the input cohort files to also be in the output directory. To ensure this, include the same `--output-dir` argument in the previous `generate_cohort` step.
+
+!!! note
+    As we saw, you can extract the data in a compressed output format, such as `csv.gz`, `feather`, `dta`, or `dta.gz`.
+    For example:
+
+    ```sh
+    cohortextractor generate_cohort --output-format=csv.gz
+    ```
+    
+    If you do, then the `generate_measures` command will automatically work with this compressed output format;
+    you need not pass `--output-format` to `generate_measures`, in other words.
+    However, the `generate_measures` command will always output CSV files.
 
 ## Putting it all together in a pipeline
 
