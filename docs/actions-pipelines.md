@@ -94,7 +94,7 @@ When writing and running your pipeline, note that:
 
 * If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs.
 
-* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to differences versions of cohortextractor and will also avoid problems caused by index integer positions changing as columns are added/removed. 
+* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to different versions of cohortextractor and will also avoid problems caused by index integer positions changing as columns are added/removed. 
 
 ## Running your code locally
 
