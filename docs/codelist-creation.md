@@ -64,8 +64,8 @@ Finally, please avoid filtering on an include or exclude column in Excel when fi
 
 ## Sign-off
 
-Once a draft codelist has been agreed, it must be signed-off by a "data expert" (epidemiological sign-off) and 
-"disease expert" (clinical sign-off) from at least two different people. 
+Once a draft codelist has been agreed, we recommend it should be signed-off both by a "data expert" (epidemiological sign-off) and 
+"disease expert" (clinical sign-off) from at least two different people. (These can include the person who led on creating the codelist).
 
 
 ## Add to [OpenCodelists](https://www.opencodelists.org)
