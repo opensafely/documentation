@@ -63,6 +63,7 @@ The following options are currently available for dummy data (note numeric value
 **integers**
 
 * `{"int" : {"distribution": "normal", "mean": 25, "stddev": 5}, "incidence" : 0.5}`
+* `{"int" : {"distribution": "poisson", "mean": 5}, "incidence" : 0.6}`
 * `{"int" : {"distribution": "population_ages"}, "incidence" : 1}`
 
 **numeric**
