@@ -102,6 +102,7 @@ The following options are currently available for dummy data (note numeric value
 **Distribution**
 
 * `"normal"` means we expect a normal distribution.
+* `"poisson"` means we expect a poisson distribution - better for variables that are counts.
 * `"population_ages"`: means we expect the distribution to match that of the distribution of ages in the UK from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/).
 
 ## Providing your own dummy data
