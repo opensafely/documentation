@@ -115,7 +115,8 @@ markdown_extensions:
       permalink: "🔗"
   - pymdownx.highlight
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.keys
   - admonition
   - footnotes
