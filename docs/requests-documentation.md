@@ -21,7 +21,7 @@ This ensures that a new version of `cohortextractor` is released and can be impo
 Then add a reference to your new variable in the [variables page](study-def-variables.md).
 
 Additionally, the
-[`requirements.txt`](https://github.com/opensafely/documentation/blob/main/requirements.txt)
+[`requirements.prod.txt`](https://github.com/opensafely/documentation/blob/main/requirements.prod.txt)
 file in the [documentation
 repo](https://github.com/opensafely/documentation) itself has to be
 updated to match the new incremented version of `cohortextractor`. See

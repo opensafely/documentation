@@ -1,0 +1,9 @@
+# Main prod requirements
+
+# To generate requirements file, run:
+# pip-compile --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
+
+mkdocs
+mkdocstrings
+mkdocs-material
+opensafely-cohort-extractor
