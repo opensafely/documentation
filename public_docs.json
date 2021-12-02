@@ -1,0 +1,52 @@
+{
+  "contracts": [
+    {
+      "name": "ClinicalEvents",
+      "dotted_path": "cohortextractor2.concepts.tables.ClinicalEvents",
+      "docstring": [
+        "Clinical events recorded by GPs.",
+        "",
+        "Ideally a record of all relevant clinical events with their code and date."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "PatientDemographics",
+      "dotted_path": "cohortextractor2.concepts.tables.PatientDemographics",
+      "docstring": [
+        "Provides demographic information about patients."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "PracticeRegistrations",
+      "dotted_path": "cohortextractor2.concepts.tables.PracticeRegistrations",
+      "docstring": [
+        "For backends with primary care data, the patient's registered practice.",
+        "",
+        "Ideally a record of all relevant registrations with their start and end",
+        "date, or the latest registered practice."
+      ],
+      "columns": [],
+      "contract_support": []
+    }
+  ],
+  "backends": [
+    {
+      "name": "DatabricksBackend",
+      "tables": []
+    },
+    {
+      "name": "GraphnetBackend",
+      "tables": []
+    },
+    {
+      "name": "TPPBackend",
+      "tables": [
+        "PatientDemographics"
+      ]
+    }
+  ]
+}
