@@ -1,0 +1,126 @@
+{
+  "backends": [
+    {
+      "name": "DatabricksBackend",
+      "tables": [
+        "WIP_SimplePatientDemographics",
+        "WIP_Prescriptions",
+        "WIP_HospitalAdmissions"
+      ]
+    },
+    {
+      "name": "GraphnetBackend",
+      "tables": [
+        "PatientDemographics",
+        "WIP_ClinicalEvents",
+        "WIP_PracticeRegistrations",
+        "WIP_CovidTestResults",
+        "WIP_HospitalizationsWithoutSystem",
+        "WIP_PatientAddress"
+      ]
+    },
+    {
+      "name": "TPPBackend",
+      "tables": [
+        "Patients",
+        "WIP_ClinicalEvents",
+        "WIP_PracticeRegistrations",
+        "WIP_CovidTestResults",
+        "WIP_Hospitalizations",
+        "WIP_PatientAddress"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "name": "PatientDemographics",
+      "dotted_path": "databuilder.contracts.contracts.PatientDemographics",
+      "docstring": [
+        "Provides demographic information about patients."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_ClinicalEvents",
+      "dotted_path": "databuilder.contracts.contracts.WIP_ClinicalEvents",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_HospitalAdmissions",
+      "dotted_path": "databuilder.contracts.contracts.WIP_HospitalAdmissions",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_Hospitalizations",
+      "dotted_path": "databuilder.contracts.contracts.WIP_Hospitalizations",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_HospitalizationsWithoutSystem",
+      "dotted_path": "databuilder.contracts.contracts.WIP_HospitalizationsWithoutSystem",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_PatientAddress",
+      "dotted_path": "databuilder.contracts.contracts.WIP_PatientAddress",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_PracticeRegistrations",
+      "dotted_path": "databuilder.contracts.contracts.WIP_PracticeRegistrations",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_Prescriptions",
+      "dotted_path": "databuilder.contracts.contracts.WIP_Prescriptions",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_CovidTestResults",
+      "dotted_path": "databuilder.contracts.contracts.WIP_CovidTestResults",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_SimplePatientDemographics",
+      "dotted_path": "databuilder.contracts.contracts.WIP_SimplePatientDemographics",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [],
+      "contract_support": []
+    }
+  ]
+}
