@@ -110,6 +110,7 @@ plugins:
       custom_templates: templates
       watch:
         - examples
+  - contracts
 
 markdown_extensions:
   - pymdownx.snippets:

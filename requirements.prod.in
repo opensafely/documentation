@@ -4,6 +4,7 @@
 # pip-compile --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
 
 mkdocs
-mkdocstrings
 mkdocs-material
+https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts/archive/bf1a19894a9d37c6673f02c7cdfd89e6a72e3101.zip#mkdocs-opensafely-backend-contracts
+mkdocstrings
 opensafely-cohort-extractor
