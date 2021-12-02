@@ -1,9 +1,5 @@
-# Main prod requirements
-
-# To generate requirements file, run:
-# pip-compile --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
-
 mkdocs
-mkdocstrings
 mkdocs-material
+https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts/archive/e422c3c8d8dfdd5e1749c83cc408a584f9cb89f3.zip#mkdocs-opensafely-backend-contracts
+mkdocstrings
 opensafely-cohort-extractor

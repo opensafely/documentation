@@ -109,6 +109,10 @@ decorator==5.1.0 \
     --hash=sha256:7b12e7c3c6ab203a29e157335e9122cb03de9ab7264b137594103fd4a683b374 \
     --hash=sha256:e59913af105b9860aa2c8d3272d9de5a56a4e608db9a2f167a8480b323d529a7
     # via retry
+first==2.0.2 \
+    --hash=sha256:8d8e46e115ea8ac652c76123c0865e3ff18372aef6f03c22809ceefcea9dec86 \
+    --hash=sha256:ff285b08c55f8c97ce4ea7012743af2495c9f1291785f163722bd36f6af6d3bf
+    # via mkdocs-opensafely-backend-contracts
 fonttools==4.28.2 \
     --hash=sha256:dca694331af74c8ad47acc5171e57f6b78fac5692bf050f2ab572964577ac0dd \
     --hash=sha256:eff1da7ea274c54cb8842853005a139f711646cbf6f1bcfb6c9b86a627f35ff0
@@ -400,6 +404,9 @@ mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
     --hash=sha256:bfd24dfdef7b41c312ede42648f9eb83476ea168ec163b613f9abd12bbfddba2
     # via mkdocs-material
+mkdocs-opensafely-backend-contracts @ https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts/archive/e422c3c8d8dfdd5e1749c83cc408a584f9cb89f3.zip \
+    --hash=sha256:7618e38e7d51d73547e15542ccd241e147f8052a0d0dbf3f9388937bf9d0a66b
+    # via -r requirements.prod.in
 mkdocstrings==0.16.2 \
     --hash=sha256:3d8a86c283dfa21818d5b9579aa4e750eea6b5c127b43ad8b00cebbfb7f9634e \
     --hash=sha256:671fba8a6c7a8455562aae0a3fa85979fbcef261daec5b2bac4dd1479acc14df
@@ -441,9 +448,9 @@ numpy==1.21.4 \
     #   pyarrow
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.51.2 \
-    --hash=sha256:df3b8b9f76e7e7e8ba064f5e9f580ac3d7cbe53a25d705af197d8a8673fac768 \
-    --hash=sha256:e9f89d1c372ac1ad551982c0d485c828dc0631ddbdc6e13dfd87daa4ff8f1afb
+opensafely-cohort-extractor==1.51.3 \
+    --hash=sha256:0dfd2fd43a21ef48c70c3b732bbbf09fcb422462796da0b5971cef4cc7d9ca68 \
+    --hash=sha256:5bdb8acd7fcdec145db4e21ad7f45e07efa96299fbb01d12996699c85726b405
     # via -r requirements.prod.in
 packaging==21.3 \
     --hash=sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb \
