@@ -21,6 +21,19 @@ If you have added new functions, you will need to add an explicit
 reference to them in
 [docs/study-def-variables.md](./docs/study-def-variables.md).
 
+
+### Updating Cohort Extractor v2 Definitions
+
+cohort-extractor-v2 is a documentation dependency which we can't install directly.
+CloudFlare Pages' latest Python version is 3.7, but cohort-extractor-v2 is using 3.9 features.
+Rather than limit couple cohort-extractor-v2 to the versions supported by CloudFlare Pages we've opted to have it generate a JSON file which we commit to this repo.
+
+Run `python -m cohortextractor2 extract-contract-docs` to generate the JSON file.
+Copy it into this repo, and commit it.
+
+If the JSON file has changed you might need to update [the plugin which uses it to render pages](https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts/).
+
+
 ### Updating via Dependabot
 
 You can update the opensafely-cohort-extractor package via Dependabot.
