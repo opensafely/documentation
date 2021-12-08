@@ -13,14 +13,13 @@ To get set up, you will need:
 
 
 ## New to git
-For Windows or macOS users new to git, the easiest way to do both is to install [**GitHub Desktop**](https://desktop.github.com/).
-This includes a command line version of git and a useful GUI for editing files and gitting.
+For Windows or macOS users new to git, [**GitHub Desktop**](https://desktop.github.com/) provides a useful GUI for editing files and gitting.
 To install GitHub Desktop, visit the [GitHub Desktop homepage](https://desktop.github.com/) and click install for your operating system.
 Once installed, it will ask you to create or sign-in to your GitHub account.
 Follow the instructions as appropriate.
 
 Once signed in, you'll be taken to a _Let's get started_ page.
-You'll need to install other OpenSAFELY requirements before diving in.
+You'll need to install other OpenSAFELY requirements before diving in, including the [command line version of git](https://git-scm.com/).
 
 ## Old to git
 If you already have git installed and prefer using your existing git workflow, then this is fine.
