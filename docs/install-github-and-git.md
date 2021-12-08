@@ -19,7 +19,7 @@ Once installed, it will ask you to create or sign-in to your GitHub account.
 Follow the instructions as appropriate.
 
 Once signed in, you'll be taken to a _Let's get started_ page.
-You'll need to install other OpenSAFELY requirements before diving in, including the [command line version of git](https://git-scm.com/).
+Note, you'll still need to install the [command line version of git](https://git-scm.com/) alongside Github Desktop, as well as the other OpenSAFELY requirements, before diving in.
 
 ## Old to git
 If you already have git installed and prefer using your existing git workflow, then this is fine.
