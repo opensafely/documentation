@@ -5,6 +5,31 @@ The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY fr
 If you have Level 4 access you can log in and review your aggregated results, and perform any necessary redactions before requesting files to be released. 
 You will find your files to review in `D:\Level4Files\workspaces\<workspacename>`.
 
+!!! note
+
+    **Mac users**
+
+    If intending to use a Mac for Level 4 access, please check your
+    hardware is suitable first.
+
+    Level 4 access requires a working Windows installation. Mac users
+    with older *Intel* hardware have had success in accessing Level 4
+    when running Windows in a virtual machine.
+
+    However, Mac users with newer Macs that have *Apple* processors —
+    for example, the M1 processor — can only run Windows in a virtual
+    machine via the Windows on ARM release: **this configuration is
+    currently incompatible with the client necessary for Level 4
+    access.**
+
+    Macs with Apple processors are still suitable for writing, testing
+    and submitting OpenSAFELY code to be run on the secure server.
+    **This issue only affects access to Level 4 server.**
+
+    See [this support
+    discussion](https://github.com/opensafely/documentation/discussions/251#discussioncomment-1767887)
+    for a description of the problem.
+
 Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form_15_11_21.docx) and email us at <datarelease@opensafely.org>**.
 
 !!! warning
