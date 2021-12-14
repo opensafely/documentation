@@ -94,3 +94,7 @@ fix: devenv
 # Run the dev project
 run: devenv
     mkdocs serve -a localhost:8910
+
+
+link-databuilder:
+    ln -sf ../databuilder/backend_docs.json .
