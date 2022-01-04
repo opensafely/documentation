@@ -122,7 +122,7 @@ study = StudyDefinition(
     case_index_date=patients.with_value_from_file(
         CONTROLS,
         returning="case_index_date",
-        type_="date",
+        returning_type="date",
     ),
     has_event_in_codelist=patients.with_these_clinical_events(
         codelist,
