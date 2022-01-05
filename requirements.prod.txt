@@ -400,9 +400,9 @@ mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
     --hash=sha256:bfd24dfdef7b41c312ede42648f9eb83476ea168ec163b613f9abd12bbfddba2
     # via mkdocs-material
-mkdocstrings==0.16.2 \
-    --hash=sha256:3d8a86c283dfa21818d5b9579aa4e750eea6b5c127b43ad8b00cebbfb7f9634e \
-    --hash=sha256:671fba8a6c7a8455562aae0a3fa85979fbcef261daec5b2bac4dd1479acc14df
+mkdocstrings==0.17.0 \
+    --hash=sha256:103fc1dd58cb23b7e0a6da5292435f01b29dc6fa0ba829132537f3f556f985de \
+    --hash=sha256:75b5cfa2039aeaf3a5f5cf0aa438507b0330ce76c8478da149d692daa7213a98
     # via -r requirements.prod.in
 numpy==1.21.4 \
     --hash=sha256:0b78ecfa070460104934e2caf51694ccd00f37d5e5dbe76f021b1b0b0d221823 \
@@ -596,9 +596,9 @@ python-dateutil==2.8.2 \
     #   ghp-import
     #   matplotlib
     #   pandas
-pytkdocs==0.12.0 \
-    --hash=sha256:12cb4180d5eafc7819dba91142948aa7b85ad0a3ad0e956db1cdc6d6c5d0ef56 \
-    --hash=sha256:746905493ff79482ebc90816b8c397c096727a1da8214a0ccff662a8412e91b3
+pytkdocs==0.15.0 \
+    --hash=sha256:4b45af89d6fa5fa50f979b0f9f54539286b84e245c81991bb838149aa2d9d9c9 \
+    --hash=sha256:d6b2aec34448ec89acb8c1c25062cc1e70c6b26395d46fc7ee753b7e5a4e736a
     # via mkdocstrings
 pytz==2021.3 \
     --hash=sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c \
