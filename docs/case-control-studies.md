@@ -19,6 +19,7 @@ actions:
   # Extract data for the potential controls
   # Match the cases to the potential controls
   # Extract data for the matched controls
+  # Analysis
 ```
 
 ## Extract data for the cases
