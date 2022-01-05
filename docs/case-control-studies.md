@@ -89,6 +89,16 @@ actions:
         matched_matches: output/matched_matches.csv
 ```
 
+!!! note "Alternatives to the OpenSAFELY matching library"
+
+    Rather than using the OpenSAFELY matching library, you may wish to match the cases to the potential controls by implementing your own algorithm in a scripted action.
+    If you do, please note that not all Python, R, or Stata packages are available to you;
+    to find out which packages are, see the
+    [python-docker](https://github.com/opensafely-core/python-docker),
+    [r-docker](https://github.com/opensafely-core/r-docker), or
+    [stata-docker](https://github.com/opensafely-core/stata-docker) repositories.
+    Alternatively, you can [request new packages](requests-packages.md).
+
 ## Extract data for the matched controls
 
 In this step, we will construct a third study definition to extract only the non-matching data for the matched controls.
