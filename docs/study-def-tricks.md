@@ -249,7 +249,7 @@ If the category levels are named with a predictable structure for example (`["st
 
 See [this issue](https://github.com/opensafely-core/cohort-extractor/issues/312) for further discussion about how this functionality might be improved in future.
 
-### Sharing common study definition variables
+## Sharing common study definition variables
 When using multiple study definitions, there's often a lot of common variables between them, with just the population and maybe a couple of other variables that differ.
 This means you have to separately specify the common variables in each definition, and it's easy to make an error, particularly when something needs changing.
 To avoid this, you can use the following approach to share common variables between study definitions:
