@@ -46,6 +46,12 @@ Use pyenv to install Python:
 pyenv install 3.9.1
 ```
 
+Then enable version 3.9.1 in pyenv:
+
+```bash
+pyenv global system 3.9.1
+```
+
 Then install the [OpenSAFELY CLI](../opensafely-cli) with pipx, using the Python installed in the previous step:
 
 ```bash
