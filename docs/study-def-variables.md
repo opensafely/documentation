@@ -177,7 +177,11 @@ These variables create new variable from existing variables. They do not extract
 ::: cohortextractor.patients.maximum_of
 &nbsp;
 
+::: cohortextractor.patients.with_value_from_file
+&nbsp;
 
+::: cohortextractor.patients.which_exist_in_file
+&nbsp;
 
 
 ---8<-- 'includes/glossary.md'
