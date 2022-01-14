@@ -57,6 +57,7 @@ nav:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
+      - Case-control studies: case-control-studies.md
   - Support:
       - How to get help: requests-intro.md
       - Requesting new libraries: requests-packages.md
