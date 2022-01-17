@@ -1,7 +1,7 @@
 # macOS Install Guide
 
 !!! note "This guide was created using macOS 11.1"
-    It is expected that this guide should work from 10.14 upwards but has only been tested with 11.1
+    It is expected that this guide should work from 10.15 upwards but has only been tested with 11.1
 
 Open Terminal.app by clicking the magnifying glass icon in the top right of your screen.
 Type `terminal` and hit enter.
@@ -23,14 +23,16 @@ brew install pipx pyenv
 Add pipx to your path with:
 
 ```bash
-echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.zshrc
 ```
 
 and reload your shell environment with:
 
 ```bash
-source ~/.bashrc
+source ~/.zshrc
 ```
+
+!!! note "If you are using a shell other than ZSH you will need to edit and source the appropriate config file"
 
 Next, install [Docker for Mac](https://docs.docker.com/docker-for-mac/install/), [GitHub Desktop](https://desktop.github.com/), and [Visual Studio Code](https://code.visualstudio.com/):
 
