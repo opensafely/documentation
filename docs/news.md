@@ -1,6 +1,7 @@
 
 This page lists significant improvements to the platform since June 2021, with the most recent at the top. We suggest you check it regularly.
 
+* 2022-01-18: The OpenSAFELY command-line tool can now start a JupyterLab server. This allows you to easily develop code within the [OpenSAFELY Python environment](opensafely-cli.md#running-jupyterlab).
 * 2022-01-14: Added support for [case-control studies](case-control-studies.md)
 * 2021-09-06: Show how to extract cohortextractor output in compressed gzip (`csv.gz`) format - recommended to be used in all studies to minimise file storage size. (However, CSVs can still be used where Stata is used for analysis). This is now shown in all parts of documentation with cohortextractor steps e.g. [this page](/actions-cohortextractor/#generate_cohort)
 * 2021-07-21: Added [support for users to provide their own dummy data](/study-def-expectations#providing-your-own-dummy-data)
