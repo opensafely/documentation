@@ -135,11 +135,13 @@ You can run JupyterLab to use Jupyter notebooks via the `opensafely`
 tool. This ensures that the Python code you write will work in the
 OpenSAFELY environment.
 
-To use Jupyter notebooks via `opensafely`:
+From the directory containing code that you are working on, run:
 
-1. Run `opensafely jupyter` to start a JupyterLab server on your
-   computer.
-2. You will see long URLs starting `http://localhost…` and
-   `http://127.0.0.1…`
-3. Copy and paste either of those URLs into a web browser, and visit
-   that URL to access the notebook.
+```bash
+opensafely jupyter
+```
+
+JupyterLab should then open in a web browser automatically. Otherwise,
+copy one of the long URLs shown by the JupyterLab logs — starting
+`http://localhost…` and `http://127.0.0.1…` — and use that URL in a web
+browser to access JupyterLab.
