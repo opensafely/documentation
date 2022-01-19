@@ -37,29 +37,45 @@ Github username to this file:
 
 <https://github.com/opensafely-core/backend-server/blob/main/emis-backend/reviewers>
 
-This will need to be approved and merged, and then setup by the OpenSAFELY tech team.
+This will need to be approved and merged, and then setup by the OpenSAFELY tech
+team by updating the backend to create your accounts.
+
+Note to tech team: you need to update *both* `emis-backend` and `emis-access`.
 
 ### Setting up your local SSH configuration.
 
 To secure access to EMIS, we use a special connection configuration for SSH.
-You will need to customise your Github username, and also the path to your SSH
-key. This is typically `~/.ssh/id_ed25519`, but could be different if you named
-it differently.
+You will need to replace `YOUR_GITHUB_USERNAME` with your actual Github
+username, and also check the path to your SSH key. If you've followed the guide
+above, this will be `~/.ssh/id_ed25519`, but could be different if you chose to
+name it differently.
 
-Add the following to your ssh config file, which is located at `~/.ssh/config`.
-You may need to create it if it doesn't exist.
+Add the following to your ssh config file, which is located at `~/.ssh/config`,
+in your home directory.  You may need to create this file and directory if it
+doesn't exist.
 
 
 ```
 Host *.opensafely.org
+    # log in with your github username
     User YOUR_GITHUB_USERNAME
+    # Use this specific ssh key
     IdentityFile ~/.ssh/id_ed25519
+    # Use only that key
     IdentitiesOnly yes
 
+
+# short alias
 Host emis-backend
+    # As it is an opensafely.org host, it will use the config above for authentication.
     HostName emis.opensafely.org
-    User YOUR_GITHUB_USER
+    # log in with your github username. 
+    User YOUR_GITHUB_USERNAME
+    # We tunnel the connection via a special purpose host 
     ProxyJump emis-access.opensafely.org
+    # Forward this port over the SSH connection. This allows you to view level
+    # 4 data on the EMIS backend via https://jobs.opensafely.org when you have an
+    # active SSH session.
     LocalForward 8001 localhost:8001
 
 ```
@@ -69,7 +85,6 @@ Host emis-backend
 The first time you connect, you will need to set up some passwords on the
 systems we'll be using.  You shouldn't need these passwords again, but our
 security setup requires them to exist.
-
 
 First ssh into emis-access.opensafely.org (you may first need to enter your ssh password you previously set up).
 
