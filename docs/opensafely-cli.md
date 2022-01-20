@@ -142,6 +142,6 @@ opensafely jupyter
 ```
 
 JupyterLab should then open in a web browser automatically. Otherwise,
-copy one of the long URLs shown by the JupyterLab logs — starting
-`http://localhost…` and `http://127.0.0.1…` — and use that URL in a web
+copy the long URL shown by the JupyterLab logs — starting
+`http://localhost…` — and use that URL in a web
 browser to access JupyterLab.
