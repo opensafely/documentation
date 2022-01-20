@@ -773,6 +773,8 @@ against real data.  [Read more about permissions here](permissions.md).
 In the meantime, take a look at the rest of our documentation for more
 detail on the subjects covered in this tutorial. For example:
 
+* There is a more complete [guide to the OpenSAFELY command-line
+  tool](opensafely-cli.md).
 * The [full study definition reference](study-def.md) describes all the
   different ways to define new variables in your study definition.
 * You'll find more information about the contents of `project.yaml` in the
