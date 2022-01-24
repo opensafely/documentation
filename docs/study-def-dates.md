@@ -53,7 +53,11 @@ The available options (hopefully self-explanatory) are:
 "last_day_of_month(index_date)"
 "first_day_of_year(index_date)"
 "last_day_of_year(index_date)"
+"first_day_of_nhs_financial_year(index_date)"
+"last_day_of_nhs_financial_year(index_date)"
 ```
+
+Note that NHS financial (reporting) year runs from 1st April to 31st March.
 
 Intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
 The available units are `year(s)`, `month(s)` and `day(s)`.
