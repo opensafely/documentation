@@ -45,19 +45,22 @@ Use pyenv to install Python:
 !!! note "This command might take a while to run depending on the speed of your computer."
 
 ```bash
-pyenv install 3.9.1
+pyenv install 3.10:latest
 ```
 
-Then enable version 3.9.1 in pyenv:
+Look for the line `Installing Python-3.10.n...` (where `n` is a number).
+This is the full version it has installed for you, eg `3.10.1`.
+
+Then enable this version (eg `3.10.1`) in pyenv:
 
 ```bash
-pyenv global system 3.9.1
+pyenv global system 3.10.1
 ```
 
 Then install the [OpenSAFELY CLI](../opensafely-cli) with pipx, using the Python installed in the previous step:
 
 ```bash
-pipx install opensafely --python ~/.pyenv/shims/python3.9
+pipx install opensafely --python ~/.pyenv/shims/python3.10
 ```
 
 Test the installation of OpenSAFELY CLI.
