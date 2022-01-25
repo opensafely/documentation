@@ -1,5 +1,8 @@
 # virtual environment
-/venv
+.direnv
+.venv
+databuilder/.venv
+venv
 
 # IDE related files
 .idea/
