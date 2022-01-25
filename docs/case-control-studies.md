@@ -102,7 +102,7 @@ actions:
     [python-docker](https://github.com/opensafely-core/python-docker),
     [r-docker](https://github.com/opensafely-core/r-docker), or
     [stata-docker](https://github.com/opensafely-core/stata-docker) repositories.
-    Alternatively, you can [request new packages](requests-packages.md).
+    Alternatively, you can [request new packages](requesting-libraries.md).
 
 ## Extract data for the matched controls
 

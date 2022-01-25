@@ -63,6 +63,6 @@ instructions if you wish to install on your own computer.
 When you are more comfortable with how OpenSAFELY works, we recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
 
 !!! note "These documents are a work-in-progress"
-    Please see the [Updating the Documentation page](requests-documentation.md) if you want to make improvements.
+    Please see the [Updating the Documentation page](updating-the-docs.md) if you want to make improvements.
 
 ---8<-- 'includes/glossary.md'
