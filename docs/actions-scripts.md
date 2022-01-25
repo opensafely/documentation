@@ -22,7 +22,7 @@ This helps with:
 
 OpenSAFELY currently supports Stata, Python, and R for statistical analysis.
 
-For security reasons, available libraries are restricted to those provided by the framework, though you can [request additions](requests-packages.md).
+For security reasons, available libraries are restricted to those provided by the framework, though you can [request additions](requesting-libraries.md).
 
 The framework executes your scripts using Docker images which have been preloaded with a fixed set of libraries.
 These Docker images have yet to be optimised; if you have skills in creating Dockerfiles and would like to help, get in touch!

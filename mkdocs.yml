@@ -59,10 +59,10 @@ nav:
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
   - Support:
-      - How to get help: requests-intro.md
-      - Requesting new libraries: requests-packages.md
-      - Requesting study definition variables: requests-variables.md
-      - Updating the documentation: requests-documentation.md
+      - How to get help: how-to-get-help.md
+      - Requesting new libraries: requesting-libraries.md
+      - Requesting study definition variables: requesting-variables.md
+      - Updating the documentation: updating-the-docs.md
   - Platform News: news.md
 
 theme:

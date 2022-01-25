@@ -291,7 +291,7 @@ account, for developing your own study:
        WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
        be very challenging. Please let us know if you can help us [improve
-       the documentation](requests-documentation.md) here.
+       the documentation](updating-the-docs.md) here.
     1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
        so, an animation runs in the notification area:<br>
        ![The Docker icon in the Windows notification area.](images/win-docker-starting.png)
