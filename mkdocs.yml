@@ -108,6 +108,8 @@ plugins:
             show_if_no_docstring: true
             heading_level: 4
       custom_templates: templates
+      watch:
+        - examples
 
 markdown_extensions:
   - pymdownx.snippets:

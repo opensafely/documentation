@@ -1,3 +1,20 @@
 [project]
 name = "documentation"
 requires-python = ">=3.7<3.8"
+
+[tool.black]
+exclude = '''
+(
+  /(
+      \.git         # exclude a few common directories
+    | \.direnv
+    | \.venv
+    | venv
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+lines_after_imports = 2
+skip_glob = [".direnv", "venv", ".venv"]
