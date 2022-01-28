@@ -2,9 +2,9 @@
 This page lists significant improvements to the platform since June 2021, with the most recent at the top. We suggest you check it regularly.
 
 * 2022-01-28: Added ability to query a patient's _place_of_death_ (TPP backend only) [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.with_these_codes_on_death_certificate), [#728](https://github.com/opensafely-core/cohort-extractor/pull/728)
-* 2022-01-27: Extended `mean_recorded_value` to support querying for mean recorded value across a full date range, as well as the most recent day of measurement. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.mean_recorded_value).
-Added `min_recorded_value` to support querying for minimum recorded value. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.min_recorded_value) 
-Added `max_recorded_value` to support querying for maximum recorded value. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.max_recorded_value) 
+* 2022-01-27: Extended `mean_recorded_value` to support querying for mean recorded value across a full date range, as well as the most recent day of measurement. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.mean_recorded_value).  
+Added `min_recorded_value` to support querying for minimum recorded value. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.min_recorded_value)  
+Added `max_recorded_value` to support querying for maximum recorded value. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.max_recorded_value)  
 [#726](https://github.com/opensafely-core/cohort-extractor/pull/726)
  * 2022-01-24: Added support for querying by first and last day of the NHS financial (recording) year [docs](https://docs.opensafely.org/study-def-dates/), [#723](https://github.com/opensafely-core/cohort-extractor/pull/723)
 * 2022-01-18: The OpenSAFELY command-line tool can now start a JupyterLab server. This allows you to easily develop code within the [OpenSAFELY Python environment](opensafely-cli.md#running-jupyterlab).
