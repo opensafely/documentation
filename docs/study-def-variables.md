@@ -46,6 +46,12 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.mean_recorded_value
 &nbsp;
 
+::: cohortextractor.patients.min_recorded_value
+&nbsp;
+
+::: cohortextractor.patients.max_recorded_value
+&nbsp;
+
 ::: cohortextractor.patients.with_these_medications
 &nbsp;
 
