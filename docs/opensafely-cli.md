@@ -145,3 +145,6 @@ JupyterLab should then open in a web browser automatically. Otherwise,
 copy the long URL shown by the JupyterLab logs — starting
 `http://localhost…` — and use that URL in a web
 browser to access JupyterLab.
+
+To exit, press Ctrl-C in the command line - this also shuts down the container. 
+Or alternatively go to File -> shutdown in the JupyterLab tab.
