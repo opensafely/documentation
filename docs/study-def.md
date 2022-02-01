@@ -116,7 +116,10 @@ For example, a date set to `"9999-99-99"` or a blood pressure reading set to `-1
 These will indicate missing / unknown / unrecorded / not applicable values in the source dataset.
 The meaning of these values will depend on the data source, and this should be documented in the [dataset documentation](dataset-intro.md).
 
+In some instances, 0s will be returned for missing values when there are also numeric values of 0. Distinguishing true 0s from missing values can't be done 100% reliably within TPPs data model as, as stated above, the numeric value isn't nullable. Possible workarounds for this include:
 
+1. For values which are normally expected to be associated with comparators (i.e. lab data values), fetch the comparator into a separate column. If that comparator column is empty, you can assume that there is no associated value.
+2. For values not associated with comparators, a similar result could be achieved using the `date_of()` function to pull the date (even just the year) of the value into a separate column. If there is no associated year, then you know that it was not a true zero.
 
 ## Defining the study population
 
@@ -141,7 +144,7 @@ study = StudyDefinition(
 
 The first argument to `patients.satisfying()` is a string defining the population of interest using elementary logic syntax.
 Acceptable operators in this string are currently `=`, `!=`, `<`, `<=`, `>=`, `>`, `AND`, `OR`, `NOT`, `+`, `-`, `*`, `/`. 
-All subsequent arguments are variable definitions. These are used just as you would use them in the higher-level `StudyDefinition()` call, except that there's no need to define `returning_expectations` arguments since these variables are extracted explicitly.
+All subsequent arguments are variable definitions. These are used just as you would use them in the higher-level `StudyDefinition()` call, except that there's no need to define `return_expectations` arguments since these variables are extracted explicitly.
 
 If a variable has been defined elsewhere in `StudyDefinition()`, then that variable can be used in the `patients.satisfying()` function without needing to be defined again.
 For example,
@@ -155,7 +158,7 @@ study = StudyDefinition(
         ),
     ),
     sex=patients.sex(
-        returning_expectations={
+        return_expectations={
             "category": {"ratios": {"M": 0.49, "F": 0.51}},
             "incidence": 1,
         }

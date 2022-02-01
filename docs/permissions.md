@@ -8,6 +8,7 @@ Additionally, the OpenSAFELY framework requires a user to be a member of the `op
 
 While your repository is private, you may need to add new collaborators who are not named in your original application. Any new collaborators have the same information governance obligations as the original study authors, and must therefore sign the same access agreements; please send any such requests to [team@opensafely.org](mailto:team@opensafely.org).
 
+When you add a new repository in the opensafely organisation, it may take up to 15 mintutes for it to be available to select at https://jobs.opensafely.org
 
 ## Project Member Management
 
@@ -29,6 +30,12 @@ Additionally, users with the **ProjectCoordinator** role can:
 
 ## Releasing Outputs
 
+!!! note
+    Releasing of outputs to the job server is currently being rolled out.
+    See [team manual](https://bennettinstitute-team-manual.pages.dev/tech-team/playbooks/job-server-releasing-outputs/) for instructions on setting up a user.
+    The new release process is described separately in [Google Docs](https://docs.google.com/document/d/1PSzMoCFov2olJpxrFGT1DccWUqGDA67mUvPIyIhOcew/edit#heading=h.aokkzsfuxo4n).
+
+
 For releasing outputs we have some additional roles:
 
 **ProjectCollaborator:**
@@ -44,3 +51,5 @@ For releasing outputs we have some additional roles:
 **OutputPublisher:**
 
 * Confirm publication of outputs
+
+---8<-- 'includes/glossary.md'

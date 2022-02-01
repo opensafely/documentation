@@ -125,3 +125,26 @@ To pull the most recent Docker images to your machine, run:
 ```bash
 opensafely pull
 ```
+
+### Running JupyterLab
+
+[Jupyter notebooks](https://jupyter.org/) are useful interactive
+environments for developing code.
+
+You can run JupyterLab to use Jupyter notebooks via the `opensafely`
+tool. This ensures that the Python code you write will work in the
+OpenSAFELY environment.
+
+From the directory containing code that you are working on, run:
+
+```bash
+opensafely jupyter
+```
+
+JupyterLab should then open in a web browser automatically. Otherwise,
+copy the long URL shown by the JupyterLab logs — starting
+`http://localhost…` — and use that URL in a web
+browser to access JupyterLab.
+
+To exit, press Ctrl-C in the command line - this also shuts down the container. 
+Or alternatively go to File -> shutdown in the JupyterLab tab.

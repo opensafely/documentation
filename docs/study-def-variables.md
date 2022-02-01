@@ -19,9 +19,6 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.date_deregistered_from_all_supported_practices
 &nbsp;
 
-::: cohortextractor.patients.with_complete_history_between
-&nbsp;
-
 ::: cohortextractor.patients.with_complete_gp_consultation_history_between
 &nbsp;
 
@@ -49,15 +46,29 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.mean_recorded_value
 &nbsp;
 
+::: cohortextractor.patients.min_recorded_value
+&nbsp;
+
+::: cohortextractor.patients.max_recorded_value
+&nbsp;
+
 ::: cohortextractor.patients.with_these_medications
 &nbsp;
 
 ::: cohortextractor.patients.with_these_clinical_events
 &nbsp;
 
-::: cohortextractor.patients.with_death_recorded_in_primary_care
+::: cohortextractor.patients.comparator_from
 &nbsp;
 
+::: cohortextractor.patients.reference_range_lower_bound_from
+&nbsp;
+
+::: cohortextractor.patients.reference_range_upper_bound_from
+&nbsp;
+
+::: cohortextractor.patients.with_death_recorded_in_primary_care
+&nbsp;
 
 ::: cohortextractor.patients.care_home_status_as_of
 &nbsp;
@@ -72,6 +83,13 @@ These variables are derived from data held in the patients' primary care records
 &nbsp;
 
 ## ICNARC
+!!! warning
+    ICNARC data can only be used in collaboration with ICNARC researchers who must be involved in working on the study and writing it up.
+    Please contact your co-pilot, or <team@opensafely.org> if you have any questions.
+
+!!! warning
+    Data from ICNARC were last imported on 21-Jan-2021, with no further imports currently planned. Alternative data on ICU admission can be gleaned from SUS (i.e. returning=days_in_critical_care).
+
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
 For more information, see the [ICNARC data section](dataset-icnarc.md).
 &nbsp;
@@ -132,6 +150,9 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 ::: cohortextractor.patients.with_ethnicity_from_sus
 &nbsp;
 
+::: cohortextractor.patients.outpatient_appointment_date
+&nbsp;
+
 
 ## NHS England COVID-19 data store
 (Documentation on the source of this data will be forthcoming later.)
@@ -162,7 +183,11 @@ These variables create new variable from existing variables. They do not extract
 ::: cohortextractor.patients.maximum_of
 &nbsp;
 
+::: cohortextractor.patients.with_value_from_file
+&nbsp;
 
+::: cohortextractor.patients.which_exist_in_file
+&nbsp;
 
 
 ---8<-- 'includes/glossary.md'

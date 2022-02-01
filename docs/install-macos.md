@@ -1,7 +1,7 @@
 # macOS Install Guide
 
 !!! note "This guide was created using macOS 11.1"
-    It is expected that this guide should work from 10.14 upwards but has only been tested with 11.1
+    It is expected that this guide should work from 10.15 upwards but has only been tested with 11.1
 
 Open Terminal.app by clicking the magnifying glass icon in the top right of your screen.
 Type `terminal` and hit enter.
@@ -20,6 +20,20 @@ Once homebrew is installed use it to install [pipx](https://pipxproject.github.i
 brew install pipx pyenv
 ```
 
+Add pipx to your path with:
+
+```bash
+echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.zshrc
+```
+
+and reload your shell environment with:
+
+```bash
+source ~/.zshrc
+```
+
+!!! note "If you are using a shell other than ZSH you will need to edit and source the appropriate config file"
+
 Next, install [Docker for Mac](https://docs.docker.com/docker-for-mac/install/), [GitHub Desktop](https://desktop.github.com/), and [Visual Studio Code](https://code.visualstudio.com/):
 
 ```bash
@@ -31,13 +45,22 @@ Use pyenv to install Python:
 !!! note "This command might take a while to run depending on the speed of your computer."
 
 ```bash
-pyenv install 3.9.1
+pyenv install 3.10:latest
+```
+
+Look for the line `Installing Python-3.10.n...` (where `n` is a number).
+This is the full version it has installed for you, eg `3.10.1`.
+
+Then enable this version (eg `3.10.1`) in pyenv:
+
+```bash
+pyenv global system 3.10.1
 ```
 
 Then install the [OpenSAFELY CLI](../opensafely-cli) with pipx, using the Python installed in the previous step:
 
 ```bash
-pipx install opensafely --python ~/.pyenv/shims/python3.9
+pipx install opensafely --python ~/.pyenv/shims/python3.10
 ```
 
 Test the installation of OpenSAFELY CLI.

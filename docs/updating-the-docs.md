@@ -21,7 +21,7 @@ This ensures that a new version of `cohortextractor` is released and can be impo
 Then add a reference to your new variable in the [variables page](study-def-variables.md).
 
 Additionally, the
-[`requirements.txt`](https://github.com/opensafely/documentation/blob/main/requirements.txt)
+[`requirements.prod.txt`](https://github.com/opensafely/documentation/blob/main/requirements.prod.txt)
 file in the [documentation
 repo](https://github.com/opensafely/documentation) itself has to be
 updated to match the new incremented version of `cohortextractor`. See
@@ -30,3 +30,21 @@ README](https://github.com/opensafely/documentation#building-locally-and-testing
 that details the use of `pip-compile` for this.
 
 ---8<-- 'includes/glossary.md'
+
+## Making changes to the data definition examples
+You will need to check out the [documentation repo](https://github.com/opensafely/documentation) so you can run the example generating toolchain.
+
+Edit the python modules in the `databuilder/snippets` directory.
+
+Each example is bounded by snex markers which define the filename they will produce.
+For example, a block starting with `:snippet data-definition` will create the file `examples/src-data-definition.md`.
+
+!!! note "All example filenames are prefixed with `src-`"
+
+Once you've edited an example (or created a new one) you can run `just databuilder/extract` to update the markdown files in `examples`.
+
+Examples are included in the markdown files using the [pymdown snippet notation](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation).
+
+Make sure you commit both the changes to the `examples` and `databuilder/snippets` directories.
+
+If you are updating multiple examples it might be easier to the extraction step happen each time you change the python modules, you can do this with `just databuilder/watch-examples`.

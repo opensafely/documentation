@@ -29,13 +29,11 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
    installed for you*.
 
      Services such as [Gitpod](https://gitpod.io) provide online
-     computing environments; Gitpod currently has a free plan with a
-     generous monthly usage limit for working with public code. We've
-     adapted our demonstration research study and this guide such that
-     you can follow along with Gitpod, should you choose to do so.
-
-     For this option, the only requirement is a modern web browser (e.g.
-     Chrome, Edge, Firefox, Safari).
+     computing environments. Gitpod has a free plan with a generous
+     monthly usage limit — 50 hours — for working with code in public or
+     private repositories. We've adapted our demonstration research
+     study and this guide such that you can follow along with Gitpod,
+     should you choose to do so.
 
      You might prefer an online environment if one or more of the
      following apply:
@@ -48,6 +46,20 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
        which OpenSAFELY uses;
      * you want to try OpenSAFELY via a device other than a desktop or
        laptop computer, e.g. a tablet.
+
+     To use Gitpod, the only requirements are:
+
+     * you have a current version of a modern web browser (e.g. Chrome,
+       Edge, Firefox, Safari);
+     * your network connection does not block access to the Gitpod
+       development environment.
+
+     If your internet connection is not managed by you directly —
+     perhaps you are in the office or connecting via your employer's
+     virtual private network (VPN) — it may be that [corporate firewalls
+     prevent access to
+     Gitpod](https://github.com/opensafely/documentation/discussions/311);
+     please contact the IT staff who manage your internet connection for help.
 
 2. *Install the required software to your own computer*.
 
@@ -167,6 +179,7 @@ account, for developing your own study:
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
+1. Once created, select the "Settings" tab and scroll down to the option to the option to "Automatically delete head branches". This should be turned ON so that when you merge a branch it is automatically deleted, keeping your branches neat and tidy. Deleted branches can be restored if needed later. 
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
@@ -278,7 +291,7 @@ account, for developing your own study:
        WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
        be very challenging. Please let us know if you can help us [improve
-       the documentation](requests-documentation.md) here.
+       the documentation](updating-the-docs.md) here.
     1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
        so, an animation runs in the notification area:<br>
        ![The Docker icon in the Windows notification area.](images/win-docker-starting.png)
@@ -557,7 +570,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "Python"
 
-    ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
+    ```yaml linenums="1" hl_lines="15 16 17 18 19 20"
     version: "3.0"
 
     expectations:
@@ -569,6 +582,8 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
+	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
+	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
         run: python:latest python analysis/report.py
@@ -580,7 +595,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "R"
 
-    ```yaml linenums="1" hl_lines="13 14 15 16 17 18"
+    ```yaml linenums="1" hl_lines="15 16 17 18 19 20"
     version: "3.0"
 
     expectations:
@@ -592,6 +607,8 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
+	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
+	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
         run: r:latest analysis/report.R
@@ -601,13 +618,13 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             cohort: output/descriptive.png
     ```
 
-Line 13 tells the system we want to create a new action called `describe`. Line
-14 says how to run the script (using the `python` or `R` runner). Line 15 tells the
+Line 15 tells the system we want to create a new action called `describe`. Line
+16 says how to run the script (using the `python` or `R` runner). Line 17 tells the
 system that this action depends on the outputs of the
-`generate_study_population` being present. Lines 16-18 describe the files that
-the action creates. Line 17 says that the items indented below it are
+`generate_study_population` being present. Lines 18-20 describe the files that
+the action creates. Line 19 says that the items indented below it are
 *moderately* sensitive, that is they may be released to the public after a
-careful review (and possible redaction). Line 18 says that there's one output
+careful review (and possible redaction). Line 20 says that there's one output
 file, which will be found at `output/descriptive.png`.
 5. At the command line, type `opensafely run run_all
    --force-run-dependencies` and press ++enter++.  This should end by
@@ -756,6 +773,8 @@ against real data.  [Read more about permissions here](permissions.md).
 In the meantime, take a look at the rest of our documentation for more
 detail on the subjects covered in this tutorial. For example:
 
+* There is a more complete [guide to the OpenSAFELY command-line
+  tool](opensafely-cli.md).
 * The [full study definition reference](study-def.md) describes all the
   different ways to define new variables in your study definition.
     * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex) 

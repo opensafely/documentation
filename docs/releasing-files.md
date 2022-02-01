@@ -3,8 +3,9 @@ All outputs from OpenSAFELY pipelines are subject to [tiered levels of scrutiny]
 The final tier is review of so-called "Level 4" outputs, where the OpenSAFELY framework stores outputs labelled as `moderately_sensitive` in the `project.yaml` file.
 
 If you have Level 4 access you can log in and review your aggregated results, and perform any necessary redactions before requesting files to be released. 
+You will find your files to review in `D:\Level4Files\workspaces\<workspacename>`.
 
-Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form.docx) and email us at <datarelease@opensafely.org>**.
+Level 4 outputs **can only be released by specific members of the OpenSAFELY team**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary (for which you have also applied any necessary disclosure controls, such as small number suppression) **please [complete this form](documents/OpenSAFELY_Output_Review_Form_15_11_21.docx) and email us at <datarelease@opensafely.org>**.
 
 !!! warning
     ** Data may only be shared with individuals without Level 4 access after they have been released outside of the secure area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.**
@@ -14,6 +15,14 @@ Level 4 outputs **can only be released by specific members of the OpenSAFELY tea
 
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
+    
+TIP: Our resources for checking outputs are not unlimited, therefore it is advised to ensure you have all of your outputs ready at the same time for your project (or its current phase) so they can be reviewed together. Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppresion which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5). 
+
+Once released, your results will be available in a new branch (`release-candidates`). This branch should be merged into `main`. A new branch of the same name will be created with any further releases so there is no need to keep the branch open.
+
+## How output checkers release files
+
+Outputs are reviewed and approved on the secure servers, using a command-line tool. This can only be done by users with the [`OutputChecker` role](permissions.md). Approved users can request to access [the work-in-progress documentation here](https://docs.google.com/document/d/16E-TBeK19njc5-SfvWG60AihmpieIscCm_kFG7JeeP8/edit).
 
 ## Disclosivity checks and redaction
 

@@ -36,10 +36,12 @@ expectations:
 actions:
 
   generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format=csv.gz
+    run: cohortextractor:latest generate_cohort --study-definition study_definition
     outputs:
       highly_sensitive:
-        cohort: output/input.csv.gz
+        cohort: output/input.csv
+        ### Note: When using analysis tools other than Stata it is recommended to add option --output-format='csv.gz' to the 'run' command
+	### and add .gz to the output file path; this produces a compressed file to minimise file size. (Stata cannot load these files without first unzipping).
 
   run_model:
     run: stata-mp:latest analysis/model.do
@@ -54,9 +56,9 @@ This example declares the pipeline `version`, the `population_size` for the dumm
 
 You only need to change `version` if you want to take advantage of features of newer versions of the pipeline framework.
 
-The `generate_study_population` action will create the highly sensitive `input.csv.gz` dataset.
+The `generate_study_population` action will create the highly sensitive `input.csv` dataset.
 It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment.
-The `run_model` action will run a Stata script called `model.do` based on the the `input.csv.gz` created by the previous action.
+The `run_model` action will run a Stata script called `model.do` based on the the `input.csv` created by the previous action.
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
@@ -70,6 +72,14 @@ In general, actions are composed as follows:
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
     * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
     * `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](security-levels.md)) and potentially for publication back to GitHub.
+    * Outputs should be separated onto different lines, each with a unique 'key', but related outputs can be combined using a wildcard (`*`). E.g.:
+        ```yaml
+           outputs:
+              moderately_sensitive:
+                table: output/summary_results.txt
+                survival_figure: output/figures/survival-plot.png
+                time_series_figures: output/figures/time_series_*.png
+        ```
 * Each action can include a `needs` key which specifies a list of actions (contained within square brackets and separated by commas) that are required for it to successfully run. When an action runs, the `outputs` of all its `needs` actions are copied to its working directory. `needs` actions can be defined anywhere in the `project.yaml`, but it's more readable if they are defined above.
 
 When writing and running your pipeline, note that:
@@ -84,6 +94,7 @@ When writing and running your pipeline, note that:
 
 * If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs.
 
+* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to different versions of cohortextractor and will also avoid problems caused by index integer positions changing as columns are added/removed. 
 
 ## Running your code locally
 
@@ -106,7 +117,7 @@ To run the first action in the example above, using dummy data, you can use:
 opensafely run generate_study_population
 ```
 
-This will generate the `input.csv.gz` file as explained in the [cohortextractor](actions-cohortextractor.md) section.
+This will generate the `input.csv` file as explained in the [cohortextractor](actions-cohortextractor.md) section.
 
 To run the second action you can use:
 
@@ -117,7 +128,7 @@ opensafely run run_model
 It will create the two files as specified in the `analysis/model.do` script.
 
 To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short.
-This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv.gz` already exists.
+This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 

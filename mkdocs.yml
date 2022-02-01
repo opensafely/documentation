@@ -19,7 +19,7 @@ nav:
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
-      - GitHub repository layout: repositories.md
+      - GitHub repositories: repositories.md
       - Detailed installation guides:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
@@ -44,10 +44,10 @@ nav:
           - SNOMED codelists: codelist-snomed.md
       - Actions:
           - Overview: actions-intro.md
+          - The project pipeline: actions-pipelines.md
+          - The `cohortextractor` action: actions-cohortextractor.md
           - Scripted actions: actions-scripts.md
           - Reusable actions: actions-reusable.md
-          - The `cohortextractor` action: actions-cohortextractor.md
-          - The project pipeline: actions-pipelines.md
       - Job server: job-server.md
       - Release files from the server: releasing-files.md
       - Permissions: permissions.md
@@ -57,11 +57,12 @@ nav:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
-  - Requesting changes:
-      - Overview: requests-intro.md
-      - Requesting new libraries: requests-packages.md
-      - Requesting study definition variables: requests-variables.md
-      - Updating the documentation: requests-documentation.md
+      - Case-control studies: case-control-studies.md
+  - Support:
+      - How to get help: how-to-get-help.md
+      - Requesting new libraries: requesting-libraries.md
+      - Requesting study definition variables: requesting-variables.md
+      - Updating the documentation: updating-the-docs.md
   - Platform News: news.md
 
 theme:
@@ -107,6 +108,8 @@ plugins:
             show_if_no_docstring: true
             heading_level: 4
       custom_templates: templates
+      watch:
+        - examples
 
 markdown_extensions:
   - pymdownx.snippets:
@@ -115,7 +118,8 @@ markdown_extensions:
       permalink: "🔗"
   - pymdownx.highlight
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.keys
   - admonition
   - footnotes

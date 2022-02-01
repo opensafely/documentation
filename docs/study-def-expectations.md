@@ -63,6 +63,7 @@ The following options are currently available for dummy data (note numeric value
 **integers**
 
 * `{"int" : {"distribution": "normal", "mean": 25, "stddev": 5}, "incidence" : 0.5}`
+* `{"int" : {"distribution": "poisson", "mean": 5}, "incidence" : 0.6}`
 * `{"int" : {"distribution": "population_ages"}, "incidence" : 1}`
 
 **numeric**
@@ -83,23 +84,26 @@ The following options are currently available for dummy data (note numeric value
 *	`{"date": {"earliest": "1900-01-01", "latest": "today"}, "rate" : "uniform"}`
 
 
-### Specifc parameters/variable notes
+### Notes on parameters/variables
 
-`"incidence"` has a slightly different meaning dependent on the variable type it is applied to:
-* binary: describes actual incidence (0.5 means values are expected to be positive 50% of the time)
-* int/float/categorical: indicates non-missingness (0.5 means values are expected to be present - non-missing - 50% of the time)
+**Incidence**
 
-`"rate"` 
-* used for the distribution of date values, with either:
-  * `"exponential_increase"`
-  * `"uniform"`
-    
-* or for non-date values:
-  * `"universal"`: indicates every patient is expected to have a value (i.e. an alias for `incidence=1`)
-    
-`"distribution"`(numeric variables) currently has two possible options:
-* `normal`
-* `population_ages`: samples from the distribution of ages in the UK taken from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/tablea21principalprojectionukpopulationinagegroups).
+* For binary variables, `{"incidence": 0.5}` means we expect values to be `1` in 50% of cases and `0` in 50% of cases.
+* For integer, float, and categorical variables, `{"incidence": 0.5}` means we expect values to occur in 50% of cases and not to occur (i.e. to be missing) in 50% of cases.
+
+**Rate**
+
+* For date variables, rate describes the distribution and can be either `"exponential_increase"` or `"uniform"`.
+* For binary variables rate can be `"universal"`, which means we expect values to be `1` in all cases.
+  This is an alias for `{"incidence": 1.0}`.
+* For integer, float, and categorical variables rate can be `"universal"`, which means we expect values to occur in all cases.
+  This is an alias for `{"incidence": 1.0}`.
+
+**Distribution**
+
+* `"normal"` means we expect a normal distribution.
+* `"poisson"` means we expect a poisson distribution - better for variables that are counts.
+* `"population_ages"`: means we expect the distribution to match that of the distribution of ages in the UK from [the Office for National Statistics](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/).
 
 ## Providing your own dummy data
 

@@ -1,0 +1,6 @@
+# Main prod requirements
+
+# To generate requirements file, run:
+# pip-compile --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
+https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.18.3.zip
+snex

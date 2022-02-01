@@ -83,8 +83,12 @@ measures = [
 ]
 ```
 
-This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure.
+This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure. 
 
+#### The `index_date`
+Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time.
+
+#### The `Measure()` function
 * `id` is just a string used to identify the measure output file.
 * `numerator` and `denominator` are the columns in the dataset that define the measure. They must be numeric or boolean (encoded as 0 or 1).
 * `group_by` column can be of any type. To calculate the measure across the entire population, you can set `group_by="population"`. If not specified, `group_by` will default to `None` and the measure will be calculated at the individual patient level.
@@ -111,8 +115,13 @@ measures = [
 
 ## Extract the data
 
-To run multiple study definitions over a series of dates, use the `--index-date-range` option of the `generate_cohort` command.
-Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time.
+To run multiple study definitions over a series of dates, use the `--index-date-range` option of the `generate_cohort` command in `cohortextractor`.
+Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time. 
+
+!!! note 
+   Although the dates defined by the `--index-date-range` will replace the `index_date` that is defined in the study definition itself,  `index_date` must still be defined.
+
+Running over multiple index dates can be resource intensive and thus slow to run. It is therefore recommended to: use months rather than weeks if appropriate; use a shorter period for testing if applicable; minimise the population size (e.g. apply all necessary exclusions to your population, e.g. age limits, in the study definition rather than filtering in a later step) and use a compressed output format (e.g. `csv.gz` as below).
 
 The range is specified as:
 
@@ -169,6 +178,21 @@ Finally, for each measure, it combines all the output into a single file with an
 This command also respects the `--skip-existing` flag.
 This will prevent it from recalculating the measure for any months or weeks which have already been calculated.
 However the final step, which combines output across time periods, will always be run.
+
+This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created. 
+If the `--output-dir` argument is configured, `generate_measures` expects the input cohort files to also be in the output directory. To ensure this, include the same `--output-dir` argument in the previous `generate_cohort` step.
+
+!!! note
+    As we saw, you can extract the data in a compressed output format, such as `csv.gz`, `feather`, `dta`, or `dta.gz`.
+    For example:
+
+    ```sh
+    cohortextractor generate_cohort --output-format=csv.gz
+    ```
+    
+    If you do, then the `generate_measures` command will automatically work with this compressed output format;
+    you need not pass `--output-format` to `generate_measures`, in other words.
+    However, the `generate_measures` command will always output CSV files.
 
 ## Putting it all together in a pipeline
 
