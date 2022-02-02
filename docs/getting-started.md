@@ -777,6 +777,9 @@ detail on the subjects covered in this tutorial. For example:
   tool](opensafely-cli.md).
 * The [full study definition reference](study-def.md) describes all the
   different ways to define new variables in your study definition.
+    * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex) 
+    or [Region](study-def-variables.md#cohortextractor.patients.registered_practice_as_of) to the 
+    study definition you created using this guide, then plot some new charts!*
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
 * OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
