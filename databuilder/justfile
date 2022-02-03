@@ -78,6 +78,11 @@ upgrade env package="": virtualenv
     $COMPILE $opts --output-file=requirements.{{ env }}.txt requirements.{{ env }}.in
 
 
+# upgrade the pinned version of databuilder
+upgrade-databuilder: devenv
+    $BIN/python update-version.py
+
+
 # Run the tests
 test: devenv
     #!/usr/bin/env bash

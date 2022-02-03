@@ -12,4 +12,5 @@ flake8-no-pep420
 isort
 pip-tools
 pre-commit
+requests
 watchdog
