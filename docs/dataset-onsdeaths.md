@@ -8,7 +8,7 @@ Date and cause of death based on information recorded when deaths are certified 
 * **Update frequency in OpenSAFELY** Approximately weeekly.
 * **Available from** deaths recorded from X onwards.
 * **Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 weeks.
-* **Collected information** Date of death, causes of death, age, sex.
+* **Collected information** Date of death, causes of death, age, sex, place of death.
 
 Causes of death are coded using ICD-10.
 
