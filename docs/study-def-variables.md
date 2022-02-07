@@ -163,6 +163,21 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 :::cohortextractor.patients.with_healthcare_worker_flag_on_covid_vaccine_record
 
 
+## Therapeutics
+!!! warning
+    Therapeutics data can only be used ...
+    Please contact your co-pilot, or <team@opensafely.org> if you have any questions.
+
+
+These variables are derived from...
+
+For more information, see the [Therapeutics data section](dataset-therapeutics.md).
+&nbsp;
+
+::: cohortextractor.patients.with_covid_therapeutics
+&nbsp;
+
+
 ## Utility functions
 
 These variables create new variable from existing variables. They do not extract any data directly.
