@@ -388,9 +388,9 @@ mkdocs==1.2.3 \
     #   mkdocs-autorefs
     #   mkdocs-material
     #   mkdocstrings
-mkdocs-autorefs==0.3.0 \
-    --hash=sha256:261875003e49b5d708993fd2792a69d624cbc8cf7de49e96c81d3d9825977ca4 \
-    --hash=sha256:2f89556eb2107d72e3aff41b04dcaaf1125d407a33b8027fbc982137d248d37d
+mkdocs-autorefs==0.3.1 \
+    --hash=sha256:12baad29359f468b44d980ed35b713715409097a1d8e3d0ef90962db95205eda \
+    --hash=sha256:f0fd7c115eaafda7fb16bf5ff5d70eda55d7c0599eac64f8b25eacf864312a85
     # via mkdocstrings
 mkdocs-material==8.1.10 \
     --hash=sha256:10970bfe2628eaa41c379e9075121b1232f4304cac9876feac8ac9d0d2e9035b \
@@ -400,10 +400,16 @@ mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
     --hash=sha256:bfd24dfdef7b41c312ede42648f9eb83476ea168ec163b613f9abd12bbfddba2
     # via mkdocs-material
-mkdocstrings==0.17.0 \
-    --hash=sha256:103fc1dd58cb23b7e0a6da5292435f01b29dc6fa0ba829132537f3f556f985de \
-    --hash=sha256:75b5cfa2039aeaf3a5f5cf0aa438507b0330ce76c8478da149d692daa7213a98
-    # via -r requirements.prod.in
+mkdocstrings==0.18.0 \
+    --hash=sha256:01d8ab962fc1f388c9b15cbf8c078b8738f92adf983b626d74135aaee2bce33a \
+    --hash=sha256:75e277f6a56a894a727efcf6d418d36cd43d4db7da9614c2dc23300e257d95ad
+    # via
+    #   -r requirements.prod.in
+    #   mkdocstrings-python-legacy
+mkdocstrings-python-legacy==0.2.1 \
+    --hash=sha256:a46f772b24d9a41f0b4eaa27a4ae70195cacc76af462fce691d085e0b4fc8c78 \
+    --hash=sha256:d8b032e1d1b4c75a601fcc5837249e2b2dc2cb21c9ad32a313ffaa54d5838242
+    # via mkdocstrings
 numpy==1.21.4 \
     --hash=sha256:0b78ecfa070460104934e2caf51694ccd00f37d5e5dbe76f021b1b0b0d221823 \
     --hash=sha256:1247ef28387b7bb7f21caf2dbe4767f4f4175df44d30604d42ad9bd701ebb31f \
@@ -590,7 +596,7 @@ python-dateutil==2.8.2 \
 pytkdocs==0.15.0 \
     --hash=sha256:4b45af89d6fa5fa50f979b0f9f54539286b84e245c81991bb838149aa2d9d9c9 \
     --hash=sha256:d6b2aec34448ec89acb8c1c25062cc1e70c6b26395d46fc7ee753b7e5a4e736a
-    # via mkdocstrings
+    # via mkdocstrings-python-legacy
 pytz==2021.3 \
     --hash=sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c \
     --hash=sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326
