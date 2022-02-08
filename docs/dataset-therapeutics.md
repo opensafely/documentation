@@ -28,7 +28,7 @@ The Therapeutics dataset is...
 
 ...Any specific terms to define
 * **Term** description
-Each treatment is a row.  Patients should only appear once per episode treated, but may legitimately appear more than once if they received a second treatment for a separate episode.
+Each row is one completed form for one course of treatment. The patient may or may not have actually received the treatment or completed the course (but we assume that they usually do). They may have another form completed for another treatment, either because it was decided to give them a different treatment, or for some other reason. They may in theory also have another form completed some months later for another instance of infection.
 
 
 ---8<-- 'includes/glossary.md'
