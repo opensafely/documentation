@@ -1,4 +1,4 @@
-!!! danger "This page is for use with [the OpenSAFELY Databuilder](https://github.com/opensafely-core/databuilder/) which is currently unreleased."
+---8<-- 'includes/data-builder-danger-header.md'
 
 ## What is a Data Definition?
 
