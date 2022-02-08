@@ -447,9 +447,9 @@ numpy==1.21.4 \
     #   pyarrow
     #   scipy
     #   seaborn
-opensafely-cohort-extractor==1.61.1 \
-    --hash=sha256:0cdf40d104e6bac93b5563f528b93cd04c6194b80576cd8d8e88c2664baf2cc5 \
-    --hash=sha256:1ace1e722c76879fa9ad40844cf56707ee78896fae721a44a85393706a656d34
+opensafely-cohort-extractor==1.61.2 \
+    --hash=sha256:e2fca3ca769b60056bff6f3f2a5e76ab6955a95c8627ea09bd1f9203d806484b \
+    --hash=sha256:fe5041963c270776753e6fc12dc60dc0a3ff2cf95f75a13ed9fcd042512903dd
     # via -r requirements.prod.in
 packaging==21.3 \
     --hash=sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb \
