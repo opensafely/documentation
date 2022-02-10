@@ -21,7 +21,7 @@ With Data Builder:
 * **Researchers** can specify data they want to use in their research via a
   [*dataset definition*](data-definition.md).
 * **Data providers** can specify data they want to offer for research
-  via the [*OpenSAFELY Contracts*](opensafely-contracts-intro.md)
+  via the [*OpenSAFELY Contracts*](contracts-intro.md)
   specification and implementation.
 
 ## Reading the Data Builder documentation
