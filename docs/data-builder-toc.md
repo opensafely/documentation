@@ -16,6 +16,6 @@
 ## Contents
 
 * [OpenSAFELY Data Builder introduction](data-builder-intro.md)
-* [Data definition](data-definition.md)
+* [Dataset definition](data-definition.md)
 * [OpenSAFELY Contracts introduction](contracts-intro.md)
 * [OpenSAFELY Contracts reference](contracts-reference.md)

@@ -1,8 +1,8 @@
 ---8<-- 'includes/data-builder-danger-header.md'
 
-## What is a Data Definition?
+## What is a Dataset Definition?
 
-A _data definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
+A _dataset definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
 
 * the patient population (dataset rows)
 * the variables (dataset columns)
@@ -19,23 +19,23 @@ some epidemiological knowledge.
     roadmap to replace the Python-based approach with a configuration-based
     approach which is more secure, and can be driven from a graphical user interface.
 
-The OpenSAFELY framework uses a single data definition to query different
+The OpenSAFELY framework uses a single dataset definition to query different
 vendor EHR databases, and saves the results to the secure server in a CSV file
 of tabular data.
 
-A data definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
+A dataset definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
 This allows the framework to generate dummy data which the researcher can use to develop and test their analysis scripts, without ever having to touch real patient data.
 
-When you generate a data population, the framework reads your data definition from the python script (usually `analysis/data_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
+When you generate a data population, the framework reads your dataset definition from the python script (usually `analysis/dataset_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
 In a production environment this file will contain real data; in a development environment this will be dummy data.
 
 Currently the framework supports one row per patient datasets.
 
-## `data_definition.py` structure
+## `dataset_definition.py` structure
 
 ### Importing code building blocks
 
-To create the data definition, we first need to import the functions and code to create this.
+To create the dataset definition, we first need to import the functions and code to create this.
 You will need to put this codeblock at the top of your python file.
 
 --8<-- 'examples/src-imports.md'
@@ -46,7 +46,7 @@ This essentially says we want to import some functions from the `databuilder` pa
 
 The `Cohort()` class (imported above) is used to define both the data population and the variables.
 
---8<-- 'examples/src-data-definition.md'
+--8<-- 'examples/src-dataset-definition.md'
 
 
 * `default_expectations=` is used to set default behaviour for the dummy data that is generated.
