@@ -4,7 +4,7 @@
     It is expected that this guide should work from 10.15 upwards but has only been tested with 11.1
 
 Open Terminal.app by clicking the magnifying glass icon in the top right of your screen.
-Type `terminal` and hit enter.
+Type `terminal` and hit ++enter++.
 
 Install [Homebrew](https://brew.sh/), this should install the Xcode Command Line Tools for you as well.
 
