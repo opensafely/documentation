@@ -56,7 +56,7 @@ Data Builder:
 
 Data Builder uses a *dataset definition* to specify the data to be
 extracted from OpenSAFELY. The dataset definition is written in a
-specific language created for Data Builder: ehrQL.
+specific language created for Data Builder: [ehrQL](ehrql-intro.md).
 
 For example, an OpenSAFELY dataset might compromise data on a cohort of
 patients.
