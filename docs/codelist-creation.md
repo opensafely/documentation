@@ -4,7 +4,7 @@ There are two ways to build a codelist using OpenCodelists:
 2. [Create a codelist from a csv file](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file)
 
 
-The current coding systems available in OpenCodelists are listed below.
+The current coding systems available in the OpenCodelists builder are listed below.
 
 | Coding system  | CSV column name |
 | ---- | ---- |
