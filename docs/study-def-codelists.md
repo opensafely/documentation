@@ -22,7 +22,7 @@ You should put code that creates codelist variables before your `StudyDefinition
 
 You can do this in `analysis/study_definition.py`, but we recommend that you put all your codelist definitions into a file called `codelists.py` and importing it in at the top of your file:
 
-``py
+```py
 from codelists import *
 ```
 
