@@ -1,3 +1,7 @@
+There are two ways to build a codelist using OpenCodelists:
+
+1. [Create a codelist from scratch with the builder](https://www.opencodelists.org/docs/#creating-a-codelist-from-scratch)
+2. [Create a codelist from a csv file](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file)
 ## Workflow
 
 The general workflow for creating codelists is as follows:
