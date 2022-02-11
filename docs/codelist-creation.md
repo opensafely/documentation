@@ -19,6 +19,8 @@ The current coding systems available in the OpenCodelists builder are listed bel
 
 Each codelist must use exactly one of these systems.
 
+OPCS-4 codes are no currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, you can find instructions to manually upload an existing OPCS-4 codelist [here]().
+
 The final codelist must be stored in CSV format to be imported 
 into [OpenCodelists](https://www.opencodelists.org). The codes must be stored in exactly one column.
 There is currently a soft requirement that the codes should be contained in the first column, preferably named according to the CSV column names provided in the table above. The second column is typically a text description of the code. Before uploading a codelist CSV under your OpenSAFELY codelist profile, you should remove the header row as these will be automatically added in a standardised manner.
