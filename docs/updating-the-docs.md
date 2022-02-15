@@ -31,13 +31,13 @@ that details the use of `pip-compile` for this.
 
 ---8<-- 'includes/glossary.md'
 
-## Making changes to the data definition examples
+## Making changes to the dataset definition examples
 You will need to check out the [documentation repo](https://github.com/opensafely/documentation) so you can run the example generating toolchain.
 
 Edit the python modules in the `databuilder/snippets` directory.
 
 Each example is bounded by snex markers which define the filename they will produce.
-For example, a block starting with `:snippet data-definition` will create the file `examples/src-data-definition.md`.
+For example, a block starting with `:snippet dataset-definition` will create the file `examples/src-dataset-definition.md`.
 
 !!! note "All example filenames are prefixed with `src-`"
 

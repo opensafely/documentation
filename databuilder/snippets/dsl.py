@@ -5,7 +5,7 @@ from databuilder.tables import clinical_events, practice_registrations
 
 # :endsnippet
 
-# :snippet data-definition
+# :snippet dataset-definition
 cohort = Cohort()
 
 index_date = "2020-11-01"
