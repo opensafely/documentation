@@ -11,7 +11,7 @@ TODO: Are there any changes users need to make when running on multiple
 backends?
 
 TODO: Is this page really just a specification of how closely the
-different backends adhere to backends? Can this be automated in future
+different backends adhere to contracts? Can this be automated in future
 somehow?
 
 ## TPP
