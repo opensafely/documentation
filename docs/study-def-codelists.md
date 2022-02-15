@@ -44,3 +44,15 @@ all_cardiac_disease_codes = combine_codelists(
     acute_cardiac_disease_codes
 )
 ```
+
+## Using a single code
+
+In some cases you may only want a variable to use a one or two codes, e.g you want to look at use of a single code within a codelist. You can create a codelist object directly as follows:
+
+```py
+weight_codes = codelist(
+    ["27113001", "162763007"], system="snomed", column="code"
+)
+```
+
+Whilst you can pass this a list of codes of any length, we recommend building or using existing codelists on OpenCodelists for ease of discoverability and reproducibility.
