@@ -121,3 +121,7 @@ watch-examples:
     #!/usr/bin/env bash
     project_root=$(git rev-parse --show-toplevel)
     $BIN/watchmedo shell-command --patterns="*.py" --recursive --command="just ${project_root}/databuilder/extract" "${project_root}/databuilder/snippets"
+
+
+generate-docs:
+    $BIN/python -m databuilder generate_docs --location=../

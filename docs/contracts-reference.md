@@ -10,4 +10,13 @@ code](https://github.com/opensafely-core/databuilder/tree/main/databuilder/contr
 via a [MkDocs
 plugin](https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts).
 
+
+!!! contract:databuilder.contracts.contracts.WIP_ClinicalEvents
+
+!!! contract:databuilder.contracts.contracts.PatientDemographics
+
+!!! contract:databuilder.contracts.contracts.WIP_PracticeRegistrations
+
+
+
 ---8<-- 'includes/glossary.md'
