@@ -1,46 +1,52 @@
+# Writing a dataset definition
+
 ---8<-- 'includes/data-builder-danger-header.md'
 
-## What is a Dataset Definition?
+## What is a dataset definition?
 
 A _dataset definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
 
 * the patient population (dataset rows)
 * the variables (dataset columns)
-* the expected distributions of these variables for use in dummy data
 
-It is written in the Python programming language, using an OpenSAFELY-specific
-format which is intended to be easily written, read, and reviewed by anyone with
-some epidemiological knowledge.
+The OpenSAFELY framework:
 
-!!! note "Some knowledge of python is helpful!"
+* Uses a single dataset definition to query different vendor EHR databases or locally provided dummy data.
+* Reads your dataset definition from the Python script (usually `analysis/dataset_definition.py`)
+* Writes the output data frame in a tabular CSV file (usually `output/input.csv`).
+    * For queries to vendor databases, the results are stored on a [secure server](releasing-files.md).
 
-    The following documentation should get you through most cases, but
-    some will make little sense to a non-Python programmer.  It is on our
-    roadmap to replace the Python-based approach with a configuration-based
-    approach which is more secure, and can be driven from a graphical user interface.
+!!! note
+    Currently the framework supports datasets with one row per patient.
 
-The OpenSAFELY framework uses a single dataset definition to query different
-vendor EHR databases, and saves the results to the secure server in a CSV file
-of tabular data.
+### Dataset definitions are written in ehrQL
 
-A dataset definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
-This allows the framework to generate dummy data which the researcher can use to develop and test their analysis scripts, without ever having to touch real patient data.
+Dataset definitions are written in a language designed for OpenSAFELY:
+ehrQL. ehrQL runs on Python, but ehrQL is designed to be easily written,
+read, and reviewed by anyone with some epidemiological knowledge.
 
-When you generate a data population, the framework reads your dataset definition from the python script (usually `analysis/dataset_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
-In a production environment this file will contain real data; in a development environment this will be dummy data.
+A simple example of a dataset definition is given below.
 
-Currently the framework supports one row per patient datasets.
+!!! note
+    Other documentation pages discuss [ehrQL in more depth](ehrql-intro.md).
 
 ## `dataset_definition.py` structure
 
+Before writing a dataset definition, add [Data
+Builder](data-builder-intro/#adding-data-builder-to-a-project) to your
+OpenSAFELY project.
+
 ### Importing code building blocks
 
-To create the dataset definition, we first need to import the functions and code to create this.
-You will need to put this codeblock at the top of your python file.
+At the start of the dataset definition, we first *import* some code from
+the Data Builder package. Put the following codeblock at the top of your
+`dataset_definition.py` file:
 
 --8<-- 'examples/src-imports.md'
 
-This essentially says we want to import some functions from the `databuilder` package which will be used throughout the script.
+!!! note
+    This is a simple example. You may need different imports depending
+    on your dataset definition.
 
 ### A simple example
 
@@ -48,28 +54,4 @@ The `Cohort()` class (imported above) is used to define both the data population
 
 --8<-- 'examples/src-dataset-definition.md'
 
-
-* `default_expectations=` is used to set default behaviour for the dummy data that is generated.
-In this case, we expect event dates to be between `1970-01-01` and today's date, uniformly distributed in that period, and to be recorded for 20% of patients (returning empty `""` values otherwise).
-See [Dummy data and expectations](study-def-expectations.md) for more details.
-* `index_date=` is used to set the index date against which all other dates can be defined.
-See [Working with dates](study-def-dates.md) for more details on how the index date is used.
-* `population=` is where the population is defined.
-In this case, we want all patients available in the OpenSAFELY database and so we use the method `all()` to indicate this.
-See the [study population section](#defining-the-study-population) for more details on how to select a specific subset of patients in the OpenSAFELY database.
-
-The `default_expectations`, `index_date`, and `population` arguments are reserved names within `StudyDefinition()`.
-All other names are used to define the variables that will appear in the outputted dataset, using _variable extractor functions_ of the form `patients.function_name`.
-
-`age=` is a simple example of an extractor function in use.
-The `patients.age_as_of()` function returns the age of each patient as of the date provided (in this case the `index_date`).
-
-All other variables are defined similarly.
-To see the full list of currently available extractor functions, see [Study Definition variables reference](study-def-variables.md).
-
-
-## Defining and extracting variables
-
-All the variables that you want to include in your dataset are declared within the `StudyDefinition()` function, using functions of the form `patients.function_name()`.
-
-To see the full documentation for all the variables that can be extracted with queries to the OpenSAFELY database, see [Study Definition variable reference](study-def-variables.md).
+---8<-- 'includes/glossary.md'
