@@ -38,6 +38,48 @@
       "docstring": [
         "Provides demographic information about patients."
       ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "Patient's pseudonymous identifier, for linkage. You should not normally output or operate on this column",
+          "type": "PseudoPatientId",
+          "constraints": [
+            "Must have a value",
+            "Must be unique"
+          ]
+        },
+        {
+          "name": "date_of_birth",
+          "description": "Patient's year and month of birth, provided in format YYYY-MM-01.",
+          "type": "Date",
+          "constraints": [
+            "Must have a value",
+            "Must be the first day of a month"
+          ]
+        },
+        {
+          "name": "sex",
+          "description": "Patient's sex.",
+          "type": "Choice",
+          "constraints": [
+            "Must have a value"
+          ]
+        },
+        {
+          "name": "date_of_death",
+          "description": "Patient's year and month of death, provided in format YYYY-MM-01.",
+          "type": "Date",
+          "constraints": [
+            "Must be the first day of a month"
+          ]
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "TableContract",
+      "dotted_path": "databuilder.contracts.base.TableContract",
+      "docstring": [],
       "columns": [],
       "contract_support": []
     },
@@ -47,61 +89,38 @@
       "docstring": [
         "TODO."
       ],
-      "columns": [],
-      "contract_support": []
-    },
-    {
-      "name": "WIP_HospitalAdmissions",
-      "dotted_path": "databuilder.contracts.contracts.WIP_HospitalAdmissions",
-      "docstring": [
-        "TODO."
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "code",
+          "description": "",
+          "type": "Code",
+          "constraints": []
+        },
+        {
+          "name": "system",
+          "description": "",
+          "type": "String",
+          "constraints": []
+        },
+        {
+          "name": "date",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "numeric_value",
+          "description": "",
+          "type": "Float",
+          "constraints": []
+        }
       ],
-      "columns": [],
-      "contract_support": []
-    },
-    {
-      "name": "WIP_Hospitalizations",
-      "dotted_path": "databuilder.contracts.contracts.WIP_Hospitalizations",
-      "docstring": [
-        "TODO."
-      ],
-      "columns": [],
-      "contract_support": []
-    },
-    {
-      "name": "WIP_HospitalizationsWithoutSystem",
-      "dotted_path": "databuilder.contracts.contracts.WIP_HospitalizationsWithoutSystem",
-      "docstring": [
-        "TODO."
-      ],
-      "columns": [],
-      "contract_support": []
-    },
-    {
-      "name": "WIP_PatientAddress",
-      "dotted_path": "databuilder.contracts.contracts.WIP_PatientAddress",
-      "docstring": [
-        "TODO."
-      ],
-      "columns": [],
-      "contract_support": []
-    },
-    {
-      "name": "WIP_PracticeRegistrations",
-      "dotted_path": "databuilder.contracts.contracts.WIP_PracticeRegistrations",
-      "docstring": [
-        "TODO."
-      ],
-      "columns": [],
-      "contract_support": []
-    },
-    {
-      "name": "WIP_Prescriptions",
-      "dotted_path": "databuilder.contracts.contracts.WIP_Prescriptions",
-      "docstring": [
-        "TODO."
-      ],
-      "columns": [],
       "contract_support": []
     },
     {
@@ -110,7 +129,242 @@
       "docstring": [
         "TODO."
       ],
-      "columns": [],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "date",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "positive_result",
+          "description": "",
+          "type": "Boolean",
+          "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_HospitalAdmissions",
+      "dotted_path": "databuilder.contracts.contracts.WIP_HospitalAdmissions",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "admission_date",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "primary_diagnosis",
+          "description": "",
+          "type": "Code",
+          "constraints": []
+        },
+        {
+          "name": "admission_method",
+          "description": "",
+          "type": "Integer",
+          "constraints": []
+        },
+        {
+          "name": "episode_is_finished",
+          "description": "",
+          "type": "Boolean",
+          "constraints": []
+        },
+        {
+          "name": "spell_id",
+          "description": "",
+          "type": "Integer",
+          "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_Hospitalizations",
+      "dotted_path": "databuilder.contracts.contracts.WIP_Hospitalizations",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "date",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "code",
+          "description": "",
+          "type": "Code",
+          "constraints": []
+        },
+        {
+          "name": "system",
+          "description": "",
+          "type": "String",
+          "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_HospitalizationsWithoutSystem",
+      "dotted_path": "databuilder.contracts.contracts.WIP_HospitalizationsWithoutSystem",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "code",
+          "description": "",
+          "type": "Code",
+          "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_PatientAddress",
+      "dotted_path": "databuilder.contracts.contracts.WIP_PatientAddress",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "patientaddress_id",
+          "description": "",
+          "type": "Integer",
+          "constraints": []
+        },
+        {
+          "name": "date_start",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "date_end",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "index_of_multiple_deprivation_rounded",
+          "description": "",
+          "type": "Integer",
+          "constraints": []
+        },
+        {
+          "name": "has_postcode",
+          "description": "",
+          "type": "Boolean",
+          "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_PracticeRegistrations",
+      "dotted_path": "databuilder.contracts.contracts.WIP_PracticeRegistrations",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "pseudo_id",
+          "description": "",
+          "type": "Integer",
+          "constraints": []
+        },
+        {
+          "name": "nuts1_region_name",
+          "description": "",
+          "type": "String",
+          "constraints": []
+        },
+        {
+          "name": "date_start",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        },
+        {
+          "name": "date_end",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "WIP_Prescriptions",
+      "dotted_path": "databuilder.contracts.contracts.WIP_Prescriptions",
+      "docstring": [
+        "TODO."
+      ],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": []
+        },
+        {
+          "name": "prescribed_dmd_code",
+          "description": "",
+          "type": "Code",
+          "constraints": []
+        },
+        {
+          "name": "processing_date",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        }
+      ],
       "contract_support": []
     },
     {
@@ -119,7 +373,22 @@
       "docstring": [
         "TODO."
       ],
-      "columns": [],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "",
+          "type": "PseudoPatientId",
+          "constraints": [
+            "Must be unique"
+          ]
+        },
+        {
+          "name": "date_of_birth",
+          "description": "",
+          "type": "Date",
+          "constraints": []
+        }
+      ],
       "contract_support": []
     }
   ]
