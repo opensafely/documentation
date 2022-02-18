@@ -11,13 +11,13 @@ A _dataset definition_ is a formal specification of the data that you want to ex
 
 The OpenSAFELY framework:
 
-* Uses a single dataset definition to query different vendor EHR databases or locally provided dummy data.
+* Uses a single dataset definition to query different vendor-specific EHR databases or locally provided dummy data.
 * Reads your dataset definition from the Python script (usually `analysis/dataset_definition.py`)
 * Writes the output data frame in a tabular CSV file (usually `output/input.csv`).
     * For queries to vendor databases, the results are stored on a [secure server](releasing-files.md).
 
 !!! note
-    Currently the framework supports datasets with one row per patient.
+    Currently the framework only supports datasets with one row per patient.
 
 ### Dataset definitions are written in ehrQL
 
