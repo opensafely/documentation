@@ -11,12 +11,25 @@ via a [MkDocs
 plugin](https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts).
 
 
+!!! contract:databuilder.contracts.contracts.PatientDemographics
+
 !!! contract:databuilder.contracts.contracts.WIP_ClinicalEvents
 
-!!! contract:databuilder.contracts.contracts.PatientDemographics
+!!! contract:databuilder.contracts.contracts.WIP_CovidTestResults
+
+!!! contract:databuilder.contracts.contracts.WIP_HospitalAdmissions
+
+!!! contract:databuilder.contracts.contracts.WIP_Hospitalizations
+
+!!! contract:databuilder.contracts.contracts.WIP_HospitalizationsWithoutSystem
+
+!!! contract:databuilder.contracts.contracts.WIP_PatientAddress
 
 !!! contract:databuilder.contracts.contracts.WIP_PracticeRegistrations
 
+!!! contract:databuilder.contracts.contracts.WIP_Prescriptions
+
+!!! contract:databuilder.contracts.contracts.WIP_SimplePatientDemographics
 
 
 ---8<-- 'includes/glossary.md'
