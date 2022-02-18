@@ -110,7 +110,7 @@ plugins:
       custom_templates: templates
       watch:
         - examples
-  - contracts
+  - mkdocs-opensafely-databuilder
 
 markdown_extensions:
   - pymdownx.snippets:
