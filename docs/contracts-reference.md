@@ -11,6 +11,8 @@ via a [MkDocs
 plugin](https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts).
 
 
+!!! contract:databuilder.contracts.universal.Patients
+
 !!! contract:databuilder.contracts.contracts.PatientDemographics
 
 !!! contract:databuilder.contracts.contracts.WIP_ClinicalEvents

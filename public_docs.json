@@ -77,13 +77,6 @@
       "contract_support": []
     },
     {
-      "name": "TableContract",
-      "dotted_path": "databuilder.contracts.base.TableContract",
-      "docstring": [],
-      "columns": [],
-      "contract_support": []
-    },
-    {
       "name": "WIP_ClinicalEvents",
       "dotted_path": "databuilder.contracts.contracts.WIP_ClinicalEvents",
       "docstring": [
@@ -387,6 +380,48 @@
           "description": "",
           "type": "Date",
           "constraints": []
+        }
+      ],
+      "contract_support": []
+    },
+    {
+      "name": "Patients",
+      "dotted_path": "databuilder.contracts.universal.Patients",
+      "docstring": [],
+      "columns": [
+        {
+          "name": "patient_id",
+          "description": "Patient's pseudonymous identifier, for linkage.This will not normally be output, or operated on by researchers.",
+          "type": "PseudoPatientId",
+          "constraints": [
+            "Must have a value",
+            "Must be unique"
+          ]
+        },
+        {
+          "name": "date_of_birth",
+          "description": "Patient's year and month of birth, provided in format YYYY-MM-01. The day will always be the first of the month.",
+          "type": "Date",
+          "constraints": [
+            "Must be the first day of a month",
+            "Must have a value"
+          ]
+        },
+        {
+          "name": "sex",
+          "description": "Patient's sex as defined by the options: male, female, intersex, unknown.",
+          "type": "Choice",
+          "constraints": [
+            "Must have a value"
+          ]
+        },
+        {
+          "name": "date_of_death",
+          "description": "Patient's year and month of death, provided in format YYYY-MM-01.The day will always be the first of the month.",
+          "type": "Date",
+          "constraints": [
+            "Must have a value"
+          ]
         }
       ],
       "contract_support": []
