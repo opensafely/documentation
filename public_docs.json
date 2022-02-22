@@ -2,38 +2,41 @@
   "backends": [
     {
       "name": "DatabricksBackend",
-      "tables": [
-        "WIP_SimplePatientDemographics",
-        "WIP_Prescriptions",
-        "WIP_HospitalAdmissions"
+      "contracts": [
+        "contracts/WIP_SimplePatientDemographics",
+        "contracts/WIP_Prescriptions",
+        "contracts/WIP_HospitalAdmissions"
       ]
     },
     {
       "name": "GraphnetBackend",
-      "tables": [
-        "PatientDemographics",
-        "WIP_ClinicalEvents",
-        "WIP_PracticeRegistrations",
-        "WIP_CovidTestResults",
-        "WIP_HospitalizationsWithoutSystem",
-        "WIP_PatientAddress"
+      "contracts": [
+        "contracts/PatientDemographics",
+        "contracts/WIP_ClinicalEvents",
+        "contracts/WIP_PracticeRegistrations",
+        "contracts/WIP_CovidTestResults",
+        "contracts/WIP_HospitalizationsWithoutSystem",
+        "contracts/WIP_PatientAddress"
       ]
     },
     {
       "name": "TPPBackend",
-      "tables": [
-        "Patients",
-        "WIP_ClinicalEvents",
-        "WIP_PracticeRegistrations",
-        "WIP_CovidTestResults",
-        "WIP_Hospitalizations",
-        "WIP_PatientAddress"
+      "contracts": [
+        "universal/Patients",
+        "contracts/WIP_ClinicalEvents",
+        "contracts/WIP_PracticeRegistrations",
+        "contracts/WIP_CovidTestResults",
+        "contracts/WIP_Hospitalizations",
+        "contracts/WIP_PatientAddress"
       ]
     }
   ],
   "contracts": [
     {
       "name": "PatientDemographics",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.PatientDemographics",
       "docstring": [
         "Provides demographic information about patients."
@@ -78,6 +81,9 @@
     },
     {
       "name": "WIP_ClinicalEvents",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_ClinicalEvents",
       "docstring": [
         "TODO."
@@ -118,6 +124,9 @@
     },
     {
       "name": "WIP_CovidTestResults",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_CovidTestResults",
       "docstring": [
         "TODO."
@@ -146,6 +155,9 @@
     },
     {
       "name": "WIP_HospitalAdmissions",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_HospitalAdmissions",
       "docstring": [
         "TODO."
@@ -192,6 +204,9 @@
     },
     {
       "name": "WIP_Hospitalizations",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_Hospitalizations",
       "docstring": [
         "TODO."
@@ -226,6 +241,9 @@
     },
     {
       "name": "WIP_HospitalizationsWithoutSystem",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_HospitalizationsWithoutSystem",
       "docstring": [
         "TODO."
@@ -248,6 +266,9 @@
     },
     {
       "name": "WIP_PatientAddress",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_PatientAddress",
       "docstring": [
         "TODO."
@@ -294,6 +315,9 @@
     },
     {
       "name": "WIP_PracticeRegistrations",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_PracticeRegistrations",
       "docstring": [
         "TODO."
@@ -334,6 +358,9 @@
     },
     {
       "name": "WIP_Prescriptions",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_Prescriptions",
       "docstring": [
         "TODO."
@@ -362,6 +389,9 @@
     },
     {
       "name": "WIP_SimplePatientDemographics",
+      "hierarchy": [
+        "contracts"
+      ],
       "dotted_path": "databuilder.contracts.contracts.WIP_SimplePatientDemographics",
       "docstring": [
         "TODO."
@@ -386,6 +416,9 @@
     },
     {
       "name": "Patients",
+      "hierarchy": [
+        "universal"
+      ],
       "dotted_path": "databuilder.contracts.universal.Patients",
       "docstring": [],
       "columns": [

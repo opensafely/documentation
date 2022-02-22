@@ -404,8 +404,8 @@ mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
     --hash=sha256:bfd24dfdef7b41c312ede42648f9eb83476ea168ec163b613f9abd12bbfddba2
     # via mkdocs-material
-mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/3ec9a7023dbb5a610b96e9e63988e130ea9a300c.zip \
-    --hash=sha256:57f5c6dc00e6784adf9f3e63dc729b14b48e4fe3531077d322d5a367f5c79599
+mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/ec2251eb17781a8c1958e879dd5f33bd8df6fb07.zip \
+    --hash=sha256:9cdcab8c35c8770e63a9bb1e6514a7984506d2b191dba4b37e6e9c322604cd86
     # via -r requirements.prod.in
 mkdocstrings==0.18.0 \
     --hash=sha256:01d8ab962fc1f388c9b15cbf8c078b8738f92adf983b626d74135aaee2bce33a \
