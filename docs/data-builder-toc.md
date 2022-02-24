@@ -15,11 +15,20 @@
 
 ## Contents
 
+### Data Builder and dataset definitions
+
 * [OpenSAFELY Data Builder introduction](data-builder-intro.md)
 * [Writing a dataset definition](dataset-definition.md)
+
+### ehrQL
+
 * [ehrQL: Data Builder's language for querying electronic health record data](ehrql-intro.md)
+* [ehrQL tutorial](ehrql-tutorial.md)
 * [ehrQL examples](ehrql-examples.md)
 * [ehrQL reference](ehrql-reference.md)
+
+### OpenSAFELY Contracts
+
 * [OpenSAFELY Contracts introduction](contracts-intro.md)
 * [OpenSAFELY Contracts reference](contracts-reference.md)
 * [OpenSAFELY data backends](data-backends.md)
