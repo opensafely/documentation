@@ -93,7 +93,7 @@ fix: devenv
 
 # Run the dev project
 run: devenv
-    mkdocs serve -a localhost:8910
+    $BIN/mkdocs serve -a localhost:8910
 
 
 link-databuilder:
