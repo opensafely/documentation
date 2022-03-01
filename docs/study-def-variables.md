@@ -109,7 +109,7 @@ For more information, see the [SGSS data section](dataset-sgsscovid.md).
 ## CPNS
 
 These variables are derived from the COVID-19 Patient Notification System (CPNS), which collects info on all in-hospital covid-related deaths.
-For more information, see the [CPNS data section](dataset-cpns.md).
+For more information, see the [CPNS data section](dataset-cpns.md). Please note that CPNS is restricted to in-hospital covid-related deaths, for covid-related deaths in any setting, ONS-registered deaths where cause of death matches [COVID-19 coding in ICD-10](https://www.who.int/classifications/icd/COVID-19-coding-icd10.pdf) is generally more useful.
 &nbsp;
 
 ::: cohortextractor.patients.with_death_recorded_in_cpns
