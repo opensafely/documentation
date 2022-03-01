@@ -1,11 +1,13 @@
 # :snippet minimal-ehrql-import-patients
 from databuilder.tables import patients
 
+
 year_of_birth = patients.date_of_birth.year
 # :endsnippet
 
 # :snippet minimal-ehrql-import-dataset
 from databuilder.query_language import Dataset
+
 
 dataset = Dataset()
 # :endsnippet
@@ -25,6 +27,7 @@ dataset.birth_year = year_of_birth
 # :snippet minimal-ehrql-register
 from databuilder.definition import register
 
+
 register(dataset)
 # :endsnippet
 
@@ -32,6 +35,7 @@ register(dataset)
 from databuilder.definition import register
 from databuilder.query_language import Dataset
 from databuilder.tables import patients
+
 
 year_of_birth = patients.date_of_birth.year
 dataset = Dataset()
