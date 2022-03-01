@@ -12,18 +12,18 @@ This page describes:
 * what OpenSAFELY Contracts are
 * how OpenSAFELY Contracts relate to dataset definitions
 
-Each OpenSAFELY Contract is a formal specification, [described in
-code](https://github.com/opensafely-core/databuilder/blob/main/databuilder/contracts/contracts.py),
-relating to a particular clinical data domain. OpenSAFELY Contracts are
-authored by the OpenSAFELY platform developers: the Contract designs are
-informed by discussion and feedback from data providers and researchers.
+Each OpenSAFELY Contract is a formal specification — [described in
+code](https://github.com/opensafely-core/databuilder/blob/main/databuilder/contracts/)
+— relating to a particular clinical data domain.
+
+OpenSAFELY Contracts are authored by the OpenSAFELY platform developers:
+the Contract designs are informed by discussion and feedback from [data
+providers](backend-implementer-integration.md) and researchers.
 
 Researchers write dataset definitions to access data tables from
-OpenSAFELY backends. All available data tables within OpenSAFELY satisfy
-an OpenSAFELY Contract, regardless of which data provider operates the
-backend.
-
-TODO: does a table only satisfy one contract, or possibly multiple?
+OpenSAFELY backends. All of the data tables available from OpenSAFELY
+satisfy a single OpenSAFELY Contract, regardless of which data provider
+operates the backend.
 
 ## The OpenSAFELY Contracts reference
 
@@ -32,15 +32,19 @@ details of each individual Contract. When writing a dataset definition,
 researchers should consult [the OpenSAFELY Contracts
 reference](contracts-reference.md) to see:
 
-* the data available in OpenSAFELY backends
+* what data is available in OpenSAFELY backends
 * how the data is structured
 * what that data represents
 
 !!! warning
     OpenSAFELY Contracts apply only when accessing OpenSAFELY data using
     *dataset definitions*, written to run with Data Builder. Contracts
-    do not apply to *study definitions* written for the existing cohort
-    extractor.
+    do not apply to [*study definitions*](study-def.md) written for
+    cohort-extractor.
+
+!!! warning
+    The OpenSAFELY Contracts are still in development and subject to
+    frequent change.
 
 ## The goals of OpenSAFELY Contracts
 
@@ -48,7 +52,8 @@ Contracts make it easier for:
 
 * *Researchers* to understand what data is available in
   OpenSAFELY and how that data is represented.
-* *Data providers* to structure their data for OpenSAFELY.
+* *Data providers* to structure their data for OpenSAFELY and
+  auto-generated documentation for their service.
 * *OpenSAFELY's developers* to extend OpenSAFELY to additional
   healthcare and clinical data domains in future.
 
@@ -78,24 +83,31 @@ With OpenSAFELY Contracts, researchers benefit from:
 ## Common and Custom Contracts
 
 Data backends that are accessible via OpenSAFELY provide data tables. Each
-data table satisfies an OpenSAFELY Contract.
+data table accessible via OpenSAFELY satisfies an OpenSAFELY Contract.
 
-There are two types of Contracts:
+There are two types of Contract:
 
-* **Common Contracts**, required by all OpenSAFELY backends and covering
-  core clinical data domains
-* **Custom Contracts**, offered by just some backends and covering more
-  specialised clinical data domains
+* **Common Contracts** describe data *shared across multiple different
+  OpenSAFELY backends*.
+* **Custom Contracts** describe data *unique to one particular backend*.
 
-Both the structure of the Contracts and the method of accessing
-associated tables is the same for both Common and Core Contracts.
+Each data backend in OpenSAFELY can choose which of those Contracts to
+satisfy.
+
+!!! note
+    Refer to the [available OpenSAFELY data backends
+    details](data-backends.md) to see which backends implement which
+    contracts.
+
+All Contracts, Common and Custom, share the:
+
+* same Contract structure, made up of details about data columns
+* same way of accessing associated tables in Data Builder via ehrQL
 
 ### Common Contracts
 
-All OpenSAFELY backends satisfy Common Contracts.
-
 There will be several different Common Contracts available with the
-initial release of Data Builder. More Common Contracts may be added in
+initial release of Data Builder. More Common Contracts will be added in
 future.
 
 !!! warning
@@ -104,31 +116,34 @@ future.
     Contracts Reference](contracts-reference.md) for backends you intend
     to access with your dataset definition.
 
-For dataset definitions that only access tables defined by Common
-Contracts, those dataset definitions should be largely compatible with all
-OpenSAFELY backends.
-
 ### Custom Contracts
 
-Some backends may offer particularly specialised data that is not yet
-covered by a Common Contract. *Custom Contracts* allow individual
-backends to still offer this data via OpenSAFELY.
+Some backends may offer additional data that is not yet
+covered by the related Common Contract, or specialised data that is not covered
+by any Common Contract.
+
+*Custom Contracts* allow individual backends to:
+
+* offer such specialised data in a structured way via OpenSAFELY
+* extend the data offered in a Common Contract, adding, for example,
+  extra columns
 
 !!! warning
-    Using Custom Contracts might tie a dataset definition more closely
-    to a specific backend, than if just Common Contracts are used. This
-    also depends on how the dataset definition is designed.
+    Accessing data from a Custom Contract may tie a dataset definition
+    more closely to a specific backend, than if just Common Contracts
+    are used. This may also depend on how the dataset definition is
+    designed.
 
 !!! note
-    Should additional data providers want to offer data that closely resembles
-    an existing *Custom* Contract, OpenSAFELY developers would consider a new
-    *Common* Contract.
+    If multiple data providers want to offer data that closely resembles
+    an existing *Custom* Contract, OpenSAFELY developers would consider adding
+    a new *Common* Contract.
 
 ## Reading an OpenSAFELY Contract
 
 !!! note
     Refer to the [OpenSAFELY Contracts
-    Reference](contracts-intro#the-opensafely-contracts-reference) for
+    Reference](contracts-intro.md#the-opensafely-contracts-reference) for
     the details of specific contracts.
 
 Each OpenSAFELY Contract relates to a specific domain of health record
@@ -137,46 +152,78 @@ Contract. Tables that satisfy these Contracts can be accessed in a
 dataset definition via [Data Builder's query language,
 ehrQL](ehrql-intro.md).
 
-An OpenSAFELY Contract provides the following information:
+An OpenSAFELY Contract provides the following information for each
+associated table:
 
-* the **variable names**. Each variable is denoted by the
-  identifier you use to access the variable in ehrQL.
-* the **variable's description**. The description summarises what the
-  variable represents.
-* the **variable's data type**. For instance, a variable
-  might be one of the following:
+* the **column names**. Each column is denoted by the identifier you use
+  to access it in ehrQL.
+* the **column's description**. The description summarises what the
+  column represents.
+* the **column's data type**. For instance, a column's data type might
+  be one of the following:
     * integer type
     * floating point type
     * date type
     * string type
     * or some other type not in this list
-* the **additional constraints on the variable's data values**, other
-  than those given by the variable's type. For instance,
-    * the variable might be of date type, but all values are the first
-      of the month
-    * the variable might be of integer type, but all values are positive
+* the **additional constraints on the column's data values**, other than
+  those given by the column's type. For instance,
+    * the column might be of date type, but all values are the first of
+      the month
+    * the column might be of integer type, but all values are positive
       integers
 
-## Miscellaneous TODOs
+!!! warning
+    Any additional constraints are currently provided as guidance only.
+    The constraints may be true, but are *not yet automatically verified
+    against the data provided by OpenSAFELY backends*.
 
-* TODO: Should we refer to columns or variables?
-* TODO: Finalise details above based on what we actually display. Do we
-  know all the variable types, or can we link to them?
-* TODO: Do we want to have nulls as a constraint or as a separate
-  column in the reference?
-* TODO: How are deviations noted in the reference? Is this via a note
-  within the same contract? Or are we going to document the same
-  contract multiple times for different providers.
-* TODO: Where do we document about how to validate which backends run a
-  definition?
-* TODO: Do we need anything on Contract versioning right now? How does
-  versioning work?
+    In future, we aim to automatically validate these constraints. Once
+    implemented, this will guarantee the constraints are always true.
 
-## For backend data providers
+### The scope of OpenSAFELY Contracts
 
-* TODO: Does content for backend providers go here or another page?
-* TODO: What is the process by which new contracts could be proposed?
-* TODO: Where do we describe the integration process for
-  data providers?
+!!! warning
+    The currently implemented Contracts are scoped to NHS England data.
+    These Contracts are designed for use for **populations registered at
+    GP practices in England**.
+
+    Future Contracts may cover data from other organisations and
+    geographic regions.
+
+!!! note
+    This note is provided only as information on the possible
+    development direction of Contracts.
+
+    Contracts will eventually use a hierarchical naming system to avoid
+    name clashes. Multiple Common Contracts may exist that refer to a
+    similar data topic, but the data in each Contract has a different
+    structure.
+
+    As a specific example, the current `WIP_PatientAddress` Contract may
+    eventually be in a hierarchy such as `UK/NHSE/PatientAddress`. This
+    distinguishes the `PatientAddress` Contract for NHS England, from
+    `PatientAddress` as used by another healthcare organisation, perhaps
+    in another country.
+
+### Versioning
+
+!!! warning
+    The initial available batch of OpenSAFELY Contracts do not yet
+    implement versioning and are subject to change.
+
+!!! note
+    This note is provided only as information on the possible
+    development direction of Contracts.
+
+    The intent is for each Contract to eventually be assigned a [semantic-style
+    version number](https://semver.org).
+
+    For instance, you might choose to use version `v1.0.0` of a Contract
+    such as `UK/NHSE/PatientAddress`.
+
+    Versioning will allow the designs of each Contract to be modified,
+    improved and extended, while offering backwards compatibility and
+    stability for researchers and data providers.
 
 ---8<-- 'includes/glossary.md'
