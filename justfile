@@ -62,13 +62,20 @@ prodenv: requirements-prod
 # a killer feature over Makefiles.
 #
 # ensure dev requirements installed and up to date
-devenv: prodenv requirements-dev
+devenv: prodenv requirements-dev && install-precommit
     #!/usr/bin/env bash
     # exit if .txt file has not changed since we installed them (-nt == "newer than', but we negate with || to avoid error exit code)
     test requirements.dev.txt -nt $VIRTUAL_ENV/.dev || exit 0
 
     $PIP install -r requirements.dev.txt
     touch $VIRTUAL_ENV/.dev
+
+
+# ensure precommit is installed
+install-precommit:
+    #!/usr/bin/env bash
+    BASE_DIR=$(git rev-parse --show-toplevel)
+    test -f $BASE_DIR/.git/hooks/pre-commit || $BIN/pre-commit install
 
 
 # upgrade dev or prod dependencies (all by default, specify package to upgrade single package)
