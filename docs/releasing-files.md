@@ -12,6 +12,7 @@ OpenSAFELY follows the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/
 All data in OpenSAFELY is pseudonymised and all projects and researchers in OpenSAFELY go through an approval process before having any access to the dataset. This ensures the “safe data”, “safe projects” and “safe people” elements of the fives safes framework are met. The application of **disclosure controls** and **output-checking** is part of the “safe outputs” dimension.
 
 Below we cover the 4 key areas of our “safe outputs” activities:
+
 1.  Researchers must only request the release of data necessary to fulfil their project purpose and apply disclosure controls to them.
 2.  Researchers then make a request to release the data using the “release request form”.
 3.  Two OpenSAFELY output checkers review the data being requested for release.
@@ -26,6 +27,7 @@ The assessment of the risk of re-identification attached to a piece of data and 
 
 ### Attribute types
 Datasets made available for analysis may contain the following types of attributes:
+
 *   **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name and date of birth. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis. 
 *   **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
 Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/static/class/5750/papers/Sweeney.pdf) for more detail). This includes information such as age, sex, ethnicity and region of address. In addition, quasi-identifiers can also be confidential attributes that reveal sensitive information about an individual, such as medical diagnoses and prescriptions.
@@ -33,6 +35,7 @@ Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/stati
 ### Types of disclosure
 
 There are different types of disclosure risk associated with the release of data (See: [Duncan, George T. and Diane Lambert. “The Risk of Disclosure for Microdata.” Journal of Business & Economic Statistics 7 (1989): 207-217](https://www.tandfonline.com/doi/pdf/10.1080/07350015.1989.10509729?needAccess=true)): 
+
 *   **Identity disclosure** - the association of a known individual with a data record; a single or small number of data attributes could re-identify the individual. Once an individual has been identified, you can then learn all the other data for that individual.
 *   **Attribute disclosure** - confidential information can be revealed and attributed to a subject.
 *   **Inferential disclosure** - the combination of outputs from the same source to reveal information.
@@ -89,6 +92,7 @@ When applying disclosure controls to your outputs, you should consider the poten
 ### Redacting counts less than or equal to 5
 
 Before requesting files to be released, work through the [moderately sensitive](https://docs.opensafely.org/actions-pipelines/#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
+
 *   Redacting counts <=5 in frequency tables. The whole table, or at a minimum multiple rows within the table, should be redacted because values removed by single cell (or row, or column) redaction could be inferred from unredacted values.
 *   Summaries of numeric variables describing 5 or fewer patients should be redacted.
 *   Graphical figures whose underlying values describe 5 or fewer patients should be redacted. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. Underlying data for plots should be checked.
@@ -110,11 +114,13 @@ If you are unsure about anything, please email us: disclosurecontrol@opensafely.
 #### Guidelines for common output types
 
 There are several existing sets of SDC guidelines covering a range of output type specific considerations including: 
+
 * [Handbook on Statistical Disclosure Control for Outputs](https://securedatagroup.files.wordpress.com/2019/10/sdc-handbook-v1.0.pdf)
 * [ESSNet SDC guidelines for the checking of output based on microdata research](https://research.cbs.nl/casc/ESSnet/GuidelinesForOutputChecking_Dec2009.pdf)
 * [Microdata output guide StatsNZ](https://www.stats.govt.nz/assets/Methods/Microdata-Output-Guide-2020-v5-1.pdf)
 
 There are also resources for extended guidance for analysis methods commonly used in OpenSAFELY:
+
 * Regression outputs:
     [Ritchie, Felix. Output-based disclosure control for regressions” (2012).](https://www2.uwe.ac.uk/faculties/BBS/BUS/Research/economics2012/1209.pdf)
 * Survival analysis: 
