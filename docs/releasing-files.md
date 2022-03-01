@@ -3,19 +3,19 @@
 
 OpenSAFELY follows the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) framework for data access to allow safe and efficient use of data. This framework models data access into 5 independent dimensions:
 
-* Safe projects - does the project make good use of the data?
-* Safe people - are the researchers using the data trustworthy?
-* Safe data - is there potential for individuals to be identified in the data?
-* Safe settings - are there necessary controls on the data?
-* Safe outputs - is there any residual risk in outputs being released from the environment?
+* **Safe projects** - does the project make good use of the data?
+* **Safe people** - are the researchers using the data trustworthy?
+* **Safe data** - is there potential for individuals to be identified in the data?
+* **Safe settings** - are there necessary controls on the data?
+* **Safe outputs** - is there any residual risk in outputs being released from the environment?
 
 All data in OpenSAFELY is pseudonymised and all projects and researchers in OpenSAFELY go through an approval process before having any access to the dataset. This ensures the “safe data”, “safe projects” and “safe people” elements of the fives safes framework are met. The application of **disclosure controls** and **output-checking** is part of the “safe outputs” dimension.
 
 Below we cover the 4 key areas of our “safe outputs” activities:
-1. Researchers must only request the release of data necessary to fulfil their project purpose and apply disclosure controls to them.
-2. Researchers then make a request to release the data using the “release request form”.
-3. Two OpenSAFELY output checkers review the data being requested for release.
-4. OpenSAFELY releases data that meets our disclosure rules to the project area in Jobserver.
+1.  Researchers must only request the release of data necessary to fulfil their project purpose and apply disclosure controls to them.
+2.  Researchers then make a request to release the data using the “release request form”.
+3.  Two OpenSAFELY output checkers review the data being requested for release.
+4.  OpenSAFELY releases data that meets our disclosure rules to the project area in Jobserver.
 
 ## Applying disclosure controls to data you request for release
 
@@ -26,45 +26,45 @@ The assessment of the risk of re-identification attached to a piece of data and 
 
 ### Attribute types
 Datasets made available for analysis may contain the following types of attributes:
-* **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name and date of birth. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis. 
-* **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
+*   **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name and date of birth. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis. 
+*   **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
 Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/static/class/5750/papers/Sweeney.pdf) for more detail). This includes information such as age, sex, ethnicity and region of address. In addition, quasi-identifiers can also be confidential attributes that reveal sensitive information about an individual, such as medical diagnoses and prescriptions.
 
 ### Types of disclosure
 
 There are different types of disclosure risk associated with the release of data (See: [Duncan, George T. and Diane Lambert. “The Risk of Disclosure for Microdata.” Journal of Business & Economic Statistics 7 (1989): 207-217](https://www.tandfonline.com/doi/pdf/10.1080/07350015.1989.10509729?needAccess=true)): 
-* **Identity disclosure** - the association of a known individual with a data record; a single or small number of data attributes could re-identify the individual. Once an individual has been identified, you can then learn all the other data for that individual.
-* **Attribute disclosure** - confidential information can be revealed and attributed to a subject.
-* **Inferential disclosure** - the combination of outputs from the same source to reveal information.
-* **Population disclosure** - released data allows you to learn something about an entire population. 
+*   **Identity disclosure** - the association of a known individual with a data record; a single or small number of data attributes could re-identify the individual. Once an individual has been identified, you can then learn all the other data for that individual.
+*   **Attribute disclosure** - confidential information can be revealed and attributed to a subject.
+*   **Inferential disclosure** - the combination of outputs from the same source to reveal information.
+*   **Population disclosure** - released data allows you to learn something about an entire population. 
 
 ### Primary vs secondary disclosure
 
 Primary disclosure describes the situation where confidential data can be obtained **directly** from the data. An example of primary disclosure can be seen in the table below, where you can learn that only 1 member of the population who is aged 21-30 has heart disease.
 
-|       | **Age band** | **Heart disease** | **Population** |
-|-------|--------------|-------------------|----------------|
-|       | 21-30        | 1                 | 1              |
-|       | 31-40        | 10                | 100            |
-|       | 41-50        | 15                | 90             |
-|       | 51+          | 25                | 85             |
-| Total |              | 51                | 276            |
-|       |              |                   |                |
+|           | **Age band** | **Heart disease** | **Population** |
+|-----------|--------------|-------------------|----------------|
+|           | 21-30        | 1                 | 1              |
+|           | 31-40        | 10                | 100            |
+|           | 41-50        | 15                | 90             |
+|           | 51+          | 25                | 85             |
+| **Total** |              | 51                | 276            |
+|           |              |                   |                |
 
 To prevent primary disclosure, you could choose to redact the value for this individual as done below. 
 
 Secondary disclosure is where an individual's attributes can be indirectly learned using other available information. Ane example of this is shown below, where the column totals can be used to deduce that there is only one individual in the 20-30 age band with heart disease, despite the fact this value was protected from primary disclosure by redacting the value.
 
-|       | **Age band** | **Heart disease** | **Population** |
-|-------|--------------|-------------------|----------------|
-|       | 21-30        | [REDACTED]        | [REDACTED]     |
-|       | 31-40        | 10                | 100            |
-|       | 41-50        | 15                | 90             |
-|       | 51+          | 25                | 85             |
-| Total |              | 51                | 276            |
-|       |              |                   |                |
+|           | **Age band** | **Heart disease** | **Population** |
+|-----------|--------------|-------------------|----------------|
+|           | 21-30        | [REDACTED]        | [REDACTED]     |
+|           | 31-40        | 10                | 100            |
+|           | 41-50        | 15                | 90             |
+|           | 51+          | 25                | 85             |
+| **Total** |              | 51                | 276            |
+|           |              |                   |                |
 
-Secondary disclosure can also occur across different tables involving the same population. In the below tables, showing a breakdown of heart disease by age band in the total population and in Males alone, there are no disclosive small numbers. However, by differencing the values in the two tables, it can be inferred that there is only one female aged 20-30 who has heart disease.
+Secondary disclosure can also occur across different tables involving the same population. In the below tables, showing a breakdown of heart disease by age band in the total population and in males alone, there are no disclosive small numbers. However, by differencing the values in the two tables, it can be inferred that there is only one female aged 20-30 who has heart disease.
 
 | **Total Population** | **Age Band** | **Heart Disease** | **Population** | 
 |----------------------|--------------|-------------------|----------------|
@@ -72,7 +72,7 @@ Secondary disclosure can also occur across different tables involving the same p
 |                      | 31-40        | 10                | 25             |
 |                      | 41-50        | 15                | 30             |
 |                      | 51+          | 25                | 40             |
-| Total                |              | 58                | 115            |
+| **Total**            |              | 58                | 115            |
 |                      |              |                   |                |
 
 | **Male Population** | **Age Band** | **Heart Disease** | **Population** |
@@ -81,7 +81,7 @@ Secondary disclosure can also occur across different tables involving the same p
 |                     | 31-40        | 5                 | 25             |
 |                     | 41-50        | 8                 | 30             |
 |                     | 51+          | 13                | 40             |
-| Total               |              | 33                | 115            |
+| **Total**           |              | 33                | 115            |
 |                     |              |                   |                |
 
 When applying disclosure controls to your outputs, you should consider the potential for both primary and secondary disclosure.
@@ -89,12 +89,12 @@ When applying disclosure controls to your outputs, you should consider the poten
 ### Redacting counts less than or equal to 5
 
 Before requesting files to be released, work through the [moderately sensitive](https://docs.opensafely.org/actions-pipelines/#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
-* Redacting counts <=5 in frequency tables. The whole table, or at a minimum multiple rows within the table, should be redacted because values removed by single cell (or row, or column) redaction could be inferred from unredacted values.
-* Summaries of numeric variables describing 5 or fewer patients should be redacted.
-* Graphical figures whose underlying values describe 5 or fewer patients should be redacted. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. Underlying data for plots should be checked.
-* Counts of zero can be retained.
-* Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. It is very unlikely that outputs such as log files should be required for publication outside the secure environment.
-* Consider rounding of results that could be at risk of secondary disclosure.
+*   Redacting counts <=5 in frequency tables. The whole table, or at a minimum multiple rows within the table, should be redacted because values removed by single cell (or row, or column) redaction could be inferred from unredacted values.
+*   Summaries of numeric variables describing 5 or fewer patients should be redacted.
+*   Graphical figures whose underlying values describe 5 or fewer patients should be redacted. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. Underlying data for plots should be checked.
+*   Counts of zero can be retained.
+*   Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. It is very unlikely that outputs such as log files should be required for publication outside the secure environment.
+*   Consider rounding of results that could be at risk of secondary disclosure.
 
 Where possible it should be clear what has been redacted, so for example do not redact table titles and category names. By convention redactions take the form [REDACTED] to make redacted elements easier to search for.
 
@@ -102,7 +102,8 @@ This current approach to disclosure control is conservative and deliberately red
 
 If you are unsure about anything, please email us: disclosurecontrol@opensafely.org.
 
-Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions. 
+!!! note
+    Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions. 
 
 ### Further reading
 
@@ -124,14 +125,13 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 #### Extended principles
 
 Below are a couple of examples of common secondary disclosure issues encountered when using OpenSAFELY.
-##### Repeated analyses
 
+**Repeated analyses**
 When producing repeated reports at different time points, it is possible that there can be a small change in the number of people in your analysis. E.g. “number of people with condition X receiving treatment Y” increases from N to N+1). Although this is not typically likely to be disclosive, it may carry a small risk on some occasions (e.g. an individual/GP may be able to identify themselves/their patient or believe that that can do so) and therefore should be routinely avoided to minimise burden on output checking. 
  
 The solution for this is to use rounding across the entire report (to the nearest 5, 7, or 10). Rounding eliminates the need for output checkers to compare different versions of the report outputs, as no small increases can occur. It is not likely that rounding will significantly affect the report in any meaningful way. Statistical analyses can be carried out prior to rounding and the results displayed as normal provided they are classed as low risk. If only charts are shown, rounding is not always necessary, but charts should have sufficiently low resolution that any small number changes cannot be precisely determined. However, numbers could be rounded nonetheless, as this would not noticeably affect the figures. 
 
-##### Running similar studies
-
+**Running similar studies**
 There may be cases where you have run an analysis and results have been released following approval from the output checking team, but at a later date you decide you want to make changes to the analysis such as adding an extra code to a codelist. This may result in small changes in the outputs that can be disclosive, ie, <=5 individuals have the new code recorded. In these cases, you may need to wait until there has been enough change in the underlying study population (due to the movement of patients between practices) before rerunning the study.
  
 If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers. 
