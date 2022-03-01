@@ -43,9 +43,9 @@ automatically use the OpenSAFELY stata license.
 
 #### All other external users
 
-If you are not a member of the opensafely GitHub organisation, you will need to provide your own Stata-MP license
+If you are not a member of the opensafely GitHub organisation, you will need to provide your own Stata-MP license. Unfortunately other flavours of Stata are not yet supported; let us know if this is a problem.
 
-First, locate your Stata authorization code as follows:
+First, locate your Stata license string as follows:
 
 Locate a text file, called STATA.LIC (on Windows) or stata.lic (macOS and Linux) which is usually at the top level of the folder of your Stata installation:
 
@@ -53,7 +53,13 @@ Locate a text file, called STATA.LIC (on Windows) or stata.lic (macOS and Linux)
 * On Linux, somewhere like `/usr/local/stata17/`
 * On macOS it's usually in `/Applications/Stata/`
 
+Within that file, you'll find a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`. 
 
+Now set it as an environment variable, for example:
+
+    export STATA_LICENSE='your license string'
+
+The `opensafely` command line software will now automatically use this OpenSAFELY stata license.
 
 ### Python
 
