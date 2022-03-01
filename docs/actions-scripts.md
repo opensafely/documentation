@@ -37,17 +37,17 @@ As Stata is a commercial product, a license key is needed to use it.
 * If you are using Windows, then the `opensafely` command line software will
 automatically use the OpenSAFELY stata license. 
 * If you are using macOS:
-   * Download and install the [github cli tool (`gh`)](https://cli.github.com/)
-   * Run `gh auth login --web`. Select the "HTTPS" option, and follow the instructions
-  * The `opensafely` command line software will now automatically use the OpenSAFELY stata license
+   1. Download and install [GitHub's command-line tool (`gh`)](https://cli.github.com/)
+   2. Run `gh auth login --web`. Select the "HTTPS" option, and follow the instructions
+  * The `opensafely` command line software will now automatically use the OpenSAFELY Stata license
 
 #### All other external users
 
-If you are not a member of the opensafely GitHub organisation, you will need to provide your own Stata-MP license. Unfortunately other flavours of Stata are not yet supported; let us know if this is a problem.
+If you are not a member of the opensafely GitHub organisation, you must provide your own **Stata/MP** license. Unfortunately other Stata flavours are not yet supported; [let us know](how-to-get-help.md) if this is a problem.
 
 First, locate your Stata license string as follows:
 
-Locate a text file, called STATA.LIC (on Windows) or stata.lic (macOS and Linux) which is usually at the top level of the folder of your Stata installation:
+Locate a text file, called `STATA.LIC` (on Windows) or `stata.lic` (macOS and Linux) which is usually at the top level of the folder of your Stata installation:
 
 * On Windows machine it's usually somewhere like `C:\Program Files\Stata17`
 * On Linux, somewhere like `/usr/local/stata17/`
@@ -59,7 +59,7 @@ Now set it as an environment variable, for example:
 
     export STATA_LICENSE='your license string'
 
-The `opensafely` command line software will now automatically use this OpenSAFELY stata license.
+The `opensafely` command line software will now automatically use this Stata license.
 
 ### Python
 
