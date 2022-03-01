@@ -50,7 +50,7 @@ nav:
           - Reusable actions: actions-reusable.md
       - Job server: job-server.md
       - Level 4 server: level-4-server.md
-      - "Safe Outputs" and requesting release of files from the Level 4 server: releasing-files.md
+      - Safe Outputs and requesting release of files from the Level 4 server: releasing-files.md
       - Permissions: permissions.md
   - OpenSAFELY best practice:
       - The DataLab Open Manifesto: open-data-manifesto.md
