@@ -6,3 +6,4 @@ ignore = \
 max-line-length = 88
 per-file-ignores =
     update-version.py:INP001
+    snippets/*:E402
