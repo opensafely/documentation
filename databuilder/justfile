@@ -95,15 +95,21 @@ test: devenv
 
 # runs the format (black), sort (isort) and lint (flake8) check but does not change any files
 check: devenv
-    $BIN/black --check .
-    $BIN/isort --check-only --diff .
-    $BIN/flake8
+    #!/usr/bin/env bash
+    # config lives in the project root, so run commands there
+    cd {{parent_directory(justfile_directory())}}
+    databuilder/$BIN/black --check databuilder/
+    databuilder/$BIN/isort --check-only --diff databuilder/
+    databuilder/$BIN/flake8 databuilder/
 
 
 # fix formatting and import sort ordering
 fix: devenv
-    $BIN/black .
-    $BIN/isort .
+    #!/usr/bin/env bash
+    # config lives in the project root, so run commands there
+    cd {{parent_directory(justfile_directory())}}
+    databuilder/$BIN/black databuilder/
+    databuilder/$BIN/isort databuilder/
 
 
 # Run the dev project
