@@ -19,21 +19,21 @@ and set the population, which is all patients who were born in or after 2000:
 
 ---8<-- 'examples/src-minimal-ehrql-set-population.md'
 
-At this point, we have created a dataset and set the population, but we haven't extracted any data.
+At this point, we have created a dataset and set the population, but we haven't requested any data.
 Let's change that.
-As well as using each patient's year of birth to set the population, we also extract it:
+As well as using each patient's year of birth to set the population, we also request it:
 
----8<-- 'examples/src-minimal-ehrql-extract-year-of-birth.md'
+---8<-- 'examples/src-minimal-ehrql-request-year-of-birth.md'
 
 !!! note
     When we extract the data, the name of the dataset's property will be the name of the table's column.
     For example, rather than writing
 
-    ---8<-- 'examples/src-minimal-ehrql-extract-year-of-birth.md'
+    ---8<-- 'examples/src-minimal-ehrql-request-year-of-birth.md'
 
     we could write
 
-    ---8<-- 'examples/src-minimal-ehrql-extract-birth-year.md'
+    ---8<-- 'examples/src-minimal-ehrql-request-birth-year.md'
 
     to give the column a different name.
 

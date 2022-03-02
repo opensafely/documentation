@@ -16,11 +16,11 @@ dataset = Dataset()
 dataset.set_population(year_of_birth >= 2000)
 # :endsnippet
 
-# :snippet minimal-ehrql-extract-year-of-birth
+# :snippet minimal-ehrql-request-year-of-birth
 dataset.year_of_birth = year_of_birth
 # :endsnippet
 
-# :snippet minimal-ehrql-extract-birth-year
+# :snippet minimal-ehrql-request-birth-year
 dataset.birth_year = year_of_birth
 # :endsnippet
 
