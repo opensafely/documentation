@@ -45,21 +45,19 @@ automatically use the OpenSAFELY stata license.
 
 If you are not a member of the opensafely GitHub organisation, you must provide your own **Stata/MP** license. Unfortunately other Stata flavours are not yet supported; [let us know](how-to-get-help.md) if this is a problem.
 
-First, locate your Stata license string as follows:
+1. Locate your Stata license string as follows:
+   Locate a text file, called `STATA.LIC` (on Windows) or `stata.lic` (macOS and Linux) which is usually at the top level of the folder of your Stata installation:
 
-Locate a text file, called `STATA.LIC` (on Windows) or `stata.lic` (macOS and Linux) which is usually at the top level of the folder of your Stata installation:
+    * On Windows machine it's usually somewhere like `C:\Program Files\Stata17`
+    * On Linux, somewhere like `/usr/local/stata17/`
+    * On macOS it's usually in `/Applications/Stata/`
+2. Within that file, locate a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`. 
+3. Set it as an environment variable using a [method appropriate to your operating system](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/). On Linux or macOS, you'd do it like this:
 
-* On Windows machine it's usually somewhere like `C:\Program Files\Stata17`
-* On Linux, somewhere like `/usr/local/stata17/`
-* On macOS it's usually in `/Applications/Stata/`
+        export STATA_LICENSE='your license string'
 
-Within that file, you'll find a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`. 
+The `opensafely` command line software will now automatically use this Stata license.  
 
-Now set it as an environment variable, for example:
-
-    export STATA_LICENSE='your license string'
-
-The `opensafely` command line software will now automatically use this Stata license.
 
 ### Python
 
