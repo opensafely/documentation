@@ -31,10 +31,33 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 
 We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker GitHub repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
 
-As Stata is a commercial product, a license key is needed to use it. If you are
-a member of the opensafely GitHub organisation, then the tooling will
-automatically use the OpenSAFELY stata license. If not, get in touch if you
-need to apply your own license and we can help.
+As Stata is a commercial product, a license key is needed to use it. 
+
+#### If you are a member of the opensafely GitHub organisation
+* If you are using Windows, then the `opensafely` command line software will
+automatically use the OpenSAFELY stata license. 
+* If you are using macOS:
+   1. Download and install [GitHub's command-line tool (`gh`)](https://cli.github.com/)
+   2. Run `gh auth login --web`. Select the "HTTPS" option, and follow the instructions
+  * The `opensafely` command line software will now automatically use the OpenSAFELY Stata license
+
+#### All other external users
+
+If you are not a member of the opensafely GitHub organisation, you must provide your own **Stata/MP** license. Unfortunately other Stata flavours are not yet supported; [let us know](how-to-get-help.md) if this is a problem.
+
+1. Locate your Stata license string as follows:
+   Locate a text file, called `STATA.LIC` (on Windows) or `stata.lic` (macOS and Linux) which is usually at the top level of the folder of your Stata installation:
+
+    * On Windows machine it's usually somewhere like `C:\Program Files\Stata17`
+    * On Linux, somewhere like `/usr/local/stata17/`
+    * On macOS it's usually in `/Applications/Stata/`
+2. Within that file, locate a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`. 
+3. Set it as an environment variable using a [method appropriate to your operating system](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/). On Linux or macOS, you'd do it like this:
+
+        export STATA_LICENSE='your license string'
+
+The `opensafely` command line software will now automatically use this Stata license.  
+
 
 ### Python
 
