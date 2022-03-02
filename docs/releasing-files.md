@@ -80,11 +80,11 @@ Secondary disclosure can also occur across different tables involving the same p
 
 | **Male Population** | **Age Band** | **Heart Disease** | **Population** |
 |---------------------|--------------|-------------------|----------------|
-|                     | 21-30        | 7                 | 20             |
-|                     | 31-40        | 5                 | 25             |
-|                     | 41-50        | 8                 | 30             |
-|                     | 51+          | 13                | 40             |
-| **Total**           |              | 33                | 115            |
+|                     | 21-30        | 7                 | 19            |
+|                     | 31-40        | 5                 | 15             |
+|                     | 41-50        | 8                 | 18             |
+|                     | 51+          | 13                | 25             |
+| **Total**           |              | 33                | 64            |
 |                     |              |                   |                |
 
 When applying disclosure controls to your outputs, you should consider the potential for both primary and secondary disclosure.
