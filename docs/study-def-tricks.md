@@ -380,4 +380,4 @@ You can then join the outputs of this study definition using a function like thi
     join_ethnicity('output')
 ```
 
-You can find an example of this in [this repo](https://github.com/opensafely/sro-template).
+You can find an example of this in [this repo](https://github.com/opensafely/sro-template) (using Python) or in [this repo](https://github.com/opensafely/covid_mortality_over_time) (using R).
