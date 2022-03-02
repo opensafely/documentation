@@ -3,7 +3,7 @@
 ---8<-- 'includes/data-builder-danger-header.md'
 
 In this tutorial, we will walk through a minimal ehrQL example.
-The example will create a dataset of all patients who were born in or before 2000.
+The example will create a dataset of all patients who were born in or after 2000.
 We will walk through the example step-by-step;
 if you want to see the example in full, then you can [skip to the end](#wrapping-up).
 
@@ -15,7 +15,7 @@ Next, we import and create a dataset
 
 ---8<-- 'examples/src-minimal-ehrql-import-dataset.md'
 
-and set the population, which is all patients who were born in or before 2000:
+and set the population, which is all patients who were born in or after 2000:
 
 ---8<-- 'examples/src-minimal-ehrql-set-population.md'
 
