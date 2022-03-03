@@ -18,7 +18,7 @@ code](https://github.com/opensafely-core/databuilder/blob/main/databuilder/contr
 
 OpenSAFELY Contracts are authored by the OpenSAFELY platform developers:
 the Contract designs are informed by discussion and feedback from [data
-providers](backend-implementer-integration.md) and researchers.
+providers](data-provider-integration.md) and researchers.
 
 Researchers write dataset definitions to access data tables from
 OpenSAFELY backends. All of the data tables available from OpenSAFELY
@@ -34,12 +34,12 @@ reference](contracts-reference.md) to see:
 
 * what data is available in OpenSAFELY backends
 * how the data is structured
-* what that data represents
+* what that data represents and how it should be interpreted
 
 !!! warning
     OpenSAFELY Contracts apply only when accessing OpenSAFELY data using
     *dataset definitions*, written to run with Data Builder. Contracts
-    do not apply to [*study definitions*](study-def.md) written for
+    do not apply to legacy [*study definitions*](study-def.md) written for
     cohort-extractor.
 
 !!! warning
@@ -82,8 +82,9 @@ With OpenSAFELY Contracts, researchers benefit from:
 
 ## Common and Custom Contracts
 
-Data backends that are accessible via OpenSAFELY provide data tables. Each
-data table accessible via OpenSAFELY satisfies an OpenSAFELY Contract.
+Data backends that are accessible via OpenSAFELY provide *data tables*
+that can be referenced in *dataset definitions*. Each data table
+accessible via OpenSAFELY satisfies an OpenSAFELY Contract.
 
 There are two types of Contract:
 

@@ -16,6 +16,10 @@ The most common requests are about library support, and new study definition var
 
 Other than this, you will need to choose the most appropriate repo to submit an issue. If you're not sure where to submit your issue, just ask a question in our [Q&A forum](https://github.com/opensafely/documentation/discussions) and we can point you to the right place.
 
+## Data providers
 
+To discuss making your data available to researchers via the OpenSAFELY
+platform, please [contact our technical
+team](mailto:tech@opensafely.org).
 
 ---8<-- 'includes/glossary.md'

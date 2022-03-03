@@ -41,3 +41,4 @@
 *[OpenSAFELY Contracts]: specifications for the data supplied by different backends; and guidelines and tooling for suppliers wishing to standardise their data.
 *[dataset]: A tabular data structure with one row per patient and one column per variable.
 *[backend]: one of several clinical databases that researchers might query via OpenSAFELY.
+*[data provider]: an operator of a database (in UK data protection law, a data processor) that contains sensitive patient data; who also provides a secure infrastructure for running OpenSAFELY next to that data.
