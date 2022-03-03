@@ -14,10 +14,10 @@
 For a data provider to offer new data for OpenSAFELY, there are two
 technical requirements:
 
-1. The data being offered must satisfy [OpenSAFELY
-   Contracts](contracts-intro.md).
+1. The data being offered must satisfy [existing OpenSAFELY
+   Contracts](data-provider-integration.md#implementing-existing-opensafely-contracts).
 2. The data backend must have an [implementation in OpenSAFELY Data
-   Builder](data-builder-intro.md).
+   Builder](data-provider-integration.md#data-builder-integration-requirements).
 
 ## Implementing existing OpenSAFELY Contracts
 
@@ -25,7 +25,7 @@ The existing [Contracts reference](contracts-reference.md) provides data
 specifications for both OpenSAFELY users and data providers.
 
 An OpenSAFELY backend implements one or more of these specifications.
-Each specification covers a specific health care data domain.
+Each specification covers a specific healthcare data domain.
 
 For each data column in a Contract, the Contract details:
 
@@ -37,33 +37,41 @@ For each data column in a Contract, the Contract details:
 Refer to those specifications when preparing data tables for integration
 with OpenSAFELY.
 
-### What if provided data does not exactly match the relevant Contract?
+### What if the available Contracts are unsuitable for a data provider?
 
 Structuring data in line with OpenSAFELY Contracts makes it easier for
 researchers using OpenSAFELY to run studies across multiple data
-backends. However, there may be administrative or technical reasons why
-data providers cannot satisfy a Contract precisely.
+backends.
 
-Some deviation from the Contract is permitted.
+However, data providers may have:
 
-TODO: What needs to be done if there is deviation? Is this following
-discussion and approval by OpenSAFELY?
+* data in a considerably different structure from existing Contracts
+* data not covered at all by existing Contracts
 
-TODO: What counts as permitted deviation and what counts as a breach of
-the Contract?
+In these cases, a data provider could propose:
 
-## Proposing new OpenSAFELY Contracts
+* amendments to existing OpenSAFELY Contracts, if appropriate.
+* an entirely new OpenSAFELY Contract. This may involve the creation of
+  a new Contract [namespaced](contracts-intro.md#naming-contracts) to your
+  organisation or backend.
 
 !!! note
+    We see the development of OpenSAFELY Contracts as an ongoing
+    process. Each discussion that we have with data providers informs
+    the design of the Contracts. We aim to continue to iterate and
+    improve on the designs of Contracts, while providing stability
+    through [versioning](contracts-intro.md#versioning).
 
+#### Proposing changes to OpenSAFELY Contracts
+
+!!! note
     OpenSAFELY Contracts are still in an initial design and
     implementation phase. We already have designs for additional
     Contracts that will be implemented in future.
 
-If no existing Contract corresponds to a healthcare data domain that you
-wish to offer, [please email our technical team to
-discuss](mailto:tech@opensafely.org). This may involve the creation of a
-new [Custom Contract](contracts-intro.md#common-and-custom-contracts).
+If no existing Contract corresponds to the healthcare data domain that
+your data covers, [please contact our technical team to discuss how we
+can help](how-to-get-help.md#data-providers).
 
 ## Integrating a data backend into OpenSAFELY Data Builder
 

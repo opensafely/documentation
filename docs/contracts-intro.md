@@ -80,36 +80,30 @@ With OpenSAFELY Contracts, researchers benefit from:
     * describes the commonalities of the data offered by different backends
     * notes where individual backends provide data that deviates from others
 
-## Common and Custom Contracts
+## How Contracts work
 
 Data backends that are accessible via OpenSAFELY provide *data tables*
 that can be referenced in *dataset definitions*. Each data table
 accessible via OpenSAFELY satisfies an OpenSAFELY Contract.
 
-There are two types of Contract:
-
-* **Common Contracts** describe data *shared across multiple different
-  OpenSAFELY backends*.
-* **Custom Contracts** describe data *unique to one particular backend*.
-
 Each data backend in OpenSAFELY can choose which of those Contracts to
-satisfy.
+satisfy. The goal is that multiple backends offer data in the same
+structured way to researchers.
 
 !!! note
     Refer to the [available OpenSAFELY data backends
     details](data-backends.md) to see which backends implement which
     contracts.
 
-All Contracts, Common and Custom, share the:
+All Contracts share the:
 
 * same Contract structure, made up of details about data columns
 * same way of accessing associated tables in Data Builder via ehrQL
 
-### Common Contracts
+### Existing Contracts
 
-There will be several different Common Contracts available with the
-initial release of Data Builder. More Common Contracts will be added in
-future.
+There will be several different Contracts available with the initial
+release of Data Builder. More Contracts will be added in future.
 
 !!! warning
     Some backends might deviate slightly from the suggested OpenSAFELY
@@ -117,28 +111,22 @@ future.
     Contracts Reference](contracts-reference.md) for backends you intend
     to access with your dataset definition.
 
-### Custom Contracts
+### More specialised Contracts
 
-Some backends may offer additional data that is not yet
-covered by the related Common Contract, or specialised data that is not covered
-by any Common Contract.
-
-*Custom Contracts* allow individual backends to:
-
-* offer such specialised data in a structured way via OpenSAFELY
-* extend the data offered in a Common Contract, adding, for example,
-  extra columns
+Some backends may offer additional data that is not yet covered by the
+related Contract. Some backends may even offer specialised data not yet
+covered by any Contract. In these cases, a new Contract would be added.
 
 !!! warning
-    Accessing data from a Custom Contract may tie a dataset definition
-    more closely to a specific backend, than if just Common Contracts
-    are used. This may also depend on how the dataset definition is
-    designed.
+    How these more specialised Contracts are labelled is to be fully
+    decided.
 
-!!! note
-    If multiple data providers want to offer data that closely resembles
-    an existing *Custom* Contract, OpenSAFELY developers would consider adding
-    a new *Common* Contract.
+    One possibility being discussed is via [hierarchical
+    naming](#the-scope-of-opensafely-contracts), with a level in the
+    hierarchy indicating:
+
+    * that the Contract is used by a single backend only
+    * and/or indicating the organisation providing that Contract
 
 ## Reading an OpenSAFELY Contract
 
@@ -182,7 +170,7 @@ associated table:
     In future, we aim to automatically validate these constraints. Once
     implemented, this will guarantee the constraints are always true.
 
-### The scope of OpenSAFELY Contracts
+## The scope of OpenSAFELY Contracts
 
 !!! warning
     The currently implemented Contracts are scoped to NHS England data.
@@ -192,26 +180,32 @@ associated table:
     Future Contracts may cover data from other organisations and
     geographic regions.
 
-!!! note
-    This note is provided only as information on the possible
-    development direction of Contracts.
+## Names of Contracts
 
-    Contracts will eventually use a hierarchical naming system to avoid
-    name clashes. Multiple Common Contracts may exist that refer to a
-    similar data topic, but the data in each Contract has a different
-    structure.
+!!! note
+    Contracts are likely to eventually use a hierarchical naming system
+    to:
+
+    * indicate what domain, organisation and geography the Contract
+      relates to
+    * avoid name clashes
+
+    Multiple Contracts may therefore exist that refer to a similar data
+    topic, but the data in each Contract has a different structure.
 
     As a specific example, the current `WIP_PatientAddress` Contract may
     eventually be in a hierarchy such as `UK/NHSE/PatientAddress`. This
-    distinguishes the `PatientAddress` Contract for NHS England, from
+    distinguishes the `PatientAddress` Contract for NHS England, from a
     `PatientAddress` as used by another healthcare organisation, perhaps
-    in another country.
+    in another country, where that data may have considerably different
+    attributes.
 
-### Versioning
+## Versioning
 
 !!! warning
     The initial available batch of OpenSAFELY Contracts do not yet
-    implement versioning and are subject to change.
+    implement versioning. These Contracts are currently subject to
+    change.
 
 !!! note
     This note is provided only as information on the possible
