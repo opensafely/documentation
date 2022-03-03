@@ -4,47 +4,52 @@
 
 ## OpenSAFELY Contracts are a clinical data specification
 
-*OpenSAFELY Contracts* are an important OpenSAFELY concept that is
-introduced with Data Builder.
+An *OpenSAFELY Contract* is a core concept in the OpenSAFELY framework.
+Anyone using Data Builder should familiarise themselves with how
+Contracts work.
 
 This page describes:
 
 * what OpenSAFELY Contracts are
 * how OpenSAFELY Contracts relate to dataset definitions
 
-Each OpenSAFELY Contract is a formal specification — [described in
-code](https://github.com/opensafely-core/databuilder/blob/main/databuilder/contracts/)
-— relating to a particular clinical data domain.
+Each OpenSAFELY Contract is a formal specification relating to a
+particular clinical data domain.
+
+!!! note
+    For researchers, the human-readable version of each Contract is
+    listed in the [Contracts reference](contracts-reference.md).
+
+    For developers working on OpenSAFELY integrations, you can also see
+    how [each Contract is specified in Python
+    code](https://github.com/opensafely-core/databuilder/blob/main/databuilder/contracts/).
+    **It is not necessary to understand the Contract's Python code to be
+    able to use a Contract.**
 
 OpenSAFELY Contracts are authored by the OpenSAFELY platform developers:
 the Contract designs are informed by discussion and feedback from [data
 providers](data-provider-integration.md) and researchers.
 
-Researchers write dataset definitions to access data tables from
-OpenSAFELY backends. All of the data tables available from OpenSAFELY
-satisfy a single OpenSAFELY Contract, regardless of which data provider
-operates the backend.
+### How do OpenSAFELY Contracts fit into OpenSAFELY?
 
-## The OpenSAFELY Contracts reference
+Researchers write [dataset definitions](dataset-definition.md) to access
+data tables from OpenSAFELY backends. This is a simple example of a
+dataset definition that accesses a data table:
 
-The [OpenSAFELY Contracts reference](contracts-reference.md) has full
-details of each individual Contract. When writing a dataset definition,
-researchers should consult [the OpenSAFELY Contracts
-reference](contracts-reference.md) to see:
+---8<-- 'examples/src-minimal-ehrql.md'
 
-* what data is available in OpenSAFELY backends
-* how the data is structured
-* what that data represents and how it should be interpreted
+Dataset definitions are run using OpenSAFELY Data Builder. When running
+the dataset definition against live backends on the OpenSAFELY platform,
+the data requested will then be extracted.
 
-!!! warning
-    OpenSAFELY Contracts apply only when accessing OpenSAFELY data using
-    *dataset definitions*, written to run with Data Builder. Contracts
-    do not apply to legacy [*study definitions*](study-def.md) written for
-    cohort-extractor.
+!!! note
+    The dataset definition is provided as an example only here.
+    You do not need to understand how to write a dataset definition
+    to follow the rest of this page.
 
-!!! warning
-    The OpenSAFELY Contracts are still in development and subject to
-    frequent change.
+**Data tables in OpenSAFELY backends must relate to an OpenSAFELY
+Contract.** Researchers then have guarantees that data from different
+data providers can be accessed and interpreted in a consistent way.
 
 ## The goals of OpenSAFELY Contracts
 
@@ -53,12 +58,12 @@ Contracts make it easier for:
 * *Researchers* to understand what data is available in
   OpenSAFELY and how that data is represented.
 * *Data providers* to structure their data for OpenSAFELY and
-  auto-generated documentation for their service.
+  auto-generate documentation for their service.
 * *OpenSAFELY's developers* to extend OpenSAFELY to additional
   healthcare and clinical data domains in future.
 
 !!! note
-    OpenSAFELY Contracts are a new concept still being explored.
+    OpenSAFELY Contracts are still a new concept under exploration.
 
     We [value
     feedback](https://github.com/opensafely/documentation/discussions)
@@ -87,13 +92,11 @@ that can be referenced in *dataset definitions*. Each data table
 accessible via OpenSAFELY satisfies an OpenSAFELY Contract.
 
 Each data backend in OpenSAFELY can choose which of those Contracts to
-satisfy. The goal is that multiple backends offer data in the same
-structured way to researchers.
+satisfy.
 
 !!! note
-    Refer to the [available OpenSAFELY data backends
-    details](data-backends.md) to see which backends implement which
-    contracts.
+    Refer to the [available OpenSAFELY data backends](data-backends.md)
+    to see which backends implement which Contracts.
 
 All Contracts share the:
 
@@ -122,18 +125,37 @@ covered by any Contract. In these cases, a new Contract would be added.
     decided.
 
     One possibility being discussed is via [hierarchical
-    naming](#the-scope-of-opensafely-contracts), with a level in the
+    naming](#names-of-contracts), with levels in the
     hierarchy indicating:
 
     * that the Contract is used by a single backend only
-    * and/or indicating the organisation providing that Contract
+    * and/or the organisation providing that Contract
 
 ## Reading an OpenSAFELY Contract
 
-!!! note
-    Refer to the [OpenSAFELY Contracts
-    Reference](contracts-intro.md#the-opensafely-contracts-reference) for
-    the details of specific contracts.
+### The OpenSAFELY Contracts reference
+
+The [OpenSAFELY Contracts reference](contracts-reference.md) has full
+details of each individual Contract. When writing a dataset definition,
+researchers should consult [the OpenSAFELY Contracts
+reference](contracts-reference.md) to see:
+
+* the data offered by each OpenSAFELY backend
+* how that data is structured
+* what that data represents
+* how that data should be interpreted
+
+!!! warning
+    The use of OpenSAFELY Contracts applies only when writing *dataset definitions* for Data Builder.
+
+    Contracts do not apply to [*study definitions*](study-def.md) written for
+    our legacy cohort-extractor.
+
+!!! warning
+    OpenSAFELY Contracts are still in development and subject to
+    frequent change.
+
+### The structure of a Contract
 
 Each OpenSAFELY Contract relates to a specific domain of health record
 data. The name of the Contract indicates the data domain covered by the
@@ -154,7 +176,7 @@ associated table:
     * floating point type
     * date type
     * string type
-    * or some other type not in this list
+    * some other type not in this list
 * the **additional constraints on the column's data values**, other than
   those given by the column's type. For instance,
     * the column might be of date type, but all values are the first of

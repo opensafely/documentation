@@ -21,18 +21,14 @@ technical requirements:
 
 ## Implementing existing OpenSAFELY Contracts
 
-The existing [Contracts reference](contracts-reference.md) provides data
-specifications for both OpenSAFELY users and data providers.
-
 An OpenSAFELY backend implements one or more of these specifications.
 Each specification covers a specific healthcare data domain.
 
-For each data column in a Contract, the Contract details:
+The structure of a Contract is explained in the [Contracts
+introduction](contracts-intro.md#the-structure-of-a-contract).
 
-* column name
-* data description
-* data type
-* any constraints
+The [Contracts reference](contracts-reference.md) provides the existing
+data specifications for both OpenSAFELY users and data providers.
 
 Refer to those specifications when preparing data tables for integration
 with OpenSAFELY.
