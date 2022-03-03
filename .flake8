@@ -5,5 +5,5 @@ ignore = \
     W503   # line break before binary operator (black disagrees)
 max-line-length = 88
 per-file-ignores =
-    update-version.py:INP001
-    snippets/*:E402
+    databuilder/update-version.py:INP001
+    databuilder/snippets/*:E402
