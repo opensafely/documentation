@@ -16,6 +16,7 @@ nav:
               - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Registered deaths: dataset-onsdeaths.md
+      - Access policies: access-policies.md
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
