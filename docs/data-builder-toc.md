@@ -32,3 +32,4 @@
 * [OpenSAFELY Contracts introduction](contracts-intro.md)
 * [OpenSAFELY Contracts reference](contracts-reference.md)
 * [OpenSAFELY data backends](data-backends.md)
+* [Guidance for data providers integrating into OpenSAFELY](data-provider-integration.md)

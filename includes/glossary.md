@@ -40,3 +40,5 @@
 *[ehrQL]: electronic health record query language. The language used to extract data for analysis.
 *[OpenSAFELY Contracts]: specifications for the data supplied by different backends; and guidelines and tooling for suppliers wishing to standardise their data.
 *[dataset]: A tabular data structure with one row per patient and one column per variable.
+*[backend]: an individual clinical database that a data provider makes accessible via the OpenSAFELY platform.
+*[data provider]: an operator of a database (in UK data protection law, a data processor) that contains sensitive patient data; who also provides a secure infrastructure for running OpenSAFELY next to that data.
