@@ -38,5 +38,5 @@
 *[Data Builder]: A program that uses dataset definitions to create datasets for analysis.
 *[dataset definition]: A file that specifies the criteria for selecting, and the characteristics of, the population. Used by Data Builder.
 *[ehrQL]: electronic health record query language. The language used by Data Builder to extract datasets for analysis.
-*[OpenSAFELY Contracts]: provide a specification to make clear the data provided by different data backends, and to provide guidelines and tooling for data providers wishing to standardise their data for researchers
+*[OpenSAFELY Contracts]: provide specifications for the data supplied by different backends; and guidelines and tooling for suppliers wishing to standardise their data.
 *[dataset]: A tabular data structure with one row per patient and one column per variable.
