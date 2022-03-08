@@ -385,4 +385,9 @@ for path in path_to_output.iterdir():
     input_other.to_feather(new_path)
 ```
 
-You can find a Python example in [this repo](https://github.com/opensafely/sro-template) and an R example in [this repo](https://github.com/opensafely/sro-template).
+### Research examples
+
+Refer to existing research repositories using this extraction approach:
+
+* [Python code](https://github.com/opensafely/sro-template)
+* [R code](https://github.com/opensafely/covid_mortality_over_time)
