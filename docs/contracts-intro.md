@@ -33,10 +33,10 @@ providers](data-provider-integration.md) and researchers.
 ### How do OpenSAFELY Contracts fit into OpenSAFELY?
 
 Researchers write [dataset definitions](dataset-definition.md) to access
-data tables from OpenSAFELY backends. This is a simple example of a
-dataset definition that accesses a data table:
+data tables from OpenSAFELY backends. This minimal example code
+accesses the `date_of_birth` column in the `patients` data table:
 
----8<-- 'examples/src-minimal-ehrql.md'
+---8<-- 'examples/src-minimal-ehrql-import-patients.md'
 
 Dataset definitions are run using OpenSAFELY Data Builder. When running
 the dataset definition against live backends on the OpenSAFELY platform,
@@ -47,7 +47,7 @@ the data requested will then be extracted.
     You do not need to understand how to write a dataset definition
     to follow the rest of this page.
 
-**Data tables in OpenSAFELY backends must relate to an OpenSAFELY
+**Data tables in OpenSAFELY backends are always related to an OpenSAFELY
 Contract.** Researchers then have guarantees that data from different
 data providers can be accessed and interpreted in a consistent way.
 
@@ -91,17 +91,17 @@ Data backends that are accessible via OpenSAFELY provide *data tables*
 that can be referenced in *dataset definitions*. Each data table
 accessible via OpenSAFELY satisfies an OpenSAFELY Contract.
 
-Each data backend in OpenSAFELY can choose which of those Contracts to
-satisfy.
+Data providers can make data available to OpenSAFELY by choosing the Contracts
+that their backends will satisfy.
 
 !!! note
     Refer to the [available OpenSAFELY data backends](data-backends.md)
     to see which backends implement which Contracts.
 
-All Contracts share the:
+All Contracts share the same:
 
-* same Contract structure, made up of details about data columns
-* same way of accessing associated tables in Data Builder via ehrQL
+* Contract structure, made up of details about data columns
+* way of accessing associated tables in Data Builder via ehrQL
 
 ### Existing Contracts
 
