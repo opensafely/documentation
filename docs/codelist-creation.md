@@ -1,3 +1,25 @@
+There are two ways to build a codelist using OpenCodelists:
+
+1. [Create a codelist from scratch with the builder](https://www.opencodelists.org/docs/#creating-a-codelist-from-scratch)
+2. [Create a codelist from a csv file](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file)
+
+
+The current coding systems available in the OpenCodelists builder are listed below.
+
+| Coding system  | CSV column name |
+| ---- | ---- |
+| [Pseudo BNF](https://ebmdatalab.net/prescribing-data-bnf-codes/)  | `BNFCode`  |
+| CTV3 (Read v3)  | `CTV3Code`  |
+| CTV3 (Read v3) with TPP extensions  | `CTV3Code`  |
+| [Dictionary of Medicines and Devices (dm+d)](https://ebmdatalab.net/what-is-the-dmd-the-nhs-dictionary-of-medicines-and-devices/)  | `DMDCode`  |
+| International Classification of Diseases 10 (ICD-10)  | `ICD10Code`  |
+| Read v2  | `Read2Code`  |
+| SNOMED CT  | `SNOMEDCode`  |
+
+
+Each codelist must use exactly one of these systems.
+
+OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, you can find instructions to manually upload an existing OPCS-4 codelist [here](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
 ## Workflow
 
 The general workflow for creating codelists is as follows:
@@ -37,29 +59,6 @@ The rest of the title should be short and informative.
 
 Discuss and document each decision clearly and comprehensively in the issue. Explain why codes have been included and 
 why codes have been excluded. Link to relevant webpages and documents. Upload files. Involve domain experts. Iterate.
-
-The current coding systems available in opencodelists are listed below.
-
-| Coding system  | CSV column name |
-| ---- | ---- |
-| [Pseudo BNF](https://ebmdatalab.net/prescribing-data-bnf-codes/)  | `BNFCode`  |
-| CTV3 (Read v3)  | `CTV3Code`  |
-| CTV3 (Read v3) with TPP extensions  | `CTV3Code`  |
-| [Dictionary of Medicines and Devices (dm+d)](https://ebmdatalab.net/what-is-the-dmd-the-nhs-dictionary-of-medicines-and-devices/)  | `DMDCode`  |
-| International Classification of Diseases 10 (ICD-10)  | `ICD10Code`  |
-| Read v2  | `Read2Code`  |
-| SNOMED CT  | `SNOMEDCode`  |
-
-
-Each codelist must use exactly one of these systems.
-
-The final codelist must be stored in CSV format to be imported 
-into [OpenCodelists](https://www.opencodelists.org). The codes must be stored in exactly one column.
-There is currently a soft requirement that the codes should be contained in the first column, preferably named according to the CSV column names provided in the table above. The second column is typically a text description of the code. Before uploading a codelist CSV under your OpenSAFELY codelist profile, you should remove the header row as these will be automatically added in a standardised manner.
-
-The codelist page will allow you to upload two columns (a code, and a text description of the code), however, some codelists may require a 'classification' or 'type' column, which classifies the codes into subcategories. For example, when using a codelist for venous thromboemobolism you may wish to classify these codes into deep vein thromboses and pulmonary embolisms, and keep this within a single codelist rather than uploading separate lists for each subcategory of the clinical condition. You can access subcategories of a codelist by using the `filter_codes_by_category` functionality when calling `with_these_clinical_events` as part of your `study_definition`. Uploading more than two columns is currently only possible for the OpenSAFELY core team, so in case this is required for your study please get in touch.
-
-Finally, please avoid filtering on an include or exclude column in Excel when finalising a codelist. Any filters applied will be lost when converted to CSV, and you will end up with all of the codes being uploaded.
 
 
 ## Sign-off
