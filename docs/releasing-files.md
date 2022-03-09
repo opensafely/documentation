@@ -18,7 +18,7 @@ Below we cover the 4 key areas of our “safe outputs” activities:
 3.  Two OpenSAFELY output checkers review the data being requested for release.
 4.  OpenSAFELY releases data that meets our disclosure rules to the project area in Jobserver.
 
-## Applying disclosure controls to data you request for release
+## 1. Applying disclosure controls to data you request for release
 
 The assessment of the risk of re-identification attached to a piece of data and the use of appropriate methods to reduce the disclosure risk is known as **statistical disclosure control (SDC)**. In OpenSAFELY, researchers must apply SDC at the stage where their aggregated results are ready to be outputted from the results server (the Level 4 environment) for sharing with collaborators for feedback, or for publication as papers, reports, blogs, etc. To understand what checks have to be made to outputs it is important to understand the **attribute types** that exist in data and how these could lead to **primary or secondary disclosure**. Importantly, OpenSAFELY only allows the release of data where counts less than 5 are redacted
 
@@ -142,7 +142,7 @@ There may be cases where you have run an analysis and results have been released
  
 If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers. 
 
-## Requesting release of outputs from the server
+## 2. Requesting release of outputs from the server
 
 Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](mailto:datarelease@opensafely.org) and email us at **datarelease@opensafely.org**. For each output wishing to be released you will need to provide a clear contextual description including:
 
@@ -161,16 +161,16 @@ Once you have completed this form, the requested outputs will undergo independen
 
     Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
 
-## How are files reviewed
+## 3. How are files reviewed?
 
-Before any files are released from the secure server, they are checked by two independent trained OpenSAFELY output checkers. Each output is marked as:
+Before any files are released from the secure server, they are checked independently by two trained OpenSAFELY output checkers. Each output is marked as:
 
-* Approve - output meets disclosure requirements and is safe to be released from the server
-* Approve subject to change - output is an acceptable output type but has outstanding disclosure issues that should be addressed before release from the server
-* Reject - output is no an acceptable output type for release. An example is the release of practice level data which does not meet the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
+* **Approve** - output meets disclosure requirements and is safe to be released from the server
+* **Approve subject to change** - output is an acceptable output type but has outstanding disclosure issues that should be addressed before release from the server
+* **Reject** - output is no an acceptable output type for release. An example is the release of practice level data which does not meet the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
 
 Once reviewed, the completed review request will be emailed back to you. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
-## Release of reviewed files
+## 4. Release of reviewed files
 
 All approved OpenSAFELY outputs are released to the workspace they belong to on the [jobserver](https://docs.opensafely.org/job-server/). 
 
