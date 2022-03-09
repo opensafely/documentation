@@ -6,5 +6,5 @@
 mkdocs
 mkdocs-material
 https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/ec2251eb17781a8c1958e879dd5f33bd8df6fb07.zip#mkdocs-opensafely-databuilder
-mkdocstrings
+mkdocstrings[python-legacy]
 opensafely-cohort-extractor
