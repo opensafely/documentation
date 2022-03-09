@@ -163,13 +163,20 @@ Once you have completed this form, the requested outputs will undergo independen
 
 ## How are files reviewed
 
+Before any files are released from the secure server, they are checked by two independent trained OpenSAFELY output checkers. Each output is marked as:
+
+* Approve - output meets disclosure requirements and is safe to be released from the server
+* Approve subject to change - output is an acceptable output type but has outstanding disclosure issues that should be addressed before release from the server
+* Reject - output is no an acceptable output type for release. An example is the release of practice level data which does not meet the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
+
+Once reviewed, the completed review request will be emailed back to you. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
 ## Release of reviewed files
 
-OpenSAFELY output checkers review data on the secure servers. All Output checkers require the OutputChecker role to be added to their jobserver account (contact Louis…… to discuss). Documentation of release process here
+All approved OpenSAFELY outputs are released to the workspace they belong to on the [jobserver](https://docs.opensafely.org/job-server/). 
 
 ### Viewing released outputs
 
-Any outputs approved for release by the output checkers will be released to the workspace they belong to on the jobserver site. These outputs can be shared with project collaborators according or published by following our [data sharing and publication policy](https://policies-for-researchers.opensafely.pages.dev/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Please note that you should check this for each dataset that you have used: rules may vary.
+You can view released outputs by navigating to "Released Outputs" in the "Releases" section of your jobserver workspace. These outputs can be shared with project collaborators and published in line with our [data sharing and publication policy](https://policies-for-researchers.opensafely/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Please note that you should check this for each dataset that you have used: rules may vary.
 
 !!! warning
     Data may only be shared with individuals without Level 4 access after they have been released outside of the secure area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.
