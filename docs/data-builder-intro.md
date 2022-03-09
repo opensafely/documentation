@@ -110,9 +110,6 @@ in the locations specified in the `project.yaml`.
 
 This project will use the dummy data file in place of a real backend.
 
-**TODO: move this YAML to an actual project and include via snippet**
-**TODO: possibly point to that entire project.**
-
 ```yaml title="Minimal Data Builder project YAML example"
 version: '3.0'
 
