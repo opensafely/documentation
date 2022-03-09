@@ -2,9 +2,8 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-This page will be a reference for the [ehrQL](ehrql-intro.md).
+This page is a reference for the [ehrQL](ehrql-intro.md).
 
-It is likely to be derived from the [ehrQL test-based
-specification](https://github.com/opensafely-core/databuilder/tree/main/tests/spec).
+!!! specs
 
 ---8<-- 'includes/glossary.md'
