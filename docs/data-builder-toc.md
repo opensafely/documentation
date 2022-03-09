@@ -19,6 +19,7 @@
 
 * [OpenSAFELY Data Builder introduction](data-builder-intro.md)
 * [Writing a dataset definition](dataset-definition.md)
+* [Supplying a dummy dataset](data-builder-dummy-data.md)
 
 ### ehrQL
 

@@ -118,11 +118,15 @@ version: '3.0'
 
 actions:
 
-  generate_study_population:
-    run: databuilder:v0 generate_cohort --cohort-definition analysis/dataset_definition.py --dummy-data-file input/dummy_data.csv --output output/input.csv
+  generate_dataset:
+    run: >
+      databuilder:v0 generate_dataset
+        --dataset-definition analysis/dataset_definition.py
+        --dummy-data-file dummy_data.csv
+        --output output/dataset.csv
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
+        dataset: output/dataset.csv
 ```
 
 ### Versioning
