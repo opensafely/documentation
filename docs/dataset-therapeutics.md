@@ -28,9 +28,10 @@ Treatment dates may be in the past or future at the point when the form is submi
 ## Datasource-specific glossary
 
 * **date**: From `TreatmentStartDate`. This is entered by the clinician completing the form and may be in the past, future or the same date on which the form is submitted.
-* **therapeutic**: Name of treatment(s) given. Case insensitive when used as a filter. When used as a `returning option`, is a comma-separated string from `Intervention` (removing " and "). 
+* **therapeutic**: Name of treatment(s) given. When used as a `returning` option, is a comma-separated string from `Intervention` (removing " and "). 
 * **region**: The region is one of seven NHS regions, derived from the NHS Trust/site from which the form was submitted.
 * **risk group**: This is present for outpatients only. Derived from tick boxes on the form for Molnupiravir, Sotrovimab and Casivirimab combined into one comma-separated string. May return duplicates to be resolved e.g. "cancer,cancer".
+* **with_these_therapeutics**: As `therapeutic` above. Filters on `Intervention`. Case insensitive. Currently available options: 'remdesivir', 'tocilizumab', 'sarilumab', 'casirivimab and imdevimab', 'molnupiravir', 'sotrovimab', 'paxlovid'.
 * **with_these_statuses**: Filters on `CurrentStatus`. Should be one or more of 'Approved', 'Treatment Complete', 'Treatment Not Started', 'Treatment Stopped'. 
 Case insensitive.
 * **with_these_indications**: Filters on COVID_indication. Should be one or more of 'non-hospitalised', 'hospital_onset', 'hospitalised_with'. 
