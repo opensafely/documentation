@@ -1,5 +1,8 @@
 /en                                      /                        301
 /en/                                     /                        301
+/en/latest                               /                        301
+/en/latest/                              /                        301
+/en/latest/*                             /:splat                  301
 /en/stable                               /                        301
 /en/stable/                              /                        301
 /en/stable/codelist_creation             /codelist-creation/      301
@@ -14,3 +17,4 @@
 /en/stable/snomed/                       /codelist-snomed/        301
 /en/stable/study_definition              /study-def/              301
 /en/stable/study_definition/             /study-def/              301
+/en/stable/*                             /:splat                  301
