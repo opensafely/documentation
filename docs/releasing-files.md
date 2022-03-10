@@ -163,11 +163,11 @@ Once you have completed this form, the requested outputs will undergo independen
 
 ## 3. How are files reviewed?
 
-Before any files are released from the secure server, they are checked independently by two trained OpenSAFELY output checkers. Each output is marked as:
+Before any files are released from the secure server, they are checked independently by two trained OpenSAFELY output checkers. Each checked output is marked as one of the following categories:
 
-* **Approve** - output meets disclosure requirements and is safe to be released from the server
-* **Approve subject to change** - output is an acceptable output type but has outstanding disclosure issues that should be addressed before release from the server
-* **Reject** - output is no an acceptable output type for release. An example is the release of practice level data which does not meet the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
+* **Approve** — output meets disclosure requirements and is safe to be released
+* **Approve subject to change** — output is an acceptable type for release, but has outstanding disclosure issues that must be addressed before release
+* **Reject** — output is not an acceptable type for release. An example is the release of practice level data which does not meet the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
 
 Once reviewed, the completed review request will be emailed back to you. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
 ## 4. Release of reviewed files
