@@ -8,6 +8,12 @@ please do! You can either:
 
 Do not commit changes directly to the main branch.
 
+## Documentation style
+
+When adding or revising text, use [Semantic Line Breaks](https://sembr.org/) rather than fixed length lines.
+With semantic line breaks, the diff is more concise and easier to interpret than with fixed length lines,
+where a single change can propagate through a whole paragraph.
+
 ## Making changes to the study definition variables
 
 Edit the docstrings in the [`patients.py` file in the `cohort-extractor` repository](https://github.com/opensafely-core/cohort-extractor/blob/master/cohortextractor/patients.py).
