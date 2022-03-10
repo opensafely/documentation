@@ -407,7 +407,7 @@ mkdocs-material-extensions==1.0.3 \
 mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/ec2251eb17781a8c1958e879dd5f33bd8df6fb07.zip \
     --hash=sha256:9cdcab8c35c8770e63a9bb1e6514a7984506d2b191dba4b37e6e9c322604cd86
     # via -r requirements.prod.in
-mkdocstrings==0.18.1 \
+mkdocstrings[python-legacy]==0.18.1 \
     --hash=sha256:4053929356df8cd69ed32eef71d8f676a472ef72980c9ffd4f933ead1debcdad \
     --hash=sha256:fb7c91ce7e3ab70488d3fa6c073a4f827cdc319042f682ef8ea95459790d64fc
     # via

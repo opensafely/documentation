@@ -9,6 +9,13 @@ export PIP := BIN + "/python -m pip"
 export COMPILE := BIN + "/pip-compile --allow-unsafe --generate-hashes"
 
 
+# ignore the UserWarning emitted by mkdocstrings about explicitly using its
+# python-legacy extra.  Since this configuration can't be detected by the
+# library we have to ignore the warning.
+# https://github.com/mkdocstrings/mkdocstrings/blob/5867162b2eebf4829d39b6fe74843b60ced05a30/docs/handlers/overview.md#about-the-python-handlers
+export PYTHONWARNINGS := "ignore::UserWarning:mkdocstrings.handlers.python"
+
+
 # list available commands
 default:
     @{{ just_executable() }} --list
