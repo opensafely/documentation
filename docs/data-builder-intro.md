@@ -26,22 +26,15 @@ With Data Builder:
 
 ## Reading the Data Builder documentation
 
-This page explains:
+This page explains how Data Builder fits in with OpenSAFELY projects.
 
-* What Data Builder is
-* How Data Builder relates to the existing cohort-extractor
-* How Data Builder works
+Other documentation pages explain in more detail the concepts to write a
+dataset definition:
 
-Other pages in this section of the documentation discuss:
-
-* Writing Data Builder dataset definitions, covering:
-    * an introduction to dataset definitions
-    * some guidance and examples on common uses of Data Builder
-    * a comprehensive reference to what features the dataset definition
-      language provides
-* OpenSAFELY Contracts.
-
-**TODO: add links when other pages written.**
+* Writing a [dataset definition](dataset-definition.md)
+* The [dataset definition language, ehrQL](ehrql-intro.md)
+* The [OpenSAFELY Contracts](contracts-intro.md) that define what data
+  is available from the various OpenSAFELY data backends.
 
 ## Features of Data Builder
 
@@ -58,7 +51,7 @@ Data Builder uses a *dataset definition* to specify the data to be
 extracted from OpenSAFELY. The dataset definition is written in a
 specific language created for Data Builder: [ehrQL](ehrql-intro.md).
 
-For example, an OpenSAFELY dataset might compromise data on a cohort of
+For example, an OpenSAFELY dataset might comprise data on a cohort of
 patients.
 
 !!! Note "More detail for existing cohort-extractor users"
@@ -69,7 +62,7 @@ patients.
     To extract data, an OpenSAFELY research study would typically use one of:
 
     * Data Builder with a dataset definition
-    * cohort-extractor with a [*study definition*]
+    * cohort-extractor with a [*study definition*](study-def.md)
     
     Dataset definitions have a considerably different structure from the
     study definitions. You will need to refer to the new language to write
@@ -109,9 +102,6 @@ Builder. This project also specifies:
 in the locations specified in the `project.yaml`.
 
 This project will use the dummy data file in place of a real backend.
-
-**TODO: move this YAML to an actual project and include via snippet**
-**TODO: possibly point to that entire project.**
 
 ```yaml title="Minimal Data Builder project YAML example"
 version: '3.0'
@@ -190,13 +180,15 @@ was used by a given study.
 Data Builder is intended to eventually replace the use of
 cohort-extractor in new studies.
 
-* Many features of cohort-extractor are not yet implemented.
+* Many features of cohort-extractor are not yet implemented in Data
+  Builder.
     * The current development approach is to implement a few features in Data
       Builder fully end-to-end.
-    * See the Data Builder reference (**TODO: add link**) for a complete
-      list of supported features.
+    * See the [ehrQL reference](ehrql-reference.md) for a complete list
+      of supported features.
 * Data Builder has no current way to generate dummy data.
-    * You can supply a CSV file containing dummy data to Data Builder.
+    * You can supply a [CSV file containing dummy data](data-builder-dummy-data.md)
+      to Data Builder.
     * It is possible to generate dummy data via the previous
       [cohort-extractor](study-def-expectations.md).
 

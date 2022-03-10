@@ -2,17 +2,11 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-Data Builder offers integration into several data backends.
+When run via the OpenSAFELY platform, Data Builder can extract data from
+OpenSAFELY's available data backends.
 
-TODO: How does someone select backends? Is that entirely via
-job-server?
-
-TODO: Are there any changes users need to make when running on multiple
-backends?
-
-TODO: Is this page really just a specification of how closely the
-different backends adhere to contracts? Can this be automated in future
-somehow?
+This page lists the OpenSAFELY Contracts implemented by each available
+backend.
 
 ## TPP
 !!! backend:TPPBackend
