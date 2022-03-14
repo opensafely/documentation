@@ -163,6 +163,19 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 :::cohortextractor.patients.with_healthcare_worker_flag_on_covid_vaccine_record
 
 
+## Therapeutics
+
+These variables are derived from forms submitted by clinicians to NHS England for 
+patients assessed and approved to receive antivirals/nMABs for COVID-19 in inpatient or outpatient
+settings.
+
+For more information, see the [Therapeutics data section](dataset-therapeutics.md).
+&nbsp;
+
+::: cohortextractor.patients.with_covid_therapeutics
+&nbsp;
+
+
 ## Utility functions
 
 These variables create new variable from existing variables. They do not extract any data directly.
