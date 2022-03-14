@@ -16,6 +16,7 @@ As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, y
 You should be aware that events can be recorded in clinical systems without a date:
 
 - These default to "1900-01-01" in OpenSAFELY but other dates around and before this date are also possible. 
+- In some systems, null values for dates may be recorded with the ceiling value "9999-12-31".
 - These often relate to demographic information; and sometimes events or diagnoses (e.g. Asthma), which may have been imported from other systems, originally recorded on paper, or reported by patients relating to past experiences but not knowing the precise date. 
 - In addition, occasionally "impossible" dates may be recorded by accident; for example far in the future, or before a patient was born.  
  
@@ -59,19 +60,6 @@ The available options (hopefully self-explanatory) are:
 
 Note that NHS financial (reporting) year runs from 1st April to 31st March.
 
-Intervals of time can be added or subtracted from the index date (or from a function applied to the index date).
-The available units are `year(s)`, `month(s)` and `day(s)`.
-For example:
-
-```py
-"index_date + 90 days"
-"first_day_of_month(index_date) + 9 months"
-"index_date - 1 year"
-```
-
-Note that if the index date is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
-An error will also be shown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
-
 Any `index_date` you've defined in your study definition can be overridden in your `project.yaml`, by providing an `--index-date-range` argument, like this:
 
 ```yaml
@@ -86,8 +74,45 @@ actions:
 
 This can also be used to define a range of dates over which to run the study definition, usually when working with [Measures](measures.md).
 
-## Dynamic dates
 
+## Date arithmetic
+
+Intervals of time can be added or subtracted from an index date, from a function applied to the index date, or from a [dynamic date](#dynamic-dates).
+
+The available units are `year(s)`, `month(s)` and `day(s)`.
+For example:
+
+```py
+"index_date + 90 days"
+"first_day_of_month(index_date) + 9 months"
+"index_date - 1 year"
+```
+
+Note that if the index date (or other starting date) is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
+
+An error will also be shown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
+
+When working with dynamic dates, be aware that null dates may be represented by the ceiling date, "9999-12-31".  Adding one day to this date will result in a date outside of the valid range, and will throw an error.  This can be avoided by using `between` in the variable definition to set an upper limit on values that excludes the ceiling date.  
+
+For example, if there are patients will null (represented as "9999-12-31") entries for GP consultations, this will throw an error:
+```py
+contact_date = patients.with_gp_consultations(returning="date", on_or_after="index_date"),
+next_contact_date = patients.with_gp_consultations(
+    returning="date", on_or_after="contact_date + 1 day"
+)
+```
+
+Instead, define the initial contact date with a `between` argument, with an end date far enough in the future to capture any valid dates:
+```py
+contact_date = patients.with_gp_consultations(
+    returning="date", between=["index_date", "2100-12-31"]
+),
+next_contact_date = patients.with_gp_consultations(
+    returning="date", on_or_after="contact_date + 1 day"
+)
+```
+
+## Dynamic dates
 Dates used in variable definitions can also be taken from date variables defined elsewhere in the study definition, rather than using a common fixed value.
 For example, we may want to define a patient's age on their first positive test result, rather than a fixed index date. In this case we first define positive test date as a variable in the study definition, then refer to this variable name in the age definition:
 
