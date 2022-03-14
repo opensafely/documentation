@@ -164,10 +164,6 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 
 
 ## Therapeutics
-!!! warning
-    Therapeutics data can only be used for approved purposes.
-    Please contact your co-pilot, or <team@opensafely.org> if you have any questions.
-
 
 These variables are derived from forms submitted by clinicians to NHS England for 
 patients assessed and approved to receive antivirals/nMABs for COVID-19 in inpatient or outpatient
