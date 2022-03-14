@@ -66,7 +66,10 @@ Any `index_date` you've defined in your study definition can be overridden in yo
 actions:
 
   generate_study_population_1:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01"
+    run: >
+      cohortextractor:latest generate_cohort
+        --study-definition study_definition
+        --index-date-range "2020-01-01"
     outputs:
       highly_sensitive:
         cohort: output/input-2020-01-01.csv
@@ -90,7 +93,7 @@ For example:
 
 Note that if the index date (or other starting date) is 29 February and you add or subtract some number of years which doesn't lead to a leap year, then an error will be thrown.
 
-An error will also be shown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
+An error will also be thrown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
 
 When working with dynamic dates, be aware that null dates may be represented by the ceiling date, "9999-12-31".  Adding one day to this date will result in a date outside of the valid range, and will throw an error.  This can be avoided by using `between` in the variable definition to set an upper limit on values that excludes the ceiling date.  
 
