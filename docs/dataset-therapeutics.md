@@ -1,9 +1,5 @@
 The Therapeutics dataset contains information on COVID treatments used in inpatient and outpatient settings. 
 
-!!! warning
-    Therapeutics data can only be used for approved purposes.
-    Please contact your co-pilot, or <team@opensafely.org> if you have any questions.
-
 ## Metadata
 
 * **Data provider** NHS England 
