@@ -185,7 +185,7 @@ These outputs can be shared with project collaborators and published in line wit
 
 ### Reporting a data breach
 
-If you discover files released to the jobserver that have been insufficiently redacted and still contain sensitive information, you should immediately contact and email the following (providing as much information as possible): Amir Mehrkar (amir.mehrkar@phc.ox.ac.uk); Ben Goldacre (ben.goldacre@phc.ox.ac.uk); [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org); and your co-pilot. Ensure you do not share these files and if they have already been shared please identify as best as possible with whom they have been shared.
+If you discover files released to the jobserver that have been insufficiently redacted and still contain sensitive information, you should immediately contact and email the following (providing as much information as possible): Amir Mehrkar (<amir.mehrkar@phc.ox.ac.uk>); Ben Goldacre (<ben.goldacre@phc.ox.ac.uk>); [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org); and your co-pilot. Ensure you do not share these files and if they have already been shared please identify as best as possible with whom they have been shared.
 
 
 ---8<-- 'includes/glossary.md'
