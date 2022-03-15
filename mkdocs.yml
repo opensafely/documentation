@@ -112,6 +112,7 @@ plugins:
       custom_templates: templates
       watch:
         - examples
+        - public_docs.json
   - mkdocs-opensafely-databuilder
 
 markdown_extensions:
