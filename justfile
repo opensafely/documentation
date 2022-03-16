@@ -30,7 +30,7 @@ clean:
 virtualenv:
     #!/usr/bin/env bash
     # allow users to specify python version in .env
-    PYTHON_VERSION=${PYTHON_VERSION:-python3.7}
+    PYTHON_VERSION=${PYTHON_VERSION:-python3.8}
 
     # create venv and upgrade pip
     test -d $VIRTUAL_ENV || { $PYTHON_VERSION -m venv $VIRTUAL_ENV && $PIP install --upgrade pip; }
