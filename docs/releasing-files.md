@@ -104,7 +104,7 @@ Where possible it should be clear what has been redacted, so for example do not 
 
 This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls. It may be possible for exceptions to be made if they can be justified as being both material important for the study conclusions (i.e. providing significant public benefit)  and having a very low risk of disclosure. This must be discussed with the OpenSAFELY team.
 
-If you are unsure about anything, please email us: disclosurecontrol@opensafely.org.
+If you are unsure about anything, please email us: [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org).
 
 !!! note
     Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions. 
