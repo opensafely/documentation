@@ -1,21 +1,101 @@
 The most common kind of action is a scripted action.
 
 Generally-speaking, you can write whatever code you like as long as it will run successfully on server, and it is possible to [test this locally](actions-pipelines.md#running-your-code-locally).
+
 However, note the following restrictions and guidance:
 
 * **Write analyses in Python, R, or Stata.**
 You can can use more than one language in a single project if necessary.  You can find more information about the available libraries below.
+
 * **Do not write code that requires an internet connection to run.**
 Any research objects (datasets, libraries, etc.) that are retrieved via the internet should be imported to the repo locally first.
 If this is not possible (for instance if the object size is too large to be transferred via GitHub) then get in touch.
+
 * **Avoid code that consumes a lot of time or memory.** The server is not an infinite resource. We can advise on code optimisation if run-times become problematic.  A good strategy is to split your processing into separate project pipeline actions; the job runner can then choose to run them in parallel if sufficient resources are available.
-* **Write code that runs across different platforms.**
-Since code will be run both locally and within a Linux-based Docker environment. In practice, this just means ensuring you use forward-slashes `/` for directories.
+
+* **Write code that runs in the OpenSAFELY platform.**
+Code will be run within a Linux-based Docker environment. In practice, this just means ensuring you use forward-slashes `/` for directories.
+
 * **Structure your code into discrete chunks, both within scripts, and by splitting into different pipeline actions.**
 This helps with:
 	* readability
 	* bug-finding
 	* parallelisation via the project pipeline
+
+
+## Reading and Writing Outputs
+
+Scripted actions can read and write output files that are saved in the workspace. These generally fall into two categories: large files of `highly_sensitive` data to feed into other actions, or smaller `moderately_sensitive` outputs intended for review and release.
+
+
+### Large `highly_sensitive` Output Files
+
+It is important that the right files formats are used for large data files. The wrong formats can waste disk space, execution time, and server memory. The specific formats used vary with language ecosystem, but they should always be compressed.
+
+Note: the `cohortextractor` command produces `csv.gz` outputs, which is the current recommended output to be consumed by all supported languages.
+
+
+=== "Python"
+
+    ```python
+    # read compressed csv output from cohortextractor
+    pd.read_csv("output/input.csv.gz)
+
+    # write compressed feather file
+    df.to_feather("output/model.feather", compression="zstd")
+
+    # read feather file, decompressed automatically
+    pd.read_feather("output/input.feather")
+    ```
+
+=== "R"
+
+    ```r
+    # read compressed csv output from cohortextractor
+    df <- readr::read_csv("output/input.csv.gz")
+
+    # write a compressed feather file
+    arrow::write_feather(df, "output/model.feather", compression = "zstd")
+
+    # read a feather file, decompressed automatically
+    df <- arrow::read_feather("output/input.feather")
+    ```
+
+=== "Stata"
+
+    ```stata
+    // stata cannot handle compressed csv files directly, so unzip first to a plain csv file
+    // the unzipped file will be discarded when the action finishes.
+    !gunzip output/input.csv.gz
+    // now import the uncompressed csv using delimited
+    import delimited using output/input.csv
+
+    // save in compressed dta.gz format
+    gzsave output/model.dta.gz
+
+    // load a compressed .dta.gz file
+    gzload output/input.dta.gz
+
+    ```
+
+### Smaller `moderately_senstive` Output Files
+
+These outputs are marked as `moderately_sensitive` in your `project.yaml`, and are available to view with [Level 4 access](level-4-server.md). They can consist of aggregate summary data, images, or log files for debugging action code.
+
+Due to the fact that Level 4 files need to be reviewed, there are various restrictions placed on sizes and formats of files that can be released
+
+Firstly, only certain formats are supported, in order that the reviewers can properly read the outputs.
+
+| Type | Formats |
+| --- | --- |
+| Text |  `.txt`, `.log`, `.md` |
+| Data | `.csv`, `.tsv`, `.json` |
+| Images | `.png`, `.jpeg`, `.svgz` |
+| Reports | `.html`, `.pdf` |
+
+
+Additionally, there is a maximum file size of 32MB, in order to a) limit the amount of data that can be accessed via Level 4, and b) to ensure review of an output is tractable for reviewers.
+
 
 
 ## Execution environments
@@ -35,7 +115,7 @@ As Stata is a commercial product, a license key is needed to use it.
 
 #### If you are a member of the opensafely GitHub organisation
 * If you are using Windows, then the `opensafely` command line software will
-automatically use the OpenSAFELY stata license. 
+automatically use the OpenSAFELY Stata license. 
 * If you are using macOS:
    1. Download and install [GitHub's command-line tool (`gh`)](https://cli.github.com/)
    2. Run `gh auth login --web`. Select the "HTTPS" option, and follow the instructions
