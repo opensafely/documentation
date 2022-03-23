@@ -326,7 +326,7 @@ study = StudyDefinition(
 Extracting ethnicity can take a long time, as a large number of codes must be mapped to a small number of categories.
 [This codelist](https://www.opencodelists.org/codelist/opensafely/ethnicity/2020-04-27/#full-list), for example, maps 270 codes to both 16 categories and six categories.
 
-If you are extracting variables at multiple index dates (e.g. by week or by month), then extracting a variable like ethnicity, which we don't expect to change over time, is inefficient:
+If we are extracting variables at multiple index dates (e.g. by week or by month), then extracting a variable like ethnicity, which we don't expect to change over time, is inefficient:
 The codes will be mapped to the categories for each index date, when we don't expect them to change from index date to index date.
 Instead, we can:
 
@@ -334,60 +334,17 @@ Instead, we can:
 * Extract the other variables once for each index date
 * Join each index date's extract to the ethnicity extract
 
-The following study definition (`analysis/study_definition_ethnicity.py`) demonstrates how we would extract ethnicity once:
+We could join the extracts with a [scripted action](actions-scripts.md) that we write ourselves.
+Alternatively, we could use [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner#readme), which is a [reusable action](actions-reusable.md).
 
-```python
-study = StudyDefinition(
-    default_expectations={
-        "date": {"earliest": "1900-01-01", "latest": "today"},
-        "rate": "uniform",
-        "incidence": 0.5,
-    },
+Using cohort-joiner has several advantages over writing a scripted action:
 
-    # We extract ethnicity once for all patients, to ensure we don't exclude
-    # any patients.
-    population=patients.all(),
-
-    ethnicity=patients.with_these_clinical_events(
-        ethnicity_codes,  # the codelist
-        returning="category",
-        find_last_match_in_period=True,  # most recent code
-        return_expectations={
-            "category": {"ratios": {"1": 0.2, "2": 0.2, "3": 0.2, "4": 0.2, "5": 0.2}},
-            "incidence": 0.75,
-        },
-    ),
-)
-```
-
-The following [scripted action](actions-scripts.md) (`analysis/join_ethnicity.py`) demonstrates how we would join each index date's extract to the ethnicity extract:
-
-```python
-import pathlib
-
-import pandas
-
-
-path_to_output = pathlib.Path("output")
-
-input_ethnicity = pandas.read_feather(path_to_output / "input_ethnicity.feather")
-
-for path in path_to_output.iterdir():
-    if not path.name.startswith("input") or path.name == "input_ethnicity.feather":
-        continue
-
-    input_other = pandas.read_feather(path)
-    input_other = input_other.merge(input_ethnicity, how="left", on="patient_id")
-
-    # If the old path was "output/input_2021-01-01.feather", then the new
-    # path will be "output/input_2021-01-01_merged.feather".
-    new_path = path_to_output / f"{input_other.stem}_merged{input_other.suffix}"
-    input_other.to_feather(new_path)
-```
-
-### Research examples
-
-Refer to existing research repositories using this extraction approach:
-
-* [Python code](https://github.com/opensafely/sro-template)
-* [R code](https://github.com/opensafely/covid_mortality_over_time)
+* We write less code, which means we have less code to test and less code to maintain.
+  We could think of writing less code as reducing our [opportunity cost](https://en.wikipedia.org/wiki/Opportunity_cost).
+* cohort-joiner uses the same logic as cohort-extractor to save files, meaning that it's compatible with "downstream" actions, such as [the measures framework](measures.md).
+* cohort-joiner uses [an efficient strategy](https://gist.github.com/iaindillingham/4903394b65dc3bad3b54e0eb1cde7ea5) for joining the extracts.
+  This strategy uses roughly 2.9 times less memory than an alternative, previously documented, strategy.
+* cohort-joiner doesn't replace the extracts;
+  instead, it saves the joined extracts in a new output directory.
+  Replacing the extracts makes it harder to construct an audit trail, which reduces computational and analytical transparency;
+  [core principles](index.md) of the OpenSAFELY platform.
