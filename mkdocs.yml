@@ -60,7 +60,9 @@ nav:
       - Publishing your GitHub Repository: publishing-repo.md
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
-      - Code reviews: code-reviews.md
+      - Code reviews:
+          - Using code reviews: code-reviews.md
+          - How to request and complete a code review: code-reviews-pull-request.md
       - Case-control studies: case-control-studies.md
   - Support:
       - How to get help: how-to-get-help.md
