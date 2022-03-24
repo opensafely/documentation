@@ -337,14 +337,19 @@ Instead, we can:
 We could join the extracts with a [scripted action](actions-scripts.md) that we write ourselves.
 Alternatively, we could use [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner#readme), which is a [reusable action](actions-reusable.md).
 
-Using cohort-joiner has several advantages over writing a scripted action:
+Using cohort-joiner has several advantages over writing a scripted action.
+Principally, if we use cohort-joiner, then we write less code, 
+which means we have less code to test and less code to maintain.
+Indeed, we could think of writing less code as reducing our [opportunity cost](https://en.wikipedia.org/wiki/Opportunity_cost).
+In addition:
 
-* We write less code, which means we have less code to test and less code to maintain.
-  We could think of writing less code as reducing our [opportunity cost](https://en.wikipedia.org/wiki/Opportunity_cost).
-* cohort-joiner uses the same logic as cohort-extractor to save files, meaning that it's compatible with "downstream" actions, such as [the measures framework](measures.md).
-* cohort-joiner uses [an efficient strategy](https://gist.github.com/iaindillingham/4903394b65dc3bad3b54e0eb1cde7ea5) for joining the extracts.
+* **Compatibility:**
+  cohort-joiner uses the same logic as cohort-extractor to save files, meaning that it's compatible with "downstream" actions, such as [the measures framework](measures.md).
+* **Efficiency:**
+  cohort-joiner uses [an efficient strategy](https://gist.github.com/iaindillingham/4903394b65dc3bad3b54e0eb1cde7ea5) for joining the extracts.
   This strategy uses roughly 2.9 times less memory than an alternative, previously documented, strategy.
-* cohort-joiner doesn't replace the extracts;
+* **Transparency:**
+  cohort-joiner doesn't replace the extracts;
   instead, it saves the joined extracts in a new output directory.
   Replacing the extracts makes it harder to construct an audit trail, which reduces computational and analytical transparency;
   [core principles](index.md) of the OpenSAFELY platform.
