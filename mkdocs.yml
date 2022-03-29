@@ -55,7 +55,7 @@ nav:
       - Safe Outputs and requesting release of files from the Level 4 server: releasing-files.md
       - Permissions: permissions.md
   - OpenSAFELY best practice:
-      - The DataLab Open Manifesto: open-data-manifesto.md
+      - Bennett Institute Open Manifesto: open-data-manifesto.md
       - Publishing your GitHub Repository: publishing-repo.md
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
@@ -95,7 +95,7 @@ extra:
       link: https://twitter.com/opensafely
       name: OpenSAFELY on Twitter
 
-copyright: © University of Oxford for the DataLab. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to ebmdatalab@phc.ox.ac.uk.
+copyright: © University of Oxford for the Bennett Institute for Applied Data Science. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to ebmdatalab@phc.ox.ac.uk.
 
 plugins:
   - search
