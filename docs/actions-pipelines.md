@@ -58,7 +58,7 @@ You only need to change `version` if you want to take advantage of features of n
 
 The `generate_study_population` action will create the highly sensitive `input.csv` dataset.
 It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment.
-The `run_model` action will run a Stata script called `model.do` based on the the `input.csv` created by the previous action.
+The `run_model` action will run a Stata script called `model.do` based on the `input.csv` created by the previous action.
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
