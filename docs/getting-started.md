@@ -496,7 +496,8 @@ real UK population*"
    $ opensafely run run_all --force-run-dependencies
    ```
 
-   A new `input.csv.gz` file will be created in the `output` folder. Open that
+   A new `input.csv.gz` file will be created in the `output` folder. This is a compressed version of that data.
+   To view it, first run `openasafely unzip output`, then open that
    file (by left-clicking the filename in Visual Studio Code's Explorer, or
    software like Excel). This time, you'll see it now contains synthetic data: an age
    for 1000 randomly generated patients (we'll see shortly how this is defined).
@@ -504,7 +505,7 @@ real UK population*"
 ### Add a chart
 
 **Every** study starts with a *study definition* like the one you just edited.
-When executed, a study definition generates a compressed CSV of patient data.
+When executed, a study definition generates a compressed CSV (`.csv.gz `) of patient data.
 
 A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in

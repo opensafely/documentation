@@ -25,21 +25,24 @@ This helps with:
 
 ## Reading and Writing Outputs
 
-Scripted actions can read and write output files that are saved in the workspace. These generally fall into two categories: large files of `highly_sensitive` data to feed into other actions, or smaller `moderately_sensitive` outputs intended for review and release.
+Scripted actions can read and write output files that are saved in the workspace. These generally fall into two categories:
+* large files of `highly_sensitive` data for use by other actions
+* smaller `moderately_sensitive` outputs for review and release
 
 
-### Large `highly_sensitive` Output Files
+### Large `highly_sensitive` output files
 
 It is important that the right files formats are used for large data files. The wrong formats can waste disk space, execution time, and server memory. The specific formats used vary with language ecosystem, but they should always be compressed.
 
-Note: the `cohortextractor` command produces `csv.gz` outputs, which is the current recommended output to be consumed by all supported languages.
+!!! note
+    The `cohortextractor` command produces `csv.gz` outputs. `csv.gz` is the recommended output format.
 
 
 === "Python"
 
     ```python
     # read compressed csv output from cohortextractor
-    pd.read_csv("output/input.csv.gz)
+    pd.read_csv("output/input.csv.gz")
 
     # write compressed feather file
     df.to_feather("output/model.feather", compression="zstd")
@@ -78,13 +81,18 @@ Note: the `cohortextractor` command produces `csv.gz` outputs, which is the curr
 
     ```
 
-### Smaller `moderately_senstive` Output Files
+### Smaller `moderately_sensitive` output files
 
-These outputs are marked as `moderately_sensitive` in your `project.yaml`, and are available to view with [Level 4 access](level-4-server.md). They can consist of aggregate summary data, images, or log files for debugging action code.
+These outputs are marked as `moderately_sensitive` in your `project.yaml`, and are available to view with [Level 4 access](level-4-server.md). Outputs can be:
+* aggregate summary data
+* images
+* log files for debugging action code
 
 Due to the fact that Level 4 files need to be reviewed, there are various restrictions placed on sizes and formats of files that can be released
 
-Firstly, only certain formats are supported, in order that the reviewers can properly read the outputs.
+#### File format restrictions
+
+These are restricted so that reviewers can properly examine the outputs on the secure server.
 
 | Type | Formats |
 | --- | --- |
@@ -93,10 +101,12 @@ Firstly, only certain formats are supported, in order that the reviewers can pro
 | Images | `.png`, `.jpeg`, `.svgz` |
 | Reports | `.html`, `.pdf` |
 
+#### File size restrictions
 
-Additionally, there is a maximum file size of 32MB, in order to a) limit the amount of data that can be accessed via Level 4, and b) to ensure review of an output is tractable for reviewers.
+There is a maximum file size of 32 MB to:
 
-
+* limit the amount of data that can be accessed via Level 4
+* allow a thorough review of the outputs in a reasonable time
 
 ## Execution environments
 
