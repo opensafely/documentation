@@ -118,6 +118,7 @@ For more information, see the [CPNS data section](dataset-cpns.md).
 ::: cohortextractor.patients.with_death_recorded_in_cpns
 &nbsp;
 
+
 ## ONS deaths
 These variables are derived from the Death Registry data provided by the Office for National Statistics.
 For more information, see the [ONS deaths section](dataset-onsdeaths.md).
@@ -127,6 +128,19 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_these_codes_on_death_certificate
+&nbsp;
+
+
+## ONS CIS
+!!! warning
+    ONS CIS data can only be used if the ONS governance board has approved the project.
+    Please contact your co-pilot, or <team@opensafely.org> if you have any questions.
+
+These variables are derived from the COVID-19 Infection Survey data provided by the Office for National Statistics.
+For more information, see the [ONS CIS section](dataset-onscis.md).
+&nbsp;
+
+::: cohortextractor.patients.with_an_ons_cis_record
 &nbsp;
 
 

@@ -1,6 +1,7 @@
 
 This page lists significant improvements to the platform since June 2021, with the most recent at the top. We suggest you check it regularly.
 
+* 2022-04-05: Added support for querying the ONS CIS dataset with `patients.with_an_ons_cis_record` [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.with_an_ons_cis_record), [#748](https://github.com/opensafely-core/cohort-extractor/pull/773)
 * 2022-03-08: Added support for returning _total_bed_days_in_period_ and _total_critical_care_days_in_period_ from `admitted_to_hospital` [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.admitted_to_hospital), [#748](https://github.com/opensafely-core/cohort-extractor/pull/748)
 * 2022-01-28: Added ability to query a patient's _place_of_death_ (TPP backend only) [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.with_these_codes_on_death_certificate), [#728](https://github.com/opensafely-core/cohort-extractor/pull/728)
 * 2022-01-27: Extended `mean_recorded_value` to support querying for mean recorded value across a full date range, as well as the most recent day of measurement. [docs](https://docs.opensafely.org/study-def-variables/#cohortextractor.patients.mean_recorded_value).  
