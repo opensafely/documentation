@@ -1,20 +1,29 @@
 ## How to ask for a review
 
-GitHub has a feature built into the workflow that allows easy code review with collaborators, and we would recommend 
+GitHub has a feature built into the workflow that allows easy code review with collaborators, and we would recommend
 that you use this tool. GitHub has some [documentation on pull requests and code reviews](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews) which we recommend for background reading.
 
 ![An example of GitHub's pull request feature.](./images/code-review-main.png)
 
 In this screenshot, the user is making a new pull request. In the top right-hand corner (marked by the
-red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review. 
+red box), there is a tagging function under Reviewers where you can search or select collaborators to do a code review.
 Once you have tagged them and made the pull request, the person will receive a notification to their
 email, and it will also come up in the pull request section of their GitHub main screen.
 
 ![An example of a pull request description as shown on GitHub.](./images/pr-desc.png)
 
-It is strongly encouraged to add some information to 
-your request to aid the reviewer. 
- 
+It is strongly encouraged to add some information to
+your request to aid the reviewer.
+
+## When to ask for code review?
+
+A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to
+merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to main, there is a natural inflexion point to do a code review, and each merge should be
+accompanied with a code review. If you are in a hurry, and no-one has time to do a more thorough
+code review, bear in mind that even a cursory code review is better than no code review.
+
+Merging a new branch should not be your only trigger for a review. If you are stuck or unsure what direction to take, a code review can clarify what path to take. In general, the more frequent the reviews, the better quality the code tends to be.
+
 ## How can I write a good pull request?
 
 Some best practice gathered from current users of OpenSAFELY are described below:
