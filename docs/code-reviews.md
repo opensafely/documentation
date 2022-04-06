@@ -1,17 +1,27 @@
 ## What is a code review?
 
-A code review is a critical quality assurance practice. It involves systematically
-checking a fellow programmer's (or researcher's) code for potential errors or possible 
-improvements. 
+A code review is a critical quality assurance practice, commonly used in software development.
 
-It is an everyday activity in the software development world and improves
-both quality and speed in programming. Code reviews also offer opportunities for both code author and code reviewer to learn from each other. Code reviews are standard practice within OpenSAFELY studies and the default should be to always get your code reviewed.
+A code review typically involves:
 
-## When to ask for code review?
+1. checking a fellow programmer's (or researcher's) code for potential errors or possible improvements
+2. providing constructive feedback to the author
 
-Code reviews should be the default. A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to 
-merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to main, there is a natural inflexion point to do a code review, and each merge should be 
-accompanied with a code review. If you are in a hurry, and no-one has time to do a more thorough 
-code review, bear in mind that even a cursory code review is better than no code review. 
+Code reviews are standard practice within OpenSAFELY studies.
+When making changes to study code, you should always have your proposed changes reviewed.
 
-Merging a new branch should not be your only trigger for a review. If you are stuck or unsure what direction to take, a code review can clarify what path to take. In general, the more frequent the reviews, the better quality the code tends to be. 
+!!! note
+    There is [more information on how to request and conduct code reviews](code-reviews-pull-request.md) in this documentation.
+
+### Benefits of code review for authors and reviewers
+
+Code reviews are learning and collaboration opportunities for both author and reviewer:
+
+* *Authors* benefit from having reviewers look at the proposed changes, because the reviewer might:
+  * spot bugs
+  * think of wider considerations outside the code change being changed
+  * think of alternative solutions that could be an improvement
+* *Reviewers* benefit from seeing a particular code implementation:
+  * the reviewer may be less familiar with the project
+    (but, for critical changes, it is useful to have a reviewer be someone more familiar with the code)
+  * the reviewer may learn about programming language features, styles or idioms they did not know
