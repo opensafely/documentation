@@ -96,8 +96,8 @@ You should use your own best judgement when reviewing to consider *what* should 
 ## What actions can we take as a team to encourage code reviews?
 
 - Those in leadership roles should volunteer their time to:
-  - do code reviews
-  - help find code reviewers
-  - help embed the culture of code-reviews widely
+    - do code reviews
+    - help find code reviewers
+    - help embed the culture of code-reviews widely
 - New projects can have a "buddy" who can help to review the code,
   and means they will be familiar with the protocol and code changes from the start.
