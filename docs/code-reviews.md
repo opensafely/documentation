@@ -11,7 +11,7 @@ Code reviews are standard practice within OpenSAFELY studies.
 When making changes to study code, you should always have your proposed changes reviewed.
 
 !!! note
-    There is [more information on how to request and conduct code reviews](code-reviews-pull-request.md) in this documentation.
+    There is more information on how to request and conduct code reviews for [authors](code-reviews-for-authors.md) and [reviewers](code-reviews-for-reviewers.md) in this documentation.
 
 ### Benefits of code review for authors and reviewers
 
