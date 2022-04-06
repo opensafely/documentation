@@ -61,7 +61,7 @@ nav:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews:
-          - Using code reviews: code-reviews.md
+          - About code reviews: code-reviews.md
           - How to request a code review: code-reviews-for-authors.md
           - How to review code: code-reviews-for-reviewers.md
       - Case-control studies: case-control-studies.md
