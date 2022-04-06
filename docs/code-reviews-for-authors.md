@@ -1,3 +1,12 @@
+## When to ask for code review?
+
+A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to
+merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to main, there is a natural inflexion point to do a code review, and each merge should be
+accompanied with a code review. If you are in a hurry, and no-one has time to do a more thorough
+code review, bear in mind that even a cursory code review is better than no code review.
+
+Merging a new branch should not be your only trigger for a review. If you are stuck or unsure what direction to take, a code review can clarify what path to take. In general, the more frequent the reviews, the better quality the code tends to be.
+
 ## How to ask for a review
 
 GitHub has a feature built into the workflow that allows easy code review with collaborators, and we would recommend
@@ -20,15 +29,6 @@ It is strongly encouraged to add some information to the opening message in your
 * inform the reviewer what your changes are
 * act as a reference for anyone else interested in what changes are proposed
 * act as a historical record for anyone looking back at why the changes were made
-
-## When to ask for code review?
-
-A good way of conceptualising when to ask for a review is to think about commits and branches. All your work should be done in branches and you should aim to
-merge your branches frequently. A user makes a branch to change a feature or adding some new analysis and make several commits to the new branch. When the time comes to merge this back to main, there is a natural inflexion point to do a code review, and each merge should be
-accompanied with a code review. If you are in a hurry, and no-one has time to do a more thorough
-code review, bear in mind that even a cursory code review is better than no code review.
-
-Merging a new branch should not be your only trigger for a review. If you are stuck or unsure what direction to take, a code review can clarify what path to take. In general, the more frequent the reviews, the better quality the code tends to be.
 
 ## How can I write a good pull request?
 
