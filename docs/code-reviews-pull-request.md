@@ -43,7 +43,23 @@ will help your reviewer do a better job quicker.
 ![An example of a good commit message as shown on GitHub.](./images/good-pr-pic.png)
 
 ## How can I be a good reviewer?
-Some best practices gathered from current users of OpenSAFELY are described below:
+
+### How to perform a code review
+
+Each code review might differ in exactly how it is carried out.
+
+!!! note
+    Google have some [useful question prompts](https://google.github.io/eng-practices/review/reviewer/looking-for.html) for reviewers to consider. "CL" in that document means "changelist": you can think of "pull request" in place of "changelist".
+
+#### Resources you have available to you to evaluate the changes
+
+* The code itself, including any comments. The changes itself should usually be examined by the reviewer. In unusual cases,
+* Commit messages in the code. These may give extra context for the reasoning behind changes.
+* Comments made in any GitHub issue threads associated or the pull request.
+* Running the code to see if the changes.
+* Checking there are no newly failing tests because of. These should
+
+### Some suggestions from current users of OpenSAFELY are described
 
 - Code review should be a collaborative conversation and don't be afraid to check assumptions or clarify intentions within the review (you can add messages to the end of the review request).
 - Actionable feedback with suggestions is helpful.
