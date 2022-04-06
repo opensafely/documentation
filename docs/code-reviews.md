@@ -26,3 +26,12 @@ Code reviews are learning and collaboration opportunities for both author and re
       (but, for critical changes,
       it is useful to have a reviewer be someone more familiar with the code)
     * the reviewer may learn about programming language features, styles or idioms they did not know
+
+## What actions can we take as a team to encourage code reviews?
+
+- Those in leadership roles should volunteer their time to:
+    - do code reviews
+    - help find code reviewers
+    - help embed the culture of code-reviews widely
+- New projects can have a "buddy" who can help to review the code,
+  and means they will be familiar with the protocol and code changes from the start.
