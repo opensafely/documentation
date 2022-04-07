@@ -10,13 +10,14 @@ nav:
           - SystmOne primary care: dataset-systmone.md
           - EMIS primary care: dataset-emis.md
           - Externally linked data:
+              - Covid-19 infection survey: dataset-onscis.md
               - Covid-19 test results: dataset-sgsscovid.md
+              - Covid-19 therapeutics: dataset-therapeutics.md
               - Emergency attendances: dataset-ecds.md
               - Hospital admissions: dataset-apc.md
-              - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - In-hospital deaths (covid-19 only): dataset-cpns.md
+              - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - Registered deaths: dataset-onsdeaths.md
-              - Covid-19 therapeutics: dataset-therapeutics.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
   - Getting Started guide: getting-started.md
