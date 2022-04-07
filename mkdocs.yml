@@ -68,7 +68,7 @@ nav:
       - Requesting new libraries: requesting-libraries.md
       - Requesting study definition variables: requesting-variables.md
       - Updating the documentation: updating-the-docs.md
-  - Platform News: news.md
+  - Platform News: https://www.opensafely.org/changelog/
 
 theme:
   name: material
