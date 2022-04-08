@@ -144,11 +144,14 @@ If you are likely to release data multiple times, e.g. for initial discussion wi
 
 ## 2. Requesting release of outputs from the server
 
-Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY_Output_Review_Form_15_11_21.docx) and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
+Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY_Output_Review_Form_07-04-22.docx) and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. Variable descriptions
 2. A description and count of the underlying population for each output.
 3. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
+
+!!! note
+    Only the following file types will be reviewed: HTML; TXT; CSV; TSV; SVG; JPG; JSON; PNG. (Email datarelease@opensafely.org if you need additional file types).
 
 Once you have completed this form, the requested outputs will undergo independent review by two OpenSAFELY output checkers who will check that the outputs are within the scope of your original project proposal and that they do not present any disclosure risks. **Please allow up to 1 week for feedback on your request**.
 
