@@ -21,6 +21,7 @@ nav:
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
   - Getting Started guide: getting-started.md
+  - Apply for access: apply-for-access.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - GitHub repositories: repositories.md
