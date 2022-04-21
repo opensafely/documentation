@@ -18,6 +18,7 @@ nav:
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Intensive care admissions (covid-19 only): dataset-icnarc.md
               - Registered deaths: dataset-onsdeaths.md
+              - UK Renal Registry: dataset-ukrr.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
   - Getting Started guide: getting-started.md
