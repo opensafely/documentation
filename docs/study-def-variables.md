@@ -172,8 +172,8 @@ These variables are derived from the Secondary Uses Services (SUS) data, and the
 ## UK Renal Registry
 Data on patients under secondary renal care (advanced chronic kidney disease stages 4 and 5, dialysis, and kidney transplantation) are held at the UK Renal Registry (UKRR).
 
-:::cohortextractor.with_record_in_ukrr
-
+::: cohortextractor.patients.with_record_in_ukrr
+&nbsp;
 
 ## NHS England COVID-19 data store
 (Documentation on the source of this data will be forthcoming later.)
