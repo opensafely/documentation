@@ -1,3 +1,11 @@
+## Background
+
+Data extracts often use an "index date" to define variables such as age, or presence of comorbidities at the start of a study.
+This can either be a fixed date (e.g. "2020-02-01") or a date that varies between patients, also known as [dynamic dates](https://docs.opensafely.org/study-def-dates/#dynamic-dates) (e.g. the date that people were hospitalised).
+However, some studies that use dynamic index dates for a "case" population and then have a matched "control" comparator group.
+Because the control group by definition doesn't have the event of interest, the convention is for them to inherit the index date from their matched "case".
+The process to extract data for such a matched case-control population in OpenSAFELY is described below.
+
 !!! warning
 
     At present, only the [OpenSAFELY TPP backend](dataset-systmone.md) supports case-control studies.
