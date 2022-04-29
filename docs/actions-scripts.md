@@ -53,9 +53,9 @@ If you are not a member of the opensafely GitHub organisation, you must provide 
     * On macOS it's usually in `/Applications/Stata/`
 2. Within that file, locate a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`. 
 3. Set it as an environment variable using a [method appropriate to your operating system](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/). On Linux or macOS, you'd do it like this:
-
+        ```bash
         export STATA_LICENSE='your license string'
-
+        ```  
 The `opensafely` command line software will now automatically use this Stata license.  
 
 
