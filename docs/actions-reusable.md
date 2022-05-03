@@ -37,6 +37,14 @@ The `config` property, which is optional, describes configuration options.
 
 ## Developing reusable actions
 
+!!! note
+    If you're thinking about developing a reusable action, then start by creating a new study within the [`opensafely`](https://github.com/opensafely) organisation that encapsulates the problem.
+    As a minimum, the study should [extract](actions-cohortextractor.md) and operate on a cohort:
+    indeed, the code that operates on the cohort *is* the reusable action.
+
+    At this point, you should [open an issue](https://github.com/opensafely-actions/.github/issues).
+    Below, we describe how to convert the study into a reusable action.
+
 A reusable action is a public repo within the [`opensafely-actions`](https://github.com/opensafely-actions) organisation.
 It has a `main` branch, which is the release branch;
 versions are marked with [tags](http://git-scm.com/book/en/v2/Git-Basics-Tagging).
