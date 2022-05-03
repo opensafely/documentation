@@ -102,6 +102,12 @@ check: devenv
     databuilder/$BIN/isort --check-only --diff databuilder/
     databuilder/$BIN/flake8 databuilder/
 
+    # check Python can execut each example, this catches import errors which
+    # snex doesn't
+    for f in $(find databuilder/snippets -type f); do
+        databuilder/$BIN/python $f
+    done
+
 
 # fix formatting and import sort ordering
 fix: devenv
