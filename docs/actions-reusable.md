@@ -1,6 +1,6 @@
 Like [scripted actions](actions-scripts.md), reusable actions are logical units of analytic code.
 However, whereas a scripted action is written to solve a problem for one study and must be copied-and-pasted to solve a similar problem for another study, a reusable action is written to solve a problem for several studies *without copying-and-pasting between them*.
-This makes reusable actions ideal for tasks that must be completed by several studies, such as producing cross-tabulations, summary statistics, or deciles charts.
+This makes reusable actions ideal for tasks that must be completed by several studies, such as joining cohorts or producing deciles charts.
 
 ## Running reusable actions
 
