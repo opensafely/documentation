@@ -50,7 +50,7 @@ nav:
       - Actions:
           - Overview: actions-intro.md
           - The project pipeline: actions-pipelines.md
-          - The `cohortextractor` action: actions-cohortextractor.md
+          - The cohortextractor action: actions-cohortextractor.md
           - Scripted actions: actions-scripts.md
           - Reusable actions: actions-reusable.md
       - Job server: job-server.md
