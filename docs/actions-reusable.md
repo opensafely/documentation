@@ -80,7 +80,4 @@ When developing a reusable action, just as when developing a scripted action, th
 * The Stata runtime is provided by [`stata-docker`](https://github.com/opensafely-core/stata-docker).
   Its dependencies are in [*libraries*](https://github.com/opensafely-core/stata-docker/tree/main/libraries).
 
-To develop a Python reusable action, consider using the [`python-action-template`](https://github.com/opensafely-actions/python-action-template) repo.
-This repo goes beyond the minimal structure, making it easier to develop a Python reusable action than starting from scratch.
-
 ---8<-- 'includes/glossary.md'
