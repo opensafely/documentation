@@ -1,6 +1,6 @@
 Like [scripted actions](actions-scripts.md), reusable actions are logical units of analytic code.
 However, whereas a scripted action is written to solve a problem for one study and must be copied-and-pasted to solve a similar problem for another study, a reusable action is written to solve a problem for several studies *without copying-and-pasting between them*.
-This makes reusable actions ideal for tasks that must be completed by several studies, such as producing cross-tabulations, summary statistics, or deciles charts.
+This makes reusable actions ideal for tasks that must be completed by several studies, such as joining cohorts or producing deciles charts.
 
 ## Running reusable actions
 
@@ -36,6 +36,14 @@ It comprises the name and the version of the reusable action, and, optionally, o
 The `config` property, which is optional, describes configuration options.
 
 ## Developing reusable actions
+
+!!! note
+    If you're thinking about developing a reusable action, then start by creating a new study within the [`opensafely`](https://github.com/opensafely) organisation that encapsulates the problem.
+    As a minimum, the study should [extract](actions-cohortextractor.md) and operate on a cohort:
+    indeed, the code that operates on the cohort *is* the reusable action.
+
+    At this point, you should [open an issue](https://github.com/opensafely-actions/.github/issues).
+    Below, we describe how to convert the study into a reusable action.
 
 A reusable action is a public repo within the [`opensafely-actions`](https://github.com/opensafely-actions) organisation.
 It has a `main` branch, which is the release branch;
@@ -79,8 +87,5 @@ When developing a reusable action, just as when developing a scripted action, th
   Its dependencies are in [*packages.csv*](https://github.com/opensafely-core/r-docker/blob/master/packages.csv).
 * The Stata runtime is provided by [`stata-docker`](https://github.com/opensafely-core/stata-docker).
   Its dependencies are in [*libraries*](https://github.com/opensafely-core/stata-docker/tree/main/libraries).
-
-To develop a Python reusable action, consider using the [`python-action-template`](https://github.com/opensafely-actions/python-action-template) repo.
-This repo goes beyond the minimal structure, making it easier to develop a Python reusable action than starting from scratch.
 
 ---8<-- 'includes/glossary.md'
