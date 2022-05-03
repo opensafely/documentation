@@ -261,9 +261,9 @@ mkdocs-autorefs==0.3.1 \
     --hash=sha256:12baad29359f468b44d980ed35b713715409097a1d8e3d0ef90962db95205eda \
     --hash=sha256:f0fd7c115eaafda7fb16bf5ff5d70eda55d7c0599eac64f8b25eacf864312a85
     # via mkdocstrings
-mkdocs-material==8.2.11 \
-    --hash=sha256:4a3631ba22cff7ceca00c39465a8db5b2116fcd74f3abd82b801f7711cceb699 \
-    --hash=sha256:af6bbd608a54b8493cb5fa0d2f2cf29cde3bf348837ab718afb1be0a8bea6509
+mkdocs-material==8.2.13 \
+    --hash=sha256:2666f1d7d6a8dc28dda1e777f77add12799e66bd00250de99914a33525763816 \
+    --hash=sha256:505408fe001d668543236f5db5a88771460ad83ef7b58826630cc1f8b7e63099
     # via -r requirements.prod.in
 mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
@@ -437,13 +437,13 @@ pyarrow==6.0.1 \
     --hash=sha256:f150b4f222d0ba397388908725692232345adaa8e58ad543ca00f03c7234ae7b \
     --hash=sha256:fab8132193ae095c43b1e8d6d7f393451ac198de5aaf011c6b576b1442966fec
     # via opensafely-cohort-extractor
-pygments==2.10.0 \
-    --hash=sha256:b8e67fe6af78f492b3c4b3e2970c0624cbf08beb1e493b2c99b9fa1b67a20380 \
-    --hash=sha256:f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6
+pygments==2.12.0 \
+    --hash=sha256:5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb \
+    --hash=sha256:dc9c10fb40944260f6ed4c688ece0cd2048414940f1cea51b8b226318411c519
     # via mkdocs-material
-pymdown-extensions==9.1 \
-    --hash=sha256:74247f2c80f1d9e3c7242abe1c16317da36c6f26c7ad4b8a7f457f0ec20f0365 \
-    --hash=sha256:b03e66f91f33af4a6e7a0e20c740313522995f69a03d86316b1449766c473d0e
+pymdown-extensions==9.4 \
+    --hash=sha256:1baa22a60550f731630474cad28feb0405c8101f1a7ddc3ec0ed86ee510bcc43 \
+    --hash=sha256:5b7432456bf555ce2b0ab3c2439401084cda8110f24f6b3ecef952b8313dfa1b
     # via
     #   mkdocs-material
     #   mkdocstrings
