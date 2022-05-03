@@ -189,8 +189,8 @@ numpy==1.22.1 \
     --hash=sha256:e60ef82c358ded965fdd3132b5738eade055f48067ac8a5a8ac75acc00cad31f \
     --hash=sha256:f8ad59e6e341f38266f1549c7c2ec70ea0e3d1effb62a44e5c3dba41c55f0187
     # via pandas
-opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.29.0.zip \
-    --hash=sha256:eec421f9422abadad053d43f735177309326c42aac58298263f72c1142d6f7da
+opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.32.0.zip \
+    --hash=sha256:c00e5f7e42dd66c35c1820bf43e11ce593d4ef34a8c9f34dd4fe3555f4f60bbe
     # via -r requirements.prod.in
 pandas==1.4.0 \
     --hash=sha256:0f19504f2783526fb5b4de675ea69d68974e21c1624f4b92295d057a31d5ec5f \
