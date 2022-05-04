@@ -1,6 +1,10 @@
 The UK Renal Registry (UKRR) contains data on patients under secondary renal care (advanced chronic kidney disease stages 4 and 5, dialysis, and kidney transplantation). The purpose of the UKRR is to audit secondary kidney 
 care delivery in the UK especially dialysis and kidney transplant. Data is collected from many different renal IT systems. 
 
+!!! warning
+    UKRR data can only be used subject to additional approvals.
+    Please contact your co-pilot, or <team@opensafely.org> if you have any questions.
+
 There are 5 different datasets available to OpenSAFELY. These are:
 
 * **2019_prevalence** *a prevalence cohort of patients alive and on RRT in December 2019*
