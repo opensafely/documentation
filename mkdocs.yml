@@ -21,6 +21,7 @@ nav:
               - UK Renal Registry: dataset-ukrr.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
+      - Information for system integrators: system-integration.md
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
