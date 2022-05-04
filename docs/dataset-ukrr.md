@@ -3,9 +3,10 @@ care delivery in the UK especially dialysis and kidney transplant. Data is colle
 
 There are 5 different datasets available to OpenSAFELY. These are:
 
-* '2019_prevalence' - a prevalence cohort of patients alive and on RRT in December 2019
-* '2020_prevalence' - a prevalence cohort of patients alive and on RRT in December 2020
-* '2021_prevalence' - a prevalence cohort of patients alive and on RRT in December 2021
-* '2020_incidence' - an incidence cohort of patients who started RRT in 2020
-* '2020_ckd' - a snapshot prevalence cohort of patient with Stage 4 or 5 CKD who were reported to the UKRR to be under renal care in December 2020.
+* **2019_prevalence** *a prevalence cohort of patients alive and on RRT in December 2019*
+* **2020_prevalence** *a prevalence cohort of patients alive and on RRT in December 2020*
+* **2021_prevalence** *a prevalence cohort of patients alive and on RRT in December 2021*
+* **2020_incidence** *an incidence cohort of patients who started RRT in 2020*
+* **2020_ckd** *a snapshot prevalence cohort of patient with Stage 4 or 5 CKD who were reported to the UKRR to be under renal care in December 2020*
 
+---8<-- 'includes/glossary.md'
