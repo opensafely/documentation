@@ -17,6 +17,7 @@ nav:
               - Hospital admissions: dataset-apc.md
               - In-hospital deaths (covid-19 only): dataset-cpns.md
               - Intensive care admissions (covid-19 only): dataset-icnarc.md
+              - International Severe Acute Respiratory and emerging Infection Consortium: dataset-isaric.md
               - Registered deaths: dataset-onsdeaths.md
               - UK Renal Registry: dataset-ukrr.md
       - Access policies: access-policies.md
