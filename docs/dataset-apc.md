@@ -237,7 +237,7 @@ Code | Description
 * [Hospital APC Activity reports](https://digital.nhs.uk/data-and-information/publications/statistical/hospital-admitted-patient-care-activity)
 * [NHS Digital APC data dictionary](https://datadictionary.nhs.uk/data_sets/cds_v6-2/cds_v6-2_type_130_-_admitted_patient_care_-_finished_general_episode_cds.html)
 * [Data resource profile: Hospital Episode Statistics Admitted Patient Care (HES APC)](https://doi.org/10.1093/ije/dyx015)
-* [CLOSER Understanding Hospital Episode Statistics](https://www.closer.ac.uk/wp-content/uploads/CLOSER-resource-Understanding-HES.pdf)
+* [CLOSER Understanding Hospital Episode Statistics](https://www.closer.ac.uk/wp-content/uploads/CLOSER-resource-understanding-hospital-episode-statistics-2018.pdf)
 
 
 ---8<-- 'includes/glossary.md'

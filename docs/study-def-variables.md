@@ -112,7 +112,7 @@ These variables are derived from the COVID-19 Patient Notification System (CPNS)
 For more information, see the [CPNS data section](dataset-cpns.md). 
 
 !!! note
-    CPNS is restricted to in-hospital covid-related deaths only. For covid-related deaths in any setting, ONS-registered deaths where cause of death matches [COVID-19 coding in ICD-10](https://www.who.int/classifications/icd/COVID-19-coding-icd10.pdf) is generally more useful.
+    CPNS is restricted to in-hospital covid-related deaths only. For covid-related deaths in any setting, ONS-registered deaths where cause of death matches [COVID-19 coding in ICD-10](https://www.who.int/standards/classifications/classification-of-diseases/emergency-use-icd-codes-for-covid-19-disease-outbreak) is generally more useful.
 &nbsp;
 
 ::: cohortextractor.patients.with_death_recorded_in_cpns
