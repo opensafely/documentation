@@ -14,7 +14,7 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 * [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb) - (private, pending review & publication)
 * [Press release from Arden&GEM](https://www.ardengemcsu.nhs.uk/showcase/news-events/news-events/supporting-providers-to-record-covid-19-patient-notifications/)
 * [Letter from NHSE to Trust chief execs regarding changes to data collection](https://www.england.nhs.uk/coronavirus/wp-content/uploads/sites/52/2020/04/C0389-update-to-cpns-reporting-letter-27-april-2020.pdf)
-* [Technical summary on data series on deaths in people with COVID-19](http://allcatsrgrey.org.uk/wp/download/public_health/epidemiology/Technical_Summary_PHE_Data_Series_COVID-19_Deaths_20200429.pdf)
+* [Technical summary on data series on deaths in people with COVID-19](https://www.gov.uk/government/publications/phe-data-series-on-deaths-in-people-with-covid-19-technical-summary)
 
 
 
