@@ -131,6 +131,18 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 &nbsp;
 
 
+## ISARIC
+---8<-- 'includes/isaric-warning-header.md'
+
+These variables are derived from data provided by the International Severe Acute Respiratory and Emerging Infection Consortium.
+
+For more information, see the [ISARIC section](dataset-isaric.md).
+&nbsp;
+
+::: cohortextractor.patients.with_an_isaric_record
+&nbsp;
+
+
 ## ONS CIS
 ---8<-- 'includes/onscis-warning-header.md'
 
