@@ -46,7 +46,7 @@ Of ~36 million active patient addresses, less than 55,000 have no MSOA code set.
 
 #### IMD
 IMD (the English Index of Multiple Deprivation) is a ranking of LSOAs based on various characteristics of the region.
-The ranking ranges from 1 to around 33000 (the number of LSOAs in England), but is rounded to the nearest 100 so that the exact LSOA cannot be derived.
+The ranking ranges from 1 to around 33000 (the number of LSOAs in England), where 1 is the most deprived area.  It is rounded to the nearest 100 so that the exact LSOA cannot be derived.
 IMD rankings are redone every 3 or 4 years. For some newly built residences, there is no associated IMD rank, and so IMD is not defined in that case.
 
 Occasionally a patient has multiple active registrations on a given date.
