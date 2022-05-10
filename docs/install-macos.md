@@ -57,7 +57,7 @@ Then enable this version (eg `3.10.1`) in pyenv:
 pyenv global system 3.10.1
 ```
 
-Then install the [OpenSAFELY CLI](../opensafely-cli) with pipx, using the Python installed in the previous step:
+Then install the [OpenSAFELY CLI](opensafely-cli.md) with pipx, using the Python installed in the previous step:
 
 ```bash
 pipx install opensafely --python ~/.pyenv/shims/python3.10
@@ -107,4 +107,4 @@ The Docker service will continue to run in the background and can be accessed fr
 
 You're done!
 
-Now you can navigate to a research repo, on your local machine, and [use `opensafely` via the command line](../opensafely-cli/#using-opensafely-at-the-command-line).
+Now you can navigate to a research repo, on your local machine, and [use `opensafely` via the command line](opensafely-cli.md#using-opensafely-at-the-command-line).

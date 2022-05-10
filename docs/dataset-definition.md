@@ -33,7 +33,7 @@ A simple example of a dataset definition is given below.
 ## `dataset_definition.py` structure
 
 Before writing a dataset definition, add [Data
-Builder](data-builder-intro/#adding-data-builder-to-a-project) to your
+Builder](data-builder-intro.md#adding-data-builder-to-a-project) to your
 OpenSAFELY project.
 
 ### Importing code building blocks
