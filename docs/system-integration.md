@@ -7,14 +7,14 @@
 
 ## Audience
 
-This page is aimed at:
+This page is aimed at people who want to run their own installation of OpenSAFELY
+as a proof-of-concept trial prior to integrating into the live system.
+
+These people are likely to have one of the following professional roles:
 
 * software developers
 * clinical data providers
 * system integrators
-
-who want to run their own installation of OpenSAFELY
-as a proof-of-concept trial prior to integrating into the live system.
 
 ### Assumed knowledge
 
