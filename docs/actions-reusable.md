@@ -47,7 +47,7 @@ The `config` property, which is optional, describes configuration options.
 
 A reusable action is a public repo within the [`opensafely-actions`](https://github.com/opensafely-actions) organisation.
 It has a `main` branch, which is the release branch;
-versions are marked with [tags](http://git-scm.com/book/en/v2/Git-Basics-Tagging).
+versions are marked with [tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 In the above extract from a study's *project.yaml*, for example, we will run version `v1.0.0` of the reusable action called `a_reusable_action`.
 
 The repo has the following minimal structure:
