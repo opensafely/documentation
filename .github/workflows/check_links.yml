@@ -19,5 +19,6 @@ jobs:
         uses: lycheeverse/lychee-action@v1.4.1
         with:
           args: "--exclude-mail --require-https --verbose --no-progress './**/*.md' './**/*.html'"
+          fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
