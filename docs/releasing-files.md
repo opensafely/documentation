@@ -91,7 +91,7 @@ When applying disclosure controls to your outputs, you should consider the poten
 
 ### Redacting counts less than or equal to 5
 
-Before requesting files to be released, work through the [moderately sensitive](https://docs.opensafely.org/actions-pipelines/#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
+Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
 
 *   Redacting counts <=5 in frequency tables. The whole table, or at a minimum multiple rows within the table, should be redacted because values removed by single cell (or row, or column) redaction could be inferred from unredacted values.
 *   Summaries of numeric variables describing 5 or fewer patients should be redacted.
@@ -175,7 +175,7 @@ Before any files are released from the secure server, they are checked independe
 Once reviewed, the completed review request will be emailed back to you. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
 ## 4. Release of reviewed files
 
-All approved OpenSAFELY outputs are released to the workspace they belong to on the [Jobs site](https://docs.opensafely.org/job-server/).
+All approved OpenSAFELY outputs are released to the workspace they belong to on the [Jobs site](job-server.md).
 
 ### Viewing released outputs
 
