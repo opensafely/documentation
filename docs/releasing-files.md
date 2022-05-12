@@ -16,7 +16,7 @@ Below we cover the 4 key areas of our “safe outputs” activities:
 1.  Researchers must only request the release of data necessary to fulfil their project purpose and apply disclosure controls to them.
 2.  Researchers then make a request to release the data using the “release request form”.
 3.  Two OpenSAFELY output checkers review the data being requested for release.
-4.  OpenSAFELY releases data that meets our disclosure rules to the project area in Jobserver.
+4.  OpenSAFELY releases data that meets our disclosure rules to the relevant workspace on the Jobs site.
 
 ## 1. Applying disclosure controls to data you request for release
 
@@ -91,7 +91,7 @@ When applying disclosure controls to your outputs, you should consider the poten
 
 ### Redacting counts less than or equal to 5
 
-Before requesting files to be released, work through the [moderately sensitive](https://docs.opensafely.org/actions-pipelines/#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
+Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
 
 *   Redacting counts <=5 in frequency tables. The whole table, or at a minimum multiple rows within the table, should be redacted because values removed by single cell (or row, or column) redaction could be inferred from unredacted values.
 *   Summaries of numeric variables describing 5 or fewer patients should be redacted.
@@ -175,11 +175,11 @@ Before any files are released from the secure server, they are checked independe
 Once reviewed, the completed review request will be emailed back to you. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
 ## 4. Release of reviewed files
 
-All approved OpenSAFELY outputs are released to the workspace they belong to on the [jobserver](https://docs.opensafely.org/job-server/). 
+All approved OpenSAFELY outputs are released to the workspace they belong to on the [Jobs site](job-server.md).
 
 ### Viewing released outputs
 
-View your released outputs by navigating to "Released Outputs" in the "Releases" section of your jobserver workspace.
+View your released outputs by navigating to "Released Outputs" in the "Releases" section of your workspace on the Jobs site.
 
 These outputs can be shared with project collaborators and published in line with our [data sharing and publication policy](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Please note that you should check this for each dataset that you have used: rules may vary.
 
@@ -188,7 +188,7 @@ These outputs can be shared with project collaborators and published in line wit
 
 ### Reporting a data breach
 
-If you discover files released to the jobserver that have been insufficiently redacted and still contain sensitive information, you should immediately contact and email the following (providing as much information as possible): Amir Mehrkar (<amir.mehrkar@phc.ox.ac.uk>); Ben Goldacre (<ben.goldacre@phc.ox.ac.uk>); [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org); and your co-pilot. Ensure you do not share these files and if they have already been shared please identify as best as possible with whom they have been shared.
+If you discover files released to the Jobs site that have been insufficiently redacted and still contain sensitive information, you should immediately contact and email the following (providing as much information as possible): Amir Mehrkar (<amir.mehrkar@phc.ox.ac.uk>); Ben Goldacre (<ben.goldacre@phc.ox.ac.uk>); [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org); and your co-pilot. Ensure you do not share these files and if they have already been shared please identify as best as possible with whom they have been shared.
 
 
 ---8<-- 'includes/glossary.md'
