@@ -80,9 +80,9 @@ pep517==0.11.0 \
     --hash=sha256:3fa6b85b9def7ba4de99fb7f96fe3f02e2d630df8aa2720a5cf3b183f087a738 \
     --hash=sha256:e1ba5dffa3a131387979a68ff3e391ac7d645be409216b961bc2efe6468ab0b2
     # via pip-tools
-pip-tools==6.6.0 \
-    --hash=sha256:66318bc2e884b61fafa1cb2cf01b35fdd779ab9ce82cc1bce277adb8cf3ab845 \
-    --hash=sha256:98aa24004440a1c0489d71a567a4e8afdf23c7782bff483d1219881e7302de83
+pip-tools==6.6.1 \
+    --hash=sha256:48a26382c8477adf2cca8b9128093f4778fdadaade74bfaab0832d53d9cb256a \
+    --hash=sha256:634e3e8d4707257c004313d16a9d6c14c1ce94d3c0fa1f93c38d264401f2e4f2
     # via -r databuilder/requirements.dev.in
 platformdirs==2.2.0 \
     --hash=sha256:4666d822218db6a262bdfdc9c39d21f23b4cfdb08af331a81e92751daf6c866c \
