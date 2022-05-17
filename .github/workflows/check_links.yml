@@ -5,7 +5,7 @@ name: 'Check links'
 on:
   workflow_dispatch:
   schedule:
-    - cron: "12 10 * * 2"
+    - cron: '12 10 * * 2'
 
 permissions:
   contents: read
