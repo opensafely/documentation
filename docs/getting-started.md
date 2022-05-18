@@ -115,6 +115,12 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
     components required to get up and running. When you've finished, you'll have
     all the basics in place to continue your learning.
 
+=== "Linux (local)"
+
+    Installation instructions aimed towards Debian and Ubuntu users.
+    These instructions will be brief as a level of background knowledge is
+    assumed.
+
 ## 1. Set up GitHub
 
 To use OpenSAFELY, you must have a GitHub account. GitHub is a widely-used
@@ -152,6 +158,11 @@ first.
     template repository that you will create, then `add`, `commit` and
     `push` changes to that repository to GitHub.)
 
+=== "Linux (local)"
+
+    To install git:
+    `sudo apt install git`
+
 #### Securing your GitHub account
 
 We recommend that you [secure your GitHub account with two-factor
@@ -179,7 +190,7 @@ account, for developing your own study:
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
-1. Once created, select the "Settings" tab and scroll down to the option to the option to "Automatically delete head branches". This should be turned ON so that when you merge a branch it is automatically deleted, keeping your branches neat and tidy. Deleted branches can be restored if needed later. 
+1. Once created, select the "Settings" tab and scroll down to the option to the option to "Automatically delete head branches". This should be turned ON so that when you merge a branch it is automatically deleted, keeping your branches neat and tidy. Deleted branches can be restored if needed later.
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
@@ -308,6 +319,15 @@ account, for developing your own study:
        network connection. It is downloading a reproducible environment identical
        to that installed in the OpenSAFELY secure environment.
 
+=== "Linux (local)"
+
+    1. Install Python, pip (Python package manager), and Docker
+    `sudo apt update && sudo apt install python3 python3-pip docker`
+    1. Install the *opensafely* Python package
+    `pip3 install opensafely`
+    1. Test opensafely and Docker
+    `opensafely pull cohortextractor`
+
 ## 4. Set up your first study
 
 In a previous step, you created a copy of the research code
@@ -326,6 +346,14 @@ study.
 
     Please follow [GitHub's instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
     for cloning the study code with GitHub Desktop.
+
+=== "Linux (local)"
+
+    Visit your github page to find the name of your opensafely repository. On your github
+    homepage, this will be in the *repositories* tab at the top. Then select the green *Code*
+    button. Select *SSH* then *copy to clipboard*. You can then clone this using this command:
+
+    `git clone <repository name>`
 
 ### Test the blank study on your computer
 
@@ -582,7 +610,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
+	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
 	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
@@ -607,7 +635,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
+	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
 	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
@@ -777,8 +805,8 @@ detail on the subjects covered in this tutorial. For example:
   tool](opensafely-cli.md).
 * The [full study definition reference](study-def.md) describes all the
   different ways to define new variables in your study definition.
-    * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex) 
-    or [Region](study-def-variables.md#cohortextractor.patients.registered_practice_as_of) to the 
+    * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex)
+    or [Region](study-def-variables.md#cohortextractor.patients.registered_practice_as_of) to the
     study definition you created using this guide, then plot some new charts!*
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
