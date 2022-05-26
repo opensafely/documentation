@@ -42,3 +42,16 @@ For example, [job request 7254](https://jobs.opensafely.org/qmul/bmi-and-hba1c/b
 
 In comparison, [job request 7652](https://jobs.opensafely.org/university-of-nottingham/postopcovid/postopcovid/7652/) did not queue at all:
 ![Monitoring report for job request 7652](images/university-of-nottingham_postopcovid_postopcovid_7652.png)
+
+#### Job requests with multiple jobs
+
+Some job requests contain multiple jobs, the monitoring allows us some feedback on how long different jobs take to run with the "Running jobs from this job request" link.
+
+Another example is [job request 8680](https://jobs.opensafely.org/datalab/covid-19-vaccine-effectiveness/comparative-booster_main/8680/). This shows a lot of separate jobs running in parallel and taking a similar amount of time to finish: ![Monitoring report by job for job request 8680](images/job_request_8680.png)
+
+We can mouse-over the different jobs to highlight them on the graph, for example: ![Monitoring report by job for job request 8680 highlighting all_noncoviddeaths](images/job_request_8680_all_noncoviddeath.png)
+
+This older monitoring log of [job request 7320](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/) (which predates logging job action labels to honeycomb) shows different jobs taking different lengths of time within the one job request:
+
+![Monitoring report by job for job request 7320](images/job_request_7320.png)
+![Monitoring report by job for job request 7320 highlighting generate_study_population_index](images/job_request_7320_generate_study_population_index.png)
