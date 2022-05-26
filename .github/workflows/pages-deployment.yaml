@@ -1,0 +1,30 @@
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build the docs
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8.12"
+          cache: "pip"
+      - run: |
+          pip install -r requirements.txt
+          mkdocs build --strict
+
+      # - name: Publish
+      #   uses: cloudflare/pages-action@1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: YOUR_PROJECT_NAME # e.g. 'my-project'
+      #     directory: YOUR_DIRECTORY_OF_STATIC_ASSETS # e.g. 'dist'
+      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
