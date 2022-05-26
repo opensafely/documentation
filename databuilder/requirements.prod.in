@@ -1,9 +1,0 @@
-# Main prod requirements
-
-# To generate requirements file, run:
-# pip-compile --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
-snex
-
-# Dependabot doesn't seem to touch this dependency, likely because it's pinned,
-# so we have a script to update it, run: just databuilder/upgrade-databuilder
-https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.32.0.zip
