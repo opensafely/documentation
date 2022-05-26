@@ -23,11 +23,11 @@ jobs:
       - name: Build the docs
         run: mkdocs build --strict
 
-      # - name: Publish
-      #   uses: cloudflare/pages-action@1
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: YOUR_PROJECT_NAME # e.g. 'my-project'
-      #     directory: YOUR_DIRECTORY_OF_STATIC_ASSETS # e.g. 'dist'
-      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish
+        uses: cloudflare/pages-action@1
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          directory: "site"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: "opensafely-docs"
