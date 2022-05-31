@@ -20,7 +20,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v1.5.0
         with:
-          args: "--exclude-mail --include-verbatim --require-https --verbose --no-progress './**/*.md' './**/*.html'"
+          args: "--exclude-all-private --exclude-mail --include-verbatim --require-https --verbose --no-progress './**/*.md' './**/*.html'"
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
