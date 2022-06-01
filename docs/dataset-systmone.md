@@ -59,8 +59,12 @@ In these cases, the rounded ranking is -1.
 
 ---8<-- 'includes/imd-warning-header.md'
 
-Occasionally a patient has multiple active registrations on a given date.
-If so, the postcode is chosen as follows: choose the registration with the latest start date; if this is not unique, then choose the registration with the latest end date; if this is not unique, choose at random.
+Occasionally, a patient has multiple active registrations on a given date.
+If so, the postcode is chosen as follows:
+
+* choose the registration with the latest start date;
+* if this is not unique, then choose the registration with the latest end date;
+* if this is not unique, then choose the registration at random.
 
 If a patient's postcode is not recorded, then these geographic variables are not available for analysis.
 
