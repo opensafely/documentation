@@ -4,10 +4,6 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
 #
-astunparse==1.6.3 \
-    --hash=sha256:5ad93a8456f0d084c3456d059fd9a92cce667963232cbf763eac3bc5b7940872 \
-    --hash=sha256:c2652417f2c8b5bb325c885ae329bdf3f86424075c4fd1a128674bc6fba4b8e8
-    # via pytkdocs
 certifi==2021.10.8 \
     --hash=sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872 \
     --hash=sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569
@@ -40,6 +36,10 @@ ghp-import==2.0.2 \
     --hash=sha256:5f8962b30b20652cdffa9c5a9812f7de6bcb56ec475acac579807719bf242c46 \
     --hash=sha256:947b3771f11be850c852c64b561c600fdddf794bab363060854c1ee7ad05e071
     # via mkdocs
+griffe==0.19.3 \
+    --hash=sha256:348422f0e303ff3b76d6b35a96fa9c90dddcbe175506171fda78e8e5cf8c4246 \
+    --hash=sha256:3a51e53bc58c45d38d6d7b4509b41b153b506de3df99767e6f891c75d91706a5
+    # via mkdocstrings-python
 idna==3.3 \
     --hash=sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff \
     --hash=sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d
@@ -272,15 +272,15 @@ mkdocs-material-extensions==1.0.3 \
 mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/c943a4b4f052848a314ad27c34006269a0fbea90.zip \
     --hash=sha256:487bdd13cf2cbdae1e742ef2e2004d80c407268a8f579cef7b2030e8f1be0099
     # via -r requirements.prod.in
-mkdocstrings[python-legacy]==0.18.1 \
-    --hash=sha256:4053929356df8cd69ed32eef71d8f676a472ef72980c9ffd4f933ead1debcdad \
-    --hash=sha256:fb7c91ce7e3ab70488d3fa6c073a4f827cdc319042f682ef8ea95459790d64fc
+mkdocstrings[python]==0.19.0 \
+    --hash=sha256:3217d510d385c961f69385a670b2677e68e07b5fea4a504d86bf54c006c87c7d \
+    --hash=sha256:efa34a67bad11229d532d89f6836a8a215937548623b64f3698a1df62e01cc3e
     # via
     #   -r requirements.prod.in
-    #   mkdocstrings-python-legacy
-mkdocstrings-python-legacy==0.2.1 \
-    --hash=sha256:a46f772b24d9a41f0b4eaa27a4ae70195cacc76af462fce691d085e0b4fc8c78 \
-    --hash=sha256:d8b032e1d1b4c75a601fcc5837249e2b2dc2cb21c9ad32a313ffaa54d5838242
+    #   mkdocstrings-python
+mkdocstrings-python==0.7.0 \
+    --hash=sha256:6964bd92f106766e771ac6cd5bc02643a960602b4d921b95362e31d491e9a6db \
+    --hash=sha256:e54c67890e8bb7dc4604360c8ef5dd214b23b6924de7706f461e3c998d4ea061
     # via mkdocstrings
 numpy==1.21.4 \
     --hash=sha256:0b78ecfa070460104934e2caf51694ccd00f37d5e5dbe76f021b1b0b0d221823 \
@@ -460,10 +460,6 @@ python-dateutil==2.8.2 \
     #   ghp-import
     #   matplotlib
     #   pandas
-pytkdocs==0.15.0 \
-    --hash=sha256:4b45af89d6fa5fa50f979b0f9f54539286b84e245c81991bb838149aa2d9d9c9 \
-    --hash=sha256:d6b2aec34448ec89acb8c1c25062cc1e70c6b26395d46fc7ee753b7e5a4e736a
-    # via mkdocstrings-python-legacy
 pytz==2021.3 \
     --hash=sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c \
     --hash=sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326
@@ -560,9 +556,7 @@ setuptools-scm==6.3.2 \
 six==1.16.0 \
     --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
     --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
-    # via
-    #   astunparse
-    #   python-dateutil
+    # via python-dateutil
 sqlparse==0.4.2 \
     --hash=sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae \
     --hash=sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d
@@ -610,10 +604,6 @@ watchdog==2.1.8 \
     --hash=sha256:f9ee4c6bf3a1b2ed6be90a2d78f3f4bbd8105b6390c04a86eb48ed67bbfa0b0b \
     --hash=sha256:fed4de6e45a4f16e4046ea00917b4fe1700b97244e5d114f594b4a1b9de6bed8
     # via mkdocs
-wheel==0.37.1 \
-    --hash=sha256:4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a \
-    --hash=sha256:e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4
-    # via astunparse
 zipp==3.6.0 \
     --hash=sha256:71c644c5369f4a6e07636f0aa966270449561fcea2e3d6747b8d23efaa9d7832 \
     --hash=sha256:9fe5ea21568a0a70e50f273397638d39b03353731e6cbbb3fd8502a33fec40bc
