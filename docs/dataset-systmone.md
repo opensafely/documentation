@@ -45,9 +45,19 @@ According to our identifiable data minimisation principles, only representations
 Of ~36 million active patient addresses, less than 55,000 have no MSOA code set. These are a split of no postcode entered, an invalid postcode entered, and no fixed abode.
 
 #### IMD
-IMD (the English Index of Multiple Deprivation) is a ranking of LSOAs based on various characteristics of the region.
-The ranking ranges from 1 to around 33000 (the number of LSOAs in England), where 1 is the most deprived area.  It is rounded to the nearest 100 so that the exact LSOA cannot be derived.
-IMD rankings are redone every 3 or 4 years. For some newly built residences, there is no associated IMD rank, and so IMD is not defined in that case.
+IMD (the English Index of Multiple Deprivation) is a ranking of LSOAs based on various characteristics of the areas.
+The original ranking ranges from 1 to around 33,000 (the number of LSOAs in England),
+where 1 is the most deprived area.
+However, the original ranking is rounded to the nearest 100 in the OpenSAFELY-TPP database,
+so that individual LSOAs cannot be identified.
+Consequently, the rounded ranking ranges from 0 to around 33,000,
+where 0 is the most deprived 49 areas.
+
+IMD rankings are recalculated every 3 or 4 years.
+Consequently, there is no original ranking for some newly built residences.
+In these cases, the rounded ranking is -1.
+
+---8<-- 'includes/imd-warning-header.md'
 
 Occasionally a patient has multiple active registrations on a given date.
 If so, the postcode is chosen as follows: choose the registration with the latest start date; if this is not unique, then choose the registration with the latest end date; if this is not unique, choose at random.
