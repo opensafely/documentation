@@ -64,7 +64,7 @@ If so, the address is chosen as follows:
 
 * choose the registration with the latest start date;
 * if this is not unique, then choose the registration with the latest end date;
-* if this is not unique, then choose the registration at random.
+* if this is not unique, then choose the registration with the lowest ID.
 
 If a patient's address is not recorded, then these geographic variables are not available for analysis.
 
