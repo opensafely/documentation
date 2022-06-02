@@ -261,9 +261,9 @@ mkdocs-autorefs==0.3.1 \
     --hash=sha256:12baad29359f468b44d980ed35b713715409097a1d8e3d0ef90962db95205eda \
     --hash=sha256:f0fd7c115eaafda7fb16bf5ff5d70eda55d7c0599eac64f8b25eacf864312a85
     # via mkdocstrings
-mkdocs-material==8.2.16 \
-    --hash=sha256:40557b12950d3212cb0d044f57fe47787f698daea540d01b2e3856237705fa34 \
-    --hash=sha256:7e0a8d0adf0e3425e707e119b041820b5cd3a015225c9c6031ed086e74fe4275
+mkdocs-material==8.3.0 \
+    --hash=sha256:4cad98c47c49a86591ed16a790c07d59402901fc5345f575a3b7329403f5c66e \
+    --hash=sha256:e37e7da1c5923c5b9f0bb8c4ad90bc694fee8f966b43b302a7ff61cb2c35c2e0
     # via -r requirements.prod.in
 mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
