@@ -24,7 +24,7 @@ jobs:
         run: mkdocs build
 
       - name: Add a version file
-        run: echo ${{ github.GITHUB_SHA }} > site/version.html
+        run: echo ${{ github.sha }} > site/version.html
 
       - name: Publish
         uses: cloudflare/pages-action@1
