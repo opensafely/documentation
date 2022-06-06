@@ -5,6 +5,10 @@ services:
     buildCommand: mkdocs build
     staticPublishPath: ./site
     pullRequestPreviewsEnabled: true
+    region: frankfurt
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.8.12
     headers:
       - path: /*
         name: X-Frame-Options
