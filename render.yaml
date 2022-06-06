@@ -1,0 +1,51 @@
+services:
+  - type: web
+    name: opensafely-documentation
+    env: static
+    buildCommand: mkdocs build
+    staticPublishPath: ./site
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
+    routes:
+      - type: redirect
+        source: /en
+        destination: /
+      - type: redirect
+        source: /en/stable
+        destination: /
+      - type: redirect
+        source: /en/stable/codelist_creation
+        destination: /codelist-creation/
+      - type: redirect
+        source: /en/stable/getting_started_checklist
+        destination: /getting-started/
+      - type: redirect
+        source: /en/stable/onboarding_analysts
+        destination: /
+      - type: redirect
+        source: /en/stable/open_data_manifesto
+        destination: /open-data-manifesto/
+      - type: redirect
+        source: /en/stable/snomed
+        destination: /codelist-snomed/
+      - type: redirect
+        source: /en/stable/study_definition
+        destination: /study-def/
+      - type: redirect
+        source: /en/latest
+        destination: /
+      - type: redirect
+        source: /en/latest/:path
+        destination: /:path
+      - type: redirect
+        source: /en/stable/:path
+        destination: /:path
+      - type: redirect
+        source: /news
+        destination: https://www.opensafely.org/changelog/
