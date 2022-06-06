@@ -599,6 +599,41 @@
                   ""
                 ]
               ]
+            },
+            {
+              "id": "1.1.3",
+              "title": "Chain multiple takes",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1",
+                    "b1"
+                  ],
+                  [
+                    "1",
+                    "1",
+                    "T"
+                  ],
+                  [
+                    "1",
+                    "2",
+                    "T"
+                  ],
+                  [
+                    "1",
+                    "3",
+                    "F"
+                  ]
+                ]
+              },
+              "series": "e.take(e.i1 >= 2).take(e.b1).i1.sum_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "2"
+                ]
+              ]
             }
           ]
         },
@@ -747,7 +782,7 @@
       "sections": [
         {
           "id": "2.1",
-          "title": "Picking the first row for each patient",
+          "title": "Picking the first or last row for each patient",
           "paragraphs": [
             {
               "id": "2.1.1",
@@ -795,15 +830,9 @@
                   "201"
                 ]
               ]
-            }
-          ]
-        },
-        {
-          "id": "2.2",
-          "title": "Picking the last row for each patient",
-          "paragraphs": [
+            },
             {
-              "id": "2.2.1",
+              "id": "2.1.2",
               "title": "Sort by column pick last",
               "tables": {
                 "e": [
@@ -850,12 +879,226 @@
               ]
             }
           ]
+        },
+        {
+          "id": "2.2",
+          "title": "Sort by more than one column and pick the first or last row for each patient",
+          "paragraphs": [
+            {
+              "id": "2.2.1",
+              "title": "Sort by multiple columns pick first",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1",
+                    "i2"
+                  ],
+                  [
+                    "1",
+                    "101",
+                    "3"
+                  ],
+                  [
+                    "1",
+                    "102",
+                    "2"
+                  ],
+                  [
+                    "1",
+                    "102",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "203",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "202",
+                    "2"
+                  ],
+                  [
+                    "2",
+                    "202",
+                    "3"
+                  ]
+                ]
+              },
+              "series": "e.sort_by(e.i1, e.i2).first_for_patient().i2",
+              "output": [
+                [
+                  "1",
+                  "3"
+                ],
+                [
+                  "2",
+                  "2"
+                ]
+              ]
+            },
+            {
+              "id": "2.2.2",
+              "title": "Sort by multiple columns pick last",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1",
+                    "i2"
+                  ],
+                  [
+                    "1",
+                    "101",
+                    "3"
+                  ],
+                  [
+                    "1",
+                    "102",
+                    "2"
+                  ],
+                  [
+                    "1",
+                    "102",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "203",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "202",
+                    "2"
+                  ],
+                  [
+                    "2",
+                    "202",
+                    "3"
+                  ]
+                ]
+              },
+              "series": "e.sort_by(e.i1, e.i2).last_for_patient().i2",
+              "output": [
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "1"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "title": "Picking the first or last row for each patient where a column contains NULLs",
+          "paragraphs": [
+            {
+              "id": "2.3.1",
+              "title": "Sort by column with nulls and pick first",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    ""
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "1",
+                    "103"
+                  ],
+                  [
+                    "2",
+                    "203"
+                  ],
+                  [
+                    "2",
+                    "202"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ]
+                ]
+              },
+              "series": "e.sort_by(e.i1).first_for_patient().i1",
+              "output": [
+                [
+                  "1",
+                  ""
+                ],
+                [
+                  "2",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "2.3.2",
+              "title": "Sort by column with nulls and pick last",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    ""
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "1",
+                    "103"
+                  ],
+                  [
+                    "2",
+                    "203"
+                  ],
+                  [
+                    "2",
+                    "202"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ]
+                ]
+              },
+              "series": "e.sort_by(e.i1).last_for_patient().i1",
+              "output": [
+                [
+                  "1",
+                  "103"
+                ],
+                [
+                  "2",
+                  "203"
+                ]
+              ]
+            }
+          ]
         }
       ]
     },
     {
       "id": "3",
-      "title": "Aggregating an event frame",
+      "title": "Aggregating event and patient frames",
       "sections": [
         {
           "id": "3.1",
@@ -863,7 +1106,7 @@
           "paragraphs": [
             {
               "id": "3.1.1",
-              "title": "Exists for patient",
+              "title": "Exists for patient on event frame",
               "tables": {
                 "p": [
                   [
@@ -917,6 +1160,63 @@
                   "F"
                 ]
               ]
+            },
+            {
+              "id": "3.1.2",
+              "title": "Exists for patient on patient frame",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "3",
+                    "301"
+                  ]
+                ],
+                "e": [
+                  [
+                    "patient",
+                    "b1"
+                  ],
+                  [
+                    "1",
+                    "T"
+                  ],
+                  [
+                    "1",
+                    "F"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.exists_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "T"
+                ]
+              ]
             }
           ]
         },
@@ -926,7 +1226,7 @@
           "paragraphs": [
             {
               "id": "3.2.1",
-              "title": "Count for patient",
+              "title": "Count for patient on event frame",
               "tables": {
                 "p": [
                   [
@@ -980,6 +1280,63 @@
                   "0"
                 ]
               ]
+            },
+            {
+              "id": "3.2.2",
+              "title": "Count for patient on patient frame",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "3",
+                    "301"
+                  ]
+                ],
+                "e": [
+                  [
+                    "patient",
+                    "b1"
+                  ],
+                  [
+                    "1",
+                    "T"
+                  ],
+                  [
+                    "1",
+                    "F"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.count_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "2",
+                  "1"
+                ],
+                [
+                  "3",
+                  "1"
+                ]
+              ]
             }
           ]
         }
@@ -987,14 +1344,189 @@
     },
     {
       "id": "4",
-      "title": "Combining series",
+      "title": "Aggregating event series",
       "sections": [
         {
           "id": "4.1",
-          "title": "Combining two patient series",
+          "title": "Minimum and maximum aggregations",
           "paragraphs": [
             {
               "id": "4.1.1",
+              "title": "Minimum for patient",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "1",
+                    "103"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ],
+                  [
+                    "3",
+                    ""
+                  ]
+                ]
+              },
+              "series": "e.i1.minimum_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "101"
+                ],
+                [
+                  "2",
+                  "201"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "4.1.2",
+              "title": "Maximum for patient",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "1",
+                    "103"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ],
+                  [
+                    "3",
+                    ""
+                  ]
+                ]
+              },
+              "series": "e.i1.maximum_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "103"
+                ],
+                [
+                  "2",
+                  "201"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "title": "Sum aggregation",
+          "paragraphs": [
+            {
+              "id": "4.2.1",
+              "title": "Sum for patient",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "1",
+                    "103"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "2",
+                    ""
+                  ],
+                  [
+                    "2",
+                    "203"
+                  ],
+                  [
+                    "3",
+                    ""
+                  ]
+                ]
+              },
+              "series": "e.i1.sum_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "306"
+                ],
+                [
+                  "2",
+                  "404"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Combining series",
+      "sections": [
+        {
+          "id": "5.1",
+          "title": "Combining two patient series",
+          "paragraphs": [
+            {
+              "id": "5.1.1",
               "title": "Patient series and patient series",
               "tables": {
                 "p": [
@@ -1015,7 +1547,7 @@
                   ]
                 ]
               },
-              "series": "(p.i1 + p.i2).sum_for_patient()",
+              "series": "p.i1 + p.i2",
               "output": [
                 [
                   "1",
@@ -1030,11 +1562,11 @@
           ]
         },
         {
-          "id": "4.2",
+          "id": "5.2",
           "title": "Combining a patient series with a value",
           "paragraphs": [
             {
-              "id": "4.2.1",
+              "id": "5.2.1",
               "title": "Patient series and value",
               "tables": {
                 "p": [
@@ -1052,7 +1584,7 @@
                   ]
                 ]
               },
-              "series": "(p.i1 + 1).sum_for_patient()",
+              "series": "p.i1 + 1",
               "output": [
                 [
                   "1",
@@ -1065,7 +1597,7 @@
               ]
             },
             {
-              "id": "4.2.2",
+              "id": "5.2.2",
               "title": "Value and patient series",
               "tables": {
                 "p": [
@@ -1083,7 +1615,7 @@
                   ]
                 ]
               },
-              "series": "(1 + p.i1).sum_for_patient()",
+              "series": "1 + p.i1",
               "output": [
                 [
                   "1",
@@ -1098,11 +1630,11 @@
           ]
         },
         {
-          "id": "4.3",
+          "id": "5.3",
           "title": "Combining two event series",
           "paragraphs": [
             {
-              "id": "4.3.1",
+              "id": "5.3.1",
               "title": "Event series and event series",
               "tables": {
                 "e": [
@@ -1148,11 +1680,11 @@
           ]
         },
         {
-          "id": "4.4",
+          "id": "5.4",
           "title": "Combining an event series with a patient series",
           "paragraphs": [
             {
-              "id": "4.4.1",
+              "id": "5.4.1",
               "title": "Event series and patient series",
               "tables": {
                 "p": [
@@ -1205,7 +1737,7 @@
               ]
             },
             {
-              "id": "4.4.2",
+              "id": "5.4.2",
               "title": "Patient series and event series",
               "tables": {
                 "p": [
@@ -1260,11 +1792,11 @@
           ]
         },
         {
-          "id": "4.5",
+          "id": "5.5",
           "title": "Combining an event series with a value",
           "paragraphs": [
             {
-              "id": "4.5.1",
+              "id": "5.5.1",
               "title": "Event series and value",
               "tables": {
                 "e": [
@@ -1303,7 +1835,7 @@
               ]
             },
             {
-              "id": "4.5.2",
+              "id": "5.5.2",
               "title": "Value and event series",
               "tables": {
                 "e": [
@@ -1346,15 +1878,15 @@
       ]
     },
     {
-      "id": "5",
+      "id": "6",
       "title": "Operations on all series",
       "sections": [
         {
-          "id": "5.1",
+          "id": "6.1",
           "title": "Testing for equality",
           "paragraphs": [
             {
-              "id": "5.1.1",
+              "id": "6.1.1",
               "title": "Equals",
               "tables": {
                 "p": [
@@ -1406,7 +1938,7 @@
               ]
             },
             {
-              "id": "5.1.2",
+              "id": "6.1.2",
               "title": "Not equals",
               "tables": {
                 "p": [
@@ -1458,7 +1990,7 @@
               ]
             },
             {
-              "id": "5.1.3",
+              "id": "6.1.3",
               "title": "Is null",
               "tables": {
                 "p": [
@@ -1510,19 +2042,125 @@
               ]
             }
           ]
+        },
+        {
+          "id": "6.2",
+          "title": "Testing for containment",
+          "paragraphs": [
+            {
+              "id": "6.2.1",
+              "title": "Is in",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "3",
+                    "301"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.i1.is_in([101, 301])",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.3",
+          "title": "Map from one set of values to another",
+          "paragraphs": [
+            {
+              "id": "6.3.1",
+              "title": "Map values",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ],
+                  [
+                    "3",
+                    "301"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.i1.map_values({101: \"a\", 201: \"b\", 301: \"a\"})",
+              "output": [
+                [
+                  "1",
+                  "a"
+                ],
+                [
+                  "2",
+                  "b"
+                ],
+                [
+                  "3",
+                  "a"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "6",
+      "id": "7",
       "title": "Operations on boolean series",
       "sections": [
         {
-          "id": "6.1",
+          "id": "7.1",
           "title": "Logical operations",
           "paragraphs": [
             {
-              "id": "6.1.1",
+              "id": "7.1.1",
               "title": "Not",
               "tables": {
                 "p": [
@@ -1561,7 +2199,7 @@
               ]
             },
             {
-              "id": "6.1.2",
+              "id": "7.1.2",
               "title": "And",
               "tables": {
                 "p": [
@@ -1658,7 +2296,7 @@
               ]
             },
             {
-              "id": "6.1.3",
+              "id": "7.1.3",
               "title": "Or",
               "tables": {
                 "p": [
@@ -1759,15 +2397,15 @@
       ]
     },
     {
-      "id": "7",
+      "id": "8",
       "title": "Operations on integer series",
       "sections": [
         {
-          "id": "7.1",
+          "id": "8.1",
           "title": "Arithmetic operations",
           "paragraphs": [
             {
-              "id": "7.1.1",
+              "id": "8.1.1",
               "title": "Negate",
               "tables": {
                 "p": [
@@ -1801,7 +2439,7 @@
               ]
             },
             {
-              "id": "7.1.2",
+              "id": "8.1.2",
               "title": "Add",
               "tables": {
                 "p": [
@@ -1835,7 +2473,7 @@
               ]
             },
             {
-              "id": "7.1.3",
+              "id": "8.1.3",
               "title": "Subtract",
               "tables": {
                 "p": [
@@ -1871,11 +2509,11 @@
           ]
         },
         {
-          "id": "7.2",
+          "id": "8.2",
           "title": "Comparison operations",
           "paragraphs": [
             {
-              "id": "7.2.1",
+              "id": "8.2.1",
               "title": "Less than",
               "tables": {
                 "p": [
@@ -1927,7 +2565,7 @@
               ]
             },
             {
-              "id": "7.2.2",
+              "id": "8.2.2",
               "title": "Less than or equal to",
               "tables": {
                 "p": [
@@ -1979,7 +2617,7 @@
               ]
             },
             {
-              "id": "7.2.3",
+              "id": "8.2.3",
               "title": "Greater than",
               "tables": {
                 "p": [
@@ -2031,7 +2669,7 @@
               ]
             },
             {
-              "id": "7.2.4",
+              "id": "8.2.4",
               "title": "Greater than or equal to",
               "tables": {
                 "p": [
@@ -2071,6 +2709,925 @@
                 [
                   "2",
                   "T"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Operations on all series containing codes",
+      "sections": [
+        {
+          "id": "9.1",
+          "title": "Testing for containment using codes",
+          "paragraphs": [
+            {
+              "id": "9.1.1",
+              "title": "Is in",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "c1"
+                  ],
+                  [
+                    "1",
+                    "abc"
+                  ],
+                  [
+                    "2",
+                    "def"
+                  ],
+                  [
+                    "3",
+                    "ghi"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.c1.is_in([SNOMEDCTCode(\"abc\"), SNOMEDCTCode(\"ghi\")])",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "9.1.2",
+              "title": "Is in codelist csv",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "c1"
+                  ],
+                  [
+                    "1",
+                    "abc"
+                  ],
+                  [
+                    "2",
+                    "def"
+                  ],
+                  [
+                    "3",
+                    "ghi"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.c1.is_in(codelist)",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.2",
+          "title": "Test mapping codes to categories using a categorised codelist",
+          "paragraphs": [
+            {
+              "id": "9.2.1",
+              "title": "Map codes to categories",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "c1"
+                  ],
+                  [
+                    "1",
+                    "abc"
+                  ],
+                  [
+                    "2",
+                    "def"
+                  ],
+                  [
+                    "3",
+                    "ghi"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.c1.to_category(codelist.my_categorisation)",
+              "output": [
+                [
+                  "1",
+                  "cat1"
+                ],
+                [
+                  "2",
+                  ""
+                ],
+                [
+                  "3",
+                  "cat2"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Logical case expressions",
+      "sections": [
+        {
+          "id": "10.1",
+          "title": "Logical case expressions",
+          "paragraphs": [
+            {
+              "id": "10.1.1",
+              "title": "Case",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "6"
+                  ],
+                  [
+                    "2",
+                    "7"
+                  ],
+                  [
+                    "3",
+                    "8"
+                  ],
+                  [
+                    "4",
+                    "9"
+                  ],
+                  [
+                    "5",
+                    ""
+                  ]
+                ]
+              },
+              "series": "case(",
+              "output": [
+                [
+                  "1",
+                  "6"
+                ],
+                [
+                  "2",
+                  "7"
+                ],
+                [
+                  "3",
+                  ""
+                ],
+                [
+                  "4",
+                  "100"
+                ],
+                [
+                  "5",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "10.1.2",
+              "title": "Case with default",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "6"
+                  ],
+                  [
+                    "2",
+                    "7"
+                  ],
+                  [
+                    "3",
+                    "8"
+                  ],
+                  [
+                    "4",
+                    "9"
+                  ],
+                  [
+                    "5",
+                    ""
+                  ]
+                ]
+              },
+              "series": "case(",
+              "output": [
+                [
+                  "1",
+                  "6"
+                ],
+                [
+                  "2",
+                  "7"
+                ],
+                [
+                  "3",
+                  "0"
+                ],
+                [
+                  "4",
+                  "100"
+                ],
+                [
+                  "5",
+                  "0"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Operations on all series containing dates",
+      "sections": [
+        {
+          "id": "11.1",
+          "title": "Operations which apply to all series containing dates",
+          "paragraphs": [
+            {
+              "id": "11.1.1",
+              "title": "Get year",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-02",
+                    "100"
+                  ],
+                  [
+                    "2",
+                    "2000-03-04",
+                    "200"
+                  ],
+                  [
+                    "3",
+                    "",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.year",
+              "output": [
+                [
+                  "1",
+                  "1990"
+                ],
+                [
+                  "2",
+                  "2000"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.1.2",
+              "title": "Get month",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-02",
+                    "100"
+                  ],
+                  [
+                    "2",
+                    "2000-03-04",
+                    "200"
+                  ],
+                  [
+                    "3",
+                    "",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.month",
+              "output": [
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "2",
+                  "3"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.1.3",
+              "title": "Get day",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-02",
+                    "100"
+                  ],
+                  [
+                    "2",
+                    "2000-03-04",
+                    "200"
+                  ],
+                  [
+                    "3",
+                    "",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.day",
+              "output": [
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "4"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.1.4",
+              "title": "Add days",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-02",
+                    "100"
+                  ],
+                  [
+                    "2",
+                    "2000-03-04",
+                    "200"
+                  ],
+                  [
+                    "3",
+                    "",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.add_days(p.i1)",
+              "output": [
+                [
+                  "1",
+                  "1990-04-12"
+                ],
+                [
+                  "2",
+                  "2000-09-20"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.1.5",
+              "title": "Subtract days",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-02",
+                    "100"
+                  ],
+                  [
+                    "2",
+                    "2000-03-04",
+                    "200"
+                  ],
+                  [
+                    "3",
+                    "",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.subtract_days(p.i1)",
+              "output": [
+                [
+                  "1",
+                  "1989-09-24"
+                ],
+                [
+                  "2",
+                  "1999-08-17"
+                ],
+                [
+                  "3",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.1.6",
+              "title": "Difference in years",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-30"
+                  ],
+                  [
+                    "2",
+                    "2000-01-15"
+                  ],
+                  [
+                    "3",
+                    "2020-01-20"
+                  ],
+                  [
+                    "4",
+                    "2022-01-10"
+                  ],
+                  [
+                    "5",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.difference_in_years(date(2020, 1, 15))",
+              "output": [
+                [
+                  "1",
+                  "29"
+                ],
+                [
+                  "2",
+                  "20"
+                ],
+                [
+                  "3",
+                  "-1"
+                ],
+                [
+                  "4",
+                  "-2"
+                ],
+                [
+                  "5",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "11.2",
+          "title": "Comparisons involving dates",
+          "paragraphs": [
+            {
+              "id": "11.2.1",
+              "title": "Is before",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.is_before(\"2000-01-01\")",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.2.2",
+              "title": "Is on or before",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.is_on_or_before(\"2000-01-01\")",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.2.3",
+              "title": "Is after",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.is_after(\"2000-01-01\")",
+              "output": [
+                [
+                  "1",
+                  "F"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.2.4",
+              "title": "Is on or after",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.d1.is_on_or_after(\"2000-01-01\")",
+              "output": [
+                [
+                  "1",
+                  "F"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "11.3",
+          "title": "Types usable in comparisons involving dates",
+          "paragraphs": [
+            {
+              "id": "11.3.1",
+              "title": "Accepts python date object",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "d2"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01",
+                    "1980-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01",
+                    "1980-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01",
+                    "2020-01-01"
+                  ],
+                  [
+                    "4",
+                    "",
+                    "2020-01-01"
+                  ]
+                ]
+              },
+              "series": "p.d1.is_before(datetime.date(2000, 1, 20))",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.3.2",
+              "title": "Accepts iso formated date string",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "d2"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01",
+                    "1980-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01",
+                    "1980-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01",
+                    "2020-01-01"
+                  ],
+                  [
+                    "4",
+                    "",
+                    "2020-01-01"
+                  ]
+                ]
+              },
+              "series": "p.d1.is_before(\"2000-01-20\")",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "11.3.3",
+              "title": "Accepts another date series",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "d1",
+                    "d2"
+                  ],
+                  [
+                    "1",
+                    "1990-01-01",
+                    "1980-01-01"
+                  ],
+                  [
+                    "2",
+                    "2000-01-01",
+                    "1980-01-01"
+                  ],
+                  [
+                    "3",
+                    "2010-01-01",
+                    "2020-01-01"
+                  ],
+                  [
+                    "4",
+                    "",
+                    "2020-01-01"
+                  ]
+                ]
+              },
+              "series": "p.d1.is_before(p.d2)",
+              "output": [
+                [
+                  "1",
+                  "F"
+                ],
+                [
+                  "2",
+                  "F"
                 ],
                 [
                   "3",
