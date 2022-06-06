@@ -28,6 +28,8 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.address_as_of
 &nbsp;
 
+---8<-- 'includes/imd-warning-header.md'
+
 ::: cohortextractor.patients.with_gp_consultations
 &nbsp;
 
