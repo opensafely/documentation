@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build the docs
-        run: mkdocs build --strict
+        run: mkdocs build
 
       - name: Publish
         uses: cloudflare/pages-action@1
