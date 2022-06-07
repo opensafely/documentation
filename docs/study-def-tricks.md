@@ -366,11 +366,11 @@ study = StudyDefinition(
     imdQ5 = patients.categorised_as(
         {
             "0": "DEFAULT",
-            "1": "imd >=0 AND imd < 32844*1/5",
-            "2": "imd >= 32844*1/5 AND imd < 32844*2/5",
-            "3": "imd >= 32844*2/5 AND imd < 32844*3/5",
-            "4": "imd >= 32844*3/5 AND imd < 32844*4/5",
-            "5": "imd >= 32844*4/5 AND imd < 32844",
+            "1": "imd >= 0 AND imd < 32800*1/5",
+            "2": "imd >= 32800*1/5 AND imd < 32800*2/5",
+            "3": "imd >= 32800*2/5 AND imd < 32800*3/5",
+            "4": "imd >= 32800*3/5 AND imd < 32800*4/5",
+            "5": "imd >= 32800*4/5 AND imd <= 32800",
         },
         imd = patients.address_as_of(
             "index_date",
