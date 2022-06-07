@@ -353,3 +353,35 @@ In addition:
   instead, it saves the joined extracts in a new output directory.
   Replacing the extracts makes it harder to construct an audit trail, which reduces computational and analytical transparency;
   [core principles](index.md) of the OpenSAFELY platform.
+
+## Grouping IMD into quintiles
+
+---8<-- 'includes/imd-warning-header.md'
+
+To group IMD into quintiles, then:
+
+```py
+study = StudyDefinition(
+    # ...
+    imdQ5 = patients.categorised_as(
+        {
+            "0": "DEFAULT",
+            "1": "imd >= 0 AND imd < 32800*1/5",
+            "2": "imd >= 32800*1/5 AND imd < 32800*2/5",
+            "3": "imd >= 32800*2/5 AND imd < 32800*3/5",
+            "4": "imd >= 32800*3/5 AND imd < 32800*4/5",
+            "5": "imd >= 32800*4/5 AND imd <= 32800",
+        },
+        imd = patients.address_as_of(
+            "index_date",
+            returning="index_of_multiple_deprivation",
+            round_to_nearest=100,
+        )
+    )
+    # ...
+)
+```
+
+Notice that group 1 contains the LSOAs that have a rounded ranking of greater-than or equal to 0.
+Group 0 contains the LSOAs that are not matched by any other group,
+which includes the LSOAs that have a rounded ranking of -1.

@@ -45,12 +45,12 @@ According to our identifiable data minimisation principles, only representations
 Of ~36 million active patient addresses, less than 55,000 have no MSOA code set. These are a split of no postcode entered, an invalid postcode entered, and no fixed abode.
 
 #### IMD
-IMD (the English Index of Multiple Deprivation) is a ranking of LSOAs based on various characteristics of the areas.
-The original ranking ranges from 1 to around 33,000 (the number of LSOAs in England),
+IMD ([Index of Multiple Deprivation](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)) is a ranking of LSOAs based on various characteristics of the areas.
+The original ranking ranges from 1 to 32,844 (the number of LSOAs in England),
 where 1 is the most deprived area.
 However, the original ranking is rounded to the nearest 100 in the OpenSAFELY-TPP database,
 so that individual LSOAs cannot be identified.
-Consequently, the rounded ranking ranges from 0 to around 33,000,
+Consequently, the rounded ranking ranges from 0 to 32,800,
 where 0 is the most deprived 49 areas.
 
 IMD rankings are recalculated every 3 or 4 years.
