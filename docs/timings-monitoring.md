@@ -35,7 +35,7 @@ Current limitations of the monitoring system:
 
 #### Queueing time
 
-We can visualise how long a job was queued for with the "This job request" link. This will show the honeycomb events for this specific job request, grouped by the reported status of the job. Nb. The height of the graph relates only to the number of reports from the job-runner to the job-server, so does not tell us anything about the job request itself.
+We can visualise how long a job was queued for with the "Events count for this job request" link. This will show the honeycomb events for this specific job request, grouped by the reported status of the job. Nb. The height of the graph relates only to the number of reports from the job-runner to the job-server, so does not tell us anything about the job request itself.
 
 For example, [job request 7254](https://jobs.opensafely.org/qmul/bmi-and-hba1c/bmi_and_hba1c/7254/) queued from the 27th April 2022 until the 3rd of May 2022, as we can see in this visualisation:
 ![Monitoring report for job request 7254](images/qmul_bmi-and-hba1c_bmi_and_hba1c_7254.png)
@@ -45,9 +45,9 @@ In comparison, [job request 7652](https://jobs.opensafely.org/university-of-nott
 
 #### Job requests with multiple jobs
 
-Some job requests contain multiple jobs, the monitoring allows us some feedback on how long different jobs take to run with the "Running jobs from this job request" link.
+In order to understand the performance of job requests that contain multiple jobs, it may be useful to visualise the monitoring events for each separate job using the "Events count for running jobs from this job request" link.
 
-Another example is [job request 8680](https://jobs.opensafely.org/datalab/covid-19-vaccine-effectiveness/comparative-booster_main/8680/). This shows a lot of separate jobs running in parallel and taking a similar amount of time to finish: ![Monitoring report by job for job request 8680](images/job_request_8680.png)
+For example, [job request 8680](https://jobs.opensafely.org/datalab/covid-19-vaccine-effectiveness/comparative-booster_main/8680/). This shows a lot of separate jobs running in parallel and taking a similar amount of time to finish: ![Monitoring report by job for job request 8680](images/job_request_8680.png)
 
 We can mouse-over the different jobs to highlight them on the graph, for example: ![Monitoring report by job for job request 8680 highlighting all_noncoviddeaths](images/job_request_8680_all_noncoviddeath.png)
 
