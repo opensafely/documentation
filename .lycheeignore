@@ -1,10 +1,10 @@
 https://fonts.gstatic.com
-https://github\.com/opensafely/covid-vaccine-effectiveness-research/*
-https://github\.com/opensafely/rapid-reports/*
-https://github\.com/opensafely/server-instructions/*
+https?://github\.com/opensafely/covid-vaccine-effectiveness-research(?:/.*)?$
+https?://github\.com/opensafely/rapid-reports(?:/.*)?$
+https?://github\.com/opensafely/server-instructions(?:/.*)?$
 https://github.com/opensafely/documentation/network/updates
 https://github.com/opensafely/research-template/generate
-https://developers\.cloudflare\.com*
-http://www\.encepp\.eu*
-https://www\.tandfonline\.com/doi/pdf/*
+https?://developers\.cloudflare\.com(?:/.*)?$
+https?://www\.encepp\.eu(?:/.*)?$
+https?://www\.tandfonline\.com(?:/.*)?$
 https?://www\.icnarc\.org(?:/.*)?$
