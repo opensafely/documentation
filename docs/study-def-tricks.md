@@ -354,11 +354,11 @@ In addition:
   Replacing the extracts makes it harder to construct an audit trail, which reduces computational and analytical transparency;
   [core principles](index.md) of the OpenSAFELY platform.
 
-## Grouping IMD into quintiles
+## Grouping IMD by quintiles
 
 ---8<-- 'includes/imd-warning-header.md'
 
-To group IMD into quintiles, then:
+To group IMD by quintiles, then:
 
 ```py
 study = StudyDefinition(
