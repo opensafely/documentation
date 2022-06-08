@@ -7,3 +7,4 @@ https://github.com/opensafely/research-template/generate
 https://developers\.cloudflare\.com*
 http://www\.encepp\.eu*
 https://www\.tandfonline\.com/doi/pdf/*
+https?://www\.icnarc\.org(?:/.*)?$
