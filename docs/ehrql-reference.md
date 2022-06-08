@@ -2,7 +2,7 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-This page is a reference for the [ehrQL](ehrql-intro.md).
+This page is a reference for [ehrQL](ehrql-intro.md).
 
 !!! specs
 
