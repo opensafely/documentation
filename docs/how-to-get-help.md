@@ -1,10 +1,30 @@
 ## Onboarders
 
-When your project has been approved by NHS England, we will agree an intensive support period with you when our statisticians and engineers will be made available to get you started.
+When your project has been approved by NHS England, we will agree an intensive support period with you when our experienced researchers and engineers will be made available to get you started.
 
 ## Q&A Forum
 
 If you're outside the onboarding support period, or you're just trying OpenSAFELY out, your first port of call should be our [Q&A forum](https://github.com/opensafely/documentation/discussions) in GitHub. Before asking for help here, please search the [Q&A forum](https://github.com/opensafely/documentation/discussions) and these documentation pages to check that your query hasn’t already been addressed. Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page](https://github.com/opensafely/documentation/discussions/445) on the Q&A.
+
+## Searching past study code
+
+The [GitHub OpenSAFELY organisation](https://github.com/opensafely) is a useful source of information when writing your analysis.
+Our GitHub organisation stores all of the code used for previous studies. 
+You can search for examples of how specific variables and codelists etc. have been used.
+
+!!! warning
+    Use some caution when looking at code, especially older code:
+    it may never have been run, or may have been superseded since.
+
+To search the OpenSAFELY GitHub organisation for code:
+
+1. Go to the [OpenSAFELY GitHub organisation page](https://github.com/opensafely).
+2. Type or paste your search text into the top-left box (`Search or jump to...`)
+3. Press ++enter++ or select the option to search `In this organisation`.
+4. Select "Code" to find any matches within previous code (or sometimes "Issues" may help).
+
+It can be helpful to use the option to filter the results by language.
+For example, restricting to Python might help you find study definition files. 
 
 ## Bug reports and feature requests
 
