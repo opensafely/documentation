@@ -8,9 +8,23 @@ If you're outside the onboarding support period, or you're just trying OpenSAFEL
 
 ## Searching past study code
 
-Another useful source of information when writing your analysis is the [OpenSAFELY organisation](https://github.com/opensafely) in GitHub, where all code for previous studies is stored. You can search for examples of how specific variables, codelists etc have been used previously. However, **use with caution**: you may come across old code that has since been superceded/corrected or contains errors. 
+The [GitHub OpenSAFELY organisation](https://github.com/opensafely) is a useful source of information when writing your analysis.
+Our GitHub organisation stores all of the code used for previous studies. 
+You can search for examples of how specific variables and codelists etc. have been used.
 
-On the [organisation page](https://github.com/opensafely), paste search text into the top-left box (`Search or jump to...`) and press return or select the option to search `In this organisation`. Select `Code` to find any matches within previous code (or sometimes `Issues` may help). It can be helpful to use the option to filter the results by Language (e.g. `Python` for study definition files). 
+!!! warning
+    Use some caution when looking at code, especially older code:
+    it may have been superseded since.
+
+To search the OpenSAFELY GitHub organisation for code:
+
+1. Go to the [OpenSAFELY GitHub organisation page](https://github.com/opensafely).
+2. Type or paste your search text into the top-left box (`Search or jump to...`)
+3. Press ++enter++ or select the option to search `In this organisation`.
+4. Select "Code" to find any matches within previous code (or sometimes "Issues" may help).
+
+It can be helpful to use the option to filter the results by language.
+For example, restricting to Python might help you find study definition files. 
 
 ## Bug reports and feature requests
 
