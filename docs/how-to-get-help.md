@@ -14,7 +14,7 @@ You can search for examples of how specific variables and codelists etc. have be
 
 !!! warning
     Use some caution when looking at code, especially older code:
-    it may have been superseded since.
+    it may never have been run, or may have been superseded since.
 
 To search the OpenSAFELY GitHub organisation for code:
 
