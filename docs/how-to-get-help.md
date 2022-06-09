@@ -1,10 +1,16 @@
 ## Onboarders
 
-When your project has been approved by NHS England, we will agree an intensive support period with you when our statisticians and engineers will be made available to get you started.
+When your project has been approved by NHS England, we will agree an intensive support period with you when our experienced researchers and engineers will be made available to get you started.
 
 ## Q&A Forum
 
 If you're outside the onboarding support period, or you're just trying OpenSAFELY out, your first port of call should be our [Q&A forum](https://github.com/opensafely/documentation/discussions) in GitHub. Before asking for help here, please search the [Q&A forum](https://github.com/opensafely/documentation/discussions) and these documentation pages to check that your query hasn’t already been addressed. Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page](https://github.com/opensafely/documentation/discussions/445) on the Q&A.
+
+## Searching past study code
+
+Another useful source of information when writing your analysis is the [OpenSAFELY organisation](https://github.com/opensafely) in GitHub, where all code for previous studies is stored. You can search for examples of how specific variables, codelists etc have been used previously. However, **use with caution**: you may come across old code that has since been superceded/corrected or contains errors. 
+
+On the [organisation page](https://github.com/opensafely), paste search text into the top-left box (`Search or jump to...`) and press return or select the option to search `In this organisation`. Select `Code` to find any matches within previous code (or sometimes `Issues` may help). It can be helpful to use the option to filter the results by Language (e.g. `Python` for study definition files). 
 
 ## Bug reports and feature requests
 
