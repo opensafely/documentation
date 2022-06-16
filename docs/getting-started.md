@@ -179,7 +179,7 @@ account, for developing your own study:
    some setup in background. Wait about 1 minute, then reload the page, and you
    should see the README displayed now reflects the name you gave to the new
    repository.
-1. Once created, select the "Settings" tab and scroll down to the option to the option to "Automatically delete head branches". This should be turned ON so that when you merge a branch it is automatically deleted, keeping your branches neat and tidy. Deleted branches can be restored if needed later. 
+1. Once created, select the "Settings" tab and scroll down to the option to the option to "Automatically delete head branches". This should be turned ON so that when you merge a branch it is automatically deleted, keeping your branches neat and tidy. Deleted branches can be restored if needed later.
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
@@ -582,7 +582,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
+	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
 	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
@@ -777,8 +777,8 @@ detail on the subjects covered in this tutorial. For example:
   tool](opensafely-cli.md).
 * The [full study definition reference](study-def.md) describes all the
   different ways to define new variables in your study definition.
-    * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex) 
-    or [Region](study-def-variables.md#cohortextractor.patients.registered_practice_as_of) to the 
+    * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex)
+    or [Region](study-def-variables.md#cohortextractor.patients.registered_practice_as_of) to the
     study definition you created using this guide, then plot some new charts!*
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
