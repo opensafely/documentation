@@ -35,6 +35,7 @@ nav:
           - Docker: install-docker.md
           - OpenSAFELY CLI: opensafely-cli.md
           - macOS: install-macos.md
+          - Linux: install-linux.md
       - Study definitions:
           - Overview: study-def.md
           - Working with dates: study-def-dates.md
