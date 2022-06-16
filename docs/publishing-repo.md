@@ -1,8 +1,10 @@
 When you're ready to tell the world about your GitHub repo, consider the following:
 
 * Check that the "About" section and the contents of `README.md` are both up to date. People will see these sections prominently when they click a link to your repository on GitHub.
-    * Include a link to the paper or other published, final outputs in `README.md`.
     * Include a short, one-line summary and link to your paper or outputs in the "About" section. Click the cog next to "About" and add these details.
+    * In `README.md`, include:
+        * A link to the preprint/journal article associated with the repo.
+        * A link to the published outputs in your project workspace on the jobs site.
 * Check the `LICENSE` file exists, and that it allows modification and distribution without cost. We recommend the MIT Licence ([example](https://github.com/opensafely/risk-factors-research/blob/main/LICENSE)).
 * Try to ensure your automated tests (on the repo's _Actions_ tab) are green. It's not essential, but it is a better look to be able to demonstrate your code is minimally runnable.
 * Review your GitHub repository to make it simpler for people to explore:
