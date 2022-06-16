@@ -55,3 +55,11 @@ This older monitoring log of [job request 7320](https://jobs.opensafely.org/univ
 
 ![Monitoring report by job for job request 7320](images/job_request_7320.png)
 ![Monitoring report by job for job request 7320 highlighting generate_study_population_index](images/job_request_7320_generate_study_population_index.png)
+
+#### Individual jobs
+
+We can also dig into the events relating to one particular job, using the monitoring links on the job detail page.
+
+For example, we can use the link "All monitoring events for this job" to look at [job 3c5ln3n652hbsvah](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/3c5ln3n652hbsvah) from the earlier [job request 7320](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/) like this:
+
+![Monitoring report for job 3c5ln3n652hbsvah](images/job_detail_3c5ln3n652hbsvah.png)
