@@ -136,4 +136,4 @@ watch-examples:
 
 
 generate-docs:
-    $BIN/python -m databuilder generate_docs --location=../
+    $BIN/python -m databuilder.docs >../public_docs.json
