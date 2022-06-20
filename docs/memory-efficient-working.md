@@ -57,7 +57,7 @@ Beyond selecting memory-efficient data types and removing large objects, finding
 
 One possible method is to add print statements in your code to write to the log when getting to specific parts of the code. This will help you identify how long it took to get to a certain point in your code on the server. If your job did not successfully complete, it can also help you find out at what point in the code it failed.
 
-Another method is to locally run line-by-line profiling tools to time the processes in your code on dummy data. For example, the `LineProfiler` package in Python provides the `@profile` decorator to get line-by-line memory use for each function. You can get statistics like number of hits per line (multiple if in a loop), time taken per line, time taken per hit, and percentage of total time next to each line. You can run and save the output to a text file by running the following in the command line.
+Another method is to locally run line-by-line profiling tools to time the processes in your code on dummy data. For example, the `LineProfiler` package in Python provides the `@profile` decorator to get line-by-line execution time for each function. While this does not explicitly measure memory use, it helps to identify where your code is taking the longest, which may help you decode why it is running slowly on the server. You can get statistics like number of hits per line (multiple if in a loop), time taken per line, time taken per hit, and percentage of total time next to each line. You can run and save the output to a text file by running the following in the command line.
 
 ```bash
 python [script_name].py
@@ -68,6 +68,6 @@ Below is a screenshot of an example output.
 
 ![Example output from line profiler on dummy data](images/line-profiler-output-dummy-data.png)
 
-In a Jupyter notebook, you can run an IPython magic command `%prun` before calling a function to get the line profile results as a cell output.
+In a Jupyter notebook, you can run an IPython magic command `%prun` before calling a function to get similar line profile results as a cell output.
 
-While line profiling can help identify which parts of the code is taking up the most memory or time, it does not guarantee that there will be optimisation solutions. Some processes are inherently more memory-intensive than others (e.g. sorting values). Additionally, depending on differences between the dummy data and real data, locally estimated timings may differ from timings based on real data.
+While profiling can help identify which parts of the code is taking up the most memory or time, it does not guarantee that there will be optimisation solutions. Some processes are inherently more memory-intensive than others (e.g. sorting values). Additionally, depending on differences between the dummy data and real data, locally estimated timings may differ from timings based on real data.
