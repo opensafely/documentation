@@ -8,7 +8,7 @@ In general, for memory use of types in R assume that (`logical` = `integer`) < `
 
 In R, use `typeof()` and `class()` to look under the hood and see if memory savings could be made. A quick way to show the class for every column in a data frame is `t(t(sapply(data.frame, class)))`. In Python, use `Series.dtype()` to get the data type of a single column and `DataFrame.dtypes` to get the data type of every column.
 
-The most likely savings are `double` to `integer`, and `character` to `factor`.
+The most likely savings are `double` to `integer` (`float` to `int` in Python) and `character` to `factor` in R (`object` to `categorical` in Python).
 
 * If a column contains only integer values, type it as an integer not a double. It’s common for integers to sneakily convert back to doubles. For example, if `x` is an integer, then `y <- x + 1` is a double, because `1` is a double and combining an integer and a double will give a double. Instead, use `y <- x + 1L` which is an integer because `1L` is an integer.
 * If a column contains only a few different string values, it’s usually better to convert it from a character to a factor. In fact, because there is no free-text info in OpenSAFELY, _in theory_ all string-type variables, including derived variables, should only contain values from a known set, and so could all be represented as factors. But in practice this might not be simple to enforce, and might be actively unhelpful if lots of theoretically possible values are not actually represented. So some character variables are permissible. Use your judgement.
