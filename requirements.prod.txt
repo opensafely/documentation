@@ -36,6 +36,14 @@ ghp-import==2.0.2 \
     --hash=sha256:5f8962b30b20652cdffa9c5a9812f7de6bcb56ec475acac579807719bf242c46 \
     --hash=sha256:947b3771f11be850c852c64b561c600fdddf794bab363060854c1ee7ad05e071
     # via mkdocs
+gitdb==4.0.9 \
+    --hash=sha256:8033ad4e853066ba6ca92050b9df2f89301b8fc8bf7e9324d412a63f8bf1a8fd \
+    --hash=sha256:bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa
+    # via gitpython
+gitpython==3.1.27 \
+    --hash=sha256:1c885ce809e8ba2d88a29befeb385fcea06338d3640712b59ca623c220bb5704 \
+    --hash=sha256:5b68b000463593e05ff2b261acff0ff0972df8ab1b70d3cdbd41b546c8b8fc3d
+    # via mkdocs-git-revision-date-plugin
 griffe==0.19.3 \
     --hash=sha256:348422f0e303ff3b76d6b35a96fa9c90dddcbe175506171fda78e8e5cf8c4246 \
     --hash=sha256:3a51e53bc58c45d38d6d7b4509b41b153b506de3df99767e6f891c75d91706a5
@@ -55,6 +63,7 @@ jinja2==3.0.3 \
     --hash=sha256:611bb273cd68f3b993fabdc4064fc858c5b47a973cb5aa7999ec1ba405c87cd7
     # via
     #   mkdocs
+    #   mkdocs-git-revision-date-plugin
     #   mkdocs-material
     #   mkdocstrings
 kiwisolver==1.3.2 \
@@ -255,12 +264,16 @@ mkdocs==1.3.0 \
     # via
     #   -r requirements.prod.in
     #   mkdocs-autorefs
+    #   mkdocs-git-revision-date-plugin
     #   mkdocs-material
     #   mkdocstrings
 mkdocs-autorefs==0.3.1 \
     --hash=sha256:12baad29359f468b44d980ed35b713715409097a1d8e3d0ef90962db95205eda \
     --hash=sha256:f0fd7c115eaafda7fb16bf5ff5d70eda55d7c0599eac64f8b25eacf864312a85
     # via mkdocstrings
+mkdocs-git-revision-date-plugin==0.3.2 \
+    --hash=sha256:2e67956cb01823dd2418e2833f3623dee8604cdf223bddd005fe36226a56f6ef
+    # via -r requirements.prod.in
 mkdocs-material==8.3.6 \
     --hash=sha256:01f3fbab055751b3b75a64b538e86b9ce0c6a0f8d43620f6287dfa16534443e5 \
     --hash=sha256:be8f95c0dfb927339b55b2cc066423dc0b381be9828ff74a5b02df979a859b66
@@ -557,6 +570,10 @@ six==1.16.0 \
     --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
     --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
     # via python-dateutil
+smmap==5.0.0 \
+    --hash=sha256:2aba19d6a040e78d8b09de5c57e96207b09ed71d8e55ce0959eeee6c8e190d94 \
+    --hash=sha256:c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936
+    # via gitdb
 sqlparse==0.4.2 \
     --hash=sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae \
     --hash=sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d

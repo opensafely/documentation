@@ -107,6 +107,7 @@ copyright: © University of Oxford for the Bennett Institute for Applied Data Sc
 
 plugins:
   - search
+  - git-revision-date
   - mkdocstrings:
       default_handler: python
       handlers:

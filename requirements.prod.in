@@ -8,3 +8,4 @@ mkdocs-material
 https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/c943a4b4f052848a314ad27c34006269a0fbea90.zip#mkdocs-opensafely-databuilder
 mkdocstrings[python]
 opensafely-cohort-extractor
+mkdocs-git-revision-date-plugin
