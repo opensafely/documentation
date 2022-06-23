@@ -23,9 +23,15 @@ Each individual example demonstrates a specific ehrQL feature in isolation.
 Every example here consists of:
 
 1. Headings and subheadings that summarise the feature being demonstrated.
-2. A small example data table containing entirely fictitious variables and values.
-   The table has a name: for example, `e` or `p` that is referred to throughout the example.
-   Table names use code formatting throughout this reference.
+2. A small example data input table containing entirely fictitious variables and values.
+    * The table has a single-letter name referred to throughout the example;
+      for example, `e` for event-level table
+      or `p` for patient-level table.
+    * The columns of input tables also have single-letter names:
+      these single-letter names refer to the column's data type.
+      For example, an `i` column contains integers, and a `b` column
+      contains Boolean values.
+    * Both table and column names are writen with code formatting throughout this reference.
 3. An ehrQL query that extracts some data from the example table.
    Like the table names, ehrQL queries are displayed here with code formatting.
 4. The resulting output from the ehrQL query,
