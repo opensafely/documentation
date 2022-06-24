@@ -2,17 +2,19 @@
 
 [SystmOne](https://www.tpp-uk.com/products/systmone) is a primary care clinical information system run by TPP (Leeds), used by roughly one third of GP practices in England, with records for approximately 44% of the English population. Its primary purpose is patient management, though the data may be used for research.
 
-It captures symptoms, test results, diagnoses, prescriptions, onward referrals, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
+It captures symptoms, investigations, test results, diagnoses, prescriptions, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
 
 ## The OpenSAFELY-TPP database
 
 The SystmOne database contains various tables for events, medications, registrations, and so on, which have been processed, pseudonymised, and made available within the OpenSAFELY-TPP database. Some additional custom tables are also created, for instance to make administrative and geographic grouping information available (like household membership) without disclosing of identifiable patient data (like addresses).
 
-Clinical, referral, and consultation events are coded in SystmOne using an augmented version of CTV3 Read codes. These are available in the OpenSAFELY-TPP database in the `CodedEvent` table. Each row is made up of a patient identifier, an event code, an event date, and an additional interaction identifier linking the event to a specific patient&ndash;service interaction, such as a GP consultation, getting bloods, receiving test results, updating contact details, and so on (perhaps confusingly, this is called the "consultation" identifier). There may also be an additional numeric value stored, for instance if the code relates to a physiological measurement.
+Clinical and consultation events are coded in SystmOne using an augmented version of CTV3 Read codes, and also available using SNOMED codes. These are available in the OpenSAFELY-TPP database in the `CodedEvent` table. Each row is made up of a patient identifier, an event code, an event date, and an additional interaction identifier linking the event to a specific patient&ndash;service interaction, such as a GP consultation, getting bloods, receiving test results, updating contact details, and so on (perhaps confusingly, this is called the "consultation" identifier). There may also be an additional numeric value stored, for instance if the code relates to a physiological measurement.
 
 Medications are coded using DM+D codes, and are available in the `MedicationIssue` table which is structured similarly to `CodedEvent`.
 
 The `Vaccination` table contains information on administered vaccinations, identified using either the target disease (e.g., influenza), or the vaccine product (e.g., Optaflu). 
+
+Detailed information on onward referrals is not currently available (a subset of referrals are recorded in the `CodedEvent` table but this data will be incomplete).
 
 Only coded or other structured data can be accessed in OpenSAFELY &mdash; we do not have access to free text data.
 
