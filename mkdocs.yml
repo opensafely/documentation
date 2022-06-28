@@ -27,6 +27,7 @@ nav:
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
+      - Federated analytics: federation.md
       - GitHub repositories: repositories.md
       - Detailed installation guides:
           - Overview: install-intro.md
@@ -134,6 +135,11 @@ plugins:
 markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: "🔗"
   - pymdownx.highlight
