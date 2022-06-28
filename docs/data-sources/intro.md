@@ -1,6 +1,6 @@
-This section provides contextual information on the core primary care EHR systems inside which OpenSAFELY is built (currently TPP and EMIS), as well as all external datasets imported to the secure EHR environment.  To query the data, see the [study definition section](study-def.md).
+This section provides contextual information on the core primary care EHR systems inside which OpenSAFELY is built (currently TPP and EMIS), as well as all external datasets imported to the secure EHR environment.  To query the data, see the [study definition section](../study-def.md).
 
-Use the navigation pane to the left of the page view information on each dataset.
+View information on [available datasets](index.md).
 
 
 ## What is primary care data?
