@@ -7,7 +7,7 @@ services:
     pullRequestPreviewsEnabled: true
     envVars:
       - key: PYTHON_VERSION
-        value: 3.8.12
+        value: 3.9.13
     headers:
       - path: /*
         name: X-Frame-Options

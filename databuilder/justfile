@@ -22,7 +22,7 @@ clean:
 # ensure valid virtualenv
 virtualenv:
     #!/usr/bin/env bash
-    PYTHON_VERSION=$(which python3.10)
+    PYTHON_VERSION=$(which python3.9)
 
     # create venv and upgrade pip
     test -d $VIRTUAL_ENV || { $PYTHON_VERSION -m venv $VIRTUAL_ENV && $PIP install --upgrade pip; }
