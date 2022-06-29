@@ -52,3 +52,42 @@ services:
       - type: redirect
         source: /news
         destination: https://www.opensafely.org/changelog/
+      - type: redirect
+        source: /dataset-intro
+        destination: /data-sources/intro/
+      - type: redirect
+        source: /dataset-systmone
+        destination: /data-sources/systmone/
+      - type: redirect
+        source: /dataset-emis
+        destination: /data-sources/emis/
+      - type: redirect
+        source: /dataset-onscis
+        destination: /data-sources/onscis/
+      - type: redirect
+        source: /dataset-sgsscovid
+        destination: /data-sources/sgsscovid/
+      - type: redirect
+        source: /dataset-therapeutics
+        destination: /data-sources/therapeutics/
+      - type: redirect
+        source: /dataset-ecds
+        destination: /data-sources/ecds/
+      - type: redirect
+        source: /dataset-apc
+        destination: /data-sources/apc/
+      - type: redirect
+        source: /dataset-cpns
+        destination: /data-sources/cpns/
+      - type: redirect
+        source: /dataset-icnarc
+        destination: /data-sources/icnarc/
+      - type: redirect
+        source: /dataset-isaric
+        destination: /data-sources/isaric/
+      - type: redirect
+        source: /dataset-onsdeaths
+        destination: /data-sources/onsdeaths/
+      - type: redirect
+        source: /dataset-ukrr
+        destination: /data-sources/ukrr/

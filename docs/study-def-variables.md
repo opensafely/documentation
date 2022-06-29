@@ -1,6 +1,6 @@
 This section describes each available function for creating variables within a study definition.
 
-For more information on the datasets contained within the OpenSAFELY database, see the [Data sources section](dataset-intro.md).
+For more information on the datasets contained within the OpenSAFELY database, see the [Data sources section](data-sources/intro.md).
 
 For more information on writing a study definition, go to the [study definition section](study-def.md).
 
@@ -95,7 +95,7 @@ These variables are derived from data held in the patients' primary care records
     Data from ICNARC were last imported on 21-Jan-2021, with no further imports currently planned. Alternative data on ICU admission can be gleaned from SUS (i.e. returning=days_in_critical_care).
 
 These variables are derived from the Intensive Care National Audit and Research Centre Case-Mix Programme (ICNARC-CMP), which collects information on ICU admissions across England.
-For more information, see the [ICNARC data section](dataset-icnarc.md).
+For more information, see the [ICNARC data section](data-sources/icnarc.md).
 &nbsp;
 
 ::: cohortextractor.patients.admitted_to_icu
@@ -103,7 +103,7 @@ For more information, see the [ICNARC data section](dataset-icnarc.md).
 
 ## SGSS
 These variables are derived from Second Generation Surveillance System (SGSS) data which captures routine laboratory surveillance data on infectious diseases across England.
-For more information, see the [SGSS data section](dataset-sgsscovid.md).
+For more information, see the [SGSS data section](data-sources/sgsscovid.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_test_result_in_sgss
@@ -113,7 +113,7 @@ For more information, see the [SGSS data section](dataset-sgsscovid.md).
 ## CPNS
 
 These variables are derived from the COVID-19 Patient Notification System (CPNS), which collects info on all in-hospital covid-related deaths.
-For more information, see the [CPNS data section](dataset-cpns.md). 
+For more information, see the [CPNS data section](data-sources/cpns.md). 
 
 !!! note
     CPNS is restricted to in-hospital covid-related deaths only. For covid-related deaths in any setting, ONS-registered deaths where cause of death matches [COVID-19 coding in ICD-10](https://www.who.int/standards/classifications/classification-of-diseases/emergency-use-icd-codes-for-covid-19-disease-outbreak) is generally more useful.
@@ -125,7 +125,7 @@ For more information, see the [CPNS data section](dataset-cpns.md).
 
 ## ONS deaths
 These variables are derived from the Death Registry data provided by the Office for National Statistics.
-For more information, see the [ONS deaths section](dataset-onsdeaths.md).
+For more information, see the [ONS deaths section](data-sources/onsdeaths.md).
 &nbsp;
 
 ::: cohortextractor.patients.died_from_any_cause
@@ -140,7 +140,7 @@ For more information, see the [ONS deaths section](dataset-onsdeaths.md).
 
 These variables are derived from data provided by the International Severe Acute Respiratory and Emerging Infection Consortium.
 
-For more information, see the [ISARIC section](dataset-isaric.md).
+For more information, see the [ISARIC section](data-sources/isaric.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_an_isaric_record
@@ -151,7 +151,7 @@ For more information, see the [ISARIC section](dataset-isaric.md).
 ---8<-- 'includes/onscis-warning-header.md'
 
 These variables are derived from the COVID-19 Infection Survey data provided by the Office for National Statistics.
-For more information, see the [ONS CIS section](dataset-onscis.md).
+For more information, see the [ONS CIS section](data-sources/onscis.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_an_ons_cis_record
@@ -168,8 +168,8 @@ For more information, see the [ONS CIS section](dataset-onscis.md).
 ## SUS
 These variables are derived from the Secondary Uses Services (SUS) data, and their underlying datasets:
 
-* [APCS](dataset-apc.md)
-* [ECDS](dataset-ecds.md)
+* [APCS](data-sources/apc.md)
+* [ECDS](data-sources/ecds.md)
 * OPA
 
 ::: cohortextractor.patients.admitted_to_hospital
@@ -204,7 +204,7 @@ These variables are derived from forms submitted by clinicians to NHS England fo
 patients assessed and approved to receive antivirals/nMABs for COVID-19 in inpatient or outpatient
 settings.
 
-For more information, see the [Therapeutics data section](dataset-therapeutics.md).
+For more information, see the [Therapeutics data section](data-sources/therapeutics.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_covid_therapeutics

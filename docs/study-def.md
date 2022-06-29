@@ -114,7 +114,7 @@ It's possible that a record is matched, but the value is not valid.
 In this case, the value will be returned as-is.
 For example, a date set to `"9999-99-99"` or a blood pressure reading set to `-1`.
 These will indicate missing / unknown / unrecorded / not applicable values in the source dataset.
-The meaning of these values will depend on the data source, and this should be documented in the [dataset documentation](dataset-intro.md).
+The meaning of these values will depend on the data source, and this should be documented in the [dataset documentation](data-sources/intro.md).
 
 In some instances, 0s will be returned for missing values when there are also numeric values of 0. Distinguishing true 0s from missing values can't be done 100% reliably within TPPs data model as, as stated above, the numeric value isn't nullable. Possible workarounds for this include:
 

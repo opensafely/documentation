@@ -30,7 +30,7 @@ Other viruses/organisms may have a finite episode length, so that any tests occu
 
 **Negative test data is unreliable &mdash; DO NOT USE**
 
-SARS-CoV-2 test results from various sources are also coded [within SystmOne](dataset-systmone.md).
+SARS-CoV-2 test results from various sources are also coded [within SystmOne](systmone.md).
 
 
 ## More information

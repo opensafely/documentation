@@ -212,7 +212,7 @@ However:
 In OpenSAFELY's first two years, researchers have used cohort-extractor
 and study definitions to succesfully complete a number of [research
 studies](https://www.opensafely.org/research/) using [multiple data
-sources and linked data](dataset-intro.md).
+sources and linked data](data-sources/intro.md).
 
 Data Builder is a complete redesign and reimplementation of
 cohort-extractor aimed at making OpenSAFELY even easier to work with for

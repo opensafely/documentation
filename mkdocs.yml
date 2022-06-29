@@ -6,20 +6,21 @@ nav:
       - Our philosophy: open-methods.md
       - Security: security-levels.md
       - Data sources:
-          - Overview: dataset-intro.md
-          - SystmOne primary care: dataset-systmone.md
-          - EMIS primary care: dataset-emis.md
+          - data-sources/index.md
+          - Overview: data-sources/intro.md 
+          - SystmOne primary care: data-sources/systmone.md
+          - EMIS primary care: data-sources/emis.md
           - Externally linked data:
-              - Covid-19 infection survey: dataset-onscis.md
-              - Covid-19 test results: dataset-sgsscovid.md
-              - Covid-19 therapeutics: dataset-therapeutics.md
-              - Emergency attendances: dataset-ecds.md
-              - Hospital admissions: dataset-apc.md
-              - In-hospital deaths (covid-19 only): dataset-cpns.md
-              - Intensive care admissions (covid-19 only): dataset-icnarc.md
-              - International Severe Acute Respiratory and emerging Infection Consortium: dataset-isaric.md
-              - Registered deaths: dataset-onsdeaths.md
-              - UK Renal Registry: dataset-ukrr.md
+              - Covid-19 infection survey: data-sources/onscis.md
+              - Covid-19 test results: data-sources/sgsscovid.md
+              - Covid-19 therapeutics: data-sources/therapeutics.md
+              - Emergency attendances: data-sources/ecds.md
+              - Hospital admissions: data-sources/apc.md
+              - In-hospital deaths (covid-19 only): data-sources/cpns.md
+              - Intensive care admissions (covid-19 only): data-sources/icnarc.md
+              - International Severe Acute Respiratory and emerging Infection Consortium: data-sources/isaric.md
+              - Registered deaths: data-sources/onsdeaths.md
+              - UK Renal Registry: data-sources/ukrr.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
       - Information for system integrators: system-integration.md
@@ -84,6 +85,8 @@ theme:
   palette:
     scheme: opensafely
   custom_dir: overrides
+  features: 
+    - navigation.indexes
 
 edit_uri: "edit/main/docs"
 
@@ -123,6 +126,7 @@ plugins:
         - examples
         - public_docs.json
   - mkdocs-opensafely-databuilder
+  - macros
 
 markdown_extensions:
   - pymdownx.snippets:

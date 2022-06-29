@@ -8,7 +8,7 @@ The process to extract data for such a matched case-control population in OpenSA
 
 !!! warning
 
-    At present, only the [OpenSAFELY TPP backend](dataset-systmone.md) supports case-control studies.
+    At present, only the [OpenSAFELY TPP backend](data-sources/systmone.md) supports case-control studies.
 
 There are five steps to undertaking a [case-control study](https://en.wikipedia.org/wiki/Case%E2%80%93control_study) (or [matched cohort study](https://en.wikipedia.org/wiki/Nested_case%E2%80%93control_study)) with OpenSAFELY:
 
