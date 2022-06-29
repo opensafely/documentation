@@ -1,0 +1,3 @@
+[submodule "src/cohort-extractor"]
+	path = src/cohort-extractor
+	url = git@github.com:opensafely-core/cohort-extractor.git

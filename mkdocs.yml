@@ -7,7 +7,7 @@ nav:
       - Security: security-levels.md
       - Data sources:
           - data-sources/index.md
-          - Overview: data-sources/intro.md 
+          - Overview: data-sources/intro.md
           - SystmOne primary care: data-sources/systmone.md
           - EMIS primary care: data-sources/emis.md
           - Externally linked data:
@@ -85,7 +85,7 @@ theme:
   palette:
     scheme: opensafely
   custom_dir: overrides
-  features: 
+  features:
     - navigation.indexes
 
 edit_uri: "edit/main/docs"
@@ -121,11 +121,13 @@ plugins:
             show_source: false
             show_if_no_docstring: true
             heading_level: 4
+          paths: [src/cohort-extractor]
       custom_templates: templates
       watch:
         - examples
         - includes
         - public_docs.json
+        - src/cohort-extractor/cohortextractor
   - mkdocs-opensafely-databuilder
   - macros
 
