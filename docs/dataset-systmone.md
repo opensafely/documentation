@@ -14,7 +14,9 @@ Medications are coded using DM+D codes, and are available in the `MedicationIssu
 
 The `Vaccination` table contains information on administered vaccinations, identified using either the target disease (e.g., influenza), or the vaccine product (e.g., Optaflu). 
 
-Detailed information on onward referrals is not currently available (a subset of referrals are recorded in the `CodedEvent` table but this data will be incomplete).
+!!! warning
+    Detailed information on onward referrals is not currently available.
+    A subset of referrals are recorded in the `CodedEvent` table but this data will be incomplete.
 
 Only coded or other structured data can be accessed in OpenSAFELY &mdash; we do not have access to free text data.
 
