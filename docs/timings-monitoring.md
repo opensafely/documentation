@@ -60,6 +60,20 @@ This older monitoring log of [job request 7320](https://jobs.opensafely.org/univ
 
 We can also dig into the events relating to one particular job, using the monitoring links on the job detail page.
 
-For example, we can use the link "All monitoring events for this job" to look at [job 3c5ln3n652hbsvah](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/3c5ln3n652hbsvah) from the earlier [job request 7320](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/) like this:
+For example, we can use the link "Events count for: this job" to look at [job 3c5ln3n652hbsvah](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/3c5ln3n652hbsvah) from the earlier [job request 7320](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/) like this:
 
 ![Monitoring report for job 3c5ln3n652hbsvah](images/job_detail_3c5ln3n652hbsvah.png)
+
+We can also compare a particular job to previous runs of the same job, or potentially similar jobs, using the "Events count for: All jobs for this workspace and action in the last 14 days" and "Events count for: All jobs for this action in the last 14 days".
+
+For example, looking at the history for [job iqd24yy2bdcyn5ho](https://jobs.opensafely.org/isaric/impact-of-covid-19-on-long-term-healthcare-use-and-costs-in-children-and-young-people/hdruk-os-covid-paeds/9938/iqd24yy2bdcyn5ho/):
+
+![Monitoring report for jobs related to iqd24yy2bdcyn5ho in the last  14days](images/job_iqd24yy2bdcyn5ho_related_14days.png)
+
+Zooming in...
+
+![Honeycomb Zoom](images/honeycomb_zoom.png)
+
+We can see several runs of this job, the last of which was (at the sampled time) still running, having been running for significantly longer than previous runs:
+
+![Job iqd24yy2bdcyn5ho related Zoomed](images/job_iqd24yy2bdcyn5ho_related_zoomed.png)
