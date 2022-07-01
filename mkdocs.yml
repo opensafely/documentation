@@ -124,6 +124,7 @@ plugins:
       custom_templates: templates
       watch:
         - examples
+        - includes
         - public_docs.json
   - mkdocs-opensafely-databuilder
   - macros
