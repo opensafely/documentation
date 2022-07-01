@@ -1,7 +1,7 @@
 To request new functions that create variables via a study definition, follow these instructions:
 
 * Browse the [study definition variables](study-def-variables.md) page to see all possible variables that can currently be extracted with a study definition, and check that the variable you want doesn't already exist. If you're not sure, read about OpenSAFELY [study definitions](study-def.md) to understand the way in which the database is queried and data extracts are generated. 
-* Browse the [data sources](datasets/index.md) page to see what data is available in each backend.
+* Browse the [data sources](../data-sources/) page to see what data is available in each backend.
 * View the [OpenSAFELY-TPP database update notebook](https://reports.opensafely.org/reports/opensafely-tpp-database-builds/) to see when each data source was updated.
 * View the [OpenSAFELY-TPP schema notebook](https://reports.opensafely.org/reports/opensafely-tpp-database-schema/) to see the structure of the database.
 * Check that the variable has not already been requested as an Issue in the [`cohort-extractor`](https://github.com/opensafely-core/cohort-extractor) repository. Look at both _open_ and _closed_ Issues in case the variable has been considered by deemed unworkable or low priorty.

@@ -62,4 +62,4 @@ We can also dig into the events relating to one particular job, using the monito
 
 For example, we can use the link "All monitoring events for this job" to look at [job 3c5ln3n652hbsvah](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/3c5ln3n652hbsvah) from the earlier [job request 7320](https://jobs.opensafely.org/university-of-bristol/post-covid-vaccinated/post-covid-vaccinated/7320/) like this:
 
-![Monitoring report for job 3c5ln3n652hbsvah](images/job_detail_3c5ln3n652hbsvah.png)
+![Monitoring report for job 3c5ln3n652hbsvah](images/job_3c5ln3n652hbsvah.png)

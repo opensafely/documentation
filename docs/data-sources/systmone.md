@@ -31,7 +31,7 @@ SARS-CoV-2 test result data is incorporated into SystmOne and uses the following
 These are coded in response to data flowing from Pillar 1 and Pillar 2. (At the time of writing, Dec 2020, Moonshot community tests are also planned to be incorporated).
 
 !!! note "National coronavirus testing data are also available from SGSS"
-    We recommend you use linked [SGSS](dataset-sgsscovid.md) data for SARS-CoV-2 test results.
+    We recommend you use linked [SGSS](sgsscovid.md) data for SARS-CoV-2 test results.
 
 ### Dates
 
