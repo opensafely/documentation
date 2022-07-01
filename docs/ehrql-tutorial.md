@@ -19,6 +19,9 @@ and set the population, which is all patients who were born in or after 2000:
 
 ---8<-- 'examples/src-minimal-ehrql-set-population.md'
 
+!!! note
+    ehrQL expects a single dataset, named `dataset`.  If we name the dataset something else, an error will be raised.  If we define more than one dataset, only the last one named `dataset` will be registered.
+
 At this point, we have created a dataset and set the population, but we haven't requested any data.
 Let's change that.
 As well as using each patient's year of birth to set the population, we also request it:
@@ -37,10 +40,6 @@ As well as using each patient's year of birth to set the population, we also req
 
     to give the column a different name.
 
-
-Finally, we register the dataset:
-
----8<-- 'examples/src-minimal-ehrql-register.md'
 
 ## Wrapping up
 
