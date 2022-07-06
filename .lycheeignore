@@ -8,3 +8,20 @@ https?://developers\.cloudflare\.com(?:/.*)?$
 https?://www\.encepp\.eu(?:/.*)?$
 https?://www\.tandfonline\.com(?:/.*)?$
 https?://www\.icnarc\.org(?:/.*)?$
+# The following ignore line ignores this link in the source: ../data-sources
+#
+# MkDocs actually uses an index.md file to generate this,
+# but lychee cannot find it from the link and reports it broken.
+#
+# What lychee tries to resolve in a GitHub Actions runner is:
+# file:///home/runner/work/documentation/documentation/data-sources
+# which doesn't exist.
+#
+# The partial checkout path is included:
+# * because there's no other easy way to try and generalise,
+#   in case someone tries to run this outside of GitHub Actions
+# * to try and avoid any false matches,
+#   in case a similar URL path is used elsewhere in the documentation
+#   (though this is unlikely)
+# This line depends on the repository checkout being in `documentation/`.
+file:///.*/documentation/data-sources/?$
