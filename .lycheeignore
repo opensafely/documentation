@@ -1,9 +1,12 @@
+# Preconnect URL for fonts: 404 when the domain itself is accessed.
 https://fonts.gstatic.com
+# Not accessible without being logged in.
 https?://github\.com/opensafely/covid-vaccine-effectiveness-research(?:/.*)?$
 https?://github\.com/opensafely/rapid-reports(?:/.*)?$
 https?://github\.com/opensafely/server-instructions(?:/.*)?$
 https://github.com/opensafely/documentation/network/updates
 https://github.com/opensafely/research-template/generate
+# Block either the GitHub Actions runner or the lychee client.
 https?://developers\.cloudflare\.com(?:/.*)?$
 https?://www\.encepp\.eu(?:/.*)?$
 https?://www\.tandfonline\.com(?:/.*)?$
