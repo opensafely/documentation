@@ -30,3 +30,36 @@ Familiarity with:
 
 would also be helpful,
 but is *not* essential.
+
+#### Installed software
+
+If you wish to run the tutorial code yourself, …
+
+!!! todo
+
+    Decide how we expect someone to run this tutorial.
+
+    We have at least four possible routes:
+
+    1. a Python installed `databuilder` package
+        * \+ does not require Docker
+        * \+ easy to always point someone to the latest version
+             via `pip install` from GitHub `main` branch
+        * \- requires suitable Python installation
+        * \- may lead to more technical support issues
+             due to Python version incompatibilities
+    2. the `databuilder` Docker image
+        * \+ easy to do if you have Docker
+        * \+ doesn't require a Python install
+        * \- requires Docker
+    3. `opensafely-cli`
+        * \- requires the addition of a `project.yaml`
+             which is more about an OpenSAFELY study,
+             than ehrQL itself
+        * \- requires Docker
+    4. via Gitpod or similar
+        * \+ does not require any installation
+        * \- another thing to maintain
+        * \- unavailable in some networks
+
+    We could specify one or more of these.
