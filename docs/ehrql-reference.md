@@ -24,13 +24,18 @@ Every example here consists of:
 
 1. Headings and subheadings that summarise the feature being demonstrated.
 2. A small example data input table containing entirely fictitious variables and values.
-    * The table has a single-letter name referred to throughout the example;
-      for example, `e` for event-level table
-      or `p` for patient-level table.
-    * The columns of input tables also have single-letter names:
-      these single-letter names refer to the column's data type.
-      For example, an `i` column contains integers, and a `b` column
-      contains Boolean values.
+    * The table has a single-letter name referred to throughout the example
+        * `e` for event-level table
+        * `p` for patient-level table.
+    * The columns of input tables use a name constructed from a single letter with a number
+      to create an identifier — for example, `i1`.
+      The single letter in the identifier refers to the column's data type:
+        * a `b` column contains Boolean values
+        * a `c` column contains electronic health record codes
+          (the codes used in this reference are fictitious, for example: `abc`)
+        * a `d` column contains dates
+        * an `i` column contains integers
+        * an `s` column contains strings
     * Both table and column names are writen with code formatting throughout this reference.
 3. An ehrQL query that extracts some data from the example table.
    Like the table names, ehrQL queries are displayed here with code formatting.
