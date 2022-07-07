@@ -20,8 +20,11 @@ This tutorial is aimed at:
 The current implementation of ehrQL is based on Python,
 but the syntax used is relatively simple.
 
-This tutorial assumes that you have a little familiarity with programming or scripted data analysis,
-whether that is in Python, R, Stata or any other language.
+This tutorial assumes that you have a little familiarity with:
+
+* programming or scripted data analysis,
+  whether that is in Python, R, Stata or any other language.
+* querying databases or other data stores
 
 Familiarity with:
 
@@ -63,3 +66,46 @@ If you wish to run the tutorial code yourself, …
         * \- unavailable in some networks
 
     We could specify one or more of these.
+
+    The ideal would probably be none of these
+    and instead be an in-browser tool
+    that allows you,
+    without installation, to:
+
+    * load sample data,
+    * edit a dataset definition,
+    * process the sample data with that dataset definition
+    * display and/or save the results
+
+## Running the tutorial code examples
+
+!!! todo
+
+    * Explain how to download sample data.
+    * Explain how to load that sample data.
+    * Examples
+
+## A minimal dataset definition
+
+We provide Data Builder with a dataset definition.
+
+The most minimal valid dataset definition is this:
+
+```python
+from databuilder.query_language import Dataset
+
+dataset = Dataset()
+```
+
+!!! todo
+
+    Test this is correct.
+
+We always need to create a dataset that is has the name `dataset`.
+Lines of the format `from… import…` specify which of Data Builder's code and features we are using in our dataset definition.
+
+
+!!! todo
+
+    Use code annotations to describe the code.
+
