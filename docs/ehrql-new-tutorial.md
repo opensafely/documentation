@@ -102,13 +102,14 @@ This is a minimal, but still valid, dataset definition:
 ---8<-- "databuilder/wip-dataset-definitions/dataset_definition_minimal.py"
 ```
 
-!!! todo
+Lines of the format `from… import…` specify which of Data Builder's code and features
+to use in our dataset definition.
+Here, we use:
 
-    Test this is correct.
+* `Dataset` as provided by the query language, to create a dataset
+* the `patients` table
 
-We always need to create a dataset that is has the name `dataset`.
-Lines of the format `from… import…` specify which of Data Builder's code and features we are using in our dataset definition.
-
+We always need to create a dataset that has the name `dataset`.
 
 !!! todo
 
