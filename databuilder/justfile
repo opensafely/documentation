@@ -89,7 +89,7 @@ test: devenv
     set -euo pipefail
 
     mkdir -p tmp
-    find snippets/ -type f | xargs $BIN/python
+    find snippets/ -type f -name "*.py" | xargs $BIN/python
     rm -rf tmp
 
 
@@ -104,7 +104,7 @@ check: devenv
 
     # check Python can execute each example, this catches import errors which
     # snex doesn't
-    for f in $(find databuilder/snippets -type f); do
+    for f in $(find databuilder/snippets -name "*.py" -type f); do
         databuilder/$BIN/python $f
     done
 
