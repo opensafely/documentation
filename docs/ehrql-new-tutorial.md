@@ -52,14 +52,17 @@ If you wish to run the tutorial code yourself, …
         * \- may lead to more technical support issues
              due to Python version incompatibilities
     2. the `databuilder` Docker image
-        * \+ easy to do if you have Docker
+        * \+ easy to start if you have Docker
         * \+ doesn't require a Python install
         * \- requires Docker
+        * \- requires some manual wrangling to get files in
     3. `opensafely-cli`
         * \- requires the addition of a `project.yaml`
              which is more about an OpenSAFELY study,
              than ehrQL itself
         * \- requires Docker
+        * \- is there a way of using this to run a project without outputs?
+             (not currently)
     4. via Gitpod or similar
         * \+ does not require any installation
         * \- another thing to maintain
