@@ -87,10 +87,9 @@ upgrade-databuilder: devenv
 test: devenv
     #!/usr/bin/env bash
     set -euo pipefail
-
-    mkdir -p tmp
-    find snippets/ -type f -name "*.py" | xargs $BIN/python
-    rm -rf tmp
+    # Use xargs here over find with the -exec option.
+    # xargs produces a non-exit error code when command it runs fails.
+    find snippets/ -type f -name "*.py" -print0 | xargs -0 -n 1 "$BIN"/python
 
 
 # runs the format (black), sort (isort) and lint (flake8) check but does not change any files
@@ -101,12 +100,6 @@ check: devenv
     databuilder/$BIN/black --check databuilder/
     databuilder/$BIN/isort --check-only --diff databuilder/
     databuilder/$BIN/flake8 databuilder/
-
-    # check Python can execute each example, this catches import errors which
-    # snex doesn't
-    for f in $(find databuilder/snippets -name "*.py" -type f); do
-        databuilder/$BIN/python $f
-    done
 
 
 # fix formatting and import sort ordering
