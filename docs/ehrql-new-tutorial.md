@@ -87,14 +87,16 @@ If you wish to run the tutorial code yourself, …
 
 ## A minimal dataset definition
 
-We provide Data Builder with a dataset definition.
+We provide Data Builder with a dataset definition to extract data from an OpenSAFELY backend.
 
-The most minimal valid dataset definition is this:
+This is a minimal, but still valid, dataset definition:
+
+!!! todo
+
+    May need to fix up how this code is included.
 
 ```python
-from databuilder.query_language import Dataset
-
-dataset = Dataset()
+---8<-- "databuilder/wip-dataset-definitions/dataset_definition_minimal.py"
 ```
 
 !!! todo
