@@ -113,5 +113,13 @@ We always need to create a dataset that has the name `dataset`.
 
 !!! todo
 
-    Use code annotations to describe the code.
+    Consider using code annotations to describe the code.
+
+## Ideas and concepts to include
+
+* Last `dataset` is what we process.
+* In terms of running the query,
+  nothing happens until the entire Python file is processed.
+  What Data Builder is really doing is generating a database query
+  that can be submitted.
 
