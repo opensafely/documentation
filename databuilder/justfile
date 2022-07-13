@@ -110,6 +110,12 @@ fix: devenv
     databuilder/$BIN/black databuilder/
     databuilder/$BIN/isort databuilder/
 
+sqlcheck: devenv
+    #!/usr/bin/env bash
+    set -euo pipefail
+    # Use xargs here over find with the -exec option.
+    # xargs produces a non-exit error code when command it runs fails.
+    find wip-dataset-definitions/ -type f -name "*.py" -print0 | xargs -0 $BIN/python -m databuilder dump-dataset-sql
 
 # Run the dev project
 run: devenv
