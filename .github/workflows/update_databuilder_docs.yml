@@ -29,19 +29,23 @@ jobs:
               repo: 'databuilder',
               run_id: '2670954738'
             })
-            return resp.data.artifacts[0].id
+            console.log(resp)
+            return resp.data.artifacts[0].archive_download_url
       
+      # - name: Download artifact
+      #   uses: actions/github-script@v6
+      #   id: download-artifact
+      #   with:
+      #     script: |
+      #       console.log(${{steps.fetch-workflow-artifacts.outputs.result}})
+      #       await github.rest.actions.downloadArtifact({
+      #         owner: 'opensafely-core',
+      #         repo: 'databuilder',
+      #         artifact_id: '${{steps.fetch-workflow-artifacts.outputs.result}}'
+      #       })
       - name: Download artifact
-        uses: actions/github-script@v6
-        id: download-artifact
-        with:
-          script: |
-            console.log(${{steps.fetch-workflow-artifacts.outputs.result}})
-            await github.rest.actions.downloadArtifact({
-              owner: 'opensafely-core',
-              repo: 'databuilder',
-              artifact_id: '${{steps.fetch-workflow-artifacts.outputs.result}}'
-            })
-
-      - name: ls
-        run: ls
+        permissions:
+          actions: read
+        run: |
+          curl -o new_public_docs.json ${{steps.fetch-workflow-artifacts.outputs.result}}
+          cat new_public_docs.json
