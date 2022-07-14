@@ -20,5 +20,35 @@ jobs:
       
       - name: Download release artifact
         run: |
-          curl -L ${{ github.event.inputs.download_url }} > new_public_docs.json
-          cat new_public_docs.json
+          # curl -L ${{ github.event.inputs.download_url }} > public_docs.json
+          curl -L https://github.com/opensafely-core/databuilder/releases/download/docs-metadata-fb14d684117973f17aabb6182585f5431352f77b/public_docs.json > public_docs.json
+
+      - name: commit new docs fileg
+        run: |
+          branch=update-docs-${{ github.sha }}
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b $branch
+          git add public_docs.json
+          git commit -m "Update databuilder docs"
+          git push origin $branch
+
+      - name: Open PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { repo, owner } = context.repo;
+            result = await github.rest.pulls.create({
+              title: 'Update databuilder docs',
+              owner,
+              repo,
+              head: 'update-docs-${{ github.sha }}',
+              base: 'main',
+            });
+            await github.rest.pulls.requestReviewers({
+              owner,
+              repo,
+              pull_number: result.data.number,
+              reviewers: ['rebkwok'],
+            });
+ 
