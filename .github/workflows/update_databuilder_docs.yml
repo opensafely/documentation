@@ -1,0 +1,12 @@
+---
+name: 'Update databuilder docs'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update_docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3        
