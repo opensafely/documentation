@@ -450,10 +450,10 @@
         },
         {
           "name": "date_of_death",
-          "description": "Patient's year and month of death, provided in format YYYY-MM-01.The day will always be the first of the month.",
+          "description": "Patient's year and month of death, provided in format YYYY-MM-01. The day will always be the first of the month.",
           "type": "Date",
           "constraints": [
-            "Must have a value"
+            "Must be the first day of a month"
           ]
         }
       ],
@@ -602,6 +602,76 @@
             },
             {
               "id": "1.1.3",
+              "title": "Take with constant true",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ]
+                ]
+              },
+              "series": "e.take(True).count_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "1"
+                ]
+              ]
+            },
+            {
+              "id": "1.1.4",
+              "title": "Take with constant false",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ]
+                ]
+              },
+              "series": "e.take(False).count_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "0"
+                ],
+                [
+                  "2",
+                  "0"
+                ]
+              ]
+            },
+            {
+              "id": "1.1.5",
               "title": "Chain multiple takes",
               "tables": {
                 "e": [
@@ -769,6 +839,76 @@
                 [
                   "3",
                   "301"
+                ]
+              ]
+            },
+            {
+              "id": "1.2.3",
+              "title": "Drop with constant true",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ]
+                ]
+              },
+              "series": "e.drop(True).count_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "0"
+                ],
+                [
+                  "2",
+                  "0"
+                ]
+              ]
+            },
+            {
+              "id": "1.2.4",
+              "title": "Drop with constant false",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "2",
+                    "201"
+                  ]
+                ]
+              },
+              "series": "e.drop(False).count_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "1"
                 ]
               ]
             }
@@ -2040,6 +2180,58 @@
                   "T"
                 ]
               ]
+            },
+            {
+              "id": "6.1.4",
+              "title": "Is not null",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1",
+                    "i2"
+                  ],
+                  [
+                    "1",
+                    "101",
+                    "101"
+                  ],
+                  [
+                    "2",
+                    "201",
+                    "202"
+                  ],
+                  [
+                    "3",
+                    "301",
+                    ""
+                  ],
+                  [
+                    "4",
+                    "",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.i1.is_not_null()",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  "F"
+                ]
+              ]
             }
           ]
         },
@@ -2781,6 +2973,53 @@
             },
             {
               "id": "9.1.2",
+              "title": "Is not in",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "c1"
+                  ],
+                  [
+                    "1",
+                    "abc"
+                  ],
+                  [
+                    "2",
+                    "def"
+                  ],
+                  [
+                    "3",
+                    "ghi"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.c1.is_not_in([SNOMEDCTCode(\"abc\"), SNOMEDCTCode(\"ghi\")])",
+              "output": [
+                [
+                  "1",
+                  "F"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "9.1.3",
               "title": "Is in codelist csv",
               "tables": {
                 "p": [
@@ -2893,7 +3132,7 @@
           "paragraphs": [
             {
               "id": "10.1.1",
-              "title": "Case",
+              "title": "Case with expression",
               "tables": {
                 "p": [
                   [
@@ -2922,7 +3161,7 @@
                   ]
                 ]
               },
-              "series": "case(",
+              "series": "case(\n    when(p.i1 < 8).then(p.i1),\n    when(p.i1 > 8).then(100),\n)",
               "output": [
                 [
                   "1",
@@ -2977,7 +3216,7 @@
                   ]
                 ]
               },
-              "series": "case(",
+              "series": "case(\n    when(p.i1 < 8).then(p.i1),\n    when(p.i1 > 8).then(100),\n    default=0,\n)",
               "output": [
                 [
                   "1",
@@ -2998,6 +3237,57 @@
                 [
                   "5",
                   "0"
+                ]
+              ]
+            },
+            {
+              "id": "10.1.3",
+              "title": "Case with boolean column",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1",
+                    "b1"
+                  ],
+                  [
+                    "1",
+                    "6",
+                    "T"
+                  ],
+                  [
+                    "2",
+                    "7",
+                    "F"
+                  ],
+                  [
+                    "3",
+                    "9",
+                    "F"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "case(\n    when(p.b1).then(p.i1),\n    when(p.i1 > 8).then(100),\n)",
+              "output": [
+                [
+                  "1",
+                  "6"
+                ],
+                [
+                  "2",
+                  ""
+                ],
+                [
+                  "3",
+                  "100"
+                ],
+                [
+                  "4",
+                  ""
                 ]
               ]
             }
@@ -3636,6 +3926,276 @@
                 [
                   "4",
                   ""
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Operations on all series containing strings",
+      "sections": [
+        {
+          "id": "12.1",
+          "title": "Testing whether one string contains another string",
+          "paragraphs": [
+            {
+              "id": "12.1.1",
+              "title": "Contains fixed value",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "s1"
+                  ],
+                  [
+                    "1",
+                    "ab"
+                  ],
+                  [
+                    "2",
+                    "ab12"
+                  ],
+                  [
+                    "3",
+                    "12ab"
+                  ],
+                  [
+                    "4",
+                    "12ab45"
+                  ],
+                  [
+                    "5",
+                    "a b"
+                  ],
+                  [
+                    "6",
+                    "AB"
+                  ],
+                  [
+                    "7",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.s1.contains(\"ab\")",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  "T"
+                ],
+                [
+                  "5",
+                  "F"
+                ],
+                [
+                  "6",
+                  "F"
+                ],
+                [
+                  "7",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "12.1.2",
+              "title": "Contains fixed value with special characters",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "s1"
+                  ],
+                  [
+                    "1",
+                    "/a%b_"
+                  ],
+                  [
+                    "2",
+                    "/ab_"
+                  ],
+                  [
+                    "3",
+                    "/a%bc"
+                  ],
+                  [
+                    "4",
+                    "a%b_"
+                  ]
+                ]
+              },
+              "series": "p.s1.contains(\"/a%b_\")",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  "F"
+                ]
+              ]
+            },
+            {
+              "id": "12.1.3",
+              "title": "Contains value from column",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "s1",
+                    "s2"
+                  ],
+                  [
+                    "1",
+                    "ab",
+                    "ab"
+                  ],
+                  [
+                    "2",
+                    "cd12",
+                    "cd"
+                  ],
+                  [
+                    "3",
+                    "12ef",
+                    "ef"
+                  ],
+                  [
+                    "4",
+                    "12gh45",
+                    "gh"
+                  ],
+                  [
+                    "5",
+                    "i j",
+                    "ij"
+                  ],
+                  [
+                    "6",
+                    "KL",
+                    "kl"
+                  ],
+                  [
+                    "7",
+                    "",
+                    "mn"
+                  ],
+                  [
+                    "8",
+                    "ab",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.s1.contains(p.s2)",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "T"
+                ],
+                [
+                  "3",
+                  "T"
+                ],
+                [
+                  "4",
+                  "T"
+                ],
+                [
+                  "5",
+                  "F"
+                ],
+                [
+                  "6",
+                  "F"
+                ],
+                [
+                  "7",
+                  ""
+                ],
+                [
+                  "8",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "12.1.4",
+              "title": "Contains value from column with special characters",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "s1",
+                    "s2"
+                  ],
+                  [
+                    "1",
+                    "/a%b_",
+                    "/a%b_"
+                  ],
+                  [
+                    "2",
+                    "/ab_",
+                    "/a%b_"
+                  ],
+                  [
+                    "3",
+                    "/a%bc",
+                    "/a%b_"
+                  ],
+                  [
+                    "4",
+                    "a%b_",
+                    "/a%b_"
+                  ]
+                ]
+              },
+              "series": "p.s1.contains(p.s2)",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ],
+                [
+                  "3",
+                  "F"
+                ],
+                [
+                  "4",
+                  "F"
                 ]
               ]
             }
