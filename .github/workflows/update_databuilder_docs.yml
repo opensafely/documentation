@@ -11,6 +11,10 @@ on:
         description: "Databuilder workflow run id"
         required: true
 
+permissions:
+  actions: read
+  contents: read
+      
 jobs:
   update_docs:
     runs-on: ubuntu-latest
@@ -44,8 +48,6 @@ jobs:
       #         artifact_id: '${{steps.fetch-workflow-artifacts.outputs.result}}'
       #       })
       - name: Download artifact
-        permissions:
-          actions: read
         run: |
           curl -o new_public_docs.json ${{steps.fetch-workflow-artifacts.outputs.result}}
           cat new_public_docs.json
