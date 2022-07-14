@@ -1,6 +1,6 @@
 [project]
 name = "documentation"
-requires-python = ">=3.8<3.9"
+requires-python = ">=3.9<3.10"
 
 [tool.black]
 exclude = '''
