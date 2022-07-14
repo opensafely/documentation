@@ -13,3 +13,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3        
+
+      - name: Fetch databuilder artifacts
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const resp = await github.rest.actions.listArtifactsForRepo({
+              owner: 'opensafely-core',
+              repo: 'databuilder',
+            })
+            console.log(resp)
