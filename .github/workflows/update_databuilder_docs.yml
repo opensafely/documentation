@@ -16,10 +16,15 @@ jobs:
 
       - name: Fetch databuilder artifacts
         uses: actions/github-script@v6
+        id: fetch-artifacts
         with:
           script: |
             const resp = await github.rest.actions.listArtifactsForRepo({
               owner: 'opensafely-core',
               repo: 'databuilder',
             })
-            console.log(resp)
+            return resp.data
+      
+      - name:
+        run: |
+          echo "${{steps.fetch-artifacts.outputs.result}}"
