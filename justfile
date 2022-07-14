@@ -50,7 +50,7 @@ requirements-dev *args: requirements-prod
 
 
 # ensure prod requirements installed and up to date
-prodenv: requirements-prod
+prodenv: requirements-prod fetch-cohort-extractor
     #!/usr/bin/env bash
     # exit if .txt file has not changed since we installed them (-nt == "newer than', but we negate with || to avoid error exit code)
     test requirements.prod.txt -nt $VIRTUAL_ENV/.prod || exit 0
@@ -86,6 +86,13 @@ upgrade env package="": virtualenv
     test -z "{{ package }}" || opts="--upgrade-package {{ package }}"
     FORCE=true {{ just_executable() }} requirements-{{ env }} $opts
 
+# Fetch cohort-extractor submodule
+fetch-cohort-extractor:
+    git submodule update --init
+
+# Update cohort-extractor submodule
+update-cohort-extractor:
+    git submodule update --remote src/cohort-extractor
 
 # Run the tests
 test: devenv
