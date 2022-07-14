@@ -27,7 +27,7 @@ jobs:
             const resp = await github.rest.actions.listWorkflowRunArtifacts({
               owner: 'opensafely-core',
               repo: 'databuilder',
-              run_id: '${{github.event.inputs.databuilder_run_id}}'
+              run_id: '2670954738'
             })
             return resp.data
       
