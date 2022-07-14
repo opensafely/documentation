@@ -7,14 +7,9 @@ on:
       - autogenerate-docs
   workflow_dispatch:
     inputs:
-      databuilder_run_id:
-        description: "Databuilder workflow run id"
+      docs_json: 
+        description: "public_docs.json content"
         required: true
-
-permissions:
-  actions: read
-  contents: read
-      
 jobs:
   update_docs:
     runs-on: ubuntu-latest
@@ -23,31 +18,25 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3    
 
-      - name: Fetch databuilder artifacts from workflow run
-        uses: actions/github-script@v6
-        id: fetch-workflow-artifacts
-        with:
-          script: |
-            const resp = await github.rest.actions.listWorkflowRunArtifacts({
-              owner: 'opensafely-core',
-              repo: 'databuilder',
-              run_id: '2670954738'
-            })
-            console.log(resp)
-            return resp.data.artifacts[0].archive_download_url
-      
-      # - name: Download artifact
+      - name: Create new docs file
+        run: |
+          echo "$(github.events.inputs.docs_json)" > new_public_docs.json
+          cat new_public_docs.json
+
+      # - name: Fetch databuilder artifacts from workflow run
       #   uses: actions/github-script@v6
-      #   id: download-artifact
+      #   id: fetch-workflow-artifacts
       #   with:
       #     script: |
-      #       console.log(${{steps.fetch-workflow-artifacts.outputs.result}})
-      #       await github.rest.actions.downloadArtifact({
+      #       const resp = await github.rest.actions.listWorkflowRunArtifacts({
       #         owner: 'opensafely-core',
       #         repo: 'databuilder',
-      #         artifact_id: '${{steps.fetch-workflow-artifacts.outputs.result}}'
+      #         run_id: '2670954738'
       #       })
-      - name: Download artifact
-        run: |
-          curl -o new_public_docs.json ${{steps.fetch-workflow-artifacts.outputs.result}}
-          cat new_public_docs.json
+      #       console.log(resp)
+      #       return resp.data.artifacts[0].archive_download_url
+      
+      # - name: Download artifact
+      #   run: |
+      #     curl -o new_public_docs.json ${{steps.fetch-workflow-artifacts.outputs.result}}
+      #     cat new_public_docs.json
