@@ -10,12 +10,13 @@ on:
       branch_tag:
         desription: "Tag to append to the branch name for the new PR"
         required: true
+  push:
+    branches:
+      - autogenerate-docs
 
 jobs:
-  env:
-      BRANCH_NAME: update-docs-${{ github.event.inputs.branch_tag }}
-
   update_docs:
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -24,9 +25,11 @@ jobs:
       
       - name: Download release artifact
         run: |
-          curl -L ${{ github.event.inputs.download_url }} > public_docs.json
+          curl -L https://github.com/opensafely-core/databuilder/releases/download/docs-metadata-512b61bcb5d208360f2d576bd2aa7bda19c1945b/public_docs.json > public_docs.json
 
-      - name: commit new docs fileg
+      - name: commit new docs file
+        env:
+          BRANCH: update-docs-512b61bcb5d208360001
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -37,20 +40,23 @@ jobs:
 
       - name: Open PR
         uses: actions/github-script@v6
+        env:
+          BRANCH: update-docs-512b61bcb5d208360001
         with:
           script: |
             const { repo, owner } = context.repo;
+            const { BRANCH } = process.env;
             result = await github.rest.pulls.create({
               title: 'Update databuilder docs',
               owner,
               repo,
-              head: '$BRANCH',
+              head: BRANCH,
               base: 'main',
             });
             await github.rest.pulls.requestReviewers({
               owner,
               repo,
               pull_number: result.data.number,
-              team_reviewers: ['data-team'],
+              reviewers: ['rebkwok'],
             });
  
