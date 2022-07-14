@@ -1,0 +1,56 @@
+---
+name: 'Update databuilder docs'
+
+on:
+  workflow_dispatch:
+    inputs:
+      download_url: 
+        description: "Download URL for public_docs.json"
+        required: true
+      branch_tag:
+        desription: "Tag to append to the branch name for the new PR"
+        required: true
+
+jobs:
+  env:
+      BRANCH_NAME: update-docs-${{ github.event.inputs.branch_tag }}
+
+  update_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3    
+      
+      - name: Download release artifact
+        run: |
+          curl -L ${{ github.event.inputs.download_url }} > public_docs.json
+
+      - name: commit new docs fileg
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b $BRANCH
+          git add public_docs.json
+          git commit -m "Update databuilder docs"
+          git push origin $BRANCH
+
+      - name: Open PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { repo, owner } = context.repo;
+            result = await github.rest.pulls.create({
+              title: 'Update databuilder docs',
+              owner,
+              repo,
+              head: '$BRANCH',
+              base: 'main',
+            });
+            await github.rest.pulls.requestReviewers({
+              owner,
+              repo,
+              pull_number: result.data.number,
+              team_reviewers: ['data-team'],
+            });
+ 
