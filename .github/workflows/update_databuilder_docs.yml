@@ -6,25 +6,47 @@ on:
     branches:
       - autogenerate-docs
   workflow_dispatch:
+    inputs:
+      databuilder_run_id:
+        description: "Databuilder workflow run id"
+        required: true
 
 jobs:
   update_docs:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3        
+        uses: actions/checkout@v3    
 
-      - name: Fetch databuilder artifacts
+      - name: Fetch databuilder artifacts from workflow run
         uses: actions/github-script@v6
-        id: fetch-artifacts
+        id: fetch-workflow-artifacts
         with:
           script: |
-            const resp = await github.rest.actions.listArtifactsForRepo({
+            const resp = await github.rest.actions.listWorkflowRunArtifacts({
               owner: 'opensafely-core',
               repo: 'databuilder',
+              run_id: '${{github.event.inputs.databuilder_run_id}}'
             })
             return resp.data
       
-      - name:
+      - name: Find artifact ID
+        id: get-artifact-id
         run: |
-          echo "${{steps.fetch-artifacts.outputs.result}}"
+          artifact_id=$(sed -r 's/.*"id":([^ ]+),.*/\1/' <<< "${{steps.fetch-workflow-artifacts.outputs.result}}")
+          echo "::set-output name=ARTIFACT_ID::$(echo $artifact_id)"
+      
+      - name: Download artifact
+        uses: actions/github-script@v6
+        id: download-artifact
+        with:
+          script: |
+            await github.rest.actions.downloadArtifact({
+              owner: 'opensafely-core',
+              repo: 'databuilder',
+              artifact_id: '${{steps.get-artifact-id.outputs.ARTIFACT_ID}}''
+            })
+
+      - name: ls
+        run: ls
