@@ -2,6 +2,9 @@
 name: 'Update databuilder docs'
 
 on:
+  push:
+    branches:
+      - autogenerate-docs
   workflow_dispatch:
 
 jobs:
