@@ -7,8 +7,8 @@ on:
       - autogenerate-docs
   workflow_dispatch:
     inputs:
-      docs_json: 
-        description: "public_docs.json content"
+      download_url: 
+        description: "Download URL for public_docs.json"
         required: true
 jobs:
   update_docs:
@@ -17,26 +17,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3    
-
-      - name: Create new docs file
-        run: |
-          echo "$(github.events.inputs.docs_json)" > new_public_docs.json
-          cat new_public_docs.json
-
-      # - name: Fetch databuilder artifacts from workflow run
-      #   uses: actions/github-script@v6
-      #   id: fetch-workflow-artifacts
-      #   with:
-      #     script: |
-      #       const resp = await github.rest.actions.listWorkflowRunArtifacts({
-      #         owner: 'opensafely-core',
-      #         repo: 'databuilder',
-      #         run_id: '2670954738'
-      #       })
-      #       console.log(resp)
-      #       return resp.data.artifacts[0].archive_download_url
       
-      # - name: Download artifact
-      #   run: |
-      #     curl -o new_public_docs.json ${{steps.fetch-workflow-artifacts.outputs.result}}
-      #     cat new_public_docs.json
+      - name: Download release artifact
+        run: |
+          curl -L ${{ github.event.inputs.download_url }} > new_public_docs.json
+          cat new_public_docs.json
