@@ -29,23 +29,18 @@ jobs:
               repo: 'databuilder',
               run_id: '2670954738'
             })
-            return resp.data
-      
-      - name: Find artifact ID
-        id: get-artifact-id
-        run: |
-          artifact_id=$(sed -r 's/.*"id":([^ ]+),.*/\1/' <<< "${{steps.fetch-workflow-artifacts.outputs.result}}")
-          echo "::set-output name=ARTIFACT_ID::$(echo $artifact_id)"
+            return resp.data.artifacts[0].id
       
       - name: Download artifact
         uses: actions/github-script@v6
         id: download-artifact
         with:
           script: |
+            console.log(${{steps.fetch-workflow-artifacts.outputs.result}})
             await github.rest.actions.downloadArtifact({
               owner: 'opensafely-core',
               repo: 'databuilder',
-              artifact_id: '${{steps.get-artifact-id.outputs.ARTIFACT_ID}}''
+              artifact_id: '${{steps.fetch-workflow-artifacts.outputs.result}}'
             })
 
       - name: ls
