@@ -23,7 +23,7 @@ jobs:
       
       - name: Download release artifact
         run: |
-          curl ${{ github.event.inputs.download_url }} > public_docs.json
+          curl -L ${{ github.event.inputs.download_url }} > public_docs.json
 
       - name: commit new docs file
         env:
