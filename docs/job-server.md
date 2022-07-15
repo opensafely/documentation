@@ -5,11 +5,6 @@ Here you can see (even without a login) all the ongoing projects within OpenSAFE
 To submit job-requests (i.e., to run one or more actions), the general process is as follows:
 
 * **Log in** using your GitHub credentials
-* **Create a project** (or select an existing one):
-    * Click the `Add a New Workspace` button.
-    * Click the `Register Project` button.
-    * Choose a name, this will be the public facing name for your project.
-    * Click `Save`.
 * **Create a workspace**:
     * Click the `Create a Workspace` button.
     * Choose a name, for example the name of the repo.
