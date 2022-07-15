@@ -55,7 +55,6 @@ jobs:
               owner,
               repo,
               pull_number: result.data.number,
-              team_reviewers: ['data-team'],
             });
       
       - name: Trigger build-check
