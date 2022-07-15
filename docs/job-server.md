@@ -1,6 +1,6 @@
 ## Running your code on the server
 
-To run code for real in the production environment, use the [https://jobs.opensafely.org](https://jobs.opensafely.org) site.
+To run code for real in the production environment, use [the jobs site](https://jobs.opensafely.org).
 Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ that have been run on the server.
 To submit job-requests (i.e., to run one or more actions), the general process is as follows:
 
