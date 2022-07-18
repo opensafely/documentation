@@ -4202,6 +4202,157 @@
           ]
         }
       ]
+    },
+    {
+      "id": "13",
+      "title": "Defining the dataset population",
+      "sections": [
+        {
+          "id": "13.1",
+          "title": "Defining a population",
+          "paragraphs": [
+            {
+              "id": "13.1.1",
+              "title": "Population with single table",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "b1",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "F",
+                    "10"
+                  ],
+                  [
+                    "2",
+                    "T",
+                    "20"
+                  ],
+                  [
+                    "3",
+                    "F",
+                    "30"
+                  ]
+                ]
+              },
+              "series": "p.i1\nset_population(~p.b1)",
+              "output": [
+                [
+                  "1",
+                  "10"
+                ],
+                [
+                  "3",
+                  "30"
+                ]
+              ],
+              "text": "Extract a column from a patient table after limiting the population by another column."
+            },
+            {
+              "id": "13.1.2",
+              "title": "Population with multiple tables",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "10"
+                  ],
+                  [
+                    "2",
+                    "20"
+                  ],
+                  [
+                    "3",
+                    "0"
+                  ]
+                ],
+                "e": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "101"
+                  ],
+                  [
+                    "1",
+                    "102"
+                  ],
+                  [
+                    "3",
+                    "301"
+                  ],
+                  [
+                    "4",
+                    "401"
+                  ]
+                ]
+              },
+              "series": "e.exists_for_patient()\nset_population(p.i1 > 0)",
+              "output": [
+                [
+                  "1",
+                  "T"
+                ],
+                [
+                  "2",
+                  "F"
+                ]
+              ],
+              "text": "Limit the patient population by a column in one table, and return values from another\ntable."
+            },
+            {
+              "id": "13.1.3",
+              "title": "Case with case expression",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "6"
+                  ],
+                  [
+                    "2",
+                    "7"
+                  ],
+                  [
+                    "3",
+                    "9"
+                  ],
+                  [
+                    "4",
+                    ""
+                  ]
+                ]
+              },
+              "series": "p.i1\nset_population(\n    case(\n        when(p.i1 <= 8).then(True),\n        when(p.i1 > 8).then(False),\n    )\n)",
+              "output": [
+                [
+                  "1",
+                  "6"
+                ],
+                [
+                  "2",
+                  "7"
+                ]
+              ],
+              "text": "Limit the patient population by a case expression."
+            }
+          ],
+          "text": "\n`set_population` is used to limit the population from which data is extracted.\n"
+        }
+      ]
     }
   ]
 }
