@@ -24,11 +24,11 @@ reference to them in
 
 ### Updating Data Builder Definitions
 
-Data Builder is a documentation dependency which we can't install directly.
-Cloudflare Pages' latest Python version is 3.7, but Data Builder is using 3.9 features.
-Rather than limit Data Builder to the versions supported by Cloudflare Pages, we've opted to have it generate a JSON file from Data Builder and commit that JSON to this repo.
+Data Builder generates some documentation automatically in JSON format from backend and contract code, and from its spec tests.  When a new Data Builder version builds and generates updates to
+the documentation, a PR to update the JSON file in this repo is automatically opened.
 
-Run `just databuilder/generate-docs` to generate the JSON file using `databuilder` installed in the `databuilder` subdirectory of this repo.
+The current and past versions of the Data Builder JSON file can be found as release artifacts
+with [Data Builder releases](https://github.com/opensafely-core/databuilder/releases).
 
 If the JSON file has changed you might need to update [the plugin which uses it to render pages](https://github.com/opensafely-core/mkdocs-opensafely-backend-contracts/).
 
