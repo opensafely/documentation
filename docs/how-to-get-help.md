@@ -12,6 +12,46 @@ to check that your question hasn’t already been answered.
 
 [Q&A forum]: https://github.com/opensafely/documentation/discussions
 
+## Slack
+
+You will be invited to join the Bennett Institute's workspace during the intensive support period.
+If you're outside the intensive support period,
+then your second port of call should be to ask your question in any channel to which you have access.
+(Your first port of call should be to ask your question in the [Q&A forum](#qa-forum).)
+
+You may wish to direct your question to the **tech support team**.
+To do so, include the string `tech-support` in your question
+and a member of this team will aim to respond within half a working day.
+We ask that you don't send direct messages (DMs) to members of the tech support team.
+
+The types of question that this team aim to answer include:
+
+* deleting files from [Level 3](security-levels.md#level-3) or [Level 4](security-levels.md#level-4)
+* [requesting new libraries](requesting-libraries.md)
+* accuracy of the OpenSAFELY documentation
+  ("The documentation says... buy the error message says...")
+* completeness of the OpenSAFELY documentation
+  ("How do I... in OpenSAFELY?)
+* availability of services
+  (e.g. [OpenSAFELY Jobs](https://jobs.opensafely.org/), the OpenSAFELY documentation, GitHub)
+
+Some types of question are beyond the scope of the tech support team,
+although other members of the Bennett Institute's workspace may be able to answer them.
+These types of question include:
+
+* programming tasks ("How do I... in...?")
+* build/deploy failures
+  (e.g. of the OpenSAFELY documentation, of the Bennett Institute team manual)
+
+Issues on OpenSAFELY repositories
+(i.e. repositories within the [opensafely][], [opensafely-core][], and [opensafely-actions][] GitHub organizations)
+are also beyond the scope of the tech support team.
+However, we welcome [bug reports and feature requests](#bug-reports-and-feature-requests) made in this way.
+
+[opensafely]: https://github.com/opensafely
+[opensafely-actions]: https://github.com/opensafely-actions
+[opensafely-core]: https://github.com/opensafely-core
+
 ## Searching past study code
 
 The [GitHub OpenSAFELY organisation](https://github.com/opensafely) is a useful source of information when writing your analysis.
