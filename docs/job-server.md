@@ -1,21 +1,17 @@
 ## Running your code on the server
 
-To run code for real in the production environment, use the [https://jobs.opensafely.org](https://jobs.opensafely.org) site.
+To run code for real in the production environment, use [the jobs site](https://jobs.opensafely.org).
 Here you can see (even without a login) all the ongoing projects within OpenSAFELY, and the specific _jobs_ that have been run on the server.
 To submit job-requests (i.e., to run one or more actions), the general process is as follows:
 
 * **Log in** using your GitHub credentials
-* **Create a project** (or select an existing one):
-    * Click the `Add a New Workspace` button.
-    * Click the `Register Project` button.
-    * Choose a name, this will be the public facing name for your project.
-    * Click `Save`.
 * **Create a workspace**:
-    * Click the `Create a Workspace` button.
+    * Click the `Create a new workspace` button.
+    * Pick a Project from the list.
+    * Click the `Create a new workspace` link.
     * Choose a name, for example the name of the repo.
-    * Select a database to run against: either the full database, or a ~20% sample of it (sampling is based on an arbitrary selection of practices and not guaranteed to be representative).
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
-    * Click `Submit`.
+    * Click `Create`.
 *  **Select actions** to run:
     * Select the actions you want to run by clicking the `Run` buttons.
     * If any of these actions have dependencies then they will also be run, unless their outputs already exist. 
