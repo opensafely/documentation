@@ -103,6 +103,3 @@ fix: devenv
 run: devenv
     $BIN/mkdocs serve -a localhost:8910
 
-
-link-databuilder:
-    ln -sf ../databuilder/backend_docs.json .

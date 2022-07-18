@@ -102,7 +102,7 @@ check: devenv
     databuilder/$BIN/isort --check-only --diff databuilder/
     databuilder/$BIN/flake8 databuilder/
 
-    # check Python can execut each example, this catches import errors which
+    # check Python can execute each example, this catches import errors which
     # snex doesn't
     for f in $(find databuilder/snippets -type f); do
         databuilder/$BIN/python $f
@@ -133,7 +133,3 @@ watch-examples:
     #!/usr/bin/env bash
     project_root=$(git rev-parse --show-toplevel)
     $BIN/watchmedo shell-command --patterns="*.py" --recursive --command="just ${project_root}/databuilder/extract" "${project_root}/databuilder/snippets"
-
-
-generate-docs:
-    $BIN/python -m databuilder.docs >../public_docs.json
