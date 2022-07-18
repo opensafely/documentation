@@ -51,11 +51,6 @@ jobs:
               head: BRANCH,
               base: 'main',
             });
-            await github.rest.pulls.requestReviewers({
-              owner,
-              repo,
-              pull_number: result.data.number,
-            });
       
       - name: Trigger build-check
         uses: actions/github-script@v6
