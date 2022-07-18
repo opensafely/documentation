@@ -2,13 +2,14 @@
 
 When your project has been approved by NHS England, we will agree an intensive support period with you when our experienced researchers and engineers will be made available to get you started.
 
-## Q&A Forum
+## Q&A forum
 
-If you're outside the onboarding support period, or you're just trying OpenSAFELY out,
-your first port of call should be our [Q&A forum][] in GitHub.
-Before asking for help here,
-please search the [Q&A forum][] and these documentation pages to check that your query hasn’t already been addressed.
-Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page][] on the Q&A.
+If you're outside the intensive support period, or you're just trying out OpenSAFELY,
+then your first port of call should be to ask your question in the [Q&A forum][].
+Before asking your question,
+please search the [Q&A forum][] and the OpenSAFELY documentation,
+to check that your question hasn’t already been answered.
+Some of the most common questions that users ask when using OpenSAFELY are listed on the [FAQ page][].
 
 [Q&A forum]: https://github.com/opensafely/documentation/discussions
 [FAQ page]: https://github.com/opensafely/documentation/discussions/445
