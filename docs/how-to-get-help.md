@@ -4,7 +4,11 @@ When your project has been approved by NHS England, we will agree an intensive s
 
 ## Q&A Forum
 
-If you're outside the onboarding support period, or you're just trying OpenSAFELY out, your first port of call should be our [Q&A forum][] in GitHub. Before asking for help here, please search the [Q&A forum][] and these documentation pages to check that your query hasn’t already been addressed. Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page][] on the Q&A.
+If you're outside the onboarding support period, or you're just trying OpenSAFELY out,
+your first port of call should be our [Q&A forum][] in GitHub.
+Before asking for help here,
+please search the [Q&A forum][] and these documentation pages to check that your query hasn’t already been addressed.
+Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page][] on the Q&A.
 
 [Q&A forum]: https://github.com/opensafely/documentation/discussions
 [FAQ page]: https://github.com/opensafely/documentation/discussions/445
