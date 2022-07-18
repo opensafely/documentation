@@ -1,10 +1,14 @@
-## Onboarders
+## Co-pilot programme
 
-When your project has been approved by NHS England, we will agree an intensive support period with you when our experienced researchers and engineers will be made available to get you started.
+When your project has been approved by NHS England,
+we will agree with you an intensive programme of support with our experienced researchers, or *co-pilots*.
+You can find out more about the co-pilot programme [on our blog][the co-pilot programme].
+
+[the co-pilot programme]: https://www.bennett.ox.ac.uk/blog/2021/08/opensafely-co-pilot-programme-assisting-users-on-their-opensafely-journey/
 
 ## Q&A forum
 
-If you're outside the intensive support period, or you're just trying out OpenSAFELY,
+If you're outside the co-pilot programme, or you're just trying out OpenSAFELY,
 then your first port of call should be to ask your question in the [Q&A forum][].
 Before asking your question,
 please search the [Q&A forum][] and the OpenSAFELY documentation,
@@ -14,8 +18,8 @@ to check that your question hasn’t already been answered.
 
 ## Slack
 
-You will be invited to join the Bennett Institute's workspace during the intensive support period.
-If you're outside the intensive support period,
+You will be invited to join the Bennett Institute's workspace during the co-pilot programme.
+If you're outside the co-pilot programme,
 then your second port of call should be to ask your question in any channel to which you have access.
 (Your first port of call should be to ask your question in the [Q&A forum](#qa-forum).)
 
