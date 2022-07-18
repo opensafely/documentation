@@ -9,10 +9,8 @@ then your first port of call should be to ask your question in the [Q&A forum][]
 Before asking your question,
 please search the [Q&A forum][] and the OpenSAFELY documentation,
 to check that your question hasn’t already been answered.
-Some of the most common questions that users ask when using OpenSAFELY are listed on the [FAQ page][].
 
 [Q&A forum]: https://github.com/opensafely/documentation/discussions
-[FAQ page]: https://github.com/opensafely/documentation/discussions/445
 
 ## Searching past study code
 
