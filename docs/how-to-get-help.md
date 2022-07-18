@@ -8,7 +8,7 @@ You can find out more about the co-pilot programme [on our blog][the co-pilot pr
 
 ## Q&A forum
 
-If you're outside the co-pilot programme, or you're just trying out OpenSAFELY,
+If you're outside the co-pilot programme,
 then your first port of call should be to ask your question in the [Q&A forum][].
 Before asking your question,
 please search the [Q&A forum][] and the OpenSAFELY documentation,
