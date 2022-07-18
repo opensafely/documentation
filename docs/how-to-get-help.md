@@ -4,12 +4,15 @@ When your project has been approved by NHS England, we will agree an intensive s
 
 ## Q&A Forum
 
-If you're outside the onboarding support period, or you're just trying OpenSAFELY out, your first port of call should be our [Q&A forum](https://github.com/opensafely/documentation/discussions) in GitHub. Before asking for help here, please search the [Q&A forum](https://github.com/opensafely/documentation/discussions) and these documentation pages to check that your query hasn’t already been addressed. Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page](https://github.com/opensafely/documentation/discussions/445) on the Q&A.
+If you're outside the onboarding support period, or you're just trying OpenSAFELY out, your first port of call should be our [Q&A forum][] in GitHub. Before asking for help here, please search the [Q&A forum][] and these documentation pages to check that your query hasn’t already been addressed. Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page][] on the Q&A.
+
+[Q&A forum]: https://github.com/opensafely/documentation/discussions
+[FAQ page]: https://github.com/opensafely/documentation/discussions/445
 
 ## Searching past study code
 
 The [GitHub OpenSAFELY organisation](https://github.com/opensafely) is a useful source of information when writing your analysis.
-Our GitHub organisation stores all of the code used for previous studies. 
+Our GitHub organisation stores all of the code used for previous studies.
 You can search for examples of how specific variables and codelists etc. have been used.
 
 !!! warning
@@ -24,7 +27,7 @@ To search the OpenSAFELY GitHub organisation for code:
 4. Select "Code" to find any matches within previous code (or sometimes "Issues" may help).
 
 It can be helpful to use the option to filter the results by language.
-For example, restricting to Python might help you find study definition files. 
+For example, restricting to Python might help you find study definition files.
 
 ## Bug reports and feature requests
 
