@@ -4,6 +4,7 @@ name: 'build-check'
 # yamllint disable-line rule:truthy
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build-check:

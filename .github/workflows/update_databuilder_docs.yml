@@ -55,6 +55,20 @@ jobs:
               owner,
               repo,
               pull_number: result.data.number,
-              team_reviewers: ['data-team'],
             });
+      
+      - name: Trigger build-check
+        uses: actions/github-script@v6
+        env:
+          BRANCH: update-docs-${{ github.event.inputs.branch_tag }}
+        with:
+          script: |
+            const { repo, owner } = context.repo;
+            const { BRANCH } = process.env;
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'opensafely',
+              repo: 'documentation',
+              workflow_id: 'build.yml',
+              ref: BRANCH,
+            })
  
