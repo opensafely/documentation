@@ -4,6 +4,9 @@
 databuilder/.venv
 venv
 
+# Python
+__pycache__/
+
 # IDE related files
 .idea/
 .DS_Store
