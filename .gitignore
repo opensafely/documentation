@@ -1,11 +1,15 @@
-# virtual environment
+# Python virtual environment
 .direnv
 .venv
 databuilder/.venv
 venv
 
+# Python
+__pycache__/
+
 # IDE related files
 .idea/
 .DS_Store
 
+# MkDocs output
 site/
