@@ -1,4 +1,4 @@
-# virtual environment
+# Python virtual environment
 .direnv
 .venv
 databuilder/.venv
@@ -11,4 +11,5 @@ __pycache__/
 .idea/
 .DS_Store
 
+# MkDocs output
 site/
