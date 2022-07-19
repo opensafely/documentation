@@ -33,8 +33,6 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.with_gp_consultations
 &nbsp;
 
----8<-- 'includes/gp-consultations-warning-header.md'
-
 ::: cohortextractor.patients.sex
 &nbsp;
 
