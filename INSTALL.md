@@ -6,13 +6,9 @@ It uses the [material theme](https://squidfunk.github.io/mkdocs-material/), and
 [this page](https://squidfunk.github.io/mkdocs-material/reference/abbreviations/)
 in their docs includes lots of very nice customisations for formatting documentation.
 
-## Building locally
+## Running locally
 
-- `git clone --recurse-submodules git@github.com:opensafely/documentation.git`
-  - `--recurse-submodules` ensures you have the necessary copy of the `cohort-extractor` source
-- Create a virtual environment
-- `pip install -r requirements.txt`
-- `mkdocs serve`
+Use [`just run`](https://github.com/casey/just) to run the MkDocs server.
 
 ## Updating Cohort Extractor
 
@@ -44,10 +40,7 @@ section of this repository.
 
 Alternatively, you can pull in the latest version of the cohortextractor
 docstrings, for local development or to update the requirements entirely
-by hand:
-
-    git submodule update --remote src/cohort-extractor
-    git add src/cohort-extractor
+by hand: `just update-cohort-extractor`
 
 ## Updating Data Builder Definitions
 
