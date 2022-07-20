@@ -189,9 +189,9 @@ numpy==1.22.1 \
     --hash=sha256:e60ef82c358ded965fdd3132b5738eade055f48067ac8a5a8ac75acc00cad31f \
     --hash=sha256:f8ad59e6e341f38266f1549c7c2ec70ea0e3d1effb62a44e5c3dba41c55f0187
     # via pandas
-opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.32.0.zip \
-    --hash=sha256:c00e5f7e42dd66c35c1820bf43e11ce593d4ef34a8c9f34dd4fe3555f4f60bbe
-    # via -r requirements.prod.in
+opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.38.3.zip \
+    --hash=sha256:2450890b4563fb1ad54efe6e2c70dd9f4bf6fd8f8b802acd9814797bb4430d5d
+    # via -r databuilder/requirements.prod.in
 pandas==1.4.0 \
     --hash=sha256:0f19504f2783526fb5b4de675ea69d68974e21c1624f4b92295d057a31d5ec5f \
     --hash=sha256:156aac90dd7b303bf0b91bae96c0503212777f86c731e41929c571125d26c8e9 \
@@ -329,10 +329,10 @@ six==1.16.0 \
     # via
     #   python-dateutil
     #   thrift
-snex==2021.10.26 \
-    --hash=sha256:8a40510ad0d9f8ef80afcc3307559f134aaa13c1e5b00dbc028fe57e74373735 \
-    --hash=sha256:dd981b619548401100e3bcd94b2446ef4cf6a3d448e2c3c365b5a14f555b1c4b
-    # via -r requirements.prod.in
+snex==2022.4.19 \
+    --hash=sha256:69c844e4bf43e5c23a36ec85fdaf094b46d43f3154b78789e1d12b2e7aede879 \
+    --hash=sha256:e09256eacb3ea0fe60efc966524abfe71b6f49387a9b2a317a5ae953df20ad39
+    # via -r databuilder/requirements.prod.in
 sqlalchemy==1.4.31 \
     --hash=sha256:05fa14f279d43df68964ad066f653193187909950aa0163320b728edfc400167 \
     --hash=sha256:0ddc5e5ccc0160e7ad190e5c61eb57560f38559e22586955f205e537cda26034 \
