@@ -26,7 +26,7 @@ then your second port of call should be to ask your question in any channel to w
 You may wish to direct your question to the **tech support team**.
 To do so, include the string `tech-support` (that's with a dash and no spaces) in your question
 and a member of this team will aim to respond within half a working day.
-We ask that you don't send direct messages (DMs) to members of the tech support team.
+The support team membership changes regularly, so we ask that you don't send direct messages (DMs) to individual team members.
 
 The types of question that this team aim to answer include:
 
