@@ -10,19 +10,17 @@ in their docs includes lots of very nice customisations for formatting documenta
 
 Use [`just run`](https://github.com/casey/just) to run the MkDocs server.
 
+This should install everything required, **except for tooling to build
+code snippets**. That tooling is self-contained in the `databuilder/`
+directory.
+
 ## Updating Cohort Extractor
 
 [cohort-extractor](https://github.com/opensafely-core/cohort-extractor) is a documentation dependency.
 We use the cohort-extractor docstrings to generate some content here.
 
-**We currently do not install cohort-extractor into a virtualenv
-because we are only using the docstrings**
-cohort-extractor is currently a Git submodule instead,
-for installation simplicity (see #832).
-
-If you have added new functions, you will need to add an explicit
-reference to them in
-[docs/study-def-variables.md](./docs/study-def-variables.md).
+cohort-extractor is currently a Git submodule instead, for installation simplicity (see #832).
+**We currently do not install cohort-extractor into a virtualenv because we are only using the docstrings**
 
 ### Updating cohort-extractor via Dependabot
 
