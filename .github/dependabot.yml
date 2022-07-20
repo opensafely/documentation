@@ -10,3 +10,8 @@ updates:
   directory: "/"
   schedule:
     interval: "monthly"
+
+- package-ecosystem: "submodules"
+  directory: "/"
+  schedule:
+    interval: "daily"
