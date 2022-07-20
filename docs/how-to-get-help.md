@@ -1,15 +1,65 @@
-## Onboarders
+## Co-pilot programme
 
-When your project has been approved by NHS England, we will agree an intensive support period with you when our experienced researchers and engineers will be made available to get you started.
+When your project has been approved by NHS England,
+we can agree with you an intensive programme of support with our experienced researchers, or *co-pilots*.
+You can find out more about the co-pilot programme [on our blog][the co-pilot programme].
 
-## Q&A Forum
+[the co-pilot programme]: https://www.bennett.ox.ac.uk/blog/2021/08/opensafely-co-pilot-programme-assisting-users-on-their-opensafely-journey/
 
-If you're outside the onboarding support period, or you're just trying OpenSAFELY out, your first port of call should be our [Q&A forum](https://github.com/opensafely/documentation/discussions) in GitHub. Before asking for help here, please search the [Q&A forum](https://github.com/opensafely/documentation/discussions) and these documentation pages to check that your query hasn’t already been addressed. Some of the most common issues that users face when using OpenSAFELY are listed in the [FAQ page](https://github.com/opensafely/documentation/discussions/445) on the Q&A.
+## Q&A forum
+
+If you're outside the co-pilot programme,
+then your first port of call should be to ask your question in the [Q&A forum][].
+Before asking your question,
+please search the [Q&A forum][] and the OpenSAFELY documentation,
+to check that your question hasn’t already been answered.
+
+[Q&A forum]: https://github.com/opensafely/documentation/discussions
+
+## Slack
+
+You will be invited to join the Bennett Institute's workspace during the co-pilot programme.
+If you're outside the co-pilot programme,
+then your second port of call should be to ask your question in any channel to which you have access.
+(Your first port of call should be to ask your question in the [Q&A forum](#qa-forum).)
+
+You may wish to direct your question to the **tech support team**.
+To do so, include the string `tech-support` in your question
+and a member of this team will aim to respond within half a working day.
+We ask that you don't send direct messages (DMs) to members of the tech support team.
+
+The types of question that this team aim to answer include:
+
+* deleting files from [Level 3](security-levels.md#level-3) or [Level 4](security-levels.md#level-4)
+* [requesting new libraries](requesting-libraries.md)
+* accuracy of the OpenSAFELY documentation
+  ("The documentation says... but the error message says...")
+* completeness of the OpenSAFELY documentation
+  ("How do I... in OpenSAFELY?)
+* availability of services
+  (e.g. [OpenSAFELY Jobs](https://jobs.opensafely.org/), the OpenSAFELY documentation, GitHub)
+
+Some types of question are beyond the scope of the tech support team,
+although other members of the Bennett Institute's workspace may be able to answer them.
+These types of question include:
+
+* programming tasks ("How do I... in...?")
+* build/deploy failures
+  (e.g. of the OpenSAFELY documentation, of the Bennett Institute team manual)
+
+Issues on OpenSAFELY repositories
+(i.e. repositories within the [opensafely][], [opensafely-core][], and [opensafely-actions][] GitHub organizations)
+are also beyond the scope of the tech support team.
+However, we welcome [bug reports and feature requests](#bug-reports-and-feature-requests) made in this way.
+
+[opensafely]: https://github.com/opensafely
+[opensafely-actions]: https://github.com/opensafely-actions
+[opensafely-core]: https://github.com/opensafely-core
 
 ## Searching past study code
 
 The [GitHub OpenSAFELY organisation](https://github.com/opensafely) is a useful source of information when writing your analysis.
-Our GitHub organisation stores all of the code used for previous studies. 
+Our GitHub organisation stores all of the code used for previous studies.
 You can search for examples of how specific variables and codelists etc. have been used.
 
 !!! warning
@@ -24,7 +74,7 @@ To search the OpenSAFELY GitHub organisation for code:
 4. Select "Code" to find any matches within previous code (or sometimes "Issues" may help).
 
 It can be helpful to use the option to filter the results by language.
-For example, restricting to Python might help you find study definition files. 
+For example, restricting to Python might help you find study definition files.
 
 ## Bug reports and feature requests
 
