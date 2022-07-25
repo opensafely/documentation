@@ -1,14 +1,14 @@
-This section provides advice on reducing memory usage for scripted actions to ensure that your job request is feasible to run and will complete as soon as possible. While there is specific guidance geared toward R and Python, the principles can also apply to other languages (such as Stata).
+This section provides advice on improving the performance of your scripted actions to ensure that your job requests stay within memory limits and complete as quickly as possible. While the specific guidance here is geared toward R and Python, the principles can also apply to other languages (such as Stata).
 
 ## Use proper typing
 
 Objects like vectors, data frame columns, and matrices use different amounts of memory, depending on their type and class. You should use the class that minimises memory use whilst preserving information. 
 
-In general, for memory use of types in R assume that (`logical` = `integer`) < `double` < `character` (in Python `logical` is equivalent to `bool`, `float` to `double`, and `object` to `character`). Note that factors (`categorical` in Python) are integers in disguise, with a small amount of metadata (or attributes) to map the factor levels to the underlying integer value. Similarly, dates are doubles in disguise, with attributes defining the date origin. In R, the memory use of class attributes is usually negligible, so you only really have to consider the underlying data type.
+In general, for memory use of types in R assume that (`logical` = `integer`) < `double` < `character`. In Python, it's (`logical` = `bool`) < `float` < `object`. Note that factors (`categorical` in Python) are integers in disguise, with a small amount of metadata (or attributes) to map the factor levels to the underlying integer value. Similarly, dates are doubles in disguise, with attributes defining the date origin. In R, the memory use of class attributes is usually negligible, so you only really have to consider the underlying data type.
 
 In R, use `typeof()` and `class()` to look under the hood and see if memory savings could be made. A quick way to show the class for every column in a data frame is `t(t(sapply(data.frame, class)))`. In Python, use `Series.dtype()` to get the data type of a single column and `DataFrame.dtypes` to get the data type of every column.
 
-The most likely savings are `double` to `integer` (`float` to `int` in Python) and `character` to `factor` in R (`object` to `categorical` in Python).
+The most likely savings in R are `double` to `integer` and `character` to `factor`. In python `float` to `int` and `object` to `categorical`.
 
 * If a column contains only integer values, type it as an integer not a double. It’s common for integers to sneakily convert back to doubles. For example, if `x` is an integer, then `y <- x + 1` is a double, because `1` is a double and combining an integer and a double will give a double. Instead, use `y <- x + 1L` which is an integer because `1L` is an integer.
 * If a column contains only a few different string values, it’s usually better to convert it from a character to a factor. In fact, because there is no free-text info in OpenSAFELY, _in theory_ all string-type variables, including derived variables, should only contain values from a known set, and so could all be represented as factors. But in practice this might not be simple to enforce, and might be actively unhelpful if lots of theoretically possible values are not actually represented. So some character variables are permissible. Use your judgement.
@@ -47,11 +47,11 @@ This is useful for preliminary development work for speed but may sometimes be a
 
 ## Parallelisation
 
-Each core gives you access to a certain amount of memory. By parallelising operations across cores you get access to more memory.
+Parallelisation allows multiple processes to be run at once on different processors (or "cores"), which (usually) means things happen faster.
 
 Operations that are amenable to parallelisation include: GLM-fitting (Stata does this automatically, see the [parglm](https://cran.r-project.org/web/packages/parglm/index.html) package to do it in R); exact matching; bootstrapping; multiple imputation. Be considerate here: don’t access so many cores that other users will suffer. If you need to use more than 8 cores to get close to a sensible run time, then you should probably reconsider your approach.
 
-You can also take advantage of OpenSAFELY’s actions/job-runner tooling to split operations across different actions, where appropriate.
+Note that while you can spread you processes across different cores in a single action, there is still a hard memory limit for each action which is the same regardless of the number of cores you're using. However, you can take advantage of OpenSAFELY’s job-runner tooling to split operations across different actions, which will run in parallel if there's capacity to do so.  
 
 ## Use profiling tools to identify processes that can be optimised
 
