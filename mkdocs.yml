@@ -70,7 +70,7 @@ nav:
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
       - Timings and monitoring: timings-monitoring.md
-      - Memory-efficient working: memory-efficient-working.md
+      - Writing performant code: memory-efficient-working.md
   - Support:
       - How to get help: how-to-get-help.md
       - Requesting new libraries: requesting-libraries.md
