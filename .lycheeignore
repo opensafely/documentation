@@ -11,6 +11,7 @@ https?://developers\.cloudflare\.com(?:/.*)?$
 https?://www\.encepp\.eu(?:/.*)?$
 https?://www\.tandfonline\.com(?:/.*)?$
 https?://www\.icnarc\.org(?:/.*)?$
+https?://doi\.org(?:/.*)?$
 # The following ignore line ignores this link in the source: ../data-sources
 #
 # MkDocs actually uses an index.md file to generate this,
