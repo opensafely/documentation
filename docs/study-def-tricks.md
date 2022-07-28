@@ -1,8 +1,8 @@
-This section introduces some tricks for working more efficiently with the study definition API, by helping you to avoid copy-pasting chunks of code unnecessarily. 
+This section introduces some tricks for working more efficiently with the study definition API, by helping you to avoid copy-pasting chunks of code unnecessarily.
 
 A study definition is a Python script which uses some friendly OpenSAFELY functions to specify the data that you want to extract from the database. But it's still just a Python script, so you can push beyond this API to run other bits of Python code such as importing additional libraries and data, or creating functions and loops. The examples below do exactly this. For users without any Python experience these tricks could be hard to understand and adapt, so you should only incorporate them into your own study definition if you are confident about what they do. If unsure, ask for a code review.
 
-If you have devised a trick of your own then please share it with us. It helps us to understand how people are using OpenSAFELY and whether there are any commonly-used patterns that could be intergrated into the framework. 
+If you have devised a trick of your own then please share it with us. It helps us to understand how people are using OpenSAFELY and whether there are any commonly-used patterns that could be integrated into the framework.
 
 ## Create a variable for each code in a codelist
 
@@ -34,7 +34,7 @@ study = StudyDefinition(
     ),
 
     ...
-	
+
 )
 
 ```
@@ -73,9 +73,9 @@ This function can be invoked inside the `StudyDefinition` section as follows:
 study = StudyDefinition(
 
     ...
-	
+
     **loop_over_codes(diabetes_codes),
-	
+
     ...
 )
 
@@ -116,7 +116,7 @@ admission_date1 = patients.with_these_clinical_events(
                     find_first_match_in_period=True,
 		    return_expectations = {...}
                 ),
-				
+
 admission_date2 = patients.with_these_clinical_events(
                     codelist,
                     returning="date",
@@ -125,7 +125,7 @@ admission_date2 = patients.with_these_clinical_events(
                     find_first_match_in_period=True,
                     return_expectations = {...}
                 ),
-				
+
 ...
 
 admission_date5 = patients.with_these_clinical_events(
@@ -142,7 +142,7 @@ This is ok for 5 events, but if you need more it becomes quite cumbersome. An al
 
 ```py
 def with_these_clinical_events_date_X(name, codelist, index_date, n, return_expectations):
-    
+
     def var_signature(name, codelist, on_or_after, return_expectations):
         return {
             name: patients.with_these_clinical_events(
@@ -167,31 +167,31 @@ This can then be used inside a study definition for example as follows:
 study = StudyDefinition(
 
 	...
-	
+
 	**with_these_clinical_events_date_X(
-		name = "probable_covid_date", 
-		codelist = probable_codes, 
+		name = "probable_covid_date",
+		codelist = probable_codes,
 		returning="date",
 		on_or_after = "index_date",
-		n = 5, 
+		n = 5,
 		return_expectations = {
 			"date": {"earliest": "2020-05-01", "latest": "2021-06-01"},
 			"rate": "uniform",
 			"incidence": 0.05,
 		},
 	),
-	
+
 	...
 )
 ```
 
-This can be used for any variable where you want to return information for a series of consecutive events. 
+This can be used for any variable where you want to return information for a series of consecutive events.
 
 The will create `n` columns in the dataset. A few things to be aware of:
 
 * Behind the scenes, this creates a new SQL query for each variable rather than a single query for everything. This can be inefficient and could slow down extraction time considerably. You should therefore only extract the minimum `n` events needed for your study.
-* The dummy data won't appear in date order. You could write a more sophisticated function, with different expectations for each `i`. Or you could reorder the columns post-extraction, for example in [covid-vaccine-effectiveness-research repository](https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/be747894e1fadf525e391c01477a8ac532613b42/analysis/R/data_process.R#L229). 
-* Many routines for analysing this sort of data, for example in R or Stata, require the data to be in long-form, not wide-form as they are returned here. In that case, you'll need to reshape the columns. 
+* The dummy data won't appear in date order. You could write a more sophisticated function, with different expectations for each `i`. Or you could reorder the columns post-extraction, for example in [covid-vaccine-effectiveness-research repository](https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/be747894e1fadf525e391c01477a8ac532613b42/analysis/R/data_process.R#L229).
+* Many routines for analysing this sort of data, for example in R or Stata, require the data to be in long-form, not wide-form as they are returned here. In that case, you'll need to reshape the columns.
 
 ## Better dummy data for categorical variables
 For categorical variables with a small number of categories, the standard way of creating dummy data is easy to use, for example:
@@ -217,7 +217,7 @@ STPs = pd.read_csv(
 dict_stp = { stp : 1/len(STPs.index) for stp in STPs['stp_id'].tolist() }
 
 study = StudyDefinition(
- 
+
     ...
 
     stp = patients.registered_practice_as_of(
@@ -227,7 +227,7 @@ study = StudyDefinition(
             "category": {"ratios": dict_stp},
         },
     ),
-    
+
     ....
 
 )
@@ -338,7 +338,7 @@ We could join the extracts with a [scripted action](actions-scripts.md) that we 
 Alternatively, we could use [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner#readme), which is a [reusable action](actions-reusable.md).
 
 Using cohort-joiner has several advantages over writing a scripted action.
-Principally, if we use cohort-joiner, then we write less code, 
+Principally, if we use cohort-joiner, then we write less code,
 which means we have less code to test and less code to maintain.
 Indeed, we could think of writing less code as reducing our [opportunity cost](https://en.wikipedia.org/wiki/Opportunity_cost).
 In addition:

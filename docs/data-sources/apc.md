@@ -23,8 +23,8 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 
 ### \* Notes on transfers:
 - Sometimes it is desirable to exclude patients admitted via transfer from another provider, e.g. if we are looking for readmissions we probably want to exclude them because it was not the original admission date of the readmission.
-- The post-transfer spell may have additional diagnoses or procedures of interest so it is often useful to include them. 
-- Transfers may occasionally come from private hospitals where a patient's condition worsened to require e.g. intensive care; if the initial spell was not NHS funded we would probably not have the original spell in our data. 
+- The post-transfer spell may have additional diagnoses or procedures of interest so it is often useful to include them.
+- Transfers may occasionally come from private hospitals where a patient's condition worsened to require e.g. intensive care; if the initial spell was not NHS funded we would probably not have the original spell in our data.
 
 ## Available filters and `returning` fields
 
@@ -43,11 +43,11 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 - [Duration of elective wait (days)](#duration_of_elective_wait)
 
 
-### `admission_date` 
+### `admission_date`
 
 #### Filtering
 - Use `on_or_before` and/or `on_or_after`, or `between`.
-- Optionally specify `find_first_match_in_period` (or last match). NB any ties (multiple same day admissions) are resolved using `APCS_Ident` which does not predictably give the earliest or latest admission on a given day. 
+- Optionally specify `find_first_match_in_period` (or last match). NB any ties (multiple same day admissions) are resolved using `APCS_Ident` which does not predictably give the earliest or latest admission on a given day.
 #### Returning
 `returning="admission_date"`
 
@@ -68,7 +68,7 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 
 ### `with_these_diagnoses` / `with_these_primary_diagnoses`/ `primary_diagnosis`
 - Coding system: ICD-10.
-#### Filtering 
+#### Filtering
 - Filter using `with_these_diagnoses` / `with_these_primary_diagnoses`
 #### Returning
 - `returning="primary_diagnosis"`
@@ -77,13 +77,13 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 
 ### `with_these_procedures`
 Coding system: OPCS-4.
-#### Filtering 
-- Filter using `with_these_proecedures` 
+#### Filtering
+- Filter using `with_these_proecedures`
 #### Returning
 - Not currently available
 
 ### `admission_method`
-#### Filtering 
+#### Filtering
 - Filter using `with_admission_method=` (supply either an individual code or a list)
 #### Returning
 - `returning="admission_method"`
@@ -95,36 +95,36 @@ Coding system: OPCS-4.
 #### Examples
 ```
 # all normal admissions and transfers, excluding births and maternity admissions
-with_admission_method = ['11', '12', '13', '21', '2A', '22', '23', '24', '25', '2D', '28', '2B', '81'] 
+with_admission_method = ['11', '12', '13', '21', '2A', '22', '23', '24', '25', '2D', '28', '2B', '81']
 ```
 ```
 # all normal admissions excluding transfers, births and maternity admissions
-with_admission_method = ['11', '12', '13', '21', '2A', '22', '23', '24', '25', '2D'] 
+with_admission_method = ['11', '12', '13', '21', '2A', '22', '23', '24', '25', '2D']
 ```
 
 #### Brief Reference table
 Codes | Admission method
--- | -- 
+-- | --
 11, 12, 13 | Elective (planned/booked/waiting list)
 21 | Emergency Admission: from A&E | usually include
 2A | Emergency Admission: from A&E of another provider
 22, 23, 24, 25, 2D | Emergency Admission: other sources (e.g. GP, MH crisis team)
 28 | Emergency Admission: Other - NB can include transfers and births
-2B | Transfer (emergency) 
+2B | Transfer (emergency)
 81 | Transfer (non-emergency)
 2C, 82, 83 | Birth of baby (in hospital or e.g. at home)
 31, 32 | Maternity Admission: Mother admitted ante or post partum
 
 
 ### `source_of_admission`
-#### Filtering 
+#### Filtering
 - Filter using `with_source_of_admission=` (supply either an individual code or a list)
 #### Returning
 - `returning="source_of_admission"`
 #### Most useful for:
   - identifying patients admitted from care homes (`'54', '65', '85', '88'`)
   - excluding birth spells (`'79'`)
-  - identifying transfers* - but this cannot distinguish transfers from wards vs patients arriving from the A&E dept of another provider (e.g. an MIU or smaller hospital which doesn't have a suitable ward) so `admission_method` is better for this purpose. 
+  - identifying transfers* - but this cannot distinguish transfers from wards vs patients arriving from the A&E dept of another provider (e.g. an MIU or smaller hospital which doesn't have a suitable ward) so `admission_method` is better for this purpose.
 
 #### Example
 ```
@@ -149,11 +149,11 @@ code | Source of admission
 ### `patient_classification`
 
 #### Most useful for:
-- excluding regular admissions (i.e. where patient is admitted e.g. every week for chemotherapy or dialysis) 
+- excluding regular admissions (i.e. where patient is admitted e.g. every week for chemotherapy or dialysis)
 - excluding mother and baby admissions (where using delivery facilities only)
 - distinguishing elective day case admissions from ordinary admissions (day case admissions are for planned procedures not requiring overnight stays)
 
-An potential advantage of this field is that it reflects what actually happened during the spell rather than what was planned. If a patient's treatment was not limited to the planned course, e.g. patient was expected to have their routine chemotherapy but illness arose which required further treatment and an overnight stay, this would be coded as `1` (ordinary admission) rather than as `3` (regular admission). 
+An potential advantage of this field is that it reflects what actually happened during the spell rather than what was planned. If a patient's treatment was not limited to the planned course, e.g. patient was expected to have their routine chemotherapy but illness arose which required further treatment and an overnight stay, this would be coded as `1` (ordinary admission) rather than as `3` (regular admission).
 
 #### Brief Reference table
 code | patient classification
@@ -164,7 +164,7 @@ code | patient classification
 5 | Mother and baby using delivery facilities only
 
 
-### `discharge_destination` 
+### `discharge_destination`
 
 #### Most useful for:
 - Identifying/excluding patients who **died** at the end of their spell
@@ -174,19 +174,19 @@ code | patient classification
 #### Example:
 ```
 with_discharge_destination = ['19', '29', '51', '52', '30', '49', '50', '53', '48', '84', '87', '37', '38', '66', '54', '65', '85', '88', '98','99']
-# everyone discharged alive or transferred to another provider (includes those with an unkown destination '98','99')
+# everyone discharged alive or transferred to another provider (includes those with an unknown destination '98','99')
 ```
 ```
 with_discharge_destination = ['19', '29', '30', '49', '50', '53', '48', '84', '87', '37', '38', '66', '54', '65', '85', '88']
-# everyone discharged to the community, alive (excludes those with in unknown desination '98','99')
+# everyone discharged to the community, alive (excludes those with an unknown destination '98','99')
 # excludes people transferred to other NHS providers of physical health care (51, 52)
 # but includes patients transferred to psychiatric / secure units and non-NHS hospitals, because
-# these post-transfer spells are most likely not present in SUS and any subsequent exacerbation 
-# of physical symptoms would result in a new spell in SUS. 
+# these post-transfer spells are most likely not present in SUS and any subsequent exacerbation
+# of physical symptoms would result in a new spell in SUS.
 ```
 
 Note - include `'79'` for patients who died (or were stillborn)
-Include `98` and `99` for unknowns. There will also be some `null` values.  
+Include `98` and `99` for unknowns. There will also be some `null` values.
 
 
 #### Brief Reference table
@@ -202,15 +202,15 @@ Code | Description
 54, 65, 85, 88 | Hospice / Care Home
 79 | Not applicable - PATIENT died or stillbirth
 
-#### Reference 
+#### Reference
 [Link to lookup table](https://datadictionary.nhs.uk/attributes/discharge_destination.html?hl=discharge%2Cdestination)
 
 
 ### `administrative_category`
 #### Most useful for:
 - Identifying/excluding patients who were not undergoing NHS treatment
-  
-  
+
+
 ### `admission_treatment_function_code`
 #### Most useful for:
 - Identifying which specialty patients were admitted under (use with caution)
@@ -222,7 +222,7 @@ Code | Description
 
 #### Caution
 - Definition of critical care may vary between trusts
-- This is counted in number of days (or part-days) not the number of nights as per normal "length of stay" calculations. E.g. a patient who was admitted on day 1 and discharged on day 2 and spent at least part of both days in critical care will have cc_days=2 but LOS=1. 
+- This is counted in number of days (or part-days) not the number of nights as per normal "length of stay" calculations. E.g. a patient who was admitted on day 1 and discharged on day 2 and spent at least part of both days in critical care will have cc_days=2 but LOS=1.
 
 
 ### `duration_of_elective_wait`

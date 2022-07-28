@@ -36,7 +36,7 @@ Every example here consists of:
         * a `d` column contains dates
         * an `i` column contains integers
         * an `s` column contains strings
-    * Both table and column names are writen with code formatting throughout this reference.
+    * Both table and column names are written with code formatting throughout this reference.
 3. An ehrQL query that extracts some data from the example table.
    Like the table names, ehrQL queries are displayed here with code formatting.
 4. The resulting output from the ehrQL query,
