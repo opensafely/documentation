@@ -1,0 +1,10 @@
+name: Lint content style
+on: [workflow_dispatch]
+
+jobs:
+  vale:
+    name: Run Vale
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: errata-ai/vale-action@788e9049b3547f84effbfedf614bca334887d3d2
