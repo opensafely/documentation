@@ -28,18 +28,18 @@ The assessment of the risk of re-identification attached to a piece of data and 
 ### Attribute types
 Datasets made available for analysis may contain the following types of attributes:
 
-*   **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name and date of birth. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis. 
+*   **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name and date of birth. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis.
 *   **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
 Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/static/class/5750/papers/Sweeney.pdf) for more detail). This includes information such as age, sex, ethnicity and region of address. In addition, quasi-identifiers can also be confidential attributes that reveal sensitive information about an individual, such as medical diagnoses and prescriptions.
 
 ### Types of disclosure
 
-There are different types of disclosure risk associated with the release of data (See: [Duncan, George T. and Diane Lambert. “The Risk of Disclosure for Microdata.” Journal of Business & Economic Statistics 7 (1989): 207-217](https://www.tandfonline.com/doi/pdf/10.1080/07350015.1989.10509729?needAccess=true)): 
+There are different types of disclosure risk associated with the release of data (See: [Duncan, George T. and Diane Lambert. “The Risk of Disclosure for Microdata.” Journal of Business & Economic Statistics 7 (1989): 207-217](https://www.tandfonline.com/doi/pdf/10.1080/07350015.1989.10509729?needAccess=true)):
 
 *   **Identity disclosure** - the association of a known individual with a data record; a single or small number of data attributes could re-identify the individual. Once an individual has been identified, you can then learn all the other data for that individual.
 *   **Attribute disclosure** - confidential information can be revealed and attributed to a subject.
 *   **Inferential disclosure** - the combination of outputs from the same source to reveal information.
-*   **Population disclosure** - released data allows you to learn something about an entire population. 
+*   **Population disclosure** - released data allows you to learn something about an entire population.
 
 ### Primary vs secondary disclosure
 
@@ -54,9 +54,9 @@ Primary disclosure describes the situation where confidential data can be obtain
 | **Total** |              | 51                | 276            |
 |           |              |                   |                |
 
-To prevent primary disclosure, you could choose to redact the value for this individual as done below. 
+To prevent primary disclosure, you could choose to redact the value for this individual as done below.
 
-Secondary disclosure is where an individual's attributes can be indirectly learned using other available information. Ane example of this is shown below, where the column totals can be used to deduce that there is only one individual in the 20-30 age band with heart disease, despite the fact this value was protected from primary disclosure by redacting the value.
+Secondary disclosure is where an individual's attributes can be indirectly learned using other available information. An example of this is shown below, where the column totals can be used to deduce that there is only one individual in the 20-30 age band with heart disease, despite the fact this value was protected from primary disclosure by redacting the value.
 
 |           | **Age band** | **Heart disease** | **Population** |
 |-----------|--------------|-------------------|----------------|
@@ -69,7 +69,7 @@ Secondary disclosure is where an individual's attributes can be indirectly learn
 
 Secondary disclosure can also occur across different tables involving the same population. In the below tables, showing a breakdown of heart disease by age band in the total population and in males alone, there are no disclosive small numbers. However, by differencing the values in the two tables, it can be inferred that there is only one female aged 20-30 who has heart disease.
 
-| **Total Population** | **Age Band** | **Heart Disease** | **Population** | 
+| **Total Population** | **Age Band** | **Heart Disease** | **Population** |
 |----------------------|--------------|-------------------|----------------|
 |                      | 21-30        | 8                 | 20             |
 |                      | 31-40        | 10                | 25             |
@@ -107,13 +107,13 @@ This current approach to disclosure control is conservative and deliberately red
 If you are unsure about anything, please email us: [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org).
 
 !!! note
-    Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions. 
+    Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions.
 
 ### Further reading
 
 #### Guidelines for common output types
 
-There are several existing sets of SDC guidelines covering a range of output type specific considerations including: 
+There are several existing sets of SDC guidelines covering a range of output type specific considerations including:
 
 * [Handbook on Statistical Disclosure Control for Outputs](https://securedatagroup.files.wordpress.com/2019/10/sdc-handbook-v1.0.pdf)
 * [ESSNet SDC guidelines for the checking of output based on microdata research](https://research.cbs.nl/casc/ESSnet/GuidelinesForOutputChecking_Dec2009.pdf)
@@ -123,7 +123,7 @@ There are also resources for extended guidance for analysis methods commonly use
 
 * Regression outputs:
     [Ritchie, Felix. Output-based disclosure control for regressions” (2012).](https://www2.uwe.ac.uk/faculties/BBS/BUS/Research/economics2012/1209.pdf)
-* Survival analysis: 
+* Survival analysis:
     [O’Keefe, C. M., Sparks, R. S., McAullay, D. & Loong, B. Confidentialising Survival Analysis Output in a Remote Data Access System. J. Priv. Confidentiality 4, (2012)](https://journalprivacyconfidentiality.org/index.php/jpc/article/view/614)
 
 There is also a disclosure control section in our [Q&A forum](https://github.com/opensafely/documentation/discussions/categories/disclosure-control) where you can ask any questions you may have.
@@ -133,14 +133,14 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 Below are a couple of examples of common secondary disclosure issues encountered when using OpenSAFELY.
 
 **Repeated analyses**
-When producing repeated reports at different time points, it is possible that there can be a small change in the number of people in your analysis. E.g. “number of people with condition X receiving treatment Y” increases from N to N+1). Although this is not typically likely to be disclosive, it may carry a small risk on some occasions (e.g. an individual/GP may be able to identify themselves/their patient or believe that that can do so) and therefore should be routinely avoided to minimise burden on output checking. 
- 
-The solution for this is to use rounding across the entire report (to the nearest 5, 7, or 10). Rounding eliminates the need for output checkers to compare different versions of the report outputs, as no small increases can occur. It is not likely that rounding will significantly affect the report in any meaningful way. Statistical analyses can be carried out prior to rounding and the results displayed as normal provided they are classed as low risk. If only charts are shown, rounding is not always necessary, but charts should have sufficiently low resolution that any small number changes cannot be precisely determined. However, numbers could be rounded nonetheless, as this would not noticeably affect the figures. 
+When producing repeated reports at different time points, it is possible that there can be a small change in the number of people in your analysis. E.g. “number of people with condition X receiving treatment Y” increases from N to N+1). Although this is not typically likely to be disclosive, it may carry a small risk on some occasions (e.g. an individual/GP may be able to identify themselves/their patient or believe that that can do so) and therefore should be routinely avoided to minimise burden on output checking.
+
+The solution for this is to use rounding across the entire report (to the nearest 5, 7, or 10). Rounding eliminates the need for output checkers to compare different versions of the report outputs, as no small increases can occur. It is not likely that rounding will significantly affect the report in any meaningful way. Statistical analyses can be carried out prior to rounding and the results displayed as normal provided they are classed as low risk. If only charts are shown, rounding is not always necessary, but charts should have sufficiently low resolution that any small number changes cannot be precisely determined. However, numbers could be rounded nonetheless, as this would not noticeably affect the figures.
 
 **Running similar studies**
 There may be cases where you have run an analysis and results have been released following approval from the output checking team, but at a later date you decide you want to make changes to the analysis such as adding an extra code to a codelist. This may result in small changes in the outputs that can be disclosive, ie, <=5 individuals have the new code recorded. In these cases, you may need to wait until there has been enough change in the underlying study population (due to the movement of patients between practices) before rerunning the study.
- 
-If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers. 
+
+If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers.
 
 ## 2. Requesting release of outputs from the server
 

@@ -7,7 +7,7 @@
     This content has not yet been reviewed by OpenSAFELY technical
     leads. This page is *not* a definitive statement about the status of
     Data Builder, cohort-extractor or any other part of OpenSAFELY.
-    
+
     It should be taken as potentially incorrect, until this notice is
     removed.
 
@@ -43,7 +43,7 @@ Data Builder:
 * Provides a mechanism to extract datasets from live data backends within
   the OpenSAFELY framework.
 * Allows developers to provide dummy data via a CSV file. This dummy
-  data can be used to develop studies. 
+  data can be used to develop studies.
 
 ### How Data Builder works
 
@@ -63,7 +63,7 @@ patients.
 
     * Data Builder with a dataset definition
     * cohort-extractor with a [*study definition*](study-def.md)
-    
+
     Dataset definitions have a considerably different structure from the
     study definitions. You will need to refer to the new language to write
     a dataset definition.
@@ -71,11 +71,11 @@ patients.
     Cohorts are now referred to as datasets. This accommodates the
     possibility of handling other types of data, other than purely
     patient data.
-    
+
     The main researcher-facing change with the introduction of Data Builder is
     the new language for extracting datasets. Data Builder does not affect
     the rest of the structure of an OpenSAFELY project.
-    
+
     The [relationship between Data Builder and
     cohort-extractor](#data-builder-and-cohort-extractor) is
     discussed further below.
@@ -210,7 +210,7 @@ However:
 ### Why do study definitions and the cohort-extractor need replacing?
 
 In OpenSAFELY's first two years, researchers have used cohort-extractor
-and study definitions to succesfully complete a number of [research
+and study definitions to successfully complete a number of [research
 studies](https://www.opensafely.org/research/) using [multiple data
 sources and linked data](data-sources/intro.md).
 
@@ -232,7 +232,7 @@ Data Builder:
 !!! note
     This section is a technical explanation for experienced users who want
     to understand more of how Data Builder works behind-the-scenes.
-    
+
     Understanding this section is not necessary to using Data Builder.
 
     This section may end up being a separate page entirely.
@@ -244,7 +244,7 @@ of how that backend works.
 There are three steps to extract data on cohorts:
 
 1. **Writing a definition**: A researcher writes a dataset definition.
-   
+
      The dataset definition is written in Data Builder's own *domain
      specific language*, ehrQL, which is built on Python.
 

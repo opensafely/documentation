@@ -143,7 +143,7 @@ study = StudyDefinition(
 ```
 
 The first argument to `patients.satisfying()` is a string defining the population of interest using elementary logic syntax.
-Acceptable operators in this string are currently `=`, `!=`, `<`, `<=`, `>=`, `>`, `AND`, `OR`, `NOT`, `+`, `-`, `*`, `/`. 
+Acceptable operators in this string are currently `=`, `!=`, `<`, `<=`, `>=`, `>`, `AND`, `OR`, `NOT`, `+`, `-`, `*`, `/`.
 All subsequent arguments are variable definitions. These are used just as you would use them in the higher-level `StudyDefinition()` call, except that there's no need to define `return_expectations` arguments since these variables are extracted explicitly.
 
 If a variable has been defined elsewhere in `StudyDefinition()`, then that variable can be used in the `patients.satisfying()` function without needing to be defined again.
@@ -168,13 +168,13 @@ study = StudyDefinition(
 
 Here `sex` is _defined_ outside of `patients.satisfying()` but can still be _used_ inside of it.
 In this case, it's being used to exclude patients without a "valid" sex category (`"M"` or `"F"`) from the study population.
-To match the `population` definition, the `return_expectations` for `sex` only includes `"M"` and `"F"` (not `U` or `I`, the other two valid values that can be returned by `patients.sex()`). 
+To match the `population` definition, the `return_expectations` for `sex` only includes `"M"` and `"F"` (not `U` or `I`, the other two valid values that can be returned by `patients.sex()`).
 
 
 ### Using a single variables to define your population
 
-If your population is defined by just one variable, you can use this variable directly instead of passing it through `patients.satisfying()`. 
-For example, 
+If your population is defined by just one variable, you can use this variable directly instead of passing it through `patients.satisfying()`.
+For example,
 
 ```py
     population=patients.with_these_clinical_events(
@@ -186,13 +186,13 @@ Again, there's no need here to use the `return_expectations` argument.
 
 ### Extracting data for all variables
 
-Occassionally, it may be necessary to extract data for all patients available for analysis within the database. To do this, you can use 
+Occasionally, it may be necessary to extract data for all patients available for analysis within the database. To do this, you can use
 
 ```py
     population=patients.all(),
 ```
 
-Be aware that this will include a mix of registered, deregistered, and deceased patients. 
+Be aware that this will include a mix of registered, deregistered, and deceased patients.
 
 ### Dummy data versus real data
 
@@ -246,7 +246,7 @@ actions:
 ### Identical study definitions with different index dates
 If the only difference between two study definitions is the index date, then you can avoid having to create two separate study definition files as follows.
 
-We start by creating the study definition defining the variables you want to extract. 
+We start by creating the study definition defining the variables you want to extract.
 Then within the [`project.yaml`](actions-pipelines.md#projectyaml-format) we define two or more actions, one for each index date you want to use.
 We then borrow the `--index-date-range` argument from the [measures](measures.md#extract-the-data) function to specify the index dates:
 ```yaml
