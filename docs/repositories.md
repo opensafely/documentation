@@ -9,9 +9,11 @@ GitHub is the means by which code in the repository is passed to the server to b
 
 ## Repository access
 
-During the development stage of a project, a repository is typically private, so that only core OpenSAFELY members and project-specific collaborators will have access. See the [permissions page](jobs-site.md#permissions) for more details.
+A public GitHub repository is visible by anyone on the internet. However, only specified people will have the ability to make changes to it.
 
-Once a project is complete, or retired, the repository will be made public.
+During the development stage of a project, a repository may be kept private, so that only core OpenSAFELY members and project-specific collaborators will be able to view it. See the [permissions page](permissions.md) for more details.
+
+A repository will be made public 12 months after the code is first run against an OpenSAFELY database. You can request that a private repository is made public at any time by contacting [tech support](how-to-get-help.md).
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
@@ -27,7 +29,7 @@ Fill in the details:
 - **owner**: select your personal GitHub for testing/experimenting, or select the opensafely organisation for a bona fide OpenSAFELY-approved study. The repo can be transferred into opensafely later if needed.
 - **repository name**: It needs to be short but informative &mdash; browse existing repo names for inspiration.
 - **Description**: This will appear at the top of the repo on GitHub. No more than a sentence is needed as the repo should be explained fully in the README.
-- **public / private**: select **private** initially, this can be changed later.
+- **public / private**: See [Repository access](#repository-access) to make the the right choice for your study.
 - **Include all branches**: Leave unchecked.
 
 And submit. You will now be at the GitHub landing page for the repo.
