@@ -109,6 +109,13 @@ If you are unsure about anything, please email us: [disclosurecontrol@opensafely
 !!! note
     Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions.
 
+### Rounding counts
+
+The redaction of any counts <=5 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to allow [**attribute** or **inferential** disclosure](#types-of-disclosure). To reduce this risk, we ask that you consider **rounding any counts to the nearest 5 wherever possible**. In most cases this is unlikely to have a significant impact on your results.
+
+!!! note
+    Rounding does not remove the need to redact counts <=5. You should first redact any low counts and then apply rounding. If applying both techniques, the recommended approach is to first redact counts <=7 and then round to the nearest 5 (if you redact counts <=5 and then round to the nearest 5, any counts of 5 remaining must originally have been either 6 or 7; this approach provides the same protection for all counts)
+
 ### Further reading
 
 #### Guidelines for common output types
