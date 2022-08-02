@@ -16,5 +16,5 @@ When you're ready to tell the world about your GitHub repo, consider the followi
 * Consider making a GitHub _Release_, and linking to that ([instructions here](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository)). A Release is a coherent snapshot of the code as it existed at a given point in time, along with a title and a description. By default, releases are displayed on your repo home page. For example, you might make separate releases of the code to accompany a preprint and the final versions of the paper.
     * Consider [obtaining a DOI for your releases](https://guides.github.com/activities/citable-code/), and using that for referencing your code
 
-* If your repository is *private*, ask [tech support](how-to-get-help.md) to make it *public* before the associated paper or output is published.
-    * Note: you may be prompted to make it public sooner, if you first run the code against an OpenSAFELY database more than 12 months ago.
+* If your repository is *private*, ask [tech support](how-to-get-help.md) to make it *public* before the associated paper or output is published. There's more information about what this means [here](repositories.md#repository-access).
+    * Note: you may be prompted to make it public sooner, if you first ran the code against an OpenSAFELY database more than 12 months ago.
