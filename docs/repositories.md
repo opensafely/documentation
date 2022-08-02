@@ -11,7 +11,7 @@ GitHub is the means by which code in the repository is passed to the server to b
 
 In accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/about/#transparency-and-public-logs), we recommend that repositories are made public from the start. A public GitHub repository is visible by anyone on the internet. However, only specified people will have the ability to make changes to it.
 
-During the development stage of a project, a repository may be kept private, so that members of the OpenSAFELY Github organisation are able view it. However, you should expect to make it public at a later date in accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/about/#transparency-and-public-logs) and this includes all history of all files including, potentially, deleted ones. See the [permissions page](permissions.md) for more details.
+During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able view it.
 
 A repository will need to be made public if it forms part of [a publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). For unfinished or abandoned research, we strongly encourage that repositories are made public within 12 months after the code is first run against an OpenSAFELY database. You can request that a private repository is made public at any time by contacting [tech support](how-to-get-help.md).
 
