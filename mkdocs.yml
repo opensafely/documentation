@@ -58,7 +58,7 @@ nav:
           - The cohortextractor action: actions-cohortextractor.md
           - Scripted actions: actions-scripts.md
           - Reusable actions: actions-reusable.md
-      - Job server: job-server.md
+      - Jobs site: jobs-site.md
       - Level 4 server: level-4-server.md
       - Safe Outputs and requesting release of files from the Level 4 server: releasing-files.md
       - Permissions: permissions.md
