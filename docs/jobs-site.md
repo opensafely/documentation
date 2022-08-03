@@ -13,6 +13,7 @@ From within each workspace, you can run **jobs**; each job is a selection of one
 ### Output types
 
 Once outputs have been produced by running _jobs_ from within a _Workspace_, there are several stages they must go through before being made publicly available:
+
 1. **Outputs on the [Level 4 server](https://docs.opensafely.org/level-4-server/)**. These are outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](https://docs.opensafely.org/releasing-files/#3-how-are-files-reviewed) before they can leave the server.
 2. **Released outputs**. These are analysis outputs are outputs that have been reviewed for any [disclosivity issues](https://docs.opensafely.org/releasing-files/#types-of-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators to your projects (examples of who this could include can be found [here](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. If you have the correct permissions, you can create draft public outputs for approval.
