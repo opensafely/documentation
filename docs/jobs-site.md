@@ -2,7 +2,7 @@ The [jobs site](https://jobs.opensafely.org/) is where you can run your code on 
 
 ## Jobs site structure
 
-The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is approved, a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). 
+The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/) , a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` GitHub organisation. We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
 Within each _Project_, there are one or more _Workspaces_, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely).
 
@@ -43,7 +43,6 @@ There are some additional roles linked to the release of outputs from the server
 **OutputPublisher**:
 
 * Publish draft public outputs
-
 ## Creating a Workspace
 
 * **Log in** using your GitHub credentials

@@ -26,7 +26,6 @@ nav:
       - Information for system integrators: system-integration.md
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
-      - Applying to use OpenSAFELY: applying-to-use-opensafely.md
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
       - GitHub repositories: repositories.md
