@@ -92,12 +92,12 @@ You can view `moderately_sensitive` outputs from any of your submitted _jobs_ vi
 
 Once you are logged into the server:
 
-* Navigate to https://jobs.opensafely.org/ using google chrome
+* Navigate to https://jobs.opensafely.org/ using google chrome (make sure to use https://)
 * Log in using your GitHub username
-* Navigate to your _Workspace_.
-* Under _Releases_, navigate to Level 4 Outputs.
-* Choose the correct backend.
-* Pick the file you would like to view from the list of files.
+* Navigate to your _Workspace_
+* Under _Releases_, navigate to Level 4 Outputs
+* Choose the correct backend
+* Pick the file you would like to view from the list of files
 
 ## Viewing released outputs
 
