@@ -2,13 +2,13 @@ The [jobs site](https://jobs.opensafely.org/) is where you can run your code on 
 
 ## Jobs site structure
 
-The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/) , a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` GitHub organisation. We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
+The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
 Within each _Project_, there are one or more _Workspaces_, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely).
 
-Any [_actions](https://docs.opensafely.org/actions-intro/) you develop within the attached repository are linked to the workspace, allowing these to be run against real data.  
+Any [actions](https://docs.opensafely.org/actions-intro/) you develop within the attached repository are linked to the workspace, allowing these to be run against real data.  
 
-From within each workspace, you can run _jobs_; each job is a selection of one or more actions (link). You can see all the _jobs_ that have been run on a workspace by clicking on "view logs" on the workspace page. You can see a log of all _jobs_ being run [here](https://jobs.opensafely.org/event-log/). 
+From within each workspace, you can run _jobs_; each job is a selection of one or more actions. You can see all the _jobs_ that have been run on a workspace by clicking on "view logs" on the _Workspace_ page. You can see a log of all _jobs_ being run [here](https://jobs.opensafely.org/event-log/). 
 
 ### Output types
 
@@ -111,4 +111,4 @@ You must seek NHS England approval for any publication or wider sharing of resul
 
 For instructions on how to request approval, please see [this section]((https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. You should also create draft public outputs for review. To do this, navigate to the _release_ containing the outputs you would like to be published and click the `Publish` button.
 
-Once approved, your released outputs will be “published” and viewable from the published outputs in the “”published outputs section of the “releases. This is accessible by everyone, even those without a login.
+Once approved, your released outputs will be “published” and viewable from the published outputs in the `Published outputs` section of your `Releases`. This is accessible by everyone, even those without a login.
