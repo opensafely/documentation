@@ -12,19 +12,19 @@ From within each workspace, you can run _jobs_; each job is a selection of one o
 
 ### Output types
 
-Once outputs have been produced by running _jobs_ from within a _workspace_, there are several stages they must go through before being made publicly available:
+Once outputs have been produced by running _jobs_ from within a _Workspace_, there are several stages they must go through before being made publicly available:
 1. **Outputs on the [Level 4 server](https://docs.opensafely.org/level-4-server/)**. These are outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](https://docs.opensafely.org/releasing-files/#3-how-are-files-reviewed) before they can leave the server.
 2. **Released outputs**. These are analysis outputs are outputs that have been reviewed for any [disclosivity issues](https://docs.opensafely.org/releasing-files/#types-of-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators to your projects (examples of who this could include can be found [here](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. If you have the correct permissions, you can create draft public outputs for approval.
-4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the workspace they belong to.
+4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
 
 ### Permissions
 
 When users are approved to use the OpenSAFELY platform, each user is assigned roles that define what they are permitted to do on the jobs site. By default, most researchers using the platform will have the **ProjectDeveloper** role for a specific _Project_, which permits them to:
 
-* Create _Workspaces_ in that project
+* Create workspaces in that _Project_
 * Run _jobs_ in _Project_ workspaces
-* Cancel _jobs_ for this project
+* Cancel _jobs_ for this _Project_
 * View job outputs for any _Workspace_ in this _Project_
 * Create draft public outputs for approval
 
@@ -46,9 +46,9 @@ There are some additional roles linked to the release of outputs from the server
 ## Creating a Workspace
 
 * **Log in** using your GitHub credentials
-* **Create a workspace**:
+* **Create a Workspace**:
     * Click the `Create a new workspace` button.
-    * Pick a Project from the list.
+    * Pick a _Project_ from the list.
     * Click the `Create a new workspace` link.
     * Choose a name, for example the name of the repo.
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
@@ -94,7 +94,7 @@ Once you are logged into the server:
 
 * Navigate to https://jobs.opensafely.org/ using google chrome
 * Log in using your GitHub username
-* Navigate to your _workspace_.
+* Navigate to your _Workspace_.
 * Under _Releases_, navigate to Level 4 Outputs.
 * Choose the correct backend.
 * Pick the file you would like to view from the list of files.
@@ -103,7 +103,7 @@ Once you are logged into the server:
 
 Any files that you would like to be released from the server, have to first be checked by our team of output checkers. You can find instructions for requesting a release [here](https://docs.opensafely.org/releasing-files/#2-requesting-release-of-outputs-from-the-server).
 
-Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your workspace, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy document and contact your co-pilot.
+Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your _Workspace_, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy document and contact your co-pilot.
 
 ## Publishing outputs
 
