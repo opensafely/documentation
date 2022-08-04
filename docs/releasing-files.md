@@ -52,7 +52,6 @@ Primary disclosure describes the situation where confidential data can be obtain
 |           | 41-50        | 15                | 90             |
 |           | 51+          | 25                | 85             |
 | **Total** |              | 51                | 276            |
-|           |              |                   |                |
 
 To prevent primary disclosure, you could choose to redact the value for this individual as done below.
 
@@ -65,7 +64,6 @@ Secondary disclosure is where an individual's attributes can be indirectly learn
 |           | 41-50        | 15                | 90             |
 |           | 51+          | 25                | 85             |
 | **Total** |              | 51                | 276            |
-|           |              |                   |                |
 
 Secondary disclosure can also occur across different tables involving the same population. In the below tables, showing a breakdown of heart disease by age band in the total population and in males alone, there are no disclosive small numbers. However, by differencing the values in the two tables, it can be inferred that there is only one female aged 20-30 who has heart disease.
 
@@ -76,7 +74,6 @@ Secondary disclosure can also occur across different tables involving the same p
 |                      | 41-50        | 15                | 30             |
 |                      | 51+          | 25                | 40             |
 | **Total**            |              | 58                | 115            |
-|                      |              |                   |                |
 
 | **Male Population** | **Age Band** | **Heart Disease** | **Population** |
 |---------------------|--------------|-------------------|----------------|
@@ -85,7 +82,6 @@ Secondary disclosure can also occur across different tables involving the same p
 |                     | 41-50        | 8                 | 18             |
 |                     | 51+          | 13                | 25             |
 | **Total**           |              | 33                | 64            |
-|                     |              |                   |                |
 
 When applying disclosure controls to your outputs, you should consider the potential for both primary and secondary disclosure.
 
@@ -108,6 +104,31 @@ If you are unsure about anything, please email us: [disclosurecontrol@opensafely
 
 !!! note
     Remember to also always check the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) as it describes any additional rules regarding the release of data describing organisations and regions.
+
+### Rounding counts
+
+The redaction of any counts <=5 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to allow [**attribute** or **inferential** disclosure](#types-of-disclosure). To reduce this risk, we ask that you consider **rounding any counts to the nearest 5 wherever possible**. In most cases this is unlikely to have a significant impact on your results.
+
+!!! note
+    Rounding does not remove the need to redact counts <=5. You should first redact any low counts and then apply rounding. If applying both techniques, the recommended approach is to first redact counts <=7 and then round to the nearest 5 (if you redact counts <=5 and then round to the nearest 5, any counts of 5 remaining must originally have been either 6 or 7; this approach provides the same protection for all counts)
+
+Below is an example of a table before (top) and after (bottom) rounding has been applied. **Note that column and row totals are the sum of the rounded counts.**
+
+| **Total Population** | **Age Band** | **Heart Disease** | **Population** |
+|----------------------|--------------|-------------------|----------------|
+|                      | 21-30        | 3                 | 18             |
+|                      | 31-40        | 8                 | 23             |
+|                      | 41-50        | 16                | 31             |
+|                      | 51+          | 23                | 44             |
+| **Total**            |              | 50                | 116            |
+
+| **Total Population** | **Age Band** | **Heart Disease** | **Population** |
+|----------------------|--------------|-------------------|----------------|
+|                      | 21-30        | [REDACTED]        | 20             |
+|                      | 31-40        | 10                | 25             |
+|                      | 41-50        | 15                | 30             |
+|                      | 51+          | 25                | 45             |
+| **Total**            |              | 50                | 120            |
 
 ### Further reading
 
