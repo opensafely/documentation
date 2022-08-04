@@ -88,7 +88,7 @@ When you add a new repository in the [opensafely organisation](https://github.co
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`. If you selected to receive notifications, you will also receive an email to notify you when each job completes.
 
-When you submit a job-request you are competing with other users for resources on the server. As such, jobs can sometimes take a while to start even if their dependencies have successfully completed.
+When you submit a job-request you are competing with other users for resources on the server. As such, jobs can sometimes take a while to start even if their dependencies have successfully completed. You can see all the jobs currently running [here](https://jobs.opensafely.org/event-log/?backend=&status=running&username=&workspace=) and the current status of all OpenSAFELY backends [here](https://jobs.opensafely.org/status/).
 
 <details markdown="1">
 <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
