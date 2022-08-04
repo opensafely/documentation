@@ -85,6 +85,8 @@ If you are not able to do any of the tasks and you think you should, please cont
 When you add a new repository in the [opensafely organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
 ## Running your code on the server
 
+* Click the `Run Jobs` button from your workspace.
+![Create new workspace](./images/run_jobs.png)
 *  **Select actions** to run:
     * Select the actions you want to run by clicking the `Run` buttons.
     * If any of these actions have dependent actions (e.g. running a cohort extractor action before an analysis script is run) then they will also be run, unless their outputs already exist.
