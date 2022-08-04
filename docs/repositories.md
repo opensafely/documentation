@@ -13,7 +13,7 @@ In accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/abo
 
 During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able view it.
 
-A repository will need to be made public if it forms part of [a publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). For unfinished or abandoned research, we strongly encourage that repositories are made public within 12 months after the code is first run against an OpenSAFELY database. You can request that a private repository is made public at any time by contacting [tech support](how-to-get-help.md).
+A repository will need to be made public if it forms part of [a publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have a [guide to publishing repositories](publishing-repo.md) that we advise you to read. For unfinished or abandoned research, we strongly encourage that repositories are made public within 12 months after the code is first run against an OpenSAFELY database. You can request that a private repository is made public at any time by contacting [tech support](how-to-get-help.md).
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
