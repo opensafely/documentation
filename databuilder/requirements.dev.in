@@ -6,6 +6,7 @@
 
 # Pin black for now to avoid dependency constraint conflict.
 # black and snex both use click, but snex uses an older version of click.
+# See #886.
 black==21.12b0
 flake8
 flake8-builtins
