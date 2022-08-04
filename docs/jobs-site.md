@@ -58,6 +58,10 @@ There are some additional roles linked to the release of outputs from the server
 **OutputPublisher**:
 
 * Publish draft public outputs
+
+#### Getting the correct permissions
+
+If you are not able to do any of the tasks and you think you should, please contact your co-pilot to confirm you have the correct permissions.
 ## Creating a Workspace
 
 * **Log in** using your GitHub credentials
