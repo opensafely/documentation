@@ -33,9 +33,13 @@ Once outputs have been produced by running _jobs_ from within a _Workspace_, the
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects (examples of who this could include can be found [here](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
 4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
 
+You can view these different output types from the `Releases` section of your workspace.
+
+![Workspace Releases](./images/releases.png)
+
 ### Permissions
 
-When users are approved to use the OpenSAFELY platform, each user is assigned roles that define what they are permitted to do on the jobs site. By default, most researchers using the platform will have the **ProjectDeveloper** role for a specific _Project_, which permits them to:
+When users are approved to use the OpenSAFELY platform, each user is assigned roles that define what they are permitted to do on the jobs site within their project. By default, most researchers using the platform will have the **ProjectDeveloper** role for a specific _Project_, which permits them to:
 
 * Create workspaces in that _Project_
 * Run _jobs_ in _Project_ workspaces
@@ -59,7 +63,11 @@ There are some additional roles linked to the release of outputs from the server
 
 * Publish draft public outputs
 
-#### Getting the correct permissions
+#### Viewing and requesting changes to your permissions
+
+You can view the permissions you have for your project by navigating to the permissions page, where can see the permissions for all researchers involved in your project.
+
+![Jobs site project page](./images/view_project.png)
 
 If you are not able to do any of the tasks and you think you should, please contact your co-pilot to confirm you have the correct permissions.
 ## Creating a Workspace
@@ -69,6 +77,7 @@ If you are not able to do any of the tasks and you think you should, please cont
     * Click the `Create a new workspace` button.
     * Pick a _Project_ from the list.
     * Click the `Create a new workspace` link.
+    ![Create new workspace](./images/create_new_workspace.png)
     * Choose a name, for example the name of the repo.
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
     * Click `Create`.
