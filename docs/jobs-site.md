@@ -12,8 +12,16 @@ From within each workspace, you can run **jobs**; each job is a selection of one
 graph TD
     A[Project] --> B[Workspace]
     A --> C[Workspace]
-    C --> D[job]
+    B --> D[job]
     C --> E[job]
+    subgraph Actions[Actions]
+      Action_1[Action]
+      Action_2[Action]
+      Action_3[Action]
+    end
+    Action_1 --> E
+    Action_2 --> E
+    Action_3 --> E
 ```
 
 ### Output types
