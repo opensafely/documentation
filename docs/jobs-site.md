@@ -14,6 +14,7 @@ graph TD
     A --> C[Workspace]
     B --> D[job]
     C --> E[job]
+    B --> F[job]
     subgraph Actions[Actions]
       Action_1[Action]
       Action_2[Action]
@@ -32,10 +33,6 @@ Once outputs have been produced by running _jobs_ from within a _Workspace_, the
 2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](https://docs.opensafely.org/releasing-files/#types-of-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects (examples of who this could include can be found [here](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
 4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
-
-You can view these different output types from the `Releases` section of your workspace.
-
-![Workspace Releases](./images/releases.png)
 
 ### Permissions
 
@@ -130,6 +127,10 @@ Once you are logged into the server:
 * Pick the file you would like to view from the list of files
 
 ## Viewing released outputs
+
+You can view the various [output types](#output-types) from the `Releases` section of your workspace.
+
+![Workspace Releases](./images/releases.png)
 
 Any files that you would like to be released from the server, have to first be checked by our team of output checkers. You can find instructions for requesting a release [here](https://docs.opensafely.org/releasing-files/#2-requesting-release-of-outputs-from-the-server).
 
