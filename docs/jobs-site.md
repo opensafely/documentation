@@ -73,7 +73,7 @@ If you are not able to do any of the tasks and you think you should, please cont
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
     * Click `Create`.
 
-When you add a new repository in the opensafely organisation, it may take up to 15 mintutes for it to be available to select at https://jobs.opensafely.org
+When you add a new repository in the [opensafely organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
 ## Running your code on the server
 
 *  **Select actions** to run:
