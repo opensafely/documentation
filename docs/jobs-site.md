@@ -39,7 +39,7 @@ You can view these different output types from the `Releases` section of your wo
 
 ### Permissions
 
-When users are approved to use the OpenSAFELY platform, each user is assigned roles that define what they are permitted to do on the jobs site within their project. By default, most researchers using the platform will have the **ProjectDeveloper** role for a specific _Project_, which permits them to:
+When users are approved to use the OpenSAFELY platform, each user is assigned roles that define what they are permitted to do on the jobs site within their project. By default, most researchers using the platform will have the `ProjectDeveloper` role for a specific _Project_, which permits them to:
 
 * Create workspaces in that _Project_
 * Run _jobs_ in _Project_ workspaces
@@ -47,19 +47,19 @@ When users are approved to use the OpenSAFELY platform, each user is assigned ro
 * View job outputs for any _Workspace_ in this _Project_
 * Create draft public outputs for approval
 
-Users with the **ProjectCollaborator** role can:
+Users with the `ProjectCollaborator` role can:
 
 * View released outputs
 * View draft public outputs
  
 There are some additional roles linked to the release of outputs from the server, reserved for output checkers:
  
-**OutputChecker**:
+`OutputChecker`:
 
 * Release outputs from Level 4 environments
 * Delete outputs in a release
  
-**OutputPublisher**:
+`OutputPublisher`:
 
 * Publish draft public outputs
 
