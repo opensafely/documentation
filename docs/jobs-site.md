@@ -78,7 +78,7 @@ When you add a new repository in the [opensafely organisation](https://github.co
 
 *  **Select actions** to run:
     * Select the actions you want to run by clicking the `Run` buttons.
-    * If any of these actions have dependencies then they will also be run, unless their outputs already exist. 
+    * If any of these actions have dependent actions (e.g. running a cohort extractor action before an analysis script is run) then they will also be run, unless their outputs already exist.
       * If any dependencies have already been set to run, your current job will be queued until dependencies have completed.
     * Dependencies can be viewed by clicking the `Needs` button.
     * You can force dependencies to be run by clicking `Force run dependencies`, even if those actions have already been run.
