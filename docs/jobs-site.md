@@ -4,11 +4,17 @@ The [jobs site](https://jobs.opensafely.org/) is where you can run your code on 
 
 The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
-Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely).
-
-Any [actions](https://docs.opensafely.org/actions-intro/) you develop within the attached repository are linked to the workspace, allowing these to be run against real data.  
+Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely). Any [actions](https://docs.opensafely.org/actions-intro/) you develop within the attached repository are linked to the workspace, allowing these to be run against real data.  
 
 From within each workspace, you can run **jobs**; each job is a selection of one or more actions. You can see all the _jobs_ that have been run on a workspace by clicking on "view logs" on the _Workspace_ page. You can see a log of all _jobs_ being run [here](https://jobs.opensafely.org/event-log/). 
+
+```mermaid
+graph TD
+    A[Project] --> B[Workspace]
+    A --> C[Workspace]
+    C --> D[job]
+    C --> E[job]
+```
 
 ### Output types
 
