@@ -111,7 +111,7 @@ You can view `moderately_sensitive` outputs from any of your submitted _jobs_ vi
 
 Once you are logged into the server:
 
-* Navigate to https://jobs.opensafely.org/ using google chrome (make sure to use https://)
+* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using google chrome (make sure to use https://)
 * Log in using your GitHub username
 * Navigate to your _Workspace_
 * Under _Releases_, navigate to Level 4 Outputs
@@ -122,7 +122,7 @@ Once you are logged into the server:
 
 Any files that you would like to be released from the server, have to first be checked by our team of output checkers. You can find instructions for requesting a release [here](https://docs.opensafely.org/releasing-files/#2-requesting-release-of-outputs-from-the-server).
 
-Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your _Workspace_, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy document and contact your co-pilot.
+Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your _Workspace_, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy and/or contact your co-pilot (if you have one).
 
 ## Publishing outputs
 
