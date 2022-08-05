@@ -4,25 +4,27 @@ The [jobs site](https://jobs.opensafely.org/) is where you can run your code on 
 
 The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
-Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely). Any [actions](https://docs.opensafely.org/actions-intro/) you develop within the attached repository are linked to the workspace, allowing these to be run against real data.  
+Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely). Any [actions](https://docs.opensafely.org/actions-intro/) you develop as part of your [project pipeline](https://docs.opensafely.org/actions-pipelines/) within the attached repository are linked to the workspace, allowing these to be run against real data.
 
-From within each workspace, you can run **jobs**; each job is a selection of one or more actions. You can see all the _jobs_ that have been run on a workspace by clicking on "view logs" on the _Workspace_ page. You can see a log of all _jobs_ being run [here](https://jobs.opensafely.org/event-log/). 
+A _Job_ is an instance of an _Action_ running on real data. _Jobs_ are run by selecting one or more actions to be run as part of a single _Job Request_. You can see all the _Job Requests_ that have been run from a _Workspace_ by clicking on "View logs" from a _Workspace_ page. You can see a log of all _Job Requests_ being run [here](https://jobs.opensafely.org/event-log/). 
 
 ```mermaid
 graph TD
     A[Project] --> B[Workspace]
     A --> C[Workspace]
-    B --> D[job]
-    C --> E[job]
-    B --> F[job]
-    subgraph Actions[Actions]
+    B --> D[Job Request]
+    B --> E[Job Request]
+    C --> F[Job Request]
+    subgraph Actions[Actions - taken from your project.yaml]
       Action_1[Action]
       Action_2[Action]
       Action_3[Action]
     end
-    Action_1 --> E
-    Action_2 --> E
-    Action_3 --> E
+    Action_1 --> F
+    Action_2 --> F
+    F --> G[Job]
+    F --> H[Job]
+   
 ```
 
 ### Output types
