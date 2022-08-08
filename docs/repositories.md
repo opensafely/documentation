@@ -2,7 +2,7 @@ This section provides information on the git repositories for each OpenSAFELY re
 
 The repository, or repo, contains all the analysis scripts, codelists, released outputs, and other research objects needed to understand and run the project.
 Changes to the repo are audited using `git`, a version control system for recording, sharing and collaborating on code.
-The repo's canonical location is on GitHub, a website that makes it easy to use git, and adds extra collaboration and security tools on top.
+The repo's canonical location is on GitHub, a website that makes it easier to use git, and adds extra collaboration and security tools on top.
 You can download a copy of the repo ("clone"), create a development "branch", make changes ("commit") on that branch, then upload these changes ("push") back to the remote repo on GitHub &mdash; for more details see the [GitHub and Git](install-github-and-git.md) section.
 
 GitHub is the means by which code in the repository is passed to the server to be run against the OpenSAFELY database &mdash; it is the only entry point between the secure server and the outside world. GitHub is also the means by which approved disclosure-safe outputs are released from the secure server to researchers.

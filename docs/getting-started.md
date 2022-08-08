@@ -85,7 +85,7 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
     *Tabbed* sections like the example immediately below split the
     configuration instructions into web browser and local Windows
     installation.  Where these tabbed sections appear, select the
-    relevant tab and follow just the instructions for that section.
+    relevant tab and follow only the instructions for that section.
 
 === "Web browser (online)"
 
@@ -136,7 +136,7 @@ first.
 
 === "Windows (local)"
 
-    It is possible to follow the "Web browser" instructions and simply
+    It is possible to follow the "Web browser" instructions and
     sign up on GitHub's site.
 
     If you [install GitHub Desktop](https://desktop.github.com/), the
@@ -331,7 +331,7 @@ study.
 
 === "Web browser (online)"
 
-    There's nothing to do here! In the following sections, just type any
+    There's nothing to do here! In the following sections, type any
     `opensafely` commands in the terminal available at the bottom-right of the
     Gitpod workspace. Copy the commands and then press ++enter++ to run them.
 
@@ -424,7 +424,7 @@ and Linux. If you are working on your own computer and **not** in
 Gitpod, and are already comfortable using another code editor, then that
 editor will be suitable.
 
-Here we'll only use Visual Studio Code as a simple editor. There are
+Here we'll only use Visual Studio Code for the examples. There are
 several [short videos and written
 guides](https://code.visualstudio.com/docs#first-steps) elsewhere on how
 to use more of Visual Studio Code's features.
