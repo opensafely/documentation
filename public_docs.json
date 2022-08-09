@@ -424,7 +424,7 @@
       "columns": [
         {
           "name": "patient_id",
-          "description": "Patient's pseudonymous identifier, for linkage.This will not normally be output, or operated on by researchers.",
+          "description": "Patient's pseudonymous identifier, for linkage. This will not normally be output, or operated on by researchers.",
           "type": "PseudoPatientId",
           "constraints": [
             "Must have a value",
