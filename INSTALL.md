@@ -42,8 +42,8 @@ by hand: `just update-cohort-extractor`
 
 ## Updating Data Builder Definitions
 
-Data Builder generates some documentation automatically in JSON format from backend and contract code, and from its spec tests.  When a new Data Builder version builds and generates updates to
-the documentation, a PR to update the JSON file in this repo is automatically opened.
+Data Builder generates some documentation automatically in JSON format from backend and contract code, and from its spec tests. When a new Data Builder version builds and generates updates to
+the documentation, a PR to update the JSON file in this repo is automatically opened. The PR is opened by a [workflow in the Data Builder repository](https://github.com/opensafely-core/databuilder/blob/main/.github/workflows/update-public-docs.yml).
 
 The current and past versions of the Data Builder JSON file can be found as release artifacts
 with [Data Builder releases](https://github.com/opensafely-core/databuilder/releases).

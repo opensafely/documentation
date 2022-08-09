@@ -22,7 +22,7 @@ Edit the docstrings in the [`patients.py` file in the `cohort-extractor` reposit
 
 If you don't have write access, you can fork the cohort-extractor repo, make a change, and submit a pull request.
 Editing directly in GitHub will take you through these steps automatically.
-At least one commit in the pull request should be named using the prefix `fix: ` or `feature: `. For example `fix: typo in age_as_of docstring`. 
+At least one commit in the pull request should be named using the prefix `fix: ` or `feature: `. For example `fix: typo in age_as_of docstring`.
 This ensures that a new version of `cohortextractor` is released and can be imported by the documentation via GitHub actions.
 Then add a reference to your new variable in the [variables page](study-def-variables.md).
 
@@ -54,26 +54,11 @@ Make sure you commit both the changes to the `examples` and `databuilder/snippet
 If you are updating multiple examples it might be easier to the extraction step happen each time you change the python modules, you can do this with `just databuilder/watch-examples`.
 
 
-## Updating Data Builder backend and contract documentation
+## Updating Data Builder backend, contract and reference documentation
 
-!!! note "You will need both Python 3.7 and 3.10 on your PATH to make these updates"
+If a new Data Builder version is released that updates Data Builder's backend, contract and reference documentation,
+there should be an automated pull request opened in the documentation repository to keep it synchronised.
 
-!!! note "This workflow is not supported, and has not been tested on Windows."
-
-Some of the Data Builder information in this OpenSAFELY documentation is generated from the [Data Builder source code](https://github.com/opensafely-core/databuilder).
-
-There are three components used to achieve this:
-
-* [Data Builder repository](https://github.com/opensafely-core/databuilder/)
-* [A mkdocs plugin](https://github.com/opensafely-core/mkdocs-opensafely-databuilder/)
-* [This documentation site](https://github.com/opensafely/documentation/)
-
-To update the [backend](data-backends.md) or [contracts](contracts-reference.md) pages:
-
-1. Make your changes in the [Data Builder repo](https://github.com/opensafely-core/databuilder/).  A new version of databuilder will be released once your changes are merged to `main`.
-1. In the [documentation repo](https://github.com/opensafely/documentation/) run `just databuilder/upgrade-databuilder` to update the version of databuilder installed in the subdirectory's virtualenv.  A current limitation is that a new Data Builder release is needed, before rebuilding the generated content.  Data Builder releases are only made for certain pull requests.
-1. Run `just databuilder/generate-docs` to update the `public_docs.json` file.
-1. Create a branch in the documentation repo and commit the `public_docs.json` file to it.
-1. Submit a PR for your changes.  Cloudflare will build a deployment of your branch if you don't want to test locally.
+See the [documentation repository's installation notes](https://github.com/opensafely/documentation/blob/main/INSTALL.md).
 
 ---8<-- 'includes/glossary.md'
