@@ -64,7 +64,7 @@ There are some additional roles linked to the release of outputs from the server
 
 #### Viewing and requesting changes to your permissions
 
-You can view the permissions you have for your project by navigating to the _Project_ page (see below), where can see the permissions for all researchers involved in your project.
+You can view the permissions you have for your project by navigating to the _Project_ page (see arrow below), where can see the permissions for all researchers involved in your project.
 
 ![Jobs site project page](./images/view_project.png)
 
@@ -73,7 +73,7 @@ If you are not able to do any of the tasks and you think you should, please cont
 
 * **Log in** using your GitHub credentials
 * **Create a Workspace**:
-    * Click the `Create a new workspace` button.
+    * Click the `Create a new workspace` button (circled in red below).
     * Pick a _Project_ from the list.
     * Click the `Create a new workspace` link.
     ![Create new workspace](./images/create_new_workspace.png)
@@ -84,7 +84,7 @@ If you are not able to do any of the tasks and you think you should, please cont
 When you add a new repository in the [opensafely organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
 ## Running your code on the server
 
-* Click the `Run Jobs` button from your workspace.
+* Click the `Run Jobs` button (see red arrow below) from your workspace.
 ![Create new workspace](./images/run_jobs.png)
 *  **Select actions** to run:
     * Select the actions you want to run by clicking the `Run` buttons.
@@ -130,7 +130,7 @@ Once you are logged into the server:
 
 ## Viewing released outputs
 
-You can view the various [output types](#output-types) from the `Releases` section of your workspace.
+You can view the various [output types](#output-types) from the `Releases` section (see red arrow below) of your workspace.
 
 ![Workspace Releases](./images/releases.png)
 
