@@ -8,11 +8,11 @@ It captures symptoms, investigations, test results, diagnoses, prescriptions, de
 
 The SystmOne database contains various tables for events, medications, registrations, and so on, which have been processed, pseudonymised, and made available within the OpenSAFELY-TPP database. Some additional custom tables are also created, for instance to make administrative and geographic grouping information available (like household membership) without disclosing of identifiable patient data (like addresses).
 
-Clinical and consultation events are coded in SystmOne using an augmented version of CTV3 Read codes, and also available using SNOMED codes. These are available in the OpenSAFELY-TPP database in the `CodedEvent` table. Each row is made up of a patient identifier, an event code, an event date, and an additional interaction identifier linking the event to a specific patient&ndash;service interaction, such as a GP consultation, getting bloods, receiving test results, updating contact details, and so on (perhaps confusingly, this is called the "consultation" identifier). There may also be an additional numeric value stored, for instance if the code relates to a physiological measurement.
+Clinical and consultation events are coded in SystmOne using an augmented version of CTV3 Read codes, and also available using SNOMED CT codes. These are available in the OpenSAFELY-TPP database in the `CodedEvent` table. Each row is made up of a patient identifier, an event code, an event date, and an additional interaction identifier linking the event to a specific patient&ndash;service interaction, such as a GP consultation, getting bloods, receiving test results, updating contact details, and so on (perhaps confusingly, this is called the "consultation" identifier). There may also be an additional numeric value stored, for instance if the code relates to a physiological measurement.
 
 Medications are coded using DM+D codes, and are available in the `MedicationIssue` table which is structured similarly to `CodedEvent`.
 
-The `Vaccination` table contains information on administered vaccinations, identified using either the target disease (e.g., influenza), or the vaccine product (e.g., Optaflu). 
+The `Vaccination` table contains information on administered vaccinations, identified using either the target disease (e.g., influenza), or the vaccine product (e.g., Optaflu).
 
 !!! warning
     Detailed information on onward referrals is not currently available.
