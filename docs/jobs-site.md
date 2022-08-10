@@ -64,7 +64,7 @@ There are some additional roles linked to the release of outputs from the server
 
 #### Viewing and requesting changes to your permissions
 
-You can view the permissions you have for your project by navigating to the permissions page, where can see the permissions for all researchers involved in your project.
+You can view the permissions you have for your project by navigating to the _Project_ page (see below), where can see the permissions for all researchers involved in your project.
 
 ![Jobs site project page](./images/view_project.png)
 
