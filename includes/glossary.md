@@ -14,8 +14,7 @@
 *[HES]: Hospital Episode Statistics - a database containing details of all admissions, A&E attendances and outpatient appointments at NHS hospitals in England - like SUS but more often used outside of NHS setting such as in research
 *[SUS]: Secondary Uses Service - NHS hospital activity data pseudonymised and used for purposes other than direct care, such as analytics and service planning
 *[ECDS]: Emergency Care Data Set - the national data set for urgent and emergency care
-*[SNOMED-CT]: SNOMED Clinical Terms, a structured clinical vocabulary for use in an electronic health record, the current standard for coding in the NHS and many jurisdictions globally
-*[SNOMED]: SNOMED Clinical Terms, a structured clinical vocabulary for use in an electronic health record, the current standard for coding in the NHS and many jurisdictions globally
+*[SNOMED CT]: SNOMED Clinical Terms, a structured clinical vocabulary for use in an electronic health record, the current standard for coding in the NHS and many jurisdictions globally
 *[CTV3]: Clinical Terms Version 3; a version of clinical coding that supercedes Read v2, used natively in TPP SystmOne
 *[APC]: Admitted Patient Care is the national data set for hospital admissions. It is part of HES
 *[ICD-10]: the 10th revision of the International Statistical Classification of Diseases and Related Health Problems (ICD), a medical classification list by the World Health Organization (WHO)
