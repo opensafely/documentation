@@ -34,4 +34,10 @@ repos:
     - id: check-json
     - id: check-toml
     - id: check-yaml
+      exclude: mkdocs.yml
+    - id: check-yaml
+      name: check-yaml-mkdocs
+      # --unsafe is a workaround for the use of !! in mkdocs.yml.
+      args: [--unsafe]
+      files: mkdocs.yml
     - id: detect-private-key
