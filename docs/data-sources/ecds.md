@@ -9,7 +9,7 @@ ECDS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 * **Delay between event occurring and event appearing in OpenSAFELY** * Approximately 1-2 months.
 * **Collected information** Attendance, admission and discharge dates; locations; presenting complaints; diagnoses.
 
-Diagnoses and discharge destinations are coded using SNOMED-CT.
+Diagnoses and discharge destinations are coded using SNOMED CT.
 
 ## More information
 * [Notebook showing breakdown of ethnicity codes](https://github.com/opensafely/rapid-reports/blob/master/notebooks/ethnicity-codes.ipynb) - (private, pending review & publication)
