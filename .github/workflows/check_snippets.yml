@@ -24,7 +24,7 @@ jobs:
       - name: Run dev tooling on snippets
         run: just databuilder/check
 
-      - name: Check dataset definitions generate valid SQL
+      - name: Check dataset definitions run
         run: just databuilder/check-dataset-definitions
 
       - name: Check snippets work

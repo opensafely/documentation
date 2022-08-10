@@ -117,10 +117,13 @@ check-dataset-definitions: devenv
     #!/usr/bin/env bash
     set -euo pipefail
 
-    for f in ./ehrql-tutorial-examples/*dataset_definition.py; do
+    cd {{parent_directory(justfile_directory())}}
+
+    for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
       # By convention, we name dataset definition as: EXAMPLENUMBER_EXAMPLEDATASET_dataset_definition.py
       DATASET=`echo "$f" | cut -d'_' -f2`
-      DATABASE_URL="./ehrql-tutorial-examples/example-data/$DATASET" python -m databuilder generate-dataset --dataset-definition "$f" --output /dev/null
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASET/" databuilder/$BIN/python -m databuilder generate-dataset --dataset-definition "$f" --output /dev/stdout
+
     done
 
 # Run the dev project
