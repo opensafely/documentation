@@ -1,7 +1,7 @@
 ## What are Codelists?
 
 Codes are alphanumerical codes that are attached to a clinical or event
-description. There are a few different code systems such as SNOMED and CTV3,
+description. There are a few different code systems such as SNOMED CT and CTV3,
 which means one clinical diagnosis can have different codes, depending on the
 system used. Most code systems arrange their codes in a hierarchical structure,
 meaning a code can be a parent of another code or codes, and a child of another
@@ -18,9 +18,9 @@ that to find all the patients with Type 1 diabetes, you may have to search for
 ## OpenCodelists
 We built a system for building, reviewing and maintaining codelists at
 [OpenCodelists](https://www.opencodelists.org/).
-We've made an introductory video to help explain OpenCodelists in more detail. Codelists 
-that are hosted on this website can be used directly in the Study Definition. This means 
-there is no need to download or alter these codelists in the study definition, and 
+We've made an introductory video to help explain OpenCodelists in more detail. Codelists
+that are hosted on this website can be used directly in the Study Definition. This means
+there is no need to download or alter these codelists in the study definition, and
 they can be reused.
 
 <div class="video-wrapper">
