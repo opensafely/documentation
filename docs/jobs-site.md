@@ -144,4 +144,7 @@ You must seek NHS England approval for any publication or wider sharing of resul
 
 For instructions on how to request approval, please see [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. Following approval from NHSE, you should also create draft public outputs for review. To do this, navigate to the _release_ containing the outputs you would like to be published and click the `Publish` button.
 
+As part of publishing your outputs, you should also make the repository where your analysis code is written public. You can find instructions on how to do that [here](https://docs.opensafely.org/publishing-repo/).
+
 Once approved, your released outputs will be “published” and viewable from the published outputs in the `Published outputs` section of your `Releases`. This is accessible by everyone, even those without a login.
+
