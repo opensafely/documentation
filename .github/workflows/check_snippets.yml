@@ -25,7 +25,7 @@ jobs:
         run: just databuilder/check
 
       - name: Check dataset definitions generate valid SQL
-        run: just databuilder/sqlcheck
+        run: just databuilder/check-dataset-definitions
 
       - name: Check snippets work
         run: |

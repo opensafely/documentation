@@ -110,12 +110,18 @@ fix: devenv
     databuilder/$BIN/black databuilder/
     databuilder/$BIN/isort databuilder/
 
-sqlcheck: devenv
+
+# Run the dataset definitions.
+# This is in lieu of actually validating the outputs from dataset definitions against inputs which we should implement.
+check-dataset-definitions: devenv
     #!/usr/bin/env bash
     set -euo pipefail
-    # Use xargs here over find with the -exec option.
-    # xargs produces a non-exit error code when command it runs fails.
-    find wip-dataset-definitions/ -type f -name "dataset_definition*.py" -print0 | xargs -0 -n 1 $BIN/python -m databuilder dump-dataset-sql
+
+    for f in ./ehrql-tutorial-examples/*dataset_definition.py; do
+      # By convention, we name dataset definition as: EXAMPLENUMBER_EXAMPLEDATASET_dataset_definition.py
+      DATASET=`echo "$f" | cut -d'_' -f2`
+      DATABASE_URL="./ehrql-tutorial-examples/example-data/$DATASET" python -m databuilder generate-dataset --dataset-definition "$f" --output /dev/null
+    done
 
 # Run the dev project
 run: devenv

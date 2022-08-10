@@ -99,7 +99,7 @@ This is a minimal, but still valid, dataset definition:
     May need to fix up how this code is included.
 
 ```python
----8<-- "databuilder/wip-dataset-definitions/dataset_definition_minimal.py"
+---8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
 ```
 
 ### Explanation of the dataset definition
