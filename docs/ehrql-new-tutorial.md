@@ -53,59 +53,118 @@ Familiarity with:
 would also be helpful,
 but is *not* essential.
 
-#### Installed software
+#### Software requirements
 
-If you wish to run the tutorial code yourself, …
+To try running or modifying the examples in this tutorial,
+you will need to install Data Builder.
+
+##### Operating system
+
+Data Builder runs on Windows, macOS, and Linux.
+
+##### Installing Data Builder
+
+We suggest two ways of getting Data Builder running.
+
+=== "Docker (recommended)"
+
+    This is the simplest way to run Data Builder.
+
+    If you do not have Docker installed,
+    refer to our [installation guides](install-intro.md) for guidance.
+
+    !!! todo
+
+        Test if running from Docker works for example CSVs.
+
+=== "Python (for confident Python users)"
+
+    If you are unable to run Data Builder via Docker,
+    you can try installing Data Builder directly using Python.
+
+    As Python configurations vary between operating systems,
+    and how users have Python configured,
+    we will not give detailed instructions.
+
+    You will need to:
+
+    * have a suitable Python version installed (currently Python 3.9)
+    * configure a suitable virtual environment to run Data Builder
+      for example with `conda` or `venv`
+    * install the Data Builder package into that virtual environment;
+      currently you will have to do something like:
+      `pip install git+https://github.com/opensafely-core/databuilder@main#egg=databuilder`
+
+    !!! todo
+
+        Are we going to ever publish Data Builder to PyPI?
+
+    !!! important
+        **Commands listed in this tutorial are given for the Docker installation.**
+
+        To make those commands work with Python, replace the start of any command:
+
+        ```
+        docker run --rm ghcr.io/opensafely-core/databuilder:v0
+        ```
+
+        with:
+
+        ```
+        databuilder
+        ```
+
+        For example,
+
+        ```
+        docker run --rm ghcr.io/opensafely-core/databuilder:v0 --help
+        ```
+
+        becomes:
+
+        ```
+        databuilder --help
+        ```
 
 !!! todo
 
-    Decide how we expect someone to run this tutorial.
+    Consider adding Gitpod or similar.
 
-    We have at least four possible routes:
+**Commands in this tutorial will assume you are running Docker.**
 
-    1. a Python installed `databuilder` package
-        * \+ does not require Docker
-        * \+ easy to always point someone to the latest version
-             via `pip install` from GitHub `main` branch
-        * \- requires suitable Python installation
-        * \- may lead to more technical support issues
-             due to Python version incompatibilities
-    2. the `databuilder` Docker image
-        * \+ easy to start if you have Docker
-        * \+ doesn't require a Python install
-        * \- requires Docker
-        * \- requires some manual wrangling to get files in
-    3. `opensafely-cli`
-        * \- requires the addition of a `project.yaml`
-             which is more about an OpenSAFELY study,
-             than ehrQL itself
-        * \- requires Docker
-        * \- is there a way of using this to run a project without outputs?
-             (not currently)
-    4. via Gitpod or similar
-        * \+ does not require any installation
-        * \- another thing to maintain
-        * \- unavailable in some networks
+##### Text editor
 
-    We could specify one or more of these.
+You can edit examples in any text editor.
 
-    The ideal would probably be none of these
-    and instead be an in-browser tool
-    that allows you,
-    without installation, to:
+You may find it useful to use a text editor or integrated development environment
+that supports Python syntax.
 
-    * load sample data,
-    * edit a dataset definition,
-    * process the sample data with that dataset definition
-    * display and/or save the results
+If you have no preference already,
+[Visual Studio Code](https://code.visualstudio.com) is a reasonable, free-of-charge choice
+that runs on Windows, macOS and Linux.
 
 ## Running the tutorial code examples
 
+### Downloading the tutorial examples
+
 !!! todo
 
-    * Explain how to download sample data.
-    * Explain how to load that sample data.
-    * Examples
+    Consider improving this process.
+
+1. Download the [documentation source code](https://github.com/opensafely/documentation/archive/refs/heads/main.zip)
+   that contains these examples.
+2. Open the `.zip` file.
+3. Extract the `databuilder/ehrql-tutorial-examples` somewhere.
+4. You will need to navigate to the directory that you extracted
+   when working in a terminal.
+
+### Running the sample data
+
+!!! todo
+
+    Explain how to load that sample data.
+
+    This is probably just running the initial dataset definition.
 
 ## A minimal dataset definition
 
