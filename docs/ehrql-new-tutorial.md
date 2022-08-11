@@ -186,6 +186,10 @@ This is a minimal, but still valid, dataset definition:
 ---8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
 ```
 
+### Minimal data
+
+{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
+
 ### Explanation of the dataset definition
 
 #### Use `import` to use Data Builder components
