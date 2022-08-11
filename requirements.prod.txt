@@ -128,6 +128,7 @@ mkdocs==1.3.1 \
     #   mkdocs-autorefs
     #   mkdocs-macros-plugin
     #   mkdocs-material
+    #   mkdocs-table-reader-plugin
     #   mkdocstrings
 mkdocs-autorefs==0.3.1 \
     --hash=sha256:12baad29359f468b44d980ed35b713715409097a1d8e3d0ef90962db95205eda \
@@ -148,6 +149,10 @@ mkdocs-material-extensions==1.0.3 \
 mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/99f9f3ec5025d5cf9030cafb1189576a4ebf6a7c.zip \
     --hash=sha256:011613b325ee9b10aec31a652c5b00a39995f2e50a5df7a5f2bf5f2c78897f49
     # via -r requirements.prod.in
+mkdocs-table-reader-plugin==1.1.0 \
+    --hash=sha256:445142b334f18b61aa2e4548eb2f5177d5b4563c4d663c853ce82828b7a37ec2 \
+    --hash=sha256:f3380f781e19129065842a88986d81ce1d1ac850d55ddac1c0cd1a47c35fea2b
+    # via -r requirements.prod.in
 mkdocstrings[python]==0.19.0 \
     --hash=sha256:3217d510d385c961f69385a670b2677e68e07b5fea4a504d86bf54c006c87c7d \
     --hash=sha256:efa34a67bad11229d532d89f6836a8a215937548623b64f3698a1df62e01cc3e
@@ -158,10 +163,57 @@ mkdocstrings-python==0.7.0 \
     --hash=sha256:6964bd92f106766e771ac6cd5bc02643a960602b4d921b95362e31d491e9a6db \
     --hash=sha256:e54c67890e8bb7dc4604360c8ef5dd214b23b6924de7706f461e3c998d4ea061
     # via mkdocstrings
+numpy==1.23.1 \
+    --hash=sha256:1408c3527a74a0209c781ac82bde2182b0f0bf54dea6e6a363fe0cc4488a7ce7 \
+    --hash=sha256:173f28921b15d341afadf6c3898a34f20a0569e4ad5435297ba262ee8941e77b \
+    --hash=sha256:1865fdf51446839ca3fffaab172461f2b781163f6f395f1aed256b1ddc253622 \
+    --hash=sha256:3119daed207e9410eaf57dcf9591fdc68045f60483d94956bee0bfdcba790953 \
+    --hash=sha256:35590b9c33c0f1c9732b3231bb6a72d1e4f77872390c47d50a615686ae7ed3fd \
+    --hash=sha256:37e5ebebb0eb54c5b4a9b04e6f3018e16b8ef257d26c8945925ba8105008e645 \
+    --hash=sha256:37ece2bd095e9781a7156852e43d18044fd0d742934833335599c583618181b9 \
+    --hash=sha256:3ab67966c8d45d55a2bdf40701536af6443763907086c0a6d1232688e27e5447 \
+    --hash=sha256:47f10ab202fe4d8495ff484b5561c65dd59177949ca07975663f4494f7269e3e \
+    --hash=sha256:55df0f7483b822855af67e38fb3a526e787adf189383b4934305565d71c4b148 \
+    --hash=sha256:5d732d17b8a9061540a10fda5bfeabca5785700ab5469a5e9b93aca5e2d3a5fb \
+    --hash=sha256:68b69f52e6545af010b76516f5daaef6173e73353e3295c5cb9f96c35d755641 \
+    --hash=sha256:7e8229f3687cdadba2c4faef39204feb51ef7c1a9b669247d49a24f3e2e1617c \
+    --hash=sha256:8002574a6b46ac3b5739a003b5233376aeac5163e5dcd43dd7ad062f3e186129 \
+    --hash=sha256:876f60de09734fbcb4e27a97c9a286b51284df1326b1ac5f1bf0ad3678236b22 \
+    --hash=sha256:9ce242162015b7e88092dccd0e854548c0926b75c7924a3495e02c6067aba1f5 \
+    --hash=sha256:a35c4e64dfca659fe4d0f1421fc0f05b8ed1ca8c46fb73d9e5a7f175f85696bb \
+    --hash=sha256:aeba539285dcf0a1ba755945865ec61240ede5432df41d6e29fab305f4384db2 \
+    --hash=sha256:b15c3f1ed08df4980e02cc79ee058b788a3d0bef2fb3c9ca90bb8cbd5b8a3a04 \
+    --hash=sha256:c2f91f88230042a130ceb1b496932aa717dcbd665350beb821534c5c7e15881c \
+    --hash=sha256:d748ef349bfef2e1194b59da37ed5a29c19ea8d7e6342019921ba2ba4fd8b624 \
+    --hash=sha256:e0d7447679ae9a7124385ccf0ea990bb85bb869cef217e2ea6c844b6a6855073
+    # via pandas
 packaging==21.3 \
     --hash=sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb \
     --hash=sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
     # via mkdocs
+pandas==1.4.3 \
+    --hash=sha256:07238a58d7cbc8a004855ade7b75bbd22c0db4b0ffccc721556bab8a095515f6 \
+    --hash=sha256:0daf876dba6c622154b2e6741f29e87161f844e64f84801554f879d27ba63c0d \
+    --hash=sha256:16ad23db55efcc93fa878f7837267973b61ea85d244fc5ff0ccbcfa5638706c5 \
+    --hash=sha256:1d9382f72a4f0e93909feece6fef5500e838ce1c355a581b3d8f259839f2ea76 \
+    --hash=sha256:24ea75f47bbd5574675dae21d51779a4948715416413b30614c1e8b480909f81 \
+    --hash=sha256:2893e923472a5e090c2d5e8db83e8f907364ec048572084c7d10ef93546be6d1 \
+    --hash=sha256:2ff7788468e75917574f080cd4681b27e1a7bf36461fe968b49a87b5a54d007c \
+    --hash=sha256:41fc406e374590a3d492325b889a2686b31e7a7780bec83db2512988550dadbf \
+    --hash=sha256:48350592665ea3cbcd07efc8c12ff12d89be09cd47231c7925e3b8afada9d50d \
+    --hash=sha256:605d572126eb4ab2eadf5c59d5d69f0608df2bf7bcad5c5880a47a20a0699e3e \
+    --hash=sha256:6dfbf16b1ea4f4d0ee11084d9c026340514d1d30270eaa82a9f1297b6c8ecbf0 \
+    --hash=sha256:6f803320c9da732cc79210d7e8cc5c8019aad512589c910c66529eb1b1818230 \
+    --hash=sha256:721a3dd2f06ef942f83a819c0f3f6a648b2830b191a72bbe9451bcd49c3bd42e \
+    --hash=sha256:755679c49460bd0d2f837ab99f0a26948e68fa0718b7e42afbabd074d945bf84 \
+    --hash=sha256:78b00429161ccb0da252229bcda8010b445c4bf924e721265bec5a6e96a92e92 \
+    --hash=sha256:958a0588149190c22cdebbc0797e01972950c927a11a900fe6c2296f207b1d6f \
+    --hash=sha256:a3924692160e3d847e18702bb048dc38e0e13411d2b503fecb1adf0fcf950ba4 \
+    --hash=sha256:d51674ed8e2551ef7773820ef5dab9322be0828629f2cbf8d1fc31a0c4fed640 \
+    --hash=sha256:d5ebc990bd34f4ac3c73a2724c2dcc9ee7bf1ce6cf08e87bb25c6ad33507e318 \
+    --hash=sha256:d6c0106415ff1a10c326c49bc5dd9ea8b9897a6ca0c8688eb9c30ddec49535ef \
+    --hash=sha256:e48fbb64165cda451c06a0f9e4c7a16b534fcabd32546d531b3c240ce2844112
+    # via mkdocs-table-reader-plugin
 pygments==2.12.0 \
     --hash=sha256:5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb \
     --hash=sha256:dc9c10fb40944260f6ed4c688ece0cd2048414940f1cea51b8b226318411c519
@@ -182,6 +234,11 @@ python-dateutil==2.8.2 \
     # via
     #   ghp-import
     #   mkdocs-macros-plugin
+    #   pandas
+pytz==2022.1 \
+    --hash=sha256:1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7 \
+    --hash=sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c
+    # via pandas
 pyyaml==6.0 \
     --hash=sha256:0283c35a6a9fbf047493e3a0ce8d79ef5030852c51e9d911a27badfde0605293 \
     --hash=sha256:055d937d65826939cb044fc8c9b08889e8c743fdc6a32b33e2390f66013e449b \
@@ -219,6 +276,7 @@ pyyaml==6.0 \
     # via
     #   mkdocs
     #   mkdocs-macros-plugin
+    #   mkdocs-table-reader-plugin
     #   pyyaml-env-tag
 pyyaml-env-tag==0.1 \
     --hash=sha256:70092675bda14fdec33b31ba77e7543de9ddc88f2e5b99160396572d11525bdb \
@@ -228,6 +286,10 @@ six==1.16.0 \
     --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
     --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
     # via python-dateutil
+tabulate==0.8.10 \
+    --hash=sha256:0ba055423dbaa164b9e456abe7920c5e8ed33fcc16f6d1b2f2d152c8e1e8b4fc \
+    --hash=sha256:6c57f3f3dd7ac2782770155f3adb2db0b1a269637e42f27599925e64b114f519
+    # via mkdocs-table-reader-plugin
 termcolor==1.1.0 \
     --hash=sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b
     # via mkdocs-macros-plugin
