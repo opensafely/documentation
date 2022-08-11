@@ -126,6 +126,20 @@ check-dataset-definitions: devenv
 
     done
 
+build-dataset-definitions-outputs: devenv
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    cd {{parent_directory(justfile_directory())}}
+
+    for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
+      # By convention, we name dataset definition as: EXAMPLENUMBER_EXAMPLEDATASET_dataset_definition.py
+      DATASET=`echo "$f" | cut -d'_' -f2`
+      FILENAME="$(basename "$f" .py).csv"
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASET/" databuilder/$BIN/python -m databuilder generate-dataset --dataset-definition "$f" --output "./databuilder/ehrql-tutorial-examples/results/$FILENAME"
+
+    done
+
 # Run the dev project
 run: devenv
     echo "Not implemented yet"
