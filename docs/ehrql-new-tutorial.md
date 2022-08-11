@@ -13,6 +13,25 @@ This tutorial is aimed at:
   who wish to understand more about how OpenSAFELY backends
   are accessed by users
 
+!!! tip
+    There is no requirement for approval or access to OpenSAFELY to follow this tutorial.
+    This tutorial uses artificial data throughout.
+
+## What this tutorial covers: writing and running ehrQL queries with Data Builder
+
+ehrQL is a query language for electronic health records.
+The [introduction to ehrQL](ehrql-intro.md) has more information.
+
+Data Builder is a program that takes ehrQL queries,
+converts them to underlying database queries
+and submits them to OpenSAFELY backends.
+The [introduction to Data Builder](data-builder-intro) has more information.
+
+This tutorial will introduce you to:
+
+* writing a dataset definition in ehrQL
+* running that dataset definition with Data Builder
+
 ### Requirements
 
 #### Background knowledge
