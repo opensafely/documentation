@@ -164,7 +164,13 @@ that runs on Windows, macOS and Linux.
 
     Explain how to load that sample data.
 
-    This is probably just running the initial dataset definition.
+    The instructions should:
+
+    * specify sample data
+    * show the expected output
+    * specify how to run the sample data against Data Builder
+
+   This is probably just running the initial dataset definition.
 
 ## A minimal dataset definition
 
@@ -217,18 +223,6 @@ that we wish to add to the dataset.
 !!! todo
 
     Consider using code annotations to describe the code.
-
-### Running the dataset definition
-
-!!! todo
-
-    Complete this section.
-
-    The instructions should:
-
-    * specify sample data
-    * show the expected output
-    * specify how to run the sample data against Data Builder
 
 #### What happens when Data Builder generates a dataset?
 
