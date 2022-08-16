@@ -158,23 +158,74 @@ that runs on Windows, macOS and Linux.
 4. You will need to navigate to the directory that you extracted
    when working in a terminal.
 
-### Running the sample data
+### Loading a dataset definition into Data Builder
+
+#### CSV data
+
+Typically, we provide Data Builder with a dataset definition
+to extract data from an OpenSAFELY backend.
+
+To simplify the examples in this tutorial,
+we will instead specify a directory of CSV files
+that contain artificial data,
+and query that data instead of a backend.
+
+Each CSV represents a database table.
+Data Builder's CSV loader uses the filename of the CSV
+to determine which Data Builder table it represents.
+For example, a file named `patients.csv` is interpreted as the Data Builder `patients` table.
+
+#### Using Data Builder's command-line interface
+
+This section explains how to load dataset definitions into Databuilder.
+
+Each dataset definition has a filename of the form:
+
+```
+NUMBER_DATASETNAME_dataset_definition.py
+```
+
+For example:
+
+```
+1_minimal_dataset_definition.py
+```
 
 !!! todo
 
-    Explain how to load that sample data.
+    Check how compatible this is cross-platform.
 
-    The instructions should:
+To run this dataset definition with Data Builder,
 
-    * specify sample data
-    * show the expected output
-    * specify how to run the sample data against Data Builder
+1. In a terminal, enter the `ehrql-tutorial-examples` directory that you extracted
+   from the sample data.
+2. Run this command:
 
-   This is probably just running the initial dataset definition.
+   ```
+   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/minimal/" generate-dataset "./1_minimal_dataset_definition.py --output "results.csv"
+   ```
+3. You should see Data Builder run without error
+   and find the `results.csv` file in the `ehrql-tutorial-examples` directory
+   that you were working in.
+
+!!! tip
+
+   In general, the Docker command to run a dataset defintion looks like:
+
+   ```
+   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASETNAME/" generate-dataset "./NUMBER_DATASETNAME_dataset_definition.py --output "results.csv"
+   ```
+
+   You need to substitute `DATASETNAME` with the appropriate dataset name,
+   and `NUMBER_DATASETNAME_dataset_definition.py` to match the specific dataset definition
+   that you want to run.
+
+!!! tip
+
+   The output in this example is called `results.csv`,
+   but you can choose any valid filename.
 
 ## A minimal dataset definition
-
-We provide Data Builder with a dataset definition to extract data from an OpenSAFELY backend.
 
 This is a minimal, but still valid, dataset definition:
 
