@@ -233,15 +233,32 @@ This is a minimal, but still valid, dataset definition:
 
     May need to fix up how this code is included.
 
-```python
+```python title="1_minimal_dataset_definition.py"
 ---8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
 ```
 
-### Minimal data
+### The dataset
+
+`minimal/patients.csv`:
 
 {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
 
+### The output
+
+!!! todo
+
+    Do we need to clarify that the filename corresponds to the outputs already created?
+    And that you'll overwrite these if you use this as a filename?
+
+`results/1_minimal_dataset_definition.csv`
+
+{{ read_csv('databuilder/ehrql-tutorial-examples/results/1_minimal_dataset_definition.csv') }}
+
 ### Explanation of the dataset definition
+
+```python title="1_minimal_dataset_definition.py"
+---8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
+```
 
 #### Use `import` to use Data Builder components
 
