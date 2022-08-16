@@ -2,6 +2,10 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
+!!! todo
+    Consider whether we want to break this up into multiple pages
+    to make it less intimidating.
+
 ## Audience
 
 This tutorial is aimed at:
@@ -126,6 +130,10 @@ We suggest two ways of getting Data Builder running.
         databuilder --help
         ```
 
+    !!! todo
+
+        You may also need to adjust file paths; check this.
+
 !!! todo
 
     Consider adding Gitpod or similar.
@@ -174,6 +182,9 @@ Each CSV represents a database table.
 Data Builder's CSV loader uses the filename of the CSV
 to determine which Data Builder table it represents.
 For example, a file named `patients.csv` is interpreted as the Data Builder `patients` table.
+
+!!! todo
+    Add information about loading CSVs elsewhere.
 
 #### Using Data Builder's command-line interface
 
@@ -225,13 +236,17 @@ To run this dataset definition with Data Builder,
    The output in this example is called `results.csv`,
    but you can choose any valid filename.
 
-## A minimal dataset definition
+## Example dataset definition 1: A minimal dataset definition
 
 This is a minimal, but still valid, dataset definition:
 
 !!! todo
 
     May need to fix up how this code is included.
+    Can we have code annotations?
+    What's the best way of jumping between input, output and dataset
+    definition? Maybe that's a case for having one example per tutorial
+    page?
 
 ```python title="1_minimal_dataset_definition.py"
 ---8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
@@ -268,6 +283,22 @@ Here, we import two components of Data Builder:
 
 * `Dataset` as provided by the query language, to create a dataset
 * the `patients` table, which is one of several data tables that ehrQL gives access to
+
+!!! todo
+
+    Consider using snippets or code annotations instead of copy-pasting lines.
+
+#### Name values with Python's assignment operator, `=`
+
+!!! todo
+
+    Consider an explanation.
+
+#### Accessing attributes of values with the dot operator, `.`
+
+!!! todo
+
+    Consider an explanation.
 
 #### Creating a `Dataset`
 
@@ -334,4 +365,78 @@ There are two important implications of how this Data Builder's process works:
    where you load some data,
    then perform computations on that data as each line of the analysis code runs.
 
+## Example dataset definition 2: Working with multiple tables
+
+### OpenSAFELY's data contracts
+
+!!! todo
+
+### The different data types
+
+!!! todo
+
+## Example dataset definition 3: `Frame`s and `Series`
+
+### What `Frame`s and `Series` represent
+
+!!! todo
+
+### Operators on `Frame`s and `Series`
+
+!!! todo
+
+## Example dataset definition 4: Data special cases
+
+### Date handling
+
+!!! todo
+
+### Missing values
+
+!!! todo
+
+## Example dataset definition 5: Codelists
+
+### Loading a codelist
+
+!!! todo
+
+### Checking if a code is in a codelist
+
+!!! todo
+
+## Example dataset definition 6: Filtering and aggregation
+
+### Filtering values
+
+!!! todo
+
+### Aggregating values
+
+!!! todo
+
+### Combining everything together
+
+!!! todo
+
+## Conclusion
+
+!!! todo
+
+    This should:
+
+    * wrap up the tutorial
+    * briefly summarise what has been covered
+    * point to other information that a reader might want next
+
 ## Ideas and concepts to include
+
+!!! todo
+
+    Perhaps give some simple exercises for users to try to solve?
+    Maybe with need to use the reference?
+
+!!! todo
+
+    Is there some way of templating the filenames for dataset definitions and CSVs?
+    So that we have a single reference to update?
