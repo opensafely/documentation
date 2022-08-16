@@ -345,7 +345,20 @@ for the specific database.
 !!! note
 
     You can see the database query that a dataset definition will generate
-    via `databuilder --dump-dataset-sql`.
+    via the `databuilder --dump-dataset-sql` command.
+
+    For the minimal example `1_minimal_dataset_definition.py` above,
+    the underlying SQL query generated is:
+
+    ```sql
+    SELECT patients.patient_id AS patient_id
+    FROM patients
+    WHERE CAST(STRFTIME('%Y', patients.date_of_birth) AS INTEGER) >= 2000;
+    ```
+
+    !!! todo
+
+        This SQL should be kept updated.
 
 That database might be:
 
