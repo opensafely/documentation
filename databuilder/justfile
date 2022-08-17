@@ -126,6 +126,7 @@ check-dataset-definitions: devenv
     done
 
 
+# Check the dataset definition outputs are current
 check-dataset-definitions-outputs-are-current: devenv build-dataset-definitions-outputs
     #!/usr/bin/env bash
     set -euo pipefail
@@ -139,7 +140,7 @@ check-dataset-definitions-outputs-are-current: devenv build-dataset-definitions-
       echo "Dataset definition results directory is current and free of other files/directories."
     else
       echo "Dataset definition results contains files/directories not in the repository."
-      exit
+      exit 1
     fi
 
 
