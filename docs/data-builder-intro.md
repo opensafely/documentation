@@ -153,22 +153,22 @@ in your `project.yaml`, in one of the following formats:
 
 * By specifying a *patch* version, your code will use the same version
   of Data Builder.
-* By specifying a *major* or minor version, your code may run a newer
+* By specifying a *major* or *minor* version, your code may run a newer
   version of Data Builder, once a newer major or minor version becomes
   available.
   * If running locally, you can update Docker images via the
     [OpenSAFELY CLI](opensafely-cli.md#updating-docker-images).
 
-#### A note about the `latest` version
-
-Research studies often specified cohort-extractor's version as `latest`.
-
-**We no longer support specifying `latest` as a version.**
-
-This change avoids ambiguity over precisely which Data Builder version
-was used by a given study.
+#### Changes in the use of `latest` version
 
 !!! warning
+    Research studies often specified cohort-extractor's version as `latest`.
+
+    We no longer support specifying `latest` as a version.
+
+    This change avoids ambiguity over precisely which Data Builder version
+    was used by a given study.
+
     If you do specify `latest` by mistake, you will instead see an error
     mentioning `manifest unknown`. This error tells you that the version
     is not available.
