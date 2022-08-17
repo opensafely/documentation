@@ -262,13 +262,13 @@ This is a minimal, but still valid, dataset definition:
 ---8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
 ```
 
-### The dataset
+### The `minimal` data source
 
 `minimal/patients.csv`:
 
 {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
 
-### The output
+### Dataset definition 1a output
 
 !!! todo
 
