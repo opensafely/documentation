@@ -380,7 +380,39 @@ There are two important implications of how this Data Builder's process works:
    where you load some data,
    then perform computations on that data as each line of the analysis code runs.
 
-## Example dataset definition 2: Working with multiple tables
+#### Tutorial exercises
+
+!!! info
+
+    These exercise sections are optional.
+    They are prompts for you to practise writing your own ehrQL queries.
+
+!!! question
+
+    Can you change the dataset definition to select patients that were born before 1980?
+
+!!! todo
+
+    What we can ask at this point is limited.
+
+!!! todo
+
+    Ways that we could polish this.
+
+    1. We could:
+
+        * provide known good outputs
+        * provide a script for running Data Builder against the script
+        * validate the outputs with pytest or similar
+
+        The difficulty here is that, above,
+        we invite people to use Docker to run Data Builder.
+    2. Provide a solution in a dropdown,
+       (and also test that solution).
+
+## Example dataset definition 2: Working with multiple Data Builder tables
+
+OpenSAFELY backends often provide data covering several healthcare domains.
 
 ### OpenSAFELY's data contracts
 
