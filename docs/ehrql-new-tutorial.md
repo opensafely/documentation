@@ -283,7 +283,7 @@ It finds the patients whose year of birth is 2000 or later.
 
 ### Explanation of the dataset definition
 
-#### Use `import` to use Data Builder components
+#### Specify the Data Builder components in use with `import` statements
 
 Lines of the format `from… import…` specify which of Data Builder's code and features
 to use in our dataset definition.
@@ -296,13 +296,13 @@ Here, we import two components of Data Builder:
 
     Consider using snippets or code annotations instead of copy-pasting lines.
 
-#### Name values using Python's assignment operator, `=`
+#### Give names to values using Python's assignment operator, `=`
 
 Like in many other languages,
 the `=` operator is used to assign a *value*, on the right-hand side,
 to a *name*, on the left-hand side.
 
-#### Creating a `Dataset`
+#### Create a `Dataset`
 
 A valid dataset definition must contain a dataset assigned to the name `dataset`.
 
