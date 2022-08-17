@@ -260,10 +260,20 @@ There are three steps to extract data on cohorts:
    accessed. If the study is running on the OpenSAFELY platform, queries
    will be submitted to live data backends.
 
-     A researcher might submit queries to multiple backends,
-     where the backends use entirely different data stores. For instance,
-     one backend might use Microsoft SQL Server and another Databricks.
-     All this happens transparently to the researcher without the
-     researcher needing to know the query language for each backend.
+     A researcher might wish to perform the same underlying query on multiple backends,
+     where the backends use entirely different data stores.
+     For instance, one backend might use Microsoft SQL Server and another Databricks.
+
+     Where backend data stores use different query languages,
+     or dialects of the same query language,
+     the researcher may need to write *multiple* queries,
+     possibly even one for each backend,
+     to get the data extraction results corresponding to the same underlying query.
+
+     With ehrQL, the researcher does not need to write these multiple queries manually.
+     Data Builder automatically transforms the *single* dataset definition from ehrQL
+     into suitable queries for each compatible backend.
+
+     This features enable the same dataset definition to be used in multiple backends.
 
 ---8<-- 'includes/glossary.md'
