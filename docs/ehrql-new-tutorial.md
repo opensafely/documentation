@@ -193,7 +193,7 @@ This section explains how to load dataset definitions into Databuilder.
 Each dataset definition used in this tutorial has a filename of the form:
 
 ```
-IDENTIFIER_DATASETNAME_dataset_definition.py
+IDENTIFIER_DATASOURCENAME_dataset_definition.py
 ```
 
 For example, for
@@ -202,7 +202,7 @@ For example, for
 1a_minimal_dataset_definition.py
 ```
 
-the identifier is `1a` and the dataset name is `minimal`.
+the identifier is `1a` and the data source name is `minimal`.
 
 !!! todo
 
@@ -226,11 +226,11 @@ To run this dataset definition with Data Builder,
     In general, the Docker command to run a dataset defintion looks like:
 
     ```
-    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASETNAME/" generate-dataset "./IDENTIFIER_DATASETNAME_dataset_definition.py --output "results.csv"
+    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASOURCENAME/" generate-dataset "./IDENTIFIER_DATASOURCENAME_dataset_definition.py --output "results.csv"
     ```
 
-    You need to substitute `DATASETNAME` with the appropriate dataset name,
-    and `IDENTIFIER_DATASETNAME_dataset_definition.py` to match the specific dataset definition
+    You need to substitute `DATASOURCENAME` with the appropriate dataset name,
+    and `IDENTIFIER_DATASOURCENAME_dataset_definition.py` to match the specific dataset definition
     that you want to run.
 
 !!! tip

@@ -119,10 +119,9 @@ check-dataset-definitions: devenv
     cd {{parent_directory(justfile_directory())}}
 
     for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
-      # By convention, we name dataset definition as: EXAMPLENUMBER_EXAMPLEDATASET_dataset_definition.py
-      DATASET=`echo "$f" | cut -d'_' -f2`
-      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASET/" databuilder/$BIN/databuilder generate-dataset "$f"
-
+      # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
+      DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset "$f"
     done
 
 
@@ -151,11 +150,10 @@ build-dataset-definitions-outputs: devenv
     cd {{parent_directory(justfile_directory())}}
 
     for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
-      # By convention, we name dataset definition as: EXAMPLENUMBER_EXAMPLEDATASET_dataset_definition.py
-      DATASET=`echo "$f" | cut -d'_' -f2`
+      # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
+      DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
       FILENAME="$(basename "$f" .py).csv"
-      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASET/" databuilder/$BIN/databuilder generate-dataset --output "./databuilder/ehrql-tutorial-examples/results/$FILENAME" "$f"
-
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --output "./databuilder/ehrql-tutorial-examples/results/$FILENAME" "$f"
     done
 
 # Run the dev project
