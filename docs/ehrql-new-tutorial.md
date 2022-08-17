@@ -43,11 +43,9 @@ This tutorial will introduce you to:
 The current implementation of ehrQL is based on Python,
 but the syntax used is relatively simple.
 
-This tutorial assumes that you have a little familiarity with:
-
-* programming or scripted data analysis,
-  whether that is in Python, R, Stata or any other language.
-* querying databases or other data stores
+This tutorial assumes that you have some familiarity with
+programming or scripted data analysis, whether that is in Python, R,
+Stata or any other language.
 
 Familiarity with:
 
