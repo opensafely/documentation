@@ -223,20 +223,20 @@ To run this dataset definition with Data Builder,
 
 !!! tip
 
-   In general, the Docker command to run a dataset defintion looks like:
+    In general, the Docker command to run a dataset defintion looks like:
 
-   ```
-   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASETNAME/" generate-dataset "./IDENTIFIER_DATASETNAME_dataset_definition.py --output "results.csv"
-   ```
+    ```
+    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASETNAME/" generate-dataset "./IDENTIFIER_DATASETNAME_dataset_definition.py --output "results.csv"
+    ```
 
-   You need to substitute `DATASETNAME` with the appropriate dataset name,
-   and `IDENTIFIER_DATASETNAME_dataset_definition.py` to match the specific dataset definition
-   that you want to run.
+    You need to substitute `DATASETNAME` with the appropriate dataset name,
+    and `IDENTIFIER_DATASETNAME_dataset_definition.py` to match the specific dataset definition
+    that you want to run.
 
 !!! tip
 
-   The output in this example is called `results.csv`,
-   but you can choose any valid filename.
+    The output in this example is called `results.csv`,
+    but you can choose any valid filename.
 
 ## Example dataset definition 1a: A minimal dataset definition
 
