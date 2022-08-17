@@ -281,10 +281,6 @@ This is a minimal, but still valid, dataset definition:
 
 ### Explanation of the dataset definition
 
-```python title="1a_minimal_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
-```
-
 #### Use `import` to use Data Builder components
 
 Lines of the format `from… import…` specify which of Data Builder's code and features
