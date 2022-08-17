@@ -199,7 +199,7 @@ NUMBER_DATASETNAME_dataset_definition.py
 For example:
 
 ```
-1_minimal_dataset_definition.py
+1a_minimal_dataset_definition.py
 ```
 
 !!! todo
@@ -213,7 +213,7 @@ To run this dataset definition with Data Builder,
 2. Run this command:
 
    ```
-   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/minimal/" generate-dataset "./1_minimal_dataset_definition.py --output "results.csv"
+   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/minimal/" generate-dataset "./1a_minimal_dataset_definition.py --output "results.csv"
    ```
 3. You should see Data Builder run without error
    and find the `results.csv` file in the `ehrql-tutorial-examples` directory
@@ -236,7 +236,7 @@ To run this dataset definition with Data Builder,
    The output in this example is called `results.csv`,
    but you can choose any valid filename.
 
-## Example dataset definition 1: A minimal dataset definition
+## Example dataset definition 1a: A minimal dataset definition
 
 This is a minimal, but still valid, dataset definition:
 
@@ -248,8 +248,8 @@ This is a minimal, but still valid, dataset definition:
     definition? Maybe that's a case for having one example per tutorial
     page?
 
-```python title="1_minimal_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
+```python title="1a_minimal_dataset_definition.py"
+---8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
 ```
 
 ### The dataset
@@ -265,14 +265,14 @@ This is a minimal, but still valid, dataset definition:
     Do we need to clarify that the filename corresponds to the outputs already created?
     And that you'll overwrite these if you use this as a filename?
 
-`results/1_minimal_dataset_definition.csv`
+`results/1a_minimal_dataset_definition.csv`
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/results/1_minimal_dataset_definition.csv') }}
+{{ read_csv('databuilder/ehrql-tutorial-examples/results/1a_minimal_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 
-```python title="1_minimal_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/1_minimal_dataset_definition.py"
+```python title="1a_minimal_dataset_definition.py"
+---8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
 ```
 
 #### Use `import` to use Data Builder components
@@ -347,7 +347,7 @@ for the specific database.
     You can see the database query that a dataset definition will generate
     via the `databuilder --dump-dataset-sql` command.
 
-    For the minimal example `1_minimal_dataset_definition.py` above,
+    For the minimal example `1a_minimal_dataset_definition.py` above,
     the underlying SQL query generated is:
 
     ```sql
