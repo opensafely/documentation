@@ -223,10 +223,10 @@ To run this dataset definition with Data Builder,
 2. Run this command:
 
    ```
-   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/minimal/" generate-dataset "./1a_minimal_dataset_definition.py --output "results.csv"
+   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/minimal/" generate-dataset "./1a_minimal_dataset_definition.py --output "outputs.csv"
    ```
 3. You should see Data Builder run without error
-   and find the `results.csv` file in the `ehrql-tutorial-examples` directory
+   and find the `outputs.csv` file in the `ehrql-tutorial-examples` directory
    that you were working in.
 
 !!! tip
@@ -234,7 +234,7 @@ To run this dataset definition with Data Builder,
     In general, the Docker command to run a dataset defintion looks like:
 
     ```
-    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASOURCENAME/" generate-dataset "./IDENTIFIER_DATASOURCENAME_dataset_definition.py --output "results.csv"
+    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASOURCENAME/" generate-dataset "./IDENTIFIER_DATASOURCENAME_dataset_definition.py --output "outputs.csv"
     ```
 
     You need to substitute `DATASOURCENAME` with the appropriate dataset name,
@@ -243,7 +243,7 @@ To run this dataset definition with Data Builder,
 
 !!! tip
 
-    The output in this example is called `results.csv`,
+    The output in this example is called `outputs.csv`,
     but you can choose any valid filename.
 
 ## Example dataset definition 1a: A minimal dataset definition
@@ -277,9 +277,9 @@ It finds the patients whose year of birth is 2000 or later.
     Do we need to clarify that the filename corresponds to the outputs already created?
     And that you'll overwrite these if you use this as a filename?
 
-`results/1a_minimal_dataset_definition.csv`
+`outputs/1a_minimal_dataset_definition.csv`
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/results/1a_minimal_dataset_definition.csv') }}
+{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1a_minimal_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 
@@ -337,7 +337,7 @@ When the dataset definition is used by Data Builder to generate a dataset:
    to ensure that the resulting database query would be valid.
 2. A database query suitable for the specified database is created.
 3. The query is submitted to the database.
-4. Provided the query is successful, the results are output.
+4. Provided the query is successful, the query creates an output.
 
 In writing a *dataset definition* then,
 what we are really writing is a *database query*.
@@ -380,7 +380,7 @@ There are two important implications of how this Data Builder's process works:
    where you load some data,
    then perform computations on that data as each line of the analysis code runs.
 
-## Example dataset definition 1b: Getting more information from a minimal data source
+## Example dataset definition 1b: Adding an extra output column from a minimal data source
 
 This dataset definition uses the same [data source](#the-minimal-data-source).
 
@@ -388,11 +388,13 @@ This dataset definition uses the same [data source](#the-minimal-data-source).
 ---8<-- "databuilder/ehrql-tutorial-examples/1b_minimal_dataset_definition.py"
 ```
 
+The main addition here is the additional output column.
+
 ### Dataset definition 1b output
 
-`results/1b_minimal_dataset_definition.csv`
+`outputs/1b_minimal_dataset_definition.csv`
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/results/1b_minimal_dataset_definition.csv') }}
+{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1b_minimal_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 

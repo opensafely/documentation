@@ -134,11 +134,11 @@ check-dataset-definitions-outputs-are-current: devenv build-dataset-definitions-
 
     # https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes
     # git diff --exit-code won't pick up untracked files, which we also want to check for.
-    if [[ -z $(git status --porcelain ./databuilder/ehrql-tutorial-examples/results/; git clean -nd ./databuilder/ehrql-tutorial-examples/results/) ]]
+    if [[ -z $(git status --porcelain ./databuilder/ehrql-tutorial-examples/outputs/; git clean -nd ./databuilder/ehrql-tutorial-examples/outputs/) ]]
     then
-      echo "Dataset definition results directory is current and free of other files/directories."
+      echo "Dataset definition outputs directory is current and free of other files/directories."
     else
-      echo "Dataset definition results contains files/directories not in the repository."
+      echo "Dataset definition outputs contains files/directories not in the repository."
       exit 1
     fi
 
@@ -153,7 +153,7 @@ build-dataset-definitions-outputs: devenv
       # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
       DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
       FILENAME="$(basename "$f" .py).csv"
-      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --output "./databuilder/ehrql-tutorial-examples/results/$FILENAME" "$f"
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --output "./databuilder/ehrql-tutorial-examples/outputs/$FILENAME" "$f"
     done
 
 # Run the dev project
