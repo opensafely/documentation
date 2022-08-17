@@ -294,17 +294,11 @@ Here, we import two components of Data Builder:
 
     Consider using snippets or code annotations instead of copy-pasting lines.
 
-#### Name values with Python's assignment operator, `=`
+#### Name values using Python's assignment operator, `=`
 
-!!! todo
-
-    Consider an explanation.
-
-#### Accessing attributes of values with the dot operator, `.`
-
-!!! todo
-
-    Consider an explanation.
+Like in many other languages,
+the `=` operator is used to assign a *value*, on the right-hand side,
+to a *name*, on the left-hand side.
 
 #### Creating a `Dataset`
 
