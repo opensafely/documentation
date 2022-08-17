@@ -149,6 +149,16 @@ If you have no preference already,
 [Visual Studio Code](https://code.visualstudio.com) is a reasonable, free-of-charge choice
 that runs on Windows, macOS and Linux.
 
+!!! tip
+    Because dataset definitions are Python files,
+    you can use auxiliary developer tools to keep the files tidy.
+
+    For instance, the dataset definitions in this tutorial are checked with the following tools:
+
+    * [black](https://github.com/psf/black), to format dataset definitions automatically
+    * [flake8](https://github.com/PyCQA/flake8), to suggest coding style improvements
+    * [isort](https://github.com/PyCQA/isort), to order `import` statements consistently
+
 ## Running the tutorial code examples
 
 ### Downloading the tutorial examples
