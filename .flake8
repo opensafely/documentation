@@ -7,3 +7,4 @@ max-line-length = 88
 per-file-ignores =
     databuilder/update-version.py:INP001
     databuilder/snippets/*:E402
+    databuilder/ehrql-tutorial-examples/*:INP001

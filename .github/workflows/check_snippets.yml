@@ -24,6 +24,12 @@ jobs:
       - name: Run dev tooling on snippets
         run: just databuilder/check
 
+      - name: Check dataset definitions run
+        run: just databuilder/check-dataset-definitions
+
+      - name: Check dataset definition outputs are up-to-date
+        run: just databuilder/check-dataset-definitions-outputs-are-current
+
       - name: Check snippets work
         run: |
           # extract examples from the snippets, this will also test they are

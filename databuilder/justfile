@@ -111,6 +111,51 @@ fix: devenv
     databuilder/$BIN/isort databuilder/
 
 
+# Run the dataset definitions.
+check-dataset-definitions: devenv
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    cd {{parent_directory(justfile_directory())}}
+
+    for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
+      # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
+      DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset "$f"
+    done
+
+
+# Check the dataset definition outputs are current
+check-dataset-definitions-outputs-are-current: devenv build-dataset-definitions-outputs
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    cd {{parent_directory(justfile_directory())}}
+
+    # https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes
+    # git diff --exit-code won't pick up untracked files, which we also want to check for.
+    if [[ -z $(git status --porcelain ./databuilder/ehrql-tutorial-examples/outputs/; git clean -nd ./databuilder/ehrql-tutorial-examples/outputs/) ]]
+    then
+      echo "Dataset definition outputs directory is current and free of other files/directories."
+    else
+      echo "Dataset definition outputs contains files/directories not in the repository."
+      exit 1
+    fi
+
+
+build-dataset-definitions-outputs: devenv
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    cd {{parent_directory(justfile_directory())}}
+
+    for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
+      # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
+      DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
+      FILENAME="$(basename "$f" .py).csv"
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --output "./databuilder/ehrql-tutorial-examples/outputs/$FILENAME" "$f"
+    done
+
 # Run the dev project
 run: devenv
     echo "Not implemented yet"
