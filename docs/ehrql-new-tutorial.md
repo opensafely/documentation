@@ -493,9 +493,34 @@ Patients for which this argument evaluates to true are then included in the data
     2. Provide a solution in a dropdown,
        (and also test that solution).
 
-## Example dataset definition 2: Working with multiple Data Builder tables
+## Example dataset definition 2a: Working with multiple tables
 
-OpenSAFELY backends often provide data covering several healthcare domains.
+OpenSAFELY backends provide several different kinds of data.
+
+Each kind of data is made available via Data Builder's *tables*.
+
+For this tutorial, each individual table is stored in a single CSV file,
+where the CSV filename indicates the table name.
+
+This dataset definition accesses multiple tables.
+
+```python title="2a_minimal_dataset_definition.py"
+`---8<-- "databuilder/ehrql-tutorial-examples/2a_minimal_dataset_definition.py"`
+```
+
+### The `minimal` data source
+
+`multiple/patients.csv`:
+
+TODO: read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patients.csv') }}`
+
+### Dataset definition 1a output
+
+`outputs/2a_multiple_dataset_definition.csv`
+
+TODO: read_csv('databuilder/ehrql-tutorial-examples/outputs/2a_multiple_dataset_definition.csv') }}`
+
+### Data Builder tables
 
 ### OpenSAFELY's data contracts
 
@@ -504,6 +529,13 @@ OpenSAFELY backends often provide data covering several healthcare domains.
 ### The different data types
 
 !!! todo
+
+    It is not entirely clear how best to explain these.
+
+    The Contracts reference lists a mixture of fundamental types
+    (such as "Boolean", "Integer")
+    and those based on fundamental types
+    (such as "Code").
 
 ## Example dataset definition 3: `Frame`s and `Series`
 
