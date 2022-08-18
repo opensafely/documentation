@@ -9,9 +9,9 @@ GitHub is the means by which code in the repository is passed to the server to b
 
 ## Repository access
 
-During the development stage of a project, a repository is typically private, so that only core OpenSAFELY members and project-specific collaborators will have access. See the [permissions page](permissions.md) for more details.
+During the development stage of a project, a repository is typically private, so that only core OpenSAFELY members and project-specific collaborators will have access. See the [permissions page](jobs-site.md#permissions) for more details.
 
-Once a project is complete, or retired, the repository will be made public. 
+Once a project is complete, or retired, the repository will be made public.
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
@@ -32,7 +32,7 @@ Fill in the details:
 
 And submit. You will now be at the GitHub landing page for the repo.
 
-You should also download a copy of this repo to your machine so you can work on it locally. 
+You should also download a copy of this repo to your machine so you can work on it locally.
 This is necessary because you can:
 
 * develop your code using familiar editing tools
@@ -47,14 +47,14 @@ Note that if someone else wants to commit to your recently created OpenSAFELY re
 
 ### `README.md`
 
-This file introduces your project, helps people understand the purpose of the repo, and how to navigate and use the code. 
+This file introduces your project, helps people understand the purpose of the repo, and how to navigate and use the code.
 
-Any new repo will include a template README. 
-It should be updated to briefly describe the intended study and to reflect the repo's current status as a _work in progress_. 
+Any new repo will include a template README.
+It should be updated to briefly describe the intended study and to reflect the repo's current status as a _work in progress_.
 The README should also be updated frequently to reflect changes to the repo, and should certainly be up-to-date before publication of any research outputs.
 
-The README is written in Markdown. 
-If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github). 
+The README is written in Markdown.
+If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github).
 There's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the most useful Markdown syntax.
 
 You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's no need to write more than "_first README update_", but typically commits should have a bit more detail than that.
