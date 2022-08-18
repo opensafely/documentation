@@ -94,7 +94,7 @@ When writing and running your pipeline, note that:
 
 * If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs.
 
-* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to different versions of cohortextractor and will also avoid problems caused by index integer positions changing as columns are added/removed. 
+* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to different versions of cohortextractor and will also avoid problems caused by index integer positions changing as columns are added/removed.
 
 ## Running your code locally
 
@@ -167,11 +167,11 @@ You can re-run these tests by clicking the `re-run jobs` button.
 
 ## Running your code on the server
 
-To run code for real in the production environment, use the [job server website](job-server.md).
+To run code for real in the production environment, use the [job server website](jobs-site.md).
 
 ## Accessing outputs
 
-After your project has been executed via the [job server](job-server.md), its outputs will be stored on a secure server.
+After your project has been executed via the [job server](jobs-site.md), its outputs will be stored on a secure server.
 
 Users with permission to access Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 
