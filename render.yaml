@@ -91,3 +91,9 @@ services:
       - type: redirect
         source: /dataset-ukrr
         destination: /data-sources/ukrr/
+      - type: redirect
+        source: /permissions
+        destination: /jobs-site/
+      - type: redirect
+        source: /job-server
+        destination: /jobs-site/
