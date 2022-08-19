@@ -22,6 +22,25 @@ You should be aware that events can be recorded in clinical systems without a da
  
 You should take this into account in your analysis; for example, you might want to discard blood pressure values that are in the future, but you might want to keep an ethnicity category which was recorded with no date, as these are less likely to change over time. 
 
+### Using dates with patients.satisfying
+
+You should be aware that `patients.satisfying` does not treat `1900-01-01` as equivalent to `NULL`. In order to exclude impossible dates you might want to add
+checks such as
+
+```
+DIAB_GROUP = patients.satisfying(
+                """
+                (
+                    DIAB_DAT
+                    AND
+                    DIAB_DAT > nulldate
+                )
+                """
+```
+where 
+
+`nulldate = patients.fixed_value("1900-01-01")`
+
 ## Index Dates
 
 If you define an `index_date` on a study definition then everywhere that you might normally supply a date you can now supply a "date expression".
