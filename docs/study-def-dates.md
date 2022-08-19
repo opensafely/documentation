@@ -28,18 +28,18 @@ You should be aware that `patients.satisfying` does not treat `1900-01-01` as eq
 checks such as
 
 ```
-patient_group = patients.satisfying(
-                """
-                (
-                    patient_date
-                    AND
-                    patient_date > nulldate
-                )
-                """
+study = StudyDefinition(
+    ...
+    nulldate = patients.fixed_value("1900-01-01"),
+    ...
+    THIS_GROUP = patients.satisfying(
+        """
+        date_variable AND date_variable > nulldate
+        """,
+        ...
+    )
+)
 ```
-where 
-
-`nulldate = patients.fixed_value("1900-01-01")`
 
 ## Index Dates
 
