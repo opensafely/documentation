@@ -15,8 +15,8 @@ As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, y
 
 You should be aware that events can be recorded in clinical systems without a date:
 
-- These default to "1900-01-01" in OpenSAFELY but other dates around and before this date are also possible. 
-- In some systems, null values for dates may be recorded with the ceiling value "9999-12-31".
+- These default to `1900-01-01` in OpenSAFELY but other dates around and before this date are also possible. 
+- In some systems, null values for dates may be recorded with the ceiling value `9999-12-31`.
 - These often relate to demographic information; and sometimes events or diagnoses (e.g. Asthma), which may have been imported from other systems, originally recorded on paper, or reported by patients relating to past experiences but not knowing the precise date. 
 - In addition, occasionally "impossible" dates may be recorded by accident; for example far in the future, or before a patient was born.  
  
@@ -24,8 +24,7 @@ You should take this into account in your analysis; for example, you might want 
 
 ### Using dates with patients.satisfying
 
-You should be aware that `patients.satisfying` does not treat `1900-01-01` as equivalent to `NULL`. In order to exclude impossible dates you might want to add
-checks such as
+You should be aware that `patients.satisfying` does not treat `1900-01-01` as equivalent to `NULL`. In order to exclude an impossible date, such as 1900-01-01, you might want to add checks such as
 
 ```
 study = StudyDefinition(
@@ -114,7 +113,7 @@ Note that if the index date (or other starting date) is 29 February and you add 
 
 An error will also be thrown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
 
-When working with dynamic dates, be aware that null dates may be represented by the ceiling date, "9999-12-31".  Adding one day to this date will result in a date outside of the valid range, and will throw an error.  This can be avoided by using `between` in the variable definition to set an upper limit on values that excludes the ceiling date.  
+When working with dynamic dates, be aware that null dates may be represented by the ceiling date, `9999-12-31`.  Adding one day to this date will result in a date outside of the valid range, and will throw an error.  This can be avoided by using `between` in the variable definition to set an upper limit on values that excludes the ceiling date.  
 
 For example, if there are patients will null (represented as "9999-12-31") entries for GP consultations, this will throw an error:
 ```py
