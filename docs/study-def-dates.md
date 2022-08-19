@@ -28,12 +28,12 @@ You should be aware that `patients.satisfying` does not treat `1900-01-01` as eq
 checks such as
 
 ```
-DIAB_GROUP = patients.satisfying(
+patient_group = patients.satisfying(
                 """
                 (
-                    DIAB_DAT
+                    patient_date
                     AND
-                    DIAB_DAT > nulldate
+                    patient_date > nulldate
                 )
                 """
 ```
