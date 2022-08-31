@@ -1,7 +1,7 @@
 !!! warning
 
     These notes are a work-in-progress.
-    This functionality is in limited release and subject to change. 
+    This functionality is in limited release and subject to change.
 
 ## Audience
 
@@ -19,7 +19,7 @@ The runtime for a job request is the combined runtime for all completed jobs of 
 
 ### Background information
 
-We monitor jobs indirectly. Every 30 seconds or so the job-runner sends a status update to the job-server for each currently running job. These status updates are used to display the current status in job-server and also sent to Honeycomb which allows us to explore the history of a job. 
+We monitor jobs indirectly. Every 30 seconds or so the job-runner sends a status update to the job-server for each currently running job. These status updates are used to display the current status in job-server and also sent to Honeycomb which allows us to explore the history of a job.
 
 On important thing to note is that, because a job_request can contain multiple jobs, if one job from a job_request completes successfully, it currently continues to send "success" status until all jobs from that job_request have completed. These can cause some unexpected effects in our visualisations.
 
