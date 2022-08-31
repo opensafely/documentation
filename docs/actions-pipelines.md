@@ -167,11 +167,11 @@ You can re-run these tests by clicking the `re-run jobs` button.
 
 ## Running your code on the server
 
-To run code for real in the production environment, use the [job server website](jobs-site.md).
+To run code for real in the production environment, use the [jobs site](jobs-site.md).
 
 ## Accessing outputs
 
-After your project has been executed via the [job server](jobs-site.md), its outputs will be stored on a secure server.
+After your project has been executed via the [jobs site](jobs-site.md), its outputs will be stored on a secure server.
 
 Users with permission to access Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 

@@ -26,7 +26,7 @@ On important thing to note is that, because a job_request can contain multiple j
 Current limitations of the monitoring system:
 
 * we can only display one visualisation per window
-* we cannot embed visualisations in the job server pages
+* we cannot embed visualisations in the jobs site pages
 * we cannot pre-highlight one particular job/job_request in a visualisation of multiple jobs/job_requests
 * time is generally always displayed in seconds (e.g. 500k seconds ~= 138hrs ~= 5.8days)
 
