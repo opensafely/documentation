@@ -29,7 +29,7 @@ The [introduction to ehrQL](ehrql-intro.md) has more information.
 Data Builder is a program that takes ehrQL queries,
 converts them to underlying database queries
 and submits them to OpenSAFELY backends.
-The [introduction to Data Builder](data-builder-intro) has more information.
+The [introduction to Data Builder](data-builder-intro.md) has more information.
 
 This tutorial will introduce you to:
 
