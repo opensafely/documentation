@@ -196,7 +196,7 @@ Before any files are released from the secure server, they are checked independe
 Once reviewed, the completed review request will be emailed back to you. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
 ## 4. Release of reviewed files
 
-All approved OpenSAFELY outputs are released to the workspace they belong to on the [Jobs site](job-server.md).
+All approved OpenSAFELY outputs are released to the workspace they belong to on the [Jobs site](jobs-site.md).
 
 ### Viewing released outputs
 

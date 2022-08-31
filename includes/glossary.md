@@ -7,7 +7,7 @@
 *[codelist]: a collection of clinical codes that define a particular condition, event or diagnosis.
 *[project pipeline]: defines how different scripts within the project’s analytic code should be run: in what order, with which versions of which software, etc; defined in a file named `project.yaml`
 *[job runner]: runs the actions defined in the project pipeline using real data, in a secure environment
-*[job server]: a website where you can request runs of all or some of your project pipeline outputs
+*[jobs site]: a website where you can request runs of all or some of your project pipeline outputs
 *[PHE]: Public Health England
 *[EHR]: Electronic Health Record
 *[SGSS]: Second Generation Surveillance System: an application that stores and manages data on laboratory isolates and notifications. PHE's preferred method for capturing routine laboratory surveillance data on infectious diseases and antimicrobial resistance from laboratories across England

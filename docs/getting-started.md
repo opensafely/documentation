@@ -607,7 +607,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command, 
+	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
 	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
@@ -764,11 +764,10 @@ to GitHub.
 
 To write a real study and run it against actual patient data, you will first
 need to get permission for your project from NHS England, the data controllers
-for OpenSAFELY's data. [Read about our pilot onboarding programme
-here](https://www.opensafely.org/onboarding-new-users/).  Once approved, your
+for OpenSAFELY's data. [Read about our pilot onboarding programme](https://www.opensafely.org/onboarding-new-users/). Once approved, your
 Github user account will be added to our `opensafely` Github organisation, along
 with your study repository, which gives you the ability to run your study
-against real data.  [Read more about permissions here](permissions.md).
+against real data. [Read more about permissions](jobs-site.md#permissions).
 
 In the meantime, take a look at the rest of our documentation for more
 detail on the subjects covered in this tutorial. For example:
@@ -786,7 +785,7 @@ detail on the subjects covered in this tutorial. For example:
   to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone
 * There is a final step we've not described here: [a
   website](https://jobs.opensafely.org/) called the ["OpenSAFELY Job
-  Server"](job-server.md) where you can submit your repository actions to be run
+  Server"](jobs-site.md) where you can submit your repository actions to be run
   automatically within the secure EHR vendor environments. Right now you can
   only use this to run real jobs, but we're working on adding the ability to
   test your repository against dummy data.

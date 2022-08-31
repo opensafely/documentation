@@ -40,7 +40,7 @@ The specific steps required to create a minimal setup are:
 2. Deploy a [*job server*](https://github.com/opensafely-core/job-server)
    that the *job runner* polls for jobs that end users request to be run.
 
-     It is possible to use our existing [*job server*](https://jobs.opensafely.org);
+     It is possible to use our existing instance of this server at our [*jobs site*](https://jobs.opensafely.org);
      [contact us](how-to-get-help.md#data-providers)
      if you would like us to configure this for you.
 
