@@ -93,7 +93,7 @@ If you specify the `run_all` action and pass one of these arguments, then:
 </details>
 
 ### `codelists`
-This command is for working with codelists. 
+This command is for working with codelists.
 
 Use
 ```bash
@@ -108,7 +108,7 @@ Use
 opensafely codelists check
 ```
 
-to check if the codelist files are up-to-date with thse listed in `./codelists/codelists.txt`.
+to check if the codelist files are up-to-date with those listed in `./codelists/codelists.txt`.
 
 See the [Codelist](codelist-intro.md) section for more information on codelists.
 
@@ -146,5 +146,64 @@ copy the long URL shown by the JupyterLab logs — starting
 `http://localhost`… — and use that URL in a web
 browser to access JupyterLab.
 
-To exit, press ++control+c++ in the command line - this also shuts down the container. 
+To exit, press ++control+c++ in the command line - this also shuts down the container.
 Or alternatively go to File -> shutdown in the JupyterLab tab.
+
+
+### Managing Resources
+
+The `opensafely` tool runs your jobs in Docker containers. If you're on Windows or Mac
+OSX, your installed Docker Desktop app will likely have a subset of CPU and memory
+resources available to it. If using Docker Desktop, you can increase
+the resources allocated in that application.
+
+You can quickly view your current Docker resources with `opensafely info`.
+
+
+#### Concurrency
+
+By default, `opensafely run` will run at most 2 jobs at a time. You can
+increase or decrease this by adding the flag `--concurrency`, or `-c` for
+short.
+
+Typically, there are two reasons to use this flag.
+
+First, to go faster if you have the resources available. Note: this will
+decrease whole project run time but increase memory usage.:
+
+```
+opensafely run run_all -c 8
+```
+
+Second is to go slower, if your jobs are hitting memory limits, to give each job
+the full resources of your local Docker installation:
+
+```
+opensafely run job_with_heavy_dependencies -c 1
+```
+
+
+#### Memory
+
+You may see errors reporting jobs being killed due to excessive memory usage, even if running just one job.
+
+This can have two different causes. The first is that your local docker just
+does not have enough memory to run your code. You can try reducing your
+population size, increasing the memory allocated to docker, or setting
+concurrency to 1, as described above.
+
+The second reason is that by default, the `opensafely` tool tells docker to limit
+individual jobs to 4G of memory. The purpose of this limit is to provide early
+warning that this job is using a lot of memory. Locally, jobs are usually run against
+small sets of dummy data, but in production, your dataset will likely be much
+larger, and thus consume even more memory there too. See [Memory Efficient
+Working](memory-efficient-working.md) for information on how to reduce your
+code's memory usage.
+
+However, you may very well need that extra memory for good reason, even when
+working locally. If so, you can increase the memory with the flag `--memory` or
+`-m` for short.
+
+```
+opensafely run job_name -m 8G
+```

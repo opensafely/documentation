@@ -1,5 +1,12 @@
 This section provides advice on improving the performance of your scripted actions to ensure that your job requests stay within memory limits and complete as quickly as possible. While the specific guidance here is geared toward R and Python, the principles can also apply to other languages (such as Stata).
 
+!!! note
+
+    When developing your code, there are options in the OpenSAFELY CLI you can use to control the [computing resources used](opensafely-cli.md#managing-resources).
+
+    These options may be useful when developing locally. However, the techniques listed on this page are useful both in local development and when running your code in production.
+
+
 ## Use proper typing
 
 Objects like vectors, data frame columns, and matrices use different amounts of memory, depending on their type and class. You should use the class that minimises memory use whilst preserving information. 
