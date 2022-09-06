@@ -5,7 +5,7 @@ In study definitions, dates are described in `"YYYY-MM-DD"` format; so, for exam
 
 Most variable extractor functions have arguments for specifying the date range over which you want to retrieve information.
 Most commonly this is `on_or_before=`, `on_or_after=`, or `between=` (see the [variable reference](study-def-variables.md) for full documentation).
-You can set one or both of `on_or_before=` / `on_or_after=`; but these cannot be mixed with `between=` (which is equivalent to setting both `on_or_before=` AND `on_or_after=`). 
+You can set one or both of `on_or_before=` / `on_or_after=`; but these cannot be mixed with `between=` (which is equivalent to setting both `on_or_before=` AND `on_or_after=`).
 If no option is given then it will use all dates (including possibly future dates).
 
 
@@ -15,12 +15,12 @@ As well as specifying dates explicitly with e.g., `on_or_before="2019-12-31"`, y
 
 You should be aware that events can be recorded in clinical systems without a date:
 
-- These default to `1900-01-01` in OpenSAFELY but other dates around and before this date are also possible. 
+- These default to `1900-01-01` in OpenSAFELY but other dates around and before this date are also possible.
 - In some systems, null values for dates may be recorded with the ceiling value `9999-12-31`.
-- These often relate to demographic information; and sometimes events or diagnoses (e.g. Asthma), which may have been imported from other systems, originally recorded on paper, or reported by patients relating to past experiences but not knowing the precise date. 
-- In addition, occasionally "impossible" dates may be recorded by accident; for example far in the future, or before a patient was born.  
- 
-You should take this into account in your analysis; for example, you might want to discard blood pressure values that are in the future, but you might want to keep an ethnicity category which was recorded with no date, as these are less likely to change over time. 
+- These often relate to demographic information; and sometimes events or diagnoses (e.g. Asthma), which may have been imported from other systems, originally recorded on paper, or reported by patients relating to past experiences but not knowing the precise date.
+- In addition, occasionally "impossible" dates may be recorded by accident; for example far in the future, or before a patient was born.
+
+You should take this into account in your analysis; for example, you might want to discard blood pressure values that are in the future, but you might want to keep an ethnicity category which was recorded with no date, as these are less likely to change over time.
 
 ### Using dates with patients.satisfying
 
@@ -74,9 +74,14 @@ The available options (hopefully self-explanatory) are:
 "last_day_of_year(index_date)"
 "first_day_of_nhs_financial_year(index_date)"
 "last_day_of_nhs_financial_year(index_date)"
+"first_day_of_school_year(index_date)"
+"last_day_of_school_year(index_date)"
 ```
 
-Note that NHS financial (reporting) year runs from 1st April to 31st March.
+Note:
+
+* NHS financial (reporting) year runs from 1st April to 31st March
+* English school year runs from 1st September to 31st August
 
 Any `index_date` you've defined in your study definition can be overridden in your `project.yaml`, by providing an `--index-date-range` argument, like this:
 
@@ -113,7 +118,7 @@ Note that if the index date (or other starting date) is 29 February and you add 
 
 An error will also be thrown if adding or subtracting months leads to a month with no equivalent day e.g. adding 1 month to 31 January to produce 31 February.
 
-When working with dynamic dates, be aware that null dates may be represented by the ceiling date, `9999-12-31`.  Adding one day to this date will result in a date outside of the valid range, and will throw an error.  This can be avoided by using `between` in the variable definition to set an upper limit on values that excludes the ceiling date.  
+When working with dynamic dates, be aware that null dates may be represented by the ceiling date, `9999-12-31`.  Adding one day to this date will result in a date outside of the valid range, and will throw an error.  This can be avoided by using `between` in the variable definition to set an upper limit on values that excludes the ceiling date.
 
 For example, if there are patients will null (represented as "9999-12-31") entries for GP consultations, this will throw an error:
 ```py
@@ -156,7 +161,7 @@ We can also use date expressions on these dates, for example `"pos_test_date - 1
 
 Wherever the inputted date is null, in this case when a patient doesn't have a positive test result, any variables that reference the date will take the [null value for their variable type](study-def.md#missing-values-and-unmatched-records) (0 for numeric variables; an empty string for character and date variables).
 
-Take particular care that the dates are in the correct order if you are using `between` with dynammic dates, i.e. `[min, max]`, as it will not give the expected results if they are the opposite way around. 
+Take particular care that the dates are in the correct order if you are using `between` with dynammic dates, i.e. `[min, max]`, as it will not give the expected results if they are the opposite way around.
 
 ## Variables that return value-date pairs
 
