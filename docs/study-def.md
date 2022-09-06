@@ -243,12 +243,79 @@ actions:
         cohort: output/input_asthma.csv
 ```
 
+
+### Parameterised study definitions
+
+Parameterised study definitions allow you to create multiple study definitions that are structurally similar but differ in the values of a few parameters. This removes the need to create multiple similar study definition files.
+
+First, set the relevant parameters in the action definition using the `--param` argument. For example, below we create two actions which use the same study definition but supply different values for `my_param`:
+
+```yaml
+version: "3.0"
+
+expectations:
+  population_size: 1000
+
+actions:
+
+  generate_cohort_1:
+    run: cohortextractor:latest generate_cohort
+      --param my_param=value1
+      --output-file output/input_1.csv
+    outputs:
+      highly_sensitive:
+        cohort: output/input_1.csv
+
+  generate_cohort_2:
+    run: cohortextractor:latest generate_cohort
+      --param my_param=value2
+      --output-file output/input_1.csv
+    outputs:
+      highly_sensitive:
+        cohort: output/input_2.csv
+```
+
+Note that each set of parameters requires a different output file name so we have to supply one using the `--output-file` argument.
+This argument takes the full path of the output file which includes its output directory and the file extension which determines its format e.g.
+```
+--output-file output/results_1.feather
+```
+
+Inside `study_definition.py` you can access the values of parameters like so:
+```py
+from cohortextractor import params
+...
+my_param = params["my_param"]
+```
+
+Note that parameters are always supplied as strings. If you need to use other types such as integers or booleans you must explicitly convert them in Python e.g.
+```py
+my_int_param = int(params["my_int_param"])
+my_bool_param = params["my_bool_param"] == "true"
+```
+
+Accessing parameters with the square bracket syntax above makes the parameters required: if you don't supply the appropriate `--param` arguments then the study defintion will fail with an error.
+
+You can make parameters optional by using the `.get()` method and supplying a default e.g.
+```py
+my_param = params.get("my_param", "default_value")
+```
+
+You can use as many parameters as you like; just use the `--param` argument multiple times:
+```
+generate_cohort --param some_param=value1 --param other_param=value2 ...
+```
+
+If parameter values contain spaces you will need to quote them:
+```
+generate_cohort --param my_param='Value with spaces' ...
+```
+
 ### Identical study definitions with different index dates
-If the only difference between two study definitions is the index date, then you can avoid having to create two separate study definition files as follows.
+To parameterise index dates, there is a simpler alternative than using `--param`. Use the `--index-date-range` argument from the [measures](measures.md#extract-the-data) feature. `--index-date-range` can be given a single date, instead of a range.
 
 We start by creating the study definition defining the variables you want to extract.
 Then within the [`project.yaml`](actions-pipelines.md#projectyaml-format) we define two or more actions, one for each index date you want to use.
-We then borrow the `--index-date-range` argument from the [measures](measures.md#extract-the-data) function to specify the index dates:
 ```yaml
 version: "3.0"
 
