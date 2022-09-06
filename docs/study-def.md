@@ -246,7 +246,9 @@ actions:
 
 ### Parameterised study definitions
 
-If you want to have multiple study definitions which are structurally similar but differ in the values of a few parameters then you can avoid having to create multiple study definition files by using the `--param` argument. For example, below we create two actions which use the same study definition but supply different values for `my_param`:
+Parameterised study definitions allow you to create multiple study definitions that are structurally similar but differ in the values of a few parameters. This removes the need to create multiple similar study definition files.
+
+First, set the relevant parameters in the action definition using the `--param` argument. For example, below we create two actions which use the same study definition but supply different values for `my_param`:
 
 ```yaml
 version: "3.0"
