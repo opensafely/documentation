@@ -31,10 +31,15 @@ converts them to underlying database queries
 and submits them to OpenSAFELY backends.
 The [introduction to Data Builder](data-builder-intro.md) has more information.
 
+### Overall learning objectives
+
 This tutorial will introduce you to:
 
+* installing Data Builder
 * writing a dataset definition in ehrQL
 * running that dataset definition with Data Builder
+* using electronic health record codelists in ehrQL
+* performing queries via selecting, filtering and aggregation
 
 ### Requirements
 
