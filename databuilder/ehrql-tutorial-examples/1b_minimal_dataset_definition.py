@@ -1,5 +1,5 @@
 from databuilder.query_language import Dataset
-from databuilder.tables import patients
+from databuilder.tables.beta.tutorial import patient_demographics as patients
 
 
 dataset = Dataset()
