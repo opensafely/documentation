@@ -75,6 +75,7 @@ nav:
       - Requesting new libraries: requesting-libraries.md
       - Requesting study definition variables: requesting-variables.md
       - Updating the documentation: updating-the-docs.md
+  - Contributing: contributing.md
   - Platform News: https://www.opensafely.org/changelog/
 
 theme:
