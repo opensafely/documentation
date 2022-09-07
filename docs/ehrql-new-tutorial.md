@@ -163,7 +163,7 @@ We suggest two ways of getting Data Builder running.
 
 ##### Text editor
 
-You can edit examples in any text editor.
+You can edit dataset definitions in any text editor.
 
 You may find it useful to use a text editor or integrated development environment
 that supports Python syntax.
@@ -183,6 +183,18 @@ that runs on Windows, macOS and Linux.
     * [isort](https://github.com/PyCQA/isort), to order `import` statements consistently
 
 ## Running the tutorial code examples
+
+Throughout this tutorial,
+we will refer to code examples.
+
+These examples are available for you
+to run and to experiment with.
+
+### Learning objectives
+
+By the end of this section, you should be able to:
+
+* Run an existing dataset definition with Data Builder
 
 ### Downloading the tutorial examples
 
@@ -270,6 +282,15 @@ To run this dataset definition with Data Builder,
     but you can choose any valid filename.
 
 ## Example dataset definition 1a: A minimal dataset definition
+
+### Learning objectives
+
+By the end of this tutorial, you should know how to:
+
+* Write a very simple dataset definition
+* Run that dataset definition with Data Builder
+
+### The dataset definition we will work with
 
 This is a minimal, but still valid, dataset definition:
 
