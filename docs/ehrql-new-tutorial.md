@@ -224,7 +224,7 @@ and query that data instead of a backend.
 Each CSV represents a database table.
 Data Builder's CSV loader uses the filename of the CSV
 to determine which Data Builder table it represents.
-For example, a file named `patients.csv` is interpreted as the Data Builder `patients` table.
+For example, a file named `patient_demographics.csv` is interpreted as the Data Builder `patient_demographics` table.
 
 !!! todo
     Add information about loading CSVs elsewhere.
@@ -310,9 +310,9 @@ It finds the patients whose year of birth is 2000 or later.
 
 ### The `minimal` data source
 
-`minimal/patients.csv`:
+`minimal/patient_demographics.csv`:
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
+{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
 
 ### Dataset definition 1a output
 
@@ -558,9 +558,9 @@ and also demonstrates some of the querying that ehrQL permits.
 
 ### The `multiple` data source
 
-`multiple/patients.csv`:
+`multiple/patient_demographics.csv`:
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patients.csv') }}
+{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patient_demographics.csv') }}
 
 `multiple/prescriptions.csv`:
 
