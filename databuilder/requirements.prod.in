@@ -7,6 +7,5 @@ snex
 # Dependabot doesn't seem to touch this dependency, likely because it's pinned,
 # so we have a script to update it, run: just databuilder/upgrade-databuilder
 #
-# The release of Data Builder is currently broken; https://github.com/opensafely-core/databuilder/issues/651
-# So pin this to a commit on main for now, until that's fixed.
-https://github.com/opensafely-core/databuilder/archive/f69754da48ddedc547fd2a421e905798a9446cce.zip
+# This currently has other features hacked in to at least try and develop the docs.
+https://github.com/opensafely-core/databuilder/archive/ce44c18d49b84abd8191ca101773bb24ee085985.zip
