@@ -73,6 +73,13 @@ Data Builder runs on Windows, macOS, and Linux.
 
 We suggest two ways of getting Data Builder running.
 
+!!! todo
+    Consider specifying the Data Builder version (currently `v0`) via a variable,
+    so we don't have to maintain it in multiple places.
+
+    https://github.com/rosscdh/mkdocs-markdownextradata-plugin
+    https://github.com/fralau/mkdocs_macros_plugin
+
 === "Docker (recommended)"
 
     This is the simplest way to run Data Builder.
