@@ -150,6 +150,17 @@ We suggest two ways of getting Data Builder running.
 
 **Commands in this tutorial will assume you are running Docker.**
 
+!!! note
+    Before proceeding, make sure that you can run Data Builder's "help" command:
+
+    ```
+    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --help
+    ```
+
+    If that command succeeds,
+    you should see some help text
+    and Data Builder should be correctly installed.
+
 ##### Text editor
 
 You can edit examples in any text editor.
