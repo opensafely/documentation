@@ -40,13 +40,14 @@ and also demonstrates some of the querying that ehrQL permits.
 ### Explanation of the dataset definition
 
 Most of this dataset definition will be familiar from the previous examples.
-The biggest change is that the `prescriptions` table is queried,
+The biggest change is that the `prescriptions` table is also queried,
 and data from it included in the dataset definition's output.
 
 #### Parentheses
 
-We can see in this example that parentheses — `(`, `)` — are used in several different ways.
-Like many other languages, Python uses them in different ways:
+We can see in this example that parentheses — `(`, `)` — have various uses.
+Like many other languages, Python uses parentheses in different ways
+and we see some of those in this dataset definition:
 
 * In function or method calls,
   such as `set_population()`
@@ -59,16 +60,19 @@ Like many other languages, Python uses them in different ways:
   It helps the reader, and makes mistakes less likely.
 * As in this example,
   to permit a long line of code to be split onto multiple lines.
-  Long lines of code will be automatically formatted to a maximum line length
-  if you write a long line
-  and then run the [`black` formatter](#text-editor) on your dataset definition.
+
+!!! tip
+    Long lines of code will be automatically formatted to a maximum line length
+    if you write a long line
+    and then run the [`black` formatter](ehrql-new-tutorial-intro.md#text-editor) on your dataset definition.
 
 #### Accessing multiple Data Builder tables
 
 As before, we specify the tables to use via an `import` statement.
-Table names are separated by commas.
+Multiple table names can be separated by commas.
 
-We can then access the specific table by using its name.
+We can then access the specific table in the dataset definition
+by using the same name.
 
 In this dataset definition,
 we are extracting data on patients from both tables.
