@@ -4,6 +4,17 @@
 
 ## Example dataset definition 2a: Working with multiple tables
 
+### Learning objectives
+
+By the end of this tutorial, you should know how to:
+
+* Write a dataset definition that access multiple tables
+* Look up the details of data tables that you can access via Data Builder
+* Understand about the basic data types that are available in those tables
+* Begin querying event-level data
+
+### The dataset definition we will work with
+
 OpenSAFELY backends provide several different collections of related data on patients.
 As you might expect if you have worked with databases before,
 each collection is made available via Data Builder's *tables*.

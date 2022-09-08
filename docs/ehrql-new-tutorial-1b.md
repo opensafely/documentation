@@ -4,6 +4,15 @@
 
 ## Example dataset definition 1b: Adding an extra output column from a minimal data source
 
+## Learning objectives
+
+By the end of this tutorial, you should know how to:
+
+* Retrieve additional data columns
+* Understand more about what is involved in creating a `Dataset`
+
+### The dataset definition we will work with
+
 This dataset definition uses the same [data source](#the-minimal-data-source).
 
 ```python title="1b_minimal_dataset_definition.py"
