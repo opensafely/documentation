@@ -61,6 +61,17 @@ Here, we import two components of Data Builder:
 
     Consider using snippets or code annotations instead of copy-pasting lines.
 
+!!! warning
+    For the purposes of the tutorial,
+    we are accessing tables from `databuilder.tables.examples.tutorial`.
+
+    Different backends support access to different tables.
+    To access tables on real backends,
+    refer to the [Contracts reference](contracts-reference.md)
+    (to be renamed)
+    to look up the correct import statement
+    that specifies the backend and table name.
+
 #### Give names to values using Python's assignment operator, `=`
 
 Like in many other languages,
