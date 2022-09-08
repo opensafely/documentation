@@ -121,7 +121,7 @@ check-dataset-definitions: devenv
     for f in ./databuilder/ehrql-tutorial-examples/*dataset_definition.py; do
       # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
       DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
-      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --backend tutorial "$f"
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset "$f"
     done
 
 
@@ -153,7 +153,7 @@ build-dataset-definitions-outputs: devenv
       # By convention, we name dataset definition as: IDENTIFIER_DATASOURCENAME_dataset_definition.py
       DATASOURCENAME=`echo "$f" | cut -d'_' -f2`
       FILENAME="$(basename "$f" .py).csv"
-      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --backend tutorial --output "./databuilder/ehrql-tutorial-examples/outputs/$FILENAME" "$f"
+      DATABASE_URL="./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" databuilder/$BIN/databuilder generate-dataset --output "./databuilder/ehrql-tutorial-examples/outputs/$FILENAME" "$f"
     done
 
 # Run the dev project
