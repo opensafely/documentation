@@ -56,13 +56,13 @@ Here, the dot operator is used in several specific ways to:
 * Identify which of the Python source files (modules) in Data Builder
   that we want to use via the `import` statement.
 * Access the `.set_population()` method on the `Dataset` that we created.
-* Access data from the `patients` tables.
+* Access data from the `patient_demographics` table.
 * Set a column in the output via `dataset.column_name`
 
 Sometimes that attribute accessed by dot notation may have useful attributes,
 which can lead to "chaining" of the dot notation.
 In this dataset definition example,
-chained dot notation is used in `patients.date_of_birth.year`
+chained dot notation is used in `patient_demographics.date_of_birth.year`
 
 #### `set_population()`
 

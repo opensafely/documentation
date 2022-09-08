@@ -55,7 +55,7 @@ to use in our dataset definition.
 Here, we import two components of Data Builder:
 
 * `Dataset` as provided by the query language, to create a dataset
-* the `patients` table, which is one of several data tables that ehrQL gives access to
+* the `patient_demographics` table, which is one of several data tables that ehrQL gives access to
 
 !!! todo
 
@@ -118,9 +118,9 @@ for the specific database.
     the underlying SQL query generated is:
 
     ```sql
-    SELECT patients.patient_id AS patient_id
-    FROM patients
-    WHERE CAST(STRFTIME('%Y', patients.date_of_birth) AS INTEGER) >= 2000;
+    SELECT patient_demographics.patient_id AS patient_id
+    FROM patient_demographics
+    WHERE CAST(STRFTIME('%Y', patient_demographics.date_of_birth) AS INTEGER) >= 2000;
     ```
 
     !!! todo
