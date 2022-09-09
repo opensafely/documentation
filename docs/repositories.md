@@ -7,11 +7,21 @@ You can download a copy of the repo ("clone"), create a development "branch", ma
 
 GitHub is the means by which code in the repository is passed to the server to be run against the OpenSAFELY database &mdash; it is the only entry point between the secure server and the outside world. GitHub is also the means by which approved disclosure-safe outputs are released from the secure server to researchers.
 
-## Repository access
+## Repository visibility
 
-During the development stage of a project, a repository is typically private, so that only core OpenSAFELY members and project-specific collaborators will have access. See the [permissions page](jobs-site.md#permissions) for more details.
+In accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/about/#transparency-and-public-logs), we expect all code from all users to be made public. As technical users will know, a public GitHub repository is visible by anyone on the internet, but only specified people will have the ability to change it.
 
-Once a project is complete, or retired, the repository will be made public.
+### How to make your code public
+
+You can request that a private repository is made public at any time by contacting [tech support](how-to-get-help.md).
+
+#### Publishing older repositories that contain results as well as code
+
+In earlier versions of OpenSAFELY, all results released from the secure server after disclosivity checking went directly to the GitHub repository containing the code for the project. Because of this, for older repositories the OpenSAFELY team and you must check that there are no outstanding results which still require approval from NHS England in your repository, before that repository is made public. If you are unsure whether this applies to your repository then you should contact tech support.
+
+### When you need to make your code public
+
+A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have [guide to publishing repositories](publishing-repo.md) that you must read. During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after code execution. During our pilot phase of OpenSAFELY Users, if we encounter edge cases proposing that a particular repo should be excepted from this policy we will develop an open and structured Exceptions Process.
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
@@ -27,7 +37,7 @@ Fill in the details:
 - **owner**: select your personal GitHub for testing/experimenting, or select the opensafely organisation for a bona fide OpenSAFELY-approved study. The repo can be transferred into opensafely later if needed.
 - **repository name**: It needs to be short but informative &mdash; browse existing repo names for inspiration.
 - **Description**: This will appear at the top of the repo on GitHub. No more than a sentence is needed as the repo should be explained fully in the README.
-- **public / private**: select **private** initially, this can be changed later.
+- **public / private**: See [Repository access](#repository-access) to make the the right choice for your study.
 - **Include all branches**: Leave unchecked.
 
 And submit. You will now be at the GitHub landing page for the repo.
