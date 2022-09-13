@@ -19,6 +19,7 @@
 * [Dataset definition 1a](ehrql-new-tutorial-1a.md)
 * [Dataset definition 1b](ehrql-new-tutorial-1b.md)
 * [Dataset definition 2a](ehrql-new-tutorial-2a.md)
+* [Using ehrQL and Data Builder in an OpenSAFELY project](ehrql-new-tutorial-opensafely-project.md)
 * [Unwritten remaining section placeholders](ehrql-new-tutorial-remaining-sections.md)
 
 ## Audience
