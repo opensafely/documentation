@@ -201,9 +201,6 @@ we have:
     * `sex` must be one of a specific set of values
 
 !!! todo
-    Fix up the example dates to be first of month.
-
-!!! todo
     Add any constraints for `prescriptions`.
 
 Again, we can look up the same information on data types and constraints
