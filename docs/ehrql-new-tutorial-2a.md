@@ -65,7 +65,7 @@ we have to sort the entries and then select the latest per patient.
 
 We add the most recently prescribed Dictionary of Medicines and Devices code for a patient.
 This is done by sorting the table by `processing_date` and picking the last entry for a patient.
-You can see the `sort_by` method described in the [ehrQL reference](ehrql-reference.md/#212-sort-by-column-pick-last).
+You can see the `sort_by` method described in the [ehrQL reference](ehrql-reference.md#212-sort-by-column-pick-last).
 
 !!! todo
     Allude to working with dates.
