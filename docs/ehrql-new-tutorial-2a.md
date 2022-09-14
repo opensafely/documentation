@@ -55,20 +55,17 @@ The biggest change is that the `prescriptions` table is also queried,
 and data from it included in the dataset definition's output.
 
 The `prescriptions` table differs from `patient_demographics`
-in that `prescriptions` is an event-level table,
-while `patient_demographics` is a patient table.
+in that `prescriptions` is an *event-level table*,
+while `patient_demographics` is a *patient table*.
 
 We will cover the difference between these more later.
 For now, it is sufficient to understand that `prescriptions` may contain multiple entries per patient.
-To find the most recently prescribed code,
-we have to sort the entries and then select the latest per patient.
 
 We add the most recently prescribed Dictionary of Medicines and Devices code for a patient.
 This is done by sorting the table by `processing_date` and picking the last entry for a patient.
 You can see the `sort_by` method described in the [ehrQL reference](ehrql-reference.md#212-sort-by-column-pick-last).
 
-!!! todo
-    Allude to working with dates.
+We will see more on working with dates in a later tutorial.
 
 #### Parentheses
 
@@ -104,35 +101,64 @@ by using the same name.
 In this dataset definition,
 we are extracting data on patients from both tables.
 
-#### The data provided by OpenSAFELY
+### Writing dataset definitions to run on real OpenSAFELY backends
 
-Different backends may differ in the data they provide.
-It is possible to review the data that each offers via the [Contracts reference](contracts-reference.md).
+In these tutorial examples,
+we can always see the underlying data that we are working with.
 
-The reference tells you:
+This helps when writing dataset definitions because we can:
 
-* the tables available
-* the columns available in the tables
+* see the names of the tables (from the filenames)
+* see the names of the data columns
+* see what kind of data is in each column
+* infer any constraints on the data
+
+When working with OpenSAFELY,
+we do not have access to any underlying data.
+This is an inherent part of [OpenSAFELY's security model](security-levels.md).
+
+To write a real dataset definition,
+we need some way of referencing the details of the data available
+without needing to look at the data.
+This is provided by the [Contracts reference](contracts-reference.md).
+
+#### The Contracts reference
+
+For each backend, the [Contracts reference](contracts-reference.md) describes:
+
+* the names of the available tables
+* the names of the columns available in the tables
+
+These names are useful to know *how to access the data*,
+when writing a dataset definition.
+
 * the data types in the columns
+* any constraints or caveats in the data
 
-We can see the data in the data tables offered by our tutorial.
+These properties are useful to *know what you can do with the data*,
+when writing a dataset definition.
 
 !!! todo
-    Add a link here once we add this.
+    The Contracts reference needs updating.
+
+    See <https://github.com/opensafely/documentation/issues/937>
 
 !!! todo
-    What's the behaviour/how do we resolve the case where we don't provide CSV data?
+    Rename the Contracts reference.
+
+!!! todo
+    What's the behaviour/how do we resolve the case where we don't provide CSV data for these examples?
+
     For example, with the `minimal` examples,
     there is just the `patient_demographics` table.
     If we list all the tables that `tutorial` offers,
     we'll include tables that aren't in a given dataset.
 
+    The "missing CSV" option might help here.
+
     Possible options:
     * We can specify that this is a special case somewhere.
     * We could include data that we're not interested in.
-
-!!! todo
-    Rename the Contracts reference.
 
 !!! todo
     At the moment, it seems like the only way to get an idea of the data that `tables` offer is via the Contracts reference.
@@ -142,12 +168,55 @@ We can see the data in the data tables offered by our tutorial.
     (It does not seem too inaccessible:
     but whether we want researchers to be aware of Contracts is a valid question.)
 
-#### The different data types
+#### Applying the Contracts reference to this tutorial
+
+In the dataset definition in this tutorial,
+we access the following:
+
+* *table names*:
+    * `patient_demographics`
+    * `prescriptions`
+* *column names*:
+    * `patient_demographics.date_of_birth`
+    * `patient_demographics.sex`
+    * `prescriptions.processing_date`
+    * `prescriptions.prescribed_dmd_code`
+
+For these tutorials,
+we can look up the details for the tutorials in the [Contracts reference](contracts-reference.md)
+and see that these table and column names, among others, are listed.
 
 !!! todo
-    It is not entirely clear how best to explain these, or if the best place is here.
+    Add a correct reference link here once we add this.
 
-    The Contracts reference lists a mixture of fundamental types
-    (such as "Boolean", "Integer")
-    and those based on fundamental types
-    (such as "Code").
+In this tutorial,
+we have:
+
+* *data types*:
+  * integer (`patient_id`)
+  * string (`sex`, `prescribed_dmd_code`)
+  * date (`processing_date`)
+* *data constraints*
+  * `date_of_birth` must have a value and must be the first day of the month
+  * `sex` must be one of a specific set of values
+
+!!! todo
+    Fix up the example dates to be first of month.
+
+!!! todo
+    Add any constraints for `prescriptions`.
+
+Again, we can look up the same information on data types and constraints
+from the Contracts reference
+without needing to look at the underlying data.
+
+### Tutorial exercises
+
+!!! question
+    1. Which tables are available in the TPP backend?
+    2. Can you find all of the data types that are used in the tutorial tables?
+       Many of the table data types are much like those that exist as primitive data types in programming languages.
+
+!!! todo
+    Write some more questions based on the Contracts reference.
+    It's difficult right now as this isn't populated yet.
