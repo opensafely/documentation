@@ -193,12 +193,12 @@ In this tutorial,
 we have:
 
 * *data types*:
-  * integer (`patient_id`)
-  * string (`sex`, `prescribed_dmd_code`)
-  * date (`processing_date`)
+    * integer (`patient_id`)
+    * string (`sex`, `prescribed_dmd_code`)
+    * date (`processing_date`)
 * *data constraints*
-  * `date_of_birth` must have a value and must be the first day of the month
-  * `sex` must be one of a specific set of values
+    * `date_of_birth` must have a value and must be the first day of the month
+    * `sex` must be one of a specific set of values
 
 !!! todo
     Fix up the example dates to be first of month.
