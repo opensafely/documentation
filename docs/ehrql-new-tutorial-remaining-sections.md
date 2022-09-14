@@ -46,16 +46,6 @@
 
 !!! todo
 
-## Conclusion
-
-!!! todo
-
-    This should:
-
-    * wrap up the tutorial
-    * briefly summarise what has been covered
-    * point to other information that a reader might want next
-
 ## Ideas and concepts to include
 
 !!! todo
