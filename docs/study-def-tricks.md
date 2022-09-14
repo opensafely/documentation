@@ -169,12 +169,12 @@ study = StudyDefinition(
 	...
 
 	**with_these_clinical_events_date_X(
-		name = "probable_covid_date",
-		codelist = probable_codes,
+		name="probable_covid_date",
+		codelist=probable_codes,
 		returning="date",
-		on_or_after = "index_date",
-		n = 5,
-		return_expectations = {
+		index_date="index_date",
+		n=5,
+		return_expectations={
 			"date": {"earliest": "2020-05-01", "latest": "2021-06-01"},
 			"rate": "uniform",
 			"incidence": 0.05,
