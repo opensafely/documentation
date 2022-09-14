@@ -50,10 +50,5 @@
 
 !!! todo
 
-    Perhaps give some simple exercises for users to try to solve?
-    Maybe with need to use the reference?
-
-!!! todo
-
     Is there some way of templating the filenames for dataset definitions and CSVs?
     So that we have a single reference to update?
