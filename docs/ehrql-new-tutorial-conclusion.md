@@ -34,8 +34,8 @@ Now that you have completed this tutorial,
 you may find the following resources useful
 as reference for writing your own dataset definitions:
 
-* The [Contracts reference](contracts-reference.md)
 * The [ehrQL reference](ehrql-reference.md)
+* The [Contracts reference](contracts-reference.md)
 * Existing dataset definitions in the `opensafely` GitHub organisation
 
 !!! todo
