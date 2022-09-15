@@ -38,9 +38,10 @@ as reference for writing your own dataset definitions:
 * The [ehrQL reference](ehrql-reference.md)
 * The [Contracts reference](contracts-reference.md)
 * Existing dataset definitions in the `opensafely` GitHub organisation
+    * <https://github.com/opensafely/test-age-distribution>
 
 !!! todo
-    Can we point to a real, working Data Builder example here?
+    Can we point to real, working Data Builder examples here?
 
 ## Need help?
 
