@@ -4,8 +4,9 @@
 
 ## Summary
 
-Thank you for taking the time to work through this tutorial!
-We hope that you found it useful.
+Thank you for taking the time to work through this tutorial.
+
+We hope that you found it useful and have the basic tools to start to work with Data Builder and OpenSAFELY.
 
 !!! todo
     Consider adding a call to action for feedback?
