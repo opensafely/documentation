@@ -46,22 +46,7 @@
 
 !!! todo
 
-## Conclusion
-
-!!! todo
-
-    This should:
-
-    * wrap up the tutorial
-    * briefly summarise what has been covered
-    * point to other information that a reader might want next
-
 ## Ideas and concepts to include
-
-!!! todo
-
-    Perhaps give some simple exercises for users to try to solve?
-    Maybe with need to use the reference?
 
 !!! todo
 
