@@ -2,16 +2,6 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-## Example dataset definition 3: `Frame`s and `Series`
-
-### What `Frame`s and `Series` represent
-
-!!! todo
-
-### Operators on `Frame`s and `Series`
-
-!!! todo
-
 ## Example dataset definition 4: Data special cases
 
 ### Date handling
