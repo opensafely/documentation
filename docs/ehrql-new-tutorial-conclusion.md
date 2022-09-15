@@ -27,7 +27,26 @@ useful for writing dataset definitions:
 * The different kinds of tables we work with in ehrQL: patient-level and event-level, frames and series
 * The ways in which we can work with dates and handle missing values
 * Using medical codelists
-* How to run filtering and aggregation queries
+* How to run queries with filtering and aggregation
+
+### Topics not covered here
+
+To keep this tutorial from being a replica of the ehrQL reference,
+we have deliberately focused on discussing just a subset of features.
+
+Features that we have not covered include, but are not limited to:
+
+* Setting values based on conditions with `case` and specified mappings with `map_values`
+* The full range of logical, comparison and arithmetic operators
+* Comparison of string values
+* More ways to combine different series and values
+* More advanced ways to filter series and frames
+* More advanced ways to define the dataset population.
+
+Please read through the [ehrQL reference](ehrql-reference.md)
+to see examples of their use.
+The reference's table of contents is a useful and comprehensive summary
+of ehrQL's features.
 
 ## Where to look next
 
