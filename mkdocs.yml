@@ -68,7 +68,6 @@ nav:
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
-      - Timings and monitoring: timings-monitoring.md
       - Writing performant code: memory-efficient-working.md
   - Support:
       - How to get help: how-to-get-help.md
