@@ -138,7 +138,7 @@ There are several existing sets of SDC guidelines covering a range of output typ
 
 * [Handbook on Statistical Disclosure Control for Outputs](https://securedatagroup.files.wordpress.com/2019/10/sdc-handbook-v1.0.pdf)
 * [ESSNet SDC guidelines for the checking of output based on microdata research](https://research.cbs.nl/casc/ESSnet/GuidelinesForOutputChecking_Dec2009.pdf)
-* [Microdata output guide StatsNZ](https://www.stats.govt.nz/assets/Methods/Microdata-Output-Guide-2020-v5-1.pdf)
+* [Microdata output guide StatsNZ](https://web.archive.org/web/20220203084913/https://www.stats.govt.nz/assets/Methods/Microdata-Output-Guide-2020-v5-1.pdf)
 
 There are also resources for extended guidance for analysis methods commonly used in OpenSAFELY:
 
