@@ -3,21 +3,24 @@
     {
       "name": "DatabricksBackend",
       "implements": [
-        "databuilder.tables.beta.databricks"
+        "databuilder.tables.beta.databricks",
+        "databuilder.tables.beta.smoketest"
       ],
       "contracts": []
     },
     {
       "name": "GraphnetBackend",
       "implements": [
-        "databuilder.tables.beta.graphnet"
+        "databuilder.tables.beta.graphnet",
+        "databuilder.tables.beta.smoketest"
       ],
       "contracts": []
     },
     {
       "name": "TPPBackend",
       "implements": [
-        "databuilder.tables.beta.tpp"
+        "databuilder.tables.beta.tpp",
+        "databuilder.tables.beta.smoketest"
       ],
       "contracts": []
     }
@@ -224,36 +227,16 @@
           ]
         },
         {
-          "name": "patient_demographics",
+          "name": "patients",
           "docstring": [
-            "Provides demographic information about patients."
+            "TODO."
           ],
           "columns": [
             {
               "name": "date_of_birth",
-              "description": "Patient's year and month of birth, provided in format YYYY-MM-01.",
+              "description": "",
               "type": "date",
-              "constraints": [
-                "Must have a value",
-                "Must be the first day of a month"
-              ]
-            },
-            {
-              "name": "sex",
-              "description": "Patient's sex.",
-              "type": "str",
-              "constraints": [
-                "Must have a value",
-                "female, male, intersex, unknown"
-              ]
-            },
-            {
-              "name": "date_of_death",
-              "description": "Patient's year and month of death, provided in format YYYY-MM-01.",
-              "type": "date",
-              "constraints": [
-                "Must be the first day of a month"
-              ]
+              "constraints": []
             }
           ]
         },
@@ -286,6 +269,39 @@
               "description": "",
               "type": "date",
               "constraints": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dotted_path": "databuilder.tables.beta.smoketest",
+      "hierarchy": [
+        "beta",
+        "smoketest"
+      ],
+      "docstring": [
+        "This is the minimal schema required to run the OpenSAFELY system smoke test.",
+        "All backends should implement this schema."
+      ],
+      "implemented_by": [
+        "DatabricksBackend",
+        "GraphnetBackend",
+        "TPPBackend"
+      ],
+      "tables": [
+        {
+          "name": "patients",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "date_of_birth",
+              "description": "Patient's year and month of birth, provided in format YYYY-MM-01. The day will always be the first of the month.",
+              "type": "date",
+              "constraints": [
+                "Must be the first day of a month",
+                "Must have a value"
+              ]
             }
           ]
         }
@@ -717,45 +733,6 @@
           "description": "",
           "type": "bool",
           "constraints": []
-        }
-      ],
-      "contract_support": []
-    },
-    {
-      "name": "patient_demographics",
-      "hierarchy": [
-        "wip"
-      ],
-      "dotted_path": "databuilder.contracts.wip.patient_demographics",
-      "docstring": [
-        "Provides demographic information about patients."
-      ],
-      "columns": [
-        {
-          "name": "date_of_birth",
-          "description": "Patient's year and month of birth, provided in format YYYY-MM-01.",
-          "type": "date",
-          "constraints": [
-            "Must have a value",
-            "Must be the first day of a month"
-          ]
-        },
-        {
-          "name": "sex",
-          "description": "Patient's sex.",
-          "type": "str",
-          "constraints": [
-            "Must have a value",
-            "female, male, intersex, unknown"
-          ]
-        },
-        {
-          "name": "date_of_death",
-          "description": "Patient's year and month of death, provided in format YYYY-MM-01.",
-          "type": "date",
-          "constraints": [
-            "Must be the first day of a month"
-          ]
         }
       ],
       "contract_support": []
