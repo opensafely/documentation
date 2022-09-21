@@ -48,7 +48,7 @@ to see examples of their use.
 The reference's table of contents is a useful and comprehensive summary
 of ehrQL's features.
 
-## Where to look next
+## Where to continue learning from here
 
 Now that you have completed this tutorial,
 you may find the following resources useful
@@ -61,6 +61,15 @@ as reference for writing your own dataset definitions:
 
 !!! todo
     Can we point to real, working Data Builder examples here?
+
+!!! tip
+    A good way to learn ehrQL is to experiment
+    by trying out ehrQL features against a simple fake dataset.
+    The dataset definitions and fake data that we have provided in this tutorial
+    are a suitable starting point.
+
+    To do so, modify an example and/or the data,
+    and then [run the modified example](ehrql-new-tutorial-intro.md#running-the-tutorial-code-examples).
 
 ## Need help?
 
