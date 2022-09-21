@@ -2,53 +2,56 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-## Example dataset definition 3: `Frame`s and `Series`
-
-### What `Frame`s and `Series` represent
-
-!!! todo
-
-### Operators on `Frame`s and `Series`
-
-!!! todo
-
 ## Example dataset definition 4: Data special cases
 
 ### Date handling
 
 !!! todo
 
+    * Specifying dates in dataset definitions
+    * Manipulating dates
+        * `get_year`
+        * `difference_in_years`
+        * `is_before`
+
 ### Missing values
 
 !!! todo
 
-## Example dataset definition 5: Codelists
+    * Missing values are represented as nulls.
+    * Checking for missing values: `is_null()`.
+    * Replacing missing values: `if_null_then(0)`.
+    * Sorting with missing values.
 
-### Loading a codelist
-
-!!! todo
-
-### Checking if a code is in a codelist
-
-!!! todo
-
-## Example dataset definition 6: Filtering and aggregation
+## Example dataset definition 5: Filtering and aggregation
 
 ### Filtering values
 
 !!! todo
 
+    * Taking/dropping rows (with an expression if possible)
+
 ### Aggregating values
 
 !!! todo
 
-### Combining everything together
+    * `count_for_patient()`
+    * `sum_for_patient()`
+
+## Example dataset definition 6: Codelists
+
+!!! warning
+
+    We might have to wait until fully writing this section.
+    Codelists are not yet fully implemented.
+    See <https://github.com/opensafely-core/databuilder/issues/31>
+
+### Loading a codelist
 
 !!! todo
+    * Loading a codelist with some kind of helper.
 
-## Ideas and concepts to include
+### Checking if a code is in a codelist
 
 !!! todo
-
-    Is there some way of templating the filenames for dataset definitions and CSVs?
-    So that we have a single reference to update?
+    * Using `isin` and `isnotin` to check for specific codes.
