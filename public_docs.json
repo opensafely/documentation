@@ -175,7 +175,7 @@
           ]
         },
         {
-          "name": "hospitalizations_without_system",
+          "name": "hospitalisations_without_system",
           "docstring": [
             "TODO."
           ],
@@ -371,7 +371,7 @@
           ]
         },
         {
-          "name": "hospitalizations",
+          "name": "hospitalisations",
           "docstring": [
             "TODO."
           ],
@@ -645,11 +645,11 @@
       "contract_support": []
     },
     {
-      "name": "hospitalizations",
+      "name": "hospitalisations",
       "hierarchy": [
         "wip"
       ],
-      "dotted_path": "databuilder.contracts.wip.hospitalizations",
+      "dotted_path": "databuilder.contracts.wip.hospitalisations",
       "docstring": [
         "TODO."
       ],
@@ -676,11 +676,11 @@
       "contract_support": []
     },
     {
-      "name": "hospitalizations_without_system",
+      "name": "hospitalisations_without_system",
       "hierarchy": [
         "wip"
       ],
-      "dotted_path": "databuilder.contracts.wip.hospitalizations_without_system",
+      "dotted_path": "databuilder.contracts.wip.hospitalisations_without_system",
       "docstring": [
         "TODO."
       ],
