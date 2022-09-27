@@ -48,7 +48,7 @@ to see examples of their use.
 The reference's table of contents is a useful and comprehensive summary
 of ehrQL's features.
 
-## Where to look next
+## Where to continue learning from here
 
 Now that you have completed this tutorial,
 you may find the following resources useful
@@ -61,6 +61,33 @@ as reference for writing your own dataset definitions:
 
 !!! todo
     Can we point to real, working Data Builder examples here?
+
+### Experimenting with the tutorial data and dataset definitions
+
+A good way to learn ehrQL is to experiment
+by trying out [ehrQL features](ehrql-reference.md) against a simple fake dataset.
+The dataset definitions and fake data that we have provided in this tutorial
+are a suitable starting point.
+
+To do so, modify an example and/or the data,
+and then [run the modified example](ehrql-new-tutorial-intro.md#running-the-tutorial-code-examples).
+
+Some ideas for inspiration:
+
+* Look up the `count_for_patient()` method: it counts the number of events for each patient.
+  Try modifying `2a_multiple_dataset_definition.py`:
+    * Can you use `count_for_patient()`
+      to include the number of prescriptions for each patient?
+    * Can you use `take()` along with `count_for_patient()`
+      to count the number of prescriptions for one particular code of your choice?
+* …
+
+!!! todo
+    Add to these ideas
+    and review them.
+
+    They should mention features not covered in the tutorial
+    and suggest a route to trying those features out.
 
 ## Need help?
 

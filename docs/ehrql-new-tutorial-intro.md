@@ -89,7 +89,10 @@ Data Builder runs on Windows, macOS, and Linux.
 
 ##### Installing Data Builder
 
-We suggest two ways of getting Data Builder running.
+There are two ways that you can run Data Builder:
+
+* With Python
+* With the OpenSAFELY CLI
 
 !!! todo
     Consider specifying the Data Builder version (currently `v0`) via a variable,
@@ -97,17 +100,6 @@ We suggest two ways of getting Data Builder running.
 
     * <https://github.com/rosscdh/mkdocs-markdownextradata-plugin>
     * <https://github.com/fralau/mkdocs_macros_plugin>
-
-=== "Docker (recommended)"
-
-    This is the simplest way to run Data Builder.
-
-    If you do not have Docker installed,
-    refer to our [installation guides](install-intro.md) for guidance.
-
-    !!! todo
-
-        Test if running from Docker works for example CSVs.
 
 === "Python (for confident Python users)"
 
@@ -127,52 +119,39 @@ We suggest two ways of getting Data Builder running.
       currently you will have to do something like:
       `pip install git+https://github.com/opensafely-core/databuilder@main#egg=databuilder`
 
+    !!! warning
+        At the moment, you will have to install the specific Data Builder version listed in the documentation repository at:
+
+        `databuilder/requirements.prod.in`
+
+        <https://github.com/opensafely/documentation/pull/959> should fix this.
+
     !!! todo
 
         Are we going to ever publish Data Builder to PyPI?
 
-    !!! important
-        **Commands listed in this tutorial are given for the Docker installation.**
+=== "OpenSAFELY CLI (not yet working)"
 
-        To make those commands work with Python, replace the start of any command:
+    !!! warning
+        This does not yet work.
+        We want to switch this to the OpenSAFELY CLI.
 
-        ```
-        docker run --rm ghcr.io/opensafely-core/databuilder:v0
-        ```
-
-        with:
-
-        ```
-        databuilder
-        ```
-
-        For example,
-
-        ```
-        docker run --rm ghcr.io/opensafely-core/databuilder:v0 --help
-        ```
-
-        becomes:
-
-        ```
-        databuilder --help
-        ```
-
-    !!! todo
-
-        You may also need to adjust file paths; check this.
+    This will be the simplest way to run Data Builder in future.
 
 !!! todo
 
     Consider adding Gitpod or similar.
 
-**Commands in this tutorial will assume you are running Docker.**
+**Commands in this tutorial will assume you are running with Python.**
+
+!!! todo
+    Update this.
 
 !!! note
     Before proceeding, make sure that you can run Data Builder's "help" command:
 
     ```
-    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --help
+    databuilder --help
     ```
 
     If that command succeeds,
@@ -276,7 +255,7 @@ To run this dataset definition with Data Builder,
 2. Run this command:
 
    ```
-   docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/minimal/" generate-dataset "./1a_minimal_dataset_definition.py --output "outputs.csv"
+   DATABASE_URL="example-data/minimal/" databuilder generate-dataset "1a_minimal_dataset_definition.py --output "outputs.csv"
    ```
 3. You should see Data Builder run without error
    and find the `outputs.csv` file in the `ehrql-tutorial-examples` directory
@@ -284,10 +263,10 @@ To run this dataset definition with Data Builder,
 
 !!! tip
 
-    In general, the Docker command to run a dataset defintion looks like:
+    In general, the command to run a dataset defintion looks like:
 
     ```
-    docker run --rm ghcr.io/opensafely-core/databuilder:v0 --env DATABASE_URL "example-data/DATASOURCENAME/" generate-dataset "./IDENTIFIER_DATASOURCENAME_dataset_definition.py --output "outputs.csv"
+    DATABASE_URL="example-data/DATASOURCENAME/" databuilder generate-dataset "IDENTIFIER_DATASOURCENAME_dataset_definition.py --output "outputs.csv"
     ```
 
     You need to substitute `DATASOURCENAME` with the appropriate dataset name,
