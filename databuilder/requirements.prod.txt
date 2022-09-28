@@ -160,8 +160,8 @@ numpy==1.23.1 \
     # via
     #   pandas
     #   pyarrow
-opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/ce44c18d49b84abd8191ca101773bb24ee085985.zip \
-    --hash=sha256:ba8ff0cb73b391bebbf56e2b6c9c76c8d5f7088a5fcff0f1ea9b948ee983f246
+opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/59354bcdd73cd2d252fa6af29f1cfa5b68e967b4.zip \
+    --hash=sha256:82573eeccf7ea8d10ca17a70e7627fde01dd11df56c876ea1ce422ee0f7f7a1e
     # via -r databuilder/requirements.prod.in
 pandas==1.4.3 \
     --hash=sha256:07238a58d7cbc8a004855ade7b75bbd22c0db4b0ffccc721556bab8a095515f6 \
