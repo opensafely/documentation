@@ -18,10 +18,7 @@
     },
     {
       "name": "TPPBackend",
-      "implements": [
-        "databuilder.tables.beta.tpp",
-        "databuilder.tables.beta.smoketest"
-      ],
+      "implements": [],
       "contracts": []
     }
   ],
@@ -286,8 +283,7 @@
       ],
       "implemented_by": [
         "DatabricksBackend",
-        "GraphnetBackend",
-        "TPPBackend"
+        "GraphnetBackend"
       ],
       "tables": [
         {
@@ -314,32 +310,100 @@
         "tpp"
       ],
       "docstring": [],
-      "implemented_by": [
-        "TPPBackend"
-      ],
+      "implemented_by": [],
       "tables": [
         {
-          "name": "clinical_events",
-          "docstring": [
-            "TODO."
-          ],
+          "name": "addresses",
+          "docstring": [],
           "columns": [
             {
-              "name": "code",
+              "name": "address_id",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "start_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "end_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "address_type",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "rural_urban_classification",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "imd_rounded",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "msoa_code",
               "description": "",
               "type": "str",
               "constraints": []
             },
             {
-              "name": "system",
+              "name": "has_postcode",
               "description": "",
-              "type": "str",
+              "type": "bool",
               "constraints": []
             },
+            {
+              "name": "care_home_is_potential_match",
+              "description": "",
+              "type": "bool",
+              "constraints": []
+            },
+            {
+              "name": "care_home_requires_nursing",
+              "description": "",
+              "type": "bool",
+              "constraints": []
+            },
+            {
+              "name": "care_home_does_not_require_nursing",
+              "description": "",
+              "type": "bool",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "clinical_events",
+          "docstring": [],
+          "columns": [
             {
               "name": "date",
               "description": "",
               "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "snomedct_code",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "ctv3_code",
+              "description": "",
+              "type": "CTV3Code",
               "constraints": []
             },
             {
@@ -351,10 +415,224 @@
           ]
         },
         {
-          "name": "covid_test_results",
-          "docstring": [
-            "TODO."
-          ],
+          "name": "emergency_care_attendances",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "id",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "arrival_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "discharge_destination",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_01",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_02",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_03",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_04",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_05",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_06",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_07",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_08",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_09",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_10",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_11",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_12",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_13",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_14",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_15",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_16",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_17",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_18",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_19",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_20",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_21",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_22",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_23",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            },
+            {
+              "name": "diagnosis_24",
+              "description": "",
+              "type": "SNOMEDCTCode",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "hospital_admissions",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "id",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "admission_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "discharge_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "admission_method",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "all_diagnoses",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "patient_classification",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "days_in_critical_care",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "medications",
+          "docstring": [],
           "columns": [
             {
               "name": "date",
@@ -363,7 +641,25 @@
               "constraints": []
             },
             {
-              "name": "positive_result",
+              "name": "dmd_code",
+              "description": "",
+              "type": "DMDCode",
+              "constraints": []
+            },
+            {
+              "name": "multilex_code",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "occupation_on_covid_vaccine_record",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "is_healthcare_worker",
               "description": "",
               "type": "bool",
               "constraints": []
@@ -371,10 +667,8 @@
           ]
         },
         {
-          "name": "hospitalisations",
-          "docstring": [
-            "TODO."
-          ],
+          "name": "ons_deaths",
+          "docstring": [],
           "columns": [
             {
               "name": "date",
@@ -383,53 +677,93 @@
               "constraints": []
             },
             {
-              "name": "code",
+              "name": "cause_of_death_01",
               "description": "",
-              "type": "str",
+              "type": "ICD10Code",
               "constraints": []
             },
             {
-              "name": "system",
+              "name": "cause_of_death_02",
               "description": "",
-              "type": "str",
-              "constraints": []
-            }
-          ]
-        },
-        {
-          "name": "patient_address",
-          "docstring": [
-            "TODO."
-          ],
-          "columns": [
-            {
-              "name": "patientaddress_id",
-              "description": "",
-              "type": "int",
+              "type": "ICD10Code",
               "constraints": []
             },
             {
-              "name": "date_start",
+              "name": "cause_of_death_03",
               "description": "",
-              "type": "date",
+              "type": "ICD10Code",
               "constraints": []
             },
             {
-              "name": "date_end",
+              "name": "cause_of_death_04",
               "description": "",
-              "type": "date",
+              "type": "ICD10Code",
               "constraints": []
             },
             {
-              "name": "index_of_multiple_deprivation_rounded",
+              "name": "cause_of_death_05",
               "description": "",
-              "type": "int",
+              "type": "ICD10Code",
               "constraints": []
             },
             {
-              "name": "has_postcode",
+              "name": "cause_of_death_06",
               "description": "",
-              "type": "bool",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_07",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_08",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_09",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_10",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_11",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_12",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_13",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_14",
+              "description": "",
+              "type": "ICD10Code",
+              "constraints": []
+            },
+            {
+              "name": "cause_of_death_15",
+              "description": "",
+              "type": "ICD10Code",
               "constraints": []
             }
           ]
@@ -468,32 +802,84 @@
         },
         {
           "name": "practice_registrations",
-          "docstring": [
-            "TODO."
-          ],
+          "docstring": [],
           "columns": [
             {
-              "name": "pseudo_id",
+              "name": "start_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "end_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "practice_pseudo_id",
               "description": "",
               "type": "int",
               "constraints": []
             },
             {
-              "name": "nuts1_region_name",
+              "name": "practice_stp",
               "description": "",
               "type": "str",
               "constraints": []
             },
             {
-              "name": "date_start",
+              "name": "practice_nuts1_region_name",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "sgss_covid_all_tests",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "specimen_taken_date",
               "description": "",
               "type": "date",
               "constraints": []
             },
             {
-              "name": "date_end",
+              "name": "is_positive",
+              "description": "",
+              "type": "bool",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "vaccinations",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "vaccination_id",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "date",
               "description": "",
               "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "target_disease",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "product_name",
+              "description": "",
+              "type": "str",
               "constraints": []
             }
           ]
