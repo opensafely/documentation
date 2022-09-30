@@ -115,7 +115,7 @@ plugins:
       default_handler: python
       handlers:
         python:
-          rendering:
+          options:
             show_root_heading: true
             show_root_toc_entry: false
             show_root_full_path: false
@@ -124,13 +124,14 @@ plugins:
             heading_level: 4
           paths: [src/cohort-extractor]
       custom_templates: templates
-      watch:
-        - examples
-        - includes
-        - public_docs.json
-        - src/cohort-extractor/cohortextractor
   - mkdocs-opensafely-databuilder
   - macros
+
+watch:
+  - examples
+  - includes
+  - public_docs.json
+  - src/cohort-extractor/cohortextractor
 
 markdown_extensions:
   - pymdownx.snippets:
