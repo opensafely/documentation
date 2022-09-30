@@ -67,6 +67,8 @@ You can see the `sort_by` method described in the [ehrQL reference](ehrql-refere
 
 We will see more on working with dates in a later tutorial.
 
+Finally, the order in which columns are added to the `dataset` in the dataset definition is the order in which they appear in the output.
+
 #### Parentheses
 
 We can see in this example that parentheses — `(`, `)` — have various uses.

@@ -4,16 +4,6 @@
 
 ## Example dataset definition 4: Data special cases
 
-### Date handling
-
-!!! todo
-
-    * Specifying dates in dataset definitions
-    * Manipulating dates
-        * `get_year`
-        * `difference_in_years`
-        * `is_before`
-
 ### Missing values
 
 !!! todo
