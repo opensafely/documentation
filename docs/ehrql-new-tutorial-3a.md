@@ -274,7 +274,7 @@ in a way that ehrQL does not support.
 
 The full details are out of scope for this tutorial.
 When you have completed the tutorial,
-you may wish to review the [more detailed explanation](ehrql-combining-series-and-frames).
+you may wish to review the [more detailed explanation](ehrql-combining-series-and-frames.md).
 
 !!! todo
     This is currently on its own page.
