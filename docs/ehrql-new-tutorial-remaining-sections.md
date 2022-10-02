@@ -38,6 +38,11 @@
     * `count_for_patient()`
     * `sum_for_patient()`
 
+!!! todo
+
+    * Aggregation of frames and series always give you a new series.
+    * These series are always one row per patient.
+
 ## Example dataset definition 6: Codelists
 
 !!! warning

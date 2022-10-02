@@ -1,5 +1,5 @@
 # :snippet minimal-ehrql-import-patients
-from databuilder.tables import patients
+from databuilder.tables.beta.smoketest import patients
 
 
 year_of_birth = patients.date_of_birth.year
@@ -27,7 +27,7 @@ dataset.birth_year = year_of_birth
 
 # :snippet minimal-ehrql
 from databuilder.query_language import Dataset
-from databuilder.tables import patients
+from databuilder.tables.beta.smoketest import patients
 
 
 year_of_birth = patients.date_of_birth.year

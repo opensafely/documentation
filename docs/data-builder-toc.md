@@ -25,7 +25,8 @@
 
 * [ehrQL: Data Builder's language for querying electronic health record data](ehrql-intro.md)
 * [ehrQL short tutorial (deprecated_](ehrql-tutorial.md)
-* [ehrQL tutorial](ehrql-new-tutorial-intro.md)
+* [ehrQL tutorial entrypoint](ehrql-new-tutorial-intro.md)
+* [ehrQL explanation of rules for combining frames and series](ehrql-combining-frames-and-series.md)
 * [ehrQL examples](ehrql-examples.md)
 * [ehrQL reference](ehrql-reference.md)
 
