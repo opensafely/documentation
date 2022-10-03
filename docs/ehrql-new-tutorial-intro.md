@@ -255,7 +255,7 @@ To run this dataset definition with Data Builder,
 2. Run this command:
 
    ```
-   DATABASE_URL="example-data/minimal/" databuilder generate-dataset "1a_minimal_dataset_definition.py --output "outputs.csv"
+   DATABASE_URL="example-data/minimal/" databuilder generate-dataset "1a_minimal_dataset_definition.py" --output "outputs.csv"
    ```
 3. You should see Data Builder run without error
    and find the `outputs.csv` file in the `ehrql-tutorial-examples` directory
