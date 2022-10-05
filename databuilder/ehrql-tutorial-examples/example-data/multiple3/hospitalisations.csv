@@ -1,0 +1,9 @@
+patient_id,date,code,system
+1,1998-05-25,h3,TutorialCodeSystem
+1,1999-06-05,h3,TutorialCodeSystem
+1,2020-04-07,h5,TutorialCodeSystem
+2,2015-09-10,h6,TutorialCodeSystem
+2,2019-11-15,h1,
+4,1987-10-23,h7,TutorialCodeSystem
+4,1999-11-12,h10,
+6,2020-01-07,h8,TutorialCodeSystem
