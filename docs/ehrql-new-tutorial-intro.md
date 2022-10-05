@@ -22,6 +22,7 @@
 * [Dataset definition 3a](ehrql-new-tutorial-3a.md)
 * [Dataset definition 4a](ehrql-new-tutorial-4a.md)
 * [Dataset definition 5a](ehrql-new-tutorial-5a.md)
+* [Dataset definition 6a](ehrql-new-tutorial-6a.md)
 * [Using ehrQL and Data Builder in an OpenSAFELY project](ehrql-new-tutorial-opensafely-project.md)
 * [Conclusion](ehrql-new-tutorial-conclusion.md)
 * [Unwritten remaining section placeholders](ehrql-new-tutorial-remaining-sections.md)

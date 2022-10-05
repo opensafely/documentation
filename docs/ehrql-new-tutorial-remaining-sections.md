@@ -2,26 +2,6 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-## Example dataset definition 5: Filtering and aggregation
-
-### Filtering values
-
-!!! todo
-
-    * Taking/dropping rows (with an expression if possible)
-
-### Aggregating values
-
-!!! todo
-
-    * `count_for_patient()`
-    * `sum_for_patient()`
-
-!!! todo
-
-    * Aggregation of frames and series always give you a new series.
-    * These series are always one row per patient.
-
 ## Example dataset definition 6: Codelists
 
 !!! warning
