@@ -30,10 +30,13 @@
     Codelists are not yet fully implemented.
     See <https://github.com/opensafely-core/databuilder/issues/31>
 
+!!! todo
+    Write an example suitable for the user testing scenario.
+
 ### Loading a codelist
 
 !!! todo
-    * Loading a codelist with some kind of helper.
+    * Loading a codelist with `codelist_from_csv`.
 
 ### Checking if a code is in a codelist
 
