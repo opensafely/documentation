@@ -1,4 +1,4 @@
-from databuilder.query_language import Dataset
+from databuilder.ehrql import Dataset
 from databuilder.tables.examples.tutorial import patient_address, patient_demographics
 
 
