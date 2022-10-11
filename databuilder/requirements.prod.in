@@ -8,4 +8,4 @@ snex
 # so we have a script to update it, run: just databuilder/upgrade-databuilder
 #
 # This currently has other features hacked in to at least try and develop the docs.
-https://github.com/opensafely-core/databuilder/archive/59354bcdd73cd2d252fa6af29f1cfa5b68e967b4.zip
+https://github.com/opensafely-core/databuilder/archive/238d69b3e81178a9572aeb3895ddd1aaa417b5b1.zip
