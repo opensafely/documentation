@@ -13,7 +13,7 @@ The intended audience is primarily:
 that already have some understanding of how the ehrQL works.
 
 !!! info
-    Please refer to the [ehrQL introduction](ehrql-intro.md) and [ehrQL tutorial](ehrql-tutorial.md)
+    Please refer to the [ehrQL introduction](ehrql-intro.md) and [ehrQL tutorial](ehrql-new-tutorial-intro.md)
     if you need more explanation of the underlying concepts behind ehrQL.
 
 ## How the examples work

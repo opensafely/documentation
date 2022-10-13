@@ -23,4 +23,4 @@ For in-depth technical documentation, there is also [the reference][].
 
 [the examples]: ehrql-examples.md
 [the reference]: ehrql-reference.md
-[the tutorial]: ehrql-tutorial.md
+[the tutorial]: ehrql-new-tutorial-intro.md
