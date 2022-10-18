@@ -95,6 +95,15 @@ that we wish to add to the dataset.
     A simple way to make your dataset definition clear is to
     only use the name `dataset` for the query's dataset.
 
+!!! warning
+
+    Likewise, if you accidentally include multiple calls to `set_population()`,
+    it is the call that appears closest to the end of the dataset definition
+    that takes effect.
+
+    In future, calling `set_population()` more than once will cause a dataset definition to fail;
+    see the associated [Data Builder](https://github.com/opensafely-core/databuilder/issues/775) issue.
+
 !!! todo
 
     Would it be simpler here to say:
