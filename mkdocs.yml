@@ -131,6 +131,7 @@ watch:
   - examples
   - includes
   - public_docs.json
+  - databuilder/ehrql-tutorial-examples
   - src/cohort-extractor/cohortextractor
 
 markdown_extensions:
