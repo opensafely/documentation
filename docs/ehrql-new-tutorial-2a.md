@@ -28,25 +28,27 @@ In the previous definitions, we accessed just a single table.
 This dataset definition accesses multiple tables
 and also demonstrates some of the querying that ehrQL permits.
 
-```python title="2a_multiple_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/2a_multiple_dataset_definition.py"
-```
+???+ example "Dataset definition: `2a_multiple_dataset_definition.py`"
+
+    ```python
+    ---8<-- "databuilder/ehrql-tutorial-examples/2a_multiple_dataset_definition.py"
+    ```
 
 ### The `multiple` data source
 
-`multiple/patient_demographics.csv`:
+???+ example "Data table: `multiple/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patient_demographics.csv') }}
 
-`multiple/prescriptions.csv`:
+???+ example "Data table: `multiple/prescriptions.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/prescriptions.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/prescriptions.csv') }}
 
 ### Dataset definition 2a output
 
-`outputs/2a_multiple_dataset_definition.csv`
+???+ example "Output dataset: `outputs/2a_multiple_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/2a_multiple_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/2a_multiple_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 

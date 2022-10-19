@@ -23,17 +23,19 @@ This is a minimal, but still valid, dataset definition:
     definition? Maybe that's a case for having one example per tutorial
     page?
 
-```python title="1a_minimal_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
-```
+???+ example "Dataset definition: `1a_minimal_dataset_definition.py`"
+
+    ```python
+    ---8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
+    ```
 
 It finds the patients whose year of birth is 2000 or later.
 
 ### The `minimal` data source
 
-`minimal/patient_demographics.csv`:
+???+ example "Data table: `minimal/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
 
 ### Dataset definition 1a output
 
@@ -42,9 +44,9 @@ It finds the patients whose year of birth is 2000 or later.
     Do we need to clarify that the filename corresponds to the outputs already created?
     And that you'll overwrite these if you use this as a filename?
 
-`outputs/1a_minimal_dataset_definition.csv`
+???+ example "Output dataset: `outputs/1a_minimal_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1a_minimal_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1a_minimal_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 

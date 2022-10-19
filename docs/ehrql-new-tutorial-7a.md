@@ -56,11 +56,13 @@ You need to specify, as strings:
     Retrieve the code class names automatically.
     Where is best to specify these?
 
-```python
-from databuilder.codes import codelist_from_csv
+???+ example "`codelist_from_csv()`"
 
-codelist = codelist_from_csv(filename="my_codelist.csv", column="code", system="SNOMEDCTCode")
-```
+    ```python
+    from databuilder.codes import codelist_from_csv
+
+    codelist = codelist_from_csv(filename="my_codelist.csv", column="code", system="SNOMEDCTCode")
+    ```
 
 ### Checking if a code is in a codelist
 
@@ -73,21 +75,23 @@ codelist = codelist_from_csv(filename="my_codelist.csv", column="code", system="
 
 You can use `isin` and `isnotin` to check for specific codes.
 
-```
-from databuilder.codes import codelist_from_csv, SNOMEDCTCode
-from databuilder.ehrql import Dataset
-from databuilder.tables.example.tutorial import clinical_events
+???+ example "Dataset definition"
 
-codelist = codelist_from_csv(filename="my_codelist.csv", column="code", system="SNOMEDCTCode")
-a1_code = SNOMEDCTCode("a1")
-a2_code = SNOMEDCTCode("a2")
+    ```python
+    from databuilder.codes import codelist_from_csv, SNOMEDCTCode
+    from databuilder.ehrql import Dataset
+    from databuilder.tables.example.tutorial import clinical_events
 
-codelist_filtered_events = clinical_events.take(clinical_events.system == "snomed").code.is_in(codelist))
-code_filtered_events = clinical_events.take(clinical.events.system == "snomed").code.is_in([a1_code, a2_code])
+    codelist = codelist_from_csv(filename="my_codelist.csv", column="code", system="SNOMEDCTCode")
+    a1_code = SNOMEDCTCode("a1")
+    a2_code = SNOMEDCTCode("a2")
 
-dataset = Dataset()
-dataset.set_population(codelist_filtered_events.exists_for_patient() | code_filtered_events.exists_for_patient())
-```
+    codelist_filtered_events = clinical_events.take(clinical_events.system == "snomed").code.is_in(codelist))
+    code_filtered_events = clinical_events.take(clinical.events.system == "snomed").code.is_in([a1_code, a2_code])
+
+    dataset = Dataset()
+    dataset.set_population(codelist_filtered_events.exists_for_patient() | code_filtered_events.exists_for_patient())
+    ```
 
 !!! todo
     Explain that `[…]` creates a sequence of ordered items

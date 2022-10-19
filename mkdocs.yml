@@ -135,6 +135,7 @@ watch:
   - src/cohort-extractor/cohortextractor
 
 markdown_extensions:
+  - pymdownx.details
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.superfences:

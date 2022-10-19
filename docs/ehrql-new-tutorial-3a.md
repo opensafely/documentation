@@ -12,29 +12,31 @@
 
 ### The dataset definition we will work with
 
-```python title="3a_multiple2_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/3a_multiple2_dataset_definition.py"
-```
+???+ example "Dataset definition: `3a_multiple2_dataset_definition.py`"
+
+    ```python title="3a_multiple2_dataset_definition.py"
+    ---8<-- "databuilder/ehrql-tutorial-examples/3a_multiple2_dataset_definition.py"
+    ```
 
 ### The `multiple2` data source
 
-`multiple2/patient_demographics.csv`:
+???+ example "Data table: `multiple2/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
 
-`multiple2/hospitalisations.csv`:
+???+ example "Data table: `multiple2/hospitalisations.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
 
-`multiple2/patient_address.csv`:
+???+ example "Data table: `multiple2/patient_address.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
 
 ### Dataset definition 3a output
 
-`outputs/3a_multiple2_dataset_definition.csv`
+???+ example "Output dataset: `outputs/3a_multiple2_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/3a_multiple2_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/3a_multiple2_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 

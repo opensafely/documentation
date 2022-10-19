@@ -43,15 +43,18 @@ you will also need the [OpenSAFELY CLI](opensafely-cli.md) installed.
 
 We will use a simple dataset definition that we have already seen.
 
-```python title="1a_minimal_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
-```
+
+???+ example "Dataset definition: `1a_minimal_dataset_definition.py`"
+
+    ```python title="1a_minimal_dataset_definition.py"
+    ---8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
+    ```
 
 ### The `minimal` data source
 
-`minimal/1a_minimal_dataset_definition.csv`
+???+ example "Data table: `minimal/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
 
 ### The `project.yaml`
 
@@ -65,9 +68,11 @@ A `project.yaml` file configures how analytic code is run for OpenSAFELY project
 
 Using Data Builder in a `project.yaml` is much like working with other OpenSAFELY used by other OpenSAFELY actions.
 
-```yaml title="project.yaml"
----8<-- "databuilder/ehrql-tutorial-examples/project.yaml"
-```
+???+ example "Project pipeline: `project.yaml`"
+
+    ```yaml"
+    ---8<-- "databuilder/ehrql-tutorial-examples/project.yaml"
+    ```
 
 ### Running the `project.yaml`
 
