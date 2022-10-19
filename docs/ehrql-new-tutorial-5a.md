@@ -55,7 +55,7 @@ and some approaches to dealing with missing values.
 
 This dataset definition:
 
-* sets the cohort to be those patients with a hospitalisation entry
+* sets the population to be those patients with a hospitalisation entry
 * adds the most recent hospitalisation date for a patient to the dataset
 * adds details of the index of multiple deprivation
 
@@ -136,5 +136,5 @@ In both cases, the result is a Boolean `True` or `False` for each row.
    Why?
    (Hint: look at the patient ID values.)
 3. Can you further modify the dataset definition
-   to add an extra criterion to the cohort used in `set_population()` to remove this row entirely?
+   to add an extra criterion in `set_population()` to remove this row entirely?
    (Hint: you may find the table operators covered earlier useful.)

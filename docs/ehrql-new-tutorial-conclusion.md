@@ -84,8 +84,8 @@ you can use an inquistive approach to try and reasonabout it:
   * Can you find details of these tables
     in the [Contracts reference](contracts-reference.md)?
 * How has the author structured their dataset definition?
-* What criteria are used to select the cohort?
-* How are the variables that the author extracts for the cohort constructed?
+* What criteria are used to select the population?
+* How are the variables that the author extracts for the population constructed?
 
 The author may have also given additional context in natural language in various places:
 

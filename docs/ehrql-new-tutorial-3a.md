@@ -161,7 +161,7 @@ each expression in parentheses is evaluated before combining them together.
     As written, this is a little vague.
 
 The logical operators are used to combine the criteria
-for patients to include in the cohort,
+for patients to include in the population,
 as mentioned above in the [summary](#summary).
 In this dataset definition, we use:
 
@@ -308,8 +308,8 @@ See ["Combining series"](ehrql-reference.md/#5-combining-series) in the ehrQL re
        to the floating point value `5000.0`,
        instead of the integer value `5000`?
        Modify the dataset definition to check if you are correct.
-    2. Can you further restrict the cohort to those patients who have a postcode?
+    2. Can you further restrict the population to those patients who have a postcode?
     3. Can you change a single line of this dataset definition
-       so that the patient cohort selectisn is *inverted*?
+       so that the patient population selection is *inverted*?
        Specifically, all patients previously selected are now not selected,
        and all patients previously unselected are now selected.

@@ -39,7 +39,7 @@
 
 #### Summary
 
-This dataset definition sets the cohort to patients:
+This dataset definition sets the population to patients:
 
 * born before the 1st of January, 2000.
 * *and* hospitalised in a given date range.
@@ -106,7 +106,7 @@ This is a powerful means to compare date values in different columns, per patien
 
 #### Extracting components of dates
 
-Next, we restrict the cohort to patients
+Next, we restrict the population to patients
 who meet our [criteria](ehrql-new-tutorial-4a.md#summary).
 
 We then add `sex` and `year_of_birth` to the dataset.
