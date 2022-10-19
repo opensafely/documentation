@@ -190,6 +190,10 @@ we will refer to code examples.
 These examples are available for you
 to run and to experiment with.
 
+When working through each tutorial,
+you may find it useful to open the relevant dataset definition and example CSV data in a text editor,
+to refer along with.
+
 ### Learning objectives
 
 By the end of this section, you should be able to:
