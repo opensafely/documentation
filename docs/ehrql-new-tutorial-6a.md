@@ -110,30 +110,31 @@ by using `maximum_for_patient()`.
 
 ### Tutorial exercises
 
-1. In this dataset definition,
-   we initially filtered all of the clinical events to those using the `TutorialCodeSystem` code system.
-   How would we rewrite that same selection to use a single `drop()`?
-2. How would we find the *sum* of the numeric values of the `m1` clinical events
-   for each patient within the same date range already specified?
-   Refer to the [ehrQL reference](ehrql-reference.md).
-2. As the dataset definition shows,
-   we can use combine multiple filters using `take()` and `drop()`
-   in different ways.
-   Either we can specify multiple conditions to a single `take()` or
-   `drop()`.
-   Or we can *chain* multiple `take()` and `drop()` methods.
-   The output of each method is a frame.
+!!! question
+    1. In this dataset definition,
+       we initially filtered all of the clinical events to those using the `TutorialCodeSystem` code system.
+       How would we rewrite that same selection to use a single `drop()`?
+    2. How would we find the *sum* of the numeric values of the `m1` clinical events
+       for each patient within the same date range already specified?
+       Refer to the [ehrQL reference](ehrql-reference.md).
+    2. As the dataset definition shows,
+       we can use combine multiple filters using `take()` and `drop()`
+       in different ways.
+       Either we can specify multiple conditions to a single `take()` or
+       `drop()`.
+       Or we can *chain* multiple `take()` and `drop()` methods.
+       The output of each method is a frame.
 
-    !!! todo
-        Or series?
-        Check! Does this work on series, or just frames?
+        !!! todo
+            Or series?
+            Check! Does this work on series, or just frames?
 
-     You may find either way to express the same process useful:
-     it may make your dataset definition either clearer
-     or more consise to read.
+         You may find either way to express the same process useful:
+         it may make your dataset definition either clearer
+         or more consise to read.
 
-     Can you rewrite the `take()` with multiple conditions to be a series of chained `take()` methods?
-     Refer to the [ehrQL reference](ehrql-reference.md).
+         Can you rewrite the `take()` with multiple conditions to be a series of chained `take()` methods?
+         Refer to the [ehrQL reference](ehrql-reference.md).
 
-    !!! todo
-        In general, do we want to suggest particular ehrQL idioms?
+        !!! todo
+            In general, do we want to suggest particular ehrQL idioms?

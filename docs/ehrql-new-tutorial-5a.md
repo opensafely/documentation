@@ -130,13 +130,14 @@ In both cases, the result is a Boolean `True` or `False` for each row.
 
 ### Tutorial exercises
 
-1. Can you modify the dataset definition
-   to eliminate the IMD value nulls?
-   (Hint: you may find `drop()` useful to filter out unwanted rows.)
-2. Even with that modification,
-   we still get a null IMD value in the dataset?
-   Why?
-   (Hint: look at the patient ID values.)
-3. Can you further modify the dataset definition
-   to add an extra criterion in `set_population()` to remove this row entirely?
-   (Hint: you may find the table operators covered earlier useful.)
+!!! question
+    1. Can you modify the dataset definition
+       to eliminate the IMD value nulls?
+       (Hint: you may find `drop()` useful to filter out unwanted rows.)
+    2. Even with that modification,
+       we still get a null IMD value in the dataset?
+       Why?
+       (Hint: look at the patient ID values.)
+    3. Can you further modify the dataset definition
+       to add an extra criterion in `set_population()` to remove this row entirely?
+       (Hint: you may find the table operators covered earlier useful.)

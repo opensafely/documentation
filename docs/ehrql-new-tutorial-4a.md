@@ -131,9 +131,10 @@ and shift this to the last day of the previous month.
 
 ### Tutorial questions
 
-1. Can you modify the date conditions in this dataset definitions
-   to _include_ both dates in the range,
-   instead of excluding the specified end date?
-   See the [ehrQL reference](ehrql-reference.md) for the operations and methods on dates.
-2. Can you modify the dataset definition
-   to find the date seven days after hospitalisation?
+!!! question
+    1. Can you modify the date conditions in this dataset definitions
+       to _include_ both dates in the range,
+       instead of excluding the specified end date?
+       See the [ehrQL reference](ehrql-reference.md) for the operations and methods on dates.
+    2. Can you modify the dataset definition
+       to find the date seven days after hospitalisation?
