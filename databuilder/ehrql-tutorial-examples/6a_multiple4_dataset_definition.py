@@ -20,8 +20,8 @@ high_code_h1_events = tutorial_code_system_events.take(
 count_of_high_code_h1_events = high_code_h1_events.count_for_patient()
 maximum_h1_value = high_code_h1_events.numeric_value.maximum_for_patient()
 dataset = Dataset()
-cohort = high_code_h1_events.exists_for_patient()
-dataset.set_population(cohort)
+population = high_code_h1_events.exists_for_patient()
+dataset.set_population(population)
 
 dataset.date_of_birth = patient_demographics.date_of_birth
 dataset.h1_count = count_of_high_code_h1_events

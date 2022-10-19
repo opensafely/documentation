@@ -15,17 +15,25 @@ By the end of this tutorial, you should know how to:
 
 This dataset definition uses the same [data source](#the-minimal-data-source).
 
-```python title="1b_minimal_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/1b_minimal_dataset_definition.py"
-```
+???+ example "Dataset definition: `1b_minimal_dataset_definition.py`"
+
+    ```python
+    ---8<-- "databuilder/ehrql-tutorial-examples/1b_minimal_dataset_definition.py"
+    ```
 
 The main addition here is the additional output column.
 
+### The `minimal` data source
+
+???+ example "Data table: `minimal/patient_demographics.csv`"
+
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
+
 ### Dataset definition 1b output
 
-`outputs/1b_minimal_dataset_definition.csv`
+???+ example "Output dataset: `outputs/1b_minimal_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1b_minimal_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1b_minimal_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 

@@ -120,7 +120,7 @@ There are two ways that you can run Data Builder:
       for example with `conda` or `venv`
     * install the Data Builder package into that virtual environment;
       currently you will have to do something like:
-      `pip install git+https://github.com/opensafely-core/databuilder@main#egg=databuilder`
+      `pip install git+https://github.com/opensafely-core/databuilder@main#egg=opensafely-databuilder`
 
     !!! warning
         At the moment, you will have to install the specific Data Builder version listed in the documentation repository at:
@@ -190,6 +190,10 @@ we will refer to code examples.
 These examples are available for you
 to run and to experiment with.
 
+When working through each tutorial,
+you may find it useful to open the relevant dataset definition and example CSV data in a text editor,
+to refer along with.
+
 ### Learning objectives
 
 By the end of this section, you should be able to:
@@ -258,7 +262,7 @@ To run this dataset definition with Data Builder,
 2. Run this command:
 
    ```
-   DATABASE_URL="example-data/minimal/" databuilder generate-dataset "1a_minimal_dataset_definition.py --output "outputs.csv"
+   databuilder generate-dataset "1a_minimal_dataset_definition.py" --dummy-tables "example-data/minimal/" --output "outputs.csv"
    ```
 3. You should see Data Builder run without error
    and find the `outputs.csv` file in the `ehrql-tutorial-examples` directory
@@ -269,7 +273,7 @@ To run this dataset definition with Data Builder,
     In general, the command to run a dataset defintion looks like:
 
     ```
-    DATABASE_URL="example-data/DATASOURCENAME/" databuilder generate-dataset "IDENTIFIER_DATASOURCENAME_dataset_definition.py --output "outputs.csv"
+    databuilder generate-dataset "IDENTIFIER_DATASOURCENAME_dataset_definition.py --dummy-tables "example-data/DATASOURCENAME/" --output "outputs.csv"
     ```
 
     You need to substitute `DATASOURCENAME` with the appropriate dataset name,

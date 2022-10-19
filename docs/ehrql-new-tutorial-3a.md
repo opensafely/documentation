@@ -12,29 +12,31 @@
 
 ### The dataset definition we will work with
 
-```python title="3a_multiple2_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/3a_multiple2_dataset_definition.py"
-```
+???+ example "Dataset definition: `3a_multiple2_dataset_definition.py`"
+
+    ```python title="3a_multiple2_dataset_definition.py"
+    ---8<-- "databuilder/ehrql-tutorial-examples/3a_multiple2_dataset_definition.py"
+    ```
 
 ### The `multiple2` data source
 
-`multiple2/patient_demographics.csv`:
+???+ example "Data table: `multiple2/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
 
-`multiple2/hospitalisations.csv`:
+???+ example "Data table: `multiple2/hospitalisations.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
 
-`multiple2/patient_address.csv`:
+???+ example "Data table: `multiple2/patient_address.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
 
 ### Dataset definition 3a output
 
-`outputs/3a_multiple2_dataset_definition.csv`
+???+ example "Output dataset: `outputs/3a_multiple2_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/3a_multiple2_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/3a_multiple2_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 
@@ -50,7 +52,7 @@ This dataset definition finds the patients whose data meet all of the following 
 For those patients, the output dataset shows:
 
 * patient sex
-* whether the patient has ever been hospitalized
+* whether the patient has ever been hospitalised
 
 #### How the dataset definition works
 
@@ -161,7 +163,7 @@ each expression in parentheses is evaluated before combining them together.
     As written, this is a little vague.
 
 The logical operators are used to combine the criteria
-for patients to include in the cohort,
+for patients to include in the population,
 as mentioned above in the [summary](#summary).
 In this dataset definition, we use:
 
@@ -308,8 +310,8 @@ See ["Combining series"](ehrql-reference.md/#5-combining-series) in the ehrQL re
        to the floating point value `5000.0`,
        instead of the integer value `5000`?
        Modify the dataset definition to check if you are correct.
-    2. Can you further restrict the cohort to those patients who have a postcode?
+    2. Can you further restrict the population to those patients who have a postcode?
     3. Can you change a single line of this dataset definition
-       so that the patient cohort selectisn is *inverted*?
+       so that the patient population selection is *inverted*?
        Specifically, all patients previously selected are now not selected,
        and all patients previously unselected are now selected.

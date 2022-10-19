@@ -11,25 +11,27 @@
 
 ### The dataset definition we will work with
 
-```python title="6a_multiple4_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/6a_multiple4_dataset_definition.py"
-```
+???+ example "Dataset definition: `6a_multiple4_dataset_definition.py`"
+
+    ```python
+    ---8<-- "databuilder/ehrql-tutorial-examples/6a_multiple4_dataset_definition.py"
+    ```
 
 ### The `multiple4` data source
 
-`multiple4/patient_demographics.csv`:
+???+ example "Data table: `multiple4/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple4/patient_demographics.csv', keep_default_na=False) }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple4/patient_demographics.csv', keep_default_na=False) }}
 
-`multiple4/clinical_events.csv`:
+???+ example "Data table: `multiple4/clinical_events.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple4/clinical_events.csv', keep_default_na=False) }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple4/clinical_events.csv', keep_default_na=False) }}
 
 ### Dataset definition 6a output
 
-`outputs/6a_multiple4_dataset_definition.csv`
+???+ example "Output dataset: `outputs/6a_multiple4_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/6a_multiple4_dataset_definition.csv', keep_default_na=False) }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/6a_multiple4_dataset_definition.csv', keep_default_na=False) }}
 
 ### Explanation of the dataset definition
 

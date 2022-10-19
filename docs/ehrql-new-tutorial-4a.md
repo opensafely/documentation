@@ -11,35 +11,37 @@
 
 ### The dataset definition we will work with
 
-```python title="4a_multiple2_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/4a_multiple2_dataset_definition.py"
-```
+???+ example "Dataset definition: `4a_multiple2_dataset_definition.py`"
+
+    ```python
+    ---8<-- "databuilder/ehrql-tutorial-examples/4a_multiple2_dataset_definition.py"
+    ```
 
 ### The `multiple2` data source
 
-`multiple2/patient_demographics.csv`:
+???+ example "Data table: `multiple2/patient_demographics.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
 
-`multiple2/hospitalisations.csv`:
+???+ example "Data table: `multiple2/hospitalisations.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
 
-`multiple2/patient_address.csv`:
+???+ example "Data table: `multiple2/patient_address.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
 
 ### Dataset definition 4a output
 
-`outputs/4a_multiple2_dataset_definition.csv`
+???+ example "Output dataset: `outputs/4a_multiple2_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/4a_multiple2_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/4a_multiple2_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 
 #### Summary
 
-This dataset definition sets the cohort to patients:
+This dataset definition sets the population to patients:
 
 * born before the 1st of January, 2000.
 * *and* hospitalised in a given date range.
@@ -106,7 +108,7 @@ This is a powerful means to compare date values in different columns, per patien
 
 #### Extracting components of dates
 
-Next, we restrict the cohort to patients
+Next, we restrict the population to patients
 who meet our [criteria](ehrql-new-tutorial-4a.md#summary).
 
 We then add `sex` and `year_of_birth` to the dataset.

@@ -29,25 +29,27 @@ and some approaches to dealing with missing values.
 
 ### The dataset definition we will work with
 
-```python title="5a_multiple3_dataset_definition.py"
----8<-- "databuilder/ehrql-tutorial-examples/5a_multiple3_dataset_definition.py"
-```
+???+ example "Dataset definition: `5a_multiple3_dataset_definition.py`"
+
+    ```python
+    ---8<-- "databuilder/ehrql-tutorial-examples/5a_multiple3_dataset_definition.py"
+    ```
 
 ### The `multiple3` data source
 
-`multiple3/hospitalisations.csv`:
+???+ example "Data table: `multiple3/hospitalisations.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple3/hospitalisations.csv', keep_default_na=False) }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple3/hospitalisations.csv', keep_default_na=False) }}
 
-`multiple3/patient_address.csv`:
+???+ example "Data table: `multiple3/patient_address.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple3/patient_address.csv', keep_default_na=False) }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple3/patient_address.csv', keep_default_na=False) }}
 
 ### Dataset definition 5a output
 
-`outputs/5a_multiple3_dataset_definition.csv`
+???+ example "Output dataset: `outputs/5a_multiple3_dataset_definition.csv`"
 
-{{ read_csv('databuilder/ehrql-tutorial-examples/outputs/5a_multiple3_dataset_definition.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/5a_multiple3_dataset_definition.csv') }}
 
 ### Explanation of the dataset definition
 
@@ -55,7 +57,7 @@ and some approaches to dealing with missing values.
 
 This dataset definition:
 
-* sets the cohort to be those patients with a hospitalisation entry
+* sets the population to be those patients with a hospitalisation entry
 * adds the most recent hospitalisation date for a patient to the dataset
 * adds details of the index of multiple deprivation
 
@@ -136,5 +138,5 @@ In both cases, the result is a Boolean `True` or `False` for each row.
    Why?
    (Hint: look at the patient ID values.)
 3. Can you further modify the dataset definition
-   to add an extra criterion to the cohort used in `set_population()` to remove this row entirely?
+   to add an extra criterion in `set_population()` to remove this row entirely?
    (Hint: you may find the table operators covered earlier useful.)
