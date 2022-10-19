@@ -50,7 +50,7 @@ This dataset definition finds the patients whose data meet all of the following 
 For those patients, the output dataset shows:
 
 * patient sex
-* whether the patient has ever been hospitalized
+* whether the patient has ever been hospitalised
 
 #### How the dataset definition works
 
