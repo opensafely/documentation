@@ -120,7 +120,7 @@ There are two ways that you can run Data Builder:
       for example with `conda` or `venv`
     * install the Data Builder package into that virtual environment;
       currently you will have to do something like:
-      `pip install git+https://github.com/opensafely-core/databuilder@main#egg=databuilder`
+      `pip install git+https://github.com/opensafely-core/databuilder@main#egg=opensafely-databuilder`
 
     !!! warning
         At the moment, you will have to install the specific Data Builder version listed in the documentation repository at:
