@@ -16,8 +16,8 @@ latest_imd = (
 
 imd_has_increased = latest_imd > earliest_imd
 
-# This cohort is set so that we always select all patients.
-cohort = patient_demographics.exists_for_patient()
-dataset.set_population(cohort)
+# This population is set so that we always select all patients.
+population = patient_demographics.exists_for_patient()
+dataset.set_population(population)
 
 dataset.imd_has_increased = imd_has_increased

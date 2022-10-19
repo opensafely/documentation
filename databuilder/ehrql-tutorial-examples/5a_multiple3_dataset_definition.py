@@ -12,8 +12,8 @@ lowest_imd_address = patient_address.sort_by(
 
 dataset = Dataset()
 
-cohort = most_recent_hospitalisation.exists_for_patient()
-dataset.set_population(cohort)
+population = most_recent_hospitalisation.exists_for_patient()
+dataset.set_population(population)
 
 dataset.most_recent_hospitalisation_code = most_recent_hospitalisation.code
 dataset.most_recent_hospitalisation_system = (

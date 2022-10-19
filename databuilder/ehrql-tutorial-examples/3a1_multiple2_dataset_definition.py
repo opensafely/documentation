@@ -11,8 +11,8 @@ earliest_imd = (
     patient_address_by_date.first_for_patient().index_of_multiple_deprivation_rounded
 )
 
-# This cohort is set so that we always select all patients.
-cohort = patient_demographics.exists_for_patient()
-dataset.set_population(cohort)
+# This population is set so that we always select all patients.
+population = patient_demographics.exists_for_patient()
+dataset.set_population(population)
 
 dataset.earliest_imd = earliest_imd

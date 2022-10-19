@@ -13,10 +13,10 @@ hospitalisations_in_range = hospitalisations.take(
     & hospitalisations.date.is_before(final_date)
 )
 
-cohort = (date_of_birth < "2000-01-01") & (
+population = (date_of_birth < "2000-01-01") & (
     hospitalisations_in_range.exists_for_patient()
 )
-dataset.set_population(cohort)
+dataset.set_population(population)
 
 dataset.sex = patient_demographics.sex
 dataset.year_of_birth = patient_demographics.date_of_birth.year

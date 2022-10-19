@@ -4,8 +4,8 @@ expectations:
   population_size: 3000
 
 actions:
-  extract_minimal_cohort:
+  extract_minimal_population:
     run: databuilder:v0 generate-dataset "./1a_minimal_dataset_definition.py" --dummy-tables "example-data/minimal" --output "outputs/1a_minimal_dataset_definition.csv"
     outputs:
       highly_sensitive:
-        cohort: outputs/1a_minimal_dataset_definition.csv
+        population: outputs/1a_minimal_dataset_definition.csv
