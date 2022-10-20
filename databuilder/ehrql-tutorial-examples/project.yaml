@@ -4,8 +4,56 @@ expectations:
   population_size: 3000
 
 actions:
-  extract_minimal_population:
+  extract_1a_minimal_population:
     run: databuilder:v0 generate-dataset "./1a_minimal_dataset_definition.py" --dummy-tables "example-data/minimal" --output "outputs/1a_minimal_dataset_definition.csv"
     outputs:
       highly_sensitive:
         population: outputs/1a_minimal_dataset_definition.csv
+
+  extract_1b_minimal_population:
+    run: databuilder:v0 generate-dataset "./1b_minimal_dataset_definition.py" --dummy-tables "example-data/minimal" --output "outputs/1b_minimal_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/1b_minimal_dataset_definition.csv
+
+  extract_2a_multiple_population:
+    run: databuilder:v0 generate-dataset "./2a_multiple_dataset_definition.py" --dummy-tables "example-data/multiple" --output "outputs/2a_multiple_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/2a_multiple_dataset_definition.csv
+
+  extract_3a_multiple2_population:
+    run: databuilder:v0 generate-dataset "./3a_multiple2_dataset_definition.py" --dummy-tables "example-data/multiple2" --output "outputs/3a_multiple2_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/3a_multiple2_dataset_definition.csv
+
+  extract_3a1_multiple_population:
+    run: databuilder:v0 generate-dataset "./3a1_multiple2_dataset_definition.py" --dummy-tables "example-data/multiple2" --output "outputs/3a1_multiple2_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/3a1_multiple2_dataset_definition.csv
+
+  extract_3a2_multiple_population:
+    run: databuilder:v0 generate-dataset "./3a2_multiple2_dataset_definition.py" --dummy-tables "example-data/multiple2" --output "outputs/3a2_multiple2_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/3a2_multiple2_dataset_definition.csv
+
+  extract_4a_multiple2_population:
+    run: databuilder:v0 generate-dataset "./4a_multiple2_dataset_definition.py" --dummy-tables "example-data/multiple2" --output "outputs/4a_multiple2_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/4a_multiple2_dataset_definition.csv
+
+  extract_5a_multiple3_population:
+    run: databuilder:v0 generate-dataset "./5a_multiple3_dataset_definition.py" --dummy-tables "example-data/multiple3" --output "outputs/5a_multiple3_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/5a_multiple3_dataset_definition.csv
+
+  extract_6a_multiple2_population:
+    run: databuilder:v0 generate-dataset "./6a_multiple4_dataset_definition.py" --dummy-tables "example-data/multiple4" --output "outputs/6a_multiple4_dataset_definition.csv"
+    outputs:
+      highly_sensitive:
+        population: outputs/6a_multiple4_dataset_definition.csv
