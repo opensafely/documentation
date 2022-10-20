@@ -88,78 +88,10 @@ you will need to install Data Builder.
 
 ##### Operating system
 
-Data Builder runs on Windows, macOS, and Linux.
+Data Builder runs on Windows, macOS, and Linux either via:
 
-##### Installing Data Builder
-
-There are two ways that you can run Data Builder:
-
-* With Python
-* With the OpenSAFELY CLI
-
-!!! todo
-    Consider specifying the Data Builder version (currently `v0`) via a variable,
-    so we don't have to maintain it in multiple places.
-
-    * <https://github.com/rosscdh/mkdocs-markdownextradata-plugin>
-    * <https://github.com/fralau/mkdocs_macros_plugin>
-
-=== "Python (for confident Python users)"
-
-    If you are unable to run Data Builder via Docker,
-    you can try installing Data Builder directly using Python.
-
-    As Python configurations vary between operating systems,
-    and how users have Python configured,
-    we will not give detailed instructions.
-
-    You will need to:
-
-    * have a suitable Python version installed (currently Python 3.9)
-    * configure a suitable virtual environment to run Data Builder
-      for example with `conda` or `venv`
-    * install the Data Builder package into that virtual environment;
-      currently you will have to do something like:
-      `pip install git+https://github.com/opensafely-core/databuilder@main#egg=opensafely-databuilder`
-
-    !!! warning
-        At the moment, you will have to install the specific Data Builder version listed in the documentation repository at:
-
-        `databuilder/requirements.prod.in`
-
-        <https://github.com/opensafely/documentation/pull/959> should fix this.
-
-    !!! todo
-
-        Are we going to ever publish Data Builder to PyPI?
-
-=== "OpenSAFELY CLI (not yet working)"
-
-    !!! warning
-        This does not yet work.
-        We want to switch this to the OpenSAFELY CLI.
-
-    This will be the simplest way to run Data Builder in future.
-
-!!! todo
-
-    Consider adding Gitpod or similar.
-
-**Commands in this tutorial will assume you are running with Python.**
-
-!!! todo
-    Update this.
-
-!!! note
-    Before proceeding, make sure that you can run Data Builder's "help" command:
-
-    ```
-    databuilder --help
-    ```
-
-    If that command succeeds,
-    you should see some help text
-    and Data Builder should be correctly installed.
+* the OpenSAFELY CLI
+* a manually installed Python package
 
 ##### Text editor
 
@@ -181,6 +113,42 @@ that runs on Windows, macOS and Linux.
     * [black](https://github.com/psf/black), to format dataset definitions automatically
     * [flake8](https://github.com/PyCQA/flake8), to suggest coding style improvements
     * [isort](https://github.com/PyCQA/isort), to order `import` statements consistently
+
+#### Installing Data Builder
+
+There are two ways that you can run Data Builder:
+
+* Via the OpenSAFELY CLI (**recommended**)
+* Via a Python package
+
+!!! todo
+
+    Consider adding Gitpod or similar.
+
+The [OpenSAFELY CLI](opensafely-cli.md) requires a working Docker installation.
+If you do not already have the OpenSAFELY CLI installed,
+refer to the [instructions](opensafely-cli.md).
+Once you have the OpenSAFELY CLI installed,
+you are ready to use Data Builder.
+
+If you are unable to install Docker,
+you can try Data Builder via Python.
+
+A Python package install will still allow you to follow this tutorial,
+but will not allow you to run full OpenSAFELY projects.
+
+!!! note
+    We will not cover the Python installation here.
+    Refer to the [separate page](ehrql-new-tutorial-python.md) on this.
+
+!!! todo
+    Consider specifying the Data Builder version (currently `v0`) via a variable,
+    so we don't have to maintain it in multiple places.
+
+    * <https://github.com/rosscdh/mkdocs-markdownextradata-plugin>
+    * <https://github.com/fralau/mkdocs_macros_plugin>
+
+**Commands in this tutorial will assume you are running with the OpenSAFELY CLI.**
 
 ## Running the tutorial code examples
 
@@ -210,7 +178,11 @@ By the end of this section, you should be able to:
    that contains these examples.
 2. Open the `.zip` file.
 3. Extract the `databuilder/ehrql-tutorial-examples` somewhere.
-4. You will need to navigate to the directory that you extracted
+4. In the `ehrql-tutorial-examples` directory that you extracted,
+   delete the `outputs` directory.
+   This contains outputs that have been generated already for the dataset definitions.
+   We will regenerate these throughout this tutorial.
+4. Navigate to the `ehrql-tutorial-examples` directory that you extracted
    when working in a terminal.
 
 ### Loading a dataset definition into Data Builder
@@ -233,9 +205,18 @@ For example, a file named `patients.csv` is interpreted as the Data Builder `pat
 !!! todo
     Add information about loading CSVs elsewhere.
 
-#### Using Data Builder's command-line interface
+#### Using the OpenSAFELY CLI to run a dataset definition
 
-This section explains how to load dataset definitions into Databuilder.
+!!! warning
+    If you have installed with Python,
+    see the [relevant guide](ehrql-new-tutorial-python.md)
+    instead of following this section.
+
+!!! todo
+    Below paragraph is a duplication of the Python page.
+    Consider moving out into a shared Markdown source file.
+
+This section explains how to load dataset definitions into Data Builder.
 
 Each dataset definition used in this tutorial has a filename of the form:
 
@@ -250,10 +231,7 @@ For example, for
 ```
 
 the identifier is `1a` and the data source name is `minimal`.
-
-!!! todo
-
-    Check how compatible this is cross-platform.
+The identifier associates the dataset definition with a specific tutorial page.
 
 To run this dataset definition with Data Builder,
 
@@ -262,25 +240,21 @@ To run this dataset definition with Data Builder,
 2. Run this command:
 
    ```
-   databuilder generate-dataset "1a_minimal_dataset_definition.py" --dummy-tables "example-data/minimal/" --output "outputs.csv"
+   opensafely run extract_1a_minimal_population
    ```
-3. You should see Data Builder run without error
-   and find the `outputs.csv` file in the `ehrql-tutorial-examples` directory
-   that you were working in.
+3. The OpenSAFELY CLI now runs and should complete without error.
+   This command runs the appropriate *action* in the `project.yaml` file.
+   For this tutorial, we have already defined individual actions in the `project.yaml`
+   for each example, for convenience.
+4. You should be able to find the relevant output file in the `ehrql-tutorial-examples` directory that you were working in.
+   The filename of the output is also specified in the `project.yaml`.
 
 !!! tip
 
     In general, the command to run a dataset defintion looks like:
 
     ```
-    databuilder generate-dataset "IDENTIFIER_DATASOURCENAME_dataset_definition.py --dummy-tables "example-data/DATASOURCENAME/" --output "outputs.csv"
+    opensafely run extract_IDENTIFIER_DATASOURCENAME_population
     ```
 
-    You need to substitute `DATASOURCENAME` with the appropriate dataset name,
-    and `IDENTIFIER_DATASOURCENAME_dataset_definition.py` to match the specific dataset definition
-    that you want to run.
-
-!!! tip
-
-    The output in this example is called `outputs.csv`,
-    but you can choose any valid filename.
+    You need to substitute `IDENTIFIER` with the appopriate dataset definition identifier and `DATASOURCENAME` with the appropriate data source name.
