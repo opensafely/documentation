@@ -47,7 +47,7 @@ This dataset definition sets the population to patients:
 * *and* hospitalised in a given date range.
 
 For each of these patients,
-we extract `sex`,
+we extract sex,
 year of birth,
 and the last day of the month
 prior to when the patient was first hospitalised in that date range.
@@ -92,7 +92,7 @@ We can also perform basic comparisons on dates
 to check equality
 or to determine if one date is before or after another.
 
-With string provided dates, we can use Python's standard comparison operators like: `<`, `>=`, '!=`.
+With string provided dates, we can use Python's standard comparison operators like: `<`, `>=`, `!=`.
 
 There also equivalent methods for comparison
 such as `.is_on_or_after()`
