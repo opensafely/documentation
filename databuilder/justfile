@@ -156,6 +156,15 @@ build-dataset-definitions-outputs: devenv
       databuilder/$BIN/databuilder generate-dataset "$f" --dummy-tables "./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" --output "./databuilder/ehrql-tutorial-examples/outputs/$FILENAME"
     done
 
+# Requires OpenSAFELY CLI and Docker installed.
+build-dataset-definitions-outputs-docker:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    # Instead of entering the directory, We could use opensafely --project-dir
+    # But we would end up with a metadata directory in this directory then.
+    cd "ehrql-tutorial-examples"
+    opensafely run run_all --force-run-dependencies
+
 # Run the dev project
 run: devenv
     echo "Not implemented yet"
