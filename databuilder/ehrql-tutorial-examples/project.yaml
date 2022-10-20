@@ -28,13 +28,13 @@ actions:
       highly_sensitive:
         population: outputs/3a_multiple2_dataset_definition.csv
 
-  extract_3a1_multiple_population:
+  extract_3a1_multiple2_population:
     run: databuilder:v0 generate-dataset "./3a1_multiple2_dataset_definition.py" --dummy-tables "example-data/multiple2" --output "outputs/3a1_multiple2_dataset_definition.csv"
     outputs:
       highly_sensitive:
         population: outputs/3a1_multiple2_dataset_definition.csv
 
-  extract_3a2_multiple_population:
+  extract_3a2_multiple2_population:
     run: databuilder:v0 generate-dataset "./3a2_multiple2_dataset_definition.py" --dummy-tables "example-data/multiple2" --output "outputs/3a2_multiple2_dataset_definition.csv"
     outputs:
       highly_sensitive:
@@ -52,7 +52,7 @@ actions:
       highly_sensitive:
         population: outputs/5a_multiple3_dataset_definition.csv
 
-  extract_6a_multiple2_population:
+  extract_6a_multiple4_population:
     run: databuilder:v0 generate-dataset "./6a_multiple4_dataset_definition.py" --dummy-tables "example-data/multiple4" --output "outputs/6a_multiple4_dataset_definition.csv"
     outputs:
       highly_sensitive:
