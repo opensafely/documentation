@@ -882,6 +882,165 @@
           ]
         }
       ]
+    },
+    {
+      "dotted_path": "databuilder.tables.examples.tutorial",
+      "hierarchy": [
+        "examples",
+        "tutorial"
+      ],
+      "docstring": [],
+      "implemented_by": [],
+      "tables": [
+        {
+          "name": "clinical_events",
+          "docstring": [
+            "TODO."
+          ],
+          "columns": [
+            {
+              "name": "code",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "system",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "numeric_value",
+              "description": "",
+              "type": "float",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "hospitalisations",
+          "docstring": [
+            "TODO."
+          ],
+          "columns": [
+            {
+              "name": "date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "code",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "system",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "patient_address",
+          "docstring": [
+            "TODO."
+          ],
+          "columns": [
+            {
+              "name": "patientaddress_id",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "date_start",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "date_end",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "index_of_multiple_deprivation_rounded",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "has_postcode",
+              "description": "",
+              "type": "bool",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "patients",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "date_of_birth",
+              "description": "Patient's year and month of birth, provided in format YYYY-MM-01. The day will always be the first of the month.",
+              "type": "date",
+              "constraints": [
+                "Must be the first day of a month",
+                "Must have a value"
+              ]
+            },
+            {
+              "name": "sex",
+              "description": "Patient's sex as defined by the options: male, female, intersex, unknown.",
+              "type": "str",
+              "constraints": [
+                "Must have a value",
+                "female, male, intersex, unknown"
+              ]
+            },
+            {
+              "name": "date_of_death",
+              "description": "Patient's year and month of death, provided in format YYYY-MM-01. The day will always be the first of the month.",
+              "type": "date",
+              "constraints": [
+                "Must be the first day of a month"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "prescriptions",
+          "docstring": [
+            "TODO."
+          ],
+          "columns": [
+            {
+              "name": "prescribed_dmd_code",
+              "description": "",
+              "type": "str",
+              "constraints": []
+            },
+            {
+              "name": "processing_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "contracts": [
