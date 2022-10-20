@@ -19,9 +19,9 @@
 
 ### The `multiple4` data source
 
-???+ example "Data table: `multiple4/patient_demographics.csv`"
+???+ example "Data table: `multiple4/patients.csv`"
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple4/patient_demographics.csv', keep_default_na=False) }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple4/patients.csv', keep_default_na=False) }}
 
 ???+ example "Data table: `multiple4/clinical_events.csv`"
 

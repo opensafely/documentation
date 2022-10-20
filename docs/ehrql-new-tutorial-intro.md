@@ -228,7 +228,7 @@ and query that data instead of a backend.
 Each CSV represents a database table.
 Data Builder's CSV loader uses the filename of the CSV
 to determine which Data Builder table it represents.
-For example, a file named `patient_demographics.csv` is interpreted as the Data Builder `patient_demographics` table.
+For example, a file named `patients.csv` is interpreted as the Data Builder `patients` table.
 
 !!! todo
     Add information about loading CSVs elsewhere.

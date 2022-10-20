@@ -36,9 +36,9 @@ and also demonstrates some of the querying that ehrQL permits.
 
 ### The `multiple` data source
 
-???+ example "Data table: `multiple/patient_demographics.csv`"
+???+ example "Data table: `multiple/patients.csv`"
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple/patients.csv') }}
 
 ???+ example "Data table: `multiple/prescriptions.csv`"
 
@@ -56,9 +56,9 @@ Most of this dataset definition will be familiar from the previous examples.
 The biggest change is that the `prescriptions` table is also queried,
 and data from it included in the dataset definition's output.
 
-The `prescriptions` table differs from `patient_demographics`
+The `prescriptions` table differs from `patients`
 in that `prescriptions` is an *event-level table*,
-while `patient_demographics` is a *patient table*.
+while `patients` is a *patient table*.
 
 We will cover the difference between these more later.
 For now, it is sufficient to understand that `prescriptions` may contain multiple entries per patient.
@@ -154,7 +154,7 @@ when writing a dataset definition.
     What's the behaviour/how do we resolve the case where we don't provide CSV data for these examples?
 
     For example, with the `minimal` examples,
-    there is just the `patient_demographics` table.
+    there is just the `patients` table.
     If we list all the tables that `tutorial` offers,
     we'll include tables that aren't in a given dataset.
 
@@ -178,11 +178,11 @@ In the dataset definition in this tutorial,
 we access the following:
 
 * *table names*:
-    * `patient_demographics`
+    * `patients`
     * `prescriptions`
 * *column names*:
-    * `patient_demographics.date_of_birth`
-    * `patient_demographics.sex`
+    * `patients.date_of_birth`
+    * `patients.sex`
     * `prescriptions.processing_date`
     * `prescriptions.prescribed_dmd_code`
 

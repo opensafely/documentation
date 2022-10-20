@@ -20,9 +20,9 @@
 
 ### The `multiple2` data source
 
-???+ example "Data table: `multiple2/patient_demographics.csv`"
+???+ example "Data table: `multiple2/patients.csv`"
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patients.csv') }}
 
 ???+ example "Data table: `multiple2/hospitalisations.csv`"
 
@@ -243,7 +243,7 @@ depending on the maximum number of rows that can exist for any patient:
 In this example,
 we can see that:
 
-* the `patient_demographics` table is a *frame*
+* the `patients` table is a *frame*
   containing *one row per patient*
 * the `hospitalisations` and `patient_address` tables are *frames*
   containing *many rows per patient*

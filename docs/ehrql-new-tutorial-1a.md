@@ -33,9 +33,9 @@ It finds the patients whose year of birth is 2000 or later.
 
 ### The `minimal` data source
 
-???+ example "Data table: `minimal/patient_demographics.csv`"
+???+ example "Data table: `minimal/patients.csv`"
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
 
 ### Dataset definition 1a output
 
@@ -57,7 +57,7 @@ to use in our dataset definition.
 Here, we import two components of Data Builder:
 
 * `Dataset` as provided by the query language, to create a dataset
-* the `patient_demographics` table, which is one of several data tables that ehrQL gives access to
+* the `patients` table, which is one of several data tables that ehrQL gives access to
 
 !!! todo
 
@@ -140,9 +140,9 @@ for the specific database.
     the underlying SQL query generated is:
 
     ```sql
-    SELECT patient_demographics.patient_id AS patient_id
-    FROM patient_demographics
-    WHERE CAST(STRFTIME('%Y', patient_demographics.date_of_birth) AS INTEGER) >= 2000;
+    SELECT patients.patient_id AS patient_id
+    FROM patients
+    WHERE CAST(STRFTIME('%Y', patients.date_of_birth) AS INTEGER) >= 2000;
     ```
 
     !!! todo

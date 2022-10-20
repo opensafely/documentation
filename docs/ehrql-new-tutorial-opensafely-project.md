@@ -52,9 +52,9 @@ We will use a simple dataset definition that we have already seen.
 
 ### The `minimal` data source
 
-???+ example "Data table: `minimal/patient_demographics.csv`"
+???+ example "Data table: `minimal/patients.csv`"
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
 
 ### The `project.yaml`
 
