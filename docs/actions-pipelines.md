@@ -41,7 +41,7 @@ actions:
       highly_sensitive:
         cohort: output/input.csv
         ### Note: When using analysis tools other than Stata it is recommended to add option --output-format='csv.gz' to the 'run' command
-	### and add .gz to the output file path; this produces a compressed file to minimise file size. (Stata cannot load these files without first unzipping).
+        ### and add .gz to the output file path; this produces a compressed file to minimise file size. (Stata cannot load these files without first unzipping).
 
   run_model:
     run: stata-mp:latest analysis/model.do
