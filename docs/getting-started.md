@@ -582,8 +582,8 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
         outputs:
           highly_sensitive:
             cohort: output/input.csv
-	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
-	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
+            ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
+            ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
 
       describe:
         run: python:latest python analysis/report.py
