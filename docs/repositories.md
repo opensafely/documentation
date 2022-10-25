@@ -56,18 +56,9 @@ Note that if someone else wants to commit to your recently created OpenSAFELY re
 ## Repository structure
 
 ### `README.md`
+This file contains a disclaimer that your code (and any outputs if you used the older method of releasing them to GitHub) should not be taken as the whole project.
 
-This file introduces your project, helps people understand the purpose of the repo, and how to navigate and use the code.
-
-Any new repo will include a template README.
-It should be updated to briefly describe the intended study and to reflect the repo's current status as a _work in progress_.
-The README should also be updated frequently to reflect changes to the repo, and should certainly be up-to-date before publication of any research outputs.
-
-The README is written in Markdown.
-If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github).
-There's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the most useful Markdown syntax.
-
-You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's no need to write more than "_first README update_", but typically commits should have a bit more detail than that.
+A link points viewers to the Jobs site which will redirect them to the relevant project once it has been created there.
 
 
 ### `project.yaml`
