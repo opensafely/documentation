@@ -21,7 +21,7 @@ In earlier versions of OpenSAFELY, all results released from the secure server a
 
 ### When you need to make your code public
 
-A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have [guide to publishing repositories](publishing-repo.md) that you must read. During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after code execution. During our pilot phase of OpenSAFELY Users, if we encounter edge cases proposing that a particular repo should be excepted from this policy we will develop an open and structured Exceptions Process.
+A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have a [guide to publishing repositories](publishing-repo.md) that you must read. During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after first code execution. During our pilot phase of OpenSAFELY Users, if we encounter edge cases proposing that a particular repo should be excepted from this policy we will develop an open and structured Exceptions Process.
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
@@ -56,18 +56,9 @@ Note that if someone else wants to commit to your recently created OpenSAFELY re
 ## Repository structure
 
 ### `README.md`
+This file contains a disclaimer that your code (and any outputs if you used the older method of releasing them to GitHub) should not be taken as the whole project.
 
-This file introduces your project, helps people understand the purpose of the repo, and how to navigate and use the code.
-
-Any new repo will include a template README.
-It should be updated to briefly describe the intended study and to reflect the repo's current status as a _work in progress_.
-The README should also be updated frequently to reflect changes to the repo, and should certainly be up-to-date before publication of any research outputs.
-
-The README is written in Markdown.
-If you're not familiar with Markdown syntax, [read this guide on GitHub-flavoured Markdown](https://help.github.com/en/github/writing-on-github/about-writing-and-formatting-on-github).
-There's a [handy cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the most useful Markdown syntax.
-
-You can update the README directly in GitHub. Click the edit button (a little pencil in the top-right), change the text, and commit the changes. This is a standard commit so there's no need to write more than "_first README update_", but typically commits should have a bit more detail than that.
+A link points viewers to the Jobs site which will redirect them to the relevant project once it has been created there.
 
 
 ### `project.yaml`

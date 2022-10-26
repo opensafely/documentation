@@ -6,7 +6,7 @@ The jobs site is centred around **Projects**. When an application to run a study
 
 Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely). Any [actions](https://docs.opensafely.org/actions-intro/) you develop as part of your [project pipeline](https://docs.opensafely.org/actions-pipelines/) within the attached repository are linked to the workspace, allowing these to be run against real data.
 
-A _Job_ is an instance of an _Action_ running on real data. _Jobs_ are run by selecting one or more actions to be run as part of a single _Job Request_. You can see all the _Job Requests_ that have been run from a _Workspace_ by clicking on "View logs" from a _Workspace_ page. You can see a log of all _Job Requests_ being run [here](https://jobs.opensafely.org/event-log/). 
+A _Job_ is an instance of an _Action_ running on real data. _Jobs_ are run by selecting one or more actions to be run as part of a single _Job Request_. You can see all the _Job Requests_ that have been run from a _Workspace_ by clicking on "View logs" from a _Workspace_ page. You can see a log of all _Job Requests_ being run [here](https://jobs.opensafely.org/event-log/).
 
 ```mermaid
 graph TD
@@ -24,7 +24,7 @@ graph TD
     Action_2 --> F
     F --> G[Job]
     F --> H[Job]
-   
+
 ```
 
 ### Output types
@@ -50,14 +50,14 @@ Users with the `ProjectCollaborator` role can:
 
 * View released outputs
 * View draft public outputs
- 
+
 There are some additional roles linked to the release of outputs from the server, reserved for output checkers:
- 
+
 `OutputChecker`:
 
 * Release outputs from Level 4 environments
 * Delete outputs in a release
- 
+
 `OutputPublisher`:
 
 * Publish draft public outputs
@@ -140,7 +140,7 @@ Once reviewed, approved and released, your requested files will be available to 
 
 ## Publishing outputs
 
-You must seek NHS England approval for any publication or wider sharing of results, papers, presentations (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). 
+You must seek NHS England approval for any publication or wider sharing of results, papers, presentations (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website).
 
 For instructions on how to request approval, please see [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. Following approval from NHSE, you should also create draft public outputs for review. To do this, navigate to the _release_ containing the outputs you would like to be published and click the `Publish` button.
 
@@ -148,3 +148,17 @@ As part of publishing your outputs, you should also make the repository where yo
 
 Once approved, your released outputs will be “published” and viewable from the published outputs in the `Published outputs` section of your `Releases`. This is accessible by everyone, even those without a login.
 
+
+## Updating project status
+When you start a new project on OpenSAFELY it will have the _Ongoing_ status, but as your work progresses you'll want to update this status.
+
+If you are a member of a project you will see an `Edit` button near the top of your project page:
+
+![Project edit button](./images/project-edit-button.png)
+
+Set your project status.
+
+If you think the status of your project requires further explanation then you can put it in the `Status description` field.
+We recommend doing this for projects which have been postponed or retired.
+
+![Project edit page](./images/project-edit-page.png)
