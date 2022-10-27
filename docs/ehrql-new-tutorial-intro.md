@@ -205,7 +205,97 @@ For example, a file named `patients.csv` is interpreted as the Data Builder `pat
 !!! todo
     Add information about loading CSVs elsewhere.
 
-#### Using the OpenSAFELY CLI to run a dataset definition
+#### The OpenSAFELY CLI
+
+With the OpenSAFELY CLI,
+there are currently two ways of running the tutorial dataset definitions:
+
+* `opensafely exec` where the Data Builder configuration is specified at the command line
+* `opensafely run` where the Data Builder configuration is specified in the `project.yaml` file provided in `ehrql-tutorial-examples`
+
+We explain both of these below.
+
+!!! important
+    You only need to use one of these two ways,
+    though you are welcome to try both.
+    We will likely favour the `opensafely exec` route
+    for the tutorial in future
+    and relegate the use of `project.yaml` to the tutorial page that discusses `project.yaml`.
+
+    We are awaiting the improvements in
+    <https://github.com/opensafely-core/opensafely-cli/issues/149>
+    before doing so.
+
+#### Using the OpenSAFELY CLI to run a dataset definition via `opensafely exec`
+
+!!! warning
+    This requires:
+    * OpenSAFELY CLI version v1.32.1 or later
+      (run `opensafely upgrade` to upgrade)
+    * Data Builder Docker image v0.57.0 or later
+      (run `opensafely pull` to update if you already have
+
+!!! warning
+    If you have installed with Python,
+    see the [relevant guide](ehrql-new-tutorial-python.md)
+    instead of following this section.
+
+!!! todo
+    Below paragraph is a near duplication of the Python page.
+    Consider moving out into a shared Markdown source file.
+
+This section explains how to load dataset definitions into Data Builder.
+
+Each dataset definition used in this tutorial has a filename of the form:
+
+```
+IDENTIFIER_DATASOURCENAME_dataset_definition.py
+```
+
+For example, for
+
+```
+1a_minimal_dataset_definition.py
+```
+
+the identifier is `1a` and the data source name is `minimal`.
+The identifier associates the dataset definition with a specific tutorial page.
+
+!!! todo
+
+    Check how compatible this is cross-platform.
+
+To run this dataset definition with Data Builder,
+
+1. In a terminal, enter the `ehrql-tutorial-examples` directory that you extracted
+   from the sample data.
+2. Run this command:
+
+   ```
+   opensafely exec databuilder:v0 generate-dataset "1a_minimal_dataset_definition.py" --dummy-tables "example-data/minimal/" --output "outputs.csv"
+   ```
+3. You should see Data Builder run without error
+   and find the `outputs.csv` file in the `ehrql-tutorial-examples` directory
+   that you were working in.
+
+!!! tip
+
+    In general, the command to run a dataset defintion looks like:
+
+    ```
+    opensafely exec databuilder:v0 generate-dataset "IDENTIFIER_DATASOURCENAME_dataset_definition.py --dummy-tables "example-data/DATASOURCENAME/" --output "outputs.csv"
+    ```
+
+    You need to substitute `DATASOURCENAME` with the appropriate dataset name,
+    and `IDENTIFIER_DATASOURCENAME_dataset_definition.py` to match the specific dataset definition
+    that you want to run.
+
+!!! tip
+
+    The output in this example is called `outputs.csv`,
+    but you can choose any valid filename.
+
+#### Using the OpenSAFELY CLI to run a dataset definition via `project.yaml`
 
 !!! warning
     If you have installed with Python,

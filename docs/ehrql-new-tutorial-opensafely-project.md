@@ -4,8 +4,11 @@
 
 !!! todo
 
-    We should consider moving all the examples to be project based
+    We could consider moving all the examples to be project based
     and covering some of the topics here earlier on.
+
+    However, more likely is that we favour `opensafely exec`
+    and only discuss a simplistic `project.yaml` containing one dataset definition here.
 
 ## The relationship between Data Builder and OpenSAFELY projects
 
@@ -43,7 +46,6 @@ you will also need the [OpenSAFELY CLI](opensafely-cli.md) installed.
 
 We will use a simple dataset definition that we have already seen.
 
-
 ???+ example "Dataset definition: `1a_minimal_dataset_definition.py`"
 
     ```python title="1a_minimal_dataset_definition.py"
@@ -58,28 +60,17 @@ We will use a simple dataset definition that we have already seen.
 
 ### The `project.yaml`
 
-!!! todo
-
-    Make this work, and check that it works.
-    It requires the OpenSAFELY CLI to be able to run the `project.yaml` correctly.
-    It also requires the correct options adding to this YAML file.
-
 A `project.yaml` file configures how analytic code is run for OpenSAFELY projects.
 
 Using Data Builder in a `project.yaml` is much like working with other OpenSAFELY used by other OpenSAFELY actions.
 
 ???+ example "Project pipeline: `project.yaml`"
 
-    ```yaml"
+    ```yaml
     ---8<-- "databuilder/ehrql-tutorial-examples/project.yaml"
     ```
 
 ### Running the `project.yaml`
-
-!!! todo
-
-    Add any extra details that are required.
-    It may be that the `DATABASE_URL` or similar must be specified by environment variable.
 
 Running a `project.yaml` which contains a Data Builder action
 is much the same as for any other OpenSAFELY project.
@@ -87,7 +78,7 @@ is much the same as for any other OpenSAFELY project.
 Use [`opensafely run`](opensafely-cli.md/#run) to run the `project.yaml`:
 
 1. In your terminal, change directory to where you have the example `project.yaml` file.
-2. Run `opensafely run run_all`
+2. Run `opensafely run extract_1a_minimal_population`
 3. The OpenSAFELY CLI should run Data Builder with the dataset definition
    and you should find the output in the relative path shown under `outputs` in the `project.yaml`.
 
@@ -97,6 +88,13 @@ Use [`opensafely run`](opensafely-cli.md/#run) to run the `project.yaml`:
 
     What is required to create a new OpenSAFELY project?
     Do you need a Git repository configured?
+
+!!! note
+    At the moment,
+    the `project.yaml` contains all the dataset definitions,
+    which renders these questions redundant.
+    Could we include as snippet,
+    or provide another `project.yaml`?
 
 !!! question
 
