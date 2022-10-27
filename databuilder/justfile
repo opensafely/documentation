@@ -126,7 +126,7 @@ check-dataset-definitions: devenv
 
 
 # Check the dataset definition outputs are current
-check-dataset-definitions-outputs-are-current: devenv build-dataset-definitions-outputs
+check-dataset-definitions-outputs-are-current: devenv
     #!/usr/bin/env bash
     set -euo pipefail
 
