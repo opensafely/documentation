@@ -18,7 +18,10 @@
 ### Data Builder and dataset definitions
 
 * [OpenSAFELY Data Builder introduction](data-builder-intro.md)
+* [Data Builder Quick Start](data-builder-quick-start.md)
+* [Data Builder versioning](data-builder-versioning.md)
 * [Writing a dataset definition](dataset-definition.md)
+* [Explaining query model](explaination-query-engine.md)
 * [Supplying a dummy dataset](data-builder-dummy-data.md)
 
 ### ehrQL
