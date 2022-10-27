@@ -31,7 +31,7 @@ A new query language [ehrQL](ehrql-intro.md) has been developed for
 Data Builder. Researchers can now use a *dataset definition* to specify 
 the data to be extracted from OpenSAFELY. 
 
-ehrQL is designed to be semnantically easy to 
+ehrQL is designed to be semantically easy to 
 read and understand how the dataset it is defining is constructed. 
 
 ### Multiple backends
