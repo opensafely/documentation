@@ -70,7 +70,7 @@ Data Builder:
   different data backends.
 
 For more information on how Data Builder and Cohort Extractor compare, 
-see [development plan for Data Builder](databuilder-vs-cohortextractor.md).
+see [the development plan for Data Builder](databuilder-vs-cohortextractor.md).
 
 ## Reading the Data Builder documentation
 Other documentation pages explain in more detail the concepts to write a
