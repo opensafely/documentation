@@ -44,3 +44,6 @@ jobs:
 
       - name: Check dataset definitions outputs can be built with OpenSAFELY CLI project.yaml
         run: just databuilder/build-dataset-definitions-outputs-docker-project
+
+      - name: Check dataset definition outputs are up-to-date
+        run: just databuilder/check-dataset-definitions-outputs-are-current
