@@ -42,5 +42,5 @@ jobs:
       - name: Install OpenSAFELY CLI
         run: pip install opensafely
 
-      - name: Check dataset definitions outputs can be built with OpenSAFELY CLI
-        run: just databuilder/build-dataset-definitions-outputs-docker
+      - name: Check dataset definitions outputs can be built with OpenSAFELY CLI project.yaml
+        run: just databuilder/build-dataset-definitions-outputs-docker-project

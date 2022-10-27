@@ -157,7 +157,8 @@ build-dataset-definitions-outputs: devenv
     done
 
 # Requires OpenSAFELY CLI and Docker installed.
-build-dataset-definitions-outputs-docker:
+# Runs all actions in the `project.yaml`
+build-dataset-definitions-outputs-docker-project:
     #!/usr/bin/env bash
     set -euo pipefail
     # Instead of entering the directory, We could use opensafely --project-dir
