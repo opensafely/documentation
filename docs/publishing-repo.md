@@ -23,10 +23,11 @@ To update your repository's README to match this new README:
 1. Manually edit those changed sections into your research repository's README.
 1. You will need to replace the two placeholder strings in the README's "View on OpenSAFELY" URL to point to your repository:
 
-
-
 * `${GITHUB_REPOSITORY_OWNER}` is the GitHub organisation your repo lives under, likely `opensafely`.
 * `${GITHUB_REPOSITORY_NAME}` is the name of your repo.
+
+!!! warning
+    Each branch in your repository has a separate README, each of which will need updating.
 
 
 ## License
