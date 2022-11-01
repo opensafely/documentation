@@ -234,7 +234,11 @@ We explain both of these below.
     * OpenSAFELY CLI version v1.32.1 or later
       (run `opensafely upgrade` to upgrade)
     * Data Builder Docker image v0.57.0 or later
-      (run `opensafely pull image databuilder --force` to retrieve a suitable Docker image)
+      (run `docker pull ghcr.io/opensafely-core/databuilder:v0` to retrieve a suitable Docker image)
+
+!!! todo
+    Use an `opensafely pull` command to update the Docker image.
+    Needs the OpenSAFELY CLI updating.
 
 !!! warning
     If you have installed with Python,
