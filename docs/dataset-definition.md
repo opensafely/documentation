@@ -2,13 +2,7 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-## What is a dataset definition?
-
-A _dataset definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
-
-* the patient population (dataset rows)
-* the variables (dataset columns)
-
+## How is a dataset constructed?
 The OpenSAFELY framework:
 
 * Uses a single dataset definition to query different vendor-specific EHR databases or locally provided dummy data.
@@ -16,19 +10,17 @@ The OpenSAFELY framework:
 * Writes the output data frame in a tabular CSV file (usually `output/input.csv`).
     * For queries to vendor databases, the results are stored on a [secure server](releasing-files.md).
 
-!!! note
-    Currently the framework only supports datasets with one row per patient.
 
-### Dataset definitions are written in ehrQL
+## What is a dataset definition?
 
-Dataset definitions are written in a language designed for OpenSAFELY:
+A _dataset definition_ is a formal specification of the data that you want to extract from the OpenSAFELY database. This includes:
+
+* the patient population (dataset rows)
+* the variables (dataset columns)
+
+It is written in [ehrQL](ehrql-intro.md). Dataset definitions are written in a language designed for OpenSAFELY:
 ehrQL. ehrQL runs on Python, but ehrQL is designed to be easily written,
 read, and reviewed by anyone with some epidemiological knowledge.
-
-A simple example of a dataset definition is given below.
-
-!!! note
-    Other documentation pages discuss [ehrQL in more depth](ehrql-intro.md).
 
 ## `dataset_definition.py` structure
 
@@ -53,5 +45,17 @@ the Data Builder package. Put the following codeblock at the top of your
 The `Cohort()` class (imported above) is used to define both the data population and the variables.
 
 --8<-- 'examples/src-dataset-definition.md'
+
+## How do Dataset definitions work?
+1. **Dataset** is defined in the dataset definition
+2. **Query transformation**: The researcher then loads that dataset
+   definition into Data Builder. Provided the dataset definition is valid, Data Builder transforms
+   the dataset definition into an internal representation of the query called the *query model*.
+3. **Query submission**: Data Builder then translates the query model
+   into the appropriate query language for the data backend being
+   accessed. This means that the same dataset definition can be run against
+   multiple backends which may have different structures or underlying software. 
+
+For a more indepth technical explanation of how this works, see [explaining the query engine](query-engine-explanation.md).
 
 ---8<-- 'includes/glossary.md'
