@@ -6,8 +6,6 @@
 
     Understanding this section is not necessary to using Data Builder.
 
-    This section may end up being a separate page entirely.
-
 Data Builder facilitates querying multiple different data backends,
 without the researcher concerning themselves with the specific details
 of how that backend works.

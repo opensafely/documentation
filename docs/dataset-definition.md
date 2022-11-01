@@ -51,12 +51,11 @@ The `Cohort()` class (imported above) is used to define both the data population
 2. **Query transformation**: The researcher then loads that dataset
    definition into Data Builder. Provided the dataset definition is valid, Data Builder transforms
    the dataset definition into an internal representation of the query called the *query model*.
-
 3. **Query submission**: Data Builder then translates the query model
    into the appropriate query language for the data backend being
    accessed. This means that the same dataset definition can be run against
    multiple backends which may have different structures or underlying software. 
 
-For a more indepth technical explanation of how this works, see [explaining the query engine](explaination-query-engine.md).
+For a more indepth technical explanation of how this works, see [explaining the query engine](query-engine-explanation.md).
 
 ---8<-- 'includes/glossary.md'

@@ -49,5 +49,3 @@ However:
     The main researcher-facing change with the introduction of Data Builder is
     the new language for extracting datasets. Data Builder does not affect
     the rest of the structure of an OpenSAFELY project.
-
-

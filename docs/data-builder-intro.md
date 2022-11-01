@@ -44,12 +44,19 @@ query different datasets.
 
 ### Researcher-provided dummy data
 Data Builder allows researchers to provide their own dummy data to 
-use to developer their analytical code against. 
+use to develop their analytical code against. 
+
+!!! Note
+There is work in progress to add the functionality to generate dummy data
+from the dataset definition. This is currently in development. 
 
 ## Why Data Builder was created
 For researchers familiar with OpenSAFELY, there is naturally a question as 
 to why we are writing software to replace cohort extractor. Data Builder is 
-intended to eventually replace the use of cohort-extractor in new studies.
+intended to eventually replace the use of cohort-extractor in new studies. 
+We have [more information](data-builder-vs-cohort-extractor.md) about the 
+differences between cohort-extractor and Data Builder to read if you are 
+interested. 
 
 In OpenSAFELY's first two years, researchers have used cohort-extractor
 and study definitions to successfully complete a number of [research
