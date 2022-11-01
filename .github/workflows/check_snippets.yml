@@ -24,7 +24,7 @@ jobs:
       - name: Run dev tooling on snippets
         run: just databuilder/check
 
-      - name: Check dataset definitions run
+      - name: Check dataset definitions run with Python installed Data Builder
         run: just databuilder/check-dataset-definitions
 
       - name: Check dataset definition outputs are up-to-date
@@ -38,3 +38,12 @@ jobs:
 
           # check no examples have changed
           git diff --exit-code examples
+
+      - name: Install OpenSAFELY CLI
+        run: pip install opensafely
+
+      - name: Check dataset definitions outputs can be built with OpenSAFELY CLI project.yaml
+        run: just databuilder/build-dataset-definitions-outputs-docker-project
+
+      - name: Check dataset definition outputs are up-to-date
+        run: just databuilder/check-dataset-definitions-outputs-are-current

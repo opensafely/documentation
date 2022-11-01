@@ -126,7 +126,7 @@ check-dataset-definitions: devenv
 
 
 # Check the dataset definition outputs are current
-check-dataset-definitions-outputs-are-current: devenv build-dataset-definitions-outputs
+check-dataset-definitions-outputs-are-current: devenv
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -155,6 +155,16 @@ build-dataset-definitions-outputs: devenv
       FILENAME="$(basename "$f" .py).csv"
       databuilder/$BIN/databuilder generate-dataset "$f" --dummy-tables "./databuilder/ehrql-tutorial-examples/example-data/$DATASOURCENAME/" --output "./databuilder/ehrql-tutorial-examples/outputs/$FILENAME"
     done
+
+# Requires OpenSAFELY CLI and Docker installed.
+# Runs all actions in the `project.yaml`
+build-dataset-definitions-outputs-docker-project:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    # Instead of entering the directory, We could use opensafely --project-dir
+    # But we would end up with a metadata directory in this directory then.
+    cd "ehrql-tutorial-examples"
+    opensafely run run_all --force-run-dependencies
 
 # Run the dev project
 run: devenv

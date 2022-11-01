@@ -1,6 +1,8 @@
 from databuilder.ehrql import Dataset
-from databuilder.tables.examples.tutorial import clinical_events, patient_demographics
+from databuilder.tables.examples.tutorial import clinical_events, patients
 
+
+dataset = Dataset()
 
 tutorial_code_system_events = clinical_events.drop(
     clinical_events.system == "AnotherCodeSystem"
@@ -19,10 +21,10 @@ high_code_h1_events = tutorial_code_system_events.take(
 
 count_of_high_code_h1_events = high_code_h1_events.count_for_patient()
 maximum_h1_value = high_code_h1_events.numeric_value.maximum_for_patient()
-dataset = Dataset()
+
 population = high_code_h1_events.exists_for_patient()
 dataset.set_population(population)
 
-dataset.date_of_birth = patient_demographics.date_of_birth
+dataset.date_of_birth = patients.date_of_birth
 dataset.h1_count = count_of_high_code_h1_events
 dataset.h1_max = maximum_h1_value

@@ -1,5 +1,5 @@
 from databuilder.ehrql import Dataset
-from databuilder.tables.examples.tutorial import hospitalisations, patient_demographics
+from databuilder.tables.examples.tutorial import hospitalisations, patients
 
 
 dataset = Dataset()
@@ -7,7 +7,7 @@ dataset = Dataset()
 start_date = "2020-03-01"
 final_date = "2020-05-31"
 
-date_of_birth = patient_demographics.date_of_birth
+date_of_birth = patients.date_of_birth
 hospitalisations_in_range = hospitalisations.take(
     hospitalisations.date.is_on_or_after(start_date)
     & hospitalisations.date.is_before(final_date)
@@ -18,8 +18,8 @@ population = (date_of_birth < "2000-01-01") & (
 )
 dataset.set_population(population)
 
-dataset.sex = patient_demographics.sex
-dataset.year_of_birth = patient_demographics.date_of_birth.year
+dataset.sex = patients.sex
+dataset.year_of_birth = patients.date_of_birth.year
 
 first_hospitalisation_in_range = hospitalisations_in_range.sort_by(
     hospitalisations.date

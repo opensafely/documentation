@@ -2,6 +2,8 @@ from databuilder.ehrql import Dataset
 from databuilder.tables.examples.tutorial import hospitalisations, patient_address
 
 
+dataset = Dataset()
+
 most_recent_hospitalisation = hospitalisations.sort_by(
     hospitalisations.date
 ).last_for_patient()
@@ -9,8 +11,6 @@ most_recent_hospitalisation = hospitalisations.sort_by(
 lowest_imd_address = patient_address.sort_by(
     patient_address.index_of_multiple_deprivation_rounded
 ).first_for_patient()
-
-dataset = Dataset()
 
 population = most_recent_hospitalisation.exists_for_patient()
 dataset.set_population(population)

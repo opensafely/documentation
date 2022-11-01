@@ -19,9 +19,9 @@
 
 ### The `multiple2` data source
 
-???+ example "Data table: `multiple2/patient_demographics.csv`"
+???+ example "Data table: `multiple2/patients.csv`"
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_demographics.csv') }}
+    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patients.csv') }}
 
 ???+ example "Data table: `multiple2/hospitalisations.csv`"
 
@@ -47,7 +47,7 @@ This dataset definition sets the population to patients:
 * *and* hospitalised in a given date range.
 
 For each of these patients,
-we extract `sex`,
+we extract sex,
 year of birth,
 and the last day of the month
 prior to when the patient was first hospitalised in that date range.
@@ -92,7 +92,7 @@ We can also perform basic comparisons on dates
 to check equality
 or to determine if one date is before or after another.
 
-With string provided dates, we can use Python's standard comparison operators like: `<`, `>=`, '!=`.
+With string provided dates, we can use Python's standard comparison operators like: `<`, `>=`, `!=`.
 
 There also equivalent methods for comparison
 such as `.is_on_or_after()`
@@ -131,9 +131,10 @@ and shift this to the last day of the previous month.
 
 ### Tutorial questions
 
-1. Can you modify the date conditions in this dataset definitions
-   to _include_ both dates in the range,
-   instead of excluding the specified end date?
-   See the [ehrQL reference](ehrql-reference.md) for the operations and methods on dates.
-2. Can you modify the dataset definition
-   to find the date seven days after hospitalisation?
+!!! question
+    1. Can you modify the date conditions in this dataset definitions
+       to _include_ both dates in the range,
+       instead of excluding the specified end date?
+       See the [ehrQL reference](ehrql-reference.md) for the operations and methods on dates.
+    2. Can you modify the dataset definition
+       to find the date seven days after hospitalisation?

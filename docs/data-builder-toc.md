@@ -32,6 +32,10 @@
 * [ehrQL examples](ehrql-examples.md)
 * [ehrQL reference](ehrql-reference.md)
 
+### Explainers
+
+* [Installing Data Builder with Python (not recommended, use OpenSAFELY CLI)](ehrql-new-tutorial-python.md)
+
 ### OpenSAFELY Contracts
 
 * [OpenSAFELY Contracts introduction](contracts-intro.md)
