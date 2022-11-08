@@ -27,36 +27,36 @@ With Data Builder:
 ## Features
 ### Readable dataset definitions
 
-A new query language [ehrQL](ehrql-intro.md) has been developed for 
-Data Builder. Researchers can now use a *dataset definition* to specify 
-the data to be extracted from OpenSAFELY. 
+A new query language [ehrQL](ehrql-intro.md) has been developed for
+Data Builder. Researchers can now use a *dataset definition* to specify
+the data to be extracted from OpenSAFELY.
 
-ehrQL is designed to be semantically easy to 
-read and understand how the dataset it is defining is constructed. 
+ehrQL is designed to be semantically easy to
+read and understand how the dataset it is defining is constructed.
 
 ### Multiple backends
 
 Data Builder facilitates querying multiple different data backends,
 without the researcher concerning themselves with the specific details
-of how that backend works. This means that a researcher only need 
-to write a dataset definition once and be able to use this to 
-query different datasets. 
+of how that backend works. This means that a researcher only need
+to write a dataset definition once and be able to use this to
+query different datasets.
 
 ### Researcher-provided dummy data
-Data Builder allows researchers to provide their own dummy data to 
-use to develop their analytical code against. 
+Data Builder allows researchers to provide their own dummy data to
+use to develop their analytical code against.
 
 !!! Note
 There is work in progress to add the functionality to generate dummy data
-from the dataset definition. This is currently in development. 
+from the dataset definition. This is currently in development.
 
 ## Why Data Builder was created
-For researchers familiar with OpenSAFELY, there is naturally a question as 
-to why we are writing software to replace cohort extractor. Data Builder is 
-intended to eventually replace the use of cohort-extractor in new studies. 
-We have [more information](data-builder-vs-cohort-extractor.md) about the 
-differences between cohort-extractor and Data Builder to read if you are 
-interested. 
+For researchers familiar with OpenSAFELY, there is naturally a question as
+to why we are writing software to replace cohort extractor. Data Builder is
+intended to eventually replace the use of cohort-extractor in new studies.
+We have [more information](data-builder-vs-cohort-extractor.md) about the
+differences between cohort-extractor and Data Builder to read if you are
+interested.
 
 In OpenSAFELY's first two years, researchers have used cohort-extractor
 and study definitions to successfully complete a number of [research
