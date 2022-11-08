@@ -76,8 +76,8 @@ Data Builder:
 * **Simplifies the implementation of new features** across multiple
   different data backends.
 
-For more information on how Data Builder and Cohort Extractor compare, 
-see [the development plan for Data Builder](databuilder-vs-cohortextractor.md).
+For more information on how Data Builder and Cohort Extractor compare,
+see [the development plan for Data Builder](data-builder-vs-cohort-extractor.md).
 
 ## Reading the Data Builder documentation
 Other documentation pages explain in more detail the concepts to write a
