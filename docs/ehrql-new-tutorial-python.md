@@ -3,7 +3,7 @@
 ---8<-- 'includes/data-builder-danger-header.md'
 
 !!! warning
-    We recommend that you use Data Builder with the [OpenSAFELY CLI](opensafely-cli)
+    We recommend that you use Data Builder with the [OpenSAFELY CLI](opensafely-cli.md)
     as instructed in the [ehrQL tutorial](ehrql-new-tutorial-intro.md).
 
 ## Limitations

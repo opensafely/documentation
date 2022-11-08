@@ -21,7 +21,7 @@
 * [Data Builder Quick Start](data-builder-quick-start.md)
 * [Data Builder versioning](data-builder-versioning.md)
 * [Writing a dataset definition](dataset-definition.md)
-* [Explaining query model](explaination-query-engine.md)
+* [Explaining query model](query-engine-explanation.md)
 * [Supplying a dummy dataset](data-builder-dummy-data.md)
 
 ### ehrQL
