@@ -132,9 +132,9 @@ mergedeep==1.3.4 \
     --hash=sha256:0096d52e9dad9939c3d975a774666af186eda617e6ca84df4c94dec30004f2a8 \
     --hash=sha256:70775750742b25c0d8f36c55aed03d24c3384d17c951b3175d898bd778ef0307
     # via mkdocs
-mkdocs==1.4.1 \
-    --hash=sha256:07ed90be4062e4ef732bbac2623097b9dca35c67b562c38cfd0bfbc7151758c1 \
-    --hash=sha256:2b7845c2775396214cd408753e4cfb01af3cfed36acc141a84bce2ceec9d705d
+mkdocs==1.4.2 \
+    --hash=sha256:8947af423a6d0facf41ea1195b8e1e8c85ad94ac95ae307fe11232e0424b11c5 \
+    --hash=sha256:c8856a832c1e56702577023cd64cc5f84948280c1c0fcc6af4cd39006ea6aa8c
     # via
     #   -r requirements.prod.in
     #   mkdocs-autorefs
@@ -161,9 +161,9 @@ mkdocs-material-extensions==1.0.3 \
 mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/99f9f3ec5025d5cf9030cafb1189576a4ebf6a7c.zip \
     --hash=sha256:011613b325ee9b10aec31a652c5b00a39995f2e50a5df7a5f2bf5f2c78897f49
     # via -r requirements.prod.in
-mkdocs-table-reader-plugin==1.1.1 \
-    --hash=sha256:4ff2ec29e9dce9bdac7ccadbfb27a4e8b2699c9d605ab0e30dba0412997a0469 \
-    --hash=sha256:fccacc8a6926918c43858d220892ef21013e9027289f581bcb72271c94aea829
+mkdocs-table-reader-plugin==1.2 \
+    --hash=sha256:7a15949aca8d877d3d72e1245d0e28f4cbd90def64256afe6041c4580a98a690 \
+    --hash=sha256:aac8ae904cab5e748e02ec756879c3e85379c25eff5bb823690a4a3fa5a34d37
     # via -r requirements.prod.in
 mkdocstrings[python]==0.19.0 \
     --hash=sha256:3217d510d385c961f69385a670b2677e68e07b5fea4a504d86bf54c006c87c7d \
