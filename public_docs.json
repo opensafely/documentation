@@ -17,7 +17,10 @@
     },
     {
       "name": "TPPBackend",
-      "implements": [],
+      "implements": [
+        "databuilder.tables.beta.tpp",
+        "databuilder.tables.beta.smoketest"
+      ],
       "contracts": []
     }
   ],
@@ -280,7 +283,8 @@
       ],
       "implemented_by": [
         "DatabricksBackend",
-        "GraphnetBackend"
+        "GraphnetBackend",
+        "TPPBackend"
       ],
       "tables": [
         {
@@ -307,7 +311,9 @@
         "tpp"
       ],
       "docstring": [],
-      "implemented_by": [],
+      "implemented_by": [
+        "TPPBackend"
+      ],
       "tables": [
         {
           "name": "addresses",
