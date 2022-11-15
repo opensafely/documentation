@@ -34,7 +34,6 @@ graph TD
         application_submission --> application_approval
         getting_started[Completing Getting Started guide]
     end
-
     subgraph assignment_stage[" "]
             copilot_assignment[Assignment of copilot]
             introductory_meeting[Introductory meeting]
@@ -56,30 +55,14 @@ graph TD
         manuscript_review[Manuscript review]
         output_checking_post[Output checking]
     end
-
     getting_started --> assignment_stage
     application_approval --> assignment_stage
     introductory_meeting --> copiloting_stage
     copiloting_stage --> post_copiloting_stage
-
     style setup_stage fill:#f7fcb9,stroke:#AAA,stroke-width:4px
     style assignment_stage fill:#addd8e,stroke:#333,stroke-width:4px
     style copiloting_stage fill:#31a354,stroke:#333,stroke-width:4px
     style post_copiloting_stage fill:#fff,stroke:#333,stroke-width:4px
-```
-
-```mermaid
-graph LR
-    subgraph key[" "]
-        setup_key["Application and setup stage"]
-        assignment_key["Assignment stage"]
-        copiloting_key["Active copiloting stage"]
-        post_copiloting_key["Post copiloting stage"]
-    end
-    style setup_key fill:#f7fcb9,stroke:#AAA,stroke-width:4px
-    style assignment_key fill:#addd8e,stroke:#333,stroke-width:4px
-    style copiloting_key fill:#31a354,stroke:#333,stroke-width:4px
-    style post_copiloting_key fill:#fff,stroke:#333,stroke-width:4px
 ```
 
 ### Project application and software setup
