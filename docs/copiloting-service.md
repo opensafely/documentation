@@ -92,7 +92,9 @@ If you are unsure whether copiloting will work for your project, contact `team@o
 
 ### Assignment of copilot
 
-Once a project has been approved, it will be matched to one of our internal OpenSAFELY researchers, in terms of the experience and knowledge required for the project. The pilot and copilot will have an introductory meeting in which the copilot will provide further details about the copiloting service and the pilot can provide further details about the research project. At this meeting, both parties will agree when the dedicated 1:1 support period will begin. 
+Once a project has been approved, it will be matched to one of our internal OpenSAFELY researchers, in terms of the experience and knowledge required for the project. The pilot and copilot will have an introductory meeting in which the copilot will provide further details about the copiloting service and the pilot can provide further details about the research project. At this meeting, both parties will agree when the dedicated 1:1 support period will begin.
+
+The slides that we use for these meetings are available [here](https://docs.google.com/presentation/d/16wAFjIPRLef3UbibSRO1R7E2GXmRohPT/edit?usp=share_link). Some of our copilots also run through a version of these slides in [this video on our Youtube channel](https://youtu.be/3BNmoV7aHwA).
 
 ### Active copiloting stage (four weeks)
 
