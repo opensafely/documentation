@@ -76,6 +76,7 @@ nav:
       - Writing performant code: memory-efficient-working.md
   - Support:
       - How to get help: how-to-get-help.md
+      - OpenSAFELY copiloting service: copiloting-service.md
       - Requesting new libraries: requesting-libraries.md
       - Requesting study definition variables: requesting-variables.md
       - Updating the documentation: updating-the-docs.md
