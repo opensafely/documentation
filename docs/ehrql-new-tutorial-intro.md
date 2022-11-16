@@ -54,7 +54,7 @@ Familiarity with:
 would also be helpful,
 but is *not* essential.
 
-## How to work through the Tutorial Series
+## How to work through this tutorial series
 The tutorial is split into 7 sections that we recommend
 you work through sequentially. Each section builds on previous knowledge. Throughout the tutorial series, you will see optional explanations and reading, that you might 
 want to explore at the time or afterwards.
@@ -90,14 +90,14 @@ Data Builder runs on Windows, macOS, and Linux either via:
 * a manually installed Python package
 
 
-##### OpenSAFELY CLI
+#### OpenSAFELY CLI
 The [OpenSAFELY CLI](opensafely-cli.md) requires a working Docker installation.
 If you do not already have the OpenSAFELY CLI installed,
 refer to the [instructions](opensafely-cli.md).
 Once you have the OpenSAFELY CLI installed,
 you are ready to use Data Builder.
 
-##### Install via Python 
+#### Install via Python 
 If you are unable to install Docker,
 you can try Data Builder via Python.
 
