@@ -23,6 +23,7 @@
 * [Writing a dataset definition](dataset-definition.md)
 * [Explaining query model](query-engine-explanation.md)
 * [Supplying a dummy dataset](data-builder-dummy-data.md)
+* [Dataset and SQL](dataset-sql-explanation.md)
 
 ### ehrQL
 

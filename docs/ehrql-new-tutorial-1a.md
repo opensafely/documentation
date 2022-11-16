@@ -1,27 +1,13 @@
-# ehrQL tutorial: A minimal dataset definition
+# ehrQL tutorial Part 1: Minimal dataset definition
+By the end of this tutorial, you should able:
 
----8<-- 'includes/data-builder-danger-header.md'
+* to write a very simple dataset definition
+* to run that dataset definition with Data Builder
 
-## Example dataset definition 1a: A minimal dataset definition
+## Full Example
 
-### Learning objectives
-
-By the end of this tutorial, you should know how to:
-
-* Write a very simple dataset definition
-* Run that dataset definition with Data Builder
-
-### The dataset definition we will work with
-
-This is a minimal, but still valid, dataset definition:
-
-!!! todo
-
-    May need to fix up how this code is included.
-    Can we have code annotations?
-    What's the best way of jumping between input, output and dataset
-    definition? Maybe that's a case for having one example per tutorial
-    page?
+We start with a minimal dataset definition. 
+This finds the patients whose year of birth is 2000 or later.
 
 ???+ example "Dataset definition: `1a_minimal_dataset_definition.py`"
 
@@ -29,28 +15,22 @@ This is a minimal, but still valid, dataset definition:
     ---8<-- "databuilder/ehrql-tutorial-examples/1a_minimal_dataset_definition.py"
     ```
 
-It finds the patients whose year of birth is 2000 or later.
+If we run this against the sample data provided (see below), it will
+pick out only patients who were born in 2000 or later. 
 
-### The `minimal` data source
-
-???+ example "Data table: `minimal/patients.csv`"
+???+ example "Original Data: `minimal/patients.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
 
-### Dataset definition 1a output
-
-!!! todo
-
-    Do we need to clarify that the filename corresponds to the outputs already created?
-    And that you'll overwrite these if you use this as a filename?
+In this case, patient 2, 5 and 7. 
 
 ???+ example "Output dataset: `outputs/1a_minimal_dataset_definition.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1a_minimal_dataset_definition.csv') }}
 
-### Explanation of the dataset definition
+## Line by line explanation
 
-#### Specify the Data Builder components in use with `import` statements
+### Import statements
 
 Lines of the format `from… import…` specify which of Data Builder's code and features
 to use in our dataset definition.
@@ -59,110 +39,35 @@ Here, we import two components of Data Builder:
 * `Dataset` as provided by the query language, to create a dataset
 * the `patients` table, which is one of several data tables that ehrQL gives access to
 
-!!! todo
+### Create a `Dataset`
 
-    Consider using snippets or code annotations instead of copy-pasting lines.
-
-!!! warning
-    For the purposes of the tutorial,
-    we are accessing tables from `databuilder.tables.examples.tutorial`.
-
-    Different backends support access to different tables.
-    To access tables on real backends,
-    refer to the [Contracts reference](contracts-reference.md)
-    (to be renamed)
-    to look up the correct import statement
-    that specifies the backend and table name.
-
-#### Give names to values using Python's assignment operator, `=`
-
-Like in many other languages,
-the `=` operator is used to assign a *value*, on the right-hand side,
-to a *name*, on the left-hand side.
-
-#### Create a `Dataset`
-
-A valid dataset definition must contain a dataset assigned to the name `dataset`.
-
-A usual first step in writing a dataset definition is to create this empty dataset.
+A valid dataset definition must contain a dataset assigned to the name `dataset`. Like many other programming languages, we use `=` to assign a value to a variable name. In this case, we have assigned `Dataset()` to the variable `dataset`. This creates an empty dataset. 
 In subsequent steps,
 we specify the data from the available data tables
 that we wish to add to the dataset.
 
-!!! warning
+### Find year of birth
+Next we define a year of birth. `date_of_birth` is in the patient table and therefore we can assign it to this new variable. We want to only capture the `year` of birth so we add the `.year` to the end of this variable assignment. 
 
-    The dataset used as the basis of an ehrQL query
-    is the dataset that is last to be given the name `dataset`.
+### Set population
+Finally we set the population of the dataset. We use the special method called `set_population()` and pass in the definition of the population. In this case, we want to use our previously created `year_of_birth` and say, if year of birth is equal to or greater than 2000, include in this dataset. 
 
-    A simple way to make your dataset definition clear is to
-    only use the name `dataset` for the query's dataset.
+## Your turn
+Run the dataset definition by:
 
-!!! warning
+```
+opensafely exec databuilder:v0 generate-dataset "1a_minimal_dataset_definition.py" --dummy-tables "example-data/minimal/" --output "outputs.csv"
+```
 
-    Likewise, if you accidentally include multiple calls to `set_population()`,
-    it is the call that appears closest to the end of the dataset definition
-    that takes effect.
+or if you are using `project.yaml`:
 
-    In future, calling `set_population()` more than once will cause a dataset definition to fail;
-    see the associated [Data Builder](https://github.com/opensafely-core/databuilder/issues/775) issue.
+```
+opensafely run extract_1a_minimal_population
+```
 
-!!! todo
+!!! question
 
-    Would it be simpler here to say:
-    "you probably should only have one dataset".
-    Are there cases where you might need multiple datasets within a definition?
+    Can you modify the dataset definition so that the output shows:
 
-!!! todo
-
-    Consider using code annotations to describe the code.
-
-#### What happens when Data Builder generates a dataset?
-
-When the dataset definition is used by Data Builder to generate a dataset:
-
-1. The dataset definition is validated
-   to ensure that the resulting database query would be valid.
-2. A database query suitable for the specified database is created.
-3. The query is submitted to the database.
-4. Provided the query is successful, the query creates an output.
-
-In writing a *dataset definition* then,
-what we are really writing is a *database query*.
-Data Builder transforms the dataset definition into the appropriate database query,
-for the specific database.
-
-!!! note
-
-    You can see the database query that a dataset definition will generate
-    via the `databuilder --dump-dataset-sql` command.
-
-    For the minimal example `1a_minimal_dataset_definition.py` above,
-    the underlying SQL query generated is:
-
-    ```sql
-    SELECT patients.patient_id AS patient_id
-    FROM patients
-    WHERE CAST(STRFTIME('%Y', patients.date_of_birth) AS INTEGER) >= 2000;
-    ```
-
-    !!! todo
-
-        This SQL should be kept updated.
-
-That database might be:
-
-* a local database used for testing,
-  such as in this tutorial
-* an OpenSAFELY backend,
-  when submitting jobs to OpenSAFELY
-
-There are two important implications of how this Data Builder's process works:
-
-1. **Queries do not have to be written in a specific query language tailored to a specific database.**
-   The compatibility of a dataset definition depends only
-   on whether all the data tables used are available in the database being queried.
-2. **All the data processing requested happens at the database
-   after the dataset definition is processed in its entirety.**
-   This is different from a more typical interactive data analysis in Python, Stata or R
-   where you load some data,
-   then perform computations on that data as each line of the analysis code runs.
+    1. Patients that were born before 1980?
+    2. Patient that were born between 1980 and 2000?
