@@ -6,6 +6,7 @@
 Open Terminal.app by clicking the magnifying glass icon in the top right of your screen.
 Type `terminal` and hit ++enter++.
 
+## Homebrew
 Install [Homebrew](https://brew.sh/), this should install the Xcode Command Line Tools for you as well.
 
 !!! note "This command might take a while to run depending on the speed of your internet connection."
@@ -26,6 +27,7 @@ Next, install [Docker for Mac](https://docs.docker.com/docker-for-mac/install/),
 brew install --cask docker github visual-studio-code
 ```
 
+## pyenv
 Configure your shell to use pyenv:
 
 !!! note
@@ -39,6 +41,7 @@ echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
+## Python
 Use pyenv to install Python:
 
 !!! note "This command might take a while to run depending on the speed of your computer."
@@ -56,6 +59,7 @@ Then enable this version (eg `3.10.1`) in pyenv:
 pyenv global system 3.10.1
 ```
 
+## OpenSAFELY CLI
 Then install the [OpenSAFELY CLI](opensafely-cli.md) with pip:
 
 ```bash
@@ -82,6 +86,7 @@ available commands:
               Commands for interacting with https://www.opencodelists.org/
 ```
 
+## Docker for Mac
 Set up Docker by opening the app you installed earlier:
 
 ```bash
