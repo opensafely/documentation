@@ -66,11 +66,15 @@ Then install the [OpenSAFELY CLI](opensafely-cli.md) with pip:
 pip install opensafely
 ```
 
-Test the installation of OpenSAFELY CLI.
-This should print out the usage and available sub commands:
+And test the installation:
 
 ```bash
-% opensafely --help
+opensafely --help
+```
+
+If it is functioning, it should print out the usage and available sub commands:
+
+```
 usage: opensafely [-h] [--version] COMMAND ...
 
 optional arguments:
@@ -112,3 +116,7 @@ The Docker service will continue to run in the background and can be accessed fr
 You're done!
 
 Now you can navigate to a research repo, on your local machine, and [use `opensafely` via the command line](opensafely-cli.md#using-opensafely-at-the-command-line).
+
+## Older style pipx installations
+
+Earlier versions of this document used pipx to install opensafely. If you are looking to update such a pipx-style installation and are having problems with `opensafely upgrade`, you could also try `pipx reinstall opensafely --python ~/.pyenv/shims/python3.10`.
