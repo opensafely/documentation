@@ -1,5 +1,7 @@
 # macOS Install Guide
 
+## Installation
+
 !!! note "This guide was created using macOS 11.1"
     It is expected that this guide should work from 10.15 upwards but has only been tested with 11.1
 
@@ -108,3 +110,7 @@ The Docker service will continue to run in the background and can be accessed fr
 You're done!
 
 Now you can navigate to a research repo, on your local machine, and [use `opensafely` via the command line](opensafely-cli.md#using-opensafely-at-the-command-line).
+
+## Upgrading
+
+In theory you should be able to update opensafely with `opensafely upgrade`. However, if this doesn't work, you could try `pipx reinstall opensafely --python ~/.pyenv/shims/python3.10`, or ask tech support.
