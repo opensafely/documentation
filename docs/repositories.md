@@ -13,7 +13,7 @@ In accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/abo
 
 ### How to make your code public
 
-You can request that a private repository is made public at any time by contacting [tech support](how-to-get-help.md).
+You can request that a private repository is made public at any time by [following our process for publishing a repo](/publishing-repo/#make-your-repo-public).
 
 #### Publishing older repositories that contain results as well as code
 
