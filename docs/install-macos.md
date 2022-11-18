@@ -14,30 +14,29 @@ Install [Homebrew](https://brew.sh/), this should install the Xcode Command Line
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Once homebrew is installed use it to install [pipx](https://pipxproject.github.io/pipx/) and [pyenv](https://github.com/pyenv/pyenv):
+Once homebrew is installed use it to install [pyenv](https://github.com/pyenv/pyenv):
 
 ```bash
-brew install pipx pyenv
+brew install pyenv
 ```
-
-Add pipx to your path with:
-
-```bash
-echo 'export PATH="$HOME/.local/bin/:$PATH"' >> ~/.zshrc
-```
-
-and reload your shell environment with:
-
-```bash
-source ~/.zshrc
-```
-
-!!! note "If you are using a shell other than ZSH you will need to edit and source the appropriate config file"
 
 Next, install [Docker for Mac](https://docs.docker.com/docker-for-mac/install/), [GitHub Desktop](https://desktop.github.com/), and [Visual Studio Code](https://code.visualstudio.com/):
 
 ```bash
 brew install --cask docker github visual-studio-code
+```
+
+Configure your shell to use pyenv:
+
+!!! note
+    If you are using a shell other than ZSH you will need to edit and source
+    the appropriate config file.  pyenv has documentation for getting set up
+    on [various shells](https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv).
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
 Use pyenv to install Python:
@@ -57,10 +56,10 @@ Then enable this version (eg `3.10.1`) in pyenv:
 pyenv global system 3.10.1
 ```
 
-Then install the [OpenSAFELY CLI](opensafely-cli.md) with pipx, using the Python installed in the previous step:
+Then install the [OpenSAFELY CLI](opensafely-cli.md) with pip:
 
 ```bash
-pipx install opensafely --python ~/.pyenv/shims/python3.10
+pip install opensafely
 ```
 
 Test the installation of OpenSAFELY CLI.
