@@ -66,11 +66,15 @@ Then install the [OpenSAFELY CLI](opensafely-cli.md) with pip:
 pip install opensafely
 ```
 
-Test the installation of OpenSAFELY CLI.
-This should print out the usage and available sub commands:
+And test the installation:
 
 ```bash
-% opensafely --help
+opensafely --help
+```
+
+If it is functioning, it should print out the usage and available sub commands:
+
+```
 usage: opensafely [-h] [--version] COMMAND ...
 
 optional arguments:
