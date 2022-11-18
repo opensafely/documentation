@@ -169,7 +169,7 @@ account, for developing your own study:
    repository (typically under your own account)
    ![Entering a name, owner and description, when creating a repository from the research template.](images/create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description
-1. Choose a [repository visibility](repositories.md#repository-access). This would usually be "Public"
+1. Choose a [repository visibility](repositories.md#repository-visibility). This would usually be "Public"
    ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](images/create-repository-public-private.png)
 1. There is an "Include all branches" option: this does **not** need to be selected.
    (You only need the main branch; the other branches are

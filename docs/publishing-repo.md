@@ -59,7 +59,7 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 ## Make your repo public
 If your repository is *private*, ask [tech support](how-to-get-help.md) to make it *public* before the associated paper or output is published.
-There's more information about what this means [here](repositories.md#repository-access).
+There's more information about what this means [here](repositories.md#repository-visibility).
 
 !!! info
     You will be prompted to make it public sooner, if you first ran the code against an OpenSAFELY database more than 12 months ago.
