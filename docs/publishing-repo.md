@@ -1,13 +1,5 @@
 When you're ready to tell the world about your GitHub repo, consider the following:
 
-## About Section
-Check that the "About" section is up to date.
-People will see this section prominently when they view your repository on GitHub.
-
-Include a short, one-line summary and link to your paper or outputs in the "About" section.
-Click the cog next to "About" and add these details.
-
-
 ## README
 As of the 24th October 2022 we have changed how we managed repo READMEs.
 You can ignore this section if you created your repo after that date.
