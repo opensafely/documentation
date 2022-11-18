@@ -17,7 +17,7 @@ You can request that a private repository is made public at any time by [followi
 
 #### Publishing older repositories that contain results as well as code
 
-In earlier versions of OpenSAFELY, all results released from the secure server after disclosivity checking went directly to the GitHub repository containing the code for the project. Because of this, for older repositories the OpenSAFELY team and you must check that there are no outstanding results which still require approval from NHS England in your repository, before that repository is made public. If you are unsure whether this applies to your repository then you should contact tech support.
+In earlier versions of OpenSAFELY, all results released from the secure server after disclosivity checking went directly to the GitHub repository containing the code for the project. Because of this, for older repositories the OpenSAFELY team and you must check that there are no outstanding results which still require approval from NHS England in your repository, before that repository is made public. If you are unsure whether this applies to your repository then you should contact <publications@opensafely.org>.
 
 ### When you need to make your code public
 
