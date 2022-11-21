@@ -1,13 +1,5 @@
 When you're ready to tell the world about your GitHub repo, consider the following:
 
-## About Section
-Check that the "About" section is up to date.
-People will see this section prominently when they view your repository on GitHub.
-
-Include a short, one-line summary and link to your paper or outputs in the "About" section.
-Click the cog next to "About" and add these details.
-
-
 ## README
 As of the 24th October 2022 we have changed how we managed repo READMEs.
 You can ignore this section if you created your repo after that date.
@@ -58,8 +50,10 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 
 ## Make your repo public
-If your repository is *private*, ask [tech support](how-to-get-help.md) to make it *public* before the associated paper or output is published.
-There's more information about what this means [here](repositories.md#repository-visibility).
+If your repository is *private*, you can request it is made public via the jobs site.
+Click the "Change repo visibility" button on the workspace page of any workspace connected to it.
+You will be prompted to check various bits of metadata associated with the repository, its branches, connected workspaces, and the project.
+Once you have completed this page it will be checked by the OpenSAFELY team before being made public.
 
 !!! info
     You will be prompted to make it public sooner, if you first ran the code against an OpenSAFELY database more than 12 months ago.
