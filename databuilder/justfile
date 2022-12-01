@@ -170,12 +170,6 @@ build-dataset-definitions-outputs-docker-project:
 run: devenv
     echo "Not implemented yet"
 
-
-# Extract the snippets into the examples directory
-extract: devenv test
-    $BIN/snex run
-
-
 # Watch for changes to the examples and run tests and extract
 watch-examples:
     #!/usr/bin/env bash
