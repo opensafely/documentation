@@ -169,9 +169,3 @@ build-dataset-definitions-outputs-docker-project:
 # Run the dev project
 run: devenv
     echo "Not implemented yet"
-
-# Watch for changes to the examples and run tests and extract
-watch-examples:
-    #!/usr/bin/env bash
-    project_root=$(git rev-parse --show-toplevel)
-    $BIN/watchmedo shell-command --patterns="*.py" --recursive --command="just ${project_root}/databuilder/extract" "${project_root}/databuilder/snippets"
