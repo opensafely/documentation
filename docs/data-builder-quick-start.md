@@ -47,7 +47,9 @@ This is the dataset defined in ehrQL. There are sections and a tutorial
 on how to specify the dataset in the ehrQL sections. Below is the basic 
 example.
 
----8<-- 'examples/src-minimal-ehrql.md'
+```python
+---8<-- 'databuilder/snippets/ehrql.py:minimalehrql'
+```
 
 ### Add a dummy data file
 This is a CSV file of the dummy data to use with databuilder. It needs to 

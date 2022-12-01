@@ -14,7 +14,9 @@ The following dataset definition, which is written in ehrQL, is from [the tutori
 It specifies a single criterion for selecting the population; namely, that the population should consist of all patients who were born in or after 2000.
 It also specifies a single characteristic of the population; namely, each patient's year of birth.
 
----8<-- 'examples/src-minimal-ehrql.md'
+```python
+---8<-- 'databuilder/snippets/ehrql.py:minimalehrql'
+```
 
 You can find out more about ehrQL in [the tutorial][] and [the examples][].
 For in-depth technical documentation, there is also [the reference][].

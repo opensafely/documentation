@@ -36,7 +36,9 @@ Researchers write [dataset definitions](dataset-definition.md) to access
 data tables from OpenSAFELY backends. This minimal example code
 accesses the `date_of_birth` column in the `patients` data table:
 
----8<-- 'examples/src-minimal-ehrql-import-patients.md'
+```python
+---8<-- 'databuilder/snippets/ehrql.py:minimalehrqlimportpatients'
+```
 
 Dataset definitions are run using OpenSAFELY Data Builder. When running
 the dataset definition against live backends on the OpenSAFELY platform,

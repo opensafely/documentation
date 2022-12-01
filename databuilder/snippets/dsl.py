@@ -1,12 +1,12 @@
-# :snippet imports
+# --8<-- [start:imports]
 # TODO: replace this when the new DSL is in
 # from databuilder.dsl import Cohort
 # from databuilder.tables import clinical_events, practice_registrations
 
 
-# :endsnippet
+# --8<-- [end:imports]
 
-# :snippet dataset-definition
+# --8<-- [start:datasetdefinition]
 # TODO: replace this when the new DSL is in
 # cohort = Cohort()
 
@@ -23,4 +23,4 @@
 #     .first_for_patient()
 #     .select_column(clinical_events.code)
 # )
-# :endsnippet
+# --8<-- [end:datasetdefinition]
