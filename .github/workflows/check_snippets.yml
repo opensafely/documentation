@@ -32,12 +32,7 @@ jobs:
 
       - name: Check snippets work
         run: |
-          # extract examples from the snippets, this will also test they are
-          # valid examples
-          just databuilder/extract
-
-          # check no examples have changed
-          git diff --exit-code examples
+          just databuilder/test
 
       - name: Install OpenSAFELY CLI
         run: pip install opensafely

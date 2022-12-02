@@ -35,24 +35,33 @@ the [documentation repository's
 README](https://github.com/opensafely/documentation#building-locally-and-testing)
 that details the use of `pip-compile` for this.
 
-## Making changes to the dataset definition examples
-You will need to check out the [documentation repo](https://github.com/opensafely/documentation) so you can run the example generating toolchain.
+## Making changes to the dataset definition snippets
+
+These snippets are separate from the tutorial examples in `databuilder/ehrql-tutorial-examples`.
+There is a separate README in that directory that explains how those tutorial examples work.
+We may eventually unify the tutorial examples with the snippet
+so that all example code is checked in the same way.
 
 Edit the python modules in the `databuilder/snippets` directory.
 
-Each example is bounded by snex markers which define the filename they will produce.
-For example, a block starting with `:snippet dataset-definition` will create the file `examples/src-dataset-definition.md`.
-
-!!! note "All example filenames are prefixed with `src-`"
-
-Once you've edited an example (or created a new one) you can run `just databuilder/extract` to update the markdown files in `examples`.
-
 Examples are included in the markdown files using the [pymdown snippet notation](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation).
 
-Make sure you commit both the changes to the `examples` and `databuilder/snippets` directories.
+Each of the snippets sections in each snippet Python source file are bounded by markers:
 
-If you are updating multiple examples it might be easier to the extraction step happen each time you change the python modules, you can do this with `just databuilder/watch-examples`.
+```python
+# --8<-- [start:print]
+print("hello world")
+# --8<-- [end:print]
+```
 
+If this example was stored as `databuilder/snippets/hello.py`,
+then it could be included in the documentation Markdown source via:
+
+````
+```python
+;--8<-- 'databuilder/snippets/hello.py:print'
+```
+````
 
 ## Updating Data Builder backend, contract and reference documentation
 

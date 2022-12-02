@@ -34,7 +34,9 @@ At the start of the dataset definition, we first *import* some code from
 the Data Builder package. Put the following codeblock at the top of your
 `dataset_definition.py` file:
 
---8<-- 'examples/src-imports.md'
+```python
+--8<-- 'databuilder/snippets/dsl.py:imports'
+```
 
 !!! note
     This is a simple example. You may need different imports depending
@@ -44,7 +46,9 @@ the Data Builder package. Put the following codeblock at the top of your
 
 The `Cohort()` class (imported above) is used to define both the data population and the variables.
 
---8<-- 'examples/src-dataset-definition.md'
+```python
+--8<-- 'databuilder/snippets/dsl.py:datasetdefinition'
+```
 
 ## How do Dataset definitions work?
 1. **Dataset** is defined in the dataset definition
@@ -54,7 +58,7 @@ The `Cohort()` class (imported above) is used to define both the data population
 3. **Query submission**: Data Builder then translates the query model
    into the appropriate query language for the data backend being
    accessed. This means that the same dataset definition can be run against
-   multiple backends which may have different structures or underlying software. 
+   multiple backends which may have different structures or underlying software.
 
 For a more indepth technical explanation of how this works, see [explaining the query engine](query-engine-explanation.md).
 

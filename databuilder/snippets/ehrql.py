@@ -1,31 +1,11 @@
-# :snippet minimal-ehrql-import-patients
+# --8<-- [start:minimalehrqlimportpatients]
 from databuilder.tables.beta.smoketest import patients
 
 
 year_of_birth = patients.date_of_birth.year
-# :endsnippet
+# --8<-- [end:minimalehrqlimportpatients]
 
-# :snippet minimal-ehrql-import-dataset
-from databuilder.ehrql import Dataset
-
-
-dataset = Dataset()
-# :endsnippet
-
-# :snippet minimal-ehrql-set-population
-dataset.set_population(year_of_birth >= 2000)
-# :endsnippet
-
-# :snippet minimal-ehrql-request-year-of-birth
-dataset.year_of_birth = year_of_birth
-# :endsnippet
-
-# :snippet minimal-ehrql-request-birth-year
-dataset.birth_year = year_of_birth
-# :endsnippet
-
-
-# :snippet minimal-ehrql
+# --8<-- [start:minimalehrql]
 from databuilder.ehrql import Dataset
 from databuilder.tables.beta.smoketest import patients
 
@@ -34,4 +14,4 @@ year_of_birth = patients.date_of_birth.year
 dataset = Dataset()
 dataset.set_population(year_of_birth >= 2000)
 dataset.year_of_birth = year_of_birth
-# :endsnippet
+# --8<-- [end:minimalehrql]

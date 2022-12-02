@@ -133,9 +133,9 @@ plugins:
   - macros
 
 watch:
-  - examples
   - includes
   - public_docs.json
+  - databuilder/snippets
   - databuilder/ehrql-tutorial-examples
   - src/cohort-extractor/cohortextractor
 

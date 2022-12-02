@@ -3,12 +3,9 @@ default_language_version:
 
 repos:
   - repo: https://github.com/psf/black
-    # Pinned temporarily for consistency with the databuilder directory's
-    # requirements; see #886.
-    rev: 21.12b0
+    rev: 22.10.0
     hooks:
     - id: black
-      additional_dependencies: ['click<8']
 
   - repo: https://github.com/pycqa/flake8
     rev: 4.0.1
