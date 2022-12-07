@@ -90,8 +90,8 @@ Copilots will provide up to five days over the four weeks to support the develop
 - support with the construction of the required patient cohort
 - support with the identification of clinical/demographic variables of interest
 - support with identifying or building codelists on [opencodelists.org](https://www.opencodelists.org/)
-- help with navigating [docs.opensafely.org](https://docs.opensafely.org) to find necessary documentation and policies
-- help with navigating [github.com/opensafely](https://github.com/opensafely) to find helpful examples
+- help with navigating [the OpenSAFELY documentation](https://docs.opensafely.org) to find necessary documentation and policies
+- help with navigating [the OpenSAFELY GitHub repository](https://github.com/opensafely) to find helpful examples
 - advice on implementing quality assurance steps
 - advice on disclosure control and redaction as carried out by our output checking service
 - help with troubleshooting errors when running the study locally or on the server
@@ -104,7 +104,7 @@ Please note that copilots will not perform code review of any analysis scripts o
 
 It is not expected that the research project will be complete at the end of the active copiloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. All community resources (the [discussion forum](https://github.com/opensafely/documentation/discussions) and the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The copilot will remain involved in the project over the long term in terms of output checking and manuscript review. 
 
-As with all OpenSAFELY projects, once a copiloted project is finished, published or it reaches its 1 year anniversary, the associated GitHub repository (and Jobserver outputs) need to be made public. See [https://docs.opensafely.org/publishing-repo/](https://docs.opensafely.org/publishing-repo/) for more information.
+As with all OpenSAFELY projects, once a copiloted project is finished, published or it reaches its 1 year anniversary, the associated GitHub repository (and Jobserver outputs) need to be made public (see [our documentation](https://docs.opensafely.org/publishing-repo/) for more information).
 
 ## What is our authorship policy?
 
