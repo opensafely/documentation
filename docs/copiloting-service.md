@@ -104,7 +104,9 @@ Please note that copilots will not perform code review of any analysis scripts o
 
 It is not expected that the research project will be complete at the end of the active copiloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. All community resources (the [discussion forum](https://github.com/opensafely/documentation/discussions) and the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The copilot will remain involved in the project over the long term in terms of output checking and manuscript review. 
 
-As with all OpenSAFELY projects, once a copiloted project is finished, published or it reaches its 1 year anniversary, the associated GitHub repository (and Jobserver outputs) need to be made public (see [our documentation](https://docs.opensafely.org/publishing-repo/) for more information).
+All OpenSAFELY outputs require approval from NHS England before they can be disseminated any wider than the pilot's research group. This includes academic manuscripts (pre-printed or peer-reviewed), conference abstracts and presentations, internal reports and masters/PhD theses. Our IG team will handle the NHS England approval process; for more information about how to request NHS England approval and what to include in your publication text please see [this section of our documentation](https://www.opensafely.org/policies-for-researchers/).
+
+As with all OpenSAFELY projects, once a copiloted project is finished, published or it reaches its 1 year anniversary, the associated GitHub repository (and Jobserver outputs) need to be made public (see [this section of our documentation](https://docs.opensafely.org/publishing-repo/) for more information).
 
 ## What is our authorship policy?
 
