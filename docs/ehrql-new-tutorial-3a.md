@@ -166,3 +166,6 @@ Run the dataset definition.
        so that the patient population selection is *inverted*?
        Specifically, all patients previously selected are now not selected,
        and all patients previously unselected are now selected.
+    4. Can you change the population to include only patients born before 2000 and hospitalised? Ignore IMD for now. 
+    5. Can you add IMD value as a column?
+    6. Can you change the population to find only hospitalised males? Ignore IMD and age. 
