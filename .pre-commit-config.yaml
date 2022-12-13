@@ -17,7 +17,7 @@ repos:
       - "flake8-no-pep420"
 
   - repo: https://github.com/pycqa/isort
-    rev: 5.10.1
+    rev: 5.11.1
     hooks:
     - id: isort
 
