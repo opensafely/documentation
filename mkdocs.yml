@@ -1,4 +1,5 @@
 site_name: OpenSAFELY documentation
+site_url: !ENV MKDOCS_SITE_URL
 repo_url: https://github.com/opensafely/documentation
 nav:
   - Introduction: index.md
