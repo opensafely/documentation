@@ -40,7 +40,7 @@ there are three steps:
 ### Requirements
 
 In addition to the previous requirements,
-you will also need the [OpenSAFELY CLI](opensafely-cli.md) installed.
+you will also need the [OpenSAFELY CLI](../../../opensafely-cli.md) installed.
 
 ### The dataset definition we will work with
 
@@ -75,7 +75,7 @@ Using Data Builder in a `project.yaml` is much like working with other OpenSAFEL
 Running a `project.yaml` which contains a Data Builder action
 is much the same as for any other OpenSAFELY project.
 
-Use [`opensafely run`](opensafely-cli.md/#run) to run the `project.yaml`:
+Use [`opensafely run`](../../../opensafely-cli.md/#run) to run the `project.yaml`:
 
 1. In your terminal, change directory to where you have the example `project.yaml` file.
 2. Run `opensafely run extract_1a_minimal_population`

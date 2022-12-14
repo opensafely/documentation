@@ -18,7 +18,7 @@ particular clinical data domain.
 
 !!! note
     For researchers, the human-readable version of each Contract is
-    listed in the [Contracts reference](contracts-reference.md).
+    listed in the [Contracts reference](reference.md).
 
     For developers working on OpenSAFELY integrations, you can also see
     how [each Contract is specified in Python
@@ -32,7 +32,7 @@ providers](data-provider-integration.md) and researchers.
 
 ### How do OpenSAFELY Contracts fit into OpenSAFELY?
 
-Researchers write [dataset definitions](dataset-definition.md) to access
+Researchers write [dataset definitions](../dataset-definition.md) to access
 data tables from OpenSAFELY backends. This minimal example code
 accesses the `date_of_birth` column in the `patients` data table:
 
@@ -113,7 +113,7 @@ release of Data Builder. More Contracts will be added in future.
 !!! warning
     Some backends might deviate slightly from the suggested OpenSAFELY
     behaviour shared by most backends. Refer to the [OpenSAFELY
-    Contracts Reference](contracts-reference.md) for backends you intend
+    Contracts Reference](reference.md) for backends you intend
     to access with your dataset definition.
 
 ### More specialised Contracts
@@ -137,10 +137,10 @@ covered by any Contract. In these cases, a new Contract would be added.
 
 ### The OpenSAFELY Contracts reference
 
-The [OpenSAFELY Contracts reference](contracts-reference.md) has full
+The [OpenSAFELY Contracts reference](reference.md) has full
 details of each individual Contract. When writing a dataset definition,
 researchers should consult [the OpenSAFELY Contracts
-reference](contracts-reference.md) to see:
+reference](reference.md) to see:
 
 * the data offered by each OpenSAFELY backend
 * how that data is structured
@@ -150,7 +150,7 @@ reference](contracts-reference.md) to see:
 !!! warning
     The use of OpenSAFELY Contracts applies only when writing *dataset definitions* for Data Builder.
 
-    Contracts do not apply to [*study definitions*](study-def.md) written for
+    Contracts do not apply to [*study definitions*](../../study-def.md) written for
     our legacy cohort-extractor.
 
 !!! warning
@@ -163,7 +163,7 @@ Each OpenSAFELY Contract relates to a specific domain of health record
 data. The name of the Contract indicates the data domain covered by the
 Contract. Tables that satisfy these Contracts can be accessed in a
 dataset definition via [Data Builder's query language,
-ehrQL](ehrql-intro.md).
+ehrQL](../ehrql/intro.md).
 
 An OpenSAFELY Contract provides the following information for each
 associated table:

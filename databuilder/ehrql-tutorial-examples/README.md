@@ -16,7 +16,7 @@ The current process for adding a new example is:
 
 1. Create a new dataset and add it to the [`example-data`](example-data/) directory,
 2. Write the dataset definition and add it to this directory.
-   See the [ehrQL tutorial introduction](../../docs/ehrql-new-tutorial-intro.md#using-data-builders-command-line-interface)
+   See the [ehrQL tutorial introduction](../../docs/data-builder/ehrql/tutorial/intro.md#using-data-builders-command-line-interface)
    for an explanation of the filename convention.
 3. Build the dataset definition outputs
    (see below),

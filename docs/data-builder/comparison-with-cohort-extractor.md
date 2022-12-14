@@ -5,13 +5,13 @@
   Builder.
     * The current development approach is to implement a few features in Data
       Builder fully end-to-end.
-    * See the [ehrQL reference](ehrql-reference.md) for a complete list
+    * See the [ehrQL reference](ehrql/reference.md) for a complete list
       of supported features.
 * Data Builder has no current way to generate dummy data.
-    * You can supply a [CSV file containing dummy data](data-builder-dummy-data.md)
+    * You can supply a [CSV file containing dummy data](dummy-data.md)
       to Data Builder.
     * It is possible to generate dummy data via the previous
-      [cohort-extractor](study-def-expectations.md).
+      [cohort-extractor](../study-def-expectations.md).
 
 ## The development plan for cohort-extractor
 
@@ -31,12 +31,12 @@ However:
 !!! Note "More detail for existing cohort-extractor users"
 
     The dataset definition used by Data Builder has the same underlying
-    purpose as cohort-extractor's [study definition](study-def.md).
+    purpose as cohort-extractor's [study definition](../study-def.md).
 
     To extract data, an OpenSAFELY research study would typically use one of:
 
     * Data Builder with a dataset definition
-    * cohort-extractor with a [*study definition*](study-def.md)
+    * cohort-extractor with a [*study definition*](../study-def.md)
 
     Dataset definitions have a considerably different structure from the
     study definitions. You will need to refer to the new language to write

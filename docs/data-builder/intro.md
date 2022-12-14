@@ -21,13 +21,13 @@ With Data Builder:
 * **Researchers** can specify data they want to use in their research via a
   [*dataset definition*](dataset-definition.md).
 * **Data providers** can specify data they want to offer for research
-  via the [*OpenSAFELY Contracts*](contracts-intro.md)
+  via the [*OpenSAFELY Contracts*](contracts/intro.md)
   specification and implementation.
 
 ## Features
 ### Readable dataset definitions
 
-A new query language [ehrQL](ehrql-intro.md) has been developed for
+A new query language [ehrQL](ehrql/intro.md) has been developed for
 Data Builder. Researchers can now use a *dataset definition* to specify
 the data to be extracted from OpenSAFELY.
 
@@ -54,14 +54,14 @@ from the dataset definition. This is currently in development.
 For researchers familiar with OpenSAFELY, there is naturally a question as
 to why we are writing software to replace cohort extractor. Data Builder is
 intended to eventually replace the use of cohort-extractor in new studies.
-We have [more information](data-builder-vs-cohort-extractor.md) about the
+We have [more information](comparison-with-cohort-extractor.md) about the
 differences between cohort-extractor and Data Builder to read if you are
 interested.
 
 In OpenSAFELY's first two years, researchers have used cohort-extractor
 and study definitions to successfully complete a number of [research
 studies](https://www.opensafely.org/research/) using [multiple data
-sources and linked data](data-sources/intro.md).
+sources and linked data](../data-sources/intro.md).
 
 Data Builder is a complete redesign and reimplementation of
 cohort-extractor aimed at making OpenSAFELY even easier to work with for
@@ -77,16 +77,16 @@ Data Builder:
   different data backends.
 
 For more information on how Data Builder and Cohort Extractor compare,
-see [the development plan for Data Builder](data-builder-vs-cohort-extractor.md).
+see [the development plan for Data Builder](comparison-with-cohort-extractor.md).
 
 ## Reading the Data Builder documentation
 Other documentation pages explain in more detail the concepts to write a
 dataset definition:
 
-* Data Builder [quick start](data-builder-quick-start.md)
+* Data Builder [quick start](quick-start.md)
 * Writing a [dataset definition](dataset-definition.md)
-* The [dataset definition language, ehrQL](ehrql-intro.md)
-* The [OpenSAFELY Contracts](contracts-intro.md) that define what data
+* The [dataset definition language, ehrQL](ehrql/intro.md)
+* The [OpenSAFELY Contracts](contracts/intro.md) that define what data
   is available from the various OpenSAFELY data backends.
 
 ## Data Builder is still in development
@@ -98,7 +98,7 @@ dataset definition:
     indicated by its [current `v0` version](#versioning).
 
     We recommend that users still favour the existing [OpenSAFELY Cohort
-    Extractor](study-def.md) for their research.
+    Extractor](../study-def.md) for their research.
 
 
 

@@ -3,8 +3,8 @@
 ---8<-- 'includes/data-builder-danger-header.md'
 
 !!! warning
-    We recommend that you use Data Builder with the [OpenSAFELY CLI](opensafely-cli.md)
-    as instructed in the [ehrQL tutorial](ehrql-new-tutorial-intro.md).
+    We recommend that you use Data Builder with the [OpenSAFELY CLI](../../../opensafely-cli.md)
+    as instructed in the [ehrQL tutorial](intro.md).
 
 ## Limitations
 
@@ -14,7 +14,7 @@ This option is a fall back if:
 * and you understand how to install Python packages yourself with `pip`
 
 This installation option will allow you to run ehrQL dataset definitions only.
-You will not be able to run a full OpenSAFELY project via a [`project.yaml` pipeline](actions-pipelines.md).
+You will not be able to run a full OpenSAFELY project via a [`project.yaml` pipeline](../../../actions-pipelines.md).
 
 If you are unable to run Data Builder via Docker,
 you can try installing Data Builder directly using Python.

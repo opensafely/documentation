@@ -15,17 +15,17 @@
     (or close to ready)
     for public use.
 
-* [Introduction (this page)](ehrql-new-tutorial-intro.md)
-* [Dataset definition 1a](ehrql-new-tutorial-1a.md)
-* [Dataset definition 1b](ehrql-new-tutorial-1b.md)
-* [Dataset definition 2a](ehrql-new-tutorial-2a.md)
-* [Dataset definition 3a](ehrql-new-tutorial-3a.md)
-* [Dataset definition 4a](ehrql-new-tutorial-4a.md)
-* [Dataset definition 5a](ehrql-new-tutorial-5a.md)
-* [Dataset definition 6a](ehrql-new-tutorial-6a.md)
-* [Dataset definition 7a](ehrql-new-tutorial-7a.md)
-* [Using ehrQL and Data Builder in an OpenSAFELY project](ehrql-new-tutorial-opensafely-project.md)
-* [Conclusion](ehrql-new-tutorial-conclusion.md)
+* [Introduction (this page)](intro.md)
+* [Dataset definition 1a](1a.md)
+* [Dataset definition 1b](1b.md)
+* [Dataset definition 2a](2a.md)
+* [Dataset definition 3a](3a.md)
+* [Dataset definition 4a](4a.md)
+* [Dataset definition 5a](5a.md)
+* [Dataset definition 6a](6a.md)
+* [Dataset definition 7a](7a.md)
+* [Using ehrQL and Data Builder in an OpenSAFELY project](opensafely-project.md)
+* [Conclusion](conclusion.md)
 
 ## Audience
 
@@ -49,7 +49,7 @@ Stata or any other language.
 Familiarity with:
 
 * OpenSAFELY
-* How [electronic healthcare records are structured](data-sources/intro.md)
+* How [electronic healthcare records are structured](../../../data-sources/intro.md)
 
 would also be helpful,
 but is *not* essential.
@@ -91,9 +91,9 @@ Data Builder runs on Windows, macOS, and Linux either via:
 
 
 #### OpenSAFELY CLI
-The [OpenSAFELY CLI](opensafely-cli.md) requires a working Docker installation.
+The [OpenSAFELY CLI](../../../opensafely-cli.md) requires a working Docker installation.
 If you do not already have the OpenSAFELY CLI installed,
-refer to the [instructions](opensafely-cli.md).
+refer to the [instructions](../../../opensafely-cli.md).
 Once you have the OpenSAFELY CLI installed,
 you are ready to use Data Builder.
 
@@ -105,7 +105,7 @@ A Python package install will still allow you to follow this tutorial,
 but will not allow you to run full OpenSAFELY projects.
 
 We will not cover the Python installation here.
-Refer to the [separate page](ehrql-new-tutorial-python.md) on this.
+Refer to the [separate page](python.md) on this.
 
 ### Text editor
 
