@@ -790,7 +790,7 @@
               "type": "str",
               "constraints": [
                 "Must have a value",
-                "female, male, intersex, unknown"
+                "Must be one of: 'female', 'male', 'intersex', 'unknown'"
               ]
             },
             {
@@ -1013,7 +1013,7 @@
               "type": "str",
               "constraints": [
                 "Must have a value",
-                "female, male, intersex, unknown"
+                "Must be one of: 'female', 'male', 'intersex', 'unknown'"
               ]
             },
             {
@@ -1073,7 +1073,7 @@
           "type": "str",
           "constraints": [
             "Must have a value",
-            "female, male, intersex, unknown"
+            "Must be one of: 'female', 'male', 'intersex', 'unknown'"
           ]
         },
         {
