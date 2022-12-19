@@ -9,7 +9,6 @@ By the end of this tutorial, you should be able:
 * to describe and generate some simple operations that can be performed with ehrQL tables.
 * to describe the types of operations that can be carried out 
 * to explain the importance of data types.
-* to explain the difference between patient-level and event-level tables.
 
 ### Full Example
 

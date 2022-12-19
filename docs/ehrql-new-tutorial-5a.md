@@ -5,12 +5,13 @@
 ## Example dataset definition 5a: Handling missing values
 
 ### Learning objectives
+By the end of this tutorial, you should be able:
 
-* Understand how missing values are represented
-* Understand how to check for missing values
-* Understand how to replace missing values
+* to describe missing values are represented
+* to check for missing values
+* to replace missing values
 
-### Missing values
+### Full Example
 
 In the tutorial examples so far,
 all the data rows have been fully populated with values.
