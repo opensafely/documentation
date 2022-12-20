@@ -32,7 +32,7 @@ and some approaches to dealing with missing values.
 
 In this section, we will building up a dataset using data that has missing values. We will be using 2 different tables, hospitalisations and patient_address. Both of these tables contain missing data. The patient address table contains a column called system which has some missing values, and the patient address table has a column called index_of_multiple_deprivation_rounded. We came across this column before in a previous tutorial but this time, we have included some missing data.
 
-For the sake of brevity, the tables will not be displayed here but can be reviewed in the `csv/multiple3/` folder.  
+For the sake of brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple3/` folder.  
 
 The output of the query above should generate the table below: 
 

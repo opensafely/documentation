@@ -12,19 +12,19 @@ By the end of this tutorial, you should be able:
 
 ### Full Example
 
-In this section, we will be building up a more complex dataset definition that includes information about a patient's address and their hopsitalisation record. This means that we are combining 3 different tables: patients, patient_address and hopsitalisations. 
+In this section, we will be building up a more complex dataset definition that includes information about a patient's address and their hopsitalisation record. This means that we are combining 3 different tables: patients, patient_address and hospitalisations. 
 
 In this example, instead of solely considering the year of birth for each patient,
 we look for specific details of the index of multiple deprivation (IMD)
 where patients live. Importantly we are restricting the population by IMD rather than creating this as a column.
+
+For the sake of brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple2/` folder. 
 
 ???+ example "Dataset definition: `3a_multiple2_dataset_definition.py`"
 
     ```python title="3a_multiple2_dataset_definition.py"
     ---8<-- "databuilder/ehrql-tutorial-examples/3a_multiple2_dataset_definition.py"
     ```
-
-For the sake of brevity, the tables will not be displayed here but can be reviewed in the `csv/multiple2/` folder. 
 
 The output of the query above should generate a table with sex and was hopsitalised as columns. 
 
@@ -48,6 +48,8 @@ For those patients, the output dataset shows:
 
 ### Import Statements
 Similarly to the previous sections we are importing the tables that we wish to work with. In this case we need patients, patient_address and hospitalisations. 
+
+This introduces the concept of patient-level and event-level tables. Put simply `patient` is a patient-level table where one row represents one patient. Whereas `patient_address` is event-level where each row is an event and a patient can have many events. In this case, when someone moves house and gets a new address. See the [explainer](data-builder-patient-event-tables) for more information. 
 
 Note in the code, there has been addition of paratheses. These are optional and have been added in to make it easier to read. 
 

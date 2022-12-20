@@ -19,7 +19,7 @@ By the end of this tutorial, you should be able:
     ```python
     ---8<-- "databuilder/ehrql-tutorial-examples/4a_multiple2_dataset_definition.py"
     ```
-In this section, we will be building up even more complex dataset definitions, in particular concentrating on date operations. We will be using 2 different tables, patients and hospitalisations. For the sake of brevity, the tables will not be displayed here but can be reviewed in the `csv/multiple2/` folder.  
+In this section, we will be building up even more complex dataset definitions, in particular concentrating on date operations. We will be using 2 different tables, patients and hospitalisations. For the sake of brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple2/` folder.  
 
 The output of the query above should generate a table with sex, year of birth, and last day of month before first hospitalisation as columns. 
 

@@ -6,7 +6,9 @@ By the end of this tutorial, you should able:
 
 ## Full Example
 
-We start with a minimal dataset definition. 
+For all of our examples in this series of tutorials, we will start with the full dataset definition and then explain it line by line. 
+
+In this first tutorial, we will start with a minimal dataset definition. 
 This finds the patients whose year of birth is 2000 or later.
 
 ???+ example "Dataset definition: `1a_minimal_dataset_definition.py`"

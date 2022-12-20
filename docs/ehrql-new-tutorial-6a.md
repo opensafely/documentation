@@ -24,7 +24,7 @@ In this tutorial, we are building a more complex queries and learn how to combin
 
 In this section, we will be using two different tables, patients and clinical events. Patients is as before a patient-level table meaning that each row in the table represents one patient, and patients can only appear in the table once. Clinical events is another event-level table (we have previously come across medication and patient address tables). This means that a row is an event like a diagnosis and patients can have multiple events, i.e. multiple rows in the table. 
 
-For the sake of brevity, the tables will not be displayed here but can be reviewed in the `csv/multiple4/` folder.  
+For the sake of brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple4/` folder.  
 
 The output of the query above should generate the table below: 
 

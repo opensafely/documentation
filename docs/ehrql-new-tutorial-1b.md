@@ -37,7 +37,7 @@ In this case, we see patient 2, 5 and 7.
 Only the last line is new. In Python code, like in many other languages, the dot operator, `.`, appears frequently.
 
 Generally, `.` is used when you want to access something
-that is part of, or belongs to a value. That "something" is typically either a data attribute (itself a value), or a method (a function).
+that is part of, or belongs to a value. That "something" is typically either a data attribute (itself a value), or a method (a function). Functions will have brackets, with may accept arguments. Attibutes will not have brackets. 
 
 Sex is an inbuilt value that is available to the patient table. See the reference docs on what other values are inbuilt. 
 

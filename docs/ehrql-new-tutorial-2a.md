@@ -15,7 +15,7 @@ By the end of this tutorial, you should be able:
 OpenSAFELY backends provide several different collections of related data on patients. As you might expect if you have worked with databases before,
 each collection is made available via Data Builder's *tables*.
 
-For the purposes of this tutorial, each individual table is stored in a single CSV file, where the CSV filename indicates the table name. This is the simulate a real backend with multiple tables available. 
+For the purposes of this tutorial, each individual table is stored in a single CSV file, where the CSV filename indicates the table name. This is to simulate a real backend with multiple tables available. 
 
 In the previous definitions, we accessed just a single table. This dataset definition accesses multiple tables
 and also demonstrates some of the querying that ehrQL permits.
@@ -55,7 +55,7 @@ while `patients` is a *patient table*. We will cover the difference between thes
 For now, it is sufficient to understand that `prescriptions` may contain multiple entries per patient.
 
 ### Query the prescription table
-The final line of dataset definition finds the most recently prescribed Dictionary of Medicines and Devices code for a patient.
+The final line of dataset definition finds the most recently prescribed Dictionary of Medicines and Devices (DMD) code for a patient.
 
 This is done by sorting the table by `processing_date` and picking the last entry for a patient.
 You can see the `sort_by` method described in the [ehrQL reference](ehrql-reference.md#212-sort-by-column-pick-last).
