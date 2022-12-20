@@ -82,22 +82,23 @@ we can extract individual components — year, month, day — of a date.
 ### First Hospitalisation in range
 The aim here is to find the last date of the month that immediately proceeded the first hospitalisation of a patient. 
 
-First of all, we need to find the first date of hospitalisation. We have already created the subset of hospitalisation in range as a variable for use setting the population. We can reuse this subset to find the first date of hospitalisation. 
+First of all, we need to find the first date of hospitalisation. We have already created the subset of hospitalisation in range as a variable for use in setting the population. We can reuse this subset to find the first date of hospitalisation. 
 
-We do this by sorting the hospitalisation for each patient (remember event level data so patients can have many hospitalisation and hence rows of data) by date. We then use `first_for_patient()` to take the first of these values. This means we will take the first date. 
+We do this by sorting the hospitalisation for each patient by date(remember this is event level data so patients can have many hospitalisations and hence rows of data). We then use `first_for_patient()` to take the first of these values. This means we will take the first date. 
 
-Now we need to find the proceeding month and the last date of each month. The easiest way to do this is to get the first of the month for the hospitalisation date and then subtract 1 day to get the last day of the proceding month. This allows us to account for varying lengths of months, rather than setting it at 28th of the month. To do this, we:
+Now we need to find the proceding month and the last date of this month. The easiest way to do this is to get the first of the month for the hospitalisation date and then subtract 1 day to get the last day of the proceding month. This allows us to account for varying lengths of months, rather than setting it at 28th of the month. To do this, we:
 
 1. Add the variable to the dataset with `dataset.last_day_of_month_before_first_hospitalisation` 
-2. Round the date down to the first of the month (`to_first_of_month()`
+2. Round the date down to the first of the month (`to_first_of_month()`)
 3. Subtract 1 day (`subtract_days(1)`) to get the last date of the proceeding month. 
 
+This function `subtract_days()` is an example of the type of date operations that can be carried out on the dates. See the documentation for further information. 
 
 ## Your Turn
 Run the dataset definition. 
 
 !!! question
-    1. Can you modify the date conditions in this dataset definitions
+    1. Can you modify the date conditions in this dataset definition
        to _include_ both dates in the range,
        instead of excluding the specified end date?
        See the [ehrQL reference](ehrql-reference.md) for the operations and methods on dates.
