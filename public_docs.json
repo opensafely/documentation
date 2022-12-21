@@ -5180,7 +5180,7 @@
                   ]
                 ]
               },
-              "series": "_series(date(2000, 1, 1)) + days(p.i1)",
+              "series": "date(2000, 1, 1) + days(p.i1)",
               "output": [
                 [
                   "1",
@@ -5211,7 +5211,7 @@
                   ]
                 ]
               },
-              "series": "_series(date(2000, 1, 1)) + months(p.i1)",
+              "series": "date(2000, 1, 1) + months(p.i1)",
               "output": [
                 [
                   "1",
@@ -5242,7 +5242,7 @@
                   ]
                 ]
               },
-              "series": "_series(date(2000, 1, 1)) + years(p.i1)",
+              "series": "date(2000, 1, 1) + years(p.i1)",
               "output": [
                 [
                   "1",
