@@ -32,7 +32,7 @@ jobs:
 
       - name: Publish
         if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: cloudflare/pages-action@c4f0d2e08d902c9cdfe3cdf854896c6f363ae5be  # v1.1.0
+        uses: cloudflare/pages-action@c2ad89679f0dee1ff4bcf9b8bbe1cf52d176cb29  # v1.3.0
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
