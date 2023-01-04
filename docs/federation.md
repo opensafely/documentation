@@ -86,6 +86,28 @@ It would be better if raw data were curated using OpenSAFELY tools in situ at th
 
 At the moment, when a user wants to run code in two backends, they request via the OpenSAFELY dashboard that code be executed in each one separately. This is a small thing, but we'd like to automate the task: it should be possible for a single request to be sent to all supported backends in one go, and scheduled to be run at regular intervals. If we combine this with automated output releasing, it will be possible to develop powerful dashboards that combine data from every OpenSAFELY backend very quickly. For example, we are also developing data curation components that will query every backend for metadata and data quality metrics, and combine them into a single report.
 
+### OpenSAFELY Federated Analytics Journal Paper Examples
+
+_Trends and clinical characteristics of COVID-19 vaccine recipients: a federated analysis of 57.9 million patients' primary care records in situ using OpenSAFELY_
+British Journal of General Practice [https://doi.org/10.3399/bjgp.2021.0376](https://doi.org/10.3399/bjgp.2021.0376) 
+
+_Recording of "COVID-19 vaccine declined": a cohort study on 57.9 million National Health Service patient's records in situ using OpenSAFELY, England, 8 December 2020 to 25 May 2021_ 
+Eurosurveillance [https://doi.org/10.2807/1560-7917.ES.2022.27.33.2100885](https://doi.org/10.2807/1560-7917.ES.2022.27.33.2100885) 
+
+_Potentially inappropriate prescribing of DOACs to people with mechanical heart valves: A federated analysis of 57.9 million patients' primary care records in situ using OpenSAFELY_
+Thrombosis Research [https://doi.org/10.1016/j.thromres.2022.01.023](https://doi.org/10.1016/j.thromres.2022.01.023) 
+
+_Changes in English medication safety indicators throughout the COVID-19 pandemic: a federated analysis of 57 million patients' primary care records in situ using OpenSAFELY_
+MedRxiv Preprint [https://doi.org/10.1101/2022.05.05.22273234](https://doi.org/10.1101/2022.05.05.22273234) 
+
+_Clinical coding of long COVID in English primary care: a federated analysis of 58 million patient records in situ using OpenSAFELY_
+British Journal of General Practice - [https://doi.org/10.3399/BJGP.2021.0301](https://doi.org/10.3399/BJGP.2021.0301) 
+
+_Eleven key measures for monitoring general practice clinical activity during COVID-19 using federated analytics on 48 million adults' primary care records through OpenSAFELY_
+MedRxiv Preprint - [https://doi.org/10.1101/2022.10.17.22281058](https://doi.org/10.1101/2022.10.17.22281058) 
+
+
+
 
 
 ## Get in touch!
