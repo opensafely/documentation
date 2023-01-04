@@ -47,9 +47,9 @@ flake8==4.0.1 \
     #   -r databuilder/requirements.dev.in
     #   flake8-builtins
     #   flake8-no-pep420
-flake8-builtins==2.0.1 \
-    --hash=sha256:5aeb420130efe8acbdaf8708a582492413293a3ca25653518f687937879650a5 \
-    --hash=sha256:a5b9ca9cbc921c4455ea02e2e9963c990ac66d028c15b654625e012a1e3bbb4d
+flake8-builtins==2.1.0 \
+    --hash=sha256:12ff1ee96dd4e1f3141141ee6c45a5c7d3b3c440d0949e9b8d345c42b39c51d4 \
+    --hash=sha256:469e8f03d6d0edf4b1e62b6d5a97dce4598592c8a13ec8f0952e7a185eba50a1
     # via -r databuilder/requirements.dev.in
 flake8-implicit-str-concat==0.3.0 \
     --hash=sha256:a89ebc50567790fb7b83e032ed4014ae0db70e35d89e269c3323967135023600 \
