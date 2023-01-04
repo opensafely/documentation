@@ -106,8 +106,8 @@ British Journal of General Practice - [https://doi.org/10.3399/BJGP.2021.0301](h
 _Eleven key measures for monitoring general practice clinical activity during COVID-19 using federated analytics on 48 million adults' primary care records through OpenSAFELY_
 MedRxiv Preprint - [https://doi.org/10.1101/2022.10.17.22281058](https://doi.org/10.1101/2022.10.17.22281058) 
 
-
-
+_The impact of the COVID-19 pandemic on Antipsychotic Prescribing in individuals with autism, dementia, learning disability, serious mental illness or living in a care home: A federated analysis of 59 million patients' primary care records in situ using OpenSAFELY_
+In press
 
 
 ## Get in touch!
