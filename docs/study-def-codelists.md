@@ -51,7 +51,7 @@ In some cases you may only want a variable to use a one or two codes, e.g you wa
 
 ```py
 weight_codes = codelist(
-    ["27113001", "162763007"], system = "snomed"
+    ["27113001", "162763007"], system="snomed"
 )
 ```
 
