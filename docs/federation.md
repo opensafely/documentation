@@ -28,7 +28,7 @@ flowchart LR
 
 ## Example walkthrough of federation
 
-We have various examples of completed and published analyses that were conducted using the OpenSAFELY federated analytics tools across 58 million patients’ full GP records. [_Trends and clinical characteristics of COVID-19 vaccine recipients_](https://bjgp.org/content/72/714/e51) (British Journal of General Practice, 2022) examines factors associated with having a COVID-19 vaccine.  The process for federated analytics is very similar to running OpenSAFELY code in a single setting.
+We have various [examples](#examples) of completed and published analyses that were conducted using the OpenSAFELY federated analytics tools across 58 million patients’ full GP records. [_Trends and clinical characteristics of COVID-19 vaccine recipients_](https://bjgp.org/content/72/714/e51) (British Journal of General Practice, 2022) examines factors associated with having a COVID-19 vaccine.  The process for federated analytics is very similar to running OpenSAFELY code in a single setting.
 
 The researcher wrote the code as a **single codebase**. As with all OpenSAFELY activity, this is composed of small, cross-backend components called *actions*.
 
@@ -86,7 +86,7 @@ It would be better if raw data were curated using OpenSAFELY tools in situ at th
 
 At the moment, when a user wants to run code in two backends, they request via the OpenSAFELY dashboard that code be executed in each one separately. This is a small thing, but we'd like to automate the task: it should be possible for a single request to be sent to all supported backends in one go, and scheduled to be run at regular intervals. If we combine this with automated output releasing, it will be possible to develop powerful dashboards that combine data from every OpenSAFELY backend very quickly. For example, we are also developing data curation components that will query every backend for metadata and data quality metrics, and combine them into a single report.
 
-### OpenSAFELY Federated Analytics Journal Paper Examples
+### Examples
 
 _Trends and clinical characteristics of COVID-19 vaccine recipients: a federated analysis of 57.9 million patients' primary care records in situ using OpenSAFELY_
 British Journal of General Practice [https://doi.org/10.3399/bjgp.2021.0376](https://doi.org/10.3399/bjgp.2021.0376) 
