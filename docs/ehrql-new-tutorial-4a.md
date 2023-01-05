@@ -6,42 +6,40 @@
 
 ### Learning objectives
 
-* Understand how to specify dates in dataset definitions
-* Understand date operations
+By the end of this tutorial, you should be able to:
 
-### The dataset definition we will work with
+* specify dates in dataset definitions
+* explain date operations
+* use the key word `take` in dataset definitions
+
+### Full Example
 
 ???+ example "Dataset definition: `4a_multiple2_dataset_definition.py`"
 
     ```python
     ---8<-- "databuilder/ehrql-tutorial-examples/4a_multiple2_dataset_definition.py"
     ```
+In this section, we will be building up even more complex dataset definitions,
+concentrating on date operations. We will be using two different tables:
 
-### The `multiple2` data source
+* `patients`
+* `hospitalisations`
 
-???+ example "Data table: `multiple2/patients.csv`"
+For brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple2/` folder.
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patients.csv') }}
+The output of the query above should generate a table with the columns:
 
-???+ example "Data table: `multiple2/hospitalisations.csv`"
-
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/hospitalisations.csv') }}
-
-???+ example "Data table: `multiple2/patient_address.csv`"
-
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple2/patient_address.csv') }}
-
-### Dataset definition 4a output
+* sex
+* year of birth
+* last day of month before first hospitalisation as columns.
 
 ???+ example "Output dataset: `outputs/4a_multiple2_dataset_definition.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/4a_multiple2_dataset_definition.csv') }}
 
-### Explanation of the dataset definition
+## Line by line explanation
 
-#### Summary
-
-This dataset definition sets the population to patients:
+This dataset definition finds the patients whose data meet all of the following conditions:
 
 * born before the 1st of January, 2000.
 * *and* hospitalised in a given date range.
@@ -52,61 +50,62 @@ year of birth,
 and the last day of the month
 prior to when the patient was first hospitalised in that date range.
 
-#### Specifying dates in a dataset definition
+### Import statements
 
-In this dataset definitions,
-we specify dates of interest
+As in the previous tutorials,
+we import the tables that we wish to work with.
+In this case, we only need two tables: patients and hospitalisations.
+
+Remember that `hospitalisations` is an event level data table.
+This means that it captures information at an event level of hospitalisation
+where each row represents a hospitalisation episode.
+Patients can have many hospitalisations.
+This is in contrast to patient level tables such as patients where each row represents one patient.
+
+### Specifying dates in a dataset definition
+
+In this dataset definitions, we specify dates of interest
 with strings written in the ISO8601 format: YYYY-MM-DD.
 
-Although these are just Python strings,
-Data Builder can compare these string dates to
-date values in ehrQL series and frames
-without any further step.
+We are creating a start date and an end date of the study.
+We will use these dates with the `hospitalisation` variable
+to restrict the population to those with hospitalisations inclusive of this date range.
 
-If you need more flexibility,
-ehrQL also allows specifying dates as [Python `datetime` dates](https://docs.python.org/3/library/datetime.html#date-objects);
-[see the ehrQL reference](ehrql-reference.md).
-
-#### Comparing dates
+### Hospitalisations within a range
 
 We select the hospitalisation rows that match a condition
 with the `take` method.
 
-We will explain `take` more in a subsequent tutorial.
+This restricts the hospitalisation data to data that matches the condition passed into the `take()` function.
+We are passing in a condition
+that the date column in the hospitalisation table is on or after the start date created above,
+and is before the end date created above.
+This creates a subset of the hospitalisation data.
 
-!!! todo
-    The use of `take` here is because of
-    <https://github.com/opensafely-core/databuilder/issues/757>
-    — it's not possible to just combine the series
-    and then check if a value exists.
+!!! info
+    Instead of using `start_date`,
+    we could specify `2020-03-01`.
+    However, by providing a specific named variable,
+    it helps to both explain what the value means
+    and allow the value to be reused.
 
-    We could reorder to move this after `take` is explained.
+### Set the population
 
-This result is a new ehrQL frame,
-based on the existing hospitalisation frame.
-but only containing rows with hospitalisations
-that fall within the given dates,
-excluding the final date itself.
+Now we have the hospitalisation subset of data,
+we can use this to create our dataset.
+Just as with the date of birth examples in previous tutorials,
+we can also perform basic comparisons on dates
+to check equality or to determine if one date is before or after another.
 
-We can also perform basic comparisons on dates
-to check equality
-or to determine if one date is before or after another.
+With string provided dates,
+we can use Python's standard comparison operators like: `<`, `>=`, `!=`.
 
-With string provided dates, we can use Python's standard comparison operators like: `<`, `>=`, `!=`.
+We are using a special function called `exists_for_patient()` to restrict the population.
+This checks if a row exists for a patient and if it does it passes back `True`.
+In this case we are restricting the population by only those who have been hospitalised,
+indicated by their presence as rows in the hospitalisation subset.
 
-There also equivalent methods for comparison
-such as `.is_on_or_after()`
-that are more versatile.
-These comparisons do not only work with a specified date value,
-but also work with entire ehrQL date series.
-This is a powerful means to compare date values in different columns, per patient.
-
-!!! todo
-    Check: is it just string provided dates that work like this?
-    Or do date series,
-    and `datetime` objects work like this too?
-
-#### Extracting components of dates
+### Extracting components of data
 
 Next, we restrict the population to patients
 who meet our [criteria](ehrql-new-tutorial-4a.md#summary).
@@ -117,24 +116,46 @@ As we have done in previous dataset definitions,
 and we do here,
 we can extract individual components — year, month, day — of a date.
 
-These components are represented as *integer* values.
+### First hospitalisation in range
 
-#### Operations on dates
+The aim here is to find the last date of the month
+that immediately proceeded the first hospitalisation of a patient.
 
-We can perform basic arithmetic operations on ehrQL date values.
-Here we subtract the same number of days
-from a given series of dates.
+First of all, we need to find the first date of hospitalisation.
+We have already created the subset of hospitalisation in range
+as a variable for use in setting the population.
+We can reuse this subset to find the first date of hospitalisation.
 
-We also extract a more complicated variable related to the first hospitalisation date.
-We extract the first hospitalisation date in the range
-and shift this to the last day of the previous month.
+We do this by sorting the hospitalisation for each patient by date.
+Remember that this is event level data
+so patients can have many hospitalisations and hence rows of data.
+We then use `first_for_patient()` to take the first of these values.
+This means we will take the first date.
 
-### Tutorial questions
+Now we need to find the preceding month and the last date of this month.
+The easiest way to do this is to get the first of the month for the hospitalisation date
+and then subtract 1 day to get the last day of the preceding month.
+This allows us to account for varying lengths of months,
+rather than setting it at 28th of the month.
+
+To do this, we:
+
+1. Add the variable to the dataset with `dataset.last_day_of_month_before_first_hospitalisation`
+2. Round the date down to the first of the month (`to_first_of_month()`)
+3. Subtract 1 day (`subtract_days(1)`) to get the last date of the proceeding month.
+
+This function `subtract_days()` is an example of the type of date operations that can be carried out on the dates.
+
+## Your Turn
+
+Run the dataset definition.
 
 !!! question
-    1. Can you modify the date conditions in this dataset definitions
+    1. Can you modify the date conditions in this dataset definition
        to _include_ both dates in the range,
        instead of excluding the specified end date?
        See the [ehrQL reference](ehrql-reference.md) for the operations and methods on dates.
     2. Can you modify the dataset definition
        to find the date seven days after hospitalisation?
+    3. Can you modify the dataset definition to find the 15th of the month of hospitalisation?
+    4. Can you add a new column to get the date of the last hospitalisation for each patient?

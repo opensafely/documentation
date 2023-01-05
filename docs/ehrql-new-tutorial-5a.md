@@ -6,11 +6,11 @@
 
 ### Learning objectives
 
-* Understand how missing values are represented
-* Understand how to check for missing values
-* Understand how to replace missing values
+By the end of this tutorial, you should be able to:
 
-### Missing values
+* describe how missing values are represented in ehrQL
+* check for missing values
+* replace missing values
 
 In the tutorial examples so far,
 all the data rows have been fully populated with values.
@@ -24,10 +24,7 @@ Missing data values in ehrQL are represented with a special "null" value.
 We will explore how ehrQL's null values work in the below dataset definition
 and some approaches to dealing with missing values.
 
-!!! note
-    Null values in the inputs and outputs in this documentation are represented as blanks in the tables.
-
-### The dataset definition we will work with
+### Full example
 
 ???+ example "Dataset definition: `5a_multiple3_dataset_definition.py`"
 
@@ -35,25 +32,29 @@ and some approaches to dealing with missing values.
     ---8<-- "databuilder/ehrql-tutorial-examples/5a_multiple3_dataset_definition.py"
     ```
 
-### The `multiple3` data source
+In this section, we will build up a dataset using data that has missing values.
+We will use two different tables:
 
-???+ example "Data table: `multiple3/hospitalisations.csv`"
+* `hospitalisations`
+* `patient_address`
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple3/hospitalisations.csv', keep_default_na=False) }}
+Both of these tables contain missing data:
 
-???+ example "Data table: `multiple3/patient_address.csv`"
+* the `hospitalisations` table has a column called `system` with missing values
+* the `patient address` table has a column called `index_of_multiple_deprivation_rounded`
+  We came across this column before in a previous tutorial but this time, we have included some missing data.
 
-    {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/multiple3/patient_address.csv', keep_default_na=False) }}
+For brevity,
+the tables will not be displayed here
+but can be reviewed in the `example-data/multiple3/` folder.
 
-### Dataset definition 5a output
+The output of the query above should generate the table below:
 
 ???+ example "Output dataset: `outputs/5a_multiple3_dataset_definition.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/5a_multiple3_dataset_definition.csv') }}
 
-### Explanation of the dataset definition
-
-#### Summary
+## Line by line explanation
 
 This dataset definition:
 
@@ -61,35 +62,49 @@ This dataset definition:
 * adds the most recent hospitalisation date for a patient to the dataset
 * adds details of the index of multiple deprivation
 
-#### Initial selection of data
+We will handle the missing data as follows:
+
+* Where `most_recent_hospitalisation_system` in the hospitalisation table is missing, we will replace this with `UnknownCodeSystem`
+* Where `imd` is missing, we will replace this with a `-1`
+
+### Most recent hospitalisation
 
 As we have seen before,
 we can sort and select an entry per patient
 with methods like `sort_by()`, and `first_for_patient()`.
 
-We use these methods to create two separate ehrQL frames:
+This time, we are sorting and taking the last hospitalisation for the patient with `last_for_patient()`.
 
-* one containing the latest hospitalisation entry for each patient
-* one containing the lowest value of index of multiple deprivation (IMD) for each patient
+### Lowest IMD address
 
-#### Replacing nulls: null hospitalisation coding system values
+This is similar to what we have done before.
+In this case we sort rows by `index_of_multiple_deprivation_rounded`,
+and take the first row for the patient.
 
-Reading through the provided data manually,
-can you figure out which of the rows selected in the dataset definition have missing hospitalisation coding system values?
+### Set population
 
-Instead of leaving the value as missing,
-we can specify a replacement value for nulls
-as we have done in this dataset definition.
+We are trying to capture patients who have a recent hospitalisation.
+For this, we check if a patient has row in the `most_recent_hospitalisation` subset (created above).
+We can use `exists_for_patient()` as we did in a previous tutorial.
+
+### Find code for hospitalisation
+
+We want to find the code that is associated with the hospitalisation.
+This is directly accessible as a column in the hospitalisation table.
+
+### Replacing nulls: null hospitalisation coding system values
+
+We now need to deal with the missing data in the hospitalisation code.
+We can specify a replacement value for nulls as we have done in this dataset definition.
 
 This is via the `if_null_then()` method.
 
 The result is that the dataset contains `UnknownCodeSystem` in the data in place of the nulls.
 
-##### Sorting with nulls: null IMD values
+### Replacing nulls: IMD
 
-Reading through the provided data manually,
-can you find which of the rows selected in the dataset definition have a null IMD value?
-
+We now need to deal with the missing data
+in the patient address table in the column of `index_of_multiple_deprivation_rounded`.
 You might reasonably think that,
 since we selected the lowest value of index of multiple deprivation,
 that this lowest value would be a non-null value.
@@ -98,37 +113,24 @@ However, ehrQL sorts null values *before* non-null values.
 If a patient has null and non-null values,
 then the `first_for_patient()` will be a null value.
 
-!!! todo
-    Is the sort order defined where there are multiple null values?
-    And, if so, how?
-
 This results in the "lowest" IMD value in some cases being null.
 
 In the dataset definition,
-we replace the missing values with a known invalid value of the correct type (`-1`);
-IMD values are integers starting at 1.
+we replace the missing values with a negative value known to be invalid,
+but of the correct integer type (`-1`).
+This is via the `if_null_then()` method.
 
-##### Checking null values
+### Check if lowest IMD is valid
 
-We can also check,
-as we have,
-if values are null or not.
+We want to create a variable that checks if an IMD is valid.
+If so, returns a True, and if not, returns a False.
+We use `is_not_null()` to handle the nulls.
 
 Here, we checked that values were not null with the `is_not_null()` method.
-You can use the `is_null()` method to check if values are null.
+We could have also used the `is_null()` method to check if values are null.
 In both cases, the result is a Boolean `True` or `False` for each row.
 
-#### Advice for working with data without access to it directly
-
-!!! todo
-    We should have some kind of warning that we can see all the underlying data in the tutorial.
-    When working with OpenSAFELY backends,
-    by design,
-    you are not able to view the data.
-    Should users assume that nulls are always possible?
-    Or does it depend on the specifics of the contract?
-
-### Tutorial exercises
+## Your Turn
 
 !!! question
     1. Can you modify the dataset definition
