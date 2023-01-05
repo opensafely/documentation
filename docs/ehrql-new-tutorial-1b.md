@@ -4,15 +4,15 @@
 
 ## Example dataset definition 1b: Adding an extra output column from a minimal data source
 
-By the end of this tutorial, you should to be able:
+By the end of this tutorial, you should be able to:
 
-* to retrieve additional data columns
-* to be able to explain to a novice what is involved in creating a `Dataset`
+* retrieve additional data columns
+* explain what is involved in creating a `Dataset`
 
 ### Full Example
 
-We will start with a similar dataset definition that we 
-used in the previous example with the addition of an extra output column, for sex. 
+We will start with a similar dataset definition that we used in the previous example
+with the addition of an extra output column, for sex.
 
 ???+ example "Dataset definition: `1b_minimal_dataset_definition.py`"
 
@@ -20,28 +20,42 @@ used in the previous example with the addition of an extra output column, for se
     ---8<-- "databuilder/ehrql-tutorial-examples/1b_minimal_dataset_definition.py"
     ```
 
-If we run this against the sample data provided, it will pick out only patients who were born in 2000 or later, and will also provide information about sex as a new column. 
+If we run this against the sample data provided, it will pick out only patients who were born in 2000 or later, and will also provide information about sex as a new column.
 
 ???+ example "Data table: `minimal/patients.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/example-data/minimal/patients.csv') }}
 
-In this case, we see patient 2, 5 and 7. 
+In this case, we see patient 2, 5 and 7.
 
 ???+ example "Output dataset: `outputs/1b_minimal_dataset_definition.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/1b_minimal_dataset_definition.csv') }}
 
 ## Line by line explanation
+
 ### Addition of Sex
-Only the last line is new. In Python code, like in many other languages, the dot operator, `.`, appears frequently.
 
-Generally, `.` is used when you want to access something
-that is part of, or belongs to a value. That "something" is typically either a data attribute (itself a value), or a method (a function). Functions will have brackets, with may accept arguments. Attibutes will not have brackets. 
+Only the last line is new.
 
-Sex is an inbuilt value that is available to the patient table. See the reference docs on what other values are inbuilt. 
+!!! info
+    In Python code, like in many other languages, the dot operator, `.`, appears frequently.
+
+    Generally, `.` is used when you want to access something "belonging" to a value.
+    That "something" is typically either a data attribute,
+    or a method (a function).
+    Methods will have brackets, and may accept arguments.
+    Attributes will not have brackets.
+
+`sex` is a data attribute that is available on the `patient` table
+and can be thought of as corresponding to the `sex` column.
+
+Here, we can simply look at the raw data tables to see the available columns.
+For real OpenSAFELY data tables, this is not possible,
+but you can use the contracts documentation to discover which columns are available.
 
 ## Your turn
+
 Run the dataset definition by:
 
 ```

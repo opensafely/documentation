@@ -5,16 +5,19 @@
 ## Example dataset definition 6a: Filtering and aggregation
 
 ### Learning objectives
-By the end of this tutorial, you should be able:
 
-* to explain how to filter rows
-* to be able to implement filtering rows
-* to combine filters 
-* to be able to implement aggregation of values
+By the end of this tutorial, you should be able to:
 
-In this tutorial, we are building a more complex queries and learn how to combine different filters into one statement. We also learn what sort of inbuild aggregation of values are available within the ehrQL.
+* explain how to filter rows
+* implement filtering of rows
+* combine filters
+* implement aggregation of values
 
-### Full Example
+In this tutorial, we will develop more complex queries
+and learn how to combine different filters into one statement.
+We also learn what sort of inbuild aggregation of values are available within ehrQL.
+
+### Full example
 
 ???+ example "Dataset definition: `6a_multiple4_dataset_definition.py`"
 
@@ -22,17 +25,25 @@ In this tutorial, we are building a more complex queries and learn how to combin
     ---8<-- "databuilder/ehrql-tutorial-examples/6a_multiple4_dataset_definition.py"
     ```
 
-In this section, we will be using two different tables, patients and clinical events. Patients is as before a patient-level table meaning that each row in the table represents one patient, and patients can only appear in the table once. Clinical events is another event-level table (we have previously come across medication and patient address tables). This means that a row is an event like a diagnosis and patients can have multiple events, i.e. multiple rows in the table. 
+In this section, we will use two different tables: `patients` and `clinical_events`.
+`patients` is, as before, a patient-level table
+meaning that each row in the table represents one patient,
+and patients can only appear in the table once.
 
-For the sake of brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple4/` folder.  
+`clinical_events` is another event-level table.
+This means that a row is an event like a diagnosis.
+Patients can have multiple events and therefore multiple rows in the table.
 
-The output of the query above should generate the table below: 
+For brevity, the tables will not be displayed here but can be reviewed in the `example-data/multiple4/` folder.
+
+The output of the query above should generate the table below:
 
 ???+ example "Output dataset: `outputs/6a_multiple4_dataset_definition.csv`"
 
     {{ read_csv('databuilder/ehrql-tutorial-examples/outputs/6a_multiple4_dataset_definition.csv', keep_default_na=False) }}
 
 ## Line by line explanation
+
 In this dataset definition, we select details of patients who:
 
 * have had a particular clinical event code recorded
@@ -42,33 +53,42 @@ In this dataset definition, we select details of patients who:
 We then extract:
 
 * the patient's date of birth
-* the maximum numeric value recorded for the patient for the specified
-  clinical event code
+* the maximum numeric value recorded for the patient for the specified clinical event code
 * the number of matching clinical events that exceed the given threshold
 
 ### Filtering clinical events
-We create a variable called `tutorial_code_system_events`. This filters the clinical events table to include only events that belong to a coding system called `TutorialCodesystem`. 
+
+We create a variable called `tutorial_code_system_events`.
+This filters the clinical events table to include only events
+that belong to a coding system called `TutorialCodesystem`.
 
 The `take()` and `drop()` methods allow filtering of table rows:
 
 * `take()` specifies rows that you wish to *include*
 * `drop()` specifies rows that you wish to *exclude*
 
-Both `take()` and `drop()` require an expression inside their parentheses that evaluates to a Boolean `True` or `False` for each row.
+Both `take()` and `drop()` require an expression inside their parentheses
+that evaluates to a Boolean `True` or `False` for each row.
 
-In previous tutorial, we have come across `take()`. On this occasion, we are going to use `drop` to drop `AnotherCodingSystem`. Rows that result in a `True` value for this expression then have the filter applied in the result.
+In previous tutorials, we have used `take()`.
+In this example,
+we are going to use `drop` to drop rows for `AnotherCodingSystem`.
+Rows that result in a `True` value for this expression then have the filter applied in the result.
 
 ### Filter by h1 events
-Now we can apply a further filter to generate a new variable called `high_code_h1_events`. In this, we filter by 4 conditions:
+
+Now we can apply a further filter to generate a new variable called `high_code_h1_events`.
+In this filter, we filter by 4 conditions:
 
 1. `code` equal `h1`
 2. `numeric_value` is greater than 200
 3. `date` is after start date of interest
 4. `date` is before end date of interest
 
-We combine these with `&` which means `AND` to create an overarching condition statement. 
+We combine these with `&` which means `AND`.
 
 ### Aggregation of values
+
 We can perform simple aggregations per patient
 and we have already seen some of these such as `exists_for_patient()`.
 
