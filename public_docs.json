@@ -388,6 +388,24 @@
           ]
         },
         {
+          "name": "appointments",
+          "docstring": [],
+          "columns": [
+            {
+              "name": "booked_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            },
+            {
+              "name": "start_date",
+              "description": "",
+              "type": "date",
+              "constraints": []
+            }
+          ]
+        },
+        {
           "name": "clinical_events",
           "docstring": [],
           "columns": [
