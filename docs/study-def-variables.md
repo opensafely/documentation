@@ -57,6 +57,8 @@ These variables are derived from data held in the patients' primary care records
 ::: cohortextractor.patients.with_these_medications
 &nbsp;
 
+---8<-- 'includes/vmp-ids-warning.md'
+
 ::: cohortextractor.patients.with_these_clinical_events
 &nbsp;
 
