@@ -2706,27 +2706,32 @@
                   [
                     "patient",
                     "i1",
-                    "i2"
+                    "i2",
+                    "s1"
                   ],
                   [
                     "1",
                     "101",
-                    "111"
+                    "111",
+                    "b"
                   ],
                   [
                     "1",
                     "102",
-                    "112"
+                    "112",
+                    "a"
                   ],
                   [
                     "2",
                     "201",
-                    "211"
+                    "211",
+                    "b"
                   ],
                   [
                     "2",
                     "202",
-                    "212"
+                    "212",
+                    "a"
                   ]
                 ]
               },
@@ -2741,6 +2746,56 @@
                   "826"
                 ]
               ]
+            },
+            {
+              "id": "5.3.2",
+              "title": "Event series and sorted event series",
+              "tables": {
+                "e": [
+                  [
+                    "patient",
+                    "i1",
+                    "i2",
+                    "s1"
+                  ],
+                  [
+                    "1",
+                    "101",
+                    "111",
+                    "b"
+                  ],
+                  [
+                    "1",
+                    "102",
+                    "112",
+                    "a"
+                  ],
+                  [
+                    "2",
+                    "201",
+                    "211",
+                    "b"
+                  ],
+                  [
+                    "2",
+                    "202",
+                    "212",
+                    "a"
+                  ]
+                ]
+              },
+              "series": "(e.i1 + e.sort_by(e.s1).i2).minimum_for_patient()",
+              "output": [
+                [
+                  "1",
+                  "212"
+                ],
+                [
+                  "2",
+                  "412"
+                ]
+              ],
+              "text": "The sort order of the underlying event series does not affect their combination."
             }
           ]
         },
