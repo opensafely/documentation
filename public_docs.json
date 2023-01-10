@@ -6471,6 +6471,57 @@
           "text": "\n`set_population` is used to limit the population from which data is extracted.\n"
         }
       ]
+    },
+    {
+      "id": "14",
+      "title": "Defining a table using inline data",
+      "sections": [
+        {
+          "id": "14.1",
+          "title": "Defining a table using inline data",
+          "paragraphs": [
+            {
+              "id": "14.1.1",
+              "title": "Table from rows",
+              "tables": {
+                "p": [
+                  [
+                    "patient",
+                    "i1"
+                  ],
+                  [
+                    "1",
+                    "10"
+                  ],
+                  [
+                    "2",
+                    "20"
+                  ],
+                  [
+                    "3",
+                    "30"
+                  ]
+                ]
+              },
+              "series": "p.i1 + t.n",
+              "output": [
+                [
+                  "1",
+                  "110"
+                ],
+                [
+                  "2",
+                  ""
+                ],
+                [
+                  "3",
+                  "330"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
