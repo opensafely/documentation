@@ -89,7 +89,7 @@ in a way that ehrQL does not support.
 
 The full details are out of scope for this tutorial.
 When you have completed the tutorial,
-you may wish to review the [more detailed explanation](ehrql-combining-series-and-frames.md).
+you may wish to review the [more detailed explanation](ehrql/combining-series-and-frames.md).
 
 !!! todo
     This is currently on its own page.
@@ -109,7 +109,7 @@ you can perform simple mathematical operations on column (series) values
 including combining with other column values for a patient,
 or combining with some other value specified or computed in the dataset definition.
 
-See ["Combining series"](ehrql-reference.md/#5-combining-series) in the ehrQL reference.
+See ["Combining series"](ehrql/reference.md/#5-combining-series) in the ehrQL reference.
 
 !!! todo
     Review this URL.

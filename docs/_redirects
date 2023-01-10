@@ -74,8 +74,8 @@
 /ehrql-intro/                            /data-builder/ehrql/intro/
 /ehrql-reference                         /data-builder/ehrql/reference/
 /ehrql-reference/                        /data-builder/ehrql/reference/
-/ehrql-set-population-explainer          /data-builder/ehrql/set-population-explainer/
-/ehrql-set-population-explainer/         /data-builder/ehrql/set-population-explainer/
+/ehrql-set-population-explainer          /data-builder/ehrql/set-population-explanation/
+/ehrql-set-population-explainer/         /data-builder/ehrql/set-population-explanation/
 /ehrql-new-tutorial-1a                   /data-builder/ehrql/tutorial/1a/
 /ehrql-new-tutorial-1a/                  /data-builder/ehrql/tutorial/1a/
 /ehrql-new-tutorial-1b                   /data-builder/ehrql/tutorial/1b/
