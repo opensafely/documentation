@@ -12,14 +12,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up Python and just
+        uses: opensafely-core/setup-action@v1
         with:
           python-version: '3.9'
-          cache: "pip"
           cache-dependency-path: databuilder/requirements.*.txt
-
-      - uses: extractions/setup-just@95b912dc5d3ed106a72907f2f9b91e76d60bdb76  # v1.5
+          install-just: true
 
       - name: Run dev tooling on snippets
         run: just databuilder/check
