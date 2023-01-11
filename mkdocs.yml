@@ -1,6 +1,7 @@
 site_name: OpenSAFELY documentation
 site_url: !ENV MKDOCS_SITE_URL
 repo_url: https://github.com/opensafely/documentation
+
 nav:
   - Introduction: index.md
   - About OpenSAFELY:
@@ -62,6 +63,7 @@ nav:
       - Jobs site: jobs-site.md
       - Level 4 server: level-4-server.md
       - Safe Outputs and requesting release of files from the Level 4 server: releasing-files.md
+      - Data Builder: '!import https://github.com/opensafely-core/databuilder?branch=docs-spike&docs_dir=docs'
       - Reports:
         - Overview: reports/intro.md
         - Create a draft: reports/create-a-draft.md
@@ -82,7 +84,6 @@ nav:
       - Updating the documentation: updating-the-docs.md
   - Contributing: contributing.md
   - Platform News: https://www.opensafely.org/changelog/
-
 theme:
   name: material
   font: false
@@ -94,7 +95,7 @@ theme:
   features:
     - navigation.indexes
 
-edit_uri: "edit/main/docs"
+edit_uri: "edit/main/docs/"
 
 extra_css:
   - css/youtube.css
@@ -132,6 +133,8 @@ plugins:
       custom_templates: templates
   - mkdocs-opensafely-databuilder
   - macros
+  - multirepo:
+      cleanup: false
 
 watch:
   - includes
