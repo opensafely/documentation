@@ -163,3 +163,7 @@ markdown_extensions:
   - footnotes
   - abbr
   - md_in_html
+
+
+hooks:
+    - hooks/parent_snippets.py
