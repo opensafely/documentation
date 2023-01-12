@@ -25,6 +25,8 @@ jobs:
           python3 -m pip install -r ./requirements.txt
 
       - name: Build site
+        env:
+          AccessToken: ${{ secrets.GITHUB_TOKEN }}
         run: MKDOCS_SITE_URL="https://docs.opensafely.org" mkdocs build
 
       - name: Add a version file
