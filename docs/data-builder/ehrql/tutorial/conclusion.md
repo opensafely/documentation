@@ -43,7 +43,7 @@ Features that we have not covered include, but are not limited to:
 * More advanced ways to filter series and frames
 * More advanced ways to define the dataset population.
 
-Please read through the [ehrQL reference](ehrql-reference.md)
+Please read through the [ehrQL reference](../reference.md)
 to see examples of their use.
 The reference's table of contents is a useful and comprehensive summary
 of ehrQL's features.
@@ -54,8 +54,8 @@ Now that you have completed this tutorial,
 you may find the following resources useful
 as reference for writing your own dataset definitions:
 
-* The [ehrQL reference](ehrql-reference.md)
-* The [Contracts reference](contracts-reference.md)
+* The [ehrQL reference](../reference.md)
+* The [Contracts reference](../../contracts/reference.md)
 * Existing dataset definitions in the `opensafely` GitHub organisation
     * <https://github.com/opensafely/test-age-distribution>
 
@@ -82,7 +82,7 @@ you can use an inquistive approach to try and reasonabout it:
   * Has the author used other libraries to help write their dataset definition?
 * Which data `tables` are being imported
   * Can you find details of these tables
-    in the [Contracts reference](contracts-reference.md)?
+    in the [Contracts reference](../../contracts/reference.md)?
 * How has the author structured their dataset definition?
 * What criteria are used to select the population?
 * How are the variables that the author extracts for the population constructed?
@@ -133,12 +133,12 @@ for repositories containing that import.
 ### Experimenting with the tutorial data and dataset definitions
 
 Another good way to learn ehrQL is to experiment
-by trying out [ehrQL features](ehrql-reference.md) against a simple fake dataset.
+by trying out [ehrQL features](../reference.md) against a simple fake dataset.
 The dataset definitions and fake data that we have provided in this tutorial
 are a suitable starting point.
 
 To do so, modify an example and/or the data,
-and then [run the modified example](ehrql-new-tutorial-intro.md#running-the-tutorial-code-examples).
+and then [run the modified example](index.md#running-the-tutorial-code-examples).
 
 Some ideas for inspiration:
 
@@ -159,6 +159,6 @@ Some ideas for inspiration:
 
 ## Need help?
 
-There are a number of ways that you can [ask for help](how-to-get-help.md)
+There are a number of ways that you can [ask for help](../../../how-to-get-help.md)
 whether you need more help understanding how dataset definitions work
 or with writing a specific dataset definition.

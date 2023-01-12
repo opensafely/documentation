@@ -15,17 +15,17 @@
     (or close to ready)
     for public use.
 
-* [Introduction (this page)](ehrql-new-tutorial-intro.md)
-* [Dataset definition 1a](ehrql-new-tutorial-1a.md)
-* [Dataset definition 1b](ehrql-new-tutorial-1b.md)
-* [Dataset definition 2a](ehrql-new-tutorial-2a.md)
-* [Dataset definition 3a](ehrql-new-tutorial-3a.md)
-* [Dataset definition 4a](ehrql-new-tutorial-4a.md)
-* [Dataset definition 5a](ehrql-new-tutorial-5a.md)
-* [Dataset definition 6a](ehrql-new-tutorial-6a.md)
-* [Dataset definition 7a](ehrql-new-tutorial-7a.md)
-* [Using ehrQL and Data Builder in an OpenSAFELY project](ehrql-new-tutorial-opensafely-project.md)
-* [Conclusion](ehrql-new-tutorial-conclusion.md)
+* [Introduction (this page)](index.md)
+* [Dataset definition 1a](1a.md)
+* [Dataset definition 1b](1b.md)
+* [Dataset definition 2a](2a.md)
+* [Dataset definition 3a](3a.md)
+* [Dataset definition 4a](4a.md)
+* [Dataset definition 5a](5a.md)
+* [Dataset definition 6a](6a.md)
+* [Dataset definition 7a](7a.md)
+* [Using ehrQL and Data Builder in an OpenSAFELY project](opensafely-project.md)
+* [Conclusion](conclusion.md)
 
 ## Audience
 
@@ -49,22 +49,22 @@ Stata or any other language.
 Familiarity with:
 
 * OpenSAFELY
-* How [electronic healthcare records are structured](data-sources/intro.md)
+* How [electronic healthcare records are structured](../../../data-sources/intro.md)
 
 would also be helpful,
 but is *not* essential.
 
 ## How to work through this tutorial series
 The tutorial is split into 7 sections that we recommend
-you work through sequentially. Each section builds on previous knowledge. Throughout the tutorial series, you will see optional explanations and reading, that you might 
+you work through sequentially. Each section builds on previous knowledge. Throughout the tutorial series, you will see optional explanations and reading, that you might
 want to explore at the time or afterwards.
 
-We recommend that you work through the tutorial by installing Data Builder, downloading the sample code, and 
-running the code on your machine. 
+We recommend that you work through the tutorial by installing Data Builder, downloading the sample code, and
+running the code on your machine.
 
 ### Learning objectives
-This tutorial series will introduce you to writing and running 
-ehrQL queries with Data Builder. 
+This tutorial series will introduce you to writing and running
+ehrQL queries with Data Builder.
 
 By the end of the tutorials, you will be able:
 
@@ -74,13 +74,13 @@ By the end of the tutorials, you will be able:
 * to use electronic health record codelists in ehrQL
 * to perform queries via selecting, filtering and aggregation
 
-Each tutorial section will have its own learning objectives. 
+Each tutorial section will have its own learning objectives.
 
-## Installation 
+## Installation
 
 To try running or modifying the examples in this tutorial,
-you will need to install Data Builder and have a text 
-editor. 
+you will need to install Data Builder and have a text
+editor.
 
 ### Installing Data Builder
 
@@ -91,13 +91,13 @@ Data Builder runs on Windows, macOS, and Linux either via:
 
 
 #### OpenSAFELY CLI
-The [OpenSAFELY CLI](opensafely-cli.md) requires a working Docker installation.
+The [OpenSAFELY CLI](../../../opensafely-cli.md) requires a working Docker installation.
 If you do not already have the OpenSAFELY CLI installed,
-refer to the [instructions](opensafely-cli.md).
+refer to the [instructions](../../../opensafely-cli.md).
 Once you have the OpenSAFELY CLI installed,
 you are ready to use Data Builder.
 
-#### Install via Python 
+#### Install via Python
 If you are unable to install Docker,
 you can try Data Builder via Python.
 
@@ -105,7 +105,7 @@ A Python package install will still allow you to follow this tutorial,
 but will not allow you to run full OpenSAFELY projects.
 
 We will not cover the Python installation here.
-Refer to the [separate page](ehrql-new-tutorial-python.md) on this.
+Refer to the [separate page](python.md) on this.
 
 ### Text editor
 
@@ -160,7 +160,7 @@ The identifier associates the dataset definition with a specific tutorial page.
 There are two ways to run the tutorial code:
 
 1. Run the code directly using `opensafely exec`
-2. Run the code via `project.yaml` file (this is how real 
+2. Run the code via `project.yaml` file (this is how real
 OpenSAFELY projects get run)
 
 ### Run using `opensafely exec`
@@ -196,11 +196,11 @@ To run this dataset definition with Data Builder,
 
 ### Run via `project.yaml`
 Each OpenSAFELY project has a `project.yaml` (see projects), where actions are defined. The `project.yaml`
-file is run via the `opensafely run` command. 
+file is run via the `opensafely run` command.
 
-For this tutorial, we have already defined individual actions in the `project.yaml` for each example, for convenience. 
+For this tutorial, we have already defined individual actions in the `project.yaml` for each example, for convenience.
 
-To run this dataset definition with Data Builder: 
+To run this dataset definition with Data Builder:
 
 1. In a terminal, enter the `ehrql-tutorial-examples` directory that you extracted from the sample data.
 

@@ -25,9 +25,9 @@ An OpenSAFELY backend implements one or more of these specifications.
 Each specification covers a specific healthcare data domain.
 
 The structure of a Contract is explained in the [Contracts
-introduction](contracts-intro.md#the-structure-of-a-contract).
+introduction](index.md#the-structure-of-a-contract).
 
-The [Contracts reference](contracts-reference.md) provides the existing
+The [Contracts reference](reference.md) provides the existing
 data specifications for both OpenSAFELY users and data providers.
 
 Refer to those specifications when preparing data tables for integration
@@ -48,7 +48,7 @@ In these cases, a data provider could propose:
 
 * amendments to existing OpenSAFELY Contracts, if appropriate.
 * an entirely new OpenSAFELY Contract. This may involve the creation of
-  a new Contract [namespaced](contracts-intro.md#naming-contracts) to your
+  a new Contract [namespaced](index.md#naming-contracts) to your
   organisation or backend.
 
 !!! note
@@ -56,7 +56,7 @@ In these cases, a data provider could propose:
     process. Each discussion that we have with data providers informs
     the design of the Contracts. We aim to continue to iterate and
     improve on the designs of Contracts, while providing stability
-    through [versioning](contracts-intro.md#versioning).
+    through [versioning](index.md#versioning).
 
 #### Proposing changes to OpenSAFELY Contracts
 
@@ -67,11 +67,11 @@ In these cases, a data provider could propose:
 
 If no existing Contract corresponds to the healthcare data domain that
 your data covers, [please contact our technical team to discuss how we
-can help](how-to-get-help.md#data-providers).
+can help](../../how-to-get-help.md#data-providers).
 
 ## Integrating a data backend into OpenSAFELY Data Builder
 
-[OpenSAFELY Data Builder](data-builder-intro.md) is the software
+[OpenSAFELY Data Builder](../index.md) is the software
 component that researchers use to extract datasets of interest from
 healthcare data providers in OpenSAFELY. Data Builder is written in
 Python.
@@ -102,6 +102,6 @@ Supporting a new backend in Data Builder has two requirements:
 
 If you are a new data provider, [please contact our technical team to
 discuss integration with Data Builder and
-OpenSAFELY](how-to-get-help.md#data-providers).
+OpenSAFELY](../../how-to-get-help.md#data-providers).
 
 ---8<-- 'includes/glossary.md'

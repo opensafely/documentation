@@ -27,7 +27,7 @@ in your `project.yaml`, in one of the following formats:
   version of Data Builder, once a newer major or minor version becomes
   available.
   * If running locally, you can update Docker images via the
-    [OpenSAFELY CLI](opensafely-cli.md#updating-docker-images).
+    [OpenSAFELY CLI](../opensafely-cli.md#updating-docker-images).
 
 #### Changes in the use of `latest` version
 
@@ -42,4 +42,3 @@ in your `project.yaml`, in one of the following formats:
     If you do specify `latest` by mistake, you will instead see an error
     mentioning `manifest unknown`. This error tells you that the version
     is not available.
-

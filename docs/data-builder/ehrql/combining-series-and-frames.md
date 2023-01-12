@@ -6,7 +6,7 @@
 
 ehrQL works with two kinds of data.
 
-We discuss this with an example in the [ehrQL tutorial](ehrql-new-tutorial-3a.md).
+We discuss this with an example in the [ehrQL tutorial](tutorial/3a.md).
 
 Briefly, the data that ehrQL works is considered to be either:
 

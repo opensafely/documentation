@@ -23,6 +23,6 @@ For in-depth technical documentation, there is also [the reference][].
 
 ---8<-- 'includes/glossary.md'
 
-[the examples]: ehrql-examples.md
-[the reference]: ehrql-reference.md
-[the tutorial]: ehrql-new-tutorial-intro.md
+[the examples]: examples.md
+[the reference]: reference.md
+[the tutorial]: tutorial/index.md

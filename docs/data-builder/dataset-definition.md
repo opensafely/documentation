@@ -8,7 +8,7 @@ The OpenSAFELY framework:
 * Uses a single dataset definition to query different vendor-specific EHR databases or locally provided dummy data.
 * Reads your dataset definition from the Python script (usually `analysis/dataset_definition.py`)
 * Writes the output data frame in a tabular CSV file (usually `output/input.csv`).
-    * For queries to vendor databases, the results are stored on a [secure server](releasing-files.md).
+    * For queries to vendor databases, the results are stored on a [secure server](../releasing-files.md).
 
 
 ## What is a dataset definition?
@@ -18,14 +18,14 @@ A _dataset definition_ is a formal specification of the data that you want to ex
 * the patient population (dataset rows)
 * the variables (dataset columns)
 
-It is written in [ehrQL](ehrql-intro.md). Dataset definitions are written in a language designed for OpenSAFELY:
+It is written in [ehrQL](ehrql/index.md). Dataset definitions are written in a language designed for OpenSAFELY:
 ehrQL. ehrQL runs on Python, but ehrQL is designed to be easily written,
 read, and reviewed by anyone with some epidemiological knowledge.
 
 ## `dataset_definition.py` structure
 
 Before writing a dataset definition, add [Data
-Builder](data-builder-intro.md#adding-data-builder-to-a-project) to your
+Builder](index.md#adding-data-builder-to-a-project) to your
 OpenSAFELY project.
 
 ### Importing code building blocks
