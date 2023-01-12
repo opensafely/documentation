@@ -163,7 +163,7 @@ Each OpenSAFELY Contract relates to a specific domain of health record
 data. The name of the Contract indicates the data domain covered by the
 Contract. Tables that satisfy these Contracts can be accessed in a
 dataset definition via [Data Builder's query language,
-ehrQL](../ehrql/intro.md).
+ehrQL](../ehrql/index.md).
 
 An OpenSAFELY Contract provides the following information for each
 associated table:

@@ -25,4 +25,4 @@ For in-depth technical documentation, there is also [the reference][].
 
 [the examples]: examples.md
 [the reference]: reference.md
-[the tutorial]: intro.md
+[the tutorial]: tutorial/index.md

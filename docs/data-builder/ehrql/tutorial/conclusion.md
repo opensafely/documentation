@@ -138,7 +138,7 @@ The dataset definitions and fake data that we have provided in this tutorial
 are a suitable starting point.
 
 To do so, modify an example and/or the data,
-and then [run the modified example](intro.md#running-the-tutorial-code-examples).
+and then [run the modified example](index.md#running-the-tutorial-code-examples).
 
 Some ideas for inspiration:
 

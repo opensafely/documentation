@@ -4,7 +4,7 @@
 
 !!! warning
     We recommend that you use Data Builder with the [OpenSAFELY CLI](../../../opensafely-cli.md)
-    as instructed in the [ehrQL tutorial](intro.md).
+    as instructed in the [ehrQL tutorial](index.md).
 
 ## Limitations
 

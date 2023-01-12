@@ -15,7 +15,7 @@
     (or close to ready)
     for public use.
 
-* [Introduction (this page)](intro.md)
+* [Introduction (this page)](index.md)
 * [Dataset definition 1a](1a.md)
 * [Dataset definition 1b](1b.md)
 * [Dataset definition 2a](2a.md)

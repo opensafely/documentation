@@ -2,7 +2,7 @@
 
 ---8<-- 'includes/data-builder-danger-header.md'
 
-This page is a reference for [ehrQL](intro.md).
+This page is a reference for [ehrQL](index.md).
 This reference is structured as a series of examples.
 
 The intended audience is primarily:
@@ -13,7 +13,7 @@ The intended audience is primarily:
 that already have some understanding of how the ehrQL works.
 
 !!! info
-    Please refer to the [ehrQL introduction](intro.md) and [ehrQL tutorial](tutorial/intro.md)
+    Please refer to the [ehrQL introduction](index.md) and [ehrQL tutorial](tutorial/index.md)
     if you need more explanation of the underlying concepts behind ehrQL.
 
 ## How the examples work

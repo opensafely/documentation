@@ -17,7 +17,7 @@
 
 ### Data Builder and dataset definitions
 
-* [OpenSAFELY Data Builder introduction](intro.md)
+* [OpenSAFELY Data Builder introduction](index.md)
 * [Data Builder Quick Start](quick-start.md)
 * [Data Builder versioning](versioning.md)
 * [Writing a dataset definition](dataset-definition.md)
@@ -27,8 +27,8 @@
 
 ### ehrQL
 
-* [ehrQL: Data Builder's language for querying electronic health record data](ehrql/intro.md)
-* [ehrQL tutorial entrypoint](ehrql/tutorial/intro.md)
+* [ehrQL: Data Builder's language for querying electronic health record data](ehrql/index.md)
+* [ehrQL tutorial entrypoint](ehrql/tutorial/index.md)
 * [ehrQL explanation of rules for combining series and frames](ehrql/combining-series-and-frames.md)
 * [ehrQL examples](ehrql/examples.md)
 * [ehrQL reference](ehrql/reference.md)
@@ -39,7 +39,7 @@
 
 ### OpenSAFELY Contracts
 
-* [OpenSAFELY Contracts introduction](contracts/intro.md)
+* [OpenSAFELY Contracts introduction](contracts/index.md)
 * [OpenSAFELY Contracts reference](contracts/reference.md)
 * [OpenSAFELY data backends](contracts/data-backends.md)
 * [Guidance for data providers integrating into OpenSAFELY](contracts/data-provider-integration.md)

@@ -25,7 +25,7 @@ An OpenSAFELY backend implements one or more of these specifications.
 Each specification covers a specific healthcare data domain.
 
 The structure of a Contract is explained in the [Contracts
-introduction](intro.md#the-structure-of-a-contract).
+introduction](index.md#the-structure-of-a-contract).
 
 The [Contracts reference](reference.md) provides the existing
 data specifications for both OpenSAFELY users and data providers.
@@ -48,7 +48,7 @@ In these cases, a data provider could propose:
 
 * amendments to existing OpenSAFELY Contracts, if appropriate.
 * an entirely new OpenSAFELY Contract. This may involve the creation of
-  a new Contract [namespaced](intro.md#naming-contracts) to your
+  a new Contract [namespaced](index.md#naming-contracts) to your
   organisation or backend.
 
 !!! note
@@ -56,7 +56,7 @@ In these cases, a data provider could propose:
     process. Each discussion that we have with data providers informs
     the design of the Contracts. We aim to continue to iterate and
     improve on the designs of Contracts, while providing stability
-    through [versioning](intro.md#versioning).
+    through [versioning](index.md#versioning).
 
 #### Proposing changes to OpenSAFELY Contracts
 
@@ -71,7 +71,7 @@ can help](../../how-to-get-help.md#data-providers).
 
 ## Integrating a data backend into OpenSAFELY Data Builder
 
-[OpenSAFELY Data Builder](../intro.md) is the software
+[OpenSAFELY Data Builder](../index.md) is the software
 component that researchers use to extract datasets of interest from
 healthcare data providers in OpenSAFELY. Data Builder is written in
 Python.

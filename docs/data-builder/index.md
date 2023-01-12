@@ -21,13 +21,13 @@ With Data Builder:
 * **Researchers** can specify data they want to use in their research via a
   [*dataset definition*](dataset-definition.md).
 * **Data providers** can specify data they want to offer for research
-  via the [*OpenSAFELY Contracts*](contracts/intro.md)
+  via the [*OpenSAFELY Contracts*](contracts/index.md)
   specification and implementation.
 
 ## Features
 ### Readable dataset definitions
 
-A new query language [ehrQL](ehrql/intro.md) has been developed for
+A new query language [ehrQL](ehrql/index.md) has been developed for
 Data Builder. Researchers can now use a *dataset definition* to specify
 the data to be extracted from OpenSAFELY.
 
@@ -61,7 +61,7 @@ interested.
 In OpenSAFELY's first two years, researchers have used cohort-extractor
 and study definitions to successfully complete a number of [research
 studies](https://www.opensafely.org/research/) using [multiple data
-sources and linked data](../data-sources/intro.md).
+sources and linked data](../data-sources/index.md).
 
 Data Builder is a complete redesign and reimplementation of
 cohort-extractor aimed at making OpenSAFELY even easier to work with for
@@ -85,8 +85,8 @@ dataset definition:
 
 * Data Builder [quick start](quick-start.md)
 * Writing a [dataset definition](dataset-definition.md)
-* The [dataset definition language, ehrQL](ehrql/intro.md)
-* The [OpenSAFELY Contracts](contracts/intro.md) that define what data
+* The [dataset definition language, ehrQL](ehrql/index.md)
+* The [OpenSAFELY Contracts](contracts/index.md) that define what data
   is available from the various OpenSAFELY data backends.
 
 ## Data Builder is still in development
