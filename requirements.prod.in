@@ -8,5 +8,5 @@ mkdocs-macros-plugin
 mkdocs-material
 https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/99f9f3ec5025d5cf9030cafb1189576a4ebf6a7c.zip#mkdocs-opensafely-databuilder
 mkdocstrings[python]
-mkdocs-table-reader-plugin
+https://github.com/rebkwok/mkdocs-table-reader-plugin/archive/298b04ef0f36967a3a3bd24f8325da23885fe945.zip#mkdocs-table-reader-plugin
 mkdocs-multirepo-plugin

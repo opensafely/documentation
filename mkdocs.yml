@@ -117,7 +117,10 @@ copyright: © University of Oxford for the Bennett Institute for Applied Data Sc
 
 plugins:
   - search
-  - table-reader
+  - table-reader:
+      data_paths:  # data paths will be checked in order for matching csv files
+        - "."  # dir containing this config file
+        - "imported_docs/data-builder-imported"  # docs folder for the imported repo
   - mkdocstrings:
       default_handler: python
       handlers:
