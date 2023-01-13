@@ -135,6 +135,7 @@ plugins:
   - macros
   - multirepo:
       cleanup: false
+      temp_dir: imported_docs
 
 watch:
   - includes
@@ -147,6 +148,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.snippets:
       check_paths: true
+      base_path: # base paths will be checked in order for matching snippets
+        - .  # dir containing this config file
+        - imported_docs/data-builder-imported # docs folder for the imported repo
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
