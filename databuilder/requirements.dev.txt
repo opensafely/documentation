@@ -91,6 +91,10 @@ pep517==0.12.0 \
     --hash=sha256:931378d93d11b298cf511dd634cf5ea4cb249a28ef84160b3247ee9afb4e8ab0 \
     --hash=sha256:dd884c326898e2c6e11f9e0b64940606a93eb10ea022a2e067959f3a110cf161
     # via build
+pip==22.2 \
+    --hash=sha256:8d63fcd4ee293e30b644827268a0a973d080e5c7425ef26d427f5eb2126c7681 \
+    --hash=sha256:9abf423d5d64f3289ab9d5bf31da9e6234f2e9c5d8dcf1423bcb46b809a02c2c
+    # via pip-tools
 pip-tools==6.8.0 \
     --hash=sha256:39e8aee465446e02278d80dbebd4325d1dd8633248f43213c73a25f58e7d8a55 \
     --hash=sha256:3e5cd4acbf383d19bdfdeab04738b6313ebf4ad22ce49bf529c729061eabfab8
@@ -111,10 +115,14 @@ pyparsing==2.4.7 \
     --hash=sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1 \
     --hash=sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b
     # via packaging
-requests==2.28.1 \
-    --hash=sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983 \
-    --hash=sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349
+requests==2.28.2 \
+    --hash=sha256:64299f4909223da747622c030b781c0d7811e359c37124b4bd368fb8c6518baa \
+    --hash=sha256:98b1b2782e3c6c4904938b84c0eb932721069dfdb9134313beff7c83c2df24bf
     # via -r databuilder/requirements.dev.in
+setuptools==65.5.1 \
+    --hash=sha256:d0b9a8433464d5800cbe05094acf5c6d52a91bfac9b52bcfc4d41382be5d5d31 \
+    --hash=sha256:e197a19aa8ec9722928f2206f8de752def0e4c9fc6953527360d1c36d94ddb2f
+    # via pip-tools
 tomli==1.2.3 \
     --hash=sha256:05b6166bff487dc068d322585c7ea4ef78deed501cc124060e0f238e89a9231f \
     --hash=sha256:e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c
@@ -163,14 +171,4 @@ watchdog==2.2.1 \
 wheel==0.38.1 \
     --hash=sha256:7a95f9a8dc0924ef318bd55b616112c70903192f524d120acc614f59547a9e1f \
     --hash=sha256:ea041edf63f4ccba53ad6e035427997b3bb10ee88a4cd014ae82aeb9eea77bb9
-    # via pip-tools
-
-# The following packages are considered to be unsafe in a requirements file:
-pip==22.2 \
-    --hash=sha256:8d63fcd4ee293e30b644827268a0a973d080e5c7425ef26d427f5eb2126c7681 \
-    --hash=sha256:9abf423d5d64f3289ab9d5bf31da9e6234f2e9c5d8dcf1423bcb46b809a02c2c
-    # via pip-tools
-setuptools==65.5.1 \
-    --hash=sha256:d0b9a8433464d5800cbe05094acf5c6d52a91bfac9b52bcfc4d41382be5d5d31 \
-    --hash=sha256:e197a19aa8ec9722928f2206f8de752def0e4c9fc6953527360d1c36d94ddb2f
     # via pip-tools
