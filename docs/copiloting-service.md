@@ -9,7 +9,7 @@ The service includes:
 - dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform
 - community support via GitHub forums and the #opensafely-users Slack channel
 - GitHub introduction and coaching
-- output checking service 
+- output checking service
 - manuscript review
 - opportunities to present at quarterly OpenSAFELY User Group meetings
 
@@ -28,7 +28,7 @@ By the end of the 4 week period, pilots should:
 The diagram below illustrates how a project will progress through the copiloting service. More information about each stage is provided in subsections below.
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph setup_stage[" "]
         application_submission[Project application]
         application_approval[Project approval]
@@ -60,10 +60,15 @@ graph TD
     application_approval --> assignment_stage
     introductory_meeting --> copiloting_stage
     copiloting_stage --> post_copiloting_stage
-    style setup_stage fill:#f7fcb9,stroke:#AAA,stroke-width:4px
-    style assignment_stage fill:#addd8e,stroke:#333,stroke-width:4px
-    style copiloting_stage fill:#31a354,stroke:#333,stroke-width:4px
-    style post_copiloting_stage fill:#fff,stroke:#333,stroke-width:4px
+    style setup_stage fill:#f7fcb9,stroke:#aaa
+    style assignment_stage fill:#addd8e,stroke:#333
+    style copiloting_stage fill:#31a354,stroke:#333
+    style dedicated_support color:white
+    style active_copiloting color:white
+    style wider_support color:white
+    style wider_support_details color:white
+    style output_checking color:white
+    style post_copiloting_stage fill:#fff,stroke:#333
 ```
 
 ### Project application and software setup
@@ -101,9 +106,9 @@ Copilots will provide up to five days over the four weeks to support the develop
 
 Please note that copilots will not perform code review of any analysis scripts or review any codelists that are developed. This is because this expertise lies with the pilot and their wider research team; pilots will be advised to identify someone within their own organisation who is willing to review this component of the project.
 
-## What happens after the copiloting period is over (the 'post copiloting stage')? 
+## What happens after the copiloting period is over (the 'post copiloting stage')?
 
-It is not expected that the research project will be complete at the end of the active copiloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. All community resources (the [discussion forum](https://github.com/opensafely/documentation/discussions) and the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The copilot will remain involved in the project over the long term in terms of output checking and manuscript review. 
+It is not expected that the research project will be complete at the end of the active copiloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. All community resources (the [discussion forum](https://github.com/opensafely/documentation/discussions) and the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The copilot will remain involved in the project over the long term in terms of output checking and manuscript review.
 
 All OpenSAFELY outputs require approval from NHS England before they can be disseminated any wider than the pilot's research group. This includes academic manuscripts (pre-printed or peer-reviewed), conference abstracts and presentations, internal reports and masters/PhD theses. Our IG team will handle the NHS England approval process; for more information about how to request NHS England approval and what to include in your publication text please see [this section of our documentation](https://www.opensafely.org/policies-for-researchers/).
 
