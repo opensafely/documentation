@@ -8,8 +8,8 @@ databricks-sql-connector==2.0.2 \
     --hash=sha256:480f299d2a9f950da4f7a12a5a1dd51789af588c133f237a1878b7a4d506bad8 \
     --hash=sha256:b74bb176571ba6107c3610b04ec875bf52951c50e515bea8abb2ffb8fe4c90d7
     # via opensafely-databuilder
-future==0.18.2 \
-    --hash=sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d
+future==0.18.3 \
+    --hash=sha256:34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307
     # via pyhive
 greenlet==1.1.2 \
     --hash=sha256:0051c6f1f27cb756ffc0ffbac7d2cd48cb0362ac1736871399a739b2885134d3 \
@@ -96,7 +96,7 @@ numpy==1.23.1 \
     #   pyarrow
 opensafely-databuilder @ https://github.com/opensafely-core/databuilder/archive/refs/tags/v0.57.0.zip \
     --hash=sha256:de6c39658f6dabc0a64ec92335698de10df0668a0420b5b9698342f457ff2863
-    # via -r databuilder/requirements.prod.in
+    # via -r requirements.prod.in
 pandas==1.4.3 \
     --hash=sha256:07238a58d7cbc8a004855ade7b75bbd22c0db4b0ffccc721556bab8a095515f6 \
     --hash=sha256:0daf876dba6c622154b2e6741f29e87161f844e64f84801554f879d27ba63c0d \
