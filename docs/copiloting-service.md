@@ -5,6 +5,7 @@
 All new users of the OpenSAFELY platform are offered access to our copilot service, which pairs the new user (the "pilot") with an experienced OpenSAFELY researcher (the "copilot") to help with the onboarding process. The objective of this service is to help new users get up and running with OpenSAFELY as quickly as possible and aims to facilitate the generation of analytical outputs from real data within a four week period.
 
 The service includes:
+
 - dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform
 - community support via GitHub forums and the #opensafely-users Slack channel
 - GitHub introduction and coaching
@@ -69,7 +70,7 @@ graph TD
 
 All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a copilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started guide](https://docs.opensafely.org/en/latest/getting-started/) to ensure that the necessary software can be installed and run on your computer.
 
-In our experience, copiloting is most successful when the pilot has some experience with coding (e.g., Python, R or Stata), is familiar with collaborative code development via GitHub and is able to commit four weeks or more to their project.
+In our experience, copiloting is most successful when the pilot has some experience with coding (e.g., Python, R or Stata), is familiar with collaborative code development via GitHub and is able to commit four weeks or more to their project. However, we have had people with the required motivation and enthusiasm, and an existing adjacent skillset, to get results within four weeks.
 
 If you are unsure whether copiloting will work for your project, contact `team@opensafely.org` or use the [contact form on our website](https://www.opensafely.org/contact/).
 
@@ -105,8 +106,6 @@ Please note that copilots will not perform code review of any analysis scripts o
 It is not expected that the research project will be complete at the end of the active copiloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. All community resources (the [discussion forum](https://github.com/opensafely/documentation/discussions) and the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The copilot will remain involved in the project over the long term in terms of output checking and manuscript review. 
 
 All OpenSAFELY outputs require approval from NHS England before they can be disseminated any wider than the pilot's research group. This includes academic manuscripts (pre-printed or peer-reviewed), conference abstracts and presentations, internal reports and masters/PhD theses. Our IG team will handle the NHS England approval process; for more information about how to request NHS England approval and what to include in your publication text please see [this section of our documentation](https://www.opensafely.org/policies-for-researchers/).
-
-As with all OpenSAFELY projects, once a copiloted project is finished, published or it reaches its 1 year anniversary, the associated GitHub repository (and Jobserver outputs) need to be made public (see [this section of our documentation](https://docs.opensafely.org/publishing-repo/) for more information).
 
 ## What is our authorship policy?
 
