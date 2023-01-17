@@ -156,9 +156,14 @@ If you are a member of a project you will see an `Edit` button near the top of y
 
 ![Project edit button](./images/project-edit-button.png)
 
-Set your project status.
+Select your project status using the options in the dropdown box.
 
-If you think the status of your project requires further explanation then you can put it in the `Status description` field.
-We recommend doing this for projects which have been postponed or retired.
+Further details should be provided in the `Status description` field. Guidance for each status type is provided below.
+
+* `Postponed` - provide the reasons why the project has been postponed. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
+* `Retired` - provide the reasons why the project has been retired and provide a brief report summarising any results. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
+* `Ongoing - paper/report linked` - provide URLs to published papers or reports (this includes preprints). If further papers/reports are expected, please give details.
+* `Completed - paper/reports linked` - provide URLs to published papers or reports (this includes preprints). If further papers/reports are expected, please give details.
+* `Completed - awaiting paper/reports` - provide some indication of when papers and/or reports are expected to be published.
 
 ![Project edit page](./images/project-edit-page.png)
