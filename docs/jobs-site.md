@@ -160,10 +160,10 @@ Select your project status using the options in the dropdown box.
 
 Further details should be provided in the `Status description` field. Guidance for each status type is provided below.
 
-* `Postponed` - provide the reasons why the project has been postponed. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
-* `Retired` - provide the reasons why the project has been retired and provide a brief report summarising any results. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
-* `Ongoing - paper/report linked` - provide URLs to published papers or reports (this includes preprints). If further papers/reports are expected, please give details.
-* `Completed - paper/reports linked` - provide URLs to published papers or reports (this includes preprints). If further papers/reports are expected, please give details.
-* `Completed - awaiting paper/reports` - provide some indication of when papers and/or reports are expected to be published.
+* `Postponed`: provide the reasons why the project has been postponed. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
+* `Retired`: provide the reasons why the project has been retired and provide a brief report summarising any results. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
+* `Ongoing - paper/report linked`: provide URLs to published papers or reports (this includes preprints). If further papers/reports are expected, please give details.
+* `Completed - paper/reports linked`: provide URLs to published papers or reports (this includes preprints). If further papers/reports are expected, please give details.
+* `Completed - awaiting paper/reports`: provide some indication of when papers and/or reports are expected to be published.
 
 ![Project edit page](./images/project-edit-page.png)
