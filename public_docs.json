@@ -652,6 +652,27 @@
           ]
         },
         {
+          "name": "household_memberships_2020",
+          "docstring": [
+            "Inferred household membership as of 2020-02-01, as determined by TPP using an as yet",
+            "undocumented algorithm"
+          ],
+          "columns": [
+            {
+              "name": "household_pseudo_id",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            },
+            {
+              "name": "household_size",
+              "description": "",
+              "type": "int",
+              "constraints": []
+            }
+          ]
+        },
+        {
           "name": "medications",
           "docstring": [],
           "columns": [
@@ -683,6 +704,20 @@
               "name": "is_healthcare_worker",
               "description": "",
               "type": "bool",
+              "constraints": []
+            }
+          ]
+        },
+        {
+          "name": "ons_cis",
+          "docstring": [
+            "ONS Covid Infection Survery"
+          ],
+          "columns": [
+            {
+              "name": "visit_date",
+              "description": "",
+              "type": "date",
               "constraints": []
             }
           ]
@@ -853,7 +888,9 @@
               "name": "practice_nuts1_region_name",
               "description": "",
               "type": "str",
-              "constraints": []
+              "constraints": [
+                "Must be one of: 'East Midlands', 'East of England', 'London', 'North East', 'North West', 'South East', 'South West', 'West Midlands', 'Yorkshire and the Humber'"
+              ]
             }
           ]
         },
