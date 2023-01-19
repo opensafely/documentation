@@ -1,5 +1,0 @@
-patient_id,most_recent_hospitalisation_code,most_recent_hospitalisation_system,lowest_imd,lowest_imd_is_valid
-1,h5,TutorialCodeSystem,-1,F
-2,h1,UnknownCodeSystem,29874,T
-4,h10,UnknownCodeSystem,1500,T
-6,h8,TutorialCodeSystem,-1,F
