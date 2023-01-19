@@ -116,6 +116,8 @@ extra:
     # These sections are specified in the nav above, but hidden in the built docs
     # so they are accessible via URL oly
     - "Data Builder"
+  # location of backend docs file, which will be moved to root folder during build
+  imported_backend_docs_file: imported_docs/data-builder/public_docs.json
 
 copyright: © University of Oxford for the Bennett Institute for Applied Data Science. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to bennett@phc.ox.ac.uk.
 
@@ -144,9 +146,6 @@ plugins:
 
 watch:
   - includes
-  - public_docs.json
-  - databuilder/snippets
-  - databuilder/ehrql-tutorial-examples
   - src/cohort-extractor/cohortextractor
 
 markdown_extensions:
@@ -177,3 +176,4 @@ markdown_extensions:
 hooks:
     - hooks/parent_snippets.py
     - hooks/hide_nav_sections.py
+    - hooks/update_backend_docs_file.py
