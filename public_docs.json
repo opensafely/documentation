@@ -359,7 +359,9 @@
               "name": "msoa_code",
               "description": "",
               "type": "str",
-              "constraints": []
+              "constraints": [
+                "Must match the regular expression: 'E020[0-9]{5}'"
+              ]
             },
             {
               "name": "has_postcode",
@@ -882,7 +884,9 @@
               "name": "practice_stp",
               "description": "",
               "type": "str",
-              "constraints": []
+              "constraints": [
+                "Must match the regular expression: 'E540000[0-9]{2}'"
+              ]
             },
             {
               "name": "practice_nuts1_region_name",
