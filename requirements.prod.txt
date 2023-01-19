@@ -172,8 +172,9 @@ mkdocs-multirepo-plugin==0.4.12 \
 mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/99f9f3ec5025d5cf9030cafb1189576a4ebf6a7c.zip \
     --hash=sha256:011613b325ee9b10aec31a652c5b00a39995f2e50a5df7a5f2bf5f2c78897f49
     # via -r requirements.prod.in
-mkdocs-table-reader-plugin @ https://github.com/rebkwok/mkdocs-table-reader-plugin/archive/298b04ef0f36967a3a3bd24f8325da23885fe945.zip \
-    --hash=sha256:e0c4e80fa1515c88727f23bd08cec7985b23edc15b73c1c66be0bbe824f88781
+mkdocs-table-reader-plugin==1.2 \
+    --hash=sha256:7a15949aca8d877d3d72e1245d0e28f4cbd90def64256afe6041c4580a98a690 \
+    --hash=sha256:aac8ae904cab5e748e02ec756879c3e85379c25eff5bb823690a4a3fa5a34d37
     # via -r requirements.prod.in
 mkdocstrings[python]==0.19.1 \
     --hash=sha256:32a38d88f67f65b264184ea71290f9332db750d189dea4200cbbe408d304c261 \
