@@ -137,7 +137,7 @@ plugins:
   - mkdocs-opensafely-databuilder
   - macros
   - multirepo:
-      cleanup: true
+      cleanup: !ENV [MKDOCS_MULTIREPO_CLEANUP, false]
       temp_dir: imported_docs
 
 watch:

@@ -32,7 +32,9 @@ jobs:
       - name: Build site
         env:
           AccessToken: ${{ secrets.GITHUB_TOKEN }}
-        run: MKDOCS_SITE_URL="https://docs.opensafely.org" mkdocs build
+          MKDOCS_SITE_URL: https://docs.opensafely.org
+          MKDOCS_MULTIREPO_CLEANUP: true
+        run: mkdocs build
 
       - name: Add a version file
         run: echo ${{ github.sha }} > site/version.html
