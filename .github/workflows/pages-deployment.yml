@@ -2,6 +2,11 @@ on: [push]
 
 jobs:
   deploy:
+
+    permissions:
+      contents: read
+      deployments: write
+
     runs-on: ubuntu-latest
 
     name: Deploy to Cloudflare Pages
