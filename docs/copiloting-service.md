@@ -6,7 +6,7 @@ All new users of the OpenSAFELY platform are offered access to our copilot servi
 
 The service includes:
 
-- dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform
+- five days (over four weeks) of dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform
 - community support via GitHub forums and the #opensafely-users Slack channel
 - GitHub introduction and coaching
 - output checking service
