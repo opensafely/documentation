@@ -76,7 +76,7 @@ nav:
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
       - Writing performant code: memory-efficient-working.md
-  - Data Builder: '!import https://github.com/opensafely-core/databuilder?branch=docs-spike-2&docs_dir=docs'
+  - Data Builder: '!import https://github.com/opensafely-core/databuilder?branch=main'
   - Support:
       - How to get help: how-to-get-help.md
       - Requesting new libraries: requesting-libraries.md
@@ -114,10 +114,15 @@ extra:
       name: OpenSAFELY on Twitter
   hide_nav_sections:
     # These sections are specified in the nav above, but hidden in the built docs
-    # so they are accessible via URL oly
+    # so they are accessible via URL only
+    # see hooks/hide_nav_sections.py
     - "Data Builder"
   # location of backend docs file, which will be moved to root folder during build
+  # see hooks/update_backend_docs_file.py
   imported_backend_docs_file: imported_docs/data-builder/public_docs.json
+  # Import databuilder docs from a specified branch (defaults to main)
+  # see hooks/databuilder_branch.py
+  databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
 
 copyright: © University of Oxford for the Bennett Institute for Applied Data Science. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to bennett@phc.ox.ac.uk.
 
@@ -172,8 +177,8 @@ markdown_extensions:
   - abbr
   - md_in_html
 
-
 hooks:
     - hooks/parent_snippets.py
     - hooks/hide_nav_sections.py
     - hooks/update_backend_docs_file.py
+    - hooks/databuilder_branch.py
