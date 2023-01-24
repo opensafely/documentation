@@ -34,7 +34,7 @@ jobs:
           AccessToken: ${{ secrets.GITHUB_TOKEN }}
           MKDOCS_SITE_URL: https://docs.opensafely.org
           MKDOCS_MULTIREPO_CLEANUP: true
-          DATABUILDER_BRANCH: docs-spike-2
+          DATABUILDER_BRANCH: main
         run: mkdocs build
 
       - name: Add a version file
