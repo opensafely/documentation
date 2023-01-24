@@ -165,9 +165,9 @@ mkdocs-material-extensions==1.0.3 \
     --hash=sha256:a82b70e533ce060b2a5d9eb2bc2e1be201cf61f901f93704b4acf6e3d5983a44 \
     --hash=sha256:bfd24dfdef7b41c312ede42648f9eb83476ea168ec163b613f9abd12bbfddba2
     # via mkdocs-material
-mkdocs-multirepo-plugin==0.4.12 \
-    --hash=sha256:842d5bc7be45b7b7e63e0c4f85fe0d482116d5211ef4516747a9f6b5595da58c \
-    --hash=sha256:cd6ec718df6cc4b997d165c9fb2243846d754ea640382d260245c672e9ddf1db
+mkdocs-multirepo-plugin==0.5.0 \
+    --hash=sha256:e1b3a8ce33aeb42b3a8e5559a4f587b9f5ef8062af6c1af511d48f4e1f9c37d1 \
+    --hash=sha256:f174aa71a54fc0931d00972472df845e57b6077f2336d172a4bff5327835e0da
     # via -r requirements.prod.in
 mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/99f9f3ec5025d5cf9030cafb1189576a4ebf6a7c.zip \
     --hash=sha256:011613b325ee9b10aec31a652c5b00a39995f2e50a5df7a5f2bf5f2c78897f49
