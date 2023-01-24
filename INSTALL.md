@@ -15,7 +15,7 @@ This should install everything required.
 ### Data Builder
 
 The Data Builder documentation is imported from the
-[data-builder](https://github.com/opensafely-core/data-builder) repo using the
+[databuilder](https://github.com/opensafely-core/databuilder) repo using the
 [mkdocs-multirepo-plugin](https://github.com/jdoiro3/mkdocs-multirepo-plugin) and built alongside the docs in this repo.  By default it uses the main branch.  This can
 be configured with the `DATABUILDER_BRANCH` environment variable:
 
