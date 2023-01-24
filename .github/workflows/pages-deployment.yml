@@ -2,6 +2,11 @@ on: [push]
 
 jobs:
   deploy:
+
+    permissions:
+      contents: read
+      deployments: write
+
     runs-on: ubuntu-latest
 
     name: Deploy to Cloudflare Pages
@@ -25,7 +30,12 @@ jobs:
           python3 -m pip install -r ./requirements.txt
 
       - name: Build site
-        run: MKDOCS_SITE_URL="https://docs.opensafely.org" mkdocs build
+        env:
+          AccessToken: ${{ secrets.GITHUB_TOKEN }}
+          MKDOCS_SITE_URL: https://docs.opensafely.org
+          MKDOCS_MULTIREPO_CLEANUP: true
+          DATABUILDER_BRANCH: main
+        run: mkdocs build
 
       - name: Add a version file
         run: echo ${{ github.sha }} > site/version.html

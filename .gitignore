@@ -16,3 +16,8 @@ site/
 
 # OpenSAFELY CLI metadata output for tutorial dataset definitions
 databuilder/ehrql-tutorial-examples/metadata/
+
+# mkdocs-multirepo-plugin
+temp_dir/
+imported_docs/
+public_docs.json

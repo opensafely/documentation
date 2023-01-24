@@ -109,4 +109,3 @@ fix: devenv
 # Run the dev project
 run: devenv
     $BIN/mkdocs serve -a localhost:8910
-
