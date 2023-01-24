@@ -123,4 +123,6 @@ Authorship should be discussed at the introductory meeting of any copiloted proj
 
 ## Where can I find out more?
 
+You can read about the experience of one of our previous pilots, Rachel Seeley from PrescQIPP CIC, in [this blog post](https://www.bennett.ox.ac.uk/blog/2023/01/conducting-research-using-opensafely-my-experience-of-the-co-pilot-service/).
+
 You can read more about how external projects are run on our [Policies for Researchers page](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Alternatively, send us an email at [team@opensafely.org](mailto:team@opensafely.org) to start a conversation!
