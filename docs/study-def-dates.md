@@ -93,9 +93,10 @@ actions:
       cohortextractor:latest generate_cohort
         --study-definition study_definition
         --index-date-range "2020-01-01"
+        --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input-2020-01-01.csv
+        cohort: output/input-2020-01-01.csv.gz
 ```
 
 This can also be used to define a range of dates over which to run the study definition, usually when working with [Measures](measures.md).

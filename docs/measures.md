@@ -15,7 +15,7 @@ Generating measures is a three step process:
 
  1. **Define a study definition** that includes a `measures` variable, which should be a list of calls to the `Measure()` function.
  2. **Extract the data** by running `generate_cohort` using the `--index-date-range` option to cover the range of time periods we want to calculate the measure for.
- 3. **Calculate the measures** by running `generate_measures` which takes the files extracted in step 2 and produces files like `measure_<measure_id>.csv`.
+ 3. **Calculate the measures** by running `generate_measures` which takes the files extracted in step 2 and produces files like `measure_<measure_id>.csv.gz`.
 
 
 ### Define a study definition
@@ -83,7 +83,7 @@ measures = [
 ]
 ```
 
-This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure. 
+This differs from a normal study definition due to the addition of the `measures` object, which is a list of calls to the `Measure()` function, for each measure.
 
 #### The `index_date`
 Each month/week start date covered by your study period is passed to the study definition as the `index_date` in turn, thus allowing the cohort and variables to vary each month/week as required. Some variables can retain fixed or no date ranges, e.g. a person's ethnicity would not be expected to vary over time.
@@ -116,9 +116,9 @@ measures = [
 ## Extract the data
 
 To run multiple study definitions over a series of dates, use the `--index-date-range` option of the `generate_cohort` command in `cohortextractor`.
-Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time. 
+Rather than generating a single output CSV file this generates multiple output files across a range of dates, modifying the study's index date each time.
 
-!!! note 
+!!! note
    Although the dates defined by the `--index-date-range` will replace the `index_date` that is defined in the study definition itself,  `index_date` must still be defined.
 
 Running over multiple index dates can be resource intensive and thus slow to run. It is therefore recommended to: use months rather than weeks if appropriate; use a shorter period for testing if applicable; minimise the population size (e.g. apply all necessary exclusions to your population, e.g. age limits, in the study definition rather than filtering in a later step) and use a compressed output format (e.g. `csv.gz` as below).
@@ -162,24 +162,24 @@ cohortextractor generate_measures
 
 For each defined measure, and for each file extracted in step 2, this generates an output file with the measure calculated for that month or week.
 
-    output/measure_hosp_admission_by_stp_2020-01-01.csv
-    output/measure_death_by_stp_2020-01-01.csv
-    output/measure_hosp_admission_by_stp_2020-02-01.csv
-    output/measure_death_by_stp_2020-02-01.csv
+    output/measure_hosp_admission_by_stp_2020-01-01.csv.gz
+    output/measure_death_by_stp_2020-01-01.csv.gz
+    output/measure_hosp_admission_by_stp_2020-02-01.csv.gz
+    output/measure_death_by_stp_2020-02-01.csv.gz
 	...
-    output/measure_hosp_admission_by_stp_2020-12-01.csv
-    output/measure_death_by_stp_2020-12-01.csv
+    output/measure_hosp_admission_by_stp_2020-12-01.csv.gz
+    output/measure_death_by_stp_2020-12-01.csv.gz
 
 Finally, for each measure, it combines all the output into a single file with an additional `date` column indicating the date associated with each row.
 
-    output/measure_hosp_admission_by_stp.csv
-    output/measure_death_by_stp.csv
+    output/measure_hosp_admission_by_stp.csv.gz
+    output/measure_death_by_stp.csv.gz
 
 This command also respects the `--skip-existing` flag.
 This will prevent it from recalculating the measure for any months or weeks which have already been calculated.
 However the final step, which combines output across time periods, will always be run.
 
-This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created. 
+This command accepts an `--output-dir` argument, which defines the directory in which the output measure files will be created.
 If the `--output-dir` argument is configured, `generate_measures` expects the input cohort files to also be in the output directory. To ensure this, include the same `--output-dir` argument in the previous `generate_cohort` step.
 
 !!! note
@@ -189,14 +189,14 @@ If the `--output-dir` argument is configured, `generate_measures` expects the in
     ```sh
     cohortextractor generate_cohort --output-format=csv.gz
     ```
-    
+
     If you do, then the `generate_measures` command will automatically work with this compressed output format;
     you need not pass `--output-format` to `generate_measures`, in other words.
     However, the `generate_measures` command will always output CSV files.
 
 ## Putting it all together in a pipeline
 
-To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_death_by_stp.csv` in a project pipeline, you would use the following actions:
+To generate the final outputs `measure_hosp_admission_by_stp.csv.gz` and `measure_death_by_stp.csv.gz` in a project pipeline, you would use the following actions:
 
 
 ```yaml
@@ -208,13 +208,12 @@ To generate the final outputs `measure_hosp_admission_by_stp.csv` and `measure_d
         cohort: output/measures/input_*.csv.gz
 
   generate_measures:
-    run: cohortextractor:latest generate_measures --study-definition study_definition --skip-existing --output-dir=output/measures
+    run: cohortextractor:latest generate_measures --study-definition study_definition --skip-existing --output-dir=output/measures --output-format csv.gz
     needs: [generate_study_population]
     outputs:
       moderately_sensitive:
-        measure_csv: output/measures/measure_*.csv
+        measure_csv: output/measures/measure_*.csv.gz
 
 ```
 
 ---8<-- 'includes/glossary.md'
-

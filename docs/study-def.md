@@ -26,7 +26,7 @@ of tabular data.
 A study definition also allows a researcher to define the shape of the values they *expect* to get back from the vendor data.
 This allows the framework to generate dummy data which the researcher can use to develop and test their analysis scripts, without ever having to touch real patient data.
 
-When you generate a study population, the framework reads your study definition from the python script (usually `analysis/study_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv`).
+When you generate a study population, the framework reads your study definition from the python script (usually `analysis/study_definition.py`), and writes the output data frame in a tabular CSV file (usually `output/input.csv.gz`).
 In a production environment this file will contain real data; in a development environment this will be dummy data.
 
 Currently the framework supports one row per patient datasets.
@@ -108,7 +108,7 @@ If a query returns no matching record for a patient &mdash; for example if there
 For strings and dates, the default value is the empty string `""`.
 For booleans, integers, or floats, the default value is `0`.
 
-There is no universal `null` value outputted to `input.csv` because these may be handled inconsistently across different programs.
+There is no universal `null` value outputted to `input.csv.gz` because these may be handled inconsistently across different programs.
 
 It's possible that a record is matched, but the value is not valid.
 In this case, the value will be returned as-is.
@@ -204,7 +204,7 @@ It's important therefore to match the dummy data with what you would expect to s
 
 ### File names
 
-A study definition called `study_definition.py` will create a file called `input.csv`.
+A study definition called `study_definition.py` will create a file called `input.csv.gz`.
 If you only require one study population, we recommend you stick with this.
 
 Multiple study definition files can be specified using a suffix like:
@@ -216,8 +216,8 @@ study_definition_asthma.py
 
 And all the corresponding output files will have the same suffix e.g.
 ```
-input_copd.csv
-input_asthma.csv
+input_copd.csv.gz
+input_asthma.csv.gz
 ```
 
 You should then create two corresponding cohortextractor actions in the [`project.yaml`](actions-pipelines.md):
@@ -231,16 +231,16 @@ expectations:
 actions:
 
   generate_copd_cohort:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_copd
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_copd --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_copd.csv
+        cohort: output/input_copd.csv.gz
 
   generate_asthma_cohort:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_asthma
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_asthma --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_asthma.csv
+        cohort: output/input_asthma.csv.gz
 ```
 
 
@@ -259,20 +259,20 @@ expectations:
 actions:
 
   generate_cohort_1:
-    run: cohortextractor:latest generate_cohort
+    run: cohortextractor:latest generate_cohort --output-format csv.gz
       --param my_param=value1
-      --output-file output/input_1.csv
+      --output-file output/input_1.csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_1.csv
+        cohort: output/input_1.csv.gz
 
   generate_cohort_2:
-    run: cohortextractor:latest generate_cohort
+    run: cohortextractor:latest generate_cohort --output-format csv.gz
       --param my_param=value2
-      --output-file output/input_1.csv
+      --output-file output/input_1.csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_2.csv
+        cohort: output/input_2.csv.gz
 ```
 
 Note that each set of parameters requires a different output file name so we have to supply one using the `--output-file` argument.
@@ -325,16 +325,16 @@ expectations:
 actions:
 
   generate_study_population_1:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01"
+    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-01-01" --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input-2020-01-01.csv
+        cohort: output/input-2020-01-01.csv.gz
 
   generate_study_population_2:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-09-01"
+    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2020-09-01" --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input-2020-09-01.csv
+        cohort: output/input-2020-09-01.csv.gz
 ```
 Currently the study definition called above must have the index date defined within the StudyDefinition (e.g. `index_date="2020-01-01"`), though the date defined is arbitrary and is replaced by the arguments defined above.
 

@@ -586,10 +586,10 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     actions:
       generate_study_population:
-        run: cohortextractor:latest generate_cohort --study-definition study_definition
+        run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
         outputs:
           highly_sensitive:
-            cohort: output/input.csv
+            cohort: output/input.csv.gz
 
       describe:
         run: python:latest python analysis/report.py
@@ -609,10 +609,10 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     actions:
       generate_study_population:
-        run: cohortextractor:latest generate_cohort --study-definition study_definition
+        run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
         outputs:
           highly_sensitive:
-            cohort: output/input.csv
+            cohort: output/input.csv.gz
 
       describe:
         run: r:latest analysis/report.R

@@ -25,7 +25,7 @@ study = StudyDefinition(
 )
 ```
 
-These defaults apply to *all* subsequently defined variables. `incidence` and `rate` have slightly different meanings depending on the variable type. 
+These defaults apply to *all* subsequently defined variables. `incidence` and `rate` have slightly different meanings depending on the variable type.
 
 In this case, we are saying that:
 
@@ -115,11 +115,11 @@ For instance:
 
 ```
 generate_cohort:
-  run: cohortextractor:latest generate_cohort
-  dummy_data_file: test-data/dummy-data.csv
+  run: cohortextractor:latest generate_cohort --output-format csv.gz
+  dummy_data_file: test-data/dummy-data.csv.gz
   outputs:
     highly_sensitive:
-      cohort: output/input.csv
+      cohort: output/input.csv.gz
 
 ```
 
