@@ -140,9 +140,9 @@ Once reviewed, approved and released, your requested files will be available to 
 
 ## Publishing outputs
 
-You must seek NHS England approval for any publication or wider sharing of results, papers, presentations (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website).
+You must seek NHS England approval for any publication or wider sharing of results, papers, presentations (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). For instructions on how to request approval, please see [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. 
 
-For instructions on how to request approval, please see [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. Following approval from NHSE, you should also create draft public outputs for review. To do this, navigate to the _release_ containing the outputs you would like to be published and click the `Publish` button.
+Following approval from NHSE, you can publish outputs on the jobs site. To do this, navigate to the _Releases_ page within your workspace (through the 'Released Outputs' link on the workspace main page). Go to 'All outputs', select the output to be released and click the 'Publish' button to publish the selected output.
 
 As part of publishing your outputs, you should also make the repository where your analysis code is written public. You can find instructions on how to do that [here](https://docs.opensafely.org/publishing-repo/).
 
