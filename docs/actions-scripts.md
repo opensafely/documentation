@@ -36,18 +36,18 @@ It is important that the right files formats are used for large data files. The 
 
 !!! note
     The template sets up `cohortextractor` command to produce `csv.gz` outputs.
-    This is the current recommended output format, as csv files compress well,
+    This is the current recommended output format, as CSV files compress well,
     and this reduces both storage requirements and improves job execution times
     on the backend.
 
-    If you need to view the raw csv data locally, you can unzip with `opensafely unzip input.csv.gz`.
+    If you need to view the raw CSV data locally, you can unzip with `opensafely unzip input.csv.gz`.
 
 
 
 === "Python"
 
     ```python
-    # read compressed csv output from cohortextractor
+    # read compressed CSV output from cohortextractor
     pd.read_csv("output/input.csv.gz")
 
     # write compressed feather file
@@ -60,7 +60,7 @@ It is important that the right files formats are used for large data files. The 
 === "R"
 
     ```r
-    # read compressed csv output from cohortextractor
+    # read compressed CSV output from cohortextractor
     df <- readr::read_csv("output/input.csv.gz")
 
     # write a compressed feather file
@@ -73,10 +73,10 @@ It is important that the right files formats are used for large data files. The 
 === "Stata"
 
     ```stata
-    // stata cannot handle compressed csv files directly, so unzip first to a plain csv file
+    // stata cannot handle compressed CSV files directly, so unzip first to a plain CSV file
     // the unzipped file will be discarded when the action finishes.
     !gunzip output/input.csv.gz
-    // now import the uncompressed csv using delimited
+    // now import the uncompressed CSV using delimited
     import delimited using output/input.csv
 
     // save in compressed dta.gz format

@@ -149,11 +149,11 @@ browser to access JupyterLab.
 To exit, press ++control+c++ in the command line - this also shuts down the container.
 Or alternatively go to File -> shutdown in the JupyterLab tab.
 
-### `unzip` - unzipping csv files
+### `unzip` - unzipping CSV files
 
 For performance and storage reasons on the backend, you must use the
 compressed `csv.gz` output format for cohortextractor output files. However,
-you may need to inspect the raw csv data. You can easily unzip a csv file with
+you may need to inspect the raw CSV data. You can easily unzip a CSV file with
 
 ```bash
 opensafely unzip outputs/input.csv.gz
