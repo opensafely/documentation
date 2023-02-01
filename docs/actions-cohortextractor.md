@@ -62,12 +62,10 @@ generate_study_cohort
       data: output/input.csv.gz
 ```
 
-Running the action with `opensafely run generate_study_population` will create the file `output/input.csv.gz`. This `.csv.gz` file is compressed to reduce storage space and improve performance in the OpenSAFELY backend.  
+Running the action with `opensafely run generate_study_population` will create the file `output/input.csv.gz`. This `.csv.gz` file is compressed to reduce storage space and improve performance in the OpenSAFELY backend.
 
 !!! note
-    To retrieve the uncompressed `.csv` from the `.csv.gz`, run `gunzip output/input.csv.gz` via:
-    * `git-bash` on Windows
-    * a terminal on MacOS or Linux
+    To view the uncompressed version of the `.csv.gz`, you can use `opensafely unzip output/input.csv.gz`
 
 The size of the dummy dataset is determined by the `population_size` option [in the `project.yaml`](actions-pipelines.md#project-yaml-format).
 
@@ -83,7 +81,7 @@ generate_study_cohort
   outputs:
     highly_sensitive:
       data: output/input_cohort2.csv.gz
-      ### This file is produced in compressed format. If using Stata you may need to remove the --output-format option and 
+      ### This file is produced in compressed format. If using Stata you may need to remove the --output-format option and
       ### the .gz file extension to produce an uncompressed CSV instead.
 ```
 

@@ -42,7 +42,7 @@ For example,  `cd C:/Users/me/my-git-repos/my-repo`.
 
 More information on how to use the `opensafely` module is available in specific sections elsewhere, but some key functions are described briefly below.
 
-### `run`
+### `run` - run an action from project.yaml
 
 The most common command you'll run.
 This runs actions defined in the [`project.yaml` file](actions-pipelines.md) and is the main way of testing your code.
@@ -92,7 +92,7 @@ If you specify the `run_all` action and pass one of these arguments, then:
 * All actions are run, whether or not their outputs exist.
 </details>
 
-### `codelists`
+### `codelists` - managing codelists
 This command is for working with codelists.
 
 Use
@@ -113,7 +113,7 @@ to check if the codelist files are up-to-date with those listed in `./codelists/
 See the [Codelist](codelist-intro.md) section for more information on codelists.
 
 
-### Updating Docker images
+### `openafely pull` - updating Docker images
 
 
 To run your code on your machine, the `opensafely` tool uses the same Docker
@@ -126,7 +126,7 @@ To pull the most recent Docker images to your machine, run:
 opensafely pull
 ```
 
-### Running JupyterLab
+### `jupyter` - running JupyterLab
 
 [Jupyter notebooks](https://jupyter.org/) are useful interactive
 environments for developing code.
@@ -148,6 +148,18 @@ browser to access JupyterLab.
 
 To exit, press ++control+c++ in the command line - this also shuts down the container.
 Or alternatively go to File -> shutdown in the JupyterLab tab.
+
+### `unzip` - unzipping csv files
+
+For performance and storage reasons on the backend, you need to use the the
+compressed `csv.gz` output format for cohortextractor output files. However,
+you may need to inspect the raw csv data. You can easily unzip a csv file with
+
+```bash
+opensafely unzip outputs/input.csv.gz
+```
+
+This will place a decpressed `output/input.csv` file you can view as normal.
 
 
 ### Managing Resources
