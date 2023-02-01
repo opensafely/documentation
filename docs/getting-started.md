@@ -497,7 +497,7 @@ real UK population*"
    ```
 
    A new `input.csv.gz` file will be created in the `output` folder. This is a compressed version of that data.
-   To view it, first run `openasafely unzip output`, then open that
+   To view it, first run `opensafely unzip output`, then open that
    file (by left-clicking the filename in Visual Studio Code's Explorer, or
    software like Excel). This time, you'll see it now contains synthetic data: an age
    for 1000 randomly generated patients (we'll see shortly how this is defined).

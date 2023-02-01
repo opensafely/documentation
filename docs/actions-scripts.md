@@ -35,13 +35,19 @@ Scripted actions can read and write output files that are saved in the workspace
 It is important that the right files formats are used for large data files. The wrong formats can waste disk space, execution time, and server memory. The specific formats used vary with language ecosystem, but they should always be compressed.
 
 !!! note
-    The `cohortextractor` command produces `csv.gz` outputs. `csv.gz` is the recommended output format.
+    The template sets up `cohortextractor` command to produce `csv.gz` outputs.
+    This is the current recommended output format, as CSV files compress well,
+    and this reduces both storage requirements and improves job execution times
+    on the backend.
+
+    If you need to view the raw CSV data locally, you can unzip with `opensafely unzip input.csv.gz`.
+
 
 
 === "Python"
 
     ```python
-    # read compressed csv output from cohortextractor
+    # read compressed CSV output from cohortextractor
     pd.read_csv("output/input.csv.gz")
 
     # write compressed feather file
@@ -54,7 +60,7 @@ It is important that the right files formats are used for large data files. The 
 === "R"
 
     ```r
-    # read compressed csv output from cohortextractor
+    # read compressed CSV output from cohortextractor
     df <- readr::read_csv("output/input.csv.gz")
 
     # write a compressed feather file
@@ -67,10 +73,10 @@ It is important that the right files formats are used for large data files. The 
 === "Stata"
 
     ```stata
-    // stata cannot handle compressed csv files directly, so unzip first to a plain csv file
+    // stata cannot handle compressed CSV files directly, so unzip first to a plain CSV file
     // the unzipped file will be discarded when the action finishes.
     !gunzip output/input.csv.gz
-    // now import the uncompressed csv using delimited
+    // now import the uncompressed CSV using delimited
     import delimited using output/input.csv
 
     // save in compressed dta.gz format
@@ -121,11 +127,11 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 
 We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker GitHub repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
 
-As Stata is a commercial product, a license key is needed to use it. 
+As Stata is a commercial product, a license key is needed to use it.
 
 #### If you are a member of the opensafely GitHub organisation
 * If you are using Windows, then the `opensafely` command line software will
-automatically use the OpenSAFELY Stata license. 
+automatically use the OpenSAFELY Stata license.
 * If you are using macOS:
    1. Download and install [GitHub's command-line tool (`gh`)](https://cli.github.com/)
    2. Run `gh auth login --web`. Select the "HTTPS" option, and follow the instructions
@@ -141,12 +147,12 @@ If you are not a member of the opensafely GitHub organisation, you must provide 
     * On Windows machine it's usually somewhere like `C:\Program Files\Stata17`
     * On Linux, somewhere like `/usr/local/stata17/`
     * On macOS it's usually in `/Applications/Stata/`
-2. Within that file, locate a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`. 
+2. Within that file, locate a license string of the format `SerialNumber!Code!Authorization!User!Organisation!VersionCode`.
 3. Set it as an environment variable using a [method appropriate to your operating system](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/). On Linux or macOS, you'd do it like this:
         ```bash
         export STATA_LICENSE='your license string'
-        ```  
-The `opensafely` command line software will now automatically use this Stata license.  
+        ```
+The `opensafely` command line software will now automatically use this Stata license.
 
 
 ### Python

@@ -1,7 +1,7 @@
 There are two ways to build a codelist using OpenCodelists:
 
 1. [Create a codelist from scratch with the builder](https://www.opencodelists.org/docs/#creating-a-codelist-from-scratch)
-2. [Create a codelist from a csv file](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file)
+2. [Create a codelist from a CSV file](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file)
 
 
 The current coding systems available in the OpenCodelists builder are listed below.
@@ -50,22 +50,22 @@ The issue title should start with either:
 * \*MEDICINE\* -- medicines, treatments, prescriptions, interventions
 * another codelist classification if relevant.
 
-<!--are these appropriate classifications? disease versus condition is a notoriously poorly-understood distinction. 
+<!--are these appropriate classifications? disease versus condition is a notoriously poorly-understood distinction.
 what about symptoms, disorders, etc. does it matter?</font>-->
 
 The rest of the title should be short and informative.
 
 ## Discuss and document and review
 
-Discuss and document each decision clearly and comprehensively in the issue. Explain why codes have been included and 
+Discuss and document each decision clearly and comprehensively in the issue. Explain why codes have been included and
 why codes have been excluded. Link to relevant webpages and documents. Upload files. Involve domain experts. Iterate.
 
 
 ## Sign-off
 
-Once a draft codelist has been agreed, we recommend it should be signed-off by at least two different people. 
-(These can include the person who led on creating the codelist). This should usually include a "data expert" (epidemiological sign-off) and 
-"disease expert" (clinical sign-off). 
+Once a draft codelist has been agreed, we recommend it should be signed-off by at least two different people.
+(These can include the person who led on creating the codelist). This should usually include a "data expert" (epidemiological sign-off) and
+"disease expert" (clinical sign-off).
 
 
 ## Add to [OpenCodelists](https://www.opencodelists.org)
@@ -90,13 +90,13 @@ You will need an editor account. Ask one of the tech team for one if you do not 
 
 ## Close the issue in the repo
 
-Go to the codelist issue in the [codelist repo](https://github.com/opensafely/codelist-development) and close it. 
-This issue serves as documentation of the choices made that determined the final codelist. The issue can be 
+Go to the codelist issue in the [codelist repo](https://github.com/opensafely/codelist-development) and close it.
+This issue serves as documentation of the choices made that determined the final codelist. The issue can be
 re-opened if revisions are required.
 
 ## Import the codelist for use in your study definition
 
-Once the codelist is in [OpenCodelists](https://www.opencodelists.org), you can retrieve it for use in 
+Once the codelist is in [OpenCodelists](https://www.opencodelists.org), you can retrieve it for use in
 your research repo. Follow the [adding codelists to project instructions](codelist-project.md) if you're not sure how to do this.
 
 ## Codelist contributorship
