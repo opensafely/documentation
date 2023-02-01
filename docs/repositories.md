@@ -86,11 +86,11 @@ This contains a `.txt` document listing the codelists that you want to retrieve 
 
 This folder contains:
 
-*  the `input.csv` file containing the (dummy or real) dataset. You will only have access to the dummy version of this dataset when working locally.
-*  By convention, any other files outputted by the analysis scripts that convert `input.csv` into study results, tables, figures, etc.
+*  the `input.csv.gz` file containing the (dummy or real) dataset. You will only have access to the dummy version of this dataset when working locally.
+*  By convention, any other files outputted by the analysis scripts that convert `input.csv.gz` into study results, tables, figures, etc.
 
 
-Be aware that `input.csv` is included in the `.gitignore` file (see below), which means it can't be (easily) committed and uploaded to GitHub.
+Be aware that `input.csv.gz` is included in the `.gitignore` file (see below), which means it can't be (easily) committed and uploaded to GitHub.
 
 You don't *have* to store things in these locations, but that's the convention we suggest.
 

@@ -365,7 +365,7 @@ this:
 
 ```shell-session
 <...several lines of output...>
-generate_study_population: Extracting output file: output/input.csv
+generate_study_population: Extracting output file: output/input.csv.gz
 generate_study_population: Completed successfully
 generate_study_population: Cleaning up container and volume
 
@@ -374,18 +374,12 @@ Completed successfully
 
 log file: metadata/generate_study_population.log
 outputs:
- output/input.csv  - highly_sensitive
+ output/input.csv.gz  - highly_sensitive
 ```
 The final line tells you a file of (randomly-generated) patient data has been created at
-`output/input.csv`, and that it should be considered highly sensitive
+`output/input.csv.gz`, and that it should be considered highly sensitive
 data. What you see here is exactly the same process that would happen on a real, secure
 server.
-
-This is what the `input.csv` should look like:
-
-```
-patient_id
-```
 
 **Because we haven't modified the template blank study yet, this CSV file is
 still empty &mdash; we'll generate *dummy data* that contains no real patient
@@ -488,7 +482,7 @@ real UK population*"
    $ opensafely run run_all
    ```
 
-   you'll see the command does nothing (because there's already a file at `output/input.csv`):
+   you'll see the command does nothing (because there's already a file at `output/input.csv.gz`):
 
    ```shell-session
    => All actions already completed successfully
@@ -502,7 +496,8 @@ real UK population*"
    $ opensafely run run_all --force-run-dependencies
    ```
 
-   A new `input.csv` file will be created in the `output` folder. Open that
+   A new `input.csv.gz` file will be created in the `output` folder. This is a compressed version of that data.
+   To view it, first run `openasafely unzip output`, then open that
    file (by left-clicking the filename in Visual Studio Code's Explorer, or
    software like Excel). This time, you'll see it now contains synthetic data: an age
    for 1000 randomly generated patients (we'll see shortly how this is defined).
@@ -510,7 +505,7 @@ real UK population*"
 ### Add a chart
 
 **Every** study starts with a *study definition* like the one you just edited.
-When executed, a study definition generates a CSV of patient data.
+When executed, a study definition generates a compressed CSV (`.csv.gz `) of patient data.
 
 A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
@@ -525,7 +520,7 @@ histogram of ages, using either four lines of Python or just a few more lines of
     ```python
     import pandas as pd
 
-    data = pd.read_csv("output/input.csv")
+    data = pd.read_csv("output/input.csv.gz")
 
     fig = data.age.plot.hist().get_figure()
     fig.savefig("output/descriptive.png")
@@ -540,7 +535,7 @@ histogram of ages, using either four lines of Python or just a few more lines of
     library('tidyverse')
 
     df_input <- read_csv(
-      here::here("output", "input.csv"),
+      here::here("output", "input.csv.gz"),
       col_types = cols(patient_id = col_integer(),age = col_double())
     )
 
@@ -550,6 +545,19 @@ histogram of ages, using either four lines of Python or just a few more lines of
       plot= plot_age,
       filename="descriptive.png", path=here::here("output"),
     )
+    ```
+
+=== "Stata"
+
+    1. Right-click on the `analysis` folder in the editor's Explorer and select
+       "New file". Type "report.do" as the filename and press ++enter++.
+    2. Add the following to `report.do`:.
+    ```stata
+    !gunzip output/input.csv.gz
+    import delimited using output/input.csv
+
+    // TODO plot equivalent
+    // TODO save plot
     ```
 
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
@@ -578,12 +586,10 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     actions:
       generate_study_population:
-        run: cohortextractor:latest generate_cohort --study-definition study_definition
+        run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
         outputs:
           highly_sensitive:
-            cohort: output/input.csv
-            ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
-            ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
+            cohort: output/input.csv.gz
 
       describe:
         run: python:latest python analysis/report.py
@@ -603,12 +609,10 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     actions:
       generate_study_population:
-        run: cohortextractor:latest generate_cohort --study-definition study_definition
+        run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
         outputs:
           highly_sensitive:
-            cohort: output/input.csv
-	    ## note: when running studies for real it is recommended to add the option --output-format='csv.gz' to the run command,
-	    ## and add '.gz' to the output file path, to produce the output in compressed form to reduce file size.
+            cohort: output/input.csv.gz
 
       describe:
         run: r:latest analysis/report.R

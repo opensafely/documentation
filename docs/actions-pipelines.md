@@ -36,12 +36,10 @@ expectations:
 actions:
 
   generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
+    run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
-        ### Note: When using analysis tools other than Stata it is recommended to add option --output-format='csv.gz' to the 'run' command
-        ### and add .gz to the output file path; this produces a compressed file to minimise file size. (Stata cannot load these files without first unzipping).
+        cohort: output/input.csv.gz
 
   run_model:
     run: stata-mp:latest analysis/model.do
@@ -56,9 +54,9 @@ This example declares the pipeline `version`, the `population_size` for the dumm
 
 You only need to change `version` if you want to take advantage of features of newer versions of the pipeline framework.
 
-The `generate_study_population` action will create the highly sensitive `input.csv` dataset.
+The `generate_study_population` action will create the highly sensitive `input.csv.gz` dataset.
 It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment.
-The `run_model` action will run a Stata script called `model.do` based on the `input.csv` created by the previous action.
+The `run_model` action will run a Stata script called `model.do` based on the `input.csv.gz` created by the previous action.
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
@@ -118,7 +116,7 @@ To run the first action in the example above, using dummy data, you can use:
 opensafely run generate_study_population
 ```
 
-This will generate the `input.csv` file as explained in the [cohortextractor](actions-cohortextractor.md) section.
+This will generate the `input.csv.gz` file as explained in the [cohortextractor](actions-cohortextractor.md) section.
 
 To run the second action you can use:
 
@@ -129,7 +127,7 @@ opensafely run run_model
 It will create the two files as specified in the `analysis/model.do` script.
 
 To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short.
-This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv` already exists.
+This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv.gz` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 

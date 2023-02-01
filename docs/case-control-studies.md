@@ -44,7 +44,7 @@ we could use separate Python scripts to [share common study definition variables
 
 As we will construct multiple study definitions in this and the following steps, we will name this study definition *study_definition_cases.py*.
 When working with [multiple study definitions](study-def.md#multiple-study-definitions), each study definition's suffix is used to name each corresponding output file.
-Here, the study definition's suffix is *cases*, so the corresponding output file will be named *input_cases.csv*.
+Here, the study definition's suffix is *cases*, so the corresponding output file will be named *input_cases.csv.gz*.
 
 Our *project.yaml* now includes the following action:
 
@@ -52,10 +52,10 @@ Our *project.yaml* now includes the following action:
 # ...
 actions:
   extract_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_cases
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_cases --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_cases.csv
+        cohort: output/input_cases.csv.gz
 ```
 
 ## Extract data for the potential controls
@@ -72,17 +72,17 @@ Our *project.yaml* now includes the following action:
 actions:
   # ...
   extract_potential_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_potential_controls
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_potential_controls --output-format csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_potential_controls.csv
+        cohort: output/input_potential_controls.csv.gz
 ```
 
 ## Match the cases to the potential controls
 
 In this step, we will use the [OpenSAFELY matching library](https://github.com/opensafely-core/matching#readme) in [a scripted action](actions-scripts.md) to match the cases to the potential controls.
 We will name this scripted action *match.py*.
-Whilst the OpenSAFELY matching library can output multiple files, we will use two: *matching_report.txt* and *matched_matches.csv*.
+Whilst the OpenSAFELY matching library can output multiple files, we will use two: *matching_report.txt* and *matched_matches.csv.gz*.
 The former contains information about the matching process.
 The latter contains the matched controls.
 
@@ -99,7 +99,7 @@ actions:
       moderately_sensitive:
         matching_report: output/matching_report.txt
       highly_sensitive:
-        matched_matches: output/matched_matches.csv
+        matched_matches: output/matched_matches.csv.gz
 ```
 
 !!! note "Alternatives to the OpenSAFELY matching library"
@@ -123,7 +123,7 @@ We will use `patients.which_exist_in_file` to include only the matched controls 
 ```python
 from cohortextractor import StudyDefinition, patients
 
-CONTROLS = "output/matched_matches.csv"
+CONTROLS = "output/matched_matches.csv.gz"
 
 study = StudyDefinition(
     index_date="2021-01-01",  # Ignored
@@ -136,13 +136,13 @@ We will use `patients.with_value_from_file` to access the case index dates:
 ```python
 from cohortextractor import codelist_from_csv, StudyDefinition, patients
 
-CONTROLS = "output/matched_matches.csv"
+CONTROLS = "output/matched_matches.csv.gz"
 codelist = codelist_from_csv("codelists/codelist.csv")
 
 study = StudyDefinition(
     index_date="2021-01-01",  # Ignored
     population=patients.which_exist_in_file(CONTROLS),
-    case_index_date=patients.with_value_from_file(
+        case_index_date=patients.with_value_from_file(
         CONTROLS,
         returning="case_index_date",
         returning_type="date",
@@ -161,11 +161,11 @@ Our *project.yaml* now includes the following action:
 actions:
   # ...
   extract_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls --output-format csv.gz
     needs: [matching]
     outputs:
       highly_sensitive:
-        cohort: output/input_controls.csv
+        cohort: output/input_controls.csv.gz
 ```
 
 ## Analysis
