@@ -81,8 +81,7 @@ generate_study_cohort
   outputs:
     highly_sensitive:
       data: output/input_cohort2.csv.gz
-      ### This file is produced in compressed format. If using Stata you may need to remove the --output-format option and
-      ### the .gz file extension to produce an uncompressed CSV instead.
+      ### This file is produced in compressed format.
 ```
 
 You can change the location of the outputted `.csv.gz` file using the `--output-dir` option, for example `run: cohortextractor:latest generate_cohort --format csv.gz --output-dir output/cohorts`
