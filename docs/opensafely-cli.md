@@ -151,7 +151,7 @@ Or alternatively go to File -> shutdown in the JupyterLab tab.
 
 ### `unzip` - unzipping csv files
 
-For performance and storage reasons on the backend, you need to use the the
+For performance and storage reasons on the backend, you must use the
 compressed `csv.gz` output format for cohortextractor output files. However,
 you may need to inspect the raw csv data. You can easily unzip a csv file with
 
@@ -159,7 +159,7 @@ you may need to inspect the raw csv data. You can easily unzip a csv file with
 opensafely unzip outputs/input.csv.gz
 ```
 
-This will place a decpressed `output/input.csv` file you can view as normal.
+This will create a decompressed `output/input.csv` file you can view as normal.
 
 
 ### Managing Resources
