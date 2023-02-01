@@ -113,7 +113,7 @@ to check if the codelist files are up-to-date with those listed in `./codelists/
 See the [Codelist](codelist-intro.md) section for more information on codelists.
 
 
-### `openafely pull` - updating Docker images
+### `pull` - updating Docker images
 
 
 To run your code on your machine, the `opensafely` tool uses the same Docker
