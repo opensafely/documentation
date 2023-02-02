@@ -13,9 +13,8 @@ To update your repository's README to match this new README:
 
 1. Copy the content from the template repository's latest README (typically [just the first section](https://github.com/opensafely/research-template/blob/main/README.md?plain=1#L1-L10)).
 1. Manually edit those changed sections into your research repository's README.
-1. You will need to replace the two placeholder strings in the README's "View on OpenSAFELY" URL to point to your repository:
+1. You will need to replace the placeholder string in the README's "View on OpenSAFELY" URL to point to your repository:
 
-* `${GITHUB_REPOSITORY_OWNER}` is the GitHub organisation your repo lives under, likely `opensafely`.
 * `${GITHUB_REPOSITORY_NAME}` is the name of your repo.
 
 !!! warning
