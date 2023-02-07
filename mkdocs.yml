@@ -95,6 +95,8 @@ theme:
     scheme: opensafely
   custom_dir: overrides
   features:
+    - content.code.copy
+    - navigation.footer
     - navigation.indexes
 
 edit_uri: "edit/main/docs/"
