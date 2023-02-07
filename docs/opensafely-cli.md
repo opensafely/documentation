@@ -140,9 +140,10 @@ Normal development of analysis code uses the pipeline defined in project.yaml to
 However, data science languages are often used interactively to rapidly experiment and test code. The `opensafely exec` command provides a simple way to do this, using the Docker images provided by OpenSAFELY. This can help ensure that your code works correctly in OpenSAFELY as you develop it, rather than accidentally relying on tools and libraries installed on your own machine.
 
 Running `opensafely exec IMAGE COMMAND` does the following:
- - runs an instance of the appropriate docker IMAGE (`r`, `python`, `stata-mp`)
- - shares the files in your current directory with the instance
- - executes COMMAND (or the default command for the image if you don't supply one)
+
+* runs an instance of the appropriate docker IMAGE (`r`, `python`, `stata-mp`)
+* shares the files in your current directory with the instance
+* executes COMMAND (or the default command for the image if you don't supply one)
 
 This allows you develop and and test code as if it was a regular interactive session.
 
@@ -152,7 +153,7 @@ For example, to run an interactive Stata session:
 opensafely exec stata-mp
 ```
 
-This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code. (the opensafely tool knows how to fetch and apply the OpenSAFELY Stata licence).
+This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code (the opensafely tool knows how to fetch and apply the OpenSAFELY Stata licence).
 
 
 Likewise, for R:
