@@ -117,16 +117,76 @@ See the [Codelist](codelist-intro.md) section for more information on codelists.
 
 
 To run your code on your machine, the `opensafely` tool uses the same Docker
-images that run in the secure server environments. These are updated
-periodically, for example when new libraries are installed. If you have error
-messages about missing libraries, your Docker images may need upgrading.
-To pull the most recent Docker images to your machine, run:
+images that run in the secure server environments. There is the
+`cohortextractor` image, for processing study definitions, and then the `r`,
+`stata-mp`, and `python` images, for running your analysis code. These last
+three provide a pre-built environment for their specific language, with
+a fixed set of pre-installed libraries.
+
+
+These are updated periodically, for example when new libraries are installed.
+If you have error messages about missing libraries, your Docker images may need
+upgrading.  To pull the most recent Docker images to your machine, run:
 
 ```bash
 opensafely pull
 ```
 
-### `jupyter` - running JupyterLab
+
+### `exec` - Interactive development
+
+Normal development of analysis code uses the pipeline defined in project.yaml to execute and test your code.
+
+However, data science languages are often used interactively to rapidly experiment and test code. The `opensafely exec` command provides a simple way to do this, using the Docker images provided by OpenSAFELY. This can help ensure that your code works correctly in OpenSAFELY as you develop it, rather than accidentally relying on tools and libraries installed on your own machine.
+
+Running `opensafely exec IMAGE COMMAND` does the following:
+ - runs an instance of the appropriate docker IMAGE (`r`, `python`, `stata-mp`)
+ - shares the files in your current directory with the instance
+ - executes COMMAND (or the default command for the image if you don't supply one)
+
+This allows you develop and and test code as if it was a regular interactive session.
+
+For example, to run an interactive Stata session:
+
+```bash
+opensafely exec stata-mp
+```
+
+This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code. (the opensafely tool knows how to fetch and apply the OpenSAFELY Stata licence).
+
+
+Likewise, for R:
+
+```bash
+opensafely exec --entrypoint R r
+```
+
+This will launch the version of R packaged in the `r` docker image, and your files can be executed (we need to specify the command as `R` as the default is to run `Rscript`, which is non-interactive).
+
+For python, you can run a plain python interpreter with:
+
+```bash
+opensafely exec python
+```
+
+Or the popular ipython interactive REPL with
+
+```bash
+opensafely exec python ipython
+```
+
+Note: for jupyter notebooks, see section below.
+
+For all images, you can run an interactive bash shell with:
+
+```bash
+opensafely exec IMAGE bash
+```
+
+This can be useful if you want to explore the image manually.
+
+
+### `jupyter` - Running JupyterLab
 
 [Jupyter notebooks](https://jupyter.org/) are useful interactive
 environments for developing code.
