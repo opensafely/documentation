@@ -4,7 +4,7 @@ export VIRTUAL_ENV  := `echo ${VIRTUAL_ENV:-.venv}`
 
 # TODO: make it /scripts on windows?
 export BIN := VIRTUAL_ENV + "/bin"
-export PATH := env_var('PATH') + ":$BIN"
+export PATH := env_var('PATH') + ":" + justfile_directory() + "/" + BIN
 export PIP := BIN + "/python -m pip"
 # enforce our chosen pip compile flags
 export COMPILE := BIN + "/pip-compile --allow-unsafe --generate-hashes"
