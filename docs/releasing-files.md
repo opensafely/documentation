@@ -81,18 +81,27 @@ When applying disclosure controls to your outputs, you should consider the poten
 
 ### Redacting counts less than or equal to 5
 
-Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted**. This includes:
+Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other outputted text and objects that may be a disclosure risk. 
 
-*   Redacting counts <=5 in frequency tables. The whole table, or at a minimum multiple rows within the table, should be redacted because values removed by single cell (or row, or column) redaction could be inferred from unredacted values.
-*   Summaries of numeric variables describing 5 or fewer patients should be redacted.
-*   Graphical figures whose underlying values describe 5 or fewer patients should be redacted. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. Underlying data for plots should be checked.
-*   Counts of zero can be retained.
+The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted or combined into other statistics**. This includes:
+
+*   Redacting counts <=5 in frequency tables. Row and column totals should be recalculated after you have redacted the cell values, to ensure that the redacted values can not be inferred from the totals.
+*   Redacting summaries of numeric variables (eg mean values) describing 5 or fewer patients.
+*   Redacting maximum or minimum values. These often relate to one or two individuals (eg ‘the oldest patient is 103’) and so should be avoided. In some cases the maximum and minima are informative about individuals (‘the target population was schoolchildren from 11 to 16’); these broad sample characteristics are okay.
+*   Redacting graphical figures whose underlying values describe 5 or fewer patients. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. Underlying data for plots should be checked - do not rely upon ‘it’s too small to read’ as a justification for having low numbers. These underlying counts should be provided when requesting the release of any figures.
+
+Below are some other principles to consider:
+
+*   Counts of zero can be retained in general, but be aware that zero or 100% counts can be disclosive (‘none of the males aged 45-49 used condoms’; ‘THC was a detected in all premature births in the 17-18 age group’) and should be removed. This can be difficult, as these results are often the most valuable from a policy perspective, so be particularly cautious when reporting on these. 
+*   Analytical results, such as model coefficients, test statistics, or goodness-of-fit measures generally do not generally present any disclosure risk, as long as these are genuine analyses (eg standard deviation does not present a confidentiality risk, unless it is a standard deviation calculated from just two observations)
 *   Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. It is very unlikely that outputs such as log files should be required for publication outside the secure environment.
-*   Consider rounding of results that could be at risk of secondary disclosure.
+*   We recommend rounding of results that could be at risk of secondary disclosure. This is an alternative to redaction, or can be used in combination. However, be careful to round all your results to the same base number - see below.
 
 Where possible it should be clear what has been redacted, so for example do not redact table titles and category names. By convention redactions take the form [REDACTED] to make redacted elements easier to search for.
 
-This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls. It may be possible for exceptions to be made if they can be justified as being both material important for the study conclusions (i.e. providing significant public benefit)  and having a very low risk of disclosure. This must be discussed with the OpenSAFELY team.
+If you find yourself redacting a lot of results, considering re-thinking the categories you are using. For example, suppose the category ‘age 95+’ is often needing to be redacted. Is there sufficient distinction between those age 90-94 and those aged 95+ to warrant the extra category? If not, then combine the category. You should always consider this option before deciding to redact individual cells. Focusing on the statistical value of the results can give better results (consistency across tables) compared to treating SDC as a table-by-table problem. 
+
+This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls, as these simple rules can be applied by all and provide a good degree of protection. As noted above, good disclosure protection is generally consistent with good statistics. Exceptions can be made if they can be justified as being both materially important for the study conclusions (i.e. providing significant public benefit) and having a very low risk of disclosure. This must be discussed with the OpenSAFELY team. Moreover, these must be rare exceptions: ignoring these guidelines, or continually asking for ‘exceptions’ will not be tolerated. 
 
 If you are unsure about anything, please email us: [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org).
 
