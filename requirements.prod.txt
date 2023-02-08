@@ -30,10 +30,6 @@ dacite==1.8.0 \
     --hash=sha256:6257a5e505b61a8cafee7ef3ad08cf32ee9b885718f42395d017e0a9b4c6af65 \
     --hash=sha256:f7b1205cc5d9b62835aac8cbc1e6e37c1da862359a401f1edbe2ae08fbdc6193
     # via mkdocs-multirepo-plugin
-first==2.0.2 \
-    --hash=sha256:8d8e46e115ea8ac652c76123c0865e3ff18372aef6f03c22809ceefcea9dec86 \
-    --hash=sha256:ff285b08c55f8c97ce4ea7012743af2495c9f1291785f163722bd36f6af6d3bf
-    # via mkdocs-opensafely-databuilder
 ghp-import==2.0.2 \
     --hash=sha256:5f8962b30b20652cdffa9c5a9812f7de6bcb56ec475acac579807719bf242c46 \
     --hash=sha256:947b3771f11be850c852c64b561c600fdddf794bab363060854c1ee7ad05e071
@@ -176,9 +172,6 @@ mkdocs-material-extensions==1.1.1 \
 mkdocs-multirepo-plugin==0.6.0 \
     --hash=sha256:9a2073a711a1b81939e40dac5f4f6dac3893dfea59fc32f321f648ee1c47abd2 \
     --hash=sha256:c6e3a3c6b03cc1d10f4d32f03665f714172d71f9bcab96537be5cbc98d2c7206
-    # via -r requirements.prod.in
-mkdocs-opensafely-databuilder @ https://github.com/opensafely-core/mkdocs-opensafely-databuilder/archive/99f9f3ec5025d5cf9030cafb1189576a4ebf6a7c.zip \
-    --hash=sha256:011613b325ee9b10aec31a652c5b00a39995f2e50a5df7a5f2bf5f2c78897f49
     # via -r requirements.prod.in
 mkdocs-table-reader-plugin==2.0 \
     --hash=sha256:c3d3b063a19e5a619f6062cb5963bd3d04c1f4e4f5d4ff75d9e33f3e79a1d535 \

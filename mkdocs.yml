@@ -144,7 +144,6 @@ plugins:
             heading_level: 4
           paths: [src/cohort-extractor]
       custom_templates: templates
-  - mkdocs-opensafely-databuilder
   - macros
   - multirepo:
       cleanup: !ENV [MKDOCS_MULTIREPO_CLEANUP, false]
