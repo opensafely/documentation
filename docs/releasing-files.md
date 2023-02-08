@@ -35,15 +35,6 @@ Datasets made available for analysis may contain the following types of attribut
 *   **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified; for example, age plus gender plus home address plus the date of a recent hospital visit (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
 Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/static/class/5750/papers/Sweeney.pdf) for more detail and examples). It is not possible to say what variables are quasi-identifiers outside of a specific context; ethnicity, number of children, GP surgery or other characteristics could be disclosive in some circumstances and not in others. Medical data provides a lot of variables that could be identifying, such as medical diagnoses and prescriptions. Hence, deciding the riskiness of an output requires judgement and an understanding of context.
 
-### Types of disclosure
-
-There are different types of disclosure risk associated with the release of data (See: [Duncan, George T. and Diane Lambert. “The Risk of Disclosure for Microdata.” Journal of Business & Economic Statistics 7 (1989): 207-217](https://www.tandfonline.com/doi/pdf/10.1080/07350015.1989.10509729?needAccess=true)):
-
-*   **Identity disclosure** - the association of a known individual with a data record; a single or small number of data attributes could re-identify the individual. Once an individual has been identified, you can then learn all the other data for that individual.
-*   **Attribute disclosure** - confidential information can be revealed and attributed to a subject.
-*   **Inferential disclosure** - the combination of outputs from the same source to reveal information.
-*   **Population disclosure** - released data allows you to learn something about an entire population.
-
 ### Primary vs secondary disclosure
 
 Primary disclosure describes the situation where confidential data can be obtained **directly** from the data. An example of primary disclosure can be seen in the table below, where you can learn that only 1 member of the population who is aged 21-30 has heart disease.
@@ -110,7 +101,7 @@ If you are unsure about anything, please email us: [disclosurecontrol@opensafely
 
 ### Rounding counts
 
-The redaction of any counts <=5 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to allow [**attribute** or **inferential** disclosure](#types-of-disclosure). To reduce this risk, we ask that you consider **rounding any counts to the nearest 5 wherever possible**. In most cases this is unlikely to have a significant impact on your results.
+The redaction of any counts <=5 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to reveal information about individuals or groups. To reduce this risk, we ask that you consider **rounding any counts to the nearest 5 wherever possible**. In most cases this is unlikely to have a significant impact on your results.
 
 !!! note
     Rounding does not remove the need to redact counts <=5. You should first redact any low counts and then apply rounding. If applying both techniques, the recommended approach is to first redact counts <=7 and then round to the nearest 5 (if you redact counts <=5 and then round to the nearest 5, any counts of 5 remaining must originally have been either 6 or 7; this approach provides the same protection for all counts)
