@@ -21,6 +21,9 @@ Below we cover the 4 key areas of our “safe outputs” activities:
 ## 1. Applying disclosure controls to outputs you request for release
 
 The assessment of the risk of re-identification attached to a data item or statistical outputs, and the use of appropriate methods to reduce the disclosure risk, is known as **statistical disclosure control (SDC)**. In OpenSAFELY, researchers must apply SDC at the stage where their aggregated results are ready to be outputted from the results server (the Level 4 environment) for sharing with collaborators for feedback, or for publication as papers, reports, blogs, etc. Examples of SDC techniques to manage the disclosure risk include redacting (suppressing) low values, rounding values, or redesigning outputs so that sparse table cells, for example, are combined.
+In general, good SDC is consistent with good statistics: many observations, no influential outliers, well-behaved distributions etc both prevent disclosure and increase confidence in the statistics. The one area to be wary of is where you can say something for certain about entire groups (‘all patients presenting with X also needed treatment for Y’). Be cautious about statements like this.
+
+To understand what checks have to be made to outputs it is important to understand the **attribute types** that exist in data and how these could lead to **primary or secondary disclosure**. Importantly, OpenSAFELY only allows the release of data where counts less than 5 are redacted.
 
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information, or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
