@@ -171,7 +171,7 @@ If you are likely to release data multiple times, e.g. for initial discussion wi
 Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY_Output_Review_Form_07-04-22.docx) and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. Variable descriptions
-2. A description and count of the underlying population for each output.
+2. A description and count of the underlying sample of the population for each output.
 3. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
 
 !!! note
