@@ -139,9 +139,10 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 
 There are several existing sets of SDC guidelines covering a range of output type specific considerations including:
 
-* [Handbook on Statistical Disclosure Control for Outputs](https://securedatagroup.files.wordpress.com/2019/10/sdc-handbook-v1.0.pdf)
-* [ESSNet SDC guidelines for the checking of output based on microdata research](https://research.cbs.nl/casc/ESSnet/GuidelinesForOutputChecking_Dec2009.pdf)
-* [Microdata output guide StatsNZ](https://web.archive.org/web/20220203084913/https://www.stats.govt.nz/assets/Methods/Microdata-Output-Guide-2020-v5-1.pdf)
+* [Handbook on Statistical Disclosure Control for Outputs](https://securedatagroup.files.wordpress.com/2019/10/sdc-handbook-v1.0.pdf) - This is a useful reference manual which includes SDC considerations for common research outputs types.
+* [Microdata output guide StatsNZ](https://web.archive.org/web/20220203084913/https://www.stats.govt.nz/assets/Methods/Microdata-Output-Guide-2020-v5-1.pdf) - This is another useful reference document with output rules for diferent output types.
+* [ESSNet SDC guidelines for the checking of output based on microdata research](https://research.cbs.nl/casc/ESSnet/GuidelinesForOutputChecking_Dec2009.pdf) - This gives a narrative introduction on the approaches to checking research outputs, as well as a set of rules for common output types.
+
 
 There are also resources for extended guidance for analysis methods commonly used in OpenSAFELY:
 
