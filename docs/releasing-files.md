@@ -31,9 +31,9 @@ To understand what checks have to be made to outputs it is important to understa
 ### Attribute types
 Datasets made available for analysis may contain the following types of attributes:
 
-*   **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name and date of birth. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis.
-*   **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
-Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/static/class/5750/papers/Sweeney.pdf) for more detail). This includes information such as age, sex, ethnicity and region of address. In addition, quasi-identifiers can also be confidential attributes that reveal sensitive information about an individual, such as medical diagnoses and prescriptions.
+*   **Direct identifiers** - attributes that definitively identify an individual. This includes information such as name, NHS number or hospital appointment reference. By design these attributes are not made available to OpenSAFELY as data shared into the OpenSAFELY platform is pseudonymised at source and then de-identified before being made available for analysis.
+*   **Quasi-identifiers** - attributes that in themselves are not direct identifiers, but in combination may allow an individual to be identified; for example, age plus gender plus home address plus the date of a recent hospital visit (see [L. Sweeney, Simple Demographics Often Identify People Uniquely. Carnegie Mellon University, Data
+Privacy Working Paper 3. Pittsburgh 2000](https://www.ccs.neu.edu/home/cbw/static/class/5750/papers/Sweeney.pdf) for more detail and examples). It is not possible to say what variables are quasi-identifiers outside of a specific context; ethnicity, number of children, GP surgery or other characteristics could be disclosive in some circumstances and not in others. Medical data provides a lot of variables that could be identifying, such as medical diagnoses and prescriptions. Hence, deciding the riskiness of an output requires judgement and an understanding of context.
 
 ### Types of disclosure
 
