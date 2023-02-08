@@ -133,9 +133,21 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 |                      | 51+          | 25                | 45             |
 | **Total**            |              | 50                | 120            |
 
-### Further reading
+### Extended principles
 
-#### Guidelines for common output types
+Below are a couple of examples of common secondary disclosure issues encountered when using OpenSAFELY.
+
+**Repeated analyses**
+When producing repeated reports at different time points, it is possible that there can be a small change in the number of people in your analysis. E.g. “number of people with condition X receiving treatment Y” increases from N to N+1). Although this is not typically likely to be disclosive, it may carry a small risk on some occasions (e.g. an individual/GP may be able to identify themselves/their patient or believe that that can do so) and therefore should be routinely avoided to minimise burden on output checking.
+
+The solution for this is to use rounding across the entire report (to the nearest 5, 7, or 10). Rounding eliminates the need for output checkers to compare different versions of the report outputs, as no small increases can occur. It is not likely that rounding will significantly affect the report in any meaningful way. Statistical analyses can be carried out prior to rounding and the results displayed as normal provided they are classed as low risk. If only charts are shown, rounding is not always necessary, but charts should have sufficiently low resolution that any small number changes cannot be precisely determined. However, numbers could be rounded nonetheless, as this would not noticeably affect the figures.
+
+**Running similar studies**
+There may be cases where you have run an analysis and results have been released following approval from the output checking team, but at a later date you decide you want to make changes to the analysis such as adding an extra code to a codelist. This may result in small changes in the outputs that can be disclosive, ie, <=5 individuals have the new code recorded. In these cases, you may need to wait until there has been enough change in the underlying study population (due to the movement of patients between practices) before rerunning the study.
+
+If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers.
+
+### Further reading
 
 There are several existing sets of SDC guidelines covering a range of output type specific considerations including:
 
@@ -152,20 +164,6 @@ There are also resources for extended guidance for analysis methods commonly use
     [O’Keefe, C. M., Sparks, R. S., McAullay, D. & Loong, B. Confidentialising Survival Analysis Output in a Remote Data Access System. J. Priv. Confidentiality 4, (2012)](https://journalprivacyconfidentiality.org/index.php/jpc/article/view/614)
 
 There is also a disclosure control section in our [Q&A forum](https://github.com/opensafely/documentation/discussions/categories/disclosure-control) where you can ask any questions you may have.
-
-#### Extended principles
-
-Below are a couple of examples of common secondary disclosure issues encountered when using OpenSAFELY.
-
-**Repeated analyses**
-When producing repeated reports at different time points, it is possible that there can be a small change in the number of people in your analysis. E.g. “number of people with condition X receiving treatment Y” increases from N to N+1). Although this is not typically likely to be disclosive, it may carry a small risk on some occasions (e.g. an individual/GP may be able to identify themselves/their patient or believe that that can do so) and therefore should be routinely avoided to minimise burden on output checking.
-
-The solution for this is to use rounding across the entire report (to the nearest 5, 7, or 10). Rounding eliminates the need for output checkers to compare different versions of the report outputs, as no small increases can occur. It is not likely that rounding will significantly affect the report in any meaningful way. Statistical analyses can be carried out prior to rounding and the results displayed as normal provided they are classed as low risk. If only charts are shown, rounding is not always necessary, but charts should have sufficiently low resolution that any small number changes cannot be precisely determined. However, numbers could be rounded nonetheless, as this would not noticeably affect the figures.
-
-**Running similar studies**
-There may be cases where you have run an analysis and results have been released following approval from the output checking team, but at a later date you decide you want to make changes to the analysis such as adding an extra code to a codelist. This may result in small changes in the outputs that can be disclosive, ie, <=5 individuals have the new code recorded. In these cases, you may need to wait until there has been enough change in the underlying study population (due to the movement of patients between practices) before rerunning the study.
-
-If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers.
 
 ## 2. Requesting release of outputs from the server
 
