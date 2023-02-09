@@ -121,9 +121,6 @@ extra:
     # so they are accessible via URL only
     # see hooks/hide_nav_sections.py
     - "Data Builder"
-  # location of backend docs file, which will be moved to root folder during build
-  # see hooks/update_backend_docs_file.py
-  imported_backend_docs_file: imported_docs/data-builder/public_docs.json
   # Import databuilder docs from a specified branch (defaults to main)
   # see hooks/databuilder_branch.py
   databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
@@ -147,7 +144,6 @@ plugins:
             heading_level: 4
           paths: [src/cohort-extractor]
       custom_templates: templates
-  - mkdocs-opensafely-databuilder
   - macros
   - multirepo:
       cleanup: !ENV [MKDOCS_MULTIREPO_CLEANUP, false]
@@ -184,5 +180,4 @@ markdown_extensions:
 hooks:
     - hooks/parent_snippets.py
     - hooks/hide_nav_sections.py
-    - hooks/update_backend_docs_file.py
     - hooks/databuilder_branch.py
