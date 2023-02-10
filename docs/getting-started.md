@@ -286,7 +286,7 @@ account, for developing your own study:
 
     1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
        If you are using Windows 10 Pro, Enterprise or Education, you should
-       follow the instructions for Hyper-V backend and Windows containers.  If you are using
+       follow the instructions for *Hyper-V backend* and Windows containers.  If you are using
        Windows Home or an earlier build of Pro or Education, follow the instructions for
        WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
