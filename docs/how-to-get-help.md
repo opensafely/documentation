@@ -1,11 +1,3 @@
-## Co-pilot programme
-
-When your project has been approved by NHS England,
-we can agree with you an intensive programme of support with our experienced researchers, or *co-pilots*.
-You can find out more about the co-pilot programme [on our blog][the co-pilot programme].
-
-[the co-pilot programme]: https://www.bennett.ox.ac.uk/blog/2021/08/opensafely-co-pilot-programme-assisting-users-on-their-opensafely-journey/
-
 ## Q&A forum
 
 If you're outside the co-pilot programme,
