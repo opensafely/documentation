@@ -25,6 +25,7 @@ Docker Desktop is preferred over Docker Toolbox.
 Docker Desktop in Windows offers native support via Hyper-V containers, and so is preferred.
 
 To install Docker Desktop on Windows 10 64-bit Pro, Enterprise, or Education build 15063 or later (i.e., most university or institution managed machines), [follow these installation instructions](https://docs.docker.com/docker-for-windows/install/).
+
 To install Docker Desktop on Windows Home [follow these installation instructions](https://docs.docker.com/docker-for-windows/install-windows-home/).
 
 Windows users who log into an Active Directory domain (i.e., a network login) may find they lack permissions to start Docker correctly. 
