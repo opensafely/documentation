@@ -114,6 +114,8 @@ All OpenSAFELY outputs require approval from NHS England before they can be diss
 
 ## What is our authorship policy?
 
+We encourage all our users to preprint their work on [medRxiv](https://www.medrxiv.org/), [bioRxiv](https://www.biorxiv.org/) or any other preprint server, though this isn't a requirement as we understand there may be a good reason not to preprint.
+
 Authorship should be discussed at the introductory meeting of any copiloted project. Our specific policy regarding authorship for copiloted projects is outlined below:
 
 - The OpenSAFELY copilot(s) for the project should always be offered authorship. Sometimes, if the copilot has needed to do a substantial amount of work to deliver a data analysis project for or with a collaborator organisation, it may be appropriate for the copilot to be offered joint first authorship (but not first). Appropriateness of joint first-authorship should be discussed with your co-pilot based on the extent of their contribution to your project.
