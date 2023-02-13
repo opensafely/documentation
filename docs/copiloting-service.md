@@ -36,20 +36,20 @@ flowchart TD
         getting_started[Completing Getting Started guide]
     end
     subgraph assignment_stage[" "]
-            copilot_assignment[Assignment of co-pilot]
+            co-pilot_assignment[Assignment of co-pilot]
             introductory_meeting[Introductory meeting]
-            copilot_assignment --> introductory_meeting
+            co-pilot_assignment --> introductory_meeting
     end
-    subgraph copiloting_stage[" "]
+    subgraph co-piloting_stage[" "]
         subgraph dedicated_support[1:1 support]
-            active_copiloting[Weekly meetings\nCohort review]
+            active_co-piloting[Weekly meetings\nCohort review]
         end
         subgraph wider_support[Community support]
             wider_support_details[Discussion forum\nUsers Slack channel]
         end
         output_checking[Output checking]
     end
-    subgraph post_copiloting_stage[" "]
+    subgraph post_co-piloting_stage[" "]
         subgraph wider_support_post[Community support]
             wider_support_details_post[Discussion forum\nUsers Slack channel]
         end
@@ -58,17 +58,17 @@ flowchart TD
     end
     getting_started --> assignment_stage
     application_approval --> assignment_stage
-    introductory_meeting --> copiloting_stage
-    copiloting_stage --> post_copiloting_stage
+    introductory_meeting --> co-piloting_stage
+    co-piloting_stage --> post_co-piloting_stage
     style setup_stage fill:#f7fcb9,stroke:#aaa
     style assignment_stage fill:#addd8e,stroke:#333
-    style copiloting_stage fill:#31a354,stroke:#333
+    style co-piloting_stage fill:#31a354,stroke:#333
     style dedicated_support color:white
-    style active_copiloting color:white
+    style active_co-piloting color:white
     style wider_support color:white
     style wider_support_details color:white
     style output_checking color:white
-    style post_copiloting_stage fill:#fff,stroke:#333
+    style post_co-piloting_stage fill:#fff,stroke:#333
 ```
 
 ### Project application and software setup
