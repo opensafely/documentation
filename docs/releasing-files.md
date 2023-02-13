@@ -25,8 +25,6 @@ In general, good SDC is consistent with good statistics: many observations, no i
 
 To understand what checks have to be made to outputs it is important to understand the **attribute types** that exist in data and how these could lead to **primary or secondary disclosure**. Importantly, OpenSAFELY requires that researchers redact any outputs based on counts <= 5 before they can be released.
 
-only allows the release of data where counts less than 5 are redacted.
-
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information, or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
 
