@@ -7,7 +7,8 @@ All new users of the OpenSAFELY platform are offered access to our copilot servi
 The service includes five days (over four weeks) of dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform and advise with regards to Github.
 
 Beyond this initial four week period, we also provide:
-- community support via GitHub forums and the #opensafely-users Slack channel
+
+- community support via GitHub forums and the `#opensafely-users` Slack channel
 - output checking service
 - manuscript review
 - opportunities to present at quarterly OpenSAFELY User Group meetings
@@ -112,6 +113,8 @@ It is not expected that the research project will be complete at the end of the 
 All OpenSAFELY outputs require approval from NHS England before they can be disseminated any wider than the pilot's research group. This includes academic manuscripts (pre-printed or peer-reviewed), conference abstracts and presentations, internal reports and masters/PhD theses. Our IG team will handle the NHS England approval process; for more information about how to request NHS England approval and what to include in your publication text please see [this section of our documentation](https://www.opensafely.org/policies-for-researchers/).
 
 ## What is our authorship policy?
+
+We encourage all our users who produce traditional academic papers to preprint their work. The vast majority of OpenSAFELY papers have been preprinted on on [medRxiv](https://www.medrxiv.org/), however we are happy for them to be preprinted on other servers. If you typically use other preprint servers, please let us know so that we can assess whether they are appropriate for OpenSAFELY studies.
 
 Authorship should be discussed at the introductory meeting of any copiloted project. Our specific policy regarding authorship for copiloted projects is outlined below:
 
