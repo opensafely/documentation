@@ -88,7 +88,7 @@ The general principle is that **any statistic describing 5 or fewer patients, ei
 *   Redacting counts <=5 in frequency tables. Row and column totals should be recalculated after you have redacted the cell values, to ensure that the redacted values can not be inferred from the totals.
 *   Redacting summaries of numeric variables (eg mean values) describing 5 or fewer patients.
 *   Redacting maximum or minimum values. These often relate to one or two individuals (eg ‘the oldest patient is 103’) and so should be avoided. In some cases the maximum and minima are informative about individuals (‘the target population was schoolchildren from 11 to 16’); these broad sample characteristics are okay.
-*   Redacting graphical figures whose underlying values describe 5 or fewer patients. Figures which include print-outs of patient counts (such as KM plots) should be checked and redacted. Underlying data for plots should be checked - do not rely upon ‘it’s too small to read’ as a justification for having low numbers. These underlying counts should be provided when requesting the release of any figures.
+*   Redacting graphical figures whose underlying values describe 5 or fewer patients. Figures which include print-outs of patient counts (such as Kaplan-Meier plots) should be checked and redacted. Underlying data for plots should be checked - do not rely upon ‘it’s too small to read’ as a justification for having low numbers. These underlying counts should be provided when requesting the release of any figures.
 
 Below are some other principles to consider:
 
