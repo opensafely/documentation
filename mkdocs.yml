@@ -79,7 +79,7 @@ nav:
   - Data Builder: '!import https://github.com/opensafely-core/databuilder?branch=main'
   - Support:
       - How to get help: how-to-get-help.md
-      - OpenSAFELY copiloting service: copiloting-service.md
+      - OpenSAFELY co-piloting service: copiloting-service.md
       - Requesting new libraries: requesting-libraries.md
       - Requesting study definition variables: requesting-variables.md
       - Plan S and OpenSAFELY: plan-s.md
