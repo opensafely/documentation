@@ -82,6 +82,11 @@ title: "Report"
 output: 
   html_document:
     theme: null
+    highlight: null
+    mathjax: null
+    toc: false
+    fig_caption: false
+    df_print: simple
 ---
 ```
 
