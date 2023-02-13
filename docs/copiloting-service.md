@@ -114,7 +114,7 @@ All OpenSAFELY outputs require approval from NHS England before they can be diss
 
 ## What is our authorship policy?
 
-We encourage all our users who produce traditional academic papers to preprint their work. The vast majority of OpenSAFELY papers have been preprinted on on [medRxiv](https://www.medrxiv.org/), however we are happy for them to be preprinted on other servers. If you are using other servers please let us know why so we can try them out if appropriate.
+We encourage all our users who produce traditional academic papers to preprint their work. The vast majority of OpenSAFELY papers have been preprinted on on [medRxiv](https://www.medrxiv.org/), however we are happy for them to be preprinted on other servers. If you typically use other preprint servers, please let us know so that we can assess whether they are appropriate for OpenSAFELY studies.
 
 Authorship should be discussed at the introductory meeting of any copiloted project. Our specific policy regarding authorship for copiloted projects is outlined below:
 
