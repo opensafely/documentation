@@ -9,7 +9,7 @@ OpenSAFELY follows the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/
 * **Safe settings** - are there technical controls on access to the data?
 * **Safe outputs** - is there any residual risk in outputs being released from the environment?
 
-All data in OpenSAFELY is pseudonymised and all projects and researchers in OpenSAFELY go through an approval process before having any access to the dataset. This ensures the “safe data”, “safe projects” and “safe people” elements of the fives safes framework are met. The OpenSAFELY platform ensures that handling risk (“safe settings”) is minimsed. The application of **disclosure controls** and **output-checking** is part of the “safe outputs” dimension.
+All data in OpenSAFELY is pseudonymised and all projects and researchers in OpenSAFELY go through an approval process before having any access to the dataset. This ensures the “safe data”, “safe projects” and “safe people” elements of the fives safes framework are met. The technical controls implemented as part of the OpenSAFELY platform ensures that “safe settings” are in place and that risk is minimised in this respect. The application of **disclosure controls** and **output-checking** is part of the “safe outputs” dimension.
 
 Below we cover the 4 key areas of our “safe outputs” activities:
 
