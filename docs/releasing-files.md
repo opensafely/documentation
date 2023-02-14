@@ -189,7 +189,7 @@ Only certain file types will be reviewed and released from the secure server. Se
     * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
     * `html` files can be released if you are producing a report style output, but please note the points below:
         * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. Most commonly, this will be a report to be hosted on [OpenSAFELY Reports](https://reports.opensafely.org/) (more information [here](https://docs.opensafely.org/reports/intro/)). If you can produce your report locally, using individually released files, you should.
-        * Hide any code blocks from the report. 
+        * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find examples showing how to do this for Jupyter notebooks and R markdown files [here](https://docs.opensafely.org/reports/intro/#producing-reports). 
         * Each individual output within the report should be requested for release separately, with the contextual information outlined above.
         * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. You can find instructions on how to do that [here](TODO)
 
