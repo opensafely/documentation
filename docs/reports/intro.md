@@ -74,11 +74,11 @@ To make R markdown files consistent with the best practices in the section above
 * Hide code blocks unless you want to display them by adding `include=False` when specifying a code block.
 * Do not add interactivity features to your charts.
 
-An example metatada section is shown below:
+An example R markdown document is shown below:
 
-```
+````R
 ---
-title: "Report"
+title: "A very interesting report"
 output: 
   html_document:
     theme: null
@@ -86,9 +86,39 @@ output:
     mathjax: null
     toc: false
     fig_caption: false
-    df_print: default
+    df_print: simple
 ---
+
+```{r echo=FALSE}
+library(readr)
+library(knitr)
+knitr::opts_chunk$set( echo=FALSE, message=FALSE )
 ```
+
+## A table
+
+Find below a table of interest.
+
+```{r}
+read_csv("output/table.csv")
+```
+
+## A figure
+
+Find below a figure of interest.
+
+![Figure legend](output/figure.png)
+
+## Another section
+
+```{r}
+value = 10
+```
+
+Some text which can be *Markdown* formatted.
+The value is `r value`.
+
+````
 
 ### Converting R markdown files to html
 
