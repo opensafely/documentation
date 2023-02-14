@@ -86,7 +86,7 @@ output:
     mathjax: null
     toc: false
     fig_caption: false
-    df_print: kable
+    df_print: default
 ---
 
 ```{r echo=FALSE}
