@@ -76,7 +76,7 @@ To make R markdown files consistent with the best practices in the section above
 
 An example R markdown document is shown below:
 
-````R
+````r
 ---
 title: "A very interesting report"
 output: 
