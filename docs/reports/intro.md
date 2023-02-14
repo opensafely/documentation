@@ -86,7 +86,7 @@ output:
     mathjax: null
     toc: false
     fig_caption: false
-    df_print: simple
+    df_print: default
 ---
 ```
 
