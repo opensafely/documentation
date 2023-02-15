@@ -22,13 +22,8 @@ jobs:
           install-just: true
           python-version: '3.9'
 
-      - name: Upgrade pip
-        run: |
-          python3 -m pip install --upgrade pip
-
-      - name: Install dependencies
-        run: |
-          python3 -m pip install -r ./requirements.txt
+      - name: Install Python requirements
+        run: just devenv
 
       - name: Build site
         env:
