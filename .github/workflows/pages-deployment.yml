@@ -22,9 +22,6 @@ jobs:
           install-just: true
           python-version: '3.9'
 
-      - name: Install Python requirements
-        run: just devenv
-
       - name: Build site
         env:
           AccessToken: ${{ secrets.GITHUB_TOKEN }}
