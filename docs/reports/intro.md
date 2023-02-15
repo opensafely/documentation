@@ -62,7 +62,7 @@ text = display(
 Details on formatting markdown cells can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 ### Converting Jupyter notebooks to html
 
-You can convert your notebook to HTML using `nbconvert`, with the `basic` template, like this: 
+You can convert your notebook to HTML using [nbconvert](https://nbconvert.readthedocs.io/en/latest/), with the `basic` template, like this: 
 
 ```
 nbconvert my-notebook.ipynb --execute --to html --template basic --no-input
