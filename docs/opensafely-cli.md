@@ -159,7 +159,7 @@ This will run the Stata packaged in the `stata-mp` docker image, and you can man
 Likewise, for R:
 
 ```bash
-opensafely exec --entrypoint R r
+opensafely exec r R
 ```
 
 This will launch the version of R packaged in the `r` docker image, and your files can be executed (we need to specify the command as `R` as the default is to run `Rscript`, which is non-interactive).
