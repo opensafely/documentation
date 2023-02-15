@@ -110,3 +110,7 @@ fix: devenv
 # Run the dev project
 run: devenv
     $BIN/mkdocs serve -a localhost:8910
+
+# Build the documentation
+build: devenv
+    $BIN/mkdocs build
