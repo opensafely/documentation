@@ -62,7 +62,21 @@ text = display(
 Details on formatting markdown cells can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 ### Converting Jupyter notebooks to html
 
-You can convert your notebook to HTML using `nbconvert`, with the `basic` template, like this: `nbconvert my-notebook.ipynb --execute --to html --template basic --no-input`. This removes any code blocks in the notebook from the rendered html; to keep them you can remove th `no-input` flag. An example of this, implemented as an OpenSAFELY action, can be found [here](https://github.com/opensafely/mechanical-valve-anticoag/blob/1f158504ba5a74470b11c8d73311fb2859d67cb7/project.yaml#L53-L63).
+You can convert your notebook to HTML using `nbconvert`, with the `basic` template, like this: 
+
+```
+nbconvert my-notebook.ipynb --execute --to html --template basic --no-input
+```
+
+This removes any code blocks in the notebook from the rendered html; to keep them you can remove the `no-input` flag. 
+
+To run this within an OpenSAFELY action, you can use the following run command:
+
+```
+run: jupyter:latest jupyter nbconvert /workspace/analysis/notebook.ipynb --execute --to html --output-dir=/workspace/output --no-input --ExecutePreprocessor.timeout=86400
+```
+
+An example of this, implemented as an OpenSAFELY action, can be found [here](https://github.com/opensafely/mechanical-valve-anticoag/blob/1f158504ba5a74470b11c8d73311fb2859d67cb7/project.yaml#L53-L63).
 
 ## R Markdown
 
