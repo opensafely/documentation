@@ -16,9 +16,10 @@ jobs:
         with:
           submodules: true
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Install Python and just
+        uses: opensafely-core/setup-action@v1
         with:
+          install-just: true
           python-version: '3.9'
 
       - name: Upgrade pip
@@ -35,7 +36,7 @@ jobs:
           MKDOCS_SITE_URL: https://docs.opensafely.org
           MKDOCS_MULTIREPO_CLEANUP: true
           DATABUILDER_BRANCH: main
-        run: mkdocs build
+        run: just build
 
       - name: Add a version file
         run: echo ${{ github.sha }} > site/version.html
