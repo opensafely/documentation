@@ -189,7 +189,7 @@ This can be used for any variable where you want to return information for a ser
 
 The will create `n` columns in the dataset. A few things to be aware of:
 
-* Behind the scenes, this creates a new SQL query for each variable rather than a single query for everything. This can be inefficient and could slow down extraction time considerably. You should therefore only extract the minimum `n` events needed for your study.
+* Behind the scenes, this creates a new SQL query for each variable rather than a single query for everything. This can be inefficient and could slow down extraction time considerably. You should therefore only extract the minimum `n` events needed for your study. We reccomend using a separate study definition to ascertain an appropriate `n` for your study rather than taking a "best guess".
 * The dummy data won't appear in date order. You could write a more sophisticated function, with different expectations for each `i`. Or you could reorder the columns post-extraction, for example in [covid-vaccine-effectiveness-research repository](https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/be747894e1fadf525e391c01477a8ac532613b42/analysis/R/data_process.R#L229).
 * Many routines for analysing this sort of data, for example in R or Stata, require the data to be in long-form, not wide-form as they are returned here. In that case, you'll need to reshape the columns.
 
