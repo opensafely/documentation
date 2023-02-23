@@ -87,6 +87,6 @@ please use our [Q&A forum](https://github.com/opensafely/documentation/discussio
 
 To discuss making your data available to researchers via the OpenSAFELY
 platform, please [contact our technical
-team](mailto:tech@opensafely.org).
+team](mailto:team@opensafely.org).
 
 ---8<-- 'includes/glossary.md'
