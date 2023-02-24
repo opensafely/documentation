@@ -578,7 +578,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "Python"
 
-    ```yaml linenums="1" hl_lines="15 16 17 18 19 20"
+    ```yaml linenums="1" hl_lines="13 14 15 16 17 18 19 20"
     version: "3.0"
 
     expectations:
