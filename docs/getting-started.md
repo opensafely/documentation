@@ -659,20 +659,21 @@ the new commit.
 
     1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).
        (Note this is different to the settings in your Gitpod workspace.)
+       Click on your profile image and select User Settings.
 
     1. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
        "Edit Permissions".
 
-       ![Opening Gitpod's settings in their code
-       editor.](images/gitpod-git-providers.png)
+        ![Opening Gitpod's settings in their code
+        editor.](images/gitpod-git-providers.png)
     1. In the list, tick "public\_repo", which gives
        your Gitpod account "write access to code in public repositories
        and organizations" on GitHub. (There is another permission that
        you have to enable for access to code if you've chosen to make your repository private)
 
-       ![Opening Gitpod's settings in their code
-       editor.](images/gitpod-edit-permissions.png)
+        ![Opening Gitpod's settings in their code
+        editor.](images/gitpod-edit-permissions.png)
     1. When you select "Update Permissions", you will see a prompt from
        GitHub asking you to approve the changes, which you will need to
        do to allow Gitpod to push your work on Gitpod to GitHub.
@@ -713,9 +714,10 @@ the new commit.
     ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
 
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Type a message into the text box above the list
-    of staged files that will describe the staged changes. When ready, you
-    can then click the tick icon that will *commit* the staged changes to
+    make the new commit. Click the orange Commit button, which will open
+    and editor for you to type a commit message.  Type a message to describe
+    the staged changes. When ready, you can then click the tick icon to
+    accept the commit message and *commit* the staged changes to
     to add them to the repository as stored in the workspace.
 
     ![Committing changes in Gitpod.](images/gitpod-commit.png)
@@ -726,9 +728,10 @@ the new commit.
     *local* copy of the repository. We now need to *push* the
     repository to GitHub to make the changes show up there.
 
-    Click the ellipsis (`⋯`) icon next to "Source Control" and then
-    select "Push". This should submit your changes to the GitHub
-    repository that you created earlier.
+    Click the "Sync Changes" button to push your commits.  Alternatively,
+    click the ellipsis (`⋯`) icon next to "Source Control" and then select
+    "Push". This should submit your changes to the GitHub repository that
+    you created earlier.
 
     ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
 
