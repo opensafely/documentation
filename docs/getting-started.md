@@ -622,19 +622,19 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             cohort: output/descriptive.png
     ```
 
-Line 15 tells the system we want to create a new action called `describe`. Line
-16 says how to run the script (using the `python` or `R` runner). Line 17 tells the
-system that this action depends on the outputs of the
-`generate_study_population` being present. Lines 18-20 describe the files that
-the action creates. Line 19 says that the items indented below it are
-*moderately* sensitive, that is they may be released to the public after a
-careful review (and possible redaction). Line 20 says that there's one output
-file, which will be found at `output/descriptive.png`.
-5. At the command line, type `opensafely run run_all
-   --force-run-dependencies` and press ++enter++.  This should end by
-   telling you a file containing the histogram has been
-   created. Open it — you can do this via Visual Studio Code's Explorer
-   — and check it looks right.
+- **Line 13** tells the system we want to create a new action called `describe`.
+- **Line 14** says how to run the script (using the `python` or `R` runner).
+- **Line 15** tells the system that this action depends on the outputs of the
+  `generate_study_population` being present.
+- **Lines 16-18** describe the files that the action creates. Line 17 says that the
+  items indented below it are *moderately* sensitive, that is they may be released
+  to the public after a careful review (and possible redaction). Line 18 says that
+  there's one output file, which will be found at `output/descriptive.png`.
+
+
+At the command line, type `opensafely run run_all --force-run-dependencies` and press
+++enter++. This should end by telling you a file containing the histogram has been created.
+Open it — you can do this via Visual Studio Code's Explorer — and check it looks right.
 
 ## 6. Test your study on GitHub
 
