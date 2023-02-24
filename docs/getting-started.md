@@ -636,6 +636,11 @@ At the command line, type `opensafely run run_all --force-run-dependencies` and 
 ++enter++. This should end by telling you a file containing the histogram has been created.
 Open it — you can do this via Visual Studio Code's Explorer — and check it looks right.
 
+!!! warning
+    Changes you make to files are automatically saved on Gitpod. However, changes will not persist
+    outside of the Gitpod workspace unless you *commit* and *push* them to GitHub, as described
+    in the next section.
+
 ## 6. Test your study on GitHub
 
 Now that your study does something interesting, you should "*push*" it
