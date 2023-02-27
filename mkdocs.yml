@@ -68,7 +68,7 @@ nav:
         - Create a draft: reports/create-a-draft.md
         - Review process: reports/review-process.md
         - Publishing a report: reports/publish-a-report.md
-      - Adding your pre-print or paper: adding-a-paper.md
+      - Adding your pre-print/paper: adding-a-paper.md
   - OpenSAFELY best practice:
       - Bennett Institute Open Manifesto: open-data-manifesto.md
       - Publishing your GitHub Repository: publishing-repo.md
