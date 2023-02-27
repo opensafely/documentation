@@ -578,7 +578,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "Python"
 
-    ```yaml linenums="1" hl_lines="15 16 17 18 19 20"
+    ```yaml linenums="1" hl_lines="13 14 15 16 17 18 19 20"
     version: "3.0"
 
     expectations:
@@ -622,19 +622,24 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             cohort: output/descriptive.png
     ```
 
-Line 15 tells the system we want to create a new action called `describe`. Line
-16 says how to run the script (using the `python` or `R` runner). Line 17 tells the
-system that this action depends on the outputs of the
-`generate_study_population` being present. Lines 18-20 describe the files that
-the action creates. Line 19 says that the items indented below it are
-*moderately* sensitive, that is they may be released to the public after a
-careful review (and possible redaction). Line 20 says that there's one output
-file, which will be found at `output/descriptive.png`.
-5. At the command line, type `opensafely run run_all
-   --force-run-dependencies` and press ++enter++.  This should end by
-   telling you a file containing the histogram has been
-   created. Open it — you can do this via Visual Studio Code's Explorer
-   — and check it looks right.
+- **Line 13** tells the system we want to create a new action called `describe`.
+- **Line 14** says how to run the script (using the `python` or `R` runner).
+- **Line 15** tells the system that this action depends on the outputs of the
+  `generate_study_population` being present.
+- **Lines 16-18** describe the files that the action creates. Line 17 says that the
+  items indented below it are *moderately* sensitive, that is they may be released
+  to the public after a careful review (and possible redaction). Line 18 says that
+  there's one output file, which will be found at `output/descriptive.png`.
+
+
+At the command line, type `opensafely run run_all --force-run-dependencies` and press
+++enter++. This should end by telling you a file containing the histogram has been created.
+Open it — you can do this via Visual Studio Code's Explorer — and check it looks right.
+
+!!! warning
+    Changes you make to files are automatically saved on Gitpod. However, changes will not persist
+    outside of the Gitpod workspace unless you *commit* and *push* them to GitHub, as described
+    in the next section.
 
 ## 6. Test your study on GitHub
 
@@ -654,20 +659,21 @@ the new commit.
 
     1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).
        (Note this is different to the settings in your Gitpod workspace.)
+       Click on your profile image and select User Settings.
 
     1. Select Integrations and under Git Providers, hover over your
        GitHub details, click the three vertical dots (`⋮`) and select
        "Edit Permissions".
 
-       ![Opening Gitpod's settings in their code
-       editor.](images/gitpod-git-providers.png)
+        ![Opening Gitpod's settings in their code
+        editor.](images/gitpod-git-providers.png)
     1. In the list, tick "public\_repo", which gives
        your Gitpod account "write access to code in public repositories
        and organizations" on GitHub. (There is another permission that
        you have to enable for access to code if you've chosen to make your repository private)
 
-       ![Opening Gitpod's settings in their code
-       editor.](images/gitpod-edit-permissions.png)
+        ![Opening Gitpod's settings in their code
+        editor.](images/gitpod-edit-permissions.png)
     1. When you select "Update Permissions", you will see a prompt from
        GitHub asking you to approve the changes, which you will need to
        do to allow Gitpod to push your work on Gitpod to GitHub.
@@ -708,9 +714,10 @@ the new commit.
     ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
 
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Type a message into the text box above the list
-    of staged files that will describe the staged changes. When ready, you
-    can then click the tick icon that will *commit* the staged changes to
+    make the new commit. Click the orange Commit button, which will open
+    and editor for you to type a commit message.  Type a message to describe
+    the staged changes. When ready, you can then click the tick icon to
+    accept the commit message and *commit* the staged changes to
     to add them to the repository as stored in the workspace.
 
     ![Committing changes in Gitpod.](images/gitpod-commit.png)
@@ -721,9 +728,10 @@ the new commit.
     *local* copy of the repository. We now need to *push* the
     repository to GitHub to make the changes show up there.
 
-    Click the ellipsis (`⋯`) icon next to "Source Control" and then
-    select "Push". This should submit your changes to the GitHub
-    repository that you created earlier.
+    Click the "Sync Changes" button to push your commits.  Alternatively,
+    click the ellipsis (`⋯`) icon next to "Source Control" and then select
+    "Push". This should submit your changes to the GitHub repository that
+    you created earlier.
 
     ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
 
