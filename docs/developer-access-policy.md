@@ -116,6 +116,8 @@ including:
 * logging of all operations
 * manual checking of outputs for disclosivity before they are released from the backend
 
+Data curation activities are also subject to the [standard OpenSAFELY research policies](https://www.opensafely.org/policies-for-researchers/).
+
 ### Who
 
 Only OpenSAFELY Core Developers and OpenSAFELY Data Investigators have permission to carry out data curation activities.
