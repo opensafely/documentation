@@ -17,7 +17,7 @@ link: "https://doi.org/..."
 
 ## Abstract
 
-### Background 
+### Background
 
 ### Methods
 
