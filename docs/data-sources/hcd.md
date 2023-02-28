@@ -4,7 +4,7 @@ The High Cost Drugs (HCD) data is a dataset containing specialist medicines pres
 
 * **Data provider** North East Commissioning Support Unit (NECS) with approvals from NHS Digital.
 * **Participation / Coverage** Hospital prescribing of [high cost drugs](https://www.england.nhs.uk/publication/nhs-england-drugs-list/) across all 135 CCGs nationally.
-* **Update frequency in OpenSAFELY** Data covering April 2018 to March 2020 is currently available in OpenSAFELY, with no updates planned. 
+* **Update frequency in OpenSAFELY** Data covering April 2018 to March 2020 is currently available in OpenSAFELY, with no updates planned  (see discussion section of [paper](https://wellcomeopenresearch.org/articles/6-360) for our proposal). 
 * **Delay between event occurring and event appearing in OpenSAFELY** NA - currently a one off extract.
 * **Collected information** Patient characteristics; clinical indications; medicine prescribed. 
 
