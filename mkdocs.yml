@@ -17,6 +17,7 @@ nav:
               - Covid-19 test results: data-sources/sgsscovid.md
               - Covid-19 therapeutics: data-sources/therapeutics.md
               - Emergency attendances: data-sources/ecds.md
+              - High Cost Drugs: data-sources/hcd.md
               - Hospital admissions: data-sources/apc.md
               - In-hospital deaths (covid-19 only): data-sources/cpns.md
               - Intensive care admissions (covid-19 only): data-sources/icnarc.md
