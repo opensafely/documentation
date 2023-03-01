@@ -159,7 +159,8 @@ For more information, see the [ONS CIS section](data-sources/onscis.md).
 
 
 ## High Cost Drugs
-(Documentation on the source of this data will be forthcoming later.)
+These variables are derived from the High Cost Drugs data which contains specialist medicines prescribed by hospitals to patients for the management of long term conditions.
+For more information, see the [High Cost Drugs section](data-sources/hcd.md).
 
 ::: cohortextractor.patients.with_high_cost_drugs
 &nbsp;
