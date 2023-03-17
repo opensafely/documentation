@@ -34,10 +34,9 @@
 *[API]: Application Programming Interface. An agreed way for one system to communicate with another system.
 *[released outputs]: files from Level 4 uploaded to the Jobs site.
 *[draft published outputs]: a collection of released outputs prepared for publication to the general public.
-*[Data Builder]: A program that extracts data for analysis.
-*[dataset definition]: A file that specifies the criteria for selecting, and the characteristics of, the data to extract.
-*[ehrQL]: electronic health record query language. The language used to extract data for analysis.
-*[OpenSAFELY Contracts]: specifications for the data supplied by different backends; and guidelines and tooling for suppliers wishing to standardise their data.
+*[Data Builder]: A program that extracts EHR data for analysis.
+*[dataset definition]: Describes, using ehrQL, the EHR data to extract from a backend.
+*[ehrQL]: The Electronic Health Records Query Language. A Domain-Specific Language (DSL) for EHR data.
 *[dataset]: A tabular data structure with one row per patient and one column per variable.
 *[backend]: an individual clinical database that a data provider makes accessible via the OpenSAFELY platform.
 *[data provider]: an operator of a database (in UK data protection law, a data processor) that contains sensitive patient data; who also provides a secure infrastructure for running OpenSAFELY next to that data.
