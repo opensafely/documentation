@@ -7,6 +7,14 @@ nav:
   - About OpenSAFELY:
       - Our philosophy: open-methods.md
       - Security: security-levels.md
+      - Access policies: access-policies.md
+      - Technical architecture: technical-architecture.md
+      - Contributing: contributing.md
+  - Getting Started guide: getting-started.md
+  - Using OpenSAFELY:
+      - Analysis workflow: workflow.md
+      - Federated analytics: federation.md
+      - GitHub repositories: repositories.md
       - Data sources:
           - data-sources/index.md
           - Overview: data-sources/intro.md
@@ -24,14 +32,6 @@ nav:
               - International Severe Acute Respiratory and emerging Infection Consortium: data-sources/isaric.md
               - Registered deaths: data-sources/onsdeaths.md
               - UK Renal Registry: data-sources/ukrr.md
-      - Access policies: access-policies.md
-      - Technical architecture: technical-architecture.md
-      - Information for system integrators: system-integration.md
-  - Getting Started guide: getting-started.md
-  - Using OpenSAFELY:
-      - Analysis workflow: workflow.md
-      - Federated analytics: federation.md
-      - GitHub repositories: repositories.md
       - Detailed installation guides:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
@@ -70,6 +70,7 @@ nav:
         - Review process: reports/review-process.md
         - Publishing a report: reports/publish-a-report.md
       - Adding your pre-print/paper to OpenSAFELY.org: adding-a-paper.md
+      - Information for system integrators: system-integration.md
   - OpenSAFELY best practice:
       - Bennett Institute Open Manifesto: open-data-manifesto.md
       - Publishing your GitHub Repository: publishing-repo.md
@@ -86,7 +87,6 @@ nav:
       - Requesting study definition variables: requesting-variables.md
       - Plan S and OpenSAFELY: plan-s.md
       - Updating the documentation: updating-the-docs.md
-  - Contributing: contributing.md
   - Platform News: https://www.opensafely.org/changelog/
 theme:
   name: material
