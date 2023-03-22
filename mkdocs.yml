@@ -20,18 +20,17 @@ nav:
           - Overview: data-sources/intro.md
           - SystmOne primary care: data-sources/systmone.md
           - EMIS primary care: data-sources/emis.md
-          - Externally linked data:
-              - Covid-19 infection survey: data-sources/onscis.md
-              - Covid-19 test results: data-sources/sgsscovid.md
-              - Covid-19 therapeutics: data-sources/therapeutics.md
-              - Emergency attendances: data-sources/ecds.md
-              - High Cost Drugs: data-sources/hcd.md
-              - Hospital admissions: data-sources/apc.md
-              - In-hospital deaths (covid-19 only): data-sources/cpns.md
-              - Intensive care admissions (covid-19 only): data-sources/icnarc.md
-              - International Severe Acute Respiratory and emerging Infection Consortium: data-sources/isaric.md
-              - Registered deaths: data-sources/onsdeaths.md
-              - UK Renal Registry: data-sources/ukrr.md
+          - Covid-19 infection survey: data-sources/onscis.md
+          - Covid-19 test results: data-sources/sgsscovid.md
+          - Covid-19 therapeutics: data-sources/therapeutics.md
+          - Emergency attendances: data-sources/ecds.md
+          - High Cost Drugs: data-sources/hcd.md
+          - Hospital admissions: data-sources/apc.md
+          - In-hospital deaths (covid-19 only): data-sources/cpns.md
+          - Intensive care admissions (covid-19 only): data-sources/icnarc.md
+          - International Severe Acute Respiratory and emerging Infection Consortium: data-sources/isaric.md
+          - Registered deaths: data-sources/onsdeaths.md
+          - UK Renal Registry: data-sources/ukrr.md
       - Detailed installation guides:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
