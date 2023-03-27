@@ -1,0 +1,24 @@
+---
+name: 'Check Cloudflare redirects'
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 10 * * 2'
+
+permissions:
+  contents: read
+
+jobs:
+  redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Check Cloudflare redirects
+        run: |
+          awk '{print "https://docs.opensafely.org"$1}' docs/_redirects | xargs -n1 curl -o /dev/null --silent --head --write-out '%{url_effective} %{http_code} \n' > redirect_check_results
+          cat redirect_check_results
+          diff <(awk '{print $NF}' redirect_check_results) <(awk '{print $NF}' docs/_redirects)
