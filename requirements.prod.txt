@@ -209,9 +209,9 @@ mkdocs-macros-plugin==0.7.0 \
     --hash=sha256:96bdabeb98b96139544f0048ea2f5cb80c7befde6b21e94c6d4596c22774cbcf \
     --hash=sha256:9e64e1cabcf6925359de29fe54f62d5847fb455c2528c440b87f8f1240650608
     # via -r requirements.prod.in
-mkdocs-material==9.1.4 \
-    --hash=sha256:4c92dcf9365068259bef3eed8e0dd5410056b6f7187bdea2d52848c0f94cd94c \
-    --hash=sha256:c3a8943e9e4a7d2624291da365bbccf0b9f88688aa6947a46260d8c165cd4389
+mkdocs-material==9.1.5 \
+    --hash=sha256:744519bca52b1e8fe7c2e80e15ed59baf8948111ec763ae6ae629c409bd16d6e \
+    --hash=sha256:981e1ef0250e2fbcc23610e9b20e5f242fe1f808079b9bcfbb6c49aa2999343c
     # via -r requirements.prod.in
 mkdocs-material-extensions==1.1.1 \
     --hash=sha256:9c003da71e2cc2493d910237448c672e00cefc800d3d6ae93d2fc69979e3bd93 \
