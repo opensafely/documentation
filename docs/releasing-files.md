@@ -150,6 +150,7 @@ roundmid_any <- function(x, to=6){
 ```
 
 Which results in the following mapping:
+
 | **Range of true value** | **Value rounded to midpoint 6** |
 |-------------------------|---------------------------------|
 | 0                       | 0                               |
