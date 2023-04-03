@@ -207,7 +207,12 @@ View your released outputs by navigating to "Released Outputs" in the "Releases"
 These outputs can be shared with project collaborators and published in line with our [data sharing and publication policy](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Please note that you should check this for each dataset that you have used: rules may vary.
 
 !!! warning
-    Data may only be shared with individuals without Level 4 access after they have been released outside of the secure area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.
+    You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
+
+    - verbal sharing
+    - allowing someone to look over your shoulder 
+    - transcribing (e.g., to paper or email)
+    - using screen sharing software or any recording device/software 
 
 ### Reporting a data breach
 
