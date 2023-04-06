@@ -280,3 +280,15 @@ working locally. If so, you can increase the memory with the flag `--memory` or
 ```
 opensafely run job_name -m 8G
 ```
+
+#### Disk
+
+Over time, some left over Docker containers and volumes can build up, and take
+up space.
+
+You can use the `clean` command in order to safely purge any such left over artifacts:
+
+`opensafely clean`
+
+This will clean up any dangling images, containers and volumes, freeing up disk
+space and generally leaving your Docker installation free of clutter.
