@@ -286,7 +286,7 @@ opensafely run job_name -m 8G
 Over time, some left over Docker containers and volumes can build up, and take
 up space.
 
-You can use the `clean` command in order to safely purge any such left over artifcats:
+You can use the `clean` command in order to safely purge any such left over artifacts:
 
 `opensafely clean`
 
