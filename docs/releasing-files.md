@@ -167,7 +167,7 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs from the server
 
-Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY_Output_Review_Form_07-04-22.docx). For each output wishing to be released you will need to provide a clear contextual description including:
+Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY Output Review Form_{replace_with_workspace}_{replace_with_date}.docx) and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. Variable descriptions
 2. A description and count of the underlying sample of the population for each output.
@@ -228,7 +228,12 @@ View your released outputs by navigating to "Released Outputs" in the "Releases"
 These outputs can be shared with project collaborators and published in line with our [data sharing and publication policy](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Please note that you should check this for each dataset that you have used: rules may vary.
 
 !!! warning
-    Data may only be shared with individuals without Level 4 access after they have been released outside of the secure area. You MUST NOT screen share (or share via any other means) any results that have not been released through the official process.
+    You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
+
+    - verbal sharing
+    - allowing someone to look over your shoulder 
+    - transcribing (e.g., to paper or email)
+    - using screen sharing software or any recording device/software 
 
 ### Reporting a data breach
 

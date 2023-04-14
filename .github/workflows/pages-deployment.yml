@@ -23,7 +23,7 @@ jobs:
         uses: opensafely-core/setup-action@v1
         with:
           install-just: true
-          python-version: '3.9'
+          python-version: '3.11'
 
       - name: Build site
         env:
@@ -38,7 +38,7 @@ jobs:
 
       - name: Publish
         if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: cloudflare/pages-action@c2ad89679f0dee1ff4bcf9b8bbe1cf52d176cb29  # v1.3.0
+        uses: cloudflare/pages-action@61eafe73baad0195ab582cb447b2c6e15a0df9ce  # v1.4.1
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_DIRECT_UPLOAD_API_TOKEN }}
