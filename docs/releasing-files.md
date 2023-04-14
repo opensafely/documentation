@@ -173,10 +173,31 @@ Having applied disclosure controls to the aggregated study data, you are ready t
 2. A description and count of the underlying sample of the population for each output.
 3. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
 
-!!! note
-    Only the following file types will be reviewed: HTML; TXT; CSV; TSV; SVG; JPG; JSON; PNG. (Email datarelease@opensafely.org if you need additional file types).
+### Allowed file types
 
-Once you have completed this form, the requested outputs will undergo independent review by two OpenSAFELY output checkers who will check that the outputs are within the scope of your original project proposal and that they do not present any disclosure risks. **Please allow up to 1 week for feedback on your request**.
+Only certain file types will be reviewed and released from the secure server. See below for details on each type:
+
+* **Tables** - Tables should be produced as either `csv` or `tsv` files. 
+    * Make sure that any column names are understandable for reviewers.
+    * Limit the number of columns or rows to only what is necessary.
+* **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
+    * Underlying data for all figures should be provided for review (even if it is not being released).
+    * Consider requesting release of the underlying data if you think you will need to make stylistic changes to the figures so that you don't need to request multiple reviews.
+    * If you are producing a lot of figures, consider combining them into panel plots or requesting release of the underlying data so that you can produce them outside of the secure server.
+* **Other**
+    * `txt` files can be released, but you should consider whether the output can be produced as a table, which is easier to review.
+    * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
+    * `html` files can be released if you are producing a report style output, but please note the points below:
+        * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. Most commonly, this will be a report to be hosted on [OpenSAFELY Reports](https://reports.opensafely.org/) (more information [here](https://docs.opensafely.org/reports/intro/)). If you can produce your report locally, using individually released files, you should.
+        * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find examples showing how to do this for Jupyter notebooks and R markdown files [here](https://docs.opensafely.org/reports/intro/#producing-reports). 
+        * Each individual output within the report should be requested for release separately, with the contextual information outlined above.
+        * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. You can find instructions on how to do that [here](https://docs.opensafely.org/reports/intro/#producing-reports)
+
+If you would like to release other file types, please email datarelease@opensafely.org, stating why it is important that the file is released in a different format.
+
+### Submittting the form
+
+Once you have completed this form, please send it to **<datarelease@opensafely.org>**. the requested outputs will undergo independent review by two OpenSAFELY output checkers who will check that the outputs are within the scope of your original project proposal and that they do not present any disclosure risks. **Please allow up to 1 week for feedback on your request**.
 
 !!! warning
     The Permitted Study Results Policy may be updated: **always check the policy before every new release request.**
