@@ -117,16 +117,35 @@ Each job will either succeed or fail. In either case, the output and log files a
 
 ## Viewing analysis outputs on the server
 
-You can view `moderately_sensitive` outputs from any of your submitted _jobs_ via the Jobs website **if you have access to and are logged into the backend the job was run on**.
+You can view `moderately_sensitive` outputs from any of your submitted _jobs_
+via the Jobs website **if you have access to and are logged into the backend
+the job was run on**.
 
-Once you are logged into the server:
+However, whilst normally you log into [jobs.opensafely.org] from your machines
+browser using Github, the secure server does not have access to
+Github. So you need to use an alternate method to login, by generating a Single
+Use Token, and then using it on the secure server to log in.
+
+To generate a Single Use Token, before logging on the backend, visit
+[https://jobs.opensafely.org/settings/](https://jobs.opensafely.org/settings/),
+and click on "Generate a Single Use Token". This will be 3 english words, which
+you can memorize or write down. This token can be used to log in as you, but is
+only valid for a short time, and only works once.
+
+![Generate Single Use Token](./images/token.png)
+
+Once you are logged into the server via the VPN:
 
 * Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using google chrome (make sure to use https://)
-* Log in using your GitHub username
+* Log in using your email or Github username, and the Single Use Token from the above step.
+* You should be now logged in. This login will expire after two weeks of not being used.
+
+Once logged in, to view your `moderately_sensitive` outputs:
+
 * Navigate to your _Workspace_
 * Under _Releases_, navigate to Level 4 Outputs
 * Choose the correct backend
-* Pick the file you would like to view from the list of files
+* Pick the file you would like to view from the list of files (you can search)
 
 ## Viewing released outputs
 
