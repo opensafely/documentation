@@ -62,7 +62,8 @@ However this deployment only happens after new versions of the software have gon
 
 ## Ad hoc access to backend systems
 
-Note: this section applies to OpenSAFELY-TPP and OpenSAFELY-EMIS only.
+!!! note
+    This section applies to OpenSAFELY-TPP and OpenSafely-EMIS only.
 
 ### Why
 
