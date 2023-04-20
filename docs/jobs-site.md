@@ -126,7 +126,7 @@ browser using Github, the secure server does not have access to
 Github. So you need to use an alternate method to login, by generating a Single
 Use Token, and then using it on the secure server to log in.
 
-To generate a Single Use Token, before logging on the backend, visit
+To generate a Single Use Token, before logging into the secure server, visit
 [https://jobs.opensafely.org/settings/](https://jobs.opensafely.org/settings/),
 and click on "Generate a Single Use Token". This will be 3 english words, which
 you can memorize or write down. This token can be used to log in as you, but is
