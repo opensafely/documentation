@@ -207,7 +207,7 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs from the server
 
-Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx) and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
+Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_CURRENT_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date, and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. Variable descriptions
 2. A description and count of the underlying sample of the population for each output.
