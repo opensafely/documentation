@@ -81,7 +81,7 @@ When applying disclosure controls to your outputs, you should consider the poten
 
 ### Redacting counts less than or equal to 5
 
-Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other released text and objects that may be a disclosure risk. 
+Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other released text and objects that may be a disclosure risk.
 
 The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted or combined into other statistics**. This includes:
 
@@ -92,16 +92,16 @@ The general principle is that **any statistic describing 5 or fewer patients, ei
 
 Below are some other principles to consider:
 
-*   Counts of zero can be retained in general, but be aware that zero or 100% counts can be disclosive (‘none of the males aged 45-49 used condoms’; ‘THC was a detected in all premature births in the 17-18 age group’) and should be removed. This can be difficult, as these results are often the most valuable from a policy perspective, so be particularly cautious when reporting on these. 
+*   Counts of zero can be retained in general, but be aware that zero or 100% counts can be disclosive (‘none of the males aged 45-49 used condoms’; ‘THC was a detected in all premature births in the 17-18 age group’) and should be removed. This can be difficult, as these results are often the most valuable from a policy perspective, so be particularly cautious when reporting on these.
 *   Analytical results, such as model coefficients, test statistics, or goodness-of-fit measures generally do not generally present any disclosure risk, as long as these are genuine analyses (eg standard deviation does not present a confidentiality risk, unless it is a standard deviation calculated from just two observations)
 *   Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. It is very unlikely that outputs such as log files should be required for publication outside the secure environment.
 *   We recommend rounding of results that could be at risk of secondary disclosure. This is an alternative to redaction, or can be used in combination. However, be careful to round all your results to the same base number - see below.
 
 Where possible it should be clear what has been redacted, so for example do not redact table titles and category names. By convention redactions take the form [REDACTED] to make redacted elements easier to search for.
 
-If you find yourself redacting a lot of results, considering re-thinking the categories you are using. For example, suppose the category ‘age 95+’ is often needing to be redacted. Is there sufficient distinction between those age 90-94 and those aged 95+ to warrant the extra category? If not, then combine the category. You should always consider this option before deciding to redact individual cells. Focusing on the statistical value of the results can give better results (consistency across tables) compared to treating SDC as a table-by-table problem. 
+If you find yourself redacting a lot of results, considering re-thinking the categories you are using. For example, suppose the category ‘age 95+’ is often needing to be redacted. Is there sufficient distinction between those age 90-94 and those aged 95+ to warrant the extra category? If not, then combine the category. You should always consider this option before deciding to redact individual cells. Focusing on the statistical value of the results can give better results (consistency across tables) compared to treating SDC as a table-by-table problem.
 
-This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls, as these simple rules can be applied by all and provide a good degree of protection. As noted above, good disclosure protection is generally consistent with good statistics. Exceptions can be made if they can be justified as being both materially important for the study conclusions (i.e. providing significant public benefit) and having a very low risk of disclosure. This must be discussed with the OpenSAFELY team. Moreover, these must be rare exceptions: ignoring these guidelines, or continually asking for ‘exceptions’ will not be tolerated. 
+This current approach to disclosure control is conservative and deliberately reduces the need for judgement calls, as these simple rules can be applied by all and provide a good degree of protection. As noted above, good disclosure protection is generally consistent with good statistics. Exceptions can be made if they can be justified as being both materially important for the study conclusions (i.e. providing significant public benefit) and having a very low risk of disclosure. This must be discussed with the OpenSAFELY team. Moreover, these must be rare exceptions: ignoring these guidelines, or continually asking for ‘exceptions’ will not be tolerated.
 
 If you are unsure about anything, please email us: [disclosurecontrol@opensafely.org](mailto:disclosurecontrol@opensafely.org).
 
@@ -139,7 +139,7 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts below the redaction threshold (5 or less) should also be a redaction.** In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
 
 #### Midpoint 6 rounding
-By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-5). The method has desirable properties such as: 
+By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-5). The method has desirable properties such as:
 
 * It's unbiasedness
     * Rounding to _r_ is unbiased. For non-negative values (like counts), the binwidth is _r_ everywhere except for the lowest bin, where the binwidth is `ceiling(r/2)` (e.g. rounding to 6, the lowest bin is `[1, 2, 3] → 0`). Rounding to 6 is not sufficient to comply with our suppression rule of redacting counts of five or lower. We could instead round to the nearest 10, which means that `[1, 2, 3, 4, 5] → 0` (not breaking our suppression rule) but reducing precision and not preserving non-zero counts. Another alternative is to round to the nearest 6 and combine the two lowest bins such that `[1, 2, 3, 4, 5, 6, 7, 8] → 6` (not breaking our suppression rule and preserving zero-is-zero) but introducing bias. Alternatively, we could round up using a ceiling function such that `[1, 2, 3, 4, 5, 6] → 6` and `[7, 8, 9, 10, 11, 12] → 12` etc. (not breaking our suppression rule and preserving zero-is-zero) but introducing bias since the mean of the rounded numbers is higher than the mean of the true numbers by 3 (in general, by _r/2_ for rounding up to ceiling _r_). Rounding to midpoint 6 fixes the bias in the last option by deducting to _r/2_, preserving zero-is-zero and the rounded numbers are unbiased.
@@ -170,7 +170,7 @@ Which results in the following mapping:
 
 #### Naming convention for midpoint 6 rounding
 
-Please note that the numbers between 1-6 are mapped to ‘3’, which is lower than 5 (our redaction threshold). This ‘3’ is not a true 3 and is only a label for all numbers ranging between 1 and 6. A ‘3’ as a result from using midpoint 6 rounding therefore follows our suppression rules. However, without appropriate context, this may not be obvious to anyone viewing the output (including output checkers). **For any outputs that use midpoint rounding, we therefore suggest adding the suffix `_midpoint6` to your column name. Similarly, we suggest adding the suffix `_midpoint6_derived` to values that are derived from the midpoint 6 rounded values and take values of 6, 12, 18,... (for example in life-tables).** Alongside this naming convention, we ask people to explicitly point to sections of the code where midpoint rounding was applied. 
+Please note that the numbers between 1-6 are mapped to ‘3’, which is lower than 5 (our redaction threshold). This ‘3’ is not a true 3 and is only a label for all numbers ranging between 1 and 6. A ‘3’ as a result from using midpoint 6 rounding therefore follows our suppression rules. However, without appropriate context, this may not be obvious to anyone viewing the output (including output checkers). **For any outputs that use midpoint rounding, we therefore suggest adding the suffix `_midpoint6` to your column name. Similarly, we suggest adding the suffix `_midpoint6_derived` to values that are derived from the midpoint 6 rounded values and take values of 6, 12, 18,... (for example in life-tables).** Alongside this naming convention, we ask people to explicitly point to sections of the code where midpoint rounding was applied.
 
 
 ### Extended principles
@@ -207,7 +207,7 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs from the server
 
-Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](documents/OpenSAFELY Output Review Form_{replace_with_workspace}_{replace_with_date}.docx) and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
+Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date, and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. Variable descriptions
 2. A description and count of the underlying sample of the population for each output.
@@ -217,7 +217,7 @@ Having applied disclosure controls to the aggregated study data, you are ready t
 
 Only certain file types will be reviewed and released from the secure server. See below for details on each type:
 
-* **Tables** - Tables should be produced as either `csv` or `tsv` files. 
+* **Tables** - Tables should be produced as either `csv` or `tsv` files.
     * Make sure that any column names are understandable for reviewers.
     * Limit the number of columns or rows to only what is necessary.
 * **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
@@ -229,7 +229,7 @@ Only certain file types will be reviewed and released from the secure server. Se
     * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
     * `html` files can be released if you are producing a report style output, but please note the points below:
         * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. Most commonly, this will be a report to be hosted on [OpenSAFELY Reports](https://reports.opensafely.org/) (more information [here](https://docs.opensafely.org/reports/intro/)). If you can produce your report locally, using individually released files, you should.
-        * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find examples showing how to do this for Jupyter notebooks and R markdown files [here](https://docs.opensafely.org/reports/intro/#producing-reports). 
+        * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find examples showing how to do this for Jupyter notebooks and R markdown files [here](https://docs.opensafely.org/reports/intro/#producing-reports).
         * Each individual output within the report should be requested for release separately, with the contextual information outlined above.
         * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. You can find instructions on how to do that [here](https://docs.opensafely.org/reports/intro/#producing-reports)
 
@@ -271,9 +271,9 @@ These outputs can be shared with project collaborators and published in line wit
     You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
 
     - verbal sharing
-    - allowing someone to look over your shoulder 
+    - allowing someone to look over your shoulder
     - transcribing (e.g., to paper or email)
-    - using screen sharing software or any recording device/software 
+    - using screen sharing software or any recording device/software
 
 ### Reporting a data breach
 
