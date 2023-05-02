@@ -94,7 +94,7 @@ Below are some other principles to consider:
 
 *   Counts of zero can be retained in general, but be aware that zero or 100% counts can be disclosive (‘none of the males aged 45-49 used condoms’; ‘THC was a detected in all premature births in the 17-18 age group’) and should be removed. This can be difficult, as these results are often the most valuable from a policy perspective, so be particularly cautious when reporting on these.
 *   Analytical results, such as model coefficients, test statistics, or goodness-of-fit measures generally do not generally present any disclosure risk, as long as these are genuine analyses (eg standard deviation does not present a confidentiality risk, unless it is a standard deviation calculated from just two observations)
-*   Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. It is very unlikely that outputs such as log files should be required for publication outside the secure environment.
+*   Other outputs, such as log files that reveal information about the underlying data, should also be checked and redacted if necessary. It is very unlikely that outputs such as log files should be required for publication outside the secure environment ([see below for more detail](#error-log-files)).
 *   We recommend rounding of results that could be at risk of secondary disclosure. This is an alternative to redaction, or can be used in combination. However, be careful to round all your results to the same base number - see below.
 
 Where possible it should be clear what has been redacted, so for example do not redact table titles and category names. By convention redactions take the form [REDACTED] to make redacted elements easier to search for.
@@ -205,13 +205,17 @@ There are also resources for extended guidance for analysis methods commonly use
 
 There is also a disclosure control section in our [Q&A forum](https://github.com/opensafely/documentation/discussions/categories/disclosure-control) where you can ask any questions you may have.
 
-## 2. Requesting release of outputs from the server
+## 2. Requesting release of outputs and (error) log files from the server
 
 Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date, and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. Variable descriptions
 2. A description and count of the underlying sample of the population for each output.
 3. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
+
+### Error log files
+
+For error logs, they should only be requested for output in exceptional circumstances (for example, if you need to discuss the error and any related data within the log file with a researcher who writes code but does not have Level 4 results server access, otherwise we would expect both researchers to review the log via their VPN access). When an error log is requested, you must minimise any data required: make a copy of the log file and delete all data items that are not necessary. The less data that is present, the faster the review process.
 
 ### Allowed file types
 
