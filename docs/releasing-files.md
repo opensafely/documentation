@@ -257,7 +257,7 @@ If you would like to release other file types, please email datarelease@opensafe
 Once you have completed this form, please send it to **<datarelease@opensafely.org>**. the requested outputs will undergo independent review by two OpenSAFELY output checkers who will check that the outputs are within the scope of your original project proposal and that they do not present any disclosure risks. **Please allow up to 1 week for feedback on your request**.
 
 !!! warning
-    The Permitted Study Results Policy may be updated: **always check the policy before every new release request.**
+    The [Permitted Study Results Policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) may be updated: **always check the policy before every new release request.**
 
 !!! note
     **Tips for getting a quicker review**
