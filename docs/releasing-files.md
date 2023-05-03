@@ -207,11 +207,24 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs and (error) log files from the server
 
-Having applied disclosure controls to the aggregated study data, you are ready to request their release. **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. When you are ready to request a release of your aggregated results, and only the minimum outputs necessary please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date, and email us at **<datarelease@opensafely.org>**. For each output wishing to be released you will need to provide a clear contextual description including:
+**Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. Having applied disclosure controls to your aggregated study data and checked that your outputs adhere to the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy), you are ready to request their release. 
 
-1. Variable descriptions
-2. A description and count of the underlying sample of the population for each output.
-3. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
+First, create one folder in your workspace called `release` (if you have previously made a release, we suggest appending the date to the new folder name to distinguish it) and copy from your `output` folder to this `release` folder the data files that require review. The number of study outputs requested for review must be kept to a minimum and include only the results you absolutely need to export from the secure server.
+
+When you are ready to request a release of your aggregated results please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date. 
+
+!!! note
+    Each data release entails substantial review work. To retain rapid turnaround times, external data releases should typically only be of results for final submission to a journal or public notebook; or a small number of necessary releases for discussion with external collaborators. 
+
+For each output wishing to be released you will need to provide a clear contextual description including:
+
+1. The file path for each output
+2. Variable descriptions
+3. A description and count of the underlying sample of the population for each output.
+4. Population size and degrees of freedom for all regression outputs.
+5. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
+
+Each section in the review request form should normally describe a single file, but where necessary for similar files, these can be grouped together and wildcards can be used for the file path (e.g. `release/hospitalisation_rate_by_*.csv`). **If you use a wildcard, please indicate how many files this captures**.
 
 ### Error log files
 
