@@ -4,8 +4,6 @@ name: 'Check links'
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '12 10 * * *'
 
 permissions:
   contents: read
