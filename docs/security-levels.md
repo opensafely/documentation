@@ -27,7 +27,7 @@ This example demonstrates the level of detail available in level 1 data. It is n
 This level includes pseudonymised versions of the coded event-level data produced  every week by the EHR vendor for the vendor-OpenSAFELY database.
 It also includes external datasets imported into the database, for instance hospital admissions and death registry data.
 Only data for patients who are present in the EHR database are imported from external datasets.
-The schema for this database can be seen in [this notebook](https://github.com/opensafely/database-notebooks/blob/master/notebooks/database-schema.ipynb) (currently accessible only to OpenSAFELY users).
+The schema for this database can be seen in [this notebook](https://reports.opensafely.org/reports/opensafely-tpp-database-schema/).
 
 ### Where is this data held?
 Data is held within the EHR vendor's secure environment on the OpenSAFELY server.
