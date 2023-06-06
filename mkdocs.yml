@@ -106,6 +106,7 @@ edit_uri: "edit/main/docs/"
 extra_css:
   - css/youtube.css
   - css/extra.css
+  - data-builder/stylesheets/extra.css
 
 extra_javascript:
   - js/extra.js
@@ -126,6 +127,7 @@ extra:
   # Import databuilder docs from a specified branch (defaults to main)
   # see hooks/databuilder_branch.py
   databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
+  ehrql_imported_css_path: imported_docs/data-builder/stylesheets/extra.css
 
 copyright: © University of Oxford for the Bennett Institute for Applied Data Science. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to bennett@phc.ox.ac.uk.
 
@@ -183,3 +185,4 @@ hooks:
     - hooks/parent_snippets.py
     - hooks/hide_nav_sections.py
     - hooks/databuilder_branch.py
+    - hooks/ehrql_css.py
