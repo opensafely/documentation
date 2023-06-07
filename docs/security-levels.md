@@ -75,6 +75,6 @@ Any level 4 files that have been cleared by output-checkers, and therefore consi
 
 ## Diagram
 
-![A diagram of the OpenSAFELY platform.](./images/OpenSAFELY-security-levels.svg)
+![A diagram of the OpenSAFELY platform.](./images/OpenSAFELY-security-levels-2023-DPN.svg)
 
 ---8<-- 'includes/glossary.md'
