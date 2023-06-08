@@ -9,15 +9,31 @@ log = logging.getLogger("mkdocs")
 
 def on_files(files, config, **kwargs):
     """
-    Update files with ehrQL CSS.
+    Update files available to MkDocs with ehrQL documentation CSS.
 
-    This is necessary because extra_css paths must be in the docs/ dir
-    and the imported docs end up in an entirely different path:
-    imported_docs/
+    This hook is necessary because
+    * paths provided to `extra_css` must be in the `docs_dir` directory
+      (the default being `docs/`)
+    * the multi-repo plugin pulls in the ehrQL docs to a different path,
+      outside of `docs/`
+
+    This approach is one of the suggested workarounds in:
+    https://github.com/mkdocs/mkdocs/issues/1662
     """
-    ehrql_css_config = config["extra"]["ehrql_imported_css_path"]
-    ehrql_css_path = pathlib.Path(ehrql_css_config)
-    css_file = File(ehrql_css_path, "./", "./site/css", False)
-    log.info("ehrQL CSS path imported from '%s'", ehrql_css_config)
-    files.append(css_file)
+    for css_config_entry in config["extra"]["ehrql_imported_css"]:
+        css_path = pathlib.Path(css_config_entry)
+
+        # This MkDocs API is not well documented anywhere.
+        # We want to create a MkDocs File object:
+        # whose source is the `src_dir` concatenated to the ehrQL CSS path
+        # whose destination is an appropriate CSS directory in the `site_dir`.
+        # `use_directory_urls` only affects Markdown files, and this is a CSS file.
+        css_file = File(
+            path=css_path,
+            src_dir=config["docs_dir"] + "/../",
+            dest_dir=config["site_dir"] + "/css",
+            use_directory_urls=False,
+        )
+        log.info("ehrQL CSS imported from '%s'", css_path)
+        files.append(css_file)
     return files

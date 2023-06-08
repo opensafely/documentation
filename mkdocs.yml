@@ -127,7 +127,8 @@ extra:
   # Import databuilder docs from a specified branch (defaults to main)
   # see hooks/databuilder_branch.py
   databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
-  ehrql_imported_css_path: imported_docs/data-builder/stylesheets/extra.css
+  ehrql_imported_css:
+    - imported_docs/data-builder/stylesheets/extra.css
 
 copyright: © University of Oxford for the Bennett Institute for Applied Data Science. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to bennett@phc.ox.ac.uk.
 
