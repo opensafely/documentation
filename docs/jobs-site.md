@@ -186,3 +186,9 @@ Further details should be provided in the `Status description` field. Guidance f
 * `Completed - awaiting paper/reports`: provide some indication of when papers and/or reports are expected to be published.
 
 ![Project edit page](./images/project-edit-page.png)
+
+## Adding a workspace purpose
+
+You can add a purpose to each workspace within your project by navigating to the `Edit workspace` button within a workspace page. This should indicate the aim of any of the jobs run from within this workspace. You may only have one workspace, in which case the purpose can simply be "This is the main workspace or this project, in which all jobs were run". It can also be used to highlight workspaces used to carry out data quality checks or experiment with an analytical technique.
+
+You will need to complete a workspace purpose for each workspace as part of [project completion](https://docs.opensafely.org/publishing-repo/).

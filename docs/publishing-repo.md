@@ -1,4 +1,4 @@
-Once you have compelted your project in OpenSAFELY, there are a number of tasks to complete to align with our [open working principles](https://www.opensafely.org/about/#core-design-features-for-privacy-transparency-and-open-working).
+Once you have completed your project in OpenSAFELY, there are a number of tasks to complete to align with our [open working principles](https://www.opensafely.org/about/#core-design-features-for-privacy-transparency-and-open-working).
 
 Please read and complete the tasks below.
 ## Update all READMEs
@@ -57,7 +57,9 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 [Update the status of the project](https://docs.opensafely.org/jobs-site/#updating-project-status) on the Jobs site if relevant.
 
+## Update project workspaces
 
+[Update the purposes of your project workspaces](https://docs.opensafely.org/jobs-site/#adding-a-workspace-purpose) on the Jobs site.
 ## Request the repo is made public
 
 If your repository is *private*, you can request it is made public via the jobs site.
