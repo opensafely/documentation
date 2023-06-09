@@ -1,5 +1,6 @@
-When you're ready to tell the world about your GitHub repo, consider the following:
+Once you have compelted your project in OpenSAFELY, there are a number of tasks to complete to align with our [open working principles](https://www.opensafely.org/about/#core-design-features-for-privacy-transparency-and-open-working).
 
+Please read and complete the tasks below.
 ## Update all READMEs
 As of the 24th October 2022 we have changed how we managed repo READMEs.
 You can ignore this section if you created your repo after that date.
@@ -22,7 +23,7 @@ To update your repository's README to match this new README:
 
 
 ## Tidy up your repo
-You should ensure your repo is as tidy as possible before making it public. Consider the following:
+You should ensure your repo is as tidy as possible once you have completed your project. Consider the following:
 
 
 ### License
@@ -54,10 +55,11 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 ## Update project status
 
-[Update the status of the project](https://docs.opensafely.org/jobs-site/#updating-project-status) if relevant.
+[Update the status of the project](https://docs.opensafely.org/jobs-site/#updating-project-status) on the Jobs site if relevant.
 
 
 ## Request the repo is made public
+
 If your repository is *private*, you can request it is made public via the jobs site.
 Click the "Change repo visibility" button on the workspace page of any workspace connected to it.
 You will be prompted to check various bits of metadata associated with the repository, its branches, connected workspaces, and the project.
