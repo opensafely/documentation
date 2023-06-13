@@ -226,6 +226,19 @@ For each output wishing to be released you will need to provide a clear contextu
 
 Each section in the review request form should normally describe a single file, but where necessary for similar files, these can be grouped together and wildcards can be used for the file path (e.g. `release/hospitalisation_rate_by_*.csv`). **If you use a wildcard, please indicate how many files this captures**.
 
+### Release of intermediate data
+
+In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
+
+* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these changes locally.
+* A large number of outputs are produced from a single intemediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
+*  The intemediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
+
+If requesting release of intermediate data there are a few considerations:
+
+*  We recommend that you continue to develop downstream analysis actions within the OpenSAFELY pipeline, even if they are not inteneded to be run on the server against. This helps maintain reproducibility.
+* Intermediate results can contain much more data than outputs produced at the end of the analysis pipeline. The data contained within these outputs should be the minimum amount required to produce the downstream outputs or receive feedback from project collaborators.
+
 ### Error log files
 
 For error logs, they should only be requested for output in exceptional circumstances (for example, if you need to discuss the error and any related data within the log file with a researcher who writes code but does not have Level 4 results server access, otherwise we would expect both researchers to review the log via their VPN access). When an error log is requested, you must minimise any data required: make a copy of the log file and delete all data items that are not necessary. The less data that is present, the faster the review process.
