@@ -142,7 +142,7 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts <=7 should also be redacted** (see the note above for why a threshold of 7 is used). In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
 
 #### Midpoint 6 rounding
-By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-5). The method has desirable properties such as:
+By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-7). The method has desirable properties such as:
 
 * It's unbiasedness
     * Rounding to _r_ is unbiased. For non-negative values (like counts), the binwidth is _r_ everywhere except for the lowest bin, where the binwidth is `ceiling(r/2)` (e.g. rounding to 6, the lowest bin is `[1, 2, 3] → 0`). Rounding to 6 is not sufficient to comply with our suppression rule of redacting counts of five or lower. We could instead round to the nearest 10, which means that `[1, 2, 3, 4, 5] → 0` (not breaking our suppression rule) but reducing precision and not preserving non-zero counts. Another alternative is to round to the nearest 6 and combine the two lowest bins such that `[1, 2, 3, 4, 5, 6, 7, 8] → 6` (not breaking our suppression rule and preserving zero-is-zero) but introducing bias. Alternatively, we could round up using a ceiling function such that `[1, 2, 3, 4, 5, 6] → 6` and `[7, 8, 9, 10, 11, 12] → 12` etc. (not breaking our suppression rule and preserving zero-is-zero) but introducing bias since the mean of the rounded numbers is higher than the mean of the true numbers by 3 (in general, by _r/2_ for rounding up to ceiling _r_). Rounding to midpoint 6 fixes the bias in the last option by deducting to _r/2_, preserving zero-is-zero and the rounded numbers are unbiased.
@@ -210,7 +210,7 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs and (error) log files from the server
 
-**Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. Having applied disclosure controls to your aggregated study data and checked that your outputs adhere to the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy), you are ready to request their release. 
+**Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. Having applied disclosure controls to your aggregated study data you are ready to request their release. Please read the instructions and [checklist](#checklist) below.
 
 First, create one folder in your workspace called `release` (if you have previously made a release, we suggest appending the date to the new folder name to distinguish it) and copy from your `output` folder to this `release` folder the data files that require review. The number of study outputs requested for review must be kept to a minimum and include only the results you absolutely need to export from the secure server.
 
@@ -267,6 +267,24 @@ Only certain file types will be reviewed and released from the secure server. Se
         * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. You can find instructions on how to do that [here](https://docs.opensafely.org/reports/intro/#producing-reports)
 
 If you would like to release other file types, please email datarelease@opensafely.org, stating why it is important that the file is released in a different format.
+
+### Checklist
+
+Please run through this checklist before making a review request.
+
+1. Do your results adhere to the [OpenSAFELY permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
+2. Are all of the outputs of the [allowed file types](#allowed-file-types)?
+3. Are all of the outputs in a [separate release folder](#2-requesting-release-of-outputs-and-error-log-files-from-the-server)?
+4. Have you [redacted any low counts](#redacting-counts-less-than-or-equal-to-5)? 
+5. Have you [rounded any counts](#redacting-counts-less-than-or-equal-to-5) (including [counts underlying rates](#rounding-rates))?
+6. Have you suplpied underlying counts for any tables/figures?
+7. Are all of the outputs clearly described?
+    * Is the filename sensible and is the filepath provided in the request form correct?
+    * Have you provided all of the context needed to review each output in isolation in the request form?
+    * Have you described the disclosure controls you have applied to each output?
+8. If you are requesting the release of log files, are you sure they [need to be released](#error-log-files)?
+
+Following this checklist will make your outputs easier to check, speed up review time and avoid the outputs having to be rechecked.
 
 ### Submittting the form
 
