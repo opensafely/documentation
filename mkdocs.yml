@@ -119,11 +119,6 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/opensafely
       name: OpenSAFELY on Twitter
-  hide_nav_sections:
-    # These sections are specified in the nav above, but hidden in the built docs
-    # so they are accessible via URL only
-    # see hooks/hide_nav_sections.py
-    - "Data Builder"
   # Import databuilder docs from a specified branch (defaults to main)
   # see hooks/databuilder_branch.py
   databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
@@ -184,6 +179,5 @@ markdown_extensions:
 
 hooks:
     - hooks/parent_snippets.py
-    - hooks/hide_nav_sections.py
     - hooks/databuilder_branch.py
     - hooks/ehrql_css.py
