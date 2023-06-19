@@ -119,9 +119,9 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/opensafely
       name: OpenSAFELY on Twitter
-  # Import databuilder docs from a specified branch (defaults to main)
-  # see hooks/databuilder_branch.py
-  databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
+  # Import ehrQL docs from a specified branch (defaults to main)
+  # see hooks/ehrql_branch.py
+  ehrql_branch: !ENV [EHRQL_BRANCH, "main"]
   ehrql_imported_css:
     - imported_docs/data-builder/stylesheets/extra.css
 
@@ -183,5 +183,5 @@ markdown_extensions:
 
 hooks:
     - hooks/parent_snippets.py
-    - hooks/databuilder_branch.py
+    - hooks/ehrql_branch.py
     - hooks/ehrql_css.py
