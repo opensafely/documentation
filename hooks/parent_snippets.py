@@ -14,7 +14,7 @@ def on_page_markdown(markdown, page, **kwargs):
     will be replaced with:
         ---8<-- 'includes/glossary.md'
 
-    This allows docs imported from other repos (e.g. databuilder) to reference snippets
+    This allows docs imported from other repos (e.g. ehrQL) to reference snippets
     in the parent docs, such as the glossary.
     """
 

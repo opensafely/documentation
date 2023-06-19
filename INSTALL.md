@@ -12,17 +12,16 @@ Use [`just run`](https://github.com/casey/just) to run the MkDocs server.
 
 This should install everything required.
 
-### Data Builder
+### Inclusion of ehrQL documentation
 
-The Data Builder documentation is imported from the
-[databuilder](https://github.com/opensafely-core/databuilder) repo using the
+The ehrQL documentation is imported from the
+[ehrQL](https://github.com/opensafely-core/ehrql) repo using the
 [mkdocs-multirepo-plugin](https://github.com/jdoiro3/mkdocs-multirepo-plugin) and built alongside the docs in this repo.  By default it uses the main branch.  This can
 be configured with the `EHRQL_BRANCH` environment variable:
 
 ```
 EHRQL_BRANCH=my-branch just run
 ```
-
 
 ## Updating Cohort Extractor
 
