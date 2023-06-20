@@ -113,7 +113,7 @@ If you are unsure about anything, please email us: [disclosurecontrol@opensafely
 The redaction of any counts <=5 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to reveal information about individuals or groups. To reduce this risk, we ask that you **round any counts to the nearest 5**. This includes rounding counts underlying any figures requested for release. In most cases this is unlikely to have a significant impact on your results. If it does, please highlight why it is important to release non-rounded counts when making an output review request.
 
 !!! note
-    Rounding does not remove the need to redact counts <=5. You should first redact any low counts and then apply rounding. If applying both techniques, the recommended approach is to first redact counts <=7 and then round to the nearest 5 (if you redact counts <=5 and then round to the nearest 5, any counts of 5 remaining must originally have been either 6 or 7; this approach provides the same protection for all counts)
+    Rounding does not remove the need to redact counts <=5. You should first redact counts <=7 and then round to the nearest 5 (if you redact counts <=5 and then round to the nearest 5, any counts of 5 remaining must originally have been either 6 or 7; this approach provides the same protection for all counts)
 
 Below is an example of a table before (top) and after (bottom) rounding has been applied. **Note that column and row totals are the sum of the rounded counts.**
 
@@ -136,7 +136,7 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 
 ### Rounding rates
 
-A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts below the redaction threshold (5 or less) should also be redacted.** In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
+A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts <=7 should also be redacted** (see the note above for why a threshold of 7 is used). In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
 
 #### Midpoint 6 rounding
 By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-5). The method has desirable properties such as:
