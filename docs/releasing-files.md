@@ -136,7 +136,7 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 
 ### Rounding rates
 
-A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts below the redaction threshold (5 or less) should also be a redacted.** In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
+A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts below the redaction threshold (5 or less) should also be redacted.** In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
 
 #### Midpoint 6 rounding
 By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-5). The method has desirable properties such as:
@@ -231,12 +231,12 @@ Each section in the review request form should normally describe a single file, 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
 
 * You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these changes locally.
-* A large number of outputs are produced from a single intemediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
-*  The intemediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
+* A large number of outputs are produced from a single intermediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
+*  The intermediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
 
 If requesting release of intermediate data there are a few considerations:
 
-*  We recommend that you continue to develop downstream analysis actions within the OpenSAFELY pipeline, even if they are not inteneded to be run on the server against. This helps maintain reproducibility.
+*  We recommend that you continue to develop downstream analysis actions within the OpenSAFELY pipeline, even if they are not intended to be run on the server. This helps maintain reproducibility.
 * Intermediate results can contain much more data than outputs produced at the end of the analysis pipeline. The data contained within these outputs should be the minimum amount required to produce the downstream outputs or receive feedback from project collaborators.
 
 ### Error log files
