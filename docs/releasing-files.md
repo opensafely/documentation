@@ -230,7 +230,7 @@ Each section in the review request form should normally describe a single file, 
 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
 
-* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these changes locally.
+* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](#running-further-analyses-on-released-outputs).
 * A large number of outputs are produced from a single intermediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
 *  The intermediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
 
@@ -304,6 +304,14 @@ These outputs can be shared with project collaborators and published in line wit
     - allowing someone to look over your shoulder
     - transcribing (e.g., to paper or email)
     - using screen sharing software or any recording device/software
+
+### Running further analyses on released outputs
+
+If you have had [intermediate data released](#release-of-intermediate-data) and you wish to run further analyses on them, such as reformatting figures, there are a few things to consider.
+
+1. You should include the code for these steps in your GitHub repo.
+2. You **should not** commit any of the released outputs to your GitHub repo. Make sure to include them in the `.gitignore` file.
+3. Consider adding the code as an action in your project pipeline.
 
 ### Reporting a data breach
 
