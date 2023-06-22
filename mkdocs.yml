@@ -78,7 +78,7 @@ nav:
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
       - Writing performant code: memory-efficient-working.md
-  - Data Builder: '!import https://github.com/opensafely-core/databuilder?branch=main'
+  - ehrQL: '!import https://github.com/opensafely-core/ehrql?branch=main'
   - Support:
       - How to get help: how-to-get-help.md
       - OpenSAFELY co-piloting service: copiloting-service.md
