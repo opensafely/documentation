@@ -31,7 +31,7 @@ jobs:
           AccessToken: ${{ secrets.GITHUB_TOKEN }}
           MKDOCS_SITE_URL: https://docs.opensafely.org
           MKDOCS_MULTIREPO_CLEANUP: true
-          DATABUILDER_BRANCH: main
+          EHRQL_BRANCH: main
         run: just build
 
       - name: Check links

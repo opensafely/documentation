@@ -57,10 +57,10 @@ The specific steps required to create a minimal setup are:
     !!! warning
 
         A simpler replacement for cohort-extractor,
-        [DataBuilder](https://github.com/opensafely-core/databuilder),
+        [ehrQL](https://github.com/opensafely-core/ehrql),
         is in development.
 
-        You may prefer to wait for a stable version of DataBuilder
+        You may prefer to wait for a stable version of ehrQL
         before attempting to integrate.
 
 5. *Releasing job outputs* requires:

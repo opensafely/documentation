@@ -78,7 +78,7 @@ nav:
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
       - Writing performant code: memory-efficient-working.md
-  - Data Builder: '!import https://github.com/opensafely-core/databuilder?branch=main'
+  - ehrQL: '!import https://github.com/opensafely-core/ehrql?branch=main'
   - Support:
       - How to get help: how-to-get-help.md
       - OpenSAFELY co-piloting service: copiloting-service.md
@@ -106,7 +106,7 @@ edit_uri: "edit/main/docs/"
 extra_css:
   - css/youtube.css
   - css/extra.css
-  - data-builder/stylesheets/extra.css
+  - ehrql/stylesheets/extra.css
 
 extra_javascript:
   - js/extra.js
@@ -119,23 +119,18 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/opensafely
       name: OpenSAFELY on Twitter
-  hide_nav_sections:
-    # These sections are specified in the nav above, but hidden in the built docs
-    # so they are accessible via URL only
-    # see hooks/hide_nav_sections.py
-    - "Data Builder"
-  # Import databuilder docs from a specified branch (defaults to main)
-  # see hooks/databuilder_branch.py
-  databuilder_branch: !ENV [DATABUILDER_BRANCH, "main"]
+  # Import ehrQL docs from a specified branch (defaults to main)
+  # see hooks/ehrql_branch.py
+  ehrql_branch: !ENV [EHRQL_BRANCH, "main"]
   ehrql_imported_css:
-    - imported_docs/data-builder/stylesheets/extra.css
+    - imported_docs/ehrql/stylesheets/extra.css
 
 copyright: © University of Oxford for the Bennett Institute for Applied Data Science. This work may be copied freely for non-commercial research and study. If you wish to do any of the other acts restricted by the copyright you should apply in writing to bennett@phc.ox.ac.uk.
 
 plugins:
   - search
   - table-reader:
-      data_path: imported_docs/data-builder
+      data_path: imported_docs/ehrql
   - mkdocstrings:
       default_handler: python
       handlers:
@@ -164,7 +159,7 @@ markdown_extensions:
       check_paths: true
       base_path: # base paths will be checked in order for matching snippets
         - .  # dir containing this config file
-        - imported_docs/data-builder # docs folder for the imported repo
+        - imported_docs/ehrql # docs folder for the imported repo
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -181,9 +176,12 @@ markdown_extensions:
   - footnotes
   - abbr
   - md_in_html
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 hooks:
     - hooks/parent_snippets.py
-    - hooks/hide_nav_sections.py
-    - hooks/databuilder_branch.py
+    - hooks/ehrql_branch.py
     - hooks/ehrql_css.py
