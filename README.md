@@ -38,12 +38,16 @@ and how to address them
 * :heavy_check_mark: **Resolution**: leave and review in the next link check a week later;
   if the check fails a second time,
   consider finding a replacement URL or removing the URL
-  (see below)
+  (see ["Replacing inaccessible URLs"](#replacing-inaccessible-urls) below)
 <!-- -->
 * :mag:**Cause**: the lychee client gets rate limited by a particular site,
   resulting in a failed check
 * :heavy_check_mark: **Resolution**: reconfigure the link check workflow with lychee's `--max-concurrency` option
   and reduce it from the default value
+<!-- -->
+* :mag:**Cause**: the resource the URL identifies has genuinely been removed
+* :heavy_check_mark: **Resolution**: find a replacement URL or remove the URL
+  (see ["Replacing inaccessible URLs"](#replacing-inaccessible-urls) below)
 
 ### Replacing inaccessible URLs
 
