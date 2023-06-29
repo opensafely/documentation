@@ -4,6 +4,10 @@
 /data-builder/backends/                  /ehrql/reference/backends/           302
 /data-builder/schemas                    /ehrql/reference/schemas/            302
 /data-builder/schemas/                   /ehrql/reference/schemas/            302
+/data-builder/ehrql                      /ehrql/                              302
+/data-builder/ehrql/                     /ehrql/                              302
+/data-builder/ehrql/tutorial             /ehrql/tutorial/installation-and-setup/  302
+/data-builder/ehrql/tutorial/            /ehrql/tutorial/installation-and-setup/  302
 /en                                      /                                        301
 /en/                                     /                                        301
 /en/latest                               /                                        301
