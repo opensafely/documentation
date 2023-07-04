@@ -1,5 +1,6 @@
-When you're ready to tell the world about your GitHub repo, consider the following:
+Once you have completed your project in OpenSAFELY, there are a number of tasks to complete to align with our [open working principles](https://www.opensafely.org/about/#core-design-features-for-privacy-transparency-and-open-working).
 
+Please read and complete the tasks below.
 ## Update all READMEs
 As of the 24th October 2022 we have changed how we managed repo READMEs.
 You can ignore this section if you created your repo after that date.
@@ -22,7 +23,7 @@ To update your repository's README to match this new README:
 
 
 ## Tidy up your repo
-You should ensure your repo is as tidy as possible before making it public. Consider the following:
+You should ensure your repo is as tidy as possible once you have completed your project. Consider the following:
 
 
 ### License
@@ -54,10 +55,13 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 ## Update project status
 
-[Update the status of the project](https://docs.opensafely.org/jobs-site/#updating-project-status) if relevant.
+[Update the status of the project](https://docs.opensafely.org/jobs-site/#updating-project-status) on the Jobs site if relevant.
 
+## Update project workspaces
 
+[Update the purposes of your project workspaces](https://docs.opensafely.org/jobs-site/#adding-a-workspace-purpose) on the Jobs site.
 ## Request the repo is made public
+
 If your repository is *private*, you can request it is made public via the jobs site.
 Click the "Change repo visibility" button on the workspace page of any workspace connected to it.
 You will be prompted to check various bits of metadata associated with the repository, its branches, connected workspaces, and the project.
@@ -65,3 +69,10 @@ Once you have completed this page it will be checked by the OpenSAFELY team befo
 
 !!! info
     You will be prompted to make it public sooner, if you first ran the code against an OpenSAFELY database more than 12 months ago.
+
+## Make your outputs on the jobs site public
+
+Consider making all outputs released to the project workspace on the jobs site "published". You can publish outputs from the "latest" release in the `Released Outputs` section of your workspace. When you click publish, *all* of the latest outputs will be made public. If you do not want to publish all of the latest outputs, you should discuss this with your co-pilot.
+## Add your publication to the OpenSAFELY website
+
+See [here](https://docs.opensafely.org/adding-a-paper/) for instructions on how to do this.

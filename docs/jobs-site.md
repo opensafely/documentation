@@ -163,7 +163,7 @@ You must seek NHS England approval for any publication or wider sharing of resul
 
 For instructions on how to request approval, please see [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. Following approval from NHSE, you should also create draft public outputs for review. To do this, navigate to 'All outputs' which contains your latest outputs from within the "Released outputs" section of your workspace and click the `Publish` button. It is currently only possible to publish the latest version of all of these files.
 
-As part of publishing your outputs, you should also make the repository where your analysis code is written public. You can find instructions on how to do that [here](https://docs.opensafely.org/publishing-repo/).
+As part of publishing your outputs, you should also make the repository where your analysis code is written public. You can find instructions on how to do that [here](https://docs.opensafely.org/project-completion/).
 
 Once approved, your released outputs will be “published” and viewable from the published outputs in the `Published outputs` section of your `Releases`. This is accessible by everyone, even those without a login.
 
@@ -186,3 +186,9 @@ Further details should be provided in the `Status description` field. Guidance f
 * `Completed - awaiting paper/reports`: provide some indication of when papers and/or reports are expected to be published.
 
 ![Project edit page](./images/project-edit-page.png)
+
+## Adding a workspace purpose
+
+You can add a purpose to each workspace within your project by navigating to the `Edit workspace` button within a workspace page. This should indicate the aim of any of the jobs run from within this workspace. You may only have one workspace, in which case the purpose can simply be "This is the main workspace or this project, in which all jobs were run". It can also be used to highlight workspaces used to carry out data quality checks or experiment with an analytical technique.
+
+You will need to complete a workspace purpose for each workspace as part of [project completion](https://docs.opensafely.org/project-completion/).
