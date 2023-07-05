@@ -60,3 +60,5 @@
 /permissions/                            /jobs-site/                          301
 /job-server                              /jobs-site/                          301
 /job-server/                             /jobs-site/                          301
+/publishing-repo                         /project-completion/                 301
+/publishing-repo/                        /project-completion/                 301
