@@ -129,7 +129,11 @@ How contributions to codelists are acknowledged -- to be agreed.
 ## <a name="medvid"></a>Build a simple medication codelist
 
 This is a short video showing how to build a pseudoBNF medication codelist. For OpenSAFELY studies you can convert this
-to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video. More on this soon!
+to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video. 
+
+Very briefly, we recommend that you build and agree medication codelists using the pseudoBNF coding system and convert this to
+dm+d for use in study definitions. You can read more about the uses and differences between pseudoBNF, dm+d and SNOMED CT
+on [our blog](https://www.bennett.ox.ac.uk/blog/2022/11/difference-between-bnf-dm-d-and-snomed-ct-codes/).
 
 <div class="video-wrapper">
   <iframe width="1280" height="720" src="https://www.youtube.com/embed/t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
