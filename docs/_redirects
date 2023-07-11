@@ -8,6 +8,10 @@
 /data-builder/ehrql/                     /ehrql/                              302
 /data-builder/ehrql/tutorial             /ehrql/tutorial/installation-and-setup/  302
 /data-builder/ehrql/tutorial/            /ehrql/tutorial/installation-and-setup/  302
+/ehrql/explanation/errors                /ehrql/how-to/errors/                302
+/ehrql/explanation/errors/               /ehrql/how-to/errors/                302
+/ehrql/explanation/examples              /ehrql/how-to/examples/              302
+/ehrql/explanation/examples/             /ehrql/how-to/examples/              302
 /en                                      /                                        301
 /en/                                     /                                        301
 /en/latest                               /                                        301
