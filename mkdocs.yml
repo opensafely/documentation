@@ -35,6 +35,7 @@ nav:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
           - GitHub and Git: install-github-and-git.md
+          - Running OpenSAFELY in GitHub Codespaces: github-codespaces.md
           - Python: install-python.md
           - Docker: install-docker.md
           - OpenSAFELY CLI: opensafely-cli.md
