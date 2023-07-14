@@ -7,11 +7,6 @@ to allow you to run OpenSAFELY
 This uses GitHub Codespaces.
 GitHub provide users with a free monthly quota of Codespaces use.
 
-!!! warning
-    Both support for GitHub Codespaces support is still being tested.
-    This documentation is still being worked on
-    and is subject to change.
-
 This page explains:
 
 * what GitHub Codespaces is
