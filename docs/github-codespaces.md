@@ -7,11 +7,6 @@ to allow you to run OpenSAFELY
 This uses GitHub Codespaces.
 GitHub provide users with a free monthly quota of Codespaces use.
 
-!!! warning
-    Both support for GitHub Codespaces support is still being tested.
-    This documentation is still being worked on
-    and is subject to change.
-
 This page explains:
 
 * what GitHub Codespaces is
@@ -431,7 +426,7 @@ The screenshot below shows this.
 
 The current Codespaces configuration is based on Linux.
 Common command-line tools that you might expect from a Linux installation,
-such as `cat`, `grep' and more are available to use in the Visual Studio Code terminal.
+such as `cat`, `grep` and more are available to use in the Visual Studio Code terminal.
 
 !!! info
     You do not need to know how to work with Linux
