@@ -426,7 +426,7 @@ The screenshot below shows this.
 
 The current Codespaces configuration is based on Linux.
 Common command-line tools that you might expect from a Linux installation,
-such as `cat`, `grep' and more are available to use in the Visual Studio Code terminal.
+such as `cat`, `grep` and more are available to use in the Visual Studio Code terminal.
 
 !!! info
     You do not need to know how to work with Linux
