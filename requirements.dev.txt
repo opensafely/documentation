@@ -40,9 +40,9 @@ packaging==23.0 \
     # via
     #   -c requirements.prod.txt
     #   build
-pip-tools==7.0.0 \
-    --hash=sha256:6a2308712727c86cc8a6cedc0e6ba01232a337c706d63926d3789462ad083d06 \
-    --hash=sha256:ae185db747195c8ed011866c366279cbb64f7f8c1528e7a828f515bd2bb0b31b
+pip-tools==7.1.0 \
+    --hash=sha256:4e60b7d05b046f49ad5bf3c2818df8e78dec5820e9b331cd9898cff5ec19ff2f \
+    --hash=sha256:f6ead499e726c8cfee04b2dea6282a9faf29663c378d9a4aca2ea6b86c8ec715
     # via -r requirements.dev.in
 platformdirs==3.2.0 \
     --hash=sha256:d5b638ca397f25f979350ff789db335903d7ea010ab28903f57b27e1b16c2b08 \
