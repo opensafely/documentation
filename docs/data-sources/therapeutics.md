@@ -18,8 +18,7 @@ Treatment dates may be in the past or future at the point when the form is submi
 
 ## More Information
 
-* [Treatment guidelines (non-hospitalised patients)](https://www.england.nhs.uk/coronavirus/publication/interim-clinical-commissioning-policy-neutralising-monoclonal-antibodies-or-antivirals-for-non-hospitalised-patients-with-covid-19/)
-* [Treatment guidelines (hospitalised patients)](https://www.england.nhs.uk/coronavirus/publication/interim-clinical-commissioning-policy-antivirals-or-neutralising-monoclonal-antibodies-in-the-treatment-of-hospital-onset-covid-19/)
+* [Treatment guidelines](https://www.nice.org.uk/guidance/ta878)
 
 ## Datasource-specific glossary
 
