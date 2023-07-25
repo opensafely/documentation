@@ -13,7 +13,7 @@ In accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/abo
 
 ### How to make your code public
 
-You can request that a private repository is made public at any time by [following our process for publishing a repo](/project-completion/).
+You can request that a private repository is made public at any time by [following our process for publishing a repo](project-completion.md).
 
 #### Publishing older repositories that contain results as well as code
 
@@ -21,7 +21,7 @@ In earlier versions of OpenSAFELY, all results released from the secure server a
 
 ### When you need to make your code public
 
-A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have a [guide to publishing repositories](publishing-repo.md) that you must read. During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after first code execution. During our pilot phase of OpenSAFELY Users, if we encounter edge cases proposing that a particular repo should be excepted from this policy we will develop an open and structured Exceptions Process.
+A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have a [guide to publishing repositories](project-completion.md) that you must read. During the development stage of a project, a repository may be kept private, so that only members of the OpenSAFELY GitHub organisation are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after first code execution. During our pilot phase of OpenSAFELY Users, if we encounter edge cases proposing that a particular repo should be excepted from this policy we will develop an open and structured Exceptions Process.
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
