@@ -30,7 +30,6 @@ jobs:
         env:
           AccessToken: ${{ secrets.GITHUB_TOKEN }}
           MKDOCS_SITE_URL: https://docs.opensafely.org
-          MKDOCS_MULTIREPO_CLEANUP: true
           EHRQL_BRANCH: main
         run: just build
 
