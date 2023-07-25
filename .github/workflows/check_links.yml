@@ -33,6 +33,9 @@ jobs:
           EHRQL_BRANCH: main
         run: just build
 
+      - name: Move imported documentation to correct relative path
+        run: mv imported_docs/* docs/
+
       - name: Check links
         uses: lycheeverse/lychee-action@ec3ed119d4f44ad2673a7232460dc7dff59d2421  # v1.8.0
         with:
