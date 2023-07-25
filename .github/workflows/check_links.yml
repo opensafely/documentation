@@ -39,7 +39,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@ec3ed119d4f44ad2673a7232460dc7dff59d2421  # v1.8.0
         with:
-          args: "--exclude-all-private --exclude-mail --include-verbatim --require-https --verbose --no-progress --timeout 60 './docs/**/*.md' './docs/**/*.html', './imported_docs/**/*.md' './imported_docs/**/*.html'"
+          args: "--exclude-all-private --exclude-mail --include-verbatim --require-https --verbose --no-progress --timeout 60 './docs/**/*.md' './docs/**/*.html', './imported_docs/**/*.md' './imported_docs/**/*.html' --exclude-path './docs/ehrql/includes/generated_docs'"
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
