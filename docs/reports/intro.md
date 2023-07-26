@@ -63,13 +63,13 @@ refer to [this summary of Markdown formatting](https://github.com/adam-p/markdow
 
 ### Converting Jupyter notebooks to html
 
-You can convert your notebook to HTML using [nbconvert](https://nbconvert.readthedocs.io/en/latest/), with the `basic` template, like this: 
+You can convert your notebook to HTML using [nbconvert](https://nbconvert.readthedocs.io/en/latest/), with the `basic` template, like this:
 
 ```
 nbconvert my-notebook.ipynb --execute --to html --template basic --no-input
 ```
 
-This removes any code blocks in the notebook from the rendered html; to keep them you can remove the `no-input` flag. 
+This removes any code blocks in the notebook from the rendered html; to keep them you can remove the `no-input` flag.
 
 To run this within an OpenSAFELY action, you can use the following run command:
 
@@ -96,7 +96,7 @@ An example R markdown document is shown below:
 ````r
 ---
 title: "A very interesting report"
-output: 
+output:
   html_document:
     theme: null
     highlight: null
@@ -142,7 +142,7 @@ The value is `r value`.
 In OpenSAFELY, you can convert an R markdown file to html file by including the following run command in an action.
 
 ```
-run: r:latest -e 'rmarkdown::render("path_to_report", output_dir = "/workspace/output/",knit_root_dir = "/workspace",)'    
+run: r:latest -e 'rmarkdown::render("path_to_report", output_dir = "/workspace/output/",knit_root_dir = "/workspace",)'
 ```
 
 ## Next step
