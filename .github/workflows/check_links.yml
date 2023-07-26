@@ -30,14 +30,19 @@ jobs:
         env:
           AccessToken: ${{ secrets.GITHUB_TOKEN }}
           MKDOCS_SITE_URL: https://docs.opensafely.org
-          MKDOCS_MULTIREPO_CLEANUP: true
           EHRQL_BRANCH: main
         run: just build
 
+      - name: Move imported documentation to correct relative path
+        run: mv imported_docs/* docs/
+
+      # Use --max-concurrency to prevent 429 errors with OpenSAFELY Jobs.
+      # This workaround may not be needed in future if lychee has better rate limiting.
+      # https://github.com/lycheeverse/lychee/issues/36
       - name: Check links
         uses: lycheeverse/lychee-action@ec3ed119d4f44ad2673a7232460dc7dff59d2421  # v1.8.0
         with:
-          args: "--exclude-all-private --exclude-mail --include-verbatim --require-https --verbose --no-progress --timeout 60 './docs/**/*.md' './docs/**/*.html', './imported_docs/**/*.md' './imported_docs/**/*.html'"
+          args: "--exclude-all-private --exclude-mail --include-verbatim --max-concurrency 24 --require-https --verbose --no-progress --timeout 60 './docs/**/*.md' './docs/**/*.html' './imported_docs/**/*.md' './imported_docs/**/*.html' --exclude-path './docs/ehrql/includes/generated_docs'"
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
