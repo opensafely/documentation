@@ -24,7 +24,7 @@ If not, you should first refer to:
 
 * [this general overview of OpenSAFELY](https://www.opensafely.org/about/)
 * [the typical researcher workflow](workflow.md)
-* [the introductory tutorial](https://docs.opensafely.org/getting-started/)
+* [the introductory tutorial](getting-started.md)
 
 ## Software components
 

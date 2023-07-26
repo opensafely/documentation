@@ -73,7 +73,7 @@ flowchart TD
 
 ### Project application and software setup
 
-All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a co-pilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started guide](https://docs.opensafely.org/en/latest/getting-started/) to ensure that the necessary software can be installed and run on your computer.
+All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a co-pilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started guide](getting-started.md) to ensure that the necessary software can be installed and run on your computer.
 
 In our experience, co-piloting is most successful when the pilot has some experience with coding (e.g., Python, R or Stata), is familiar with collaborative code development via GitHub and is able to commit four weeks or more to their project. However, we have had people with the required motivation and enthusiasm, and an existing adjacent skillset, to get results within four weeks.
 
@@ -96,7 +96,7 @@ co-pilots will provide up to five days over the four weeks to support the develo
 - support with the construction of the required patient cohort
 - support with the identification of clinical/demographic variables of interest
 - support with identifying or building codelists on [opencodelists.org](https://www.opencodelists.org/)
-- help with navigating [the OpenSAFELY documentation](https://docs.opensafely.org) to find necessary documentation and policies
+- help with navigating [the OpenSAFELY documentation](index.md) to find necessary documentation and policies
 - help with navigating [the OpenSAFELY GitHub repository](https://github.com/opensafely) to find helpful examples
 - advice on implementing quality assurance steps
 - advice on disclosure control and redaction as carried out by our output checking service
