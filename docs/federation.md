@@ -48,15 +48,15 @@ The first action they wrote extracts a dataset using an [OpenSAFELY study defini
 ```
 
 
-The research tested the code with the version of OpenSAFELY installed on their own computer, and then published their code in Github. You can [view the above code extract in context here](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/969dbbe4c58e7c7391acf7c97f61fcab307b362e/analysis/study_definition.py#L231-L240).
+The research tested the code with the version of OpenSAFELY installed on their own computer, and then published their code in Github. You can [view the above code extract in context](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/969dbbe4c58e7c7391acf7c97f61fcab307b362e/analysis/study_definition.py#L231-L240).
 
 They then used the OpenSAFELY control panel to request that their code run in both backends.   The OpenSAFELY framework converted the study definition to a format understood by each backend's database, executed across the raw patient records, and then retrieved the analysis-ready dataset, making it available for remotely triggered, hands-free processing within the secure backend environment.
 
 Once the data was extracted, the framework automatically executed several more actions which processed it further. The final action was a Cox regression, using (as always) [identical code](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/master/analysis/R/Scripts/03_model_final.R) for both backends.  The researcher could be confident that the same action would run successfully in both locations, because OpenSAFELY guarantees [identical environments](actions-scripts.md) everywhere for running code. In this case, for example, the user knew the version of R that they used in local code development would be exactly the same as the version available in the TPP and EMIS backends; and that the data it was processing was identical, because it had been extracted by the same OpenSAFELY tools in each environment.
 
-After execution, the **outputs were checked** for disclosivity by privacy specialists. When the results of the regression models were validated as safe to release, they were  **released** from the secure backend for direct access by the researcher. You can see the [TPP and EMIS outputs for the vaccination paper here](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/tree/master/released_outputs) in their raw form.
+After execution, the **outputs were checked** for disclosivity by privacy specialists. When the results of the regression models were validated as safe to release, they were  **released** from the secure backend for direct access by the researcher. You can see the [TPP and EMIS outputs for the vaccination paper](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/tree/master/released_outputs) in their raw form.
 
-Finally, the researcher combined the model outputs from both backends in a **meta-analysis**  with a [final script, which you can read here](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/master/analysis/R/Scripts/06_metaanalysis.R).  In this case, they combined model coefficients using inverse-variance-weighting.
+Finally, the researcher combined the model outputs from both backends in a **meta-analysis**  with a [final script](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/master/analysis/R/Scripts/06_metaanalysis.R). In this case, they combined model coefficients using inverse-variance-weighting.
 
 ## Planned work
 

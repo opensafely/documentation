@@ -19,7 +19,8 @@ The current coding systems available in the OpenCodelists builder are listed bel
 
 Each codelist must use exactly one of these systems.
 
-OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, you can find instructions to manually upload an existing OPCS-4 codelist [here](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
+OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, it is possible to [manually upload an existing OPCS-4 codelist](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
+
 ## Workflow
 
 The general workflow for creating codelists is as follows:
