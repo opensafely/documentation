@@ -1,5 +1,6 @@
 {
         "dockerFile": "Dockerfile",
         "updateContentCommand": "PYTHON_VERSION= just devenv",
-        "postAttachCommand": "PYTHON_VERSION= just run"
+        "postAttachCommand": "PYTHON_VERSION= just run",
+        "forwardPorts": "8910"
 }
