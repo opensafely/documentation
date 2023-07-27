@@ -1,5 +1,5 @@
 {
         "dockerFile": "Dockerfile",
-        "postCreateCommand": "PYTHON_VERSION= just devenv",
-        "postStartCommand": "PYTHON_VERSION= just run"
+        "updateContentCommand": "PYTHON_VERSION= just devenv",
+        "postAttachCommand": "PYTHON_VERSION= just run"
 }
