@@ -2,6 +2,7 @@
         "name": "Documentation development",
         "dockerFile": "Dockerfile",
         "updateContentCommand": "PYTHON_VERSION= just devenv",
-        "postAttachCommand": "PYTHON_VERSION= just run",
-        "forwardPorts": "8910"
+        "postStartCommand": "PYTHON_VERSION= just run",
+        "forwardPorts": "8910",
+        "portAttributes": {"8910": {"label": "Server port"}}
 }
