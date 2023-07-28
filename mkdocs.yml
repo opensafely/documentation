@@ -20,7 +20,6 @@ nav:
           - Overview: data-sources/intro.md
           - SystmOne primary care: data-sources/systmone.md
           - EMIS primary care: data-sources/emis.md
-          - Covid-19 infection survey: data-sources/onscis.md
           - Covid-19 test results: data-sources/sgsscovid.md
           - Covid-19 therapeutics: data-sources/therapeutics.md
           - Emergency attendances: data-sources/ecds.md

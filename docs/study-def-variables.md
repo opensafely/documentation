@@ -113,7 +113,7 @@ For more information, see the [SGSS data section](data-sources/sgsscovid.md).
 ## CPNS
 
 These variables are derived from the COVID-19 Patient Notification System (CPNS), which collects info on all in-hospital covid-related deaths.
-For more information, see the [CPNS data section](data-sources/cpns.md). 
+For more information, see the [CPNS data section](data-sources/cpns.md).
 
 !!! note
     CPNS is restricted to in-hospital covid-related deaths only. For covid-related deaths in any setting, ONS-registered deaths where cause of death matches [COVID-19 coding in ICD-10](https://www.who.int/standards/classifications/classification-of-diseases/emergency-use-icd-codes-for-covid-19-disease-outbreak) is generally more useful.
@@ -144,17 +144,6 @@ For more information, see the [ISARIC section](data-sources/isaric.md).
 &nbsp;
 
 ::: cohortextractor.patients.with_an_isaric_record
-&nbsp;
-
-
-## ONS CIS
----8<-- 'includes/onscis-warning-header.md'
-
-These variables are derived from the COVID-19 Infection Survey data provided by the Office for National Statistics.
-For more information, see the [ONS CIS section](data-sources/onscis.md).
-&nbsp;
-
-::: cohortextractor.patients.with_an_ons_cis_record
 &nbsp;
 
 
@@ -201,7 +190,7 @@ Data on patients under secondary renal care (advanced chronic kidney disease sta
 
 ## Therapeutics
 
-These variables are derived from forms submitted by clinicians to NHS England for 
+These variables are derived from forms submitted by clinicians to NHS England for
 patients assessed and approved to receive antivirals/nMABs for COVID-19 in inpatient or outpatient
 settings.
 

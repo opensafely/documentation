@@ -40,8 +40,6 @@
 /dataset-systmone/                       /data-sources/systmone               301
 /dataset-emis                            /data-sources/emis/                  301
 /dataset-emis/                           /data-sources/emis/                  301
-/dataset-onscis                          /data-sources/onscis/                301
-/dataset-onscis/                         /data-sources/onscis/                301
 /dataset-sgsscovid                       /data-sources/sgsscovid/             301
 /dataset-sgsscovid/                      /data-sources/sgsscovid/             301
 /dataset-therapeutics                    /data-sources/therapeutics/          301
