@@ -4,12 +4,6 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
 #
-asyncio==3.4.3 \
-    --hash=sha256:83360ff8bc97980e4ff25c964c7bd3923d333d177aa4f7fb736b019f26c7cb41 \
-    --hash=sha256:b62c9157d36187eca799c378e572c969f0da87cd5fc42ca372d92cdb06e7e1de \
-    --hash=sha256:c46a87b48213d7464f22d9a497b9eef8c1928b68320a2fa94240f969f6fec08c \
-    --hash=sha256:c4d18b22701821de07bd6aea8b53d21449ec0ec5680645e5317062ea21817d2d
-    # via mkdocs-multirepo-plugin
 certifi==2023.7.22 \
     --hash=sha256:539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082 \
     --hash=sha256:92d6037539857d8206b8f6ae472e8b77db8058fec5937a1ef3f54304089edbb9
@@ -218,9 +212,9 @@ mkdocs-material-extensions==1.1.1 \
     --hash=sha256:9c003da71e2cc2493d910237448c672e00cefc800d3d6ae93d2fc69979e3bd93 \
     --hash=sha256:e41d9f38e4798b6617ad98ca8f7f1157b1e4385ac1459ca1e4ea219b556df945
     # via mkdocs-material
-mkdocs-multirepo-plugin==0.6.1 \
-    --hash=sha256:4d09324430cb669e1ab9c128c75bc24c1350acb2a40e6ea714d666e5dcc25b8b \
-    --hash=sha256:b484f189dfb429793d8049e8d201b191fd99887b10fc8776b9846171d1243533
+mkdocs-multirepo-plugin==0.6.2 \
+    --hash=sha256:1b683f656ade65e4acf7206e005b932495ef27c2bc215e70067f5cc0369953e5 \
+    --hash=sha256:25975bdcbe9f6aef6c89625856fd64d6315280d51d0c88c768135c02fc97f614
     # via -r requirements.prod.in
 mkdocs-table-reader-plugin==2.0.1 \
     --hash=sha256:bfeb246a76c273c7745833be747e20b067abc3dafd720f658521ddf23b53cbf7 \
