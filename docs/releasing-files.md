@@ -313,7 +313,7 @@ These outputs can be shared with project collaborators and published in line wit
 If you have had [intermediate data released](#release-of-intermediate-data) and you wish to run further analyses on them, such as reformatting figures, there are a few things to consider.
 
 1. You should include the code for these steps in your GitHub repo.
-2. You **should not** commit any of the released outputs to your GitHub repo. Make sure to include them in the `.gitignore` file.
+2. You **should not** commit any of the released outputs (including final processed charts/tables) to your GitHub repo. Make sure to include them in the `.gitignore` file.
 3. Consider adding the code as an action in your project pipeline.
 
 ### Reporting a data breach
