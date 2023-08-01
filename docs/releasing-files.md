@@ -23,7 +23,7 @@ Below we cover the 4 key areas of our “safe outputs” activities:
 The assessment of the risk of re-identification attached to a data item or statistical outputs, and the use of appropriate methods to reduce the disclosure risk, is known as **statistical disclosure control (SDC)**. In OpenSAFELY, researchers must apply SDC at the stage where their aggregated results are ready to be released from the results server (the Level 4 environment) for sharing with collaborators for feedback, or for publication as papers, reports, blogs, etc. Examples of SDC techniques to manage the disclosure risk include redacting (suppressing) low values, rounding values, or redesigning outputs so that sparse table cells, for example, are combined.
 In general, good SDC is consistent with good statistics: many observations, no influential outliers, well-behaved distributions etc both prevent disclosure and increase confidence in the statistics. The one area to be wary of is where you can say something for certain about entire groups (‘all patients presenting with X also needed treatment for Y’). Be cautious about statements like this.
 
-To understand what checks have to be made to outputs it is important to understand the **attribute types** that exist in data and how these could lead to **primary or secondary disclosure**. Importantly, OpenSAFELY requires that researchers redact any outputs based on counts <= 5 before they can be released.
+To understand what checks have to be made to outputs it is important to understand the **attribute types** that exist in data and how these could lead to **primary or secondary disclosure**. Importantly, OpenSAFELY requires that researchers redact any outputs based on counts <= 7 before they can be released.
 
 !!! note
     Individual researchers who have Level 4 access have responsibility for redacting sensitive information, or choosing not to publish it at all. The study author should do everything they can to make this easy; for example, carrying out low number suppression automatically, documenting code clearly, and only selecting essential items for publication when deciding what to label as `moderately_sensitive`.
@@ -79,16 +79,19 @@ Secondary disclosure can also occur across different tables involving the same p
 
 When applying disclosure controls to your outputs, you should consider the potential for both primary and secondary disclosure.
 
-### Redacting counts less than or equal to 5
+### Redacting counts less than or equal to 7
 
 Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other released text and objects that may be a disclosure risk.
 
-The general principle is that **any statistic describing 5 or fewer patients, either directly or indirectly, should be redacted or combined into other statistics**. This includes:
+The general principle is that **any statistic describing 7 or fewer patients, either directly or indirectly, should be redacted or combined into other statistics**. This includes:
 
-*   Redacting counts <=5 in frequency tables. Row and column totals should be recalculated after you have redacted the cell values, to ensure that the redacted values can not be inferred from the totals.
-*   Redacting summaries of numeric variables (eg mean values) describing 5 or fewer patients.
+*   Redacting counts <=7 in frequency tables. Row and column totals should be recalculated after you have redacted the cell values, to ensure that the redacted values can not be inferred from the totals.
+*   Redacting summaries of numeric variables (eg mean values) describing 7 or fewer patients.
 *   Redacting maximum or minimum values. These often relate to one or two individuals (eg ‘the oldest patient is 103’) and so should be avoided. In some cases the maximum and minima are informative about individuals (‘the target population was schoolchildren from 11 to 16’); these broad sample characteristics are okay.
-*   Redacting graphical figures whose underlying values describe 5 or fewer patients. Figures which include print-outs of patient counts (such as Kaplan-Meier plots) should be checked and redacted. Underlying data for plots should be checked - do not rely upon ‘it’s too small to read’ as a justification for having low numbers. These underlying counts should be provided when requesting the release of any figures.
+*   Redacting graphical figures whose underlying values describe 7 or fewer patients. Figures which include print-outs of patient counts (such as Kaplan-Meier plots) should be checked and redacted. Underlying data for plots should be checked - do not rely upon ‘it’s too small to read’ as a justification for having low numbers. These underlying counts should be provided when requesting the release of any figures.
+
+!!! note
+    Our previous requirement was to redact counts <=5. When combined with rounding counts to the nearest 5, this led to occassions where counts of 5 could be inferred to be either 6 or 7. Redacting counts <=7 followed by rounding provides the same protection for all counts.
 
 Below are some other principles to consider:
 
@@ -110,10 +113,10 @@ If you are unsure about anything, please email us: [disclosurecontrol@opensafely
 
 ### Rounding counts
 
-The redaction of any counts <=5 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to reveal information about individuals or groups. To reduce this risk, we ask that you consider **rounding any counts to the nearest 5 wherever possible**. In most cases this is unlikely to have a significant impact on your results.
+The redaction of any counts <=7 reduces the risk of primary disclosure, but it does not remove the risk of secondary disclosure. As there are many active projects using the OpenSAFELY platform and datasets, there is a risk that your results might be combined with other results to reveal information about individuals or groups. To reduce this risk, we ask that you **round any counts to the nearest 5**. This includes rounding counts underlying any figures requested for release. In most cases this is unlikely to have a significant impact on your results. If it does, please highlight why it is important to release non-rounded counts when making an output review request.
 
 !!! note
-    Rounding does not remove the need to redact counts <=5. You should first redact any low counts and then apply rounding. If applying both techniques, the recommended approach is to first redact counts <=7 and then round to the nearest 5 (if you redact counts <=5 and then round to the nearest 5, any counts of 5 remaining must originally have been either 6 or 7; this approach provides the same protection for all counts)
+    Rounding does not remove the need to redact counts <=7. You should first redact counts <=7 and then round to the nearest 5.
 
 Below is an example of a table before (top) and after (bottom) rounding has been applied. **Note that column and row totals are the sum of the rounded counts.**
 
@@ -136,7 +139,7 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 
 ### Rounding rates
 
-A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts below the redaction threshold (5 or less) should also be a redaction.** In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
+A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts <=7 should also be redacted** (see the note above for why a threshold of 7 is used). In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
 
 #### Midpoint 6 rounding
 By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-5). The method has desirable properties such as:
@@ -183,7 +186,7 @@ When producing repeated reports at different time points, it is possible that th
 The solution for this is to use rounding across the entire report (to the nearest 5, 7, or 10). Rounding eliminates the need for output checkers to compare different versions of the report outputs, as no small increases can occur. It is not likely that rounding will significantly affect the report in any meaningful way. Statistical analyses can be carried out prior to rounding and the results displayed as normal provided they are classed as low risk. If only charts are shown, rounding is not always necessary, but charts should have sufficiently low resolution that any small number changes cannot be precisely determined. However, numbers could be rounded nonetheless, as this would not noticeably affect the figures.
 
 **Running similar studies**
-There may be cases where you have run an analysis and results have been released following approval from the output checking team, but at a later date you decide you want to make changes to the analysis such as adding an extra code to a codelist. This may result in small changes in the outputs that can be disclosive, ie, <=5 individuals have the new code recorded. In these cases, you may need to wait until there has been enough change in the underlying study population (due to the movement of patients between practices) before rerunning the study.
+There may be cases where you have run an analysis and results have been released following approval from the output checking team, but at a later date you decide you want to make changes to the analysis such as adding an extra code to a codelist. This may result in small changes in the outputs that can be disclosive, ie, <=7 individuals have the new code recorded. In these cases, you may need to wait until there has been enough change in the underlying study population (due to the movement of patients between practices) before rerunning the study.
 
 If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers.
 
@@ -225,6 +228,19 @@ For each output wishing to be released you will need to provide a clear contextu
 5. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
 
 Each section in the review request form should normally describe a single file, but where necessary for similar files, these can be grouped together and wildcards can be used for the file path (e.g. `release/hospitalisation_rate_by_*.csv`). **If you use a wildcard, please indicate how many files this captures**.
+
+### Release of intermediate data
+
+In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
+
+* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](#running-further-analyses-on-released-outputs).
+* A large number of outputs are produced from a single intermediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
+*  The intermediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
+
+If requesting release of intermediate data there are a few considerations:
+
+*  We recommend that you continue to develop downstream analysis actions within the OpenSAFELY pipeline, even if they are not intended to be run on the server. This helps maintain reproducibility.
+* Intermediate results can contain much more data than outputs produced at the end of the analysis pipeline. The data contained within these outputs should be the minimum amount required to produce the downstream outputs or receive feedback from project collaborators.
 
 ### Error log files
 
@@ -291,6 +307,14 @@ These outputs can be shared with project collaborators and published in line wit
     - allowing someone to look over your shoulder
     - transcribing (e.g., to paper or email)
     - using screen sharing software or any recording device/software
+
+### Running further analyses on released outputs
+
+If you have had [intermediate data released](#release-of-intermediate-data) and you wish to run further analyses on them, such as reformatting figures, there are a few things to consider.
+
+1. You should include the code for these steps in your GitHub repo.
+2. You **should not** commit any of the released outputs (including final processed charts/tables) to your GitHub repo. Make sure to include them in the `.gitignore` file.
+3. Consider adding the code as an action in your project pipeline.
 
 ### Reporting a data breach
 
