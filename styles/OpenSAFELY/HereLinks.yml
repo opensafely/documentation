@@ -1,0 +1,7 @@
+extends: existence
+message: Consider rewording link text to remove the use of 'here'
+scope: raw
+level: warning
+ignorecase: true
+raw:
+  - '\[.*here.*\]'
