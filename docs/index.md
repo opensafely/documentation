@@ -19,7 +19,7 @@ OpenSAFELY is a collaboration between the [Bennett Institute for Applied Data Sc
 
 ## Using OpenSAFELY
 
-**Only approved users can execute code against the real OpenSAFELY database**.  We are currently in a pilot phase for onboarding new users, [which you can read about here](https://www.opensafely.org/onboarding-new-users/).
+**Only approved users can execute code against the real OpenSAFELY database**.  We are currently in a pilot phase for [onboarding new users](https://www.opensafely.org/onboarding-new-users/).
 
 However, anyone can access and use all the OpenSAFELY-specific tools needed to define analysis datasets, generate dummy data, and run analysis scripts in a computational environment that mimics the secure environment where real analyses are run.
 

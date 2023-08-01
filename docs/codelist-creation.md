@@ -19,7 +19,8 @@ The current coding systems available in the OpenCodelists builder are listed bel
 
 Each codelist must use exactly one of these systems.
 
-OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, you can find instructions to manually upload an existing OPCS-4 codelist [here](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
+OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, it is possible to [manually upload an existing OPCS-4 codelist](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
+
 ## Workflow
 
 The general workflow for creating codelists is as follows:
@@ -129,7 +130,7 @@ How contributions to codelists are acknowledged -- to be agreed.
 ## <a name="medvid"></a>Build a simple medication codelist
 
 This is a short video showing how to build a pseudoBNF medication codelist. For OpenSAFELY studies you can convert this
-to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video. 
+to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video.
 
 Very briefly, we recommend that you build and agree medication codelists using the pseudoBNF coding system and convert this to
 dm+d for use in study definitions. You can read more about the uses and differences between pseudoBNF, dm+d and SNOMED CT

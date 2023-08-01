@@ -73,7 +73,7 @@ flowchart TD
 
 ### Project application and software setup
 
-All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a co-pilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started guide](https://docs.opensafely.org/en/latest/getting-started/) to ensure that the necessary software can be installed and run on your computer.
+All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a co-pilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started guide](getting-started.md) to ensure that the necessary software can be installed and run on your computer.
 
 In our experience, co-piloting is most successful when the pilot has some experience with coding (e.g., Python, R or Stata), is familiar with collaborative code development via GitHub and is able to commit four weeks or more to their project. However, we have had people with the required motivation and enthusiasm, and an existing adjacent skillset, to get results within four weeks.
 
@@ -83,7 +83,7 @@ If you are unsure whether co-piloting will work for your project, contact `team@
 
 Once a project has been approved, it will be matched to one of our internal OpenSAFELY researchers, in terms of the experience and knowledge required for the project. The pilot and co-pilot will have an introductory meeting in which the co-pilot will provide further details about the co-piloting service and the pilot can provide further details about the research project. At this meeting, both parties will agree when the dedicated 1:1 support period will begin.
 
-The slides that we use for these meetings are available [here](https://docs.google.com/presentation/d/1tOajKhvCy9zWfmAyFHsFXhml3onp7DaJ/edit?usp=share_link&ouid=116818038849804976910&rtpof=true&sd=true). Some of our co-pilots also run through a version of these slides in [this video on our Youtube channel](https://youtu.be/3BNmoV7aHwA).
+The [slides that we use for these meetings are available to download](https://docs.google.com/presentation/d/1tOajKhvCy9zWfmAyFHsFXhml3onp7DaJ/edit?usp=share_link&ouid=116818038849804976910&rtpof=true&sd=true). Some of our co-pilots also run through a version of these slides in [this video on our Youtube channel](https://youtu.be/3BNmoV7aHwA).
 
 ### Active co-piloting stage (four weeks)
 
@@ -96,7 +96,7 @@ co-pilots will provide up to five days over the four weeks to support the develo
 - support with the construction of the required patient cohort
 - support with the identification of clinical/demographic variables of interest
 - support with identifying or building codelists on [opencodelists.org](https://www.opencodelists.org/)
-- help with navigating [the OpenSAFELY documentation](https://docs.opensafely.org) to find necessary documentation and policies
+- help with navigating [the OpenSAFELY documentation](index.md) to find necessary documentation and policies
 - help with navigating [the OpenSAFELY GitHub repository](https://github.com/opensafely) to find helpful examples
 - advice on implementing quality assurance steps
 - advice on disclosure control and redaction as carried out by our output checking service
@@ -122,7 +122,7 @@ Authorship should be discussed at the introductory meeting of any co-piloted pro
 - A core team of people who contribute to the running of the OpenSAFELY platform which facilitate every study that is completed should also be offered authorship. This includes people who contribute to the platform, code, data acquisition, data curation and management, and design of OpenSAFELY.
 - In some circumstances (for example multiple consortia outputs across a diverse range of different datasets in a diverse range of different platforms with an extremely large number of contributors) it might be appropriate for some OpenSAFELY team to be authors, and others making smaller specific contributions to that single output to be listed under the group author name “The OpenSAFELY Collaborative” if the journal permits this in a manner that ensures that the individual names of members of that group author name also appear in Google Scholar and PubMed records (as is common with many journals).
 - As with standard authorship guidelines, named authors must be given the opportunity to read and approve the final manuscript before submission. Persons offered authorship should also have the opportunity to decline the offer if preferred.
-- A template authorship contribution form containing the named persons who should be offered authorship (and their contributions towards running the platform) can be found [here](https://docs.google.com/spreadsheets/d/1-piPlxWtp1RbhQ5l7AGPrE8nLTzDIavPB1MG9bZPBfM/edit?usp=share_link).
+- There is [a template authorship contribution form](https://docs.google.com/spreadsheets/d/1-piPlxWtp1RbhQ5l7AGPrE8nLTzDIavPB1MG9bZPBfM/edit?usp=share_link) containing the named persons who should be offered authorship (and their contributions towards running the platform).
 
 ## Where can I find out more?
 
