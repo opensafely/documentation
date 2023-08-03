@@ -4,7 +4,7 @@
 
 ### How do I check journal open access compliance?
 
-Before you submit a paper to a journal, please check open access arrangements. 
+Before you submit a paper to a journal, please check open access arrangements.
 
 [journalcheckertool.org](https://journalcheckertool.org) is our recommended tool for checking journal compliance.
 
