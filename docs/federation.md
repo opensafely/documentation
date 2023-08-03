@@ -48,7 +48,7 @@ The first action they wrote extracts a dataset using an [OpenSAFELY study defini
 ```
 
 
-The research tested the code with the version of OpenSAFELY installed on their own computer, and then published their code in Github. You can [view the above code extract in context](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/969dbbe4c58e7c7391acf7c97f61fcab307b362e/analysis/study_definition.py#L231-L240).
+The research tested the code with the version of OpenSAFELY installed on their own computer, and then published their code in GitHub. You can [view the above code extract in context](https://github.com/opensafely/Factors-associated-with-COVID-19-vaccination/blob/969dbbe4c58e7c7391acf7c97f61fcab307b362e/analysis/study_definition.py#L231-L240).
 
 They then used the OpenSAFELY control panel to request that their code run in both backends.   The OpenSAFELY framework converted the study definition to a format understood by each backend's database, executed across the raw patient records, and then retrieved the analysis-ready dataset, making it available for remotely triggered, hands-free processing within the secure backend environment.
 

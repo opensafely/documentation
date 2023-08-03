@@ -122,8 +122,8 @@ via the Jobs website **if you have access to and are logged into the backend
 the job was run on**.
 
 However, whilst normally you log into [jobs.opensafely.org] from your machines
-browser using Github, the secure server does not have access to
-Github. So you need to use an alternate method to login, by generating a Single
+browser using GitHub, the secure server does not have access to
+GitHub. So you need to use an alternate method to login, by generating a Single
 Use Token, and then using it on the secure server to log in.
 
 To generate a Single Use Token, before logging into the secure server, visit
@@ -137,7 +137,7 @@ only valid for a short time, and only works once.
 Once you are logged into the server via the VPN:
 
 * Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using google chrome (make sure to use https://)
-* Log in using your email or Github username, and the Single Use Token from the above step.
+* Log in using your email or GitHub username, and the Single Use Token from the above step.
 * You should be now logged in. This login will expire after two weeks of not being used.
 
 Once logged in, to view your `moderately_sensitive` outputs:

@@ -4,7 +4,7 @@
 
 All new users of the OpenSAFELY platform are offered access to our co-pilot service, which pairs the new user (the "pilot") with an experienced OpenSAFELY researcher (the "co-pilot") to help with the onboarding process. The objective of this service is to help new users get up and running with OpenSAFELY as quickly as possible and aims to facilitate the generation of analytical outputs from real data within a four week period.
 
-The service includes five days (over four weeks) of dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform and advise with regards to Github.
+The service includes five days (over four weeks) of dedicated 1:1 support with cohort extraction via the OpenSAFELY plaform and advise with regards to GitHub.
 
 Beyond this initial four week period, we also provide:
 
