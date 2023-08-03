@@ -1,8 +1,8 @@
 extends: existence
 message: 'Links to other documentation pages should be written with a relative file path, not a link to a specific domain'
 link: 'https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages'
-level: warning
-ignorecase: true
 scope: raw
+level: suggestion
+ignorecase: true
 raw:
   - '[(<].*docs.opensafely.org.*[)>]'
