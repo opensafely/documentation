@@ -1,0 +1,32 @@
+---
+name: 'Check docs'
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  summarise-docs-warnings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Install just
+        uses: opensafely-core/setup-action@v1
+        with:
+          install-just: true
+
+      - name: Install Vale
+        run: |
+          curl -L $(curl "https://api.github.com/repos/errata-ai/vale/releases/latest" | jq -r '.assets[].browser_download_url | select(contains("Linux_64-bit"))') > /tmp/vale.tar.gz
+          mkdir -p "$HOME/.local/bin"
+          tar -xvzf "/tmp/vale.tar.gz" -C "$HOME/.local/bin"
+
+      - name: Run Vale on docs
+        run: NO_COLOR=1 just lint-docs >> "$GITHUB_STEP_SUMMARY"
