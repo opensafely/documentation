@@ -63,7 +63,7 @@ However this deployment only happens after new versions of the software have gon
 ## Ad hoc access to backend systems
 
 !!! note
-    This section applies to OpenSAFELY-TPP and OpenSafely-EMIS only.
+    This section applies to OpenSAFELY-TPP and OpenSAFELY-EMIS only.
 
 ### Why
 
@@ -98,7 +98,7 @@ It is exceptionally used for investigating outages or other problems, and only w
 ## Data curation activities
 
 !!! note
-    This section applies to OpenSAFELY-TPP and OpenSafely-EMIS only.
+    This section applies to OpenSAFELY-TPP and OpenSAFELY-EMIS only.
 
 ### Why
 

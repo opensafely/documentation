@@ -24,7 +24,7 @@ You should keep the tool up to date as much as possible. You can upgrade to a ne
 opensafely upgrade
 ```
 
-The above command only works with opensafely version 1.6.0 or newer. If you are
+The above command only works with `opensafely` version 1.6.0 or newer. If you are
 using an older version, you will first need to upgrade it with:
 
 ```bash
@@ -153,7 +153,7 @@ For example, to run an interactive Stata session:
 opensafely exec stata-mp
 ```
 
-This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code (the opensafely tool knows how to fetch and apply the OpenSAFELY Stata licence).
+This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code (the `opensafely` tool knows how to fetch and apply the OpenSAFELY Stata licence).
 
 
 Likewise, for R:

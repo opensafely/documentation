@@ -776,7 +776,7 @@ to GitHub.
 To write a real study and run it against actual patient data, you will first
 need to get permission for your project from NHS England, the data controllers
 for OpenSAFELY's data. [Read about our pilot onboarding programme](https://www.opensafely.org/onboarding-new-users/). Once approved, your
-Github user account will be added to our `opensafely` Github organisation, along
+GitHub user account will be added to our `opensafely` GitHub organisation, along
 with your study repository, which gives you the ability to run your study
 against real data. [Read more about permissions](jobs-site.md#permissions).
 

@@ -81,7 +81,7 @@ If you are not able to do any of the tasks and you think you should, please cont
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
     * Click `Create`.
 
-When you add a new repository in the [opensafely organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
+When you add a new repository in the [`opensafely` organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
 ## Running your code on the server
 
 * Click the `Run Jobs` button (see red arrow below) from your workspace.
@@ -121,9 +121,9 @@ You can view `moderately_sensitive` outputs from any of your submitted _jobs_
 via the Jobs website **if you have access to and are logged into the backend
 the job was run on**.
 
-However, whilst normally you log into [jobs.opensafely.org] from your machines
-browser using Github, the secure server does not have access to
-Github. So you need to use an alternate method to login, by generating a Single
+However, whilst normally you log into <https://jobs.opensafely.org> from your machines
+browser using GitHub, the secure server does not have access to
+GitHub. So you need to use an alternate method to login, by generating a Single
 Use Token, and then using it on the secure server to log in.
 
 To generate a Single Use Token, before logging into the secure server, visit
@@ -136,8 +136,8 @@ only valid for a short time, and only works once.
 
 Once you are logged into the server via the VPN:
 
-* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using google chrome (make sure to use https://)
-* Log in using your email or Github username, and the Single Use Token from the above step.
+* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using Google Chrome (make sure to use `https://`)
+* Log in using your email or GitHub username, and the Single Use Token from the above step.
 * You should be now logged in. This login will expire after two weeks of not being used.
 
 Once logged in, to view your `moderately_sensitive` outputs:

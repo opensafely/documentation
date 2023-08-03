@@ -65,4 +65,4 @@ Now you can navigate to a research repo, on your local machine, and [use `opensa
 
 ## Older style pipx installations
 
-Earlier versions of this document used pipx to install opensafely. If you are looking to update such a pipx-style installation and are having problems with `opensafely upgrade`, you could also try `pipx reinstall opensafely --python ~/.pyenv/shims/python3.10`.
+Earlier versions of this document used pipx to install `opensafely`. If you are looking to update such a pipx-style installation and are having problems with `opensafely upgrade`, you could also try `pipx reinstall opensafely --python ~/.pyenv/shims/python3.10`.
