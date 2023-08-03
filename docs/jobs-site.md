@@ -136,7 +136,7 @@ only valid for a short time, and only works once.
 
 Once you are logged into the server via the VPN:
 
-* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using google chrome (make sure to use https://)
+* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using Google Chrome (make sure to use `https://`)
 * Log in using your email or GitHub username, and the Single Use Token from the above step.
 * You should be now logged in. This login will expire after two weeks of not being used.
 
