@@ -8,4 +8,4 @@ Before you submit a paper to a journal, please check open access arrangements.
 
 [journalcheckertool.org](https://journalcheckertool.org) is our recommended tool for checking journal compliance.
 
-If you have any questions, please ask your co-pilot and post in the opensafely-users slack channel.
+If you have any questions, please ask your co-pilot and post in the `#opensafely-users` slack channel.
