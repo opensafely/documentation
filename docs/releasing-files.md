@@ -266,7 +266,7 @@ Only certain file types will be reviewed and released from the secure server. Se
         * Each individual output within the report should be requested for release separately, with the contextual information outlined above.
         * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. Refer to our instructions [explaining how to strip the `html` files](reports/intro.md#producing-reports).
 
-If you would like to release other file types, please email datarelease@opensafely.org, stating why it is important that the file is released in a different format.
+If you would like to release other file types, please email <datarelease@opensafely.org>, stating why it is important that the file is released in a different format.
 
 ### Submittting the form
 

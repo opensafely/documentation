@@ -121,7 +121,7 @@ You can view `moderately_sensitive` outputs from any of your submitted _jobs_
 via the Jobs website **if you have access to and are logged into the backend
 the job was run on**.
 
-However, whilst normally you log into [jobs.opensafely.org] from your machines
+However, whilst normally you log into <https://jobs.opensafely.org> from your machines
 browser using GitHub, the secure server does not have access to
 GitHub. So you need to use an alternate method to login, by generating a Single
 Use Token, and then using it on the secure server to log in.
