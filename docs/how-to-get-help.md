@@ -40,7 +40,7 @@ These types of question include:
   (e.g. of the OpenSAFELY documentation, of the Bennett Institute team manual)
 
 Issues on OpenSAFELY repositories
-(i.e. repositories within the [opensafely][], [opensafely-core][], and [opensafely-actions][] GitHub organizations)
+(i.e. repositories within the `opensafely`, `opensafely-core`, and `opensafely-actions` GitHub organizations)
 are also beyond the scope of the tech support team.
 However, we welcome [bug reports and feature requests](#bug-reports-and-feature-requests) made in this way.
 
@@ -72,7 +72,7 @@ For example, restricting to Python might help you find study definition files.
 
 OpenSAFELY uses GitHub to manage and share code and other platform resources. If you want to request any changes to the platform then GitHub issues should be your first port of call.
 
-Issues can be submitted for lots of different things &mdash; new variables or other features, bug reports, additional R or Stata packages, documentation updates, and so on.  All our core software packages live in the [opensafely-core](https://github.com/opensafely-core/) GitHub organisation.
+Issues can be submitted for lots of different things &mdash; new variables or other features, bug reports, additional R or Stata packages, documentation updates, and so on.  All our core software packages live in the [`opensafely-core`](https://github.com/opensafely-core/) GitHub organisation.
 
 The most common requests are about library support, and new study definition variables. We have a whole page describing [how to request new libraries](requesting-libraries.md), and another about [how to request new study variables](requesting-variables.md). If you want to report bugs or request features in the `opensafely` command-line tool, you can do so in [its own dedicated issue tracker](https://github.com/opensafely-core/opensafely-cli/issues).
 

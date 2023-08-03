@@ -28,7 +28,7 @@ If you're not sure if you already have git installed, type `git --version` into 
 
 ## Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
 This is only necessary for running code against the real data. **Ask us for access.**
-If you're not sure if you already have access, go to [*Settings > Organizations*](https://github.com/settings/organizations) in GitHub and see if _opensafely_ is listed.
+If you're not sure if you already have access, go to [*Settings > Organizations*](https://github.com/settings/organizations) in GitHub and see if `opensafely` is listed.
 
 You will need [**two-factor authentication (2FA)**](https://help.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa) for your GitHub account to join the organisation. This provides extra security for your account by requiring something you have (for example, an authenticator application on your phone) as well as something you know (your password).
 

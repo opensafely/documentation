@@ -34,7 +34,7 @@ Click the green button that says <span style="background-color: green; color: wh
 
 Fill in the details:
 
-- **owner**: select your personal GitHub for testing/experimenting, or select the opensafely organisation for a bona fide OpenSAFELY-approved study. The repo can be transferred into opensafely later if needed.
+- **owner**: select your personal GitHub for testing/experimenting, or select the `opensafely` organisation for a bona fide OpenSAFELY-approved study. The repo can be transferred into the `opensafely` organisation later if needed.
 - **repository name**: It needs to be short but informative &mdash; browse existing repo names for inspiration.
 - **Description**: This will appear at the top of the repo on GitHub. No more than a sentence is needed as the repo should be explained fully in the README.
 - **public / private**: See [Repository visibility](#repository-visibility) to make the the right choice for your study.
