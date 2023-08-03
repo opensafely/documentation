@@ -107,6 +107,10 @@ fetch-cohort-extractor:
 update-cohort-extractor:
     git submodule update --remote src/cohort-extractor
 
+# Requires Vale: https://github.com/errata-ai/vale
+lint-docs:
+    vale ./docs
+
 # Run the tests
 test: devenv
     echo "Not implemented here"
