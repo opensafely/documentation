@@ -129,7 +129,7 @@ We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` 
 
 As Stata is a commercial product, a license key is needed to use it.
 
-#### If you are a member of the opensafely GitHub organisation
+#### If you are a member of the `opensafely` GitHub organisation
 * If you are using Windows, then the `opensafely` command line software will
 automatically use the OpenSAFELY Stata license.
 * If you are using macOS:
@@ -139,7 +139,7 @@ automatically use the OpenSAFELY Stata license.
 
 #### All other external users
 
-If you are not a member of the opensafely GitHub organisation, you must provide your own **Stata/MP** license. Unfortunately other Stata flavours are not yet supported; [let us know](how-to-get-help.md) if this is a problem.
+If you are not a member of the `opensafely` GitHub organisation, you must provide your own **Stata/MP** license. Unfortunately other Stata flavours are not yet supported; [let us know](how-to-get-help.md) if this is a problem.
 
 1. Locate your Stata license string as follows:
    Locate a text file, called `STATA.LIC` (on Windows) or `stata.lic` (macOS and Linux) which is usually at the top level of the folder of your Stata installation:

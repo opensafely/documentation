@@ -29,7 +29,7 @@ The specific access activities this policy covers are:
 
 ### Why
 
-For software maintenance purposes, it is sometimes necessary to execute OpenSAFELY [project pipelines](https://docs.opensafely.org/actions-pipelines/#project-pipelines).
+For software maintenance purposes, it is sometimes necessary to execute OpenSAFELY [project pipelines](actions-pipelines.md#project-pipelines).
 The test project pipelines are necessary to:
 
 * ensure that the entire OpenSAFELY platform is operating correctly
@@ -63,7 +63,7 @@ However this deployment only happens after new versions of the software have gon
 ## Ad hoc access to backend systems
 
 !!! note
-    This section applies to OpenSAFELY-TPP and OpenSafely-EMIS only.
+    This section applies to OpenSAFELY-TPP and OpenSAFELY-EMIS only.
 
 ### Why
 
@@ -98,7 +98,7 @@ It is exceptionally used for investigating outages or other problems, and only w
 ## Data curation activities
 
 !!! note
-    This section applies to OpenSAFELY-TPP and OpenSafely-EMIS only.
+    This section applies to OpenSAFELY-TPP and OpenSAFELY-EMIS only.
 
 ### Why
 

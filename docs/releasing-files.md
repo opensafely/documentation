@@ -142,6 +142,7 @@ Below is an example of a table before (top) and after (bottom) rounding has been
 A rate consists of a numerator and denominator, which are generally both counts. **In OpenSAFELY, any rate calculated from counts <=7 should also be redacted** (see the note above for why a threshold of 7 is used). In addition, we recommend rounding because redaction alone is vulnerable to differencing. When future calculations rely on rates not being mapped to a non-numerical like `[REDACTED]` and/or a distinction between a rate of zero and a non-zero rate is desirable, we recommend rounding the numerator and denominator to 'midpoint 6'. In short, rounding to 'midpoint 6' allows differentiating between zero and non-zero rates, by not breaking our suppression rules and without introducing bias.
 
 #### Midpoint 6 rounding
+
 By rounding to midpoint 6, we make sure that the numerator and denominator of our rate do not break our [suppression rules](https://docs.opensafely.org/releasing-files/#redacting-counts-less-than-or-equal-to-7). The method has desirable properties such as:
 
 * It's unbiasedness
@@ -210,14 +211,15 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs and (error) log files from the server
 
+
 **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. Having applied disclosure controls to your aggregated study data you are ready to request their release. Please read the instructions and [checklist](#checklist) below.
 
 First, create one folder in your workspace called `release` (if you have previously made a release, we suggest appending the date to the new folder name to distinguish it) and copy from your `output` folder to this `release` folder the data files that require review. The number of study outputs requested for review must be kept to a minimum and include only the results you absolutely need to export from the secure server.
 
-When you are ready to request a release of your aggregated results please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date. 
+When you are ready to request a release of your aggregated results please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date.
 
 !!! note
-    Each data release entails substantial review work. To retain rapid turnaround times, external data releases should typically only be of results for final submission to a journal or public notebook; or a small number of necessary releases for discussion with external collaborators. 
+    Each data release entails substantial review work. To retain rapid turnaround times, external data releases should typically only be of results for final submission to a journal or public notebook; or a small number of necessary releases for discussion with external collaborators.
 
 For each output wishing to be released you will need to provide a clear contextual description including:
 
@@ -261,12 +263,12 @@ Only certain file types will be reviewed and released from the secure server. Se
     * `txt` files can be released, but you should consider whether the output can be produced as a table, which is easier to review.
     * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
     * `html` files can be released if you are producing a report style output, but please note the points below:
-        * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. Most commonly, this will be a report to be hosted on [OpenSAFELY Reports](https://reports.opensafely.org/) (more information [here](https://docs.opensafely.org/reports/intro/)). If you can produce your report locally, using individually released files, you should.
-        * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find examples showing how to do this for Jupyter notebooks and R markdown files [here](https://docs.opensafely.org/reports/intro/#producing-reports).
+        * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. Most commonly, [this will be a report](reports/intro.md) to be hosted on [OpenSAFELY Reports](https://reports.opensafely.org/). If you can produce your report locally, using individually released files, you should.
+        * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find [examples showing how to do this for Jupyter notebooks and R markdown files](reports/intro.md#producing-reports).
         * Each individual output within the report should be requested for release separately, with the contextual information outlined above.
-        * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. You can find instructions on how to do that [here](https://docs.opensafely.org/reports/intro/#producing-reports)
+        * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. Refer to our instructions [explaining how to strip the `html` files](reports/intro.md#producing-reports).
 
-If you would like to release other file types, please email datarelease@opensafely.org, stating why it is important that the file is released in a different format.
+If you would like to release other file types, please email <datarelease@opensafely.org>, stating why it is important that the file is released in a different format.
 
 ### Checklist
 

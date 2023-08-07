@@ -19,7 +19,8 @@ The current coding systems available in the OpenCodelists builder are listed bel
 
 Each codelist must use exactly one of these systems.
 
-OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, you can find instructions to manually upload an existing OPCS-4 codelist [here](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
+OPCS-4 codes are not currently supported by the OpenCodelists builder as we do not currently have the full list of available OPCS-4 codes. However, it is possible to [manually upload an existing OPCS-4 codelist](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
+
 ## Workflow
 
 The general workflow for creating codelists is as follows:
@@ -32,7 +33,7 @@ previous research papers.
 1. When logged into [OpenCodelists](https://www.opencodelists.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
 1. Add/remove terms to your codelists to end up with a list.
 1. Save the list as a draft.
-1. Clicking "Save changes" makes the codelist available on codelists.opensafely.org as a draft. Share this link to the GitHub issue.
+1. Clicking "Save changes" makes the codelist available on <https://codelists.opensafely.org> as a draft. Share this link to the GitHub issue.
 1. Discuss as a group in the issue your decisions, and the reason for including or excluding different codes. Finalise a list
 as a group (i.e. at least 2). Detailed reasons are helpful in this issue for referencing in the future.
 1. Once agreed, obtain sign-off.
@@ -129,7 +130,7 @@ How contributions to codelists are acknowledged -- to be agreed.
 ## <a name="medvid"></a>Build a simple medication codelist
 
 This is a short video showing how to build a pseudoBNF medication codelist. For OpenSAFELY studies you can convert this
-to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video. 
+to NHS Dictionary of Medicines and Devices codelist which we briefly mention at the end of the video.
 
 Very briefly, we recommend that you build and agree medication codelists using the pseudoBNF coding system and convert this to
 dm+d for use in study definitions. You can read more about the uses and differences between pseudoBNF, dm+d and SNOMED CT

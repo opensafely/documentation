@@ -45,7 +45,7 @@ Review your GitHub repository to make it simpler for people to explore:
 
 
 ### GitHub Release
-Consider making a GitHub _Release_, and linking to that ([instructions here](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository)).
+Consider making a GitHub _Release_, and linking to that: [refer to GitHub's documentation on releases](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository)).
 A Release is a coherent snapshot of the code as it existed at a given point in time, along with a title and a description.
 By default, releases are displayed on your repo home page.
 For example, you might make separate releases of the code to accompany a preprint and the final versions of the paper.
@@ -55,11 +55,11 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 ## Update project status
 
-[Update the status of the project](https://docs.opensafely.org/jobs-site/#updating-project-status) on the Jobs site if relevant.
+[Update the status of the project](jobs-site.md#updating-project-status) on the Jobs site if relevant.
 
 ## Update project workspaces
 
-[Update the purposes of your project workspaces](https://docs.opensafely.org/jobs-site/#adding-a-workspace-purpose) on the Jobs site.
+[Update the purposes of your project workspaces](jobs-site.md#adding-a-workspace-purpose) on the Jobs site.
 ## Request the repo is made public
 
 If your repository is *private*, you can request it is made public via the jobs site.
@@ -75,4 +75,4 @@ Once you have completed this page it will be checked by the OpenSAFELY team befo
 Consider making all outputs released to the project workspace on the jobs site "published". You can publish outputs from the "latest" release in the `Released Outputs` section of your workspace. When you click publish, *all* of the latest outputs will be made public. If you do not want to publish all of the latest outputs, you should discuss this with your co-pilot.
 ## Add your publication to the OpenSAFELY website
 
-See [here](https://docs.opensafely.org/adding-a-paper/) for instructions on how to do this.
+Refer to our guidance on [adding a publication to the OpenSAFELY website](adding-a-paper.md).

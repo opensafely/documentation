@@ -2,11 +2,11 @@ The [jobs site](https://jobs.opensafely.org/) is where you can run your code on 
 
 ## Jobs site structure
 
-The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a list of approved projects, and the organisation they belong to [here](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
+The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a [list of approved projects, and the organisation they belong to](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We also will transfer your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
-Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely). Any [actions](https://docs.opensafely.org/actions-intro/) you develop as part of your [project pipeline](https://docs.opensafely.org/actions-pipelines/) within the attached repository are linked to the workspace, allowing these to be run against real data.
+Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [OpenSAFELY organisation](https://github.com/opensafely). Any [actions](actions-intro.md) you develop as part of your [project pipeline](actions-pipelines.md) within the attached repository are linked to the workspace, allowing these to be run against real data.
 
-A _Job_ is an instance of an _Action_ running on real data. _Jobs_ are run by selecting one or more actions to be run as part of a single _Job Request_. You can see all the _Job Requests_ that have been run from a _Workspace_ by clicking on "View logs" from a _Workspace_ page. You can see a log of all _Job Requests_ being run [here](https://jobs.opensafely.org/event-log/).
+A _Job_ is an instance of an _Action_ running on real data. _Jobs_ are run by selecting one or more actions to be run as part of a single _Job Request_. You can see all the _Job Requests_ that have been run from a _Workspace_ by clicking on "View logs" from a _Workspace_ page. You can see a [log of all _Job Requests_ being run](https://jobs.opensafely.org/event-log/).
 
 ```mermaid
 graph TD
@@ -31,9 +31,9 @@ graph TD
 
 Once outputs have been produced by running _jobs_ from within a _Workspace_, there are several stages they must go through before being made publicly available:
 
-1. **Outputs on the [Level 4 server](https://docs.opensafely.org/level-4-server/)**. These are outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](https://docs.opensafely.org/releasing-files/#3-how-are-files-reviewed) before they can leave the server.
-2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](https://docs.opensafely.org/releasing-files/#types-of-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
-3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects (examples of who this could include can be found [here](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
+1. **Outputs on the [Level 4 server](level-4-server.md)**. These are outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](releasing-files.md#3-how-are-files-reviewed) before they can leave the server.
+2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](releasing-files.md#types-of-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
+3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects ([refer to the examples of who this could include](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
 4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
 
 ### Permissions
@@ -81,7 +81,7 @@ If you are not able to do any of the tasks and you think you should, please cont
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
     * Click `Create`.
 
-When you add a new repository in the [opensafely organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
+When you add a new repository in the [`opensafely` organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
 ## Running your code on the server
 
 * Click the `Run Jobs` button (see red arrow below) from your workspace.
@@ -98,7 +98,7 @@ When you add a new repository in the [opensafely organisation](https://github.co
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`. If you selected to receive notifications, you will also receive an email to notify you when each job completes.
 
-When you submit a job-request you are competing with other users for resources on the server. As such, jobs can sometimes take a while to start even if their dependencies have successfully completed. You can see all the jobs currently running [here](https://jobs.opensafely.org/event-log/?backend=&status=running&username=&workspace=) and the current status of all OpenSAFELY backends [here](https://jobs.opensafely.org/status/).
+When you submit a job-request you are competing with other users for resources on the server. As such, jobs can sometimes take a while to start even if their dependencies have successfully completed. You can see [all the jobs currently running](https://jobs.opensafely.org/event-log/?backend=&status=running&username=&workspace=) and the [current status of all OpenSAFELY backends](https://jobs.opensafely.org/status/).
 
 <details markdown="1">
 <summary>Click here for information on the exact steps that occur when each job is run on the server</summary>
@@ -121,9 +121,9 @@ You can view `moderately_sensitive` outputs from any of your submitted _jobs_
 via the Jobs website **if you have access to and are logged into the backend
 the job was run on**.
 
-However, whilst normally you log into [jobs.opensafely.org] from your machines
-browser using Github, the secure server does not have access to
-Github. So you need to use an alternate method to login, by generating a Single
+However, whilst normally you log into <https://jobs.opensafely.org> from your machines
+browser using GitHub, the secure server does not have access to
+GitHub. So you need to use an alternate method to login, by generating a Single
 Use Token, and then using it on the secure server to log in.
 
 To generate a Single Use Token, before logging into the secure server, visit
@@ -136,8 +136,8 @@ only valid for a short time, and only works once.
 
 Once you are logged into the server via the VPN:
 
-* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using google chrome (make sure to use https://)
-* Log in using your email or Github username, and the Single Use Token from the above step.
+* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using Google Chrome (make sure to use `https://`)
+* Log in using your email or GitHub username, and the Single Use Token from the above step.
 * You should be now logged in. This login will expire after two weeks of not being used.
 
 Once logged in, to view your `moderately_sensitive` outputs:
@@ -153,7 +153,7 @@ You can view the various [output types](#output-types) from the `Releases` secti
 
 ![Workspace Releases](./images/releases.png)
 
-Any files that you would like to be released from the server, have to first be checked by our team of output checkers. You can find instructions for requesting a release [here](https://docs.opensafely.org/releasing-files/#2-requesting-release-of-outputs-from-the-server).
+Any files that you would like to be released from the server, have to first be checked by our team of output checkers. Refer to the [instructions for requesting a release](releasing-files.md#2-requesting-release-of-outputs-from-the-server).
 
 Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your _Workspace_, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy and/or contact your co-pilot (if you have one).
 
@@ -163,7 +163,7 @@ You must seek NHS England approval for any publication or wider sharing of resul
 
 For instructions on how to request approval, please see [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) of the researcher policy document. Following approval from NHSE, you should also create draft public outputs for review. To do this, navigate to 'All outputs' which contains your latest outputs from within the "Released outputs" section of your workspace and click the `Publish` button. It is currently only possible to publish the latest version of all of these files.
 
-As part of publishing your outputs, you should also make the repository where your analysis code is written public. You can find instructions on how to do that [here](https://docs.opensafely.org/project-completion/).
+As part of publishing your outputs, you should also make the repository where your analysis code is written public. Refer to the [instructions on doing so](project-completion.md).
 
 Once approved, your released outputs will be “published” and viewable from the published outputs in the `Published outputs` section of your `Releases`. This is accessible by everyone, even those without a login.
 
@@ -191,4 +191,4 @@ Further details should be provided in the `Status description` field. Guidance f
 
 You can add a purpose to each workspace within your project by navigating to the `Edit workspace` button within a workspace page. This should indicate the aim of any of the jobs run from within this workspace. You may only have one workspace, in which case the purpose can simply be "This is the main workspace or this project, in which all jobs were run". It can also be used to highlight workspaces used to carry out data quality checks or experiment with an analytical technique.
 
-You will need to complete a workspace purpose for each workspace as part of [project completion](https://docs.opensafely.org/project-completion/).
+You will need to complete a workspace purpose for each workspace as part of [project completion](project-completion.md).

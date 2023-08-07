@@ -1,9 +1,9 @@
 
-This shows the architecture of OpenSafely. It is intended for a more technical audience.
+This shows the architecture of OpenSAFELY. It is intended for a more technical audience.
 
 ## System context
 
-How OpenSafely fits into the wider world.
+How OpenSAFELY fits into the wider world.
 
 ![A system context diagram of the OpenSAFELY platform.](./images/c4-system-context.svg)
 
