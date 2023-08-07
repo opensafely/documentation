@@ -59,7 +59,8 @@ Consider [obtaining a DOI for your releases](https://guides.github.com/activitie
 
 ## Update project workspaces
 
-[Update the purposes of your project workspaces](jobs-site.md#adding-a-workspace-purpose) on the Jobs site.
+Ensure each Workspace in your project on the Jobs site has a _purpose_ and [update if necessary](jobs-site.md#adding-a-workspace-purpose).
+
 ## Request the repo is made public
 
 If your repository is *private*, you can request it is made public via the jobs site.
@@ -72,7 +73,8 @@ Once you have completed this page it will be checked by the OpenSAFELY team befo
 
 ## Make your outputs on the jobs site public
 
-Consider making all outputs released to the project workspace on the jobs site "published". You can publish outputs from the "latest" release in the `Released Outputs` section of your workspace. When you click publish, *all* of the latest outputs will be made public. If you do not want to publish all of the latest outputs, you should discuss this with your co-pilot.
+Consider making all outputs released to the project workspace on the jobs site "published". You can publish outputs from the "latest" release in the `Released Outputs` section of your workspace. When you click publish, *all* of the outputs will be made public (but only the latest version of each). The published results will appear as a draft until checked and approved by the OpenSAFELY team (your co-pilot should ensure this is completed). If you do not want to publish all of the latest outputs, you should discuss this with your co-pilot.
+
 ## Add your publication to the OpenSAFELY website
 
 Refer to our guidance on [adding a publication to the OpenSAFELY website](adding-a-paper.md).
