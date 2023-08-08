@@ -73,7 +73,7 @@ Once you have completed this page it will be checked by the OpenSAFELY team befo
 
 ## Make your outputs on the jobs site public
 
-Once you have approval from NHSE to publish your work, consider making all outputs released to the project workspace on the jobs site "published". You can publish outputs from the "latest" release in the `Released Outputs` section of your workspace. When you click publish, *all* of the outputs will be made public (but only the latest version of each). The published results will appear as a draft until checked and approved by the OpenSAFELY team (your co-pilot should ensure this is completed). If you do not want to publish all of the latest outputs, you should discuss this with your co-pilot.
+Once you have approval from NHSE to publish your work, consider making all outputs released to the project workspace on the jobs site "published". See instructions [here](jobs-site/#publishing-outputs). If you do not want to publish all of the latest outputs, you should discuss this with your co-pilot.
 
 ## Add your publication to the OpenSAFELY website
 
