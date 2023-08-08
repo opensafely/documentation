@@ -164,9 +164,9 @@ For instructions on how to request approval, please see [this section](https://w
 
 Following approval from NHSE, you should also publish your released results on [https://jobs.opensafely.org/](https://jobs.opensafely.org/). To do this, navigate to 'All outputs' which contains your latest outputs from within the "Released outputs" section of your workspace and click the `Publish` button. This will create a draft public output for review by the OpenSAFELY team; contact your co-pilot to prompt review. It is currently only possible to publish the latest version of all of these files. If you do not want to publish all of the latest outputs, please discuss this with your co-pilot.
 
-As part of publishing your outputs, you should also make the repository where your analysis code is written public. Refer to the [instructions on doing so](project-completion.md).
-
 Once approved, your released outputs will be “published” and viewable from the published outputs in the `Published outputs` section of your `Releases`. This is accessible by everyone, even those without a login.
+
+As part of publishing your outputs, you should also make the repository where your analysis code is written public. Refer to the [instructions on doing so](project-completion.md).
 
 
 ## Updating project status
