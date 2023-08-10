@@ -1,5 +1,5 @@
 ---
-name: 'Check docs'
+name: 'Check docs with Vale'
 
 # yamllint disable-line rule:truthy
 on:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  summarise-docs-warnings:
+  summarise-vale-docs-warnings:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
