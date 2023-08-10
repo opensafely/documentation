@@ -4,12 +4,39 @@ This is the public documentation for using the [OpenSAFELY platform](https://www
 
 It provides information on how to get set up with and use the platform.
 
-## Link checking
+## Automated checks
+
+We have some automated checks that help us maintain the documentation.
+
+These are not enforced for new contributions,
+but can be run by GitHub Actions.
+
+### Content style checks
+
+We have a small number of style rules written for the [Vale style checker](https://github.com/errata-ai/vale).
+
+The purpose of these checks is to help keep our documentation more consistent,
+even when multiple authors are working on it.
+
+If these style checks prove useful,
+we could expand on these into a more fully featured style guide.
+
+The rules are stored in the [`styles` directory](styles/).
+The rules are written in YAML.
+See [Vale's documentation](https://vale.sh/docs/) for more information on Vale rules.
+
+These checks are not scheduled
+and are run [manually via GitHub Actions](https://github.com/opensafely/documentation/actions/workflows/check_vale.yml).
+
+### URL validity checks
 
 To help keep the content up-to-date,
-this repository has a scheduled weekly link check run with lychee.
+there is a scheduled weekly link check
+run with the [lychee link checker](https://github.com/lycheeverse/lychee/).
 
-### Finding the inaccessible URLs
+The URL check can also be [run manually via GitHub Actions](https://github.com/opensafely/documentation/actions/workflows/check_links.yml).
+
+#### Finding the inaccessible URLs
 
 1. Review the failed workflow output by opening the [workflow runs](https://github.com/opensafely/documentation/actions/workflows/check_links.yml) page
    and clicking on the failed run to see a summary.
@@ -17,7 +44,7 @@ this repository has a scheduled weekly link check run with lychee.
    URLs might fail for one of several reasons.
    It is worth checking whether the URL can be viewed in browser.
 
-### Addressing inaccessible URLs
+#### Addressing inaccessible URLs
 
 Here is a non-exhaustive list of common failures
 and how to address them
@@ -49,7 +76,7 @@ and how to address them
 * :heavy_check_mark: **Resolution**: find a replacement URL or remove the URL
   (see ["Replacing inaccessible URLs"](#replacing-inaccessible-urls) below)
 
-### Replacing inaccessible URLs
+#### Replacing inaccessible URLs
 
 There are several options for dealing with a URL that is really no longer accessible,
 and will not be in future:
