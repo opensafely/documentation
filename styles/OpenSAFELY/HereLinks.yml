@@ -1,0 +1,7 @@
+extends: existence
+scope: raw
+message: 'Consider rewording link text to remove the use of "here"'
+level: suggestion
+ignorecase: true
+raw:
+  - '(\[|\[.*\s)here(\s.*)?\]'
