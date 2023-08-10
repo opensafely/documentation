@@ -34,6 +34,9 @@ To help keep the content up-to-date,
 there is a scheduled weekly link check
 run with the [lychee link checker](https://github.com/lycheeverse/lychee/).
 
+This detects broken links:
+URLs whose resources are no longer accessible.
+
 The URL check can also be [run manually via GitHub Actions](https://github.com/opensafely/documentation/actions/workflows/check_links.yml).
 
 #### Finding the inaccessible URLs
@@ -53,13 +56,6 @@ and how to address them
   (the syntax of these can be tricky to get correct)
 * :heavy_check_mark: **Resolution**: edit the documentation to correct the link
 <!-- -->
-* :mag:**Cause**: the resource that the URL points to either:
-  * has restricted permissions
-    (for example, requires you to login to see it)
-  * or, is not restricted to a real web browser user,
-    but is inaccessible by the Lychee client and/or the GitHub Actions runner
-* :heavy_check_mark: **Resolution**: add the URL to the `.lycheeignore` file
-<!-- -->
 * :mag:**Cause**: a broken URL due to the resource being unavailable,
   due to the site having an outage or maintenance period
 * :heavy_check_mark: **Resolution**: leave and review in the next link check a week later;
@@ -67,14 +63,21 @@ and how to address them
   consider finding a replacement URL or removing the URL
   (see ["Replacing inaccessible URLs"](#replacing-inaccessible-urls) below)
 <!-- -->
+* :mag:**Cause**: the resource the URL identifies has genuinely been removed
+* :heavy_check_mark: **Resolution**: find a replacement URL or remove the URL
+  (see ["Replacing inaccessible URLs"](#replacing-inaccessible-urls) below)
+<!-- -->
 * :mag:**Cause**: the lychee client gets rate limited by a particular site,
   resulting in a failed check
 * :heavy_check_mark: **Resolution**: reconfigure the link check workflow with lychee's `--max-concurrency` option
   and reduce it from the default value
 <!-- -->
-* :mag:**Cause**: the resource the URL identifies has genuinely been removed
-* :heavy_check_mark: **Resolution**: find a replacement URL or remove the URL
-  (see ["Replacing inaccessible URLs"](#replacing-inaccessible-urls) below)
+* :mag:**Cause**: the resource that the URL points to either:
+  * has restricted permissions
+    (for example, requires you to login to see it)
+  * or, is not restricted to a real web browser user,
+    but is inaccessible by the Lychee client and/or the GitHub Actions runner
+* :heavy_check_mark: **Resolution**: add the URL to the `.lycheeignore` file
 
 #### Replacing inaccessible URLs
 
