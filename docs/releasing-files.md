@@ -277,7 +277,7 @@ Please run through this checklist before making a review request.
 1. Do your results adhere to the [OpenSAFELY permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
 2. Are all of the outputs of the [allowed file types](#allowed-file-types)?
 3. Are all of the outputs in a [separate release folder](#2-requesting-release-of-outputs-and-error-log-files-from-the-server)?
-4. Have you [redacted any low counts](#redacting-counts-less-than-or-equal-to-7)? 
+4. Have you [redacted any low counts](#redacting-counts-less-than-or-equal-to-7)?
 5. Have you [rounded any counts](#rounding-counts) (including [counts underlying rates](#rounding-rates))?
 6. Have you supplied underlying counts for all of your results?
 7. Are all of the outputs clearly described?
