@@ -83,7 +83,7 @@ This process gives access to:
 * unvetted intermediate data
 * unchecked, unreleased study outputs.
 
-There is no facility for extracting data from the system via this process: the data can only be studied within the system itself.
+There is no facility for extracting patient data or study outputs from the system via this process; the data can only be studied within the system itself. Some operational data may be released under controlled conditions, as detailed in the [Operational Data Policy](https://docs.google.com/document/d/1tQveWA7NWaHSx0ETR9FcXYxbtNa1NHiqwygVl6XanKw/edit).
 
 ### Who
 
