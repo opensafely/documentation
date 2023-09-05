@@ -100,7 +100,6 @@ theme:
     - content.code.copy
     - navigation.footer
     - navigation.indexes
-    - navigation.expand
 
 edit_uri: "edit/main/docs/"
 
