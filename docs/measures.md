@@ -139,7 +139,7 @@ This makes it easier to incrementally extract data for new months/weeks without 
 Example:
 
 ```
-cohortextractor generate_cohort --index-date-range "2020-01-01 to 2020-12-01 by month" --output-format=csv.gz
+cohortextractor:latest generate_cohort --index-date-range "2020-01-01 to 2020-12-01 by month" --output-format=csv.gz
 
 ```
 
@@ -157,7 +157,7 @@ output/input_2020-12-01.csv.gz
 This is done using the `generate_measures` command:
 
 ```
-cohortextractor generate_measures
+cohortextractor:latest generate_measures
 ```
 
 For each defined measure, and for each file extracted in step 2, this generates an output file with the measure calculated for that month or week.
@@ -187,7 +187,7 @@ If the `--output-dir` argument is configured, `generate_measures` expects the in
     For example:
 
     ```sh
-    cohortextractor generate_cohort --output-format=csv.gz
+    cohortextractor:latest generate_cohort --output-format=csv.gz
     ```
 
     If you do, then the `generate_measures` command will automatically work with this compressed output format;
