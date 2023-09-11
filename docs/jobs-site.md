@@ -2,7 +2,9 @@ The [jobs site](https://jobs.opensafely.org/) is where you can run your code on 
 
 ## Jobs site structure
 
-The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a [list of approved projects, and the organisation they belong to](https://www.opensafely.org/approved-projects/). We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We will also ask you to [transfer](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
+The jobs site is centred around **Projects**. When an application to run a study in OpenSAFELY is [approved by the data controller](https://www.opensafely.org/onboarding-new-users/), a _Project_ is automatically created. You can see a [list of approved projects, and the organisation they belong to](https://www.opensafely.org/approved-projects/).
+
+We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We will also ask you to [transfer](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
 !!! warning
     It is important that the study repository is _transferred_ into the `opensafely` organization, not _forked_ into it. Please [ask us](how-to-get-help.md#slack) if you have any problems with this process.
