@@ -1,6 +1,8 @@
 !!! warning
-    This section is a work in progress.
-    EMIS support is currently under development.
+    Research access to the backend provided by EMIS is temporarily unavailable,
+    pending funding arrangements between NHS England and EMIS.
+    When funding has been secured,
+    we will publish a timeline for gradually reopening access.
 
 ## OpenSAFELY-EMIS database builds
 
