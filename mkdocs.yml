@@ -15,21 +15,6 @@ nav:
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
       - GitHub repositories: repositories.md
-      - Data sources:
-          - data-sources/index.md
-          - Overview: data-sources/intro.md
-          - SystmOne primary care: data-sources/systmone.md
-          - EMIS primary care: data-sources/emis.md
-          - Covid-19 test results: data-sources/sgsscovid.md
-          - Covid-19 therapeutics: data-sources/therapeutics.md
-          - Emergency attendances: data-sources/ecds.md
-          - High Cost Drugs: data-sources/hcd.md
-          - Hospital admissions: data-sources/apc.md
-          - In-hospital deaths (covid-19 only): data-sources/cpns.md
-          - Intensive care admissions (covid-19 only): data-sources/icnarc.md
-          - International Severe Acute Respiratory and emerging Infection Consortium: data-sources/isaric.md
-          - Registered deaths: data-sources/onsdeaths.md
-          - UK Renal Registry: data-sources/ukrr.md
       - Detailed installation guides:
           - Overview: install-intro.md
           - Managing Gitpod workspaces: gitpod-workspaces.md
@@ -72,13 +57,27 @@ nav:
       - Adding your pre-print/paper to OpenSAFELY.org: adding-a-paper.md
       - Information for system integrators: system-integration.md
   - OpenSAFELY best practice:
-      - Bennett Institute Open Manifesto: open-data-manifesto.md
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
       - Code reviews: code-reviews.md
       - Case-control studies: case-control-studies.md
       - Writing performant code: memory-efficient-working.md
   - ehrQL: '!import https://github.com/opensafely-core/ehrql?branch=main'
+  - Data sources:
+      - data-sources/index.md
+      - Overview: data-sources/intro.md
+      - SystmOne primary care: data-sources/systmone.md
+      - EMIS primary care: data-sources/emis.md
+      - Covid-19 test results: data-sources/sgsscovid.md
+      - Covid-19 therapeutics: data-sources/therapeutics.md
+      - Emergency attendances: data-sources/ecds.md
+      - High Cost Drugs: data-sources/hcd.md
+      - Hospital admissions: data-sources/apc.md
+      - In-hospital deaths (covid-19 only): data-sources/cpns.md
+      - Intensive care admissions (covid-19 only): data-sources/icnarc.md
+      - International Severe Acute Respiratory and emerging Infection Consortium: data-sources/isaric.md
+      - Registered deaths: data-sources/onsdeaths.md
+      - UK Renal Registry: data-sources/ukrr.md
   - Support:
       - How to get help: how-to-get-help.md
       - OpenSAFELY co-piloting service: copiloting-service.md
@@ -86,6 +85,7 @@ nav:
       - Requesting study definition variables: requesting-variables.md
       - Plan S and OpenSAFELY: plan-s.md
       - Updating the documentation: updating-the-docs.md
+  - Bennett Institute Open Manifesto: open-data-manifesto.md
   - Platform News: https://www.opensafely.org/changelog/
 theme:
   name: material
