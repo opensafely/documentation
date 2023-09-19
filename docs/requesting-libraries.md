@@ -10,8 +10,8 @@ OpenSAFELY R image](https://github.com/opensafely-core/r-docker/blob/master/pack
 issue](https://github.com/opensafely-core/r-docker/issues) to request it be added. Include the following information:
 
 * A link to the CRAN page for the package;
-* A brief explanation of why the package is needed;
-* A tag to the @data-team
+* The specific package version you need, if any;
+* A brief explanation of why the package is needed.
 
 We consider the following things when deciding whether to include a new R package:
 
@@ -25,17 +25,14 @@ We consider the following things when deciding whether to include a new R packag
 * Does the package require other software to be installed on the image? For example the [magick](https://cran.r-project.org/package=magick) package requires Imagemagick to be installed. These will be reported on the CRAN page under `SystemRequirements`. If there are additional system requirements, then the development team will need to take a look and there are no guarantees that it can be installed.
 * Does the package work, or work differently, on Linux than on windows or macOS? The R image is Linux.
 
-If you need a specific version of a specific package then open [open an
-issue](https://github.com/opensafely-core/r-docker/issues) for discussion.
-
 ## Stata packages
 
 You can [open an
 issue](https://github.com/opensafely-core/stata-docker/issues) to request the package is added.
 
 * A link to information about the package;
-* A brief explanation of why the package is needed;
-* A tag to the @data-team
+* The specific package version you need, if any;
+* A brief explanation of why the package is needed.
 
 ## Python packages
 
@@ -43,8 +40,8 @@ First check that the package is not already available, by [viewing all installed
 issue](https://github.com/opensafely-core/python-docker/issues) to request it be added. Include the following information:
 
 * A link to information about the package;
-* A brief explanation of why the package is needed;
-* A tag to the @data-team
+* The specific package version you need, if any;
+* A brief explanation of why the package is needed.
 
 ## Manual installation
 
