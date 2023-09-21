@@ -436,6 +436,10 @@ The screenshot below shows this.
 
 ![A screenshot showing the Codespaces options in the Codespaces panel for a code repository](images/codespaces-panel-options.png)
 
+!!! note
+    GitHub has a ["Your codespaces" page](https://github.com/codespaces/)
+    that also allows you to manage all of your current codespaces.
+
 #### Stopping a codespace
 
 See GitHub's documentation for how to stop a codespace.
