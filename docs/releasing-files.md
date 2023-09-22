@@ -262,11 +262,12 @@ Only certain file types will be reviewed and released from the secure server. Se
 * **Other**
     * `txt` files can be released, but you should consider whether the output can be produced as a table, which is easier to review.
     * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
-    * `html` files can be released if you are producing a report style output, but please note the points below:
-        * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. Most commonly, [this will be a report](reports/intro.md) to be hosted on [OpenSAFELY Reports](https://reports.opensafely.org/). If you can produce your report locally, using individually released files, you should.
+    * `html` files can be released if you are producing a report style output that is intended to be hosted on [reports.opensafely.org](https://reports.opensafely.org/) but please note the points below:
+        * `html` files are harder to review than other output types, so should be reserved for reports which require both contextual text and embedded outputs. If you can produce your report locally, using individually released files, you should.
         * Make sure that any code blocks are not rendered in the rendered report if they are not needed. You can find [examples showing how to do this for Jupyter notebooks and R markdown files](reports/intro.md#producing-reports).
         * Each individual output within the report should be requested for release separately, with the contextual information outlined above.
         * `html` files should be stripped of any embedded javascript and styling. This is obfuscated when viewing a report via a web browser, but makes review of the raw file very difficult. Refer to our instructions [explaining how to strip the `html` files](reports/intro.md#producing-reports).
+        * When making a review request that includes `html` files, please include a link to the code you have used to produce the reports.
 
 If you would like to release other file types, please email <datarelease@opensafely.org>, stating why it is important that the file is released in a different format.
 
