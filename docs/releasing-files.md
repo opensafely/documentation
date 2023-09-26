@@ -270,6 +270,9 @@ Only certain file types will be reviewed and released from the secure server. Se
 
 If you would like to release other file types, please email <datarelease@opensafely.org>, stating why it is important that the file is released in a different format.
 
+!!! note
+    The maximum file size that can be released is 16MB. Please check your outputs before requesting them for release. It is unlikely any outputs that exceed this in size are appropriate for release, but if you think they are, please let us know when making a release request.
+
 ### Checklist
 
 Please run through this checklist before making a review request.
@@ -285,6 +288,7 @@ Please run through this checklist before making a review request.
     * Have you provided all of the context needed to review each output in isolation in the request form?
     * Have you described the disclosure controls you have applied to each output?
 8. If you are requesting the release of log files, are you sure they [need to be released](#error-log-files)?
+9. Are all of the requested files below the [maximum file size](#allowed-file-types)?
 
 Following this checklist will make your outputs easier to check, speed up review time and avoid the outputs having to be rechecked.
 
