@@ -271,7 +271,7 @@ Only certain file types will be reviewed and released from the secure server. Se
 If you would like to release other file types, please email <datarelease@opensafely.org>, stating why it is important that the file is released in a different format.
 
 !!! note
-    The maximum file size that can be released is 16mb. Please check your outputs before requesting them for release. It is unlikely any outputs that exceed this in size are appropriate for release, but if you think they are, please let us know when making a release request.
+    The maximum file size that can be released is 16MB. Please check your outputs before requesting them for release. It is unlikely any outputs that exceed this in size are appropriate for release, but if you think they are, please let us know when making a release request.
 
 ### Checklist
 
