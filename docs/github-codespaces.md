@@ -11,7 +11,6 @@ This page explains:
 
 * what GitHub Codespaces is
 * how to run some OpenSAFELY features in GitHub Codespaces
-* how to get ready to run the ehrQL tutorial
 * how GitHub's free user quota for Codespaces works
 
 You only require a web browser to follow the instructions in this page.
@@ -311,50 +310,6 @@ The screenshot below shows this.
     cohort-extractor and ehrQL are used to extract details of populations of interest
     from OpenSAFELY backends.
 
-### Follow the ehrQL tutorial
-
-The ehrQL tutorial assumes that you are working on your own computer,
-where you would be familiar creating files and folders.
-
-It requires you to create a `learning-ehrql` directory,
-you can do this either in the Visual Studio Code interfacem
-or via the terminal.
-
-#### To create a new folder using the Visual Studio Code interface
-
-1. Move the mouse pointer to the file explorer *outside of a directory* and right-click..
-1. From the menu, select "New Folder…".
-   The screenshot below shows this.
-   ![A screenshot showing the "New Folder…" option in the Visual Studio Code File Explorer.](images/codespaces-new-folder.png)
-1. Name the folder `learning-ehrql`.
-1. Right-click and select "Open in Integrated Terminal".
-   The screenshot below shows this.
-   ![A screenshot showing the "Open in Integrated Terminal" option in the Visual Studio Code File Explorer.](images/codespaces-open-in-integrated-terminal.png)
-1. A new terminal will open up in the correct directory.
-   You can see the list of open terminals in the bottom-right.
-
-#### To create a new folder using the terminal:
-
-1. Ensure that the terminal is in the
-`/workspaces/opensafely-example` directory by checking the command prompt
- and typing `mkdir learning-ehrql` and pressing ++enter++.
-1. Change to the `learning-ehrql` directory by typing `cd learning-ehrql`
- and pressing ++enter++.
-
-In either case, the terminal prompt should be `/workspaces/opensafely-example/learning-ehrql`.
-This will have you ready to run commands for the ehrQL tutorial.
-The screenshot below shows this.
-
-![A screenshot showing the ehrQL tutorial directory in the Visual Studio Code terminal.](images/codespaces-ehrql-tutorial-directory.png)
-
-You are now ready to work through the ehrQL tutorial.
-You can skip the installation steps of the ehrQL prerequisites in the tutorial
-and jump straight to the [section on extracting the dummy data for the tutorial](ehrql/tutorial/installation-and-setup.md#downloading-some-dummy-data).
-
-!!! info
-    We suggest that you continue reading the rest of this page for information,
-    then work through the ehrQL tutorial.
-
 ## Other features for development
 
 ### ehrQL code autocompletion and reference information
@@ -480,6 +435,10 @@ There are options in this panel to do so.
 The screenshot below shows this.
 
 ![A screenshot showing the Codespaces options in the Codespaces panel for a code repository](images/codespaces-panel-options.png)
+
+!!! note
+    GitHub has a ["Your codespaces" page](https://github.com/codespaces/)
+    that also allows you to manage all of your current codespaces.
 
 #### Stopping a codespace
 
