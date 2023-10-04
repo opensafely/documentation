@@ -184,6 +184,10 @@ account, for developing your own study:
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
 
+### Github permissions
+
+By default, everyone in the [OpenSAFELY GitHub organisation](https://github.com/opensafely) will have "Read" access to repository. 
+
 ## 3. Setup the required software
 
 <!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
