@@ -68,9 +68,9 @@ In general, actions are composed as follows:
     * The `cohortextractor` command has the same options as described in the [cohortextractor section](actions-cohortextractor.md).
     * The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment that can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
-    * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment
-    * `moderately_sensitive` outputs are automatically copied to the secure review area for redaction (otherwise known as [Level 4](security-levels.md)) and potentially for publication back to GitHub.
-    * Outputs should be separated onto different lines, each with a unique 'key', but related outputs can be combined using a wildcard (`*`). E.g.:
+    * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment. This includes all data at the pseudonymised patient-level. Outputs labelled highly_sensitive will not be visible to researchers.
+    * `moderately_sensitive` outputs are considered non-disclosive (providing the appropriate [statistical disclosure controls](releasing-files.md) have been applied) and are automatically copied to the secure review area (otherwise known as [Level 4](security-levels.md)). This includes aggregated patient-data outputs such as summary tables, summary statistics and the outputs from statistical models. For a full list check the [allowed file types subsection](releasing-files.md). 
+    * Outputs should be separated onto different lines, each with a unique 'key', but related outputs can be combined using a wildcard (`*`). Note, when using a wildcare, it is extremely important to ensure that no `highly_sensitive` outputs are included. E.g.:
         ```yaml
            outputs:
               moderately_sensitive:
@@ -174,7 +174,7 @@ After your project has been executed via the [jobs site](jobs-site.md), its outp
 
 Users with permission to access Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 
-For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](releasing-files.md) and released via GitHub if they are deemed non-disclosive.
+For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](releasing-files.md) and released if they are deemed non-disclosive.
 
 Outputs labelled `highly_sensitive` are not visible.
 
