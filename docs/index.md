@@ -15,7 +15,7 @@ As such, the platform maintains extremely high standards for data privacy whilst
 
 ## Who is OpenSAFELY?
 
-OpenSAFELY is a collaboration between the [Bennett Institute for Applied Data Science](https://www.bennett.ox.ac.uk/) at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients' records), working on behalf of NHS England and NHSX.
+OpenSAFELY is a collaboration between the [Bennett Institute for Applied Data Science](https://www.bennett.ox.ac.uk/) at the University of Oxford, the EHR group at London School of Hygiene and Tropical Medicine, TPP and other electronic health record software companies (who already manage NHS patients' records), working on behalf of NHS England.
 
 ## Using OpenSAFELY
 
