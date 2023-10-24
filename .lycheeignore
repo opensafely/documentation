@@ -8,8 +8,9 @@ https?://docs\.google\.com/document/d/1tQveWA7NWaHSx0ETR9FcXYxbtNa1NHiqwygVl6Xan
 https?://github\.com/opensafely/covid-vaccine-effectiveness-research(?:/.*)?$
 https?://github\.com/opensafely/rapid-reports(?:/.*)?$
 https?://github\.com/opensafely/server-instructions(?:/.*)?$
-https://github.com/opensafely/documentation/network/updates
-https://github.com/opensafely/research-template/generate
+https?://github\.com/opensafely/documentation/network/updates
+https?://github\.com/opensafely/research-template/generate
+
 # Block either the GitHub Actions runner or the lychee client.
 https?://developers\.cloudflare\.com(?:/.*)?$
 https?://www\.encepp\.eu(?:/.*)?$
