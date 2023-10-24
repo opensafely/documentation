@@ -4,7 +4,7 @@ https://fonts.gstatic.com
 # Not accessible without being logged into a Google account with access.
 https?://docs\.google\.com/document/d/1tQveWA7NWaHSx0ETR9FcXYxbtNa1NHiqwygVl6XanKw(?:/.*)?$
 
-# Not accessible without being logged in.
+# Not accessible without being logged in to GitHub.
 https?://github\.com/opensafely/covid-vaccine-effectiveness-research(?:/.*)?$
 https?://github\.com/opensafely/rapid-reports(?:/.*)?$
 https?://github\.com/opensafely/server-instructions(?:/.*)?$
