@@ -773,7 +773,7 @@ Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it
 to GitHub.
 
-To write a real study and run it against actual patient data, you will first need to get permission for your project the data controllers for the NHS England OpenSAFELY COVID-19 service.
+To write a real study and run it against actual patient data, you will first need to get permission for your project from the data controllers for the NHS England OpenSAFELY COVID-19 service.
 [Read about our pilot onboarding programme](https://www.opensafely.org/onboarding-new-users/).
 Once approved, your GitHub user account will be added to our `opensafely` GitHub organisation, along with your study repository, which gives you the ability to run your study against real data. [Read more about permissions](jobs-site.md#permissions).
 
