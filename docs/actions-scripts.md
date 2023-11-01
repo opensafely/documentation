@@ -123,7 +123,7 @@ There is a maximum file size of 16 MB to:
 
 **Files with `patient_id` in the header**
 
-Any CSV file with a `patient_id` header will not be moved to Level 4
+Any CSV file with a `patient_id` header will not be made available in level 4.
 
 ## Execution environments
 
