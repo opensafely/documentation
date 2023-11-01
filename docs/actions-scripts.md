@@ -96,15 +96,16 @@ Pseudonymised patient-level outputs tend to be large in size and therefore it is
 
 ### Smaller `moderately_sensitive` output files
 
-Files containing aggregated patient-data (non patient-level data) derived from queries run against Level 3 data, such as summary tables, summary statistics and the outputs from statistical models can be classed as `moderately_sensitive` in the `project.yaml`, and will be available to view with [Level 4 access](level-4-server.md). These (and the corresponding automatically created log files of each action/script) will be the only output files that users will have access to; users do not have unfettered access to any patient-level data and only see aggregated outputs derived from their analysis code, which satisfies the GDPR principle of confidentiality. For a full list of allowed file types check out the allowed file types subsection [on this page ](releasing-files.md). 
+Files that are labelled `moderately_sensitive` should only ever be aggregated data such as summary tables, images, and the outputs from statistical models. These files and will be available to view with [Level 4 access](level-4-server.md). These (and the corresponding automatically created log files of each action/script) will be the only output files that users will have access to; users do not have unfettered access to any patient-level data and only see aggregated outputs derived from their analysis code, which satisfies the GDPR principle of confidentiality.
 
-No files classed as `moderately_sensitive` will be released from the secure environment without undergoing dual independent checking by trained output-checkers for disclosure issues (see the [Safe Outputs section](releasing-files.md))
+#### File type restrictions for `moderately_sensitive` outputs
+There are restrictions on the type of file that are transferred to Level 4. This is to reduce the risk of making pseudonymised patient-level data available for researchers to view.
 
-Due to the fact that Level 4 files need to be reviewed, there are various restrictions placed on sizes and formats of files that can be released.
+If a file labelled as `moderately_sensitive` does not meet the below allowed file types, it will be replaced on Level 4 with a `.txt` file with the same filename, which explains why the file was not allowed on Level 4.
 
-#### File format restrictions
+**File format**
 
-These are restricted so that reviewers can properly examine the outputs on the secure server.
+These are restricted to types of file that are likely to contain summary data, rather than patient-level data, and so reviewers can properly examine the outputs on the secure server.
 
 | Type | Formats |
 | --- | --- |
@@ -113,12 +114,16 @@ These are restricted so that reviewers can properly examine the outputs on the s
 | Images | `.png`, `.jpeg`, `.svgz` |
 | Reports | `.html`, `.pdf` |
 
-#### File size restrictions
+**File size**
 
-There is a maximum file size of 32 MB to:
+There is a maximum file size of 16 MB to:
 
-* limit the amount of data that can be accessed via Level 4
+* prevent large patient-level data files being accessed via Level 4
 * allow a thorough review of the outputs in a reasonable time
+
+**Files with `patient_id` in the header**
+
+Any CSV file with a `patient_id` header will not be moved to Level 4
 
 ## Execution environments
 
