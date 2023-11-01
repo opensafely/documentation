@@ -27,8 +27,8 @@
 /en/stable/onboarding_analysts/          /                                        301
 /en/stable/open_data_manifesto           /open-data-manifesto/                    301
 /en/stable/open_data_manifesto/          /open-data-manifesto/                    301
-/en/stable/snomed                        /codelist-snomed/                        301
-/en/stable/snomed/                       /codelist-snomed/                        301
+/en/stable/snomed                        /codelist-intro/                         301
+/en/stable/snomed/                       /codelist-intro/                         301
 /en/stable/study_definition              /study-def/                              301
 /en/stable/study_definition/             /study-def/                              301
 /en/stable/*                             /:splat                                  301
