@@ -38,7 +38,7 @@ nav:
           - Introduction to codelists: codelist-intro.md
           - Building a codelist: codelist-creation.md
           - Adding codelists to a project: codelist-project.md
-          - SNOMED CT codelists: codelist-snomed.md
+          - Keeping codelists up to date: codelist-updating.md
       - Actions:
           - Overview: actions-intro.md
           - The project pipeline: actions-pipelines.md
