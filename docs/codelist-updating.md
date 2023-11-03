@@ -13,6 +13,14 @@ backend database. Analysis jobs that use data that has already been extracted in
 run do not need to update codelists in order to run successfully.
 
 
+!!! Info
+
+    Due to changes introduced to address [dm+d codes](#dmd-a-special-case), dm+d
+    codelists now download with standardised column headings (`code` and `term`) in the
+    CSV files. For backwards compatibility, they also include a column with the
+    original code column heading (typically `dmd_id`).
+
+
 ## What are "out-of-date" codelists?
 
 Codelists may sometimes go "out-of-date".  All coding systems change (with the exception of CTv3, which is no longer updated), and new releases are published which may add new codes or retire codes.
