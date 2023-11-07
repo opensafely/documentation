@@ -572,7 +572,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
     ```yaml linenums="1" hl_lines="14 15 16 17 18 19"
     version: "3.0"
 
-    # Ignore this`expectation` block. It is required but not used, and will be removed in future versions.
+    # Ignore this `expectations` block. It is required but not used, and will be removed in future versions.
     expectations:
       population_size: 1000
 
