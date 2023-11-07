@@ -167,7 +167,10 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: "🔗"
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      extend_pygments_lang:
+        - name: ehrql
+          lang: python
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
