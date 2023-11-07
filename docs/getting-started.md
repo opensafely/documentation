@@ -451,10 +451,10 @@ automatically save the edits to files that you make.**
    It is written in [ehrQL](/ehrql/).
 1. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="15"
-from ehrql import Dataset
+from ehrql import create_dataset
 from ehrql.tables.beta.tpp import patients, practice_registrations
 
-dataset = Dataset()
+dataset = create_dataset()
 
 index_date = "2020-03-31"
 
