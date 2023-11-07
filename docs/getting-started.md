@@ -1,11 +1,8 @@
-
-
 This tutorial will walk you through the minimum steps needed to run an
 OpenSAFELY-compliant study against "dummy" (randomly-generated) patient data.
 We ask all potential collaborators to successfully complete this tutorial,
 before applying to run their project against real data.
 
-This is a first draft of the tutorial, and may have errors or omissions.
 Please don't be afraid to ask questions in our [Q&A
 forum](https://github.com/opensafely/documentation/discussions)!
 
@@ -99,6 +96,7 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
     are not necessary to follow if you are using a web browser to run
     OpenSAFELY, even if that web browser is running on Windows.
 
+<!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
     <h3>Why OpenSAFELY requires several pieces of software to run</h3>
 
     Some of the software needed is so you can execute code on your computer
@@ -184,9 +182,8 @@ account, for developing your own study:
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
 
-## 3. Setup the required software
+## 3. Set up the required software
 
-<!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
 === "Web browser (online)"
 
     <h3>Open your repository with Gitpod</h3>
@@ -199,7 +196,7 @@ account, for developing your own study:
     You can use your GitHub account to login to Gitpod: click "Continue with
     GitHub".
 
-    A Gitpod workspace containing the Visual Studio code editor with a
+    A Gitpod workspace containing the Visual Studio Code editor with a
     command-line interface "terminal" should then appear. **This may take
     a little bit longer the first time a workspace is started, perhaps
     30 seconds to a minute.**
