@@ -1,11 +1,8 @@
-
-
 This tutorial will walk you through the minimum steps needed to run an
 OpenSAFELY-compliant study against "dummy" (randomly-generated) patient data.
 We ask all potential collaborators to successfully complete this tutorial,
 before applying to run their project against real data.
 
-This is a first draft of the tutorial, and may have errors or omissions.
 Please don't be afraid to ask questions in our [Q&A
 forum](https://github.com/opensafely/documentation/discussions)!
 
@@ -99,6 +96,7 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
     are not necessary to follow if you are using a web browser to run
     OpenSAFELY, even if that web browser is running on Windows.
 
+<!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
     <h3>Why OpenSAFELY requires several pieces of software to run</h3>
 
     Some of the software needed is so you can execute code on your computer
@@ -184,9 +182,8 @@ account, for developing your own study:
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
 
-## 3. Setup the required software
+## 3. Set up the required software
 
-<!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
 === "Web browser (online)"
 
     <h3>Open your repository with Gitpod</h3>
@@ -199,7 +196,7 @@ account, for developing your own study:
     You can use your GitHub account to login to Gitpod: click "Continue with
     GitHub".
 
-    A Gitpod workspace containing the Visual Studio code editor with a
+    A Gitpod workspace containing the Visual Studio Code editor with a
     command-line interface "terminal" should then appear. **This may take
     a little bit longer the first time a workspace is started, perhaps
     30 seconds to a minute.**
@@ -302,8 +299,8 @@ account, for developing your own study:
        system tray docker icon; select "settings"; select "shared drives".  This
        setting does not exist in the *WSL 2* backend.
     1. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
-       `opensafely pull cohortextractor`. This will pull down the OpenSAFELY
-       cohortextractor images, which can be used to run actions in your study.  The
+       `opensafely pull ehrql`. This will pull down the OpenSAFELY
+       ehrql image, which can be used to run actions in your study.  The
        first time you run it, this may take a little time, depending on your
        network connection. It is downloading a reproducible environment identical
        to that installed in the OpenSAFELY secure environment.
@@ -365,25 +362,30 @@ this:
 
 ```shell-session
 <...several lines of output...>
-generate_study_population: Extracting output file: output/input.csv.gz
-generate_study_population: Completed successfully
-generate_study_population: Cleaning up container and volume
+generate_dataset: Extracting output file: output/dataset.csv.gz
+generate_dataset: Finished recording results
+generate_dataset: Completed successfully
+generate_dataset: Cleaning up container and volume
 
-=> generate_study_population
-Completed successfully
+=> generate_dataset
+   Completed successfully
 
-log file: metadata/generate_study_population.log
-outputs:
- output/input.csv.gz  - highly_sensitive
+   log file: metadata/generate_dataset.log
+   outputs:
+     output/dataset.csv.gz  - highly_sensitive
 ```
 The final line tells you a file of (randomly-generated) patient data has been created at
-`output/input.csv.gz`, and that it should be considered highly sensitive
+`output/dataset.csv.gz`, and that it should be considered highly sensitive
 data. What you see here is exactly the same process that would happen on a real, secure
 server.
 
-**Because we haven't modified the template blank study yet, this CSV file is
-still empty &mdash; we'll generate *dummy data* that contains no real patient
-information in the next section.**
+This compressed CSV file contains a small amount of *dummy data* (patient ID and sex)
+based on the dataset definition at `analysis/dataset_definition.py`.
+
+To view it, first run `opensafely unzip output`, then open that
+file (by left-clicking the filename in Visual Studio Code's Explorer, or
+software like Excel). You'll see that it contains rows for 500
+randomly-generated dummy patients.
 
 ### Accessing files
 
@@ -404,7 +406,7 @@ information in the next section.**
 
 ## 5. Make changes to your study
 
-You've successfully run the code in your study, but at the moment it just creates an empty output
+You've successfully run the code in your study, but at the moment it just creates a nearly-empty output
 file. Now we'll add some code to do something slightly more interesting.
 
 ### Visual Studio Code as a code editor
@@ -442,47 +444,40 @@ automatically save the edits to files that you make.**
 ### Add an `age` column
 
 1. The "Explorer" on the left hand side lists the files and folders in
-   your research repository. Find and click on the `study_definition.py`
-   file inside the `analysis` folder. This file specifies the population
-   that you'd like to study (dataset rows) and what you need to know
-   about them (dataset columns).
+   your research repository. Find and click on the `dataset_definition.py`
+   file inside the `analysis` folder. This file contains a dataset definition,
+   specifying the population that you'd like to study (dataset rows)
+   and what you need to know about them (dataset columns).
+   It is written in [ehrQL](/ehrql/).
 1. Add some text so that the file looks like this (new text highlighted):
-```python linenums="1" hl_lines="14 15 16 17 18 19 20"
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
+```python linenums="1" hl_lines="15"
+from ehrql import create_dataset
+from ehrql.tables.beta.tpp import patients, practice_registrations
 
+dataset = create_dataset()
 
-study = StudyDefinition(
-    default_expectations={
-        "date": {"earliest": "1900-01-01", "latest": "today"},
-        "rate": "uniform",
-        "incidence": 0.5,
-    },
-    population=patients.registered_with_one_practice_between(
-        "2019-02-01", "2020-02-01"
-    ),
+index_date = "2020-03-31"
 
-    age=patients.age_as_of(
-        "2019-09-01",
-        return_expectations={
-            "rate": "universal",
-            "int": {"distribution": "population_ages"},
-        },
-    ),
-)
+has_registration = practice_registrations.for_patient_on(
+    index_date
+).exists_for_patient()
 
+dataset.define_population(has_registration)
+
+dataset.sex = patients.sex
+dataset.age = patients.age_on(index_date)
 ```
-Line 10 means "*I'm interested in all patients who have never changed practice,
-between these two dates*"; lines 14-15 "*Give me a column of data corresponding
-to the age of each patient on the given date*"; and lines 16-18 "*I expect
-every patient to have a value, and the distribution of ages to match that of the
-real UK population*"
+Lines 8-12 mean "*I'm interested in all patients who were registered at a practice
+on the index date*"; line 14 "*Give me a column of data corresponding
+to the sex of each patient*"; and line 15 "*Give me a column of data corresponding
+to the age of each patient on the given date".
 3. If you run:
 
    ```sh
    $ opensafely run run_all
    ```
 
-   you'll see the command does nothing (because there's already a file at `output/input.csv.gz`):
+   you'll see the command does nothing (because there's already a file at `output/dataset.csv.gz`):
 
    ```shell-session
    => All actions already completed successfully
@@ -496,16 +491,12 @@ real UK population*"
    $ opensafely run run_all --force-run-dependencies
    ```
 
-   A new `input.csv.gz` file will be created in the `output` folder. This is a compressed version of that data.
-   To view it, first run `opensafely unzip output`, then open that
-   file (by left-clicking the filename in Visual Studio Code's Explorer, or
-   software like Excel). This time, you'll see it now contains synthetic data: an age
-   for 1000 randomly generated patients (we'll see shortly how this is defined).
+   A new `dataset.csv.gz` file will be created in the `output` folder.
 
 ### Add a chart
 
-**Every** study starts with a *study definition* like the one you just edited.
-When executed, a study definition generates a compressed CSV (`.csv.gz `) of patient data.
+**Every** study starts with a *dataset definition* like the one you just edited.
+When executed, a dataset definition generates a compressed CSV (`.csv.gz `) of patient data.
 
 A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
@@ -520,7 +511,7 @@ histogram of ages, using either four lines of Python or just a few more lines of
     ```python
     import pandas as pd
 
-    data = pd.read_csv("output/input.csv.gz")
+    data = pd.read_csv("output/dataset.csv.gz")
 
     fig = data.age.plot.hist().get_figure()
     fig.savefig("output/descriptive.png")
@@ -535,7 +526,7 @@ histogram of ages, using either four lines of Python or just a few more lines of
     library('tidyverse')
 
     df_input <- read_csv(
-      here::here("output", "input.csv.gz"),
+      here::here("output", "dataset.csv.gz"),
       col_types = cols(patient_id = col_integer(),age = col_double())
     )
 
@@ -553,8 +544,8 @@ histogram of ages, using either four lines of Python or just a few more lines of
        "New file". Type "report.do" as the filename and press ++enter++.
     2. Add the following to `report.do`:.
     ```stata
-    !gunzip output/input.csv.gz
-    import delimited using output/input.csv
+    !gunzip output/dataset.csv.gz
+    import delimited using output/dataset.csv
 
     // TODO plot equivalent
     // TODO save plot
@@ -566,10 +557,10 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
   <li>
     Open <code>project.yaml</code> in the editor. This file will be near the end of the
     list of files and folders. This file describes how each step in your analysis should
-    be run. It already defines the expected <code>population_size</code> (1000), and a
-    single <code>generate_study_population</code> action which defines the output that
-    we've generated so far. This file is in a format called YAML: the way it's indented
-    matters, so be careful to copy and paste the following carefully.
+    be run. It already defines a single <code>generate_dataset</code> action
+    which defines the output that we've generated so far. This file is in a format
+    called YAML: the way it's indented matters, so be careful to copy and paste the
+    following carefully.
   </li>
   <li>
     Add a <code>describe</code> action to the file, so the entire file looks like this:
@@ -578,57 +569,59 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "Python"
 
-    ```yaml linenums="1" hl_lines="13 14 15 16 17 18 19 20"
+    ```yaml linenums="1" hl_lines="14 15 16 17 18 19"
     version: "3.0"
 
+    # Ignore this `expectations` block. It is required but not used, and will be removed in future versions.
     expectations:
       population_size: 1000
 
     actions:
-      generate_study_population:
-        run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
+      generate_dataset:
+        run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
         outputs:
           highly_sensitive:
-            cohort: output/input.csv.gz
+            dataset: output/dataset.csv.gz
 
       describe:
         run: python:latest python analysis/report.py
-        needs: [generate_study_population]
+        needs: [generate_dataset]
         outputs:
           moderately_sensitive:
-            cohort: output/descriptive.png
+            chart: output/descriptive.png
     ```
 
 === "R"
 
-    ```yaml linenums="1" hl_lines="15 16 17 18 19 20"
+    ```yaml linenums="1" hl_lines="14 15 16 17 18 19"
     version: "3.0"
 
+    # Ignore this`expectation` block. It is required but not used, and will be removed in future versions.
     expectations:
       population_size: 1000
 
     actions:
-      generate_study_population:
-        run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
+      generate_dataset:
+        run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
         outputs:
           highly_sensitive:
-            cohort: output/input.csv.gz
+            dataset: output/dataset.csv.gz
 
       describe:
         run: r:latest analysis/report.R
-        needs: [generate_study_population]
+        needs: [generate_dataset]
         outputs:
           moderately_sensitive:
-            cohort: output/descriptive.png
+            chart: output/descriptive.png
     ```
 
-- **Line 13** tells the system we want to create a new action called `describe`.
-- **Line 14** says how to run the script (using the `python` or `R` runner).
-- **Line 15** tells the system that this action depends on the outputs of the
-  `generate_study_population` being present.
-- **Lines 16-18** describe the files that the action creates. Line 17 says that the
+- **Line 14** tells the system we want to create a new action called `describe`.
+- **Line 15** says how to run the script (using the `python` or `R` runner).
+- **Line 16** tells the system that this action depends on the outputs of the
+  `generate_dataset` being present.
+- **Lines 17-19** describe the files that the action creates. Line 18 says that the
   items indented below it are *moderately* sensitive, that is they may be released
-  to the public after a careful review (and possible redaction). Line 18 says that
+  to the public after a careful review (and possible redaction). Line 19 says that
   there's one output file, which will be found at `output/descriptive.png`.
 
 
@@ -782,11 +775,8 @@ detail on the subjects covered in this tutorial. For example:
 
 * There is a more complete [guide to the OpenSAFELY command-line
   tool](opensafely-cli.md).
-* The [full study definition reference](study-def.md) describes all the
-  different ways to define new variables in your study definition.
-    * *Try adding a new variable such as [Sex](study-def-variables.md#cohortextractor.patients.sex)
-    or [Region](study-def-variables.md#cohortextractor.patients.registered_practice_as_of) to the
-    study definition you created using this guide, then plot some new charts!*
+* The [ehrQL documentation](/ehrql/) contains a tutorial for ehrQL,
+  as well as a complete [schema reference](../ehrql/reference/schemas/).
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
 * OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
