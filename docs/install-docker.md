@@ -1,24 +1,24 @@
 
 ## Why Docker?
 
-Docker allows you to run identical software on all platforms. 
+Docker allows you to run identical software on all platforms.
 It creates "containers" that are guaranteed to be identical on any system that can run Docker.
 
-OpenSAFELY uses Docker to run your code in a reproducible, safe manner. 
+OpenSAFELY uses Docker to run your code in a reproducible, safe manner.
 This is most helpful for checking that you will be able to successfully run your code on the OpenSAFELY server on real data.
 If you only run your code locally using your own installation of R, say, then you won't know if the version of R (and the packages) installed on the server will run your code without errors or unexpected behaviours.
 See the [Testing Your Code section](actions-pipelines.md) for more details on how to test your code in practice.
 
-Unfortunately, Docker is happiest on Linux; on Windows and Mac OSX, installation can be a chore. 
+Unfortunately, Docker is happiest on Linux; on Windows and Mac OSX, installation can be a chore.
 These notes should help.
 
 ## Installation
 
-Windows and Macs have different installation processes. 
+Windows and Macs have different installation processes.
 Regardless of machine, you will have to install Docker and make an account on the [Docker Website](https://docs.docker.com/).
 
-There are two flavours you can install, *Desktop* and *Toolbox*. 
-Docker Desktop is preferred over Docker Toolbox. 
+There are two flavours you can install, *Desktop* and *Toolbox*.
+Docker Desktop is preferred over Docker Toolbox.
 
 ### Windows
 
@@ -27,12 +27,12 @@ Docker Desktop in Windows offers native support via Hyper-V containers, and so i
 To install Docker Desktop on Windows 10 64-bit Pro, Enterprise, or Education build 15063 or later (i.e., most university or institution managed machines), [follow these installation instructions](https://docs.docker.com/docker-for-windows/install/).
 To install Docker Desktop on Windows Home [follow these installation instructions](https://docs.docker.com/docker-for-windows/install-windows-home/).
 
-Windows users who log into an Active Directory domain (i.e., a network login) may find they lack permissions to start Docker correctly. 
+Windows users who log into an Active Directory domain (i.e., a network login) may find they lack permissions to start Docker correctly.
 If so, [follow these instructions](https://github.com/docker/for-win/issues/785#issuecomment-344805180).
 It is best to install using the default settings.
 
 You may be asked to enable the Hyper-V and Containers features, which you should do.
-You can do this by [following these instructions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v). 
+You can do this by [following these instructions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 At least one user has had the box ticked on the screen but had to untick and tick again to get this to enable correctly (Detailed in [this issue](https://github.com/ebmdatalab/custom-docker/issues/4)).
 
 Starting Docker can take a while &mdash; up to 5 minutes.
@@ -56,7 +56,7 @@ Finally, note that when authentication changes (e.g., different logins), you som
 
 ### Macs
 
-Follow the instructions from the Docker website. 
+Follow the instructions from the Docker website.
 You may have to restart your computer during installation.
 
 Once you have Docker installed, you will need to log in.
@@ -65,6 +65,20 @@ This can be accessed via the Applications Folder and once you have logged in, yo
 ![The Docker icon in the macOS menu bar.](images/macos-menu-bar.png)
 
 Once this is running, you should be able to use Docker.
+
+#### Macs with an Apple Silicon processor
+
+If you are using a Mac with an Apple Silicon processor, you should enable Rosetta emulation in Docker Desktop. This will increase performance of Docker significantly.
+
+If you are using macOS Sonoma (v14) or newer, this option may already be enabled.
+
+1. Click the Docker icon in the macOS menu bar
+1. Click on "Settings…"
+1. Under the "General" settings, tick the option listed below:
+    > **Use Rosetta for x86/amd64 emulation on Apple Silicon**
+    >
+    > Turns on Rosetta to accelerate x86/amd64 binary emulation on Apple Silicon. Note: You must have Virtualization framework enabled.
+1. Click "Apply & restart"
 
 ## Gotchas
 
