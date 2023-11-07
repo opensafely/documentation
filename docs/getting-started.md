@@ -776,7 +776,7 @@ detail on the subjects covered in this tutorial. For example:
 * There is a more complete [guide to the OpenSAFELY command-line
   tool](opensafely-cli.md).
 * The [ehrQL documentation](/ehrql/) contains a tutorial for ehrQL,
-  as well as a complete [schema reference](http://localhost:8000/ehrql/reference/schemas/).
+  as well as a complete [schema reference](../ehrql/reference/schemas/).
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](actions-intro.md).
 * OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
