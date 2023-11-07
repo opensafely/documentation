@@ -300,7 +300,7 @@ account, for developing your own study:
        setting does not exist in the *WSL 2* backend.
     1. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
        `opensafely pull ehrql`. This will pull down the OpenSAFELY
-       ehrql images, which can be used to run actions in your study.  The
+       ehrql image, which can be used to run actions in your study.  The
        first time you run it, this may take a little time, depending on your
        network connection. It is downloading a reproducible environment identical
        to that installed in the OpenSAFELY secure environment.
