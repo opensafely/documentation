@@ -256,9 +256,9 @@ Only certain file types will be reviewed and released from the secure server. Se
     * Make sure that any column names are understandable for reviewers.
     * Limit the number of columns or rows to only what is necessary.
 * **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
-    * Underlying data for all figures should be provided for review (even if it is not being released).
-    * Consider requesting release of the underlying data if you think you will need to make stylistic changes to the figures so that you don't need to request multiple reviews.
-    * If you are producing a lot of figures, consider combining them into panel plots or requesting release of the underlying data so that you can produce them outside of the secure server.
+    * Provide the underlying aggregated data for all figures (even if it is not being released). This is required to prove to reviewers that there are no small counts represented in the figure.
+    * If you think you will need to make stylistic changes to a figure, consider requesting release of the underlying aggregated data so that you don't need to request multiple reviews.
+    * If you are producing a lot of figures, consider combining them into panel plots or requesting release of the underlying aggregated data so that you can produce them outside of the secure server.
 * **Other**
     * `txt` files can be released, but you should consider whether the output can be produced as a table, which is easier to review.
     * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
