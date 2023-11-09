@@ -186,18 +186,4 @@ Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_N
 
 Moderately sensitive outputs can be seen in `E:/FILESFORL4/workspaces/<WORKSPACE_NAME>`.
 
-
-## Running your code manually in the server
-
-This is only possible for people with Level 3 access. You'll want to refer to [instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md) (in restricted access repo).
-
-The live environment is set up via a wrapper script; instead of `cohortextractor`, you should run `/e/bin/actionrunner.sh`.
-For example, to run `run_model` on the Level 3 server, against the `full` database, you'd type:
-
-```bash
-/e/bin/actionrunner.sh run full run_model tpp
-```
-
-
-
 ---8<-- 'includes/glossary.md'
