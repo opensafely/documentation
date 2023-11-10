@@ -51,6 +51,6 @@ codelist CSV files will include the codes explicitly specified in the codelist *
 previous or subsequent changes to those codes.
 
 If a new release of dm+d introduces new VMP mappings that affect codes in your codelists, you
-,ay be prompted (by the opensafely command line tool, automated tests in GitHUb, or the jobs site) to re-run
+may be prompted (by the opensafely command line tool, automated tests in GitHub, or the jobs site) to re-run
 `opensafely codelists update`, commit the changes and push them to GitHub before you can run
 jobs.
