@@ -4,6 +4,8 @@
 
 It captures symptoms, investigations, test results, diagnoses, prescriptions, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
 
+Records for patients who have registered a [Type 1 Opt-out](https://www.nhs.uk/using-the-nhs/about-the-nhs/opt-out-of-sharing-your-health-records/) will be included or excluded according to the [project's approvals](https://www.opensafely.org/approved-projects/).
+
 ## The OpenSAFELY-TPP database
 
 The SystmOne database contains various tables for events, medications, registrations, and so on, which have been processed, pseudonymised, and made available within the OpenSAFELY-TPP database. Some additional custom tables are also created, for instance to make administrative and geographic grouping information available (like household membership) without disclosing of identifiable patient data (like addresses).
