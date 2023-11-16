@@ -5,7 +5,7 @@ This section covers how to develop, run, and test your code to ensure it will wo
 
 ## Project pipelines
 
-The [ehrQL](/ehrql/) documentation describes how to make an action which generate dummy datasets based on the instructions defined in your `dataset_definition.py` script.
+The [ehrQL](/ehrql/how-to/dummy-data.md) documentation describes how to make an action which generate dummy datasets based on the instructions defined in your `dataset_definition.py` script.
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
 However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the project pipeline.
