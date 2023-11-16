@@ -1,6 +1,6 @@
 Like [scripted actions](actions-scripts.md), reusable actions are logical units of analytic code.
 However, whereas a scripted action is written to solve a problem for one study and must be copied-and-pasted to solve a similar problem for another study, a reusable action is written to solve a problem for several studies *without copying-and-pasting between them*.
-This makes reusable actions ideal for tasks that must be completed by several studies, such as joining cohorts or producing deciles charts.
+This makes reusable actions ideal for tasks that must be completed by several studies, such as joining datasets or producing deciles charts.
 
 ## Running reusable actions
 
@@ -10,21 +10,21 @@ Consider the following extract from a study's *project.yaml*:
 
 ```yaml
 actions:
-  generate_my_cohort:
-    run: cohortextractor:latest generate_cohort --output-format=csv.gz
+  generate_dataset:
+    run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input.csv.gz
+        dataset: output/dataset.csv.gz
 
   run_a_reusable_action:
     # We will run version `v1.0.0` of the reusable action called `a_reusable_action`.
     # The reusable action accepts an argument; in this case, a path to a file.
-    run: a_reusable_action:v1.0.0 output/input.csv.gz
+    run: a_reusable_action:v1.0.0 output/dataset.csv.gz
     # The reusable action accepts a configuration option;
     # in this case, an output format.
     config:
       output-format: PNG
-    needs: [generate_my_cohort]
+    needs: [generate_dataset]
     outputs:
       moderately_sensitive:
         output: output/output_from_a_reusable_action.png
@@ -39,8 +39,8 @@ The `config` property, which is optional, describes configuration options.
 
 !!! note
     If you're thinking about developing a reusable action, then start by creating a new study within the [`opensafely`](https://github.com/opensafely) organisation that encapsulates the problem.
-    As a minimum, the study should [extract](actions-cohortextractor.md) and operate on a cohort:
-    indeed, the code that operates on the cohort *is* the reusable action.
+    As a minimum, the study should [extract](/ehrql/) and operate on a dataset:
+    indeed, the code that operates on the dataset *is* the reusable action.
 
     At this point, you should [open an issue](https://github.com/opensafely-actions/.github/issues).
     Below, we describe how to convert the study into a reusable action.

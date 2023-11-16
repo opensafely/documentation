@@ -42,39 +42,39 @@ These types of outputs are considered potentially highly-disclosive, should not 
 Pseudonymised patient-level outputs tend to be large in size and therefore it is important that the right files formats are used for these large data files. The wrong formats can waste disk space, execution time, and server memory. The specific formats used vary with language ecosystem, but they should always be compressed.
 
 !!! note
-    The template sets up `cohortextractor` command to produce `csv.gz` outputs.
+    The template sets up the `ehrql` command to produce `csv.gz` outputs.
     This is the current recommended output format, as CSV files compress well,
     and this reduces both storage requirements and improves job execution times
     on the backend.
 
-    If you need to view the raw CSV data locally, you can unzip with `opensafely unzip input.csv.gz`.
+    If you need to view the raw CSV data locally, you can unzip with `opensafely unzip dataset.csv.gz`.
 
 
 
 === "Python"
 
     ```python
-    # read compressed CSV output from cohortextractor
-    pd.read_csv("output/input.csv.gz")
+    # read compressed CSV output from ehrql
+    pd.read_csv("output/dataset.csv.gz")
 
     # write compressed feather file
     df.to_feather("output/model.feather", compression="zstd")
 
     # read feather file, decompressed automatically
-    pd.read_feather("output/input.feather")
+    pd.read_feather("output/dataset.feather")
     ```
 
 === "R"
 
     ```r
-    # read compressed CSV output from cohortextractor
-    df <- readr::read_csv("output/input.csv.gz")
+    # read compressed CSV output from ehrql
+    df <- readr::read_csv("output/dataset.csv.gz")
 
     # write a compressed feather file
     arrow::write_feather(df, "output/model.feather", compression = "zstd")
 
     # read a feather file, decompressed automatically
-    df <- arrow::read_feather("output/input.feather")
+    df <- arrow::read_feather("output/dataset.feather")
     ```
 
 === "Stata"
@@ -82,15 +82,15 @@ Pseudonymised patient-level outputs tend to be large in size and therefore it is
     ```stata
     // stata cannot handle compressed CSV files directly, so unzip first to a plain CSV file
     // the unzipped file will be discarded when the action finishes.
-    !gunzip output/input.csv.gz
+    !gunzip output/dataset.csv.gz
     // now import the uncompressed CSV using delimited
-    import delimited using output/input.csv
+    import delimited using output/dataset.csv
 
     // save in compressed dta.gz format
     gzsave output/model.dta.gz
 
     // load a compressed .dta.gz file
-    gzload output/input.dta.gz
+    gzload output/dataset.dta.gz
 
     ```
 
