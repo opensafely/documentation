@@ -5,7 +5,7 @@ This section covers how to develop, run, and test your code to ensure it will wo
 
 ## Project pipelines
 
-The [cohortextractor](actions-cohortextractor.md) section describes how to make an action which generate dummy datasets based on the instructions [defined in your `study_definition.py` script](study-def.md).
+The [ehrQL](/ehrql/how-to/dummy-data.md) documentation describes how to make an action which generate dummy datasets based on the instructions defined in your `dataset_definition.py` script.
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
 However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the project pipeline.
@@ -30,33 +30,33 @@ A simple example of a `project.yaml` is as follows:
 ```yaml
 version: "3.0"
 
+# Ignore this `expectations` block. It is required but not used, and will be removed in future versions.
 expectations:
   population_size: 1000
 
 actions:
-
-  generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --output-format csv.gz
+  generate_dataset:
+    run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input.csv.gz
+        dataset: output/dataset.csv.gz
 
   run_model:
     run: stata-mp:latest analysis/model.do
-    needs: [generate_study_population]
+    needs: [generate_dataset]
     outputs:
       moderately_sensitive:
         model: models/cox-model.txt
 		figure: figures/survival-plot.png
 ```
 
-This example declares the pipeline `version`, the `population_size` for the dummy data, and two actions, `generate_study_population` and `run_model`.
+This example declares the pipeline `version`, and two actions: `generate_dataset` and `run_model`.
 
 You only need to change `version` if you want to take advantage of features of newer versions of the pipeline framework.
 
-The `generate_study_population` action will create the highly sensitive `input.csv.gz` dataset.
+The `generate_dataset` action will create the highly sensitive `dataset.csv.gz` dataset.
 It will be dummy data when run locally, and will be based on real data from the OpenSAFELY database when run in the secure environment.
-The `run_model` action will run a Stata script called `model.do` based on the `input.csv.gz` created by the previous action.
+The `run_model` action will run a Stata script called `model.do` based on the `dataset.csv.gz` created by the previous action.
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
@@ -65,7 +65,7 @@ In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
 * Each action must include a `run` key which includes an officially-supported command and a version (which at present is usually just `latest`).
-    * The `cohortextractor` command has the same options as described in the [cohortextractor section](actions-cohortextractor.md).
+    * The `ehrql` command has the same options as described in the [ehrQL reference](/ehrql/reference/cli/#generate-dataset).
     * The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment that can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
     * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment. This includes all data at the pseudonymised patient-level. Outputs labelled highly_sensitive will not be visible to researchers.
@@ -93,7 +93,7 @@ When writing and running your pipeline, note that:
 
 * If one or more dependencies of an action have not been run (i.e., their outputs do not exist) then these dependency actions will be run first. If a dependency has changed but has not been run (so the outputs are not up-to-date with the changes), then the dependency actions will not be run, and the dependent actions will be run using the out-of-date outputs.
 
-* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to different versions of cohortextractor and will also avoid problems caused by index integer positions changing as columns are added/removed.
+* The ordering of columns may not be consistent between the dummy data and the TPP/EMIS backend. You should avoid referring to index integer positions and instead use the index / column names.  Using index / column names will be more robust to different versions of ehrQL and will also avoid problems caused by index integer positions changing as columns are added/removed.
 
 ## Running your code locally
 
@@ -113,10 +113,10 @@ For `opensafely run` to work:
 To run the first action in the example above, using dummy data, you can use:
 
 ```bash
-opensafely run generate_study_population
+opensafely run generate_dataset
 ```
 
-This will generate the `input.csv.gz` file as explained in the [cohortextractor](actions-cohortextractor.md) section.
+This will generate the `dataset.csv.gz` file as explained in the [ehrQL](/ehrql/) documentation.
 
 To run the second action you can use:
 
@@ -127,7 +127,7 @@ opensafely run run_model
 It will create the two files as specified in the `analysis/model.do` script.
 
 To force the dependencies to be run you can use for example `opensafely run run_model --force-run-dependencies`, or `-f` for short.
-This will ensure for example that both the `run_model` and `generate_study_population` actions are run, even if `input.csv.gz` already exists.
+This will ensure for example that both the `run_model` and `generate_dataset` actions are run, even if `dataset.csv.gz` already exists.
 
 To run all actions, you can use a special `run_all` action which is created for you (no need to define it in your `project.yaml`):
 
@@ -182,22 +182,8 @@ Outputs labelled `highly_sensitive` are not visible.
 
 No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
 
-Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_cohorts.log`, `run_model.log`.
+Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_dataset.log`, `run_model.log`.
 
 Moderately sensitive outputs can be seen in `E:/FILESFORL4/workspaces/<WORKSPACE_NAME>`.
-
-
-## Running your code manually in the server
-
-This is only possible for people with Level 3 access. You'll want to refer to [instructions for interacting with OpenSAFELY via the secure server](https://github.com/opensafely/server-instructions/blob/master/docs/Server-side%20how-to.md) (in restricted access repo).
-
-The live environment is set up via a wrapper script; instead of `cohortextractor`, you should run `/e/bin/actionrunner.sh`.
-For example, to run `run_model` on the Level 3 server, against the `full` database, you'd type:
-
-```bash
-/e/bin/actionrunner.sh run full run_model tpp
-```
-
-
 
 ---8<-- 'includes/glossary.md'
