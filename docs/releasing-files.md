@@ -256,9 +256,12 @@ Only certain file types will be reviewed and released from the secure server. Se
     * Make sure that any column names are understandable for reviewers.
     * Limit the number of columns or rows to only what is necessary.
 * **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
-    * Provide the underlying aggregated data for all figures (even if it is not being released). This is required to prove to reviewers that there are no small counts represented in the figure.
-    * If you think you will need to make stylistic changes to a figure, consider requesting release of the underlying aggregated data so that you don't need to request multiple reviews.
-    * If you are producing a lot of figures, consider combining them into panel plots or requesting release of the underlying aggregated data so that you can produce them outside of the secure server.
+    * We recommend requesting the release of the underlying _aggregated_ data for all figures, rather than the figures themselves. You can then create the figures outside of the secure server, which has a few advantages:
+        * You can tweak the figure much quicker and easier on your local computer.
+        * You won't need to make a new output checking request when you need to change the figure because of an error or stylistic tweak.
+        * It's easier for output checkers to check a table of aggregated counts than a figure.
+        * You can still maintain the reproducibility of your project, by committing the code to locally produce the graph to your repo.
+    * If you do produce figures on the secure server, you should always produce the underlying _aggregated_ data alongside them (even if it is not being released). This is required to prove to reviewers that there are no small counts represented in the figure.
 * **Other**
     * `txt` files can be released, but you should consider whether the output can be produced as a table, which is easier to review.
     * `json` files can be released, but as with tables, make sure that the attributes are easily understandable for reviewers. If the output can be represented as a table, you should consider converting it.
