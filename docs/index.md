@@ -60,8 +60,6 @@ The [Analysis workflow](workflow.md) gives a high-level view of the steps involv
 See our [installation](install-intro.md) pages for complete installation
 instructions if you wish to install on your own computer.
 
-When you are more comfortable with how OpenSAFELY works, we recommend following one of our OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials)) to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone.
-
 ## How can I make my organisation's data available via OpenSAFELY?
 
 See our guidance for [system integrators and data providers](system-integration.md).
