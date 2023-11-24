@@ -1,3 +1,5 @@
+---8<-- 'includes/cohort-extractor-deprecated.md'
+
 In study definitions, dates are described in `"YYYY-MM-DD"` format; so, for example, the 3rd May 1995 would be written `"1995-05-03"`.
 
 

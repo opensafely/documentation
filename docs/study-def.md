@@ -1,3 +1,5 @@
+---8<-- 'includes/cohort-extractor-deprecated.md'
+
 ## What is a Study Definition?
 
 (Know what you're doing and just looking for a quick reference? Go to the [variable reference](study-def-variables.md))

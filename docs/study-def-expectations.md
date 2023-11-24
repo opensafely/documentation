@@ -1,3 +1,5 @@
+---8<-- 'includes/cohort-extractor-deprecated.md'
+
 Because OpenSAFELY doesn't allow direct access to individual patient records, researchers must use *dummy data* for developing their analytic code on their own computer.
 
 OpenSAFELY requires you to define *expectations* in your study definition: these describe the properties of each variable, and are used to generate random data that match the expectations.
