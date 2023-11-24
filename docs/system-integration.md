@@ -49,19 +49,10 @@ The specific steps required to create a minimal setup are:
    and Docker images used to run the code.
 
 4. To provide *access to your database* from within your setup,
-   integrate into our [*cohort-extractor*](https://github.com/opensafely-core/cohort-extractor) ETL tool:
+   integrate into our [*ehrQL*](https://github.com/opensafely-core/ehrql) ETL tool:
 
-     * via an implementation of a backend interface; [this is an example for TPP](https://github.com/opensafely-core/cohort-extractor/blob/main/cohortextractor/tpp_backend.py)
-     * and, if you are using an as-yet unsupported database, a database connector
-
-    !!! warning
-
-        A simpler replacement for cohort-extractor,
-        [ehrQL](https://github.com/opensafely-core/ehrql),
-        is in development.
-
-        You may prefer to wait for a stable version of ehrQL
-        before attempting to integrate.
+     * via an implementation of a backend interface; [this is an example for TPP](https://github.com/opensafely-core/ehrql/blob/main/ehrql/backends/tpp.py)
+     * and, if you are using an as-yet unsupported database, a query engine; [this is an example for Trino](https://github.com/opensafely-core/ehrql/blob/main/ehrql/query_engines/trino.py)
 
 5. *Releasing job outputs* requires:
 
