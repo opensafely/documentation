@@ -118,7 +118,7 @@ See the [Codelist](codelist-intro.md) section for more information on codelists.
 
 To run your code on your machine, the `opensafely` tool uses the same Docker
 images that run in the secure server environments. There is the
-`cohortextractor` image, for processing study definitions, and then the `r`,
+`ehrql` image, for processing dataset definitions, and then the `r`,
 `stata-mp`, and `python` images, for running your analysis code. These last
 three provide a pre-built environment for their specific language, with
 a fixed set of pre-installed libraries.
@@ -212,15 +212,14 @@ Or alternatively go to File -> shutdown in the JupyterLab tab.
 
 ### `unzip` - unzipping CSV files
 
-For performance and storage reasons on the backend, you must use the
-compressed `csv.gz` output format for cohortextractor output files. However,
-you may need to inspect the raw CSV data. You can easily unzip a CSV file with
+If an action produces a compressed CSV file,
+you can view the raw CSV data by unzipping it with
 
 ```bash
-opensafely unzip outputs/input.csv.gz
+opensafely unzip outputs/dataset.csv.gz
 ```
 
-This will create a decompressed `output/input.csv` file you can view as normal.
+This will create a decompressed `output/dataset.csv` file you can view as normal.
 
 
 ### Managing Resources

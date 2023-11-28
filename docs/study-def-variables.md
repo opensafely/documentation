@@ -1,3 +1,5 @@
+---8<-- 'includes/cohort-extractor-deprecated.md'
+
 This section describes each available function for creating variables within a study definition.
 
 For more information on the datasets contained within the OpenSAFELY database, see the [Data sources section](data-sources/intro.md).

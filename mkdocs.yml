@@ -25,15 +25,6 @@ nav:
           - OpenSAFELY CLI: opensafely-cli.md
           - macOS: install-macos.md
           - Linux: install-linux.md
-      - Study definitions:
-          - Overview: study-def.md
-          - Working with dates: study-def-dates.md
-          - Working with codelists: study-def-codelists.md
-          - Dummy data and expectations: study-def-expectations.md
-          - Variable reference: study-def-variables.md
-          - Measures: measures.md
-          - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
-          - Programming tricks: study-def-tricks.md
       - Codelists:
           - Introduction to codelists: codelist-intro.md
           - Building a codelist: codelist-creation.md
@@ -55,6 +46,16 @@ nav:
       - Project completion: project-completion.md
       - Adding your pre-print/paper to OpenSAFELY.org: adding-a-paper.md
       - Information for system integrators: system-integration.md
+      - Legacy:
+        - Study definitions:
+          - Overview: study-def.md
+          - Working with dates: study-def-dates.md
+          - Working with codelists: study-def-codelists.md
+          - Dummy data and expectations: study-def-expectations.md
+          - Variable reference: study-def-variables.md
+          - Measures: measures.md
+          - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
+          - Programming tricks: study-def-tricks.md
   - OpenSAFELY best practice:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
@@ -81,7 +82,6 @@ nav:
       - How to get help: how-to-get-help.md
       - OpenSAFELY co-piloting service: copiloting-service.md
       - Requesting new libraries: requesting-libraries.md
-      - Requesting study definition variables: requesting-variables.md
       - Plan S and OpenSAFELY: plan-s.md
       - Updating the documentation: updating-the-docs.md
   - Bennett Institute Open Manifesto: open-data-manifesto.md

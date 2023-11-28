@@ -1,3 +1,5 @@
+---8<-- 'includes/cohort-extractor-deprecated.md'
+
 This section introduces some tricks for working more efficiently with the study definition API, by helping you to avoid copy-pasting chunks of code unnecessarily.
 
 A study definition is a Python script which uses some friendly OpenSAFELY functions to specify the data that you want to extract from the database. But it's still just a Python script, so you can push beyond this API to run other bits of Python code such as importing additional libraries and data, or creating functions and loops. The examples below do exactly this. For users without any Python experience these tricks could be hard to understand and adapt, so you should only incorporate them into your own study definition if you are confident about what they do. If unsure, ask for a code review.
