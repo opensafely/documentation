@@ -17,7 +17,6 @@ nav:
       - GitHub repositories: repositories.md
       - Detailed installation guides:
           - Overview: install-intro.md
-          - Managing Gitpod workspaces: gitpod-workspaces.md
           - GitHub and Git: install-github-and-git.md
           - Running OpenSAFELY in GitHub Codespaces: github-codespaces.md
           - Python: install-python.md
