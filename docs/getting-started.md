@@ -22,6 +22,17 @@ To use the OpenSAFELY framework effectively, you need to:
 
 In this guide, we've documented two different ways to work with OpenSAFELY:
 
+!!! warning
+    This guide will be updated to use GitHub Codespaces,
+    instead of Gitpod.
+
+    Until this guide is updated,
+    you will find the following pages useful:
+
+    * the [introduction to GitHub Codespaces](github-codespaces.md)
+    * the [ehrQL tutorial](ehrql/tutorial/index.md)
+      that uses GitHub Codespaces to introduce you to ehrQL
+
 1. *Use an online environment where the needed software is already
    installed for you*.
 
