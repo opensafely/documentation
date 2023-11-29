@@ -187,20 +187,29 @@ account, for developing your own study:
 
     <h3>Open your repository with GitHub Codespaces</h3>
 
-    For the repository you just created, there should be a Code button
+    For the repository you just created,
+    there is a Code button on GitHub.
+
     To open your repository with GitHub Codespaces:
 
     1. Click the Code button.
     2. Click the Codespaces tab.
-    3. Click the `+` to create a new codespace.
+    3. Click the "Create codespace on main".
+       The screenshot below shows this.
+
+    ![A screenshot showing the "Create codespace on main" button.](images/getting-started-codespaces-button.png)
+
+    You should then see a "Setting up your codespace" screen:
+
+    ![A screenshot showing "Setting up your codespace".](images/getting-started-codespaces-setting-up.png)
 
     A GitHub codespace containing the Visual Studio Code editor with a
     command-line interface "terminal" should then appear. **This may take
     a little bit longer the first time a codespace is started, perhaps
-    30 seconds to a minute.**
+    a minute or two.**
 
     ![GitHub's codespace showing the editor, terminal and
-    Explorer.](images/gitpod-workspace.png)
+    Explorer.](images/getting-started-codespaces-start.png)
 
     The terminal at the bottom-right of the GitHub codespace runs
     commands on a computer (virtual machine) provided by GitHub.
@@ -656,7 +665,7 @@ the new commit.
     left-hand side. It should be below the magnifying glass icon.
 
     ![Opening Source Control in
-    GitHub.](images/gitpod-source-control.png)
+    GitHub.](images/getting-started-codespaces-stage-changes.png)
 
     When files in the repository are edited and then saved, Source
     Control should list those changes. Note that Visual Studio Code in
@@ -667,27 +676,23 @@ the new commit.
     to the repository by clicking the `+` icon next to the filename.
     These "staged" changes then appear in the "Staged Changes" section.
 
-    ![Staging changes in GitHub.](images/gitpod-stage-changes.png)
-
     Staged changes are changes that you are proposing to include in the next *commit* of
     this study repository. These could be modifications of existing
     files or entirely new files that you include.
 
-    It is also possible to "Unstage Changes" if you accidentally stage a
+    It is also possible to "Discard Changes" if you accidentally stage a
     file that you do not want to include. You can do this by hovering
     over a file listed in the "Staged Changes" section and clicking the
     `-` icon next to the filename.
 
-    ![Unstaging changes in GitHub.](images/gitpod-unstage-changes.png)
-
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Click the orange Commit button, which will open
+    make the new commit. Click the green Commit button, which will open
     and editor for you to type a commit message.  Type a message to describe
     the staged changes. When ready, you can then click the tick icon to
     accept the commit message and *commit* the staged changes to
     to add them to the repository as stored in the codespace.
 
-    ![Committing changes in GitHub.](images/gitpod-commit.png)
+    ![Committing changes in GitHub.](images/getting-started-codespaces-commit-message.png)
 
     <h3>Push the changes to GitHub</h3>
 
@@ -700,7 +705,10 @@ the new commit.
     "Push". This should submit your changes to the GitHub repository that
     you created earlier.
 
-    ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
+    ![Pushing changes to GitHub.](images/getting-started-codespaces-push-to-github.png)
+
+    You will see a prompt: 'This action will pull and push commits from
+    and to "origin/main".' — click OK.
 
     (You may see a prompt: "Would you like Code to periodically run `git
     fetch`?" You can ignore this or select "Ask me later" for the
