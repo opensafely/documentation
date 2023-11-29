@@ -408,8 +408,8 @@ file. Now we'll add some code to do something slightly more interesting.
 
 ### Visual Studio Code as a code editor
 
-In order to write code in the OpenSAFELY framework, a code editor will
-make your life much easier. The steps here use Visual Studio Code.
+When writing code in the OpenSAFELY framework, a code editor will help.
+The steps here use Visual Studio Code.
 GitHub users already use Visual Studio Code by default in a GitHub codespace.
 
 Visual Studio Code is also available free of charge for Windows, macOS
