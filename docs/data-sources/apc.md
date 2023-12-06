@@ -28,6 +28,11 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 
 ## Available filters and `returning` fields
 
+!!! note
+
+    The following notes were written for users of [cohort-extractor](study-defs.md)
+    but may be useful to other users as well.
+
 - [Admission date](#admission_date)
 - [Number of matches in period (number of spells)](#number_of_matches_in_period)
 - [Discharge date](#discharge_date)
