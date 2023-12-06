@@ -22,25 +22,14 @@ To use the OpenSAFELY framework effectively, you need to:
 
 In this guide, we've documented two different ways to work with OpenSAFELY:
 
-!!! warning
-    This guide will be updated to use GitHub Codespaces,
-    instead of Gitpod.
-
-    Until this guide is updated,
-    you will find the following pages useful:
-
-    * the [introduction to GitHub Codespaces](github-codespaces.md)
-    * the [ehrQL tutorial](ehrql/tutorial/index.md)
-      that uses GitHub Codespaces to introduce you to ehrQL
-
 1. *Use an online environment where the needed software is already
    installed for you*.
 
-     Services such as [Gitpod](https://gitpod.io) provide online
-     computing environments. Gitpod has a free plan with a generous
-     monthly usage limit — 50 hours — for working with code in public or
+     Services such as [GitHub Codespaces](https://github.com/features/codespaces) provide online
+     computing environments. GitHub Codespaces has a free plan with a generous
+     monthly usage limit for working with code in public or
      private repositories. We've adapted our demonstration research
-     study and this guide such that you can follow along with Gitpod,
+     study and this guide such that you can follow along with GitHub Codespaces,
      should you choose to do so.
 
      You might prefer an online environment if one or more of the
@@ -55,18 +44,17 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
      * you want to try OpenSAFELY via a device other than a desktop or
        laptop computer, e.g. a tablet.
 
-     To use Gitpod, the only requirements are:
+     To use GitHub Codespaces, the only requirements are:
 
      * you have a current version of a modern web browser (e.g. Chrome,
        Edge, Firefox, Safari);
-     * your network connection does not block access to the Gitpod
-       development environment.
+     * your internet connection allows access to GitHub Codespaces
 
      If your internet connection is not managed by you directly —
      perhaps you are in the office or connecting via your employer's
      virtual private network (VPN) — it may be that [corporate firewalls
      prevent access to
-     Gitpod](https://github.com/opensafely/documentation/discussions/311);
+     GitHub Codespaces](https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-your-connection-to-github-codespaces#browser-cannot-connect);
      please contact the IT staff who manage your internet connection for help.
 
 2. *Install the required software to your own computer*.
@@ -98,7 +86,7 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
 === "Web browser (online)"
 
     These "Web browser" sections will explain how to use OpenSAFELY in a
-    web browser via the Gitpod service.
+    web browser via the GitHub Codespaces service.
 
 === "Windows (local)"
 
@@ -176,10 +164,10 @@ account, for developing your own study:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![Entering a name, owner and description, when creating a repository from the research template.](images/create-repository-owner-name.png)
+   ![Entering a name, owner and description, when creating a repository from the research template.](images/getting-started-create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description
 1. Choose a [repository visibility](repositories.md#repository-visibility). This would usually be "Public"
-   ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](images/create-repository-public-private.png)
+   ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](images/getting-started-create-repository-public-private.png)
 1. There is an "Include all branches" option: this does **not** need to be selected.
    (You only need the main branch; the other branches are
    work-in-progress changes.)
@@ -197,43 +185,50 @@ account, for developing your own study:
 
 === "Web browser (online)"
 
-    <h3>Open your repository with Gitpod</h3>
+    <h3>Open your repository with GitHub Codespaces</h3>
 
-    For the repository you just created, there should be a `Gitpod: ready to
-    code` button displayed in the README.  Click on that button to open your
-    new repository in Gitpod.
+    For the repository you just created,
+    there is a Code button on GitHub.
 
-    If it is the first time you have used Gitpod, you'll see a "Log in" screen.
-    You can use your GitHub account to login to Gitpod: click "Continue with
-    GitHub".
+    To open your repository with GitHub Codespaces:
 
-    A Gitpod workspace containing the Visual Studio Code editor with a
+    1. Click the Code button.
+    2. Click the Codespaces tab.
+    3. Click the "Create codespace on main".
+       The screenshot below shows this.
+
+    ![A screenshot showing the "Create codespace on main" button.](images/getting-started-codespaces-button.png)
+
+    You should then see a "Setting up your codespace" screen:
+
+    ![A screenshot showing "Setting up your codespace".](images/getting-started-codespaces-setting-up.png)
+
+    A GitHub codespace containing the Visual Studio Code editor with a
     command-line interface "terminal" should then appear. **This may take
-    a little bit longer the first time a workspace is started, perhaps
-    30 seconds to a minute.**
+    a little bit longer the first time a codespace is started, perhaps
+    a minute or two.**
 
-    ![Gitpod's workspace showing the editor, terminal and
-    Explorer.](images/gitpod-workspace.png)
+    ![GitHub's codespace showing the editor, terminal and
+    Explorer.](images/getting-started-codespaces-start.png)
 
-    The terminal at the bottom-right of the Gitpod workspace runs
-    commands on a computer (virtual machine) provided by Gitpod.
+    The terminal at the bottom-right of the GitHub codespace runs
+    commands on a computer (virtual machine) provided by GitHub.
 
     The large, upper-right area holds the **main editor** and where you will
     view and edit files that you are working on. The left **"side bar"**
-    holds the Explorer when you first start the workspace. There are
+    holds the Explorer when you first start the codespace. There are
     other useful menus in this area that can be switched with the icons
     to the far left side. Finally, the button at the top-left with three
     horizontal lines (`≡`) is the **menu button**, which allows you to
     access many more options.
 
-    If you find yourself using Gitpod regularly for working on research,
-    we have a brief guide to [managing Gitpod
-    workspaces](gitpod-workspaces.md).
+    If you find yourself using GitHub regularly for working on research,
+    we have more information on [working with GitHub codespaces](github-codespaces.md).
 
     <h3>Running **opensafely**</h3>
 
     The `opensafely` software should already be installed if you start
-    Gitpod for the OpenSAFELY research template.
+    GitHub for the OpenSAFELY research template.
 
     You can confirm this by typing `opensafely` in the terminal at the
     prompt `$` and pressing ++enter++. You should see an output that looks
@@ -326,7 +321,7 @@ study.
 
 === "Web browser (online)"
 
-    There's nothing to do here! When you open the Gitpod workspace, the
+    There's nothing to do here! When you open the GitHub codespace, the
     associated code from GitHub will already be cloned and available in the code
     editor. You'll see the files and folders in the Explorer.
 
@@ -341,7 +336,7 @@ study.
 
     There's nothing to do here! In the following sections, type any
     `opensafely` commands in the terminal available at the bottom-right of the
-    Gitpod workspace. Copy the commands and then press ++enter++ to run them.
+    GitHub codespace. Copy the commands and then press ++enter++ to run them.
 
 === "Windows (local)"
 
@@ -403,8 +398,8 @@ randomly-generated dummy patients.
 === "Web browser (online)"
 
     The Visual Studio Code editor has a file Explorer that you can use
-    to browse the files and appears when first starting the Gitpod
-    workspace. It is accessed by the file icon in the bar on the
+    to browse the files and appears when first starting the GitHub
+    codespace. It is accessed by the file icon in the bar on the
     left-hand side of the editor.
 
     Clicking on a file name in the Explorer will open the file in a tab
@@ -422,13 +417,13 @@ file. Now we'll add some code to do something slightly more interesting.
 
 ### Visual Studio Code as a code editor
 
-In order to write code in the OpenSAFELY framework, a code editor will
-make your life much easier. The steps here use Visual Studio Code.
-Gitpod users already use Visual Studio Code by default in workspaces.
+When writing code in the OpenSAFELY framework, a code editor will help.
+The steps here use Visual Studio Code.
+GitHub users already use Visual Studio Code by default in a GitHub codespace.
 
 Visual Studio Code is also available free of charge for Windows, macOS
 and Linux. If you are working on your own computer and **not** in
-Gitpod, and are already comfortable using another code editor, then that
+GitHub, and are already comfortable using another code editor, then that
 editor will be suitable.
 
 Here we'll only use Visual Studio Code for the examples. There are
@@ -441,7 +436,7 @@ automatically save the edits to files that you make.**
 
 === "Web browser (online)"
 
-    There's nothing to do here! When you open a Gitpod workspace, Visual
+    There's nothing to do here! When you open a GitHub codespace, Visual
     Studio Code is ready to use as the default editor and has your
     research repository opened.
 
@@ -641,8 +636,8 @@ At the command line, type `opensafely run run_all --force-run-dependencies` and 
 Open it — you can do this via Visual Studio Code's Explorer — and check it looks right.
 
 !!! warning
-    Changes you make to files are automatically saved on Gitpod. However, changes will not persist
-    outside of the Gitpod workspace unless you *commit* and *push* them to GitHub, as described
+    Changes you make to files are automatically saved on GitHub. However, changes will not persist
+    outside of the GitHub codespace unless you *commit* and *push* them to GitHub, as described
     in the next section.
 
 ## 6. Test your study on GitHub
@@ -659,76 +654,49 @@ the new commit.
 
 === "Web browser (online)"
 
-    <h3>Allow Gitpod to be able to push your changes to GitHub</h3>
-
-    1. When logged into Gitpod, visit the [main Settings page](https://gitpod.io/settings).
-       (Note this is different to the settings in your Gitpod workspace.)
-       Click on your profile image and select User Settings.
-
-    1. Select Integrations and under Git Providers, hover over your
-       GitHub details, click the three vertical dots (`⋮`) and select
-       "Edit Permissions".
-
-        ![Opening Gitpod's settings in their code
-        editor.](images/gitpod-git-providers.png)
-    1. In the list, tick "public\_repo", which gives
-       your Gitpod account "write access to code in public repositories
-       and organizations" on GitHub. (There is another permission that
-       you have to enable for access to code if you've chosen to make your repository private)
-
-        ![Opening Gitpod's settings in their code
-        editor.](images/gitpod-edit-permissions.png)
-    1. When you select "Update Permissions", you will see a prompt from
-       GitHub asking you to approve the changes, which you will need to
-       do to allow Gitpod to push your work on Gitpod to GitHub.
-
     <h3>Add your changes to the local repository</h3>
 
     (If you know how to use command-line Git, this works within
-    Gitpod's terminal if you do not want to use Visual Studio Code's
+    GitHub's terminal if you do not want to use Visual Studio Code's
     Source Control feature.)
 
-    Back in the Gitpod workspace, open the Source Control panel by
+    Back in the GitHub codespace, open the Source Control panel by
     selecting the icon that has round dots connected by lines on the
     left-hand side. It should be below the magnifying glass icon.
 
     ![Opening Source Control in
-    Gitpod.](images/gitpod-source-control.png)
+    GitHub.](images/getting-started-codespaces-stage-changes.png)
 
     When files in the repository are edited and then saved, Source
-    Control should list those changes. Note that Gitpod's Visual Studio
-    Code has Auto Save enabled by default. If you left-click on a file
+    Control should list those changes. Note that Visual Studio Code in
+    the codespace has Auto Save enabled by default. If you left-click on a file
     in Source Control, you'll see how your copy of the file has changed
     from the previous repository state. If you hover over a file in
     Source Control under "Changes", you can propose to add the changes
     to the repository by clicking the `+` icon next to the filename.
     These "staged" changes then appear in the "Staged Changes" section.
 
-    ![Staging changes in Gitpod.](images/gitpod-stage-changes.png)
-
     Staged changes are changes that you are proposing to include in the next *commit* of
     this study repository. These could be modifications of existing
     files or entirely new files that you include.
 
-    It is also possible to "Unstage Changes" if you accidentally stage a
+    It is also possible to "Discard Changes" if you accidentally stage a
     file that you do not want to include. You can do this by hovering
     over a file listed in the "Staged Changes" section and clicking the
     `-` icon next to the filename.
 
-    ![Unstaging changes in Gitpod.](images/gitpod-unstage-changes.png)
-
     When you've finished staging all your changes, you are now ready to
-    make the new commit. Click the orange Commit button, which will open
+    make the new commit. Click the green Commit button, which will open
     and editor for you to type a commit message.  Type a message to describe
     the staged changes. When ready, you can then click the tick icon to
     accept the commit message and *commit* the staged changes to
-    to add them to the repository as stored in the workspace.
+    to add them to the repository as stored in the codespace.
 
-    ![Committing changes in Gitpod.](images/gitpod-commit.png)
+    ![Committing changes in GitHub.](images/getting-started-codespaces-commit-message.png)
 
     <h3>Push the changes to GitHub</h3>
 
-    The changes have been stored as a new commit in the workspace's
+    The changes have been stored as a new commit in the codespace's
     *local* copy of the repository. We now need to *push* the
     repository to GitHub to make the changes show up there.
 
@@ -737,7 +705,10 @@ the new commit.
     "Push". This should submit your changes to the GitHub repository that
     you created earlier.
 
-    ![Pushing changes to GitHub.](images/gitpod-push-to-github.png)
+    ![Pushing changes to GitHub.](images/getting-started-codespaces-push-to-github.png)
+
+    You will see a prompt: 'This action will pull and push commits from
+    and to "origin/main".' — click OK.
 
     (You may see a prompt: "Would you like Code to periodically run `git
     fetch`?" You can ignore this or select "Ask me later" for the
@@ -751,25 +722,25 @@ the new commit.
        your text editor and save them locally, you also see the changes in
        GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
        checkbox at the top of the list.<br>
-      ![Committing files with GitHub Desktop.](images/commit-all.png)
+      ![Committing files with GitHub Desktop.](images/getting-started-github-desktop-commit-all.png)
     1. At the bottom of the list of changes, in the **Summary** field, type a short,
        meaningful description of the changes (this is called the *commit message*).
        Optionally, you can add more information about the change in the
        **Description** field. Press the blue button to make the commit.<br>
-      ![Writing a commit message with GitHub Desktop.](images/commit-message.png)
+      ![Writing a commit message with GitHub Desktop.](images/getting-started-github-desktop-commit-message.png)
     1. Click **Push origin** to push your local changes to the remote repository on
-       GitHub ![Pushing changes to GitHub with GitHub Desktop.](images/push-to-github.png)
+       GitHub ![Pushing changes to GitHub with GitHub Desktop.](images/getting-started-github-desktop-push-to-github.png)
 
 ### Check that the automated tests pass
 
 Visit your repository on GitHub's site. Click on the **Actions** tab
-![The GitHub Actions tab in a repository.](images/github-actions-tab.png)
+![The GitHub Actions tab in a repository.](images/getting-started-github-actions-tab.png)
 
 You'll see a *Workflow* running with the *commit message* of your last
 commit. The workflow verifies that the command `opensafely run run_all` can
 run successfully. If it's yellow, it's still running. If it's red, it
 has failed. If it's green, it has succeeded. You want it to be green!
-![A list of workflows in GitHub Actions.](images/github-running-workflow.png)
+![The GitHub Actions tab showing a successful workflow.](images/getting-started-github-actions-workflow-success.png)
 
 ## 7. Next steps
 
