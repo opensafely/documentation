@@ -168,7 +168,7 @@ The `opensafely` command line software will now automatically use this Stata lic
 
 ### Python
 
-The Docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/requirements.txt).
+The Docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v1/requirements.txt).
 
 ### R
 
