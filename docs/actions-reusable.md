@@ -81,7 +81,7 @@ if __name__ == "__main__":
 When developing a reusable action, just as when developing a scripted action, the action's dependencies are made available by the runtime; they are not made available by the action.
 
 * The Python runtime is provided by [`python-docker`](https://github.com/opensafely-core/python-docker).
-  Its dependencies are in [*requirements.txt*](https://github.com/opensafely-core/python-docker/blob/main/requirements.txt).
+  Its dependencies are in [*requirements.txt*](https://github.com/opensafely-core/python-docker/blob/main/v1/requirements.txt).
   In practice, this means that a Python action's *requirements.txt* is ignored.
 * The R runtime is provided by [`r-docker`](https://github.com/opensafely-core/r-docker).
   Its dependencies are in [*packages.csv*](https://github.com/opensafely-core/r-docker/blob/master/packages.csv).
