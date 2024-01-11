@@ -287,6 +287,7 @@ Please run through this checklist before making a review request.
 4. Have you [redacted any low counts](#redacting-counts-less-than-or-equal-to-7)?
 5. Have you [rounded any counts](#rounding-counts) (including [counts underlying rates](#rounding-rates))?
 6. Have you supplied underlying counts for all of your results?
+7. Are all of the outputs clearly described?
     * Is the filename sensible and is the filepath provided in the request form correct?
     * Have you provided all of the context needed to review each output in isolation in the request form?
     * Have you described the disclosure controls you have applied to each output?
