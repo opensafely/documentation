@@ -220,9 +220,9 @@ mkdocs-material-extensions==1.3 \
     --hash=sha256:0297cc48ba68a9fdd1ef3780a3b41b534b0d0df1d1181a44676fda5f464eeadc \
     --hash=sha256:f0446091503acb110a7cab9349cbc90eeac51b58d1caa92a704a81ca1e24ddbd
     # via mkdocs-material
-mkdocs-multirepo-plugin==0.6.3 \
-    --hash=sha256:6271cf0cbdbbdc4498c7786b4349fdec367dc889a40326d04c2244db0891ef26 \
-    --hash=sha256:9a5052d8da8b7dff0c600583004af64ff434cef690b414ec1fe183ddc7735ca3
+mkdocs-multirepo-plugin==0.7.0 \
+    --hash=sha256:1034fc2aadafedb9d789eb2fb9181b5121c297f7e123beebd51c19e1e6ee94e5 \
+    --hash=sha256:efd70eb4ef4fdffab5e3af1d5d4da31d0463cbdbe5ea539cea31fbaa153c6fef
     # via -r requirements.prod.in
 mkdocs-table-reader-plugin==2.0.3 \
     --hash=sha256:7d1abb3838ac2ab7b1a5a5cc7f40a4e966a77defa7a7ae1f2137efd185b96752 \
