@@ -94,22 +94,22 @@ At the moment, when a user wants to run code in two backends, they request via t
 ### Examples
 
 _Trends and clinical characteristics of COVID-19 vaccine recipients: a federated analysis of 57.9 million patients' primary care records in situ using OpenSAFELY_
-British Journal of General Practice [https://doi.org/10.3399/bjgp.2021.0376](https://doi.org/10.3399/bjgp.2021.0376)
+British Journal of General Practice <https://doi.org/10.3399/bjgp.2021.0376>
 
 _Recording of "COVID-19 vaccine declined": a cohort study on 57.9 million National Health Service patient's records in situ using OpenSAFELY, England, 8 December 2020 to 25 May 2021_
-Eurosurveillance [https://doi.org/10.2807/1560-7917.ES.2022.27.33.2100885](https://doi.org/10.2807/1560-7917.ES.2022.27.33.2100885)
+Eurosurveillance <https://doi.org/10.2807/1560-7917.ES.2022.27.33.2100885>
 
 _Potentially inappropriate prescribing of DOACs to people with mechanical heart valves: A federated analysis of 57.9 million patients' primary care records in situ using OpenSAFELY_
-Thrombosis Research [https://doi.org/10.1016/j.thromres.2022.01.023](https://doi.org/10.1016/j.thromres.2022.01.023)
+Thrombosis Research <https://doi.org/10.1016/j.thromres.2022.01.023>
 
 _Changes in English medication safety indicators throughout the COVID-19 pandemic: a federated analysis of 57 million patients' primary care records in situ using OpenSAFELY_
 BMJ Medicine <https://doi.org/10.1136/bmjmed-2022-000392>
 
 _Clinical coding of long COVID in English primary care: a federated analysis of 58 million patient records in situ using OpenSAFELY_
-British Journal of General Practice - [https://doi.org/10.3399/BJGP.2021.0301](https://doi.org/10.3399/BJGP.2021.0301)
+British Journal of General Practice - <https://doi.org/10.3399/BJGP.2021.0301>
 
 _Eleven key measures for monitoring general practice clinical activity during COVID-19 using federated analytics on 48 million adults' primary care records through OpenSAFELY_
-eLife - [https://doi.org/10.7554/eLife.84673](https://doi.org/10.7554/eLife.84673)
+eLife - <https://doi.org/10.7554/eLife.84673>
 
 _The impact of the COVID-19 pandemic on Antipsychotic Prescribing in individuals with autism, dementia, learning disability, serious mental illness or living in a care home: A federated analysis of 59 million patients' primary care records in situ using OpenSAFELY_
 BMJ Ment Health - <https://doi.org/10.1136/bmjment-2023-300775>
