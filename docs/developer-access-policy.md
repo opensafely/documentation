@@ -37,7 +37,7 @@ The test project pipelines are necessary to:
 
 ### What
 
-The OpenSAFELY team maintains a small set of test studies in the [OpenSAFELY Testing](https://jobs.opensafely.org/datalab/opensafely-testing/) project.
+The OpenSAFELY team maintains a small set of test studies in the [OpenSAFELY Internal](https://jobs.opensafely.org/opensafely-internal/) project.
 These studies have pipelines that use the standard OpenSAFELY tooling,
 but which have been specially designed to test and assess the platform’s functionality rather than to answer research questions.
 
