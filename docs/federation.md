@@ -103,7 +103,7 @@ _Potentially inappropriate prescribing of DOACs to people with mechanical heart 
 Thrombosis Research [https://doi.org/10.1016/j.thromres.2022.01.023](https://doi.org/10.1016/j.thromres.2022.01.023)
 
 _Changes in English medication safety indicators throughout the COVID-19 pandemic: a federated analysis of 57 million patients' primary care records in situ using OpenSAFELY_
-MedRxiv Preprint [https://doi.org/10.1101/2022.05.05.22273234](https://doi.org/10.1101/2022.05.05.22273234)
+BMJ Medicine <https://doi.org/10.1136/bmjmed-2022-000392>
 
 _Clinical coding of long COVID in English primary care: a federated analysis of 58 million patient records in situ using OpenSAFELY_
 British Journal of General Practice - [https://doi.org/10.3399/BJGP.2021.0301](https://doi.org/10.3399/BJGP.2021.0301)
@@ -112,7 +112,7 @@ _Eleven key measures for monitoring general practice clinical activity during CO
 eLife - [https://doi.org/10.7554/eLife.84673](https://doi.org/10.7554/eLife.84673)
 
 _The impact of the COVID-19 pandemic on Antipsychotic Prescribing in individuals with autism, dementia, learning disability, serious mental illness or living in a care home: A federated analysis of 59 million patients' primary care records in situ using OpenSAFELY_
-MedRxiv Preprint - [https://doi.org/10.1101/2023.01.05.23284214](https://doi.org/10.1101/2023.01.05.23284214)
+BMJ Ment Health - <https://doi.org/10.1136/bmjment-2023-300775>
 
 
 ## Get in touch!
