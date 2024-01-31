@@ -15,3 +15,12 @@
   height: 100%;
   border: 0;
 }
+
+.youtube-embed {
+  display: block;
+  padding: 1rem 0;
+
+  lite-youtube {
+    margin: 0 auto;
+  }
+}
