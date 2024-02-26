@@ -181,9 +181,9 @@ If you are a member of a project you will see an `Edit` button near the top of y
 
 ![Project edit button](./images/project-edit-button.png)
 
-Select your project status using the options in the dropdown box.
+Select your project status using the options in the dropdown box. Further details should be provided in the `Status description` field. This field supports Markdown, so you can use this to provide links to any papers or reports that have been published (e.g. `[Preprint](https://www.medrxiv.org/content/10.1101/2022.10.17.22281058v2)`). See [this guide](https://www.markdownguide.org/getting-started/) for more information on how to use Markdown.
 
-Further details should be provided in the `Status description` field. Guidance for each status type is provided below.
+Guidance for each status type is provided below:
 
 * `Postponed`: provide the reasons why the project has been postponed. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
 * `Retired`: provide the reasons why the project has been retired and provide a brief report summarising any results. You must also contact [our IG team](mailto:applications@opensafely.org) to let them know.
