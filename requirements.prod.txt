@@ -228,11 +228,12 @@ mkdocs-table-reader-plugin==2.1.0 \
     --hash=sha256:b98041627b4982c5a5c6dac6f2e97767c53658771eed926057aa48c61a4e494f \
     --hash=sha256:cef5a1127e2c04955d5716e67ede66971a0a5ee3dd5386af6cba53c707c78b8b
     # via -r requirements.prod.in
-mkdocstrings[python]==0.24.0 \
-    --hash=sha256:222b1165be41257b494a9d29b14135d2b7ca43f38161d5b10caae03b87bd4f7e \
-    --hash=sha256:f4908560c10f587326d8f5165d1908817b2e280bbf707607f601c996366a2264
+mkdocstrings[python]==0.24.1 \
+    --hash=sha256:b4206f9a2ca8a648e222d5a0ca1d36ba7dee53c88732818de183b536f9042b5d \
+    --hash=sha256:cc83f9a1c8724fc1be3c2fa071dd73d91ce902ef6a79710249ec8d0ee1064401
     # via
     #   -r requirements.prod.in
+    #   mkdocstrings
     #   mkdocstrings-python
 mkdocstrings-python==0.8.3 \
     --hash=sha256:4e6e1cd6f37a785de0946ced6eb846eb2f5d891ac1cc2c7b832943d3529087a7 \
