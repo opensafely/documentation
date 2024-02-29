@@ -742,7 +742,15 @@ run successfully. If it's yellow, it's still running. If it's red, it
 has failed. If it's green, it has succeeded. You want it to be green!
 ![The GitHub Actions tab showing a successful workflow.](images/getting-started-github-actions-workflow-success.png)
 
-## 7. Next steps
+## 7. Tidy up
+
+=== "Web browser (online)"
+    If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](./github-codespaces.md/#managing-codespaces) page.
+
+=== "Windows (local)"
+    There's nothing to do here!
+
+## 8. Next steps
 
 Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it
