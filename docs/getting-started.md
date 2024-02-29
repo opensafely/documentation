@@ -458,7 +458,7 @@ automatically save the edits to files that you make.**
 1. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="15"
 from ehrql import create_dataset
-from ehrql.tables.beta.tpp import patients, practice_registrations
+from ehrql.tables.tpp import patients, practice_registrations
 
 dataset = create_dataset()
 
