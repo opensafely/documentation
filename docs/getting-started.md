@@ -95,22 +95,22 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
     are not necessary to follow if you are using a web browser to run
     OpenSAFELY, even if that web browser is running on Windows.
 
-<!-- The generated table of contents does not dynamically adjust according to selected tab for tabbed contents. Use actual heading tags to prevent headings in tabbed sections from appearing in the table of contents. -->
-    <h3>Why OpenSAFELY requires several pieces of software to run</h3>
 
-    Some of the software needed is so you can execute code on your computer
-    in **exactly the same way** it is run in the secure environment: even a slight
-    mismatch in the versions of the software could cause bugs and delays.
+### Why OpenSAFELY requires several pieces of software to run
 
-    OpenSAFELY is also designed to encourage analysts to adopt best-practice
-    software development processes, like using `git` for version control.  If
-    you're new to these concepts, there may be quite a lot to learn, and you'll need
-    to use further software to work with them. The investment will be worthwhile:
-    you'll find your software quality and efficiency will benefit hugely.
+Some of the software needed is so you can execute code on your computer
+in **exactly the same way** it is run in the secure environment: even a slight
+mismatch in the versions of the software could cause bugs and delays.
 
-    This tutorial is, therefore, a very fast tour through all the **essential**
-    components required to get up and running. When you've finished, you'll have
-    all the basics in place to continue your learning.
+OpenSAFELY is also designed to encourage analysts to adopt best-practice
+software development processes, like using `git` for version control.  If
+you're new to these concepts, there may be quite a lot to learn, and you'll need
+to use further software to work with them. The investment will be worthwhile:
+you'll find your software quality and efficiency will benefit hugely.
+
+This tutorial is, therefore, a very fast tour through all the **essential**
+components required to get up and running. When you've finished, you'll have
+all the basics in place to continue your learning.
 
 ## 1. Set up GitHub
 
@@ -458,7 +458,7 @@ automatically save the edits to files that you make.**
 1. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="15"
 from ehrql import create_dataset
-from ehrql.tables.beta.tpp import patients, practice_registrations
+from ehrql.tables.tpp import patients, practice_registrations
 
 dataset = create_dataset()
 
@@ -742,7 +742,15 @@ run successfully. If it's yellow, it's still running. If it's red, it
 has failed. If it's green, it has succeeded. You want it to be green!
 ![The GitHub Actions tab showing a successful workflow.](images/getting-started-github-actions-workflow-success.png)
 
-## 7. Next steps
+## 7. Tidy up
+
+=== "Web browser (online)"
+    If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](./github-codespaces.md/#managing-codespaces) page.
+
+=== "Windows (local)"
+    There's nothing to do here!
+
+## 8. Next steps
 
 Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it
