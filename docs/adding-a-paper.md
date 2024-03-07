@@ -13,6 +13,8 @@ paper: "Title of the paper"
 description: "Description of the paper"
 cite: "How to cite this paper"
 link: "https://doi.org/..."
+project: Approved project number (see https://www.opensafely.org/approved-projects/)
+repo: "OpenSAFELY GitHub repository name"
 ---
 
 ## Abstract
