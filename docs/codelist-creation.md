@@ -39,7 +39,7 @@ The general workflow for creating codelists from scratch with the builder is as 
 1. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development).
 1. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
 previous research papers.
-1. When logged into [OpenCodelists](https://www.opencodelists.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
+1. When logged into [OpenCodelists](https://www.opencodelists.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist. You can create the codelist under your user account or under an organisation. If you make it under your user account, you will be able to move it to an organisation at a later date by [editing the codelist metadata](#editing-existing-codelists).
 1. Add/remove terms to your codelists to end up with a list.
 1. Save the list as a draft.
 1. Clicking "Save changes" makes the codelist available on <https://www.opencodelists.org> as a draft. Share this link to the GitHub issue.
@@ -121,7 +121,7 @@ How contributions to codelists are acknowledged -- to be agreed.
 * Go to an existing Codelist page.
 * Click Edit metadata.
 * Edit the relevant fields
-    * Add, remove, or edit the Description, Methodology, References and SignOffs as needed.
+    * Add, remove, or edit the Owner, Description, Methodology, References and SignOffs as needed.
 * Click Submit
 
 ## Publishing a Codelist Version
