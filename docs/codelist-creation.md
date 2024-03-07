@@ -20,6 +20,16 @@ Each codelist must use exactly one of these systems.
 
 OPCS-4 and dm+d codes are not currently supported by the OpenCodelists builder. However, it is possible to [manually upload an existing OPCS-4 or dm+d codelist](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
 
+## Organisations
+
+Codelists on OpenCodelists can be owned by individuals or by organisations. Creating codelists under an organisation means that the codelist is easier to find and reuse. Only codelists created by organisations are included in search results on OpenCodelists.
+
+Any OpenCodelists user with an account can create a codelist. However, in order to create or edit codelists on behalf of an organisation, you must be a member of that organisation. 
+
+If you are a member of an OpenCodelists organisation, you will see a [My organisations](https://www.opencodelists.org/organisations/) menu option, where you can view codelists that are owned by your organisations, or that are waiting for review.
+
+To join an organisation, please contact your organisation administrator. Your adminstrator will need your OpenCodelists username or email address in order to add you to the organisation. If you don't know who your organisation administrator is or you don't already have an organisation, please ask your co-pilot.
+
 ## Workflow
 
 The general workflow for creating codelists from scratch with the builder is as follows:
@@ -29,7 +39,7 @@ The general workflow for creating codelists from scratch with the builder is as 
 1. Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development).
 1. Decide your key terms to search for codes. Good source of key words might be a previous codelist, clinicians or experts in the field and
 previous research papers.
-1. When logged into [OpenCodelists](https://www.opencodelists.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist.
+1. When logged into [OpenCodelists](https://www.opencodelists.org/accounts/login/)  click "my codelists" and then "create new codelist". There is a short video at the [bottom of this page](#medvid) on how to use the builder to develop a medication codelist. You can create the codelist under your user account or under an organisation. If you make it under your user account, you will be able to move it to an organisation at a later date by [editing the codelist metadata](#editing-existing-codelists).
 1. Add/remove terms to your codelists to end up with a list.
 1. Save the list as a draft.
 1. Clicking "Save changes" makes the codelist available on <https://www.opencodelists.org> as a draft. Share this link to the GitHub issue.
@@ -111,7 +121,7 @@ How contributions to codelists are acknowledged -- to be agreed.
 * Go to an existing Codelist page.
 * Click Edit metadata.
 * Edit the relevant fields
-    * Add, remove, or edit the Description, Methodology, References and SignOffs as needed.
+    * Add, remove, or edit the Owner, Description, Methodology, References and SignOffs as needed.
 * Click Submit
 
 ## Publishing a Codelist Version
