@@ -20,6 +20,16 @@ Each codelist must use exactly one of these systems.
 
 OPCS-4 and dm+d codes are not currently supported by the OpenCodelists builder. However, it is possible to [manually upload an existing OPCS-4 or dm+d codelist](https://www.opencodelists.org/docs/#creating-a-codelist-from-a-csv-file).
 
+## Organisations
+
+Codelists on OpenCodelists can be owned by individuals or by organisations. Creating codelists under an organisation means that the codelist easier to find and reuse by both members of your organisation and those in other organisations. Only codelists created by organisations are included in search results on OpenCodelists.
+
+Any OpenCodelists user with an account can create a codelist. However, in order to create or edit codelists on behalf of an organisation, you must be a member of that organisation. 
+
+If you are a member of an OpenCodelists organisation, you will see a [My organisations](https://www.opencodelists.org/organisations/) menu option, where you can view codelists that are owned by your organisations, or that are waiting for review.
+
+To join an organisation, please contact your organisation administrator. Your adminstrator will need your OpenCodelists username or email address in order to add you to the organisation. If you don't know who your organisation administrator is or you don't already have an organisation, please ask your co-pilot.
+
 ## Workflow
 
 The general workflow for creating codelists from scratch with the builder is as follows:
