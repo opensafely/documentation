@@ -159,7 +159,7 @@ authentication](https://docs.github.com/en/github/authenticating-to-github/secur
 Here, you'll copy our OpenSAFELY research template to your own GitHub
 account, for developing your own study:
 
-1. Click on the link below to create new repository based from our template.
+1. Click on the link below to create new repository based on our template.
    You may need to log in to GitHub if you are not already logged in:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
@@ -476,7 +476,7 @@ dataset.age = patients.age_on(index_date)
 Lines 8-12 mean "*I'm interested in all patients who were registered at a practice
 on the index date*"; line 14 "*Give me a column of data corresponding
 to the sex of each patient*"; and line 15 "*Give me a column of data corresponding
-to the age of each patient on the given date".
+to the age of each patient on the given date*".
 3. If you run:
 
    ```sh
