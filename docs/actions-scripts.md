@@ -110,7 +110,7 @@ These are restricted to types of file that are likely to contain summary data, r
 | Type | Formats |
 | --- | --- |
 | Text |  `.txt`, `.log`, `.md` |
-| Data | `.csv`, `.tsv`, `.json` |
+| Data | `.csv`, `.json` |
 | Images | `.png`, `.jpeg`, `.svgz` |
 | Reports | `.html`, `.pdf` |
 
