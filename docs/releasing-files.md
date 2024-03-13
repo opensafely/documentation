@@ -211,6 +211,13 @@ There is also a disclosure control section in our [Q&A forum](https://github.com
 
 ## 2. Requesting release of outputs and (error) log files from the server
 
+!!! warning
+    You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
+
+    - verbal sharing
+    - allowing someone to look over your shoulder
+    - transcribing (e.g., to paper or email)
+    - using screen sharing software or any recording device/software
 
 **Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. Having applied disclosure controls to your aggregated study data you are ready to request their release. Please read the instructions and [checklist](#checklist) below.
 
@@ -345,14 +352,6 @@ All approved OpenSAFELY outputs are released to the workspace they belong to on 
 View your released outputs by navigating to "Released Outputs" in the "Releases" section of your workspace on the Jobs site.
 
 These outputs can be shared with project collaborators and published in line with our [data sharing and publication policy](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). Please note that you should check this for each dataset that you have used: rules may vary.
-
-!!! warning
-    You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
-
-    - verbal sharing
-    - allowing someone to look over your shoulder
-    - transcribing (e.g., to paper or email)
-    - using screen sharing software or any recording device/software
 
 ### Running further analyses on released outputs
 
