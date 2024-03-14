@@ -252,7 +252,7 @@ For error logs, they should only be requested for output in exceptional circumst
 
 Only certain file types will be reviewed and released from the secure server. See below for details on each type:
 
-* **Tables** - Tables should be produced as either `csv` or `tsv` files.
+* **Tables** - Tables should be produced as `csv` files.
     * Make sure that any column names are understandable for reviewers.
     * Limit the number of columns or rows to only what is necessary.
 * **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
@@ -323,7 +323,7 @@ Once reviewed, the completed review request will be emailed back to you. We aim 
 
 Below are the most common problems encountered by output checkers when reviewing output review requests. **Avoiding these issues makes it more likely your files can be released first time round**, saving reviewer time and allowing quicker file release for you and other researchers.
 
-1. **There are unrounded counts in the outputs**. All counts should be [rounded](#rounding-counts). This includes rounding counts prior to them being used to calculate further statistics, such as percentages or odds ratios. Commonly raw counts are rounded, but downstream statistics are calculated using the raw counts rather than the rounded counts. Unrounded counts account for **~30%** of rejections. 
+1. **There are unrounded counts in the outputs**. All counts should be [rounded](#rounding-counts). This includes rounding counts prior to them being used to calculate further statistics, such as percentages or odds ratios. Commonly raw counts are rounded, but downstream statistics are calculated using the raw counts rather than the rounded counts. Unrounded counts account for **~30%** of rejections.
 2. **Insufficicent context is provided for the outputs**. **~25%** of rejected outputs are due to insufficient context. Make sure you have provided all of the context needed to review each output in isolation in the request form. Common errors include:
     * Stating the incorrect file path. You should check all file paths point to the relevant files within your `release` folder before making a request.
     * Files included in the review form being missing from the `review` folder.
