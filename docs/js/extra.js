@@ -31,15 +31,16 @@ function getTextWithoutPromptAndOutput(targetSelector) {
 
 function patchCopyCodeButtons() {
   // select all "copy" buttons whose target selector is a <code> element
-  codeCopyButtons = document.querySelectorAll(
-    'button.md-clipboard[data-clipboard-target$="code"]',
+  [
+    ...document.querySelectorAll(
+      `button.md-clipboard[data-clipboard-target$="code"]`,
+    ),
+  ].map((btn) =>
+    btn.setAttribute(
+      "data-clipboard-text",
+      getTextWithoutPromptAndOutput(btn.dataset.clipboardTarget),
+    ),
   );
-  for (const btn of codeCopyButtons) {
-    const codeTextToCopy = getTextWithoutPromptAndOutput(
-      btn.dataset.clipboardTarget,
-    );
-    btn.dataset.clipboardText = codeTextToCopy;
-  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
