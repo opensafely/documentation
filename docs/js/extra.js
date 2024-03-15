@@ -16,17 +16,20 @@ function getTextWithoutPromptAndOutput(targetSelector) {
   // exclude "Generic Prompt" and "Generic Output" spans from copy
   const excludedClasses = ["gp", "go"];
 
-  let text = "";
-  for (const node of targetElement.childNodes) {
+  const clipboardText = [];
+  [...targetElement.childNodes].map((node) => {
+    // If the element does not contain the matching class,
+    // add to the clipboard text array
     if (
-      (node.nodeType == Node.TEXT_NODE) |
-      (node.nodeType == Node.ELEMENT_NODE &&
-        !excludedClasses.includes(node.className))
+      !excludedClasses.some((className) => node?.classList?.contains(className))
     ) {
-      text += node.textContent;
+      return clipboardText.push(node.textContent);
     }
-  }
-  return text;
+
+    return null;
+  });
+
+  return clipboardText.join("");
 }
 
 function patchCopyCodeButtons() {
