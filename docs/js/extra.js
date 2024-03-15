@@ -29,7 +29,7 @@ function getTextWithoutPromptAndOutput(targetSelector) {
     return null;
   });
 
-  return clipboardText.join("");
+  return clipboardText.join("").trim();
 }
 
 function patchCopyCodeButtons() {
