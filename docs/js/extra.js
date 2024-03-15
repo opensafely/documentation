@@ -10,23 +10,6 @@ if (document.location.hostname === domain) {
   document.head.appendChild(script);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  patchCopyCodeButtons();
-});
-
-function patchCopyCodeButtons() {
-  // select all "copy" buttons whose target selector is a <code> element
-  codeCopyButtons = document.querySelectorAll(
-    'button.md-clipboard[data-clipboard-target$="code"]',
-  );
-  for (const btn of codeCopyButtons) {
-    const codeTextToCopy = getTextWithoutPromptAndOutput(
-      btn.dataset.clipboardTarget,
-    );
-    btn.dataset.clipboardText = codeTextToCopy;
-  }
-}
-
 function getTextWithoutPromptAndOutput(targetSelector) {
   const targetElement = document.querySelector(targetSelector);
 
@@ -45,3 +28,20 @@ function getTextWithoutPromptAndOutput(targetSelector) {
   }
   return text;
 }
+
+function patchCopyCodeButtons() {
+  // select all "copy" buttons whose target selector is a <code> element
+  codeCopyButtons = document.querySelectorAll(
+    'button.md-clipboard[data-clipboard-target$="code"]',
+  );
+  for (const btn of codeCopyButtons) {
+    const codeTextToCopy = getTextWithoutPromptAndOutput(
+      btn.dataset.clipboardTarget,
+    );
+    btn.dataset.clipboardText = codeTextToCopy;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  patchCopyCodeButtons();
+});
