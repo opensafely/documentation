@@ -186,8 +186,8 @@ If the `--output-dir` argument is configured, `generate_measures` expects the in
     As we saw, you can extract the data in a compressed output format, such as `csv.gz`, `feather`, `dta`, or `dta.gz`.
     For example:
 
-    ```sh
-    cohortextractor:latest generate_cohort --output-format=csv.gz
+    ```shell-session
+    $ cohortextractor:latest generate_cohort --output-format=csv.gz
     ```
 
     If you do, then the `generate_measures` command will automatically work with this compressed output format;

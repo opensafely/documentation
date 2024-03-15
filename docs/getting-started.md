@@ -234,7 +234,7 @@ account, for developing your own study:
     prompt `$` and pressing ++enter++. You should see an output that looks
     something like:
 
-    ```
+    ```shell-session
     $ opensafely
     usage: opensafely [-h] [--version] COMMAND ...
 
@@ -356,7 +356,7 @@ study.
 Now you're ready to run your first study. Ensure your current directory is your newly-cloned
 study repository, and run:
 
-```sh
+```shell-session
 $ opensafely run run_all
 ```
 
@@ -479,7 +479,7 @@ to the sex of each patient*"; and line 15 "*Give me a column of data correspondi
 to the age of each patient on the given date*".
 3. If you run:
 
-   ```sh
+   ```shell-session
    $ opensafely run run_all
    ```
 
@@ -493,7 +493,7 @@ to the age of each patient on the given date*".
    We can use the `--force-run-dependencies` (or `-f`) option to force
    the CSV file to be created again.
 
-   ```
+   ```shell-session
    $ opensafely run run_all --force-run-dependencies
    ```
 
