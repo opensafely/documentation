@@ -37,7 +37,7 @@ There are multiple ways you can install Docker:
 It is useful to use [pipx](https://github.com/pypa/pipx) to install Python applications.
 
 pipx installs Python software into a Python virtual environment.
-pipx allows you to isolate Python package installations for different software, 
+pipx allows you to isolate Python package installations for different software,
 and still easily run that software.
 
 Install the [OpenSAFELY CLI](opensafely-cli.md) with pipx:
@@ -63,7 +63,7 @@ pipx install opensafely
 Test the installation of OpenSAFELY CLI.
 This should print out the usage and available sub commands:
 
-```
+``` shell-session
 $ opensafely --help
 usage: opensafely [-h] [--version] COMMAND ...
 
