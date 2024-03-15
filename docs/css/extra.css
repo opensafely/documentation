@@ -162,3 +162,7 @@ body {
 .md-header-nav__source .md-source__facts {
   display: none;
 }
+
+.highlight .gp, .highlight .go { /* Generic.Prompt, Generic.Output */
+  user-select: none;
+}
