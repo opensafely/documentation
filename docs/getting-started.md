@@ -390,7 +390,7 @@ based on the dataset definition at `analysis/dataset_definition.py`.
 
 To view it, first run `opensafely unzip output`, then open that
 file (by left-clicking the filename in Visual Studio Code's Explorer, or
-software like Excel). You'll see that it contains rows for 500
+software like Excel). You'll see that it contains rows for ten
 randomly-generated dummy patients.
 
 ### Accessing files
