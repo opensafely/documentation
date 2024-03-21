@@ -1,5 +1,5 @@
 {
         "name": "Documentation development",
         "dockerFile": "Dockerfile",
-        "updateContentCommand": "PYTHON_VERSION= just devenv"
+        "onCreateCommand": "PYTHON_VERSION= just devenv"
 }
