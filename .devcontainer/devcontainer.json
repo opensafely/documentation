@@ -1,13 +1,5 @@
 {
         "name": "Documentation development",
         "dockerFile": "Dockerfile",
-        "onCreateCommand": "PYTHON_VERSION= just devenv",
-
-        "customizations": {
-                "vscode": {
-                        "settings": {
-                                "files.autoSaveDelay": 60000
-                        }
-                }
-        }
+        "onCreateCommand": "PYTHON_VERSION= just devenv"
 }
