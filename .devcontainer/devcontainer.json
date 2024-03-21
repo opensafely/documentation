@@ -1,6 +1,5 @@
 {
         "name": "Documentation development",
         "dockerFile": "Dockerfile",
-        "updateContentCommand": "PYTHON_VERSION= just devenv",
-        "postStartCommand": "PYTHON_VERSION= just run"
+        "updateContentCommand": "PYTHON_VERSION= just devenv"
 }
