@@ -1,4 +1,3 @@
 {
-    "editor.wordWrap": "on",
-    "files.autoSaveDelay": 60000
+    "editor.wordWrap": "on"
 }
