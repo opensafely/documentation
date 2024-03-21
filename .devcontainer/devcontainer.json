@@ -6,7 +6,7 @@
         "customizations": {
                 "vscode": {
                         "settings": {
-                                "files.autoSaveDelay": 60000
+                                "files.autoSave": "off"
                         }
                 }
         }
