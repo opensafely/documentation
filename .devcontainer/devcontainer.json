@@ -3,7 +3,11 @@
         "dockerFile": "Dockerfile",
         "onCreateCommand": "PYTHON_VERSION= just devenv",
 
-        "settings": {
-            "files.autoSave": "off"
+        "customizations": {
+                "vscode": {
+                        "settings": {
+                                "files.autoSave": "off"
+                        }
+                }
         }
 }
