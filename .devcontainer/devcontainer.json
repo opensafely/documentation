@@ -1,5 +1,9 @@
 {
         "name": "Documentation development",
         "dockerFile": "Dockerfile",
-        "onCreateCommand": "PYTHON_VERSION= just devenv"
+        "onCreateCommand": "PYTHON_VERSION= just devenv",
+
+        "settings": {
+            "files.autoSave": "off"
+        }
 }
