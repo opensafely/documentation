@@ -45,7 +45,9 @@ nav:
         - Create a draft: reports/create-a-draft.md
         - Review process: reports/review-process.md
         - Publishing a report: reports/publish-a-report.md
-      - Project completion: project-completion.md
+      - Managing your OpenSAFELY project:
+        - Telling us about changes to your project: project-changes.md
+        - Project completion: project-completion.md
       - Adding your pre-print/paper to OpenSAFELY.org: adding-a-paper.md
       - Information for system integrators: system-integration.md
       - Legacy:
