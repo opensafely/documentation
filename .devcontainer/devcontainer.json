@@ -1,0 +1,13 @@
+{
+        "name": "Documentation development",
+        "dockerFile": "Dockerfile",
+        "onCreateCommand": "PYTHON_VERSION= just devenv",
+
+        "customizations": {
+                "vscode": {
+                        "settings": {
+                                "files.autoSave": "off"
+                        }
+                }
+        }
+}
