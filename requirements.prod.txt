@@ -229,9 +229,9 @@ mkdocs-table-reader-plugin==2.1.0 \
     --hash=sha256:b98041627b4982c5a5c6dac6f2e97767c53658771eed926057aa48c61a4e494f \
     --hash=sha256:cef5a1127e2c04955d5716e67ede66971a0a5ee3dd5386af6cba53c707c78b8b
     # via -r requirements.prod.in
-mkdocstrings[python]==0.24.1 \
-    --hash=sha256:b4206f9a2ca8a648e222d5a0ca1d36ba7dee53c88732818de183b536f9042b5d \
-    --hash=sha256:cc83f9a1c8724fc1be3c2fa071dd73d91ce902ef6a79710249ec8d0ee1064401
+mkdocstrings[python]==0.24.2 \
+    --hash=sha256:61440b77542170238099a7d87882c3417897771950e3aafe6e22abff3d1c51fb \
+    --hash=sha256:b91b9cdd9490ef2e8957000bff1d34a4b308b9cd57b10f26169f085def4c6a92
     # via
     #   -r requirements.prod.in
     #   mkdocstrings-python
