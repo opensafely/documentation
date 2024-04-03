@@ -12,6 +12,7 @@ nav:
       - Security: security-levels.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
+      - Type One Opts Outs: type-one-opt-outs.md
       - Contributing: contributing.md
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
