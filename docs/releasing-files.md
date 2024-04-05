@@ -1,14 +1,3 @@
-# "Safe Outputs" and requesting release of files from the Level 4 Server
-
-All data in OpenSAFELY is pseudonymised and all projects and researchers in OpenSAFELY go through an approval process before having any access to the dataset. This ensures the “safe data”, “safe projects” and “safe people” elements of the fives safes framework are met. The technical controls implemented as part of the OpenSAFELY platform ensures that “safe settings” are in place and that risk is minimised in this respect. The application of **disclosure controls** and **output-checking** is part of the “safe outputs” dimension.
-
-Below we cover the 4 key areas of our “safe outputs” activities:
-
-1.  Researchers must only request the release of outputs necessary to fulfil their project purpose and apply disclosure controls to them.
-2.  Researchers then make a request to release the outputs using the “release request form”.
-3.  Two OpenSAFELY output checkers review the output being requested for release.
-4.  OpenSAFELY releases outputs that meet our disclosure rules to the relevant workspace on the Jobs site.
-
 ## 1. Applying disclosure controls to outputs you request for release
 
 The assessment of the risk of re-identification attached to a data item or statistical outputs, and the use of appropriate methods to reduce the disclosure risk, is known as **statistical disclosure control (SDC)**. In OpenSAFELY, researchers must apply SDC at the stage where their aggregated results are ready to be released from the results server (the Level 4 environment) for sharing with collaborators for feedback, or for publication as papers, reports, blogs, etc. Examples of SDC techniques to manage the disclosure risk include redacting (suppressing) low values, rounding values, or redesigning outputs so that sparse table cells, for example, are combined.
