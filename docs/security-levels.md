@@ -65,7 +65,7 @@ This level includes aggregated patient-data (non patient-level data) derived fro
 
 This is the only level that OpenSAFELY users have access to in order to view their aggregated data/results/log files; users do not have unfettered access to any patient-level data and only see aggregated outputs derived from their analysis code, which satisfies the GDPR principle of confidentiality. Researchers are able to use this level to check that the appropriate statistical disclosure controls have been applied to any files intended for release out of the server.
 
-Access to this level is secured via VPN access to a remote desktop. No files are released from the secure environment without undergoing dual independent checking by trained output-checkers for disclosure issues (see the [Safe Outputs section](releasing-files.md))
+Access to this level is secured via VPN access to a remote desktop. No files are released from the secure environment without undergoing dual independent checking by trained output-checkers for disclosure issues (see the [statistical disclosure control section](sdc.md))
 
 ### Where is this data held?
 Data is held within the EHR vendor's secure environment on a specific server, separate from the Level 2 and 3 server.
