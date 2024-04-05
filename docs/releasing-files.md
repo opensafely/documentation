@@ -1,5 +1,3 @@
-## 4. Release of reviewed files
-
 All approved OpenSAFELY outputs are released to the workspace they belong to on the [Jobs site](jobs-site.md).
 
 ### Viewing released outputs
