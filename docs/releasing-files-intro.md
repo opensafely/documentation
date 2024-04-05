@@ -8,3 +8,6 @@ In OpenSAFELY, there are 4 key “Safe Outputs” activities:
 2.  [Requesting release of outputs from the Level 4 server](requesting-file-release.md) that are necessary to fulfil the purpose of a project.
 3.  [Review of the requested outputs](output-checking.md) by two trained OpenSAFELY output checkers.
 4.  [Release of outputs that meet our disclosure rules](releasing-files.md) to the relevant workspace on the [Jobs site](jobs-site.md).
+
+
+---8<-- 'includes/glossary.md'

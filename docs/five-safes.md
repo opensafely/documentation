@@ -7,3 +7,6 @@ OpenSAFELY follows the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/
 * **Safe outputs** - is there any residual risk in outputs being released from the environment?
 
 You can read more about how we use the Five Safes Framework to design the OpenSAFELY platform in our blog post [The ‘Five Safes’ Framework and applying it to OpenSAFELY](https://www.bennett.ox.ac.uk/blog/2023/03/the-five-safes-framework-and-applying-it-to-opensafely/).
+
+
+---8<-- 'includes/glossary.md'
