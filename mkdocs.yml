@@ -10,7 +10,7 @@ nav:
   - About OpenSAFELY:
       - Our philosophy: open-methods.md
       - Security: security-levels.md
-      - Five Safes: five-safes.md
+      - "Safe data access: The Five Safes": five-safes.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
       - Type One Opts Outs: type-one-opt-outs.md
