@@ -41,12 +41,12 @@ nav:
           - Reusable actions: actions-reusable.md
       - Jobs site: jobs-site.md
       - Level 4 server: level-4-server.md
-      - Requesting release of files from the Level 4 server:
+      - Releasing research outputs from the Level 4 server:
         - Overview: releasing-files-intro.md
-        - Applying statistical disclosure controls to your research outputs: sdc.md
+        - Applying statistical disclosure control: sdc.md
         - Requesting release of research outputs: requesting-file-release.md
-        - Review of outputs requested for release: output-checking.md
-        - File release: releasing-files.md
+        - Review process for release requests: output-checking.md
+        - Release of approved outputs: releasing-files.md
       - Reports:
         - Overview: reports/intro.md
         - Create a draft: reports/create-a-draft.md
