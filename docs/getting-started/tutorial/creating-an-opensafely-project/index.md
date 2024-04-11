@@ -454,7 +454,7 @@ automatically save the edits to files that you make.**
    file inside the `analysis` folder. This file contains a dataset definition,
    specifying the population that you'd like to study (dataset rows)
    and what you need to know about them (dataset columns).
-   It is written in [ehrQL](../../../ehrql/).
+   It is written in [ehrQL](../../../ehrql/index.md).
 1. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="15"
 from ehrql import create_dataset
@@ -765,7 +765,7 @@ detail on the subjects covered in this tutorial. For example:
 
 * There is a more complete [guide to the OpenSAFELY command-line
   tool](../../../opensafely-cli.md).
-* The [ehrQL documentation](../../../ehrql/) contains a tutorial for ehrQL,
+* The [ehrQL documentation](../../../ehrql/index.md) contains a tutorial for ehrQL,
   as well as a complete [schema reference](../../../ehrql/reference/schemas.md).
 * You'll find more information about the contents of `project.yaml` in the
   [Actions reference](../../../actions-intro.md).
