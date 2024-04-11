@@ -15,3 +15,7 @@ The only requirements for the tutorial are:
 !!! note
     The tutorial can be completed by anyone interested in how OpenSAFELY works.
     No application or approval process is required to follow the tutorial.
+
+Start the tutorial by visiting the following page:
+
+* [Creating an OpenSAFELY project](creating-an-opensafely-project/index.md)

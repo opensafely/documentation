@@ -30,7 +30,7 @@ OpenSAFELY is a collaboration between the [Bennett Institute for Applied Data Sc
 
 However, anyone can access and use all the OpenSAFELY-specific tools needed to define analysis datasets, generate dummy data, and run analysis scripts in a computational environment that mimics the secure environment where real analyses are run.
 
-All steps in the [Getting Started](getting-started.md) guide can be run by anyone interested in learning more about how code is written and executed in OpenSAFELY.
+All steps in the [Getting Started](getting-started/tutorial/index.md) tutorial can be run by anyone interested in learning more about how code is written and executed in OpenSAFELY.
 
 To use OpenSAFELY, users must know, or be willing to learn, the following programs and tools:
 
@@ -41,7 +41,7 @@ To use OpenSAFELY, users must know, or be willing to learn, the following progra
   For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](actions-pipelines.md#execution-environments) for more information.
 - **Git**
 The workflow is strongly integrated into Git/GitHub.
-As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches. We have simple guidance in our [Getting Started guide](getting-started.md) on this if you have never used this tooling before.
+As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches. We have simple guidance in our [Getting Started tutorial](getting-started/tutorial/index.md) on this if you have never used this tooling before.
 See [git workflow](git-workflow.md) for advice about how to use git effectively.
 <!--We provide a simple tutorial for navigating the OpenSAFELY workflow.-->
 
@@ -60,7 +60,7 @@ See [git workflow](git-workflow.md) for advice about how to use git effectively.
 ## How should I start learning to use OpenSAFELY?
 
 **For new users, the best place to begin is the [Getting
-Started](getting-started.md) guide.**
+Started](getting-started/tutorial/index.md) tutorial.**
 
 The [Analysis workflow](workflow.md) gives a high-level view of the steps involved in an OpenSAFELY research project.
 
