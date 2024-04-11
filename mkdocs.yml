@@ -27,6 +27,7 @@ nav:
         - GitHub and Git: install-github-and-git.md
         - Python: install-python.md
         - Docker: install-docker.md
+        - Windows: install-windows.md
         - macOS: install-macos.md
         - Linux: install-linux.md
   - Using OpenSAFELY:
