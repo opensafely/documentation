@@ -15,7 +15,11 @@ nav:
       - Technical architecture: technical-architecture.md
       - Type One Opt Outs: type-one-opt-outs.md
       - Contributing: contributing.md
-  - Getting Started guide: getting-started.md
+  - Getting started:
+      - Getting started: getting-started/index.md
+      - Tutorial:
+        - Tutorial: getting-started/tutorial/index.md
+        - Creating an OpenSAFELY project: getting-started/tutorial/creating-an-opensafely-project/index.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md

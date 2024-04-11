@@ -164,7 +164,7 @@ account, for developing your own study:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![Entering a name, owner and description, when creating a repository from the research template.](images/getting-started-create-repository-owner-name.png)
+   ![Entering a name, owner and description, when creating a repository from the research template.](../../images/getting-started-create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description
 1. Choose a [repository visibility](repositories.md#repository-visibility). This would usually be "Public"
    ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](images/getting-started-create-repository-public-private.png)
