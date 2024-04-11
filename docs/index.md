@@ -64,7 +64,7 @@ Started](getting-started/tutorial/index.md) tutorial.**
 
 The [Analysis workflow](workflow.md) gives a high-level view of the steps involved in an OpenSAFELY research project.
 
-See our [installation](install-intro.md) pages for complete installation
+See our [installation](getting-started/how-to/index.md) pages for complete installation
 instructions if you wish to install on your own computer.
 
 ## How can I make my organisation's data available via OpenSAFELY?
