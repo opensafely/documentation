@@ -23,13 +23,13 @@ nav:
       - How-to guides:
         - How-to guides: getting-started/how-to/index.md
         - Running OpenSAFELY in GitHub Codespaces: github-codespaces.md
-        - OpenSAFELY CLI: opensafely-cli.md
-        - GitHub and Git: install-github-and-git.md
-        - Python: install-python.md
-        - Docker: install-docker.md
-        - Windows: install-windows.md
-        - macOS: install-macos.md
-        - Linux: install-linux.md
+        - Installing the OpenSAFELY CLI: opensafely-cli.md
+        - Using GitHub and Git: install-github-and-git.md
+        - Installing Python: install-python.md
+        - Installing Docker: install-docker.md
+        - Installation on Windows: install-windows.md
+        - Installation on macOS: install-macos.md
+        - Installation on Linux: install-linux.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
