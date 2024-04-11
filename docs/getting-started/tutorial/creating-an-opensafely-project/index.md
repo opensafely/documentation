@@ -69,10 +69,10 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
      * you want to have more control on the tools you use to develop
        studies for OpenSAFELY.
 
-    The [current local installation guide](install-intro.md) is aimed at
+    The [current local installation guide](../../../install-intro.md) is aimed at
     Windows users. Mac users should be able to follow along as well, with
     a few hopefully-obvious alterations; see also the [macOS Install
-    Guide](install-macos.md)! We aim to integrate macOS instructions
+    Guide](../../../install-macos.md)! We aim to integrate macOS instructions
     into this guide in future.
 
 ### Following this Getting Started guide
@@ -164,10 +164,10 @@ account, for developing your own study:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![Entering a name, owner and description, when creating a repository from the research template.](../../images/getting-started-create-repository-owner-name.png)
+   ![Entering a name, owner and description, when creating a repository from the research template.](../../../images/getting-started-create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description
-1. Choose a [repository visibility](repositories.md#repository-visibility). This would usually be "Public"
-   ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](images/getting-started-create-repository-public-private.png)
+1. Choose a [repository visibility](../../../repositories.md#repository-visibility). This would usually be "Public"
+   ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](../../../images/getting-started-create-repository-public-private.png)
 1. There is an "Include all branches" option: this does **not** need to be selected.
    (You only need the main branch; the other branches are
    work-in-progress changes.)
@@ -197,11 +197,11 @@ account, for developing your own study:
     3. Click the "Create codespace on main".
        The screenshot below shows this.
 
-    ![A screenshot showing the "Create codespace on main" button.](images/getting-started-codespaces-button.png)
+    ![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
 
     You should then see a "Setting up your codespace" screen:
 
-    ![A screenshot showing "Setting up your codespace".](images/getting-started-codespaces-setting-up.png)
+    ![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
 
     A GitHub codespace containing the Visual Studio Code editor with a
     command-line interface "terminal" should then appear. **This may take
@@ -209,7 +209,7 @@ account, for developing your own study:
     a minute or two.**
 
     ![GitHub's codespace showing the editor, terminal and
-    Explorer.](images/getting-started-codespaces-start.png)
+    Explorer.](../../../images/getting-started-codespaces-start.png)
 
     The terminal at the bottom-right of the GitHub codespace runs
     commands on a computer (virtual machine) provided by GitHub.
@@ -223,7 +223,7 @@ account, for developing your own study:
     access many more options.
 
     If you find yourself using GitHub regularly for working on research,
-    we have more information on [working with GitHub codespaces](github-codespaces.md).
+    we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
 
     <h3>Running **opensafely**</h3>
 
@@ -266,7 +266,7 @@ account, for developing your own study:
     1. When you've done, to verify your installation, open Anaconda Prompt by
        clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
        from the menu. ![Finding Anaconda Prompt on
-       Windows](./images/win-anaconda-prompt.png)
+       Windows](../../../images/win-anaconda-prompt.png)
     1. To install the OpenSAFELY command line tool, you first need to
        install a tool called `pip`. ([`pip`](https://pip.pypa.io/en/stable/)
        is used for installing Python software and libraries.)
@@ -284,7 +284,7 @@ account, for developing your own study:
         On Windows, installing Docker is usually
         straightforward, but can sometimes be complicated, depending on your exact
         version and configuration of Windows. If you run into problems, our more
-        [detailed installation notes](install-docker.md) may help.
+        [detailed installation notes](../../../install-docker.md) may help.
 
 
     1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
@@ -294,10 +294,10 @@ account, for developing your own study:
        WSL 2 backend.
        Unfortunately, we've had reports that installing in Windows Home can
        be very challenging. Please let us know if you can help us [improve
-       the documentation](updating-the-docs.md) here.
+       the documentation](../../../updating-the-docs.md) here.
     1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
        so, an animation runs in the notification area:<br>
-       ![The Docker icon in the Windows notification area.](images/win-docker-starting.png)
+       ![The Docker icon in the Windows notification area.](../../../images/win-docker-starting.png)
     1. When Docker has finished starting up, share your hard drive with Docker:
        click the system tray docker icon; select "settings"; select "shared drives".
     1. If you have ended up with the *Hyper-V* backend, then when Docker has
@@ -454,7 +454,7 @@ automatically save the edits to files that you make.**
    file inside the `analysis` folder. This file contains a dataset definition,
    specifying the population that you'd like to study (dataset rows)
    and what you need to know about them (dataset columns).
-   It is written in [ehrQL](/ehrql/).
+   It is written in [ehrQL](../../../ehrql/).
 1. Add some text so that the file looks like this (new text highlighted):
 ```python linenums="1" hl_lines="15"
 from ehrql import create_dataset
@@ -506,7 +506,7 @@ When executed, a dataset definition generates a compressed CSV (`.csv.gz `) of p
 
 A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
-OpenSAFELY](actions-scripts.md). In this tutorial, we're going to draw a
+OpenSAFELY](../../../actions-scripts.md). In this tutorial, we're going to draw a
 histogram of ages, using either four lines of Python or just a few more lines of R.
 
 === "Python"
@@ -665,7 +665,7 @@ the new commit.
     left-hand side. It should be below the magnifying glass icon.
 
     ![Opening Source Control in
-    GitHub.](images/getting-started-codespaces-stage-changes.png)
+    GitHub.](../../../images/getting-started-codespaces-stage-changes.png)
 
     When files in the repository are edited and then saved, Source
     Control should list those changes. Note that Visual Studio Code in
@@ -692,7 +692,7 @@ the new commit.
     accept the commit message and *commit* the staged changes to
     to add them to the repository as stored in the codespace.
 
-    ![Committing changes in GitHub.](images/getting-started-codespaces-commit-message.png)
+    ![Committing changes in GitHub.](../../../images/getting-started-codespaces-commit-message.png)
 
     <h3>Push the changes to GitHub</h3>
 
@@ -705,7 +705,7 @@ the new commit.
     "Push". This should submit your changes to the GitHub repository that
     you created earlier.
 
-    ![Pushing changes to GitHub.](images/getting-started-codespaces-push-to-github.png)
+    ![Pushing changes to GitHub.](../../../images/getting-started-codespaces-push-to-github.png)
 
     You will see a prompt: 'This action will pull and push commits from
     and to "origin/main".' — click OK.
@@ -722,30 +722,30 @@ the new commit.
        your text editor and save them locally, you also see the changes in
        GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
        checkbox at the top of the list.<br>
-      ![Committing files with GitHub Desktop.](images/getting-started-github-desktop-commit-all.png)
+      ![Committing files with GitHub Desktop.](../../../images/getting-started-github-desktop-commit-all.png)
     1. At the bottom of the list of changes, in the **Summary** field, type a short,
        meaningful description of the changes (this is called the *commit message*).
        Optionally, you can add more information about the change in the
        **Description** field. Press the blue button to make the commit.<br>
-      ![Writing a commit message with GitHub Desktop.](images/getting-started-github-desktop-commit-message.png)
+      ![Writing a commit message with GitHub Desktop.](../../../images/getting-started-github-desktop-commit-message.png)
     1. Click **Push origin** to push your local changes to the remote repository on
-       GitHub ![Pushing changes to GitHub with GitHub Desktop.](images/getting-started-github-desktop-push-to-github.png)
+       GitHub ![Pushing changes to GitHub with GitHub Desktop.](../../../images/getting-started-github-desktop-push-to-github.png)
 
 ### Check that the automated tests pass
 
 Visit your repository on GitHub's site. Click on the **Actions** tab
-![The GitHub Actions tab in a repository.](images/getting-started-github-actions-tab.png)
+![The GitHub Actions tab in a repository.](../../../images/getting-started-github-actions-tab.png)
 
 You'll see a *Workflow* running with the *commit message* of your last
 commit. The workflow verifies that the command `opensafely run run_all` can
 run successfully. If it's yellow, it's still running. If it's red, it
 has failed. If it's green, it has succeeded. You want it to be green!
-![The GitHub Actions tab showing a successful workflow.](images/getting-started-github-actions-workflow-success.png)
+![The GitHub Actions tab showing a successful workflow.](../../../images/getting-started-github-actions-workflow-success.png)
 
 ## 7. Tidy up
 
 === "Web browser (online)"
-    If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](./github-codespaces.md/#managing-codespaces) page.
+    If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../../github-codespaces.md/#managing-codespaces) page.
 
 === "Windows (local)"
     There's nothing to do here!
@@ -758,25 +758,25 @@ to GitHub.
 
 To write a real study and run it against actual patient data, you will first need to get permission for your project from the data controllers for the NHS England OpenSAFELY COVID-19 service.
 [Read about our pilot onboarding programme](https://www.opensafely.org/onboarding-new-users/).
-Once approved, your GitHub user account will be added to our `opensafely` GitHub organisation, along with your study repository, which gives you the ability to run your study against real data. [Read more about permissions](jobs-site.md#permissions).
+Once approved, your GitHub user account will be added to our `opensafely` GitHub organisation, along with your study repository, which gives you the ability to run your study against real data. [Read more about permissions](../../../jobs-site.md#permissions).
 
 In the meantime, take a look at the rest of our documentation for more
 detail on the subjects covered in this tutorial. For example:
 
 * There is a more complete [guide to the OpenSAFELY command-line
-  tool](opensafely-cli.md).
-* The [ehrQL documentation](/ehrql/) contains a tutorial for ehrQL,
-  as well as a complete [schema reference](./ehrql/reference/schemas.md).
+  tool](../../../opensafely-cli.md).
+* The [ehrQL documentation](../../../ehrql/) contains a tutorial for ehrQL,
+  as well as a complete [schema reference](../../../ehrql/reference/schemas.md).
 * You'll find more information about the contents of `project.yaml` in the
-  [Actions reference](actions-intro.md).
+  [Actions reference](../../../actions-intro.md).
 * OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
   to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone
 * There is a final step we've not described here: [a
   website](https://jobs.opensafely.org/) called the ["OpenSAFELY Job
-  Server"](jobs-site.md) where you can submit your repository actions to be run
+  Server"](../../../jobs-site.md) where you can submit your repository actions to be run
   automatically within the secure EHR vendor environments. Right now you can
   only use this to run real jobs, but we're working on adding the ability to
   test your repository against dummy data.
 * You'll be using `git` and GitHub a lot, and it's a critical but complex part
   of the OpenSAFELY ecosystem. If you're not familiar with these concepts, it's
-  a good idea to read our [git workflow page](git-workflow.md) and its linked content.
+  a good idea to read our [git workflow page](../../../git-workflow.md) and its linked content.
