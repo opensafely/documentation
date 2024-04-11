@@ -20,19 +20,20 @@ nav:
       - Tutorial:
         - Tutorial: getting-started/tutorial/index.md
         - Creating an OpenSAFELY project: getting-started/tutorial/creating-an-opensafely-project/index.md
+      - How-to guides:
+        - How-to guides: getting-started/how-to/index.md
+        - Overview: install-intro.md
+        - GitHub and Git: install-github-and-git.md
+        - Running OpenSAFELY in GitHub Codespaces: github-codespaces.md
+        - Python: install-python.md
+        - Docker: install-docker.md
+        - OpenSAFELY CLI: opensafely-cli.md
+        - macOS: install-macos.md
+        - Linux: install-linux.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
       - GitHub repositories: repositories.md
-      - Detailed installation guides:
-          - Overview: install-intro.md
-          - GitHub and Git: install-github-and-git.md
-          - Running OpenSAFELY in GitHub Codespaces: github-codespaces.md
-          - Python: install-python.md
-          - Docker: install-docker.md
-          - OpenSAFELY CLI: opensafely-cli.md
-          - macOS: install-macos.md
-          - Linux: install-linux.md
       - Codelists:
           - Introduction to codelists: codelist-intro.md
           - Building a codelist: codelist-creation.md
