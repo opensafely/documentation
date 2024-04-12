@@ -105,10 +105,6 @@ OpenSAFELY Co-Pilots (experienced OpenSAFELY researchers who have been given thi
 
 While co-piloting activities are largely focused on the first four weeks of training, co-pilots also give assistance to pilots throughout the lifecycle of the project, to help ensure that each researcher follows the correct processes and that all associated analyses and results are in line with the IG agreements.
 
-### Implementation Notes for Staff
-
-(to be completed)
-
 ## Checking and Release of Outputs
 
 ### Why
@@ -128,10 +124,6 @@ OpenSAFELY Output Checkers (individuals with the skills, training and permission
 ### When
 
 Access is required when assessing and processing an output release request from a researcher working on an active project, or a developer requesting release of a necessary output for systems integration, general development or maintenance of the system.
-
-### Implementation Notes for Staff
-
-(to be completed)
 
 ## Access to Preliminary Results
 
@@ -155,10 +147,6 @@ Collaborators are colleagues or members of the research community (including pro
 
 This collaborative work may happen at any time while a project is actively being worked on, but is most likely in the later stages while preparing a paper/report for publication.
 Approved researchers are responsible for ensuring that their collaborators work within the policy on sharing of results.
-
-### Implementation Notes for Staff
-
-(to be completed)
 
 ## Development and Maintenance
 
@@ -212,17 +200,6 @@ These test pipelines are run periodically as is necessary to check that the syst
 However this deployment only happens after new versions of the software have been carefully tested with simulated data, to ensure that they are functioning correctly and that the security characteristics of the platform are maintained.
 During development of new features, test projects may be run via the pipeline to check if that feature functions as expected with real data.
 
-### Implementation Notes for Staff
-
-#### Information Governance/Access Permissions
-
-* Developer access permissions are documented in our [Developer Permissions Log](https://docs.google.com/spreadsheets/d/14vYZTTa-fQKh4GNg46yFONvk7q53Gh9e4npG_xUcAKQ/edit?usp=sharing) (_still under development_).
-
-#### Technical Notes
-
-* All development-related jobs should be run via our Internal (testing) project
-* To minimise the use of data from patients with a type 1 opt out, jobs run via our Internal (testing) project will automatically exclude T1OO patient data when using ehrQL or cohort extractor. If, in future, we find that we need to run jobs using ehrQL/cohort extractor that include T1OO data then we can decide to either add a mechanism for this or to create a separate testing project and add it to the “allowed project list” in GitHub. For SQL Runner, instructions on how to exclude T1OO data (or explain why you haven’t) can be found in the [sqlrunner readme](https://github.com/opensafely-core/sqlrunner#type-one-opt-out-data).
-
 ## Technical support for Approved Projects
 
 ### Why
@@ -242,21 +219,6 @@ Running project pipelines may be done by OpenSAFELY Platform Developers without 
 ### When
 
 This will be necessary if errors or other problems running study code are identified.
-
-### Implementation Notes for Staff
-
-#### Categorisation of Work
-
-* Platform developers must take particular care when amending study code and running jobs on an Approved Project (as opposed to an Internal testing project) that they are not straying into _project_ development work. If a developer is helping with writing the study code and making decisions about how the study is answering its approved purpose, akin to being a researcher on the study (including Short Data Report Projects), then they must be treated just like any other researcher and go through the full IG approval process (including being named as an approved researcher on the project application and added as a member of that project on Job Server with appropriate project-level roles).
-
-#### Information Governance/Access Permissions
-
-* Developer access permissions are documented in our [Developer Permissions Log](https://docs.google.com/spreadsheets/d/14vYZTTa-fQKh4GNg46yFONvk7q53Gh9e4npG_xUcAKQ/edit?usp=sharing) (_still under development_).
-
-#### Technical Notes
-
-* Access to run jobs and view outputs on any project in Job Server is granted by assigning the _global_ ProjectDeveloper and ProjectCollaborator roles to that user
-* For the avoidance of doubt, a ProjectDeveloper role does not also need to be added at the project level unless the user is also acting as a researcher on that project (see above)
 
 ## Development and maintenance of backend systems
 
@@ -293,19 +255,6 @@ Access to particularly sensitive parts of the system are limited to the minimall
 This process is routinely used for updating the platform with new software versions.
 It is exceptionally used for investigating outages or other problems, and only when the information necessary for the investigation can’t be accessed from outside the system.
 
-### Implementation Notes for Staff
-
-#### Information Governance/Access Permissions
-
-* Developer access permissions are documented in our [Developer Permissions Log](https://docs.google.com/spreadsheets/d/14vYZTTa-fQKh4GNg46yFONvk7q53Gh9e4npG_xUcAKQ/edit?usp=sharing) (_still under development_).
-* Any work requiring SQL Management Studio (direct access to the pseudonymised database) must be done using personal database credentials
-* Access to the backend server and personal database credentials for the pseudonymised database are currently managed by the IG team, and are implemented by the backend provider
-
-#### Technical Notes
-
-* Please also refer to our [Operational Data Policy](https://docs.google.com/document/d/1tQveWA7NWaHSx0ETR9FcXYxbtNa1NHiqwygVl6XanKw/edit)
-* To minimise the use of data from patients with a type 1 opt out when using SQL Server Management Studio: SQL that excludes these patients should always be applied to queries as standard and only removed when necessary to meet the requirements of the work.
-
 ## Data development
 
 ### Why
@@ -334,42 +283,6 @@ Data development activities may be carried out:
 * when datasets are updated
 * when previously unused fields in existing datasets are put to use
 * periodically for data quality assurance and sense checking purposes
-
-### Implementation Notes for Staff
-
-#### Categorisation of Work
-
-* Bennett Institute researchers who have also been approved as Dataset Developers must take great care to separate these activities. For example, if during work on an approved project (either a Research or a Short Data Report project) you suspect there may be an issue with the underlying raw data, you should leave your project repo and “put on your developer hat”. You should then do any exploratory work in the Internal project on Job Server, and implement any necessary changes at the platform level (e.g. updating metadata or asking for a change in ehrQL). You can then “put your researcher hat back on” and return to your project.
-* The outputs of Data Development work should always be shared, so that everyone can benefit from the learning. If a report is produced that is too detailed to put onto our docs site then it must still be made available internally, so that it may be built on (and possibly made public) in future.
-* How can I tell if something should be categorised as Data Development as opposed to a Short Data Report Project?
-    * Data Development is usually done prior to making the dataset/variable available to researchers (e.g. the process of adding it to ehrQL) whereas Short Data Reports can only be done once the data is available
-    * Data Development work can usually be done using a single dataset
-    * The questions being asked will be things like:
-        * What does each row represent?
-        * How are missing values represented?
-        * What do these codes represent?
-        * Do the codes match the codebook we have been given?
-        * Is there internal logical consistency (e.g. are end dates always after start dates?)
-        * Does the data match the metadata that we have been given?
-
-#### Information Governance/Access Permissions
-
-* Access permissions for Platform Developers and Dataset Developers are documented in our [Developer Permissions Log](https://docs.google.com/spreadsheets/d/14vYZTTa-fQKh4GNg46yFONvk7q53Gh9e4npG_xUcAKQ/edit?usp=sharing) (_still under development_).
-* Any work requiring SQL Management Studio (direct access to the pseudonymised database) must be done using personal database credentials
-* Access to the backend server and personal database credentials for the pseudonymised database are currently managed by the IG team, and are implemented by the backend provider
-* Any results/information being extracted from the secure environment (excluding that covered by our Operational Data Policy) MUST go through the usual output checking and release process
-* If you want to publish a manuscript using outputs from Data Development work, you must go to Bennett Institute IG team for project approval (as a Short Data Report). Be aware that you won’t currently be able to do this using SQL Runner.
-
-#### Technical Notes
-
-* Data Development work may be done using any of the tools available to us (ehrQL, cohort extractor, SQL Runner or SQL Server Management Studio). However, we aim to minimise the amount of work done using direct access to the pseudonymised database and do as much of this work as possible (e.g. generating reports/metadata) using SQL Runner or ehrQL. If you are unsure about which tool you should be using please consult the Tech Team.
-* Work in this category that is being conducted using ehrQL or cohort extractor should be done under the Internal project in Job Server. SQL Runner is currently restricted to only run via this Internal project.
-* T1OO: In most cases, we should expect to check that the data structure and semantics are valid in the full dataset as well as the dataset that has excluded type 1 opt-out patients’ data. Reports including T1OO data should be made available internally to others doing Data Development work, but not shared more widely (generally these reports should not need to be released and can remain on the secure server).
-* T1OO: If the metadata we produce includes things like counts, e.g. total number of rows, we should only publish the numbers _excluding_ T1OO patient data (historic reports will include T1OO patient data, so differences could be calculated - [this is ok](https://bennettoxford.slack.com/archives/C31D62X5X/p1712062713951799?thread_ts=1712058390.622289&cid=C31D62X5X)). Any exceptions must be agreed by the Ops team.
-* T1OO exclusion:
-    * ehrQL and cohort extractor jobs run on the Internal project in Job Server will currently automatically exclude T1OO patient data (see technical explanation)
-    * SQL Runner: for instructions on how to exclude T1OO data (or explain why you haven’t) see the [sqlrunner readme](https://github.com/opensafely-core/sqlrunner#type-one-opt-out-data)
-    * When using SQL Server Management Studio, SQL that excludes these patients should be applied to queries as standard and only removed when necessary to meet the requirements of the work
 
 
 ## Notes
