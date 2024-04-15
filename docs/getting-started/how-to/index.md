@@ -1,53 +1,22 @@
-The how-to guides in this section provide guidance
-for setting up and running the software required for OpenSAFELY.
+The how-to guides provide practical steps for setting up and using OpenSAFELY.
 
-These tools are required for, or greatly simplify, the following tasks:
+## Using OpenSAFELY
 
-* defining the data you want to extract from the database
-* importing codelists
-* creating dummy data for developing analysis scripts
-* testing analysis scripts locally
-* running the analysis on the server
+* [How to use GitHub Codespaces](../../github-codespaces.md)
+* [How to use GitHub and Git](../../install-github-and-git.md)
+* [How to use the OpenSAFELY command-line interface](../../opensafely-cli)
 
-## New users
+## Setting up OpenSAFELY
 
-!!! note
-    We strongly recommend the use of GitHub Codespaces for working with OpenSAFELY, at least initially.
-    GitHub Codespaces does not require any local software installation,
-    meaning you can start working in a web browser almost immediately.
-
-* Refer to the [guidance for using GitHub Codespaces](../../github-codespaces.md).
-
-## Experienced users
-
-!!! info
-
-    If you are an experienced OpenSAFELY user who:
-
-    * has administrative access to their computers
-    * wants to run OpenSAFELY on their own computer,
-      instead of in GitHub Codespaces
-
-    we provide guides on installing the software required for OpenSAFELY on your own machine.
-
-Refer to the relevant guide for the operating system you use:
-
-* [Windows](../../install-windows.md)
-* [macOS](../../install-macos.md)
-* [Linux](../../install-linux.md)
-
-## All users
-
-All users should be familiar with the OpenSAFELY CLI.
-
-* Refer to the [guidance for the OpenSAFELY CLI](../../opensafely-cli.md)
-
-### Writing analysis code
-
-For the analysis proper,
-you can use Stata, R, or Python (almost) however you wish &mdash;
-see the [pipelines section](../../actions-pipelines.md#general-code-writing-guidance) for guidance and exceptions.
-
-### Running queries on the OpenSAFELY platform to use OpenSAFELY fully
-
-You will need some platform-specific permissions, for instance to be able to submit analyses to run on the server.
+* How to install Python on
+    [Windows](../../install-python#windows),
+    [macOS](../../install-python#macos), and
+    [Linux](../../install-linux/#installing-python)
+* How to install Docker on
+    [Windows](../../install-docker#windows),
+    [macOS](../../install-macos/#docker-for-mac), and
+    [Linux](../../install-linux/#installing-docker)
+* How to install the OpenSAFELY command-line interface on
+    [Windows](../../opensafely-cli#installing-opensafely),
+    [macOS](../../install-macos/#opensafely-cli), and
+    [Linux](../../install-linux/#installing-the-opensafely-cli)

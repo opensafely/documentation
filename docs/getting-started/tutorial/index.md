@@ -1,21 +1,16 @@
-This OpenSAFELY tutorial will give you an understanding of the steps involved in:
+In the tutorial, we will create a study that uses dummy patient data.
+We will:
 
-* creating a code repository that stores your research code
-* querying electronic health record datasets
-* analysing that data
+1. Create a GitHub account
+1. Create a new repository
+1. Create a study
+1. Run the study in a local environment
+1. Update the study
+1. Run the study in a testing environment
 
-No software installation is required.
+Because the study uses dummy patient data, anyone can complete the tutorial.
+All we need is an up to date web browser and an internet connection.
 
-The only requirements for the tutorial are:
+---
 
-* a modern web browser
-* an internet connection that allows access to GitHub —
-  the service that we use for hosting the code of OpenSAFELY projects
-
-!!! note
-    The tutorial can be completed by anyone interested in how OpenSAFELY works.
-    No application or approval process is required to follow the tutorial.
-
-Start the tutorial by visiting the following page:
-
-* [Creating an OpenSAFELY project](creating-an-opensafely-project/index.md)
+[Start the tutorial](creating-an-opensafely-project/index.md)
