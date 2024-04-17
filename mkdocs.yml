@@ -47,6 +47,7 @@ nav:
         - Requesting release of research outputs: requesting-file-release.md
         - Review process for release requests: output-checking.md
         - Release of approved outputs: releasing-files.md
+        - Releasing with Airlock: '!import https://github.com/opensafely-core/airlock?branch=main'
       - Reports:
         - Overview: reports/intro.md
         - Create a draft: reports/create-a-draft.md
