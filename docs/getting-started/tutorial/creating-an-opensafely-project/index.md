@@ -340,7 +340,7 @@ Lines 8-12 mean "*I'm interested in all patients who were registered at a practi
 on the index date*"; line 14 "*Give me a column of data corresponding
 to the sex of each patient*"; and line 15 "*Give me a column of data corresponding
 to the age of each patient on the given date*".
-3. If you run:
+1. If you run:
 
    ```shell-session
    $ opensafely run run_all
