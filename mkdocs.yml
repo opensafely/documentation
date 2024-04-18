@@ -21,6 +21,8 @@ nav:
         - Tutorial: getting-started/tutorial/index.md
       - How-to guides:
         - How-to guides: getting-started/how-to/index.md
+      - Explanation:
+        - Explanation: getting-started/explanation/index.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
