@@ -190,38 +190,6 @@ account, for developing your own study:
        ++enter++. If the OpenSAFELY tool is working, this will show help
        text on how to use the `opensafely` command.
 
-    <h3>Install Docker</h3>
-
-    !!! note
-        On Windows, installing Docker is usually
-        straightforward, but can sometimes be complicated, depending on your exact
-        version and configuration of Windows. If you run into problems, our more
-        [detailed installation notes](../../../install-docker.md) may help.
-
-
-    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
-       If you are using Windows 10 Pro, Enterprise or Education, you should
-       follow the instructions for Hyper-V backend and Windows containers.  If you are using
-       Windows Home or an earlier build of Pro or Education, follow the instructions for
-       WSL 2 backend.
-       Unfortunately, we've had reports that installing in Windows Home can
-       be very challenging. Please let us know if you can help us [improve
-       the documentation](../../../updating-the-docs.md) here.
-    1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
-       so, an animation runs in the notification area:<br>
-       ![The Docker icon in the Windows notification area.](../../../images/win-docker-starting.png)
-    1. When Docker has finished starting up, share your hard drive with Docker:
-       click the system tray docker icon; select "settings"; select "shared drives".
-    1. If you have ended up with the *Hyper-V* backend, then when Docker has
-       finished starting up, you will need share your hard drive with Docker: click
-       system tray docker icon; select "settings"; select "shared drives".  This
-       setting does not exist in the *WSL 2* backend.
-    1. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
-       `opensafely pull ehrql`. This will pull down the OpenSAFELY
-       ehrql image, which can be used to run actions in your study.  The
-       first time you run it, this may take a little time, depending on your
-       network connection. It is downloading a reproducible environment identical
-       to that installed in the OpenSAFELY secure environment.
 
 ## 4. Try running the template study
 
