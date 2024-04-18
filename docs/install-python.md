@@ -15,12 +15,18 @@ However, this is not a particularly efficient way of working and we recommend be
 For Windows users, we recommend that you install [Anaconda (Individual Edition)](https://www.anaconda.com/products/individual), a popular Python distribution that includes an recent version of Python, many useful Python packages, and an environment manager.
 This will help avoid some fiddly annoyances when dealing with multiple versions/installations of Python.
 
+To install:
+
+1. [Download and run the Anaconda Python
+   installer](https://docs.anaconda.com/anaconda/install/windows/).
+   Accept the default/recommended settings unless you understand the consequences of changing them
+   This should have added Python and Anaconda Prompt to your machine (as well as a few other things).
+1. When you've done, to verify your installation, open Anaconda Prompt by
+   clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
+   from the menu. ![Finding Anaconda Prompt on
+   Windows](../../../images/win-anaconda-prompt.png)
+   To verify that you can run Python with Anaconda Prompt, open it and run `python --version`.
 <!--If you already have Python installed on your machine, you should still be able install Anaconda without any inteference. <font color='red'>(is this true?)</font> Alternatively, you're welcome to use any existing or fresh Python installation you want if you're happy to troubleshoot problems yourself. -->
-
-To install, [follow these instructions](https://docs.anaconda.com/anaconda/install/). Accept the default/recommended settings unless you understand the consequences of changing them.
-
-This should have added Python and Anaconda Prompt to your machine (as well as a few other things).
-To verify that you can run Python with Anaconda Prompt, open it and run `python --version`.
 
 <!--If you installed a version of python earlier than `python 3.8` then you should submit `conda install -c anaconda python=3.8` to update your installation. It can take a while (up to an hour) as it needs to identify and resolve incompatible packages from the previous installation. -->
 

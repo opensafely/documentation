@@ -165,30 +165,6 @@ account, for developing your own study:
 	upgrade   Upgrade the opensafely cli tool.
     ```
 
-=== "Windows (local)"
-
-    To develop an OpenSAFELY study on your own computer, you will need to install a
-    few things. Most important is the `opensafely` tool; to install this, you must
-    (currently) first install the Python programming language.
-
-    <h3>Install Python and **opensafely**</h3>
-
-    1. [Download and run the Anaconda Python
-       installer](https://docs.anaconda.com/anaconda/install/windows/).
-    1. When you've done, to verify your installation, open Anaconda Prompt by
-       clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
-       from the menu. ![Finding Anaconda Prompt on
-       Windows](../../../images/win-anaconda-prompt.png)
-    1. To install the OpenSAFELY command line tool, you first need to
-       install a tool called `pip`. ([`pip`](https://pip.pypa.io/en/stable/)
-       is used for installing Python software and libraries.)
-       Do this by typing `conda install pip` and pressing ++enter++.
-    1. Now you can install the OpenSAFELY command line tool, by typing `pip
-       install opensafely`, and pressing ++enter++. You should see a message
-       to the effect of `Successfully installed opensafely`.
-    1. To confirm everything is working, type `opensafely` and press
-       ++enter++. If the OpenSAFELY tool is working, this will show help
-       text on how to use the `opensafely` command.
 
 
 ## 4. Try running the template study
