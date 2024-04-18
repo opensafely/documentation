@@ -92,80 +92,73 @@ account, for developing your own study:
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
+## 3. Open your repository with GitHub Codespaces
 
-## 3. Set up the required software
+For the repository you just created,
+there is a Code button on GitHub.
 
-=== "Web browser (online)"
+To open your repository with GitHub Codespaces:
 
-    <h3>Open your repository with GitHub Codespaces</h3>
+1. Click the Code button.
+2. Click the Codespaces tab.
+3. Click the "Create codespace on main".
+   The screenshot below shows this.
 
-    For the repository you just created,
-    there is a Code button on GitHub.
+![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
 
-    To open your repository with GitHub Codespaces:
+You should then see a "Setting up your codespace" screen:
 
-    1. Click the Code button.
-    2. Click the Codespaces tab.
-    3. Click the "Create codespace on main".
-       The screenshot below shows this.
+![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
 
-    ![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
+A GitHub codespace containing the Visual Studio Code editor with a
+command-line interface "terminal" should then appear. **This may take
+a little bit longer the first time a codespace is started, perhaps
+a minute or two.**
 
-    You should then see a "Setting up your codespace" screen:
+![GitHub's codespace showing the editor, terminal and
+Explorer.](../../../images/getting-started-codespaces-start.png)
 
-    ![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
+The terminal at the bottom-right of the GitHub codespace runs
+commands on a computer (virtual machine) provided by GitHub.
 
-    A GitHub codespace containing the Visual Studio Code editor with a
-    command-line interface "terminal" should then appear. **This may take
-    a little bit longer the first time a codespace is started, perhaps
-    a minute or two.**
+The large, upper-right area holds the **main editor** and where you will
+view and edit files that you are working on. The left **"side bar"**
+holds the Explorer when you first start the codespace. There are
+other useful menus in this area that can be switched with the icons
+to the far left side. Finally, the button at the top-left with three
+horizontal lines (`≡`) is the **menu button**, which allows you to
+access many more options.
 
-    ![GitHub's codespace showing the editor, terminal and
-    Explorer.](../../../images/getting-started-codespaces-start.png)
+If you find yourself using GitHub regularly for working on research,
+we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
 
-    The terminal at the bottom-right of the GitHub codespace runs
-    commands on a computer (virtual machine) provided by GitHub.
+### Running `opensafely`
 
-    The large, upper-right area holds the **main editor** and where you will
-    view and edit files that you are working on. The left **"side bar"**
-    holds the Explorer when you first start the codespace. There are
-    other useful menus in this area that can be switched with the icons
-    to the far left side. Finally, the button at the top-left with three
-    horizontal lines (`≡`) is the **menu button**, which allows you to
-    access many more options.
+The `opensafely` software should already be installed if you start
+a GitHub codespace for the OpenSAFELY research template.
 
-    If you find yourself using GitHub regularly for working on research,
-    we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
+You can confirm this by typing `opensafely` in the terminal at the
+prompt `$` and pressing ++enter++. You should see an output that looks
+something like:
 
-    <h3>Running **opensafely**</h3>
+```shell-session
+$ opensafely
+usage: opensafely [-h] [--version] COMMAND ...
 
-    The `opensafely` software should already be installed if you start
-    GitHub for the OpenSAFELY research template.
+optional arguments:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
 
-    You can confirm this by typing `opensafely` in the terminal at the
-    prompt `$` and pressing ++enter++. You should see an output that looks
-    something like:
+available commands:
 
-    ```shell-session
-    $ opensafely
-    usage: opensafely [-h] [--version] COMMAND ...
-
-    optional arguments:
-      -h, --help  show this help message and exit
-      --version   show program's version number and exit
-
-    available commands:
-
-      COMMAND
-	help      Show this help message and exit
-	run       Run project.yaml actions locally
-	codelists
-              Commands for interacting with https://codelists.opensafely.org/
-	pull      Command for updating the docker images used to run OpenSAFELY studies locally
-	upgrade   Upgrade the opensafely cli tool.
-    ```
-
-
+  COMMAND
+    help      Show this help message and exit
+    run       Run project.yaml actions locally
+    codelists
+          Commands for interacting with https://codelists.opensafely.org/
+    pull      Command for updating the docker images used to run OpenSAFELY studies locally
+    upgrade   Upgrade the opensafely cli tool.
+```
 
 ## 4. Try running the template study
 
