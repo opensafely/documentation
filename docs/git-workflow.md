@@ -9,6 +9,7 @@ GitHub provide good [guides and documentation about best practices](https://guid
 
 The general workflow for making changes to your code is as follows:
 
+* Create a clone — a copy — of the existing code repository to work on
 * Create a new branch. A branch is a way for you to record and publish your own changes without breaking things for other people who are using the same code. It is also a good way of collecting changes ("commits") into a meaningful unit that can be reviewed by others.
 * Edit/add/delete files in the repo on that branch, committing regularly with informative commit messages.
 * Push the changes to GitHub, so that others can view the branch.
@@ -17,6 +18,11 @@ The general workflow for making changes to your code is as follows:
 * Watch out for the automated tests passing or failing!
 
 For a more generic overview, see [GitHub's own guidance](https://guides.github.com/introduction/flow/).
+
+## Cloning the study code to your computer with GitHub Desktop
+
+    Please follow [GitHub's instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
+    for cloning study code with GitHub Desktop.
 
 
 ---8<-- 'includes/glossary.md'

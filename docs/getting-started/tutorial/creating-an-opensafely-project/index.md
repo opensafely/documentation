@@ -239,23 +239,6 @@ account, for developing your own study:
 
 ## 4. Set up your first study
 
-In a previous step, you created a copy of the research code
-in GitHub. You need to have a copy, or "clone", of that code to develop your own
-study.
-
-### Clone the study code to your computer
-
-=== "Web browser (online)"
-
-    There's nothing to do here! When you open the GitHub codespace, the
-    associated code from GitHub will already be cloned and available in the code
-    editor. You'll see the files and folders in the Explorer.
-
-=== "Windows (local)"
-
-    Please follow [GitHub's instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
-    for cloning the study code with GitHub Desktop.
-
 ### Test the blank study on your computer
 
 === "Web browser (online)"
