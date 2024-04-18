@@ -58,23 +58,6 @@ first.
     also send you a confirmation email containing a link that you need
     to visit to confirm your account.
 
-=== "Windows (local)"
-
-    It is possible to follow the "Web browser" instructions and
-    sign up on GitHub's site.
-
-    If you [install GitHub Desktop](https://desktop.github.com/), the
-    GitHub Desktop installation process will also walk you through the
-    process of creating an account, if you don't already have one.
-
-    If you already have a GitHub account, GitHub have guides on
-    authenticating an existing account with [GitHub
-    Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github).
-
-    (If you already have `git` configured and are reasonably confident using
-    it, GitHub Desktop is not required. You need to be able to `clone` the
-    template repository that you will create, then `add`, `commit` and
-    `push` changes to that repository to GitHub.)
 
 #### Securing your GitHub account
 

@@ -26,6 +26,28 @@ If you already have git installed and prefer using your existing git workflow, t
 
 If you're not sure if you already have git installed, type `git --version` into any command line terminal.
 
+## Creating a GitHub account
+
+### Via GitHub's site (recommended)
+
+It is possible to sign up on GitHub's site
+as mentioned in the [Getting Started tutorial](getting-started/tutorial/creating-an-opensafely-project/#1-set-up-github).
+
+### Via GitHub Desktop
+
+If you [install GitHub Desktop](https://desktop.github.com/), the
+GitHub Desktop installation process will also walk you through the
+process of creating an account, if you don't already have one.
+
+If you already have a GitHub account, GitHub have guides on
+authenticating an existing account with [GitHub
+Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github).
+
+(If you already have `git` configured and are reasonably confident using
+it, GitHub Desktop is not required. You need to be able to `clone` the
+template repository that you will create, then `add`, `commit` and
+`push` changes to that repository to GitHub.)
+
 ## Access to the [OpenSAFELY GitHub organisation](https://github.com/opensafely)
 This is only necessary for running code against the real data. **Ask us for access.**
 If you're not sure if you already have access, go to [*Settings > Organizations*](https://github.com/settings/organizations) in GitHub and see if `opensafely` is listed.
