@@ -11,14 +11,21 @@ before applying to run their project against real data.
 Please don't be afraid to ask questions in our [Q&A
 forum](https://github.com/opensafely/documentation/discussions)!
 
+## Requirements
 
-To use the OpenSAFELY framework effectively, you need to:
+The requirements for this tutorial are minimal.
 
-*  have a few pieces of software available; and
-*  understand a few concepts which might be new to you.
+You will need a computer with:
 
+* an up-to-date web browser
+* an internet connection
 
+The tutorial will be completed in the GitHub Codespaces environment.
+Free GitHub accounts are given a monthly quota of Codespaces.
+If you do not have a GitHub account,
+we will create one in this tutorial.
 
+## Running OpenSAFELY
 
 ## 1. Set up GitHub
 
