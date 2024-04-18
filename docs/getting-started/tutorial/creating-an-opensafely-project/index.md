@@ -46,6 +46,8 @@ website for storing and collaborating on software, using the version control
 software `git`. GitHub is where your open, reproducible research will be
 published.
 
+This tutorial also uses GitHub Codespaces to work with OpenSAFELY.
+
 ### Creating a GitHub account
 
 !!! note
