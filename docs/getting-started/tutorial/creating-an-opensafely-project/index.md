@@ -579,22 +579,8 @@ the new commit.
     fetch`?" You can ignore this or select "Ask me later" for the
     purposes of this demonstration.)
 
-=== "Windows (local)"
 
-    <h3>Push the changes to GitHub with GitHub Desktop</h3>
 
-    1. Open GitHub Desktop to view your repository. When you make changes to files in
-       your text editor and save them locally, you also see the changes in
-       GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
-       checkbox at the top of the list.<br>
-      ![Committing files with GitHub Desktop.](../../../images/getting-started-github-desktop-commit-all.png)
-    1. At the bottom of the list of changes, in the **Summary** field, type a short,
-       meaningful description of the changes (this is called the *commit message*).
-       Optionally, you can add more information about the change in the
-       **Description** field. Press the blue button to make the commit.<br>
-      ![Writing a commit message with GitHub Desktop.](../../../images/getting-started-github-desktop-commit-message.png)
-    1. Click **Push origin** to push your local changes to the remote repository on
-       GitHub ![Pushing changes to GitHub with GitHub Desktop.](../../../images/getting-started-github-desktop-push-to-github.png)
 
 ### Check that the automated tests pass
 
