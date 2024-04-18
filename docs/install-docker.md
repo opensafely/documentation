@@ -30,7 +30,7 @@ To install Docker Desktop on Windows Home [follow these installation instruction
 !!! warning
     Unfortunately, we've had reports that installing in Windows Home can
     be very challenging. Please let us know if you can help us [improve
-    the documentation](../../../updating-the-docs.md) here.
+    the documentation](updating-the-docs.md) here.
 
 1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
    If you are using Windows 10 Pro, Enterprise or Education, you should
@@ -44,7 +44,7 @@ To install Docker Desktop on Windows Home [follow these installation instruction
 
 1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
    so, an animation runs in the notification area:<br>
-   ![The Docker icon in the Windows notification area.](../../../images/win-docker-starting.png)
+   ![The Docker icon in the Windows notification area.](images/win-docker-starting.png)
    Another notification appears when it's finished.
 1. When Docker has finished starting up, share your hard drive with Docker:
    click the system tray docker icon; select "settings"; select "shared drives".

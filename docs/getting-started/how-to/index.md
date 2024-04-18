@@ -4,19 +4,19 @@ The how-to guides provide practical steps for setting up and using OpenSAFELY.
 
 * [How to use GitHub Codespaces](../../github-codespaces.md)
 * [How to use GitHub and Git](../../install-github-and-git.md)
-* [How to use the OpenSAFELY command-line interface](../../opensafely-cli)
+* [How to use the OpenSAFELY command-line interface](../../opensafely-cli.md)
 
 ## Setting up OpenSAFELY
 
 * How to install Python on
-    [Windows](../../install-python#windows),
-    [macOS](../../install-python#macos), and
-    [Linux](../../install-linux/#installing-python)
+    [Windows](../../install-python.md#windows),
+    [macOS](../../install-python.md#macos), and
+    [Linux](../../install-linux.md#installing-python)
 * How to install Docker on
-    [Windows](../../install-docker#windows),
-    [macOS](../../install-macos/#docker-for-mac), and
-    [Linux](../../install-linux/#installing-docker)
+    [Windows](../../install-docker.md#windows),
+    [macOS](../../install-macos.md#docker-for-mac), and
+    [Linux](../../install-linux.md#installing-docker)
 * How to install the OpenSAFELY command-line interface on
-    [Windows](../../opensafely-cli#installing-opensafely),
-    [macOS](../../install-macos/#opensafely-cli), and
-    [Linux](../../install-linux/#installing-the-opensafely-cli)
+    [Windows](../../opensafely-cli.md#installing-opensafely),
+    [macOS](../../install-macos.md#opensafely-cli), and
+    [Linux](../../install-linux.md#installing-the-opensafely-cli)

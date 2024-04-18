@@ -21,7 +21,7 @@ To install:
 1. When you've done, to verify your installation, open Anaconda Prompt by
    clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
    from the menu. ![Finding Anaconda Prompt on
-   Windows](../../../images/win-anaconda-prompt.png)
+   Windows](images/win-anaconda-prompt.png)
    To verify that you can run Python with Anaconda Prompt, open it and run `python --version`.
 
 You should use the _Anaconda Prompt_ whenever you want to use the `opensafely` package.
