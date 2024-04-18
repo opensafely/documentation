@@ -743,11 +743,7 @@ has failed. If it's green, it has succeeded. You want it to be green!
 
 ## 7. Tidy up
 
-=== "Web browser (online)"
-    If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../../github-codespaces.md/#managing-codespaces) page.
-
-=== "Windows (local)"
-    There's nothing to do here!
+If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../../github-codespaces.md/#managing-codespaces) page.
 
 ## 8. Next steps
 
