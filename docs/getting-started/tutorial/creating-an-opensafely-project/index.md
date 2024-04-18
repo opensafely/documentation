@@ -51,13 +51,10 @@ published.
 If you do not already have a GitHub account, you should create one
 first.
 
-=== "Web browser (online)"
-
-    Visit [GitHub](https://github.com) and click the "Sign up" button.
-    You will have to provide an email address and password. GitHub will
-    also send you a confirmation email containing a link that you need
-    to visit to confirm your account.
-
+Visit [GitHub](https://github.com) and click the "Sign up" button.
+You will have to provide an email address and password. GitHub will
+also send you a confirmation email containing a link that you need
+to visit to confirm your account.
 
 #### Securing your GitHub account
 
