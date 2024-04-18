@@ -223,28 +223,7 @@ account, for developing your own study:
        network connection. It is downloading a reproducible environment identical
        to that installed in the OpenSAFELY secure environment.
 
-## 4. Set up your first study
-
-### Test the blank study on your computer
-
-=== "Web browser (online)"
-
-    There's nothing to do here! In the following sections, type any
-    `opensafely` commands in the terminal available at the bottom-right of the
-    GitHub codespace. Copy the commands and then press ++enter++ to run them.
-
-=== "Windows (local)"
-
-    You can open a prompt to run the study code:
-
-    1. Open Anaconda Prompt (or use an already-open one)
-    1. Change your current directory to the location of your cloned, local path. To
-       do this, use the `cd` command. For example, `cd
-       C:/Users/me/my-git-repos/hello-world` and press ++enter++.
-
-    Run the `opensafely` commands in the Anaconda Prompt. In Windows, note that
-    the command-line prompt may be something like `>` instead of `$`; any
-    commands written here with the `$` prompt will also work on Windows.
+## 4. Try running the template study
 
 ### Run your first study
 
