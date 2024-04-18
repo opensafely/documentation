@@ -1,3 +1,8 @@
+## Introduction
+
+OpenSAFELY is designed to allow you to do your analytic work on your own
+computer, without ever having to access the real, sensitive, patient-level data.
+
 This tutorial will walk you through the minimum steps needed to run an
 OpenSAFELY-compliant study against "dummy" (randomly-generated) patient data.
 We ask all potential collaborators to successfully complete this tutorial,
@@ -6,10 +11,6 @@ before applying to run their project against real data.
 Please don't be afraid to ask questions in our [Q&A
 forum](https://github.com/opensafely/documentation/discussions)!
 
-## Motivation
-
-OpenSAFELY is designed to allow you to do all of your analytic work on your own
-computer, without ever having to access the real, sensitive, patient-level data.
 
 To use the OpenSAFELY framework effectively, you need to:
 
