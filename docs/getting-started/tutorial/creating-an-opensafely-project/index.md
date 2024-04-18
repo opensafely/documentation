@@ -290,20 +290,13 @@ randomly-generated dummy patients.
 
 ### Accessing files
 
-=== "Web browser (online)"
+The Visual Studio Code editor has a file Explorer that you can use
+to browse the files and appears when first starting the GitHub
+codespace. It is accessed by the file icon in the bar on the
+left-hand side of the editor.
 
-    The Visual Studio Code editor has a file Explorer that you can use
-    to browse the files and appears when first starting the GitHub
-    codespace. It is accessed by the file icon in the bar on the
-    left-hand side of the editor.
-
-    Clicking on a file name in the Explorer will open the file in a tab
-    within the editor.
-
-=== "Windows (local)"
-
-    The new output files are created in the local copy of the
-    repository in the `output/` directory, e.g. `C:/Users/me/my-git-repos/hello-world/output/`.
+Clicking on a file name in the Explorer will open the file in a tab
+within the editor.
 
 ## 5. Make changes to your study
 
