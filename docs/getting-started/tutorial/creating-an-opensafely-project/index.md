@@ -62,7 +62,7 @@ You will have to provide an email address and password. GitHub will
 also send you a confirmation email containing a link that you need
 to visit to confirm your account.
 
-#### Securing your GitHub account
+### Securing your GitHub account
 
 We recommend that you [secure your GitHub account with two-factor
 authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
