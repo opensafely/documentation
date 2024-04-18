@@ -470,18 +470,6 @@ histogram of ages, using either four lines of Python or just a few more lines of
     )
     ```
 
-=== "Stata"
-
-    1. Right-click on the `analysis` folder in the editor's Explorer and select
-       "New file". Type "report.do" as the filename and press ++enter++.
-    2. Add the following to `report.do`:.
-    ```stata
-    !gunzip output/dataset.csv.gz
-    import delimited using output/dataset.csv
-
-    // TODO plot equivalent
-    // TODO save plot
-    ```
 
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
 
