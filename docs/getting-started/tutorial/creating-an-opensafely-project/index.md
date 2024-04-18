@@ -341,38 +341,6 @@ randomly-generated dummy patients.
 You've successfully run the code in your study, but at the moment it just creates a nearly-empty output
 file. Now we'll add some code to do something slightly more interesting.
 
-### Visual Studio Code as a code editor
-
-When writing code in the OpenSAFELY framework, a code editor will help.
-The steps here use Visual Studio Code.
-GitHub users already use Visual Studio Code by default in a GitHub codespace.
-
-Visual Studio Code is also available free of charge for Windows, macOS
-and Linux. If you are working on your own computer and **not** in
-GitHub, and are already comfortable using another code editor, then that
-editor will be suitable.
-
-Here we'll only use Visual Studio Code for the examples. There are
-several [short videos and written
-guides](https://code.visualstudio.com/docs#first-steps) elsewhere on how
-to use more of Visual Studio Code's features.
-
-**By default, the Visual Studio Code configuration we provide will
-automatically save the edits to files that you make.**
-
-=== "Web browser (online)"
-
-    There's nothing to do here! When you open a GitHub codespace, Visual
-    Studio Code is ready to use as the default editor and has your
-    research repository opened.
-
-=== "Windows (local)"
-
-    Download and install [Visual Studio
-    Code](https://code.visualstudio.com/download). Then start Visual
-    Studio Code and use the menu to open your research repository
-    (**File > Open Folder...**)
-
 ### Add an `age` column
 
 1. The "Explorer" on the left hand side lists the files and folders in
