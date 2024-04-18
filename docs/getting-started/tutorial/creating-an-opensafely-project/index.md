@@ -48,6 +48,10 @@ published.
 
 ### Creating a GitHub account
 
+!!! note
+    If you already have a GitHub account,
+    you can use that account.
+
 If you do not already have a GitHub account, you should create one
 first.
 
