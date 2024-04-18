@@ -17,25 +17,6 @@ To use the OpenSAFELY framework effectively, you need to:
 *  have a few pieces of software available; and
 *  understand a few concepts which might be new to you.
 
-### Following this Getting Started guide
-
-!!!note
-    *Tabbed* sections like the example immediately below split the
-    configuration instructions into web browser and local Windows
-    installation.  Where these tabbed sections appear, select the
-    relevant tab and follow only the instructions for that section.
-
-=== "Web browser (online)"
-
-    These "Web browser" sections will explain how to use OpenSAFELY in a
-    web browser via the GitHub Codespaces service.
-
-=== "Windows (local)"
-
-    These "Windows" sections will explain how to use OpenSAFELY using
-    software installed directly on a Windows machine. These instructions
-    are not necessary to follow if you are using a web browser to run
-    OpenSAFELY, even if that web browser is running on Windows.
 
 
 
