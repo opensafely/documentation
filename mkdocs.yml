@@ -13,7 +13,7 @@ nav:
       - "Safe data access: The Five Safes": five-safes.md
       - Access policies: access-policies.md
       - Technical architecture: technical-architecture.md
-      - Type One Opts Outs: type-one-opt-outs.md
+      - Type One Opt Outs: type-one-opt-outs.md
       - Contributing: contributing.md
   - Getting Started guide: getting-started.md
   - Using OpenSAFELY:
