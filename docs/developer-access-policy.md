@@ -1,4 +1,6 @@
 # OpenSAFELY Data Access Policy
+!!! note
+   Bennett Institute staff should refer to their team manual for implementation notes relating to this policy
 
 ## Introduction
 
