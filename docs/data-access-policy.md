@@ -1,5 +1,8 @@
 # OpenSAFELY Data Access Policy
 
+!!! note
+    Bennett Institute staff should refer to their [team manual](https://bennettinstitute-team-manual.pages.dev/products/data-access-policy-implementation/) for implementation notes relating to this policy
+
 ## Introduction
 
 The following policy outlines the guidelines for patient data access and processing via the OpenSAFELY platform specifically related to **access to and processing of pseudonymised and de-identified patient data** (and data derived from it).
