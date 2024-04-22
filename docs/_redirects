@@ -65,3 +65,4 @@
 /job-server/                             /jobs-site/                          301
 /publishing-repo                         /project-completion/                 301
 /publishing-repo/                        /project-completion/                 301
+/developer-access-policy/                /data-access-policy/                 301
