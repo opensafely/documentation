@@ -54,7 +54,7 @@ Longer term, Cohort Extractor will be retired entirely.
 SQL Runner is a tool which allows the user to retrieve data by writing "raw" SQL rather than ehrQL.
 It is intended for the data curation and investigation tasks necessary for operating the platform, rather than research purposes.
 Its use is therefore limited to just those OpenSAFELY staff involved in this work.
-Details of the circumstances under which OpenSAFELY staff may perform development and maintenance activities are described in our [Data Access Policy](https://docs.opensafely.org/developer-access-policy/).
+Details of the circumstances under which OpenSAFELY staff may perform development and maintenance activities are described in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/).
 
 This is enforced by a parallel mechanism to that which controls use of Cohort Extractor and any changes to this policy will appear in the public [audit log](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/sqlrunner.py).
 
@@ -68,7 +68,7 @@ All SQL Runner code run against patient data is also visible on our public “jo
 In order to facilitate the operation and maintenance of the OpenSAFELY platform a small number of individuals are able to access the pseudonymised data directly, without going via ehrQL, Cohort Extractor or SQL Runner.
 It is important to note that the code run in such circumstances will not be publicly visible on our “jobs” server, but it is logged in the database audit file of the GP system suppliers; preventing access to patient data with a type 1 opt-out is not enforceable at this level.
 
-The circumstances under which this is permitted and the rationale are covered in detail in our [Data Access Policy](https://docs.opensafely.org/developer-access-policy/) but, importantly, such access is never used for research purposes.
+The circumstances under which this is permitted and the rationale are covered in detail in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/) but, importantly, such access is never used for research purposes.
 
 ## Summary Diagram
 
