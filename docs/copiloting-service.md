@@ -33,7 +33,7 @@ flowchart TD
         application_submission[Project application]
         application_approval[Project approval]
         application_submission --> application_approval
-        getting_started[Completing Getting Started guide]
+        getting_started[Completing Getting Started tutorial]
     end
     subgraph assignment_stage[" "]
             co-pilot_assignment[Assignment of co-pilot]
@@ -73,7 +73,7 @@ flowchart TD
 
 ### Project application and software setup
 
-All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a co-pilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started guide](getting-started.md) to ensure that the necessary software can be installed and run on your computer.
+All projects need to have sought and been granted [IG approval](https://www.opensafely.org/policies-for-researchers/) before a co-pilot can be requested and assigned. We also ask that new users complete the OpenSAFEELY [Getting Started tutorial](getting-started/tutorial/index.md) to ensure that the necessary software can be installed and run on your computer.
 
 In our experience, co-piloting is most successful when the pilot has some experience with coding (e.g., Python, R or Stata), is familiar with collaborative code development via GitHub and is able to commit four weeks or more to their project. However, we have had people with the required motivation and enthusiasm, and an existing adjacent skillset, to get results within four weeks.
 
