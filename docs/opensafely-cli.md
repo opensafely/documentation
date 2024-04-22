@@ -8,13 +8,21 @@ It also contains other functions relating to the OpenSAFELY workflow, such as up
 
 This is a command-line program.
 
+To install the OpenSAFELY command line tool, you first need to
+install a tool called `pip`. ([`pip`](https://pip.pypa.io/en/stable/)
+is used for installing Python software and libraries.)
+Do this by typing `conda install pip` and pressing ++enter++.
+
 To install, go to the Anaconda prompt and run the following command (or use another method to install the module if you know how):
 
 ```bash
 pip install opensafely
 ```
 
+You should see a message to the effect of `Successfully installed opensafely`.
+
 To check this has installed successfully, run `opensafely --version`.
+This should show you the version of the OpenSAFELY CLI that you installed.
 
 ## Updating `opensafely`
 

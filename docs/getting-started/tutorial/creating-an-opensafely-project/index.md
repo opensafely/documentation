@@ -1,3 +1,8 @@
+## Introduction
+
+OpenSAFELY is designed to allow you to do your analytic work on your own
+computer, without ever having to access the real, sensitive, patient-level data.
+
 This tutorial will walk you through the minimum steps needed to run an
 OpenSAFELY-compliant study against "dummy" (randomly-generated) patient data.
 We ask all potential collaborators to successfully complete this tutorial,
@@ -6,111 +11,21 @@ before applying to run their project against real data.
 Please don't be afraid to ask questions in our [Q&A
 forum](https://github.com/opensafely/documentation/discussions)!
 
-## Motivation
+## Requirements
 
-OpenSAFELY is designed to allow you to do all of your analytic work on your own
-computer, without ever having to access the real, sensitive, patient-level data.
+The requirements for this tutorial are minimal.
 
-To use the OpenSAFELY framework effectively, you need to:
+You will need a computer with:
 
-*  have a few pieces of software available; and
-*  understand a few concepts which might be new to you.
+* an up-to-date web browser
+* an internet connection
+
+The tutorial will be completed in the GitHub Codespaces environment.
+Free GitHub accounts are given a monthly quota of Codespaces.
+If you do not have a GitHub account,
+we will create one in this tutorial.
 
 ## Running OpenSAFELY
-
-### Options for running OpenSAFELY
-
-In this guide, we've documented two different ways to work with OpenSAFELY:
-
-1. *Use an online environment where the needed software is already
-   installed for you*.
-
-     Services such as [GitHub Codespaces](https://github.com/features/codespaces) provide online
-     computing environments. GitHub Codespaces has a free plan with a generous
-     monthly usage limit for working with code in public or
-     private repositories. We've adapted our demonstration research
-     study and this guide such that you can follow along with GitHub Codespaces,
-     should you choose to do so.
-
-     You might prefer an online environment if one or more of the
-     following apply:
-
-     * you are investigating what OpenSAFELY offers and want to start
-       using it immediately;
-     * you do not have administrative access to install software on your
-       work computer;
-     * you are not sure about whether your computer supports Docker,
-       which OpenSAFELY uses;
-     * you want to try OpenSAFELY via a device other than a desktop or
-       laptop computer, e.g. a tablet.
-
-     To use GitHub Codespaces, the only requirements are:
-
-     * you have a current version of a modern web browser (e.g. Chrome,
-       Edge, Firefox, Safari);
-     * your internet connection allows access to GitHub Codespaces
-
-     If your internet connection is not managed by you directly —
-     perhaps you are in the office or connecting via your employer's
-     virtual private network (VPN) — it may be that [corporate firewalls
-     prevent access to
-     GitHub Codespaces](https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-your-connection-to-github-codespaces#browser-cannot-connect);
-     please contact the IT staff who manage your internet connection for help.
-
-2. *Install the required software to your own computer*.
-
-     You might prefer a local installation if one or more of the following
-     apply:
-
-     * you already have the software required (Docker, Python and Git or
-       GitHub Desktop) installed;
-     * or you don't already have the required software installed, but
-       are comfortable installing and configuring these tools yourself;
-     * you want to have more control on the tools you use to develop
-       studies for OpenSAFELY.
-
-    The [current local installation guide](../../../getting-started/how-to/index.md) is aimed at
-    Windows users. Mac users should be able to follow along as well, with
-    a few hopefully-obvious alterations; see also the [macOS Install
-    Guide](../../../install-macos.md)! We aim to integrate macOS instructions
-    into this guide in future.
-
-### Following this Getting Started guide
-
-!!!note
-    *Tabbed* sections like the example immediately below split the
-    configuration instructions into web browser and local Windows
-    installation.  Where these tabbed sections appear, select the
-    relevant tab and follow only the instructions for that section.
-
-=== "Web browser (online)"
-
-    These "Web browser" sections will explain how to use OpenSAFELY in a
-    web browser via the GitHub Codespaces service.
-
-=== "Windows (local)"
-
-    These "Windows" sections will explain how to use OpenSAFELY using
-    software installed directly on a Windows machine. These instructions
-    are not necessary to follow if you are using a web browser to run
-    OpenSAFELY, even if that web browser is running on Windows.
-
-
-### Why OpenSAFELY requires several pieces of software to run
-
-Some of the software needed is so you can execute code on your computer
-in **exactly the same way** it is run in the secure environment: even a slight
-mismatch in the versions of the software could cause bugs and delays.
-
-OpenSAFELY is also designed to encourage analysts to adopt best-practice
-software development processes, like using `git` for version control.  If
-you're new to these concepts, there may be quite a lot to learn, and you'll need
-to use further software to work with them. The investment will be worthwhile:
-you'll find your software quality and efficiency will benefit hugely.
-
-This tutorial is, therefore, a very fast tour through all the **essential**
-components required to get up and running. When you've finished, you'll have
-all the basics in place to continue your learning.
 
 ## 1. Set up GitHub
 
@@ -119,37 +34,23 @@ website for storing and collaborating on software, using the version control
 software `git`. GitHub is where your open, reproducible research will be
 published.
 
+This tutorial also uses GitHub Codespaces to work with OpenSAFELY.
+
 ### Creating a GitHub account
+
+!!! note
+    If you already have a GitHub account,
+    you can use that account.
 
 If you do not already have a GitHub account, you should create one
 first.
 
-=== "Web browser (online)"
+Visit [GitHub](https://github.com) and click the "Sign up" button.
+You will have to provide an email address and password. GitHub will
+also send you a confirmation email containing a link that you need
+to visit to confirm your account.
 
-    Visit [GitHub](https://github.com) and click the "Sign up" button.
-    You will have to provide an email address and password. GitHub will
-    also send you a confirmation email containing a link that you need
-    to visit to confirm your account.
-
-=== "Windows (local)"
-
-    It is possible to follow the "Web browser" instructions and
-    sign up on GitHub's site.
-
-    If you [install GitHub Desktop](https://desktop.github.com/), the
-    GitHub Desktop installation process will also walk you through the
-    process of creating an account, if you don't already have one.
-
-    If you already have a GitHub account, GitHub have guides on
-    authenticating an existing account with [GitHub
-    Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github).
-
-    (If you already have `git` configured and are reasonably confident using
-    it, GitHub Desktop is not required. You need to be able to `clone` the
-    template repository that you will create, then `add`, `commit` and
-    `push` changes to that repository to GitHub.)
-
-#### Securing your GitHub account
+### Securing your GitHub account
 
 We recommend that you [secure your GitHub account with two-factor
 authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
@@ -164,7 +65,6 @@ account, for developing your own study:
    <br><a href="https://github.com/opensafely/research-template/generate" target="_blank">https://github.com/opensafely/research-template/generate</a>.
 1. Use the **Owner** drop-down menu, and select the account you want to own the
    repository (typically under your own account)
-   ![Entering a name, owner and description, when creating a repository from the research template.](../../../images/getting-started-create-repository-owner-name.png)
 1. Type a name for your repository, and an optional description
 1. Choose a [repository visibility](../../../repositories.md#repository-visibility). This would usually be "Public"
    ![Entering a description and choosing to make a repository public or private, when creating a repository from the research template.](../../../images/getting-started-create-repository-public-private.png)
@@ -180,176 +80,75 @@ account, for developing your own study:
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
 
+## 3. Open your repository with GitHub Codespaces
 
-## 3. Set up the required software
+For the repository you just created,
+there is a Code button on GitHub.
 
-=== "Web browser (online)"
+To open your repository with GitHub Codespaces:
 
-    <h3>Open your repository with GitHub Codespaces</h3>
+1. Click the Code button.
+2. Click the Codespaces tab.
+3. Click the "Create codespace on main".
+   The screenshot below shows this.
 
-    For the repository you just created,
-    there is a Code button on GitHub.
+![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
 
-    To open your repository with GitHub Codespaces:
+You should then see a "Setting up your codespace" screen:
 
-    1. Click the Code button.
-    2. Click the Codespaces tab.
-    3. Click the "Create codespace on main".
-       The screenshot below shows this.
+![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
 
-    ![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
+A GitHub codespace containing the Visual Studio Code editor with a
+command-line interface "terminal" should then appear. **This may take
+a little bit longer the first time a codespace is started, perhaps
+a minute or two.**
 
-    You should then see a "Setting up your codespace" screen:
+![GitHub's codespace showing the editor, terminal and
+Explorer.](../../../images/getting-started-codespaces-start.png)
 
-    ![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
+The terminal at the bottom-right of the GitHub codespace runs
+commands on a computer (virtual machine) provided by GitHub.
 
-    A GitHub codespace containing the Visual Studio Code editor with a
-    command-line interface "terminal" should then appear. **This may take
-    a little bit longer the first time a codespace is started, perhaps
-    a minute or two.**
+The large, upper-right area holds the **main editor** and where you will
+view and edit files that you are working on. The left **"side bar"**
+holds the Explorer when you first start the codespace. There are
+other useful menus in this area that can be switched with the icons
+to the far left side. Finally, the button at the top-left with three
+horizontal lines (`≡`) is the **menu button**, which allows you to
+access many more options.
 
-    ![GitHub's codespace showing the editor, terminal and
-    Explorer.](../../../images/getting-started-codespaces-start.png)
+If you find yourself using GitHub regularly for working on research,
+we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
 
-    The terminal at the bottom-right of the GitHub codespace runs
-    commands on a computer (virtual machine) provided by GitHub.
+### Running `opensafely`
 
-    The large, upper-right area holds the **main editor** and where you will
-    view and edit files that you are working on. The left **"side bar"**
-    holds the Explorer when you first start the codespace. There are
-    other useful menus in this area that can be switched with the icons
-    to the far left side. Finally, the button at the top-left with three
-    horizontal lines (`≡`) is the **menu button**, which allows you to
-    access many more options.
+The `opensafely` software should already be installed if you start
+a GitHub codespace for the OpenSAFELY research template.
 
-    If you find yourself using GitHub regularly for working on research,
-    we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
+You can confirm this by typing `opensafely` in the terminal at the
+prompt `$` and pressing ++enter++. You should see an output that looks
+something like:
 
-    <h3>Running **opensafely**</h3>
+```shell-session
+$ opensafely
+usage: opensafely [-h] [--version] COMMAND ...
 
-    The `opensafely` software should already be installed if you start
-    GitHub for the OpenSAFELY research template.
+optional arguments:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
 
-    You can confirm this by typing `opensafely` in the terminal at the
-    prompt `$` and pressing ++enter++. You should see an output that looks
-    something like:
+available commands:
 
-    ```shell-session
-    $ opensafely
-    usage: opensafely [-h] [--version] COMMAND ...
+  COMMAND
+    help      Show this help message and exit
+    run       Run project.yaml actions locally
+    codelists
+          Commands for interacting with https://codelists.opensafely.org/
+    pull      Command for updating the docker images used to run OpenSAFELY studies locally
+    upgrade   Upgrade the opensafely cli tool.
+```
 
-    optional arguments:
-      -h, --help  show this help message and exit
-      --version   show program's version number and exit
-
-    available commands:
-
-      COMMAND
-	help      Show this help message and exit
-	run       Run project.yaml actions locally
-	codelists
-              Commands for interacting with https://codelists.opensafely.org/
-	pull      Command for updating the docker images used to run OpenSAFELY studies locally
-	upgrade   Upgrade the opensafely cli tool.
-    ```
-
-=== "Windows (local)"
-
-    To develop an OpenSAFELY study on your own computer, you will need to install a
-    few things. Most important is the `opensafely` tool; to install this, you must
-    (currently) first install the Python programming language.
-
-    <h3>Install Python and **opensafely**</h3>
-
-    1. [Download and run the Anaconda Python
-       installer](https://docs.anaconda.com/anaconda/install/windows/).
-    1. When you've done, to verify your installation, open Anaconda Prompt by
-       clicking Start, search, or selecting Anaconda Prompt (or Anaconda Powershell)
-       from the menu. ![Finding Anaconda Prompt on
-       Windows](../../../images/win-anaconda-prompt.png)
-    1. To install the OpenSAFELY command line tool, you first need to
-       install a tool called `pip`. ([`pip`](https://pip.pypa.io/en/stable/)
-       is used for installing Python software and libraries.)
-       Do this by typing `conda install pip` and pressing ++enter++.
-    1. Now you can install the OpenSAFELY command line tool, by typing `pip
-       install opensafely`, and pressing ++enter++. You should see a message
-       to the effect of `Successfully installed opensafely`.
-    1. To confirm everything is working, type `opensafely` and press
-       ++enter++. If the OpenSAFELY tool is working, this will show help
-       text on how to use the `opensafely` command.
-
-    <h3>Install Docker</h3>
-
-    !!! note
-        On Windows, installing Docker is usually
-        straightforward, but can sometimes be complicated, depending on your exact
-        version and configuration of Windows. If you run into problems, our more
-        [detailed installation notes](../../../install-docker.md) may help.
-
-
-    1. Follow the [Docker for windows installation instructions](https://docs.docker.com/docker-for-windows/install/).
-       If you are using Windows 10 Pro, Enterprise or Education, you should
-       follow the instructions for Hyper-V backend and Windows containers.  If you are using
-       Windows Home or an earlier build of Pro or Education, follow the instructions for
-       WSL 2 backend.
-       Unfortunately, we've had reports that installing in Windows Home can
-       be very challenging. Please let us know if you can help us [improve
-       the documentation](../../../updating-the-docs.md) here.
-    1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
-       so, an animation runs in the notification area:<br>
-       ![The Docker icon in the Windows notification area.](../../../images/win-docker-starting.png)
-    1. When Docker has finished starting up, share your hard drive with Docker:
-       click the system tray docker icon; select "settings"; select "shared drives".
-    1. If you have ended up with the *Hyper-V* backend, then when Docker has
-       finished starting up, you will need share your hard drive with Docker: click
-       system tray docker icon; select "settings"; select "shared drives".  This
-       setting does not exist in the *WSL 2* backend.
-    1. Test Docker and opensafely work together. Open an Anaconda Prompt, and run
-       `opensafely pull ehrql`. This will pull down the OpenSAFELY
-       ehrql image, which can be used to run actions in your study.  The
-       first time you run it, this may take a little time, depending on your
-       network connection. It is downloading a reproducible environment identical
-       to that installed in the OpenSAFELY secure environment.
-
-## 4. Set up your first study
-
-In a previous step, you created a copy of the research code
-in GitHub. You need to have a copy, or "clone", of that code to develop your own
-study.
-
-### Clone the study code to your computer
-
-=== "Web browser (online)"
-
-    There's nothing to do here! When you open the GitHub codespace, the
-    associated code from GitHub will already be cloned and available in the code
-    editor. You'll see the files and folders in the Explorer.
-
-=== "Windows (local)"
-
-    Please follow [GitHub's instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop)
-    for cloning the study code with GitHub Desktop.
-
-### Test the blank study on your computer
-
-=== "Web browser (online)"
-
-    There's nothing to do here! In the following sections, type any
-    `opensafely` commands in the terminal available at the bottom-right of the
-    GitHub codespace. Copy the commands and then press ++enter++ to run them.
-
-=== "Windows (local)"
-
-    You can open a prompt to run the study code:
-
-    1. Open Anaconda Prompt (or use an already-open one)
-    1. Change your current directory to the location of your cloned, local path. To
-       do this, use the `cd` command. For example, `cd
-       C:/Users/me/my-git-repos/hello-world` and press ++enter++.
-
-    Run the `opensafely` commands in the Anaconda Prompt. In Windows, note that
-    the command-line prompt may be something like `>` instead of `$`; any
-    commands written here with the `$` prompt will also work on Windows.
+## 4. Try running the template study
 
 ### Run your first study
 
@@ -395,57 +194,18 @@ randomly-generated dummy patients.
 
 ### Accessing files
 
-=== "Web browser (online)"
+The Visual Studio Code editor has a file Explorer that you can use
+to browse the files and appears when first starting the GitHub
+codespace. It is accessed by the file icon in the bar on the
+left-hand side of the editor.
 
-    The Visual Studio Code editor has a file Explorer that you can use
-    to browse the files and appears when first starting the GitHub
-    codespace. It is accessed by the file icon in the bar on the
-    left-hand side of the editor.
-
-    Clicking on a file name in the Explorer will open the file in a tab
-    within the editor.
-
-=== "Windows (local)"
-
-    The new output files are created in the local copy of the
-    repository in the `output/` directory, e.g. `C:/Users/me/my-git-repos/hello-world/output/`.
+Clicking on a file name in the Explorer will open the file in a tab
+within the editor.
 
 ## 5. Make changes to your study
 
 You've successfully run the code in your study, but at the moment it just creates a nearly-empty output
 file. Now we'll add some code to do something slightly more interesting.
-
-### Visual Studio Code as a code editor
-
-When writing code in the OpenSAFELY framework, a code editor will help.
-The steps here use Visual Studio Code.
-GitHub users already use Visual Studio Code by default in a GitHub codespace.
-
-Visual Studio Code is also available free of charge for Windows, macOS
-and Linux. If you are working on your own computer and **not** in
-GitHub, and are already comfortable using another code editor, then that
-editor will be suitable.
-
-Here we'll only use Visual Studio Code for the examples. There are
-several [short videos and written
-guides](https://code.visualstudio.com/docs#first-steps) elsewhere on how
-to use more of Visual Studio Code's features.
-
-**By default, the Visual Studio Code configuration we provide will
-automatically save the edits to files that you make.**
-
-=== "Web browser (online)"
-
-    There's nothing to do here! When you open a GitHub codespace, Visual
-    Studio Code is ready to use as the default editor and has your
-    research repository opened.
-
-=== "Windows (local)"
-
-    Download and install [Visual Studio
-    Code](https://code.visualstudio.com/download). Then start Visual
-    Studio Code and use the menu to open your research repository
-    (**File > Open Folder...**)
 
 ### Add an `age` column
 
@@ -477,7 +237,7 @@ Lines 8-12 mean "*I'm interested in all patients who were registered at a practi
 on the index date*"; line 14 "*Give me a column of data corresponding
 to the sex of each patient*"; and line 15 "*Give me a column of data corresponding
 to the age of each patient on the given date*".
-3. If you run:
+1. If you run:
 
    ```shell-session
    $ opensafely run run_all
@@ -544,18 +304,6 @@ histogram of ages, using either four lines of Python or just a few more lines of
     )
     ```
 
-=== "Stata"
-
-    1. Right-click on the `analysis` folder in the editor's Explorer and select
-       "New file". Type "report.do" as the filename and press ++enter++.
-    2. Add the following to `report.do`:.
-    ```stata
-    !gunzip output/dataset.csv.gz
-    import delimited using output/dataset.csv
-
-    // TODO plot equivalent
-    // TODO save plot
-    ```
 
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
 
@@ -652,84 +400,65 @@ to a new *commit* in your repository — a commit represents a stored
 version of your work — and then send that commit to GitHub by *pushing*
 the new commit.
 
-=== "Web browser (online)"
+### Add your changes to the local repository
 
-    <h3>Add your changes to the local repository</h3>
+(If you know how to use command-line Git, this works within
+GitHub's terminal if you do not want to use Visual Studio Code's
+Source Control feature.)
 
-    (If you know how to use command-line Git, this works within
-    GitHub's terminal if you do not want to use Visual Studio Code's
-    Source Control feature.)
+Back in the GitHub codespace, open the Source Control panel by
+selecting the icon that has round dots connected by lines on the
+left-hand side. It should be below the magnifying glass icon.
 
-    Back in the GitHub codespace, open the Source Control panel by
-    selecting the icon that has round dots connected by lines on the
-    left-hand side. It should be below the magnifying glass icon.
+![Opening Source Control in
+GitHub.](../../../images/getting-started-codespaces-stage-changes.png)
 
-    ![Opening Source Control in
-    GitHub.](../../../images/getting-started-codespaces-stage-changes.png)
+When files in the repository are edited and then saved, Source
+Control should list those changes. Note that Visual Studio Code in
+the codespace has Auto Save enabled by default. If you left-click on a file
+in Source Control, you'll see how your copy of the file has changed
+from the previous repository state. If you hover over a file in
+Source Control under "Changes", you can propose to add the changes
+to the repository by clicking the `+` icon next to the filename.
+These "staged" changes then appear in the "Staged Changes" section.
 
-    When files in the repository are edited and then saved, Source
-    Control should list those changes. Note that Visual Studio Code in
-    the codespace has Auto Save enabled by default. If you left-click on a file
-    in Source Control, you'll see how your copy of the file has changed
-    from the previous repository state. If you hover over a file in
-    Source Control under "Changes", you can propose to add the changes
-    to the repository by clicking the `+` icon next to the filename.
-    These "staged" changes then appear in the "Staged Changes" section.
+Staged changes are changes that you are proposing to include in the next *commit* of
+this study repository. These could be modifications of existing
+files or entirely new files that you include.
 
-    Staged changes are changes that you are proposing to include in the next *commit* of
-    this study repository. These could be modifications of existing
-    files or entirely new files that you include.
+It is also possible to "Discard Changes" if you accidentally stage a
+file that you do not want to include. You can do this by hovering
+over a file listed in the "Staged Changes" section and clicking the
+`-` icon next to the filename.
 
-    It is also possible to "Discard Changes" if you accidentally stage a
-    file that you do not want to include. You can do this by hovering
-    over a file listed in the "Staged Changes" section and clicking the
-    `-` icon next to the filename.
+When you've finished staging all your changes, you are now ready to
+make the new commit. Click the green Commit button, which will open
+and editor for you to type a commit message.  Type a message to describe
+the staged changes. When ready, you can then click the tick icon to
+accept the commit message and *commit* the staged changes to
+to add them to the repository as stored in the codespace.
 
-    When you've finished staging all your changes, you are now ready to
-    make the new commit. Click the green Commit button, which will open
-    and editor for you to type a commit message.  Type a message to describe
-    the staged changes. When ready, you can then click the tick icon to
-    accept the commit message and *commit* the staged changes to
-    to add them to the repository as stored in the codespace.
+![Committing changes in GitHub.](../../../images/getting-started-codespaces-commit-message.png)
 
-    ![Committing changes in GitHub.](../../../images/getting-started-codespaces-commit-message.png)
+### Push the changes to GitHub
 
-    <h3>Push the changes to GitHub</h3>
+The changes have been stored as a new commit in the codespace's
+*local* copy of the repository. We now need to *push* the
+repository to GitHub to make the changes show up there.
 
-    The changes have been stored as a new commit in the codespace's
-    *local* copy of the repository. We now need to *push* the
-    repository to GitHub to make the changes show up there.
+Click the "Sync Changes" button to push your commits.  Alternatively,
+click the ellipsis (`⋯`) icon next to "Source Control" and then select
+"Push". This should submit your changes to the GitHub repository that
+you created earlier.
 
-    Click the "Sync Changes" button to push your commits.  Alternatively,
-    click the ellipsis (`⋯`) icon next to "Source Control" and then select
-    "Push". This should submit your changes to the GitHub repository that
-    you created earlier.
+![Pushing changes to GitHub.](../../../images/getting-started-codespaces-push-to-github.png)
 
-    ![Pushing changes to GitHub.](../../../images/getting-started-codespaces-push-to-github.png)
+You will see a prompt: 'This action will pull and push commits from
+and to "origin/main".' — click OK.
 
-    You will see a prompt: 'This action will pull and push commits from
-    and to "origin/main".' — click OK.
-
-    (You may see a prompt: "Would you like Code to periodically run `git
-    fetch`?" You can ignore this or select "Ask me later" for the
-    purposes of this demonstration.)
-
-=== "Windows (local)"
-
-    <h3>Push the changes to GitHub with GitHub Desktop</h3>
-
-    1. Open GitHub Desktop to view your repository. When you make changes to files in
-       your text editor and save them locally, you also see the changes in
-       GitHub Desktop. To add all changes in all files to a single "*commit*", tick the
-       checkbox at the top of the list.<br>
-      ![Committing files with GitHub Desktop.](../../../images/getting-started-github-desktop-commit-all.png)
-    1. At the bottom of the list of changes, in the **Summary** field, type a short,
-       meaningful description of the changes (this is called the *commit message*).
-       Optionally, you can add more information about the change in the
-       **Description** field. Press the blue button to make the commit.<br>
-      ![Writing a commit message with GitHub Desktop.](../../../images/getting-started-github-desktop-commit-message.png)
-    1. Click **Push origin** to push your local changes to the remote repository on
-       GitHub ![Pushing changes to GitHub with GitHub Desktop.](../../../images/getting-started-github-desktop-push-to-github.png)
+(You may see a prompt: "Would you like Code to periodically run `git
+fetch`?" You can ignore this or select "Ask me later" for the
+purposes of this demonstration.)
 
 ### Check that the automated tests pass
 
@@ -744,11 +473,7 @@ has failed. If it's green, it has succeeded. You want it to be green!
 
 ## 7. Tidy up
 
-=== "Web browser (online)"
-    If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../../github-codespaces.md/#managing-codespaces) page.
-
-=== "Windows (local)"
-    There's nothing to do here!
+If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../../github-codespaces.md/#managing-codespaces) page.
 
 ## 8. Next steps
 
