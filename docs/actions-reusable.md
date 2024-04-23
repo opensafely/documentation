@@ -11,7 +11,7 @@ Consider the following extract from a study's *project.yaml*:
 ```yaml
 actions:
   generate_dataset:
-    run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
+    run: ehrql:v1 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
     outputs:
       highly_sensitive:
         dataset: output/dataset.csv.gz

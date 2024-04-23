@@ -332,7 +332,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     actions:
       generate_dataset:
-        run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
+        run: ehrql:v1 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
         outputs:
           highly_sensitive:
             dataset: output/dataset.csv.gz
@@ -356,7 +356,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
     actions:
       generate_dataset:
-        run: ehrql:v0 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
+        run: ehrql:v1 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
         outputs:
           highly_sensitive:
             dataset: output/dataset.csv.gz
