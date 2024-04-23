@@ -8,4 +8,4 @@ All we need is an up to date web browser and an internet connection.
 When you've completed the tutorial,
 browse the [how-to guides](how-to/index.md).
 These provide practical steps for setting up and using OpenSAFELY.
-Finally, the [explanation](explanation/index.md) section contains background knowledge on the software used to run OpenSAFELY.
+Finally, the [explanation](explanation/index.md) section contains background information about the software used to run OpenSAFELY.
