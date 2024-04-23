@@ -8,7 +8,7 @@ The how-to guides provide practical steps for setting up and using OpenSAFELY.
 
 ## Running OpenSAFELY on your computer
 
-All we need to get started with OpenSAFELY is an up to date web browser and an internet connection.
+All you need to get started with OpenSAFELY is an up to date web browser and an internet connection.
 At some point, however, you may need to run OpenSAFELY on your computer.
 This is sometimes referred to as running OpenSAFELY *locally*
 and can be worthwhile when you don't have a reliable internet connection.
