@@ -1,7 +1,7 @@
 In the tutorial, we will create a study that uses dummy patient data.
 We will:
 
-1. Crete a GitHub account
+1. Create a GitHub account
 2. Create a new repository
 3. Create a study
 4. Run the study in a local environment
