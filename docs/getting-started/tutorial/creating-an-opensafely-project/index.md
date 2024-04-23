@@ -338,7 +338,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             dataset: output/dataset.csv.gz
 
       describe:
-        run: python:latest python analysis/report.py
+        run: python:v2 python analysis/report.py
         needs: [generate_dataset]
         outputs:
           moderately_sensitive:

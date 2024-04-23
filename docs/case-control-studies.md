@@ -93,7 +93,7 @@ Our *project.yaml* now includes the following action:
 actions:
   # ...
   matching:
-    run: python:latest python analysis/match.py
+    run: python:v2 python analysis/match.py
     needs: [extract_cases, extract_potential_controls]
     outputs:
       moderately_sensitive:

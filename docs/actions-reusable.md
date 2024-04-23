@@ -65,7 +65,7 @@ The entry point is a path to a script.
 For example:
 
 ```yaml
-run: python:latest python action/cli.py
+run: python:v2 python action/cli.py
 ```
 
 Where *action/cli.py* is:
