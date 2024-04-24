@@ -6,7 +6,7 @@ This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 
 ### How to create a codespace
 
-To start a Codespace,
+To create a Codespace,
 you first need to [create a code repository](../../how-to/create-a-code-repository-for-your-project/index.md).
 
 Once you have a research code repository created,
@@ -26,6 +26,50 @@ you can create a codespace from that repository:
     If you are working on another repository branch,
     it is possible to select "New from options",
     which allows you to choose the branch.
+
+### How to stop a codespace
+
+See [GitHub's documentation for how to stop a codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace#stopping-a-codespace).
+
+Stopping a codespace is a specific action
+that makes the codespace inactive and stops the codespace from using CPU usage quota.
+You can resume working in a stopped codespace at a later time.
+
+Because stopped codespaces are persistent,
+they still count against storage usage quota.
+
+!!! note
+
+    Closing a browser that is running a codespace
+    does not immediately stop a codespace.
+
+    Codespaces that GitHub consider to be idle
+    due to a lack of user interaction or terminal activity
+    will eventually timeout.
+    But it is preferable to stop codespaces explicitly
+    to save on usage.
+
+!!! warning
+
+    Inactive codespaces are automatically deleted after a period of inactivity.
+    For the `opensafely` organization,
+    this period is 14 days.
+
+### How to restart a stopped codespace
+
+See [GitHub's documentation for how to restart a stopped codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace#restarting-a-codespace).
+
+### How to delete a codespace
+
+See [GitHub's documentation for how to delete a codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/deleting-a-codespace).
+
+Deleting a codespace removes the codespace entirely,
+preventing any further CPU or storage quota usage by the codespace.
+
+!!! info
+
+    If you have changes in the codespaces that have not been published to the repository,
+    GitHub will warn you to confirm that you are sure you want to delete the codespace.
 
 ### Navigating the codespace
 
@@ -135,20 +179,9 @@ Here is a short, non-exhaustive guide to what OpenSAFELY provides in the codespa
 
     See the [OpenSAFELY CLI](../../../opensafely-cli.md) documentation for more details.
 
-### Run the example project
+## How to run the example project
 
-The research code repository that you created already has an OpenSAFELY project in it.
-We can try this out to show that everything works
-as if we had installed the OpenSAFELY CLI.
-
-#### Ensure you are in the correct directory to run the project
-
-* By default, the terminal that has opened should be in the correct directory (folder)
-  that contains the `project.yaml` file.
-* This directory is `/workspaces/opensafely-example`
-* You can check the current working directory by referring to the terminal prompt.
-* If necessary, you can *change directory* to the correct directory by typing:
-  `cd /workspaces/opensafely-example` and pressing ++enter++.
+The research code repository that you created already has a minimal, working OpenSAFELY project in it..
 
 #### Use OpenSAFELY CLI to run the example project
 
@@ -168,59 +201,3 @@ Completed successfully
 The screenshot below shows this.
 
 ![A screenshot showing an example OpenSAFELY project being run in a codespace.](../../../images/codespaces-opensafely-example-project.png)
-
-## Use of GitHub Codespaces computer resources
-
-### Managing codespaces
-
-If you close a codespace in your browser,
-it still continues running.
-You can return to an open codespace from the code repository
-by clicking the "Code" button.
-The screenshot below shows this.
-
-![A screenshot showing the Codespaces panel for a code repository.](../../../images/codespaces-panel.png)
-
-It is useful to stop or delete codespaces to prevent them from using your quota unnecessarily.
-There are options in this panel to do so.
-The screenshot below shows this.
-
-![A screenshot showing the Codespaces options in the Codespaces panel for a code repository](../../../images/codespaces-panel-options.png)
-
-!!! note
-    GitHub has a ["Your codespaces" page](https://github.com/codespaces/)
-    that also allows you to manage all of your current codespaces.
-
-#### Stopping a codespace
-
-See GitHub's documentation for how to stop a codespace.
-
-This stops a codespace running,
-but allows you to restart it.
-
-Stopped codespaces still incur storage usage,
-but not CPU usage.
-
-#### Deleting a codespace
-
-See GitHub's documentation for how to delete a codespace.
-
-Unlike *stopping* a codespace,
-this removes the codespace entirely,
-
-!!! info
-
-    If you have changes in the codespaces that have not been published to the repository,
-    GitHub will warn you to confirm that you are sure you want to delete the codespace.
-
-    The "Export changes to a branch" option allows you to save the changes
-    without having to go back into the codespace.
-
-Once deleted, the codespace will not incur any usage.
-
-#### Idle timeout
-
-A codespace will eventually stop when it is not being used.
-This is a useful feature to prevent you from wasting free or paid Codespaces credit.
-This setting can be configured to give a longer or shorter duration.
-[See the GitHub documentation](https://docs.github.com/en/codespaces/customizing-your-codespace/setting-your-timeout-period-for-github-codespaces).
