@@ -5,6 +5,8 @@ The how-to guides provide practical steps for setting up and using OpenSAFELY.
 * [How to use GitHub Codespaces in your project](use-github-codespaces-in-your-project/index.md)
 * [How to use GitHub and Git](../../install-github-and-git.md)
 * [How to use the OpenSAFELY command-line interface](../../opensafely-cli.md)
+* [How to create a code repository for your
+  project](create-a-code-repository-for-your-project/index.md)
 
 ## Setting up OpenSAFELY
 
