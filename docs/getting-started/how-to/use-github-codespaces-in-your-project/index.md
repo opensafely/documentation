@@ -4,12 +4,10 @@ This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 
 ## Using GitHub Codespaces for OpenSAFELY projects
 
+### How to create a codespace
+
 To start a Codespace,
 you first need to [create a code repository](../../how-to/create-a-code-repository-for-your-project/index.md).
-From that repository,
-you can create a codespace.
-
-### Create a codespace
 
 Once you have a research code repository created,
 you can create a codespace from that repository:
@@ -18,28 +16,16 @@ you can create a codespace from that repository:
    go to your newly created research code repository on GitHub.
 1. Click the "Code" button
 1. Select "Create codespace on main".
-   The screenshot below shows this.
-
-![A screenshot showing the "Create codespace on main" button.](../../../images/codespaces-create.png)
-
-When you create a codespace,
-GitHub has to set up the codespace.
-The screenshot below shows this.
-
-![A screenshot showing the "Setting up your codespace" screen.](../../../images/codespaces-setup-screen.png)
-
-It may take a few minutes before the codespace is ready for use.
+1. You will see a "Setting up your codespace" screen before the codespace is ready for use.
+   It may take a few minutes before the codespace loads.
 
 !!! info
-    "main" is the current Git branch
-    and what we will use for just trying everything out here.
+    For "Create codespace on main",
+    "main" refers to the Git branch to use in the codespace.
 
     If you are working on another repository branch,
     it is possible to select "New from options",
     which allows you to choose the branch.
-    The screenshot below shows this.
-
-    ![A screenshot showing the "New with options…" button.](../../../images/codespaces-options.png)
 
 ### Navigating the codespace
 
