@@ -49,7 +49,7 @@ go to the [GitHub pricing page](https://github.com/pricing),
 and choose to sign up with a free account.
 The screenshot below shows this.
 
-![A screenshot showing the GitHub pricing page with the free account sign up highlighted.](images/codespaces-github-sign-up.png)
+![A screenshot showing the GitHub pricing page with the free account sign up highlighted.](../../../images/codespaces-github-sign-up.png)
 
 Follow the rest of the sign up process on GitHub's site.
 
@@ -90,7 +90,7 @@ Create a new research code repository based on the research template.
    to begin the process of creating a new research code repository for you to work on.
    The screenshot below shows this.
 
-![A screenshot showing the "Use this template" button for the research code template repository.](images/codespaces-template.png)
+![A screenshot showing the "Use this template" button for the research code template repository.](../../../images/codespaces-template.png)
 
 There are several options given
 when creating a new repository from a template.
@@ -134,13 +134,13 @@ you can create a codespace from that repository:
 1. Select "Create codespace on main".
    The screenshot below shows this.
 
-![A screenshot showing the "Create codespace on main" button.](images/codespaces-create.png)
+![A screenshot showing the "Create codespace on main" button.](../../../images/codespaces-create.png)
 
 When you create a codespace,
 GitHub has to set up the codespace.
 The screenshot below shows this.
 
-![A screenshot showing the "Setting up your codespace" screen.](images/codespaces-setup-screen.png)
+![A screenshot showing the "Setting up your codespace" screen.](../../../images/codespaces-setup-screen.png)
 
 It may take a few minutes before the codespace is ready for use.
 
@@ -153,7 +153,7 @@ It may take a few minutes before the codespace is ready for use.
     which allows you to choose the branch.
     The screenshot below shows this.
 
-    ![A screenshot showing the "New with options…" button.](images/codespaces-options.png)
+    ![A screenshot showing the "New with options…" button.](../../../images/codespaces-options.png)
 
 ### Navigating the codespace
 
@@ -170,7 +170,7 @@ Briefly, when you first open Visual Studio Code, you will see:
 
 The screenshot below shows this.
 
-![A screenshot showing the Visual Studio Code editor in Codespaces.](images/codespaces-vscode-layout.png)
+![A screenshot showing the Visual Studio Code editor in Codespaces.](../../../images/codespaces-vscode-layout.png)
 
 !!! info
     There are other elements to the user interface.
@@ -205,7 +205,7 @@ You can do this via the Source Control panel in the Visual Studio Code interface
    This reverts the files back to how they are in the current version of the repository.
    The screenshot below shows this.
 
-![A screenshot showing the "Discard Changes option" for a modified file. This option is in the Visual Studio Code Source Control panel.](images/codespaces-discard-changes.png)
+![A screenshot showing the "Discard Changes option" for a modified file. This option is in the Visual Studio Code Source Control panel.](../../../images/codespaces-discard-changes.png)
 
 !!! info
 
@@ -235,7 +235,7 @@ These checks can be viewed from the Actions tab,
 accessed via your repository on GitHub's site.
 The screenshot below shows what this tab looks like..
 
-![A screenshot showing the GitHub Actions tab for a repository.](images/codespaces-actions.png)
+![A screenshot showing the GitHub Actions tab for a repository.](../../../images/codespaces-actions.png)
 
 !!! info
     If you are comfortable with Git,
@@ -257,11 +257,11 @@ Here is a short, non-exhaustive guide to what OpenSAFELY provides in the codespa
 * You should see the OpenSAFELY CLI help prompt.
   The screenshot below shows this.
 
-![A screenshot showing the OpenSAFELY CLI help prompt in a GitHub codespace.](images/codespaces-opensafely-cli.png)
+![A screenshot showing the OpenSAFELY CLI help prompt in a GitHub codespace.](../../../images/codespaces-opensafely-cli.png)
 
 !!! info
 
-    See the [OpenSAFELY CLI](opensafely-cli.md) documentation for more details.
+    See the [OpenSAFELY CLI](../../../opensafely-cli.md) documentation for more details.
 
 ### Run the example project
 
@@ -295,7 +295,7 @@ Completed successfully
 
 The screenshot below shows this.
 
-![A screenshot showing an example OpenSAFELY project being run in a codespace.](images/codespaces-opensafely-example-project.png)
+![A screenshot showing an example OpenSAFELY project being run in a codespace.](../../../images/codespaces-opensafely-example-project.png)
 
 !!! info
     The research code example project is currently based on a legacy cohort-extractor project
@@ -304,7 +304,7 @@ The screenshot below shows this.
     In future,
     we will amend this example to be based on ehrQL.
 
-    [ehrQL](ehrql/index.md) is the replacement for cohort-extractor
+    [ehrQL](../../../ehrql/index.md) is the replacement for cohort-extractor
     and should be used to write *dataset definitions* for new OpenSAFELY research.
 
     cohort-extractor and ehrQL are used to extract details of populations of interest
@@ -315,11 +315,11 @@ The screenshot below shows this.
 ### ehrQL code autocompletion and reference information
 
 There is support for autocompletion of ehrQL
-that provides the [language reference information](ehrql/reference/language.md)
+that provides the [language reference information](../../../ehrql/reference/language.md)
 in the Visual Studio Code editor.
 
 The screenshot below shows this.
-![A screenshot showing ehrQL reference information provided by Visual Studio Code.](images/codespaces-ehrql-autocompletion.png)
+![A screenshot showing ehrQL reference information provided by Visual Studio Code.](../../../images/codespaces-ehrql-autocompletion.png)
 
 !!! warning
     This is still being tested.
@@ -343,7 +343,7 @@ The screenshot below shows this.
   The "Running Process" entry should start `/usr/bin/docker-proxy…`
   Click on that link to access the Jupyterlab server.
   The screenshot below shows this.
-  ![A screenshot showing the Ports tab in Visual Studio Code, with Jupyterlab running.](images/codespaces-jupyterlab-ports.png)
+  ![A screenshot showing the Ports tab in Visual Studio Code, with Jupyterlab running.](../../../images/codespaces-jupyterlab-ports.png)
 * You can edit files in your codespace from within Jupyterlab.
 
 !!! warning
@@ -428,13 +428,13 @@ You can return to an open codespace from the code repository
 by clicking the "Code" button.
 The screenshot below shows this.
 
-![A screenshot showing the Codespaces panel for a code repository.](images/codespaces-panel.png)
+![A screenshot showing the Codespaces panel for a code repository.](../../../images/codespaces-panel.png)
 
 It is useful to stop or delete codespaces to prevent them from using your quota unnecessarily.
 There are options in this panel to do so.
 The screenshot below shows this.
 
-![A screenshot showing the Codespaces options in the Codespaces panel for a code repository](images/codespaces-panel-options.png)
+![A screenshot showing the Codespaces options in the Codespaces panel for a code repository](../../../images/codespaces-panel-options.png)
 
 !!! note
     GitHub has a ["Your codespaces" page](https://github.com/codespaces/)
@@ -493,4 +493,4 @@ or give us any other feedback
 on the use of Codespaces with OpenSAFELY
 or this documentation.
 
-Ways to contact us are listed on our ["How to get help"](how-to-get-help.md) page.
+Ways to contact us are listed on our ["How to get help"](../../../how-to-get-help.md) page.
