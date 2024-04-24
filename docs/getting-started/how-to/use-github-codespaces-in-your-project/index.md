@@ -403,16 +403,3 @@ However, you can disable this manually through Visual Studio Code's settings,
 and should only need to do this once for it to apply to all codespaces you create.
 
 See [GitHub's information on Visual Studio Code's telemetry for more details](https://docs.github.com/en/site-policy/privacy-policies/github-codespaces-privacy-statement).
-
-## Feedback
-
-We are still investigating how we can make Codespaces more useful
-for researchers working on OpenSAFELY projects.
-
-Please feel free to ask us questions,
-tell us about problems you find,
-or give us any other feedback
-on the use of Codespaces with OpenSAFELY
-or this documentation.
-
-Ways to contact us are listed on our ["How to get help"](../../../how-to-get-help.md) page.
