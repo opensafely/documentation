@@ -169,19 +169,6 @@ The screenshot below shows this.
 
 ![A screenshot showing an example OpenSAFELY project being run in a codespace.](../../../images/codespaces-opensafely-example-project.png)
 
-!!! info
-    The research code example project is currently based on a legacy cohort-extractor project
-    using a *study definition*.
-
-    In future,
-    we will amend this example to be based on ehrQL.
-
-    [ehrQL](../../../ehrql/index.md) is the replacement for cohort-extractor
-    and should be used to write *dataset definitions* for new OpenSAFELY research.
-
-    cohort-extractor and ehrQL are used to extract details of populations of interest
-    from OpenSAFELY backends.
-
 ## Use of GitHub Codespaces computer resources
 
 ### Managing codespaces
