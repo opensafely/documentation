@@ -1,5 +1,5 @@
-In the tutorial, we will create a study that uses dummy patient data.
-We will:
+In the tutorial, you will create a study that uses dummy patient data.
+You will:
 
 1. Create a GitHub account
 2. Create a new repository
@@ -9,7 +9,7 @@ We will:
 6. Run the study in a testing environment
 
 Because the study uses dummy patient data, anyone can complete the tutorial.
-All we need is an up to date web browser and an internet connection.
+All you need is an up to date web browser and an internet connection.
 
 ---
 

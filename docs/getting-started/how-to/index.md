@@ -6,7 +6,12 @@ The how-to guides provide practical steps for setting up and using OpenSAFELY.
 * [How to use GitHub and Git](../../install-github-and-git.md)
 * [How to use the OpenSAFELY command-line interface](../../opensafely-cli.md)
 
-## Setting up OpenSAFELY
+## Running OpenSAFELY on your computer
+
+All you need to get started with OpenSAFELY is an up to date web browser and an internet connection.
+At some point, however, you may need to run OpenSAFELY on your computer.
+This is sometimes referred to as running OpenSAFELY *locally*
+and can be worthwhile when you don't have a reliable internet connection.
 
 * How to install Python on
     [Windows](../../install-python.md#windows),
