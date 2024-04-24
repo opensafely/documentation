@@ -251,11 +251,3 @@ A codespace will eventually stop when it is not being used.
 This is a useful feature to prevent you from wasting free or paid Codespaces credit.
 This setting can be configured to give a longer or shorter duration.
 [See the GitHub documentation](https://docs.github.com/en/codespaces/customizing-your-codespace/setting-your-timeout-period-for-github-codespaces).
-
-## Visual Studio Code telemetry settings
-
-This does not seem to be easily disabled by the Codespaces configuration.
-However, you can disable this manually through Visual Studio Code's settings,
-and should only need to do this once for it to apply to all codespaces you create.
-
-See [GitHub's information on Visual Studio Code's telemetry for more details](https://docs.github.com/en/site-policy/privacy-policies/github-codespaces-privacy-statement).
