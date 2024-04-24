@@ -19,6 +19,10 @@ you can run commands inside the codespace's virtual machine.
 This is just as if it were a real desktop or laptop that you were working on,
 except this virtual machines has been configured for OpenSAFELY use.
 
+The OpenSAFELY research template contains a GitHub Codespaces configuration
+to allow you to run OpenSAFELY
+**without any installation required on your own computer**.
+
 This removes the need to have anything other than a web browser installed
 to work on OpenSAFELY projects.
 

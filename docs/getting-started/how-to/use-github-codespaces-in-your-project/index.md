@@ -1,9 +1,5 @@
 ## Introduction
 
-The OpenSAFELY research template contains a GitHub Codespaces configuration
-to allow you to run OpenSAFELY
-**without any installation required on your own computer**.
-
 This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 
 ## Using GitHub Codespaces for OpenSAFELY projects
