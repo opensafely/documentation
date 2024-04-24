@@ -342,18 +342,6 @@ such as `cat`, `grep` and more are available to use in the Visual Studio Code te
 
 ## Use of GitHub Codespaces computer resources
 
-The default codespace has 2 computer processor cores (CPU cores) and 4 GB memory (RAM).
-In some cases,
-you may find that OpenSAFELY projects exceed the available RAM.
-
-GitHub Codespaces does have virtual machines with more CPU cores and RAM,
-but these will use your free quota more quickly.
-
-It is possible to configure what virtual machine type the codespace has when launching the codespace.
-See [GitHub's explanation of configuring advanced options](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository?tool=webui#creating-a-codespace-for-a-repository) for a codespace.
-
-It is also possible to [change a virtual machine type for an existing codespace](https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-machine-type-for-your-codespace#changing-the-machine-type).
-
 ### Managing codespaces
 
 If you close a codespace in your browser,
