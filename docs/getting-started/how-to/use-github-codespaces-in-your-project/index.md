@@ -14,28 +14,6 @@ This page explains:
 
 You only require a web browser to follow the instructions in this page.
 
-## Create a GitHub account
-
-Before starting with OpenSAFELY in GitHub Codespaces,
-you will need a free GitHub account.
-
-If you do not already have a GitHub account,
-go to the [GitHub pricing page](https://github.com/pricing),
-and choose to sign up with a free account.
-The screenshot below shows this.
-
-![A screenshot showing the GitHub pricing page with the free account sign up highlighted.](../../../images/codespaces-github-sign-up.png)
-
-Follow the rest of the sign up process on GitHub's site.
-
-## Sign in to GitHub
-
-Whether you have created a new GitHub account,
-or are using an existing GitHub account,
-make sure you are [signed in](https://github.com/login) to your GitHub account.
-
-The options to create a code repository and codespace only appear when logged in.
-
 ## Using GitHub Codespaces for OpenSAFELY projects
 
 To start a Codespace,
