@@ -97,11 +97,6 @@ The research code repository that you created already has a minimal, working Ope
    Completed successfully
    ```
 
-   The screenshot below shows this.
-
-   ![A screenshot showing an example OpenSAFELY project being run in a codespace.](../../../images/codespaces-opensafely-example-project.png)
-
-
 !!! note
 
     By default, the Visual Studio Code terminal that has opened should be in the correct directory (folder)
