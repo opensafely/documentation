@@ -1,8 +1,6 @@
-## Introduction
-
 This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 
-## Using GitHub Codespaces for OpenSAFELY projects
+## Managing GitHub Codespaces
 
 ### How to create a codespace
 
