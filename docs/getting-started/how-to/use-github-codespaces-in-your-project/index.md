@@ -107,3 +107,18 @@ The research code repository that you created already has a minimal, working Ope
     ```sh
     $ cd /workspaces/"$RepositoryName"
     ```
+
+## How to access RStudio
+
+1. In Visual Studio Code,
+   select the "Ports" tab
+   (next to "Terminal").
+1. Port 8787 should be listed —
+   this is configured by the RStudio server.
+1. Right-click on port 8787 and select "Open in browser".
+1. A new browser tab/window appears with RStudio running
+   prompting you to "Sign in to RStudio".
+   To sign in,
+   enter the username: `rstudio`
+   and the password: `rstudio`
+   and then press "Sign in".
