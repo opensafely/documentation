@@ -193,10 +193,12 @@ markupsafe==2.1.2 \
 mergedeep==1.3.4 \
     --hash=sha256:0096d52e9dad9939c3d975a774666af186eda617e6ca84df4c94dec30004f2a8 \
     --hash=sha256:70775750742b25c0d8f36c55aed03d24c3384d17c951b3175d898bd778ef0307
-    # via mkdocs
-mkdocs==1.5.3 \
-    --hash=sha256:3b3a78e736b31158d64dbb2f8ba29bd46a379d0c6e324c2246c3bc3d2189cfc1 \
-    --hash=sha256:eb7c99214dcb945313ba30426c2451b735992c73c2e10838f76d09e39ff4d0e2
+    # via
+    #   mkdocs
+    #   mkdocs-get-deps
+mkdocs==1.6.0 \
+    --hash=sha256:1eb5cb7676b7d89323e62b56235010216319217d4af5ddc543a91beb8d125ea7 \
+    --hash=sha256:a73f735824ef83a4f3bcb7a231dcab23f5a838f88b7efc54a0eef5fbdbc3c512
     # via
     #   -r requirements.prod.in
     #   mkdocs-autorefs
@@ -209,13 +211,17 @@ mkdocs-autorefs==1.0.1 \
     --hash=sha256:aacdfae1ab197780fb7a2dac92ad8a3d8f7ca8049a9cbe56a4218cd52e8da570 \
     --hash=sha256:f684edf847eced40b570b57846b15f0bf57fb93ac2c510450775dcf16accb971
     # via mkdocstrings
+mkdocs-get-deps==0.2.0 \
+    --hash=sha256:162b3d129c7fad9b19abfdcb9c1458a651628e4b1dea628ac68790fb3061c60c \
+    --hash=sha256:2bf11d0b133e77a0dd036abeeb06dec8775e46efa526dc70667d8863eefc6134
+    # via mkdocs
 mkdocs-macros-plugin==1.0.5 \
     --hash=sha256:f60e26f711f5a830ddf1e7980865bf5c0f1180db56109803cdd280073c1a050a \
     --hash=sha256:fe348d75f01c911f362b6d998c57b3d85b505876dde69db924f2c512c395c328
     # via -r requirements.prod.in
-mkdocs-material==9.5.18 \
-    --hash=sha256:1e0e27fc9fe239f9064318acf548771a4629d5fd5dfd45444fd80a953fe21eb4 \
-    --hash=sha256:a43f470947053fa2405c33995f282d24992c752a50114f23f30da9d8d0c57e62
+mkdocs-material==9.5.19 \
+    --hash=sha256:7473e06e17e23af608a30ef583fdde8f36389dd3ef56b1d503eed54c89c9618c \
+    --hash=sha256:ea96e150b6c95f5e4ffe47d78bb712c7bacdd91d2a0bec47f46b6fa0705a86ec
     # via -r requirements.prod.in
 mkdocs-material-extensions==1.3 \
     --hash=sha256:0297cc48ba68a9fdd1ef3780a3b41b534b0d0df1d1181a44676fda5f464eeadc \
@@ -317,7 +323,7 @@ platformdirs==3.9.1 \
     --hash=sha256:1b42b450ad933e981d56e59f1b97495428c9bd60698baab9f3eb3d00d5822421 \
     --hash=sha256:ad8291ae0ae5072f66c16945166cb11c63394c7a3ad1b1bc9828ca3162da8c2f
     # via
-    #   mkdocs
+    #   mkdocs-get-deps
     #   mkdocstrings
 pygments==2.16.1 \
     --hash=sha256:13fc09fa63bc8d8671a6d247e1eb303c4b343eaee81d861f3404db2935653692 \
@@ -387,6 +393,7 @@ pyyaml==6.0 \
     --hash=sha256:f84fbc98b019fef2ee9a1cb3ce93e3187a6df0b2538a651bfb890254ba9f90b5
     # via
     #   mkdocs
+    #   mkdocs-get-deps
     #   mkdocs-macros-plugin
     #   mkdocs-table-reader-plugin
     #   pymdown-extensions
