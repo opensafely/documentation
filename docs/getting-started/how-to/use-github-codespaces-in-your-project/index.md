@@ -7,10 +7,9 @@ This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 ### How to create a codespace
 
 To create a Codespace,
-you first need to [create a code repository](../../how-to/create-a-code-repository-for-your-project/index.md).
+[create a code repository](../../how-to/create-a-code-repository-for-your-project/index.md) first.
 
-Once you have a research code repository created,
-you can create a codespace from that repository:
+Once you have a research code repository to work in:
 
 1. In a web browser,
    go to your newly created research code repository on GitHub.
