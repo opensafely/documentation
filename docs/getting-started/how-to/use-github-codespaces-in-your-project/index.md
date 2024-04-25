@@ -70,66 +70,6 @@ preventing any further CPU or storage quota usage by the codespace.
     If you have changes in the codespace that have not been published to the repository,
     GitHub will warn you to confirm that you are sure you want to delete the codespace.
 
-### Working with files
-
-#### Editing code
-
-The file explorer shows the contents of your code repository.
-
-You can open files and folders by clicking on them.
-
-#### Saving files in the codespace
-
-The codespace is currently configured to autosave files when modified.
-
-#### Reverting changes to files in the codespace
-
-You can do this via the Source Control panel in the Visual Studio Code interface.
-
-1. Select the Source Control panel on the left-hand side.
-2. You should see a list of the changes.
-3. You choose to "Discard Changes" for each file.
-   This reverts the files back to how they are in the current version of the repository.
-   The screenshot below shows this.
-
-![A screenshot showing the "Discard Changes option" for a modified file. This option is in the Visual Studio Code Source Control panel.](../../../images/codespaces-discard-changes.png)
-
-!!! info
-
-    For users comfortable with command-line Git,
-    you can use `git` in the terminal to work with the repository,
-    including reverting changes.
-
-    This page will not cover use of command-line Git.
-
-#### Updating files in the repository
-
-You can use the Source Control panel to update files in the repository.
-
-A codespace is self-contained with its own copy of your repository's files.
-This is just as if you were working on a local copy of the repository on your own computer.
-
-**Changes to the copy of your repository in the codespace do not automatically change the state of your published repository on GitHub.**
-
-To get changes from a codespace to the GitHub repository, you must use the Source Control view to add, commit and publish those changes
-to your GitHub repository.
-If you are unfamiliar with Visual Studio Code and GitHub,
-[GitHub has a guide on using this](https://docs.github.com/en/codespaces/developing-in-codespaces/using-source-control-in-your-codespace#committing-your-changes).
-
-When you update files by publishing to the repository's `main` branch,
-this should trigger an automated check of whether your code will run in OpenSAFELY.
-These checks can be viewed from the Actions tab,
-accessed via your repository on GitHub's site.
-The screenshot below shows what this tab looks like..
-
-![A screenshot showing the GitHub Actions tab for a repository.](../../../images/codespaces-actions.png)
-
-!!! info
-    If you are comfortable with Git,
-    you can also [create and switch between different branches in the codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/using-source-control-in-your-codespace)
-    in the Visual Studio Code interface
-    or by the terminal using command-line Git.
-
 ## How to run the OpenSAFELY command-line interface (CLI)
 
 * You can run the OpenSAFELY CLI in GitHub Codespaces.
