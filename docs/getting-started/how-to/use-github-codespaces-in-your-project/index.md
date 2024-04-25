@@ -14,7 +14,8 @@ Once you have a research code repository to work in:
 1. Click the "Code" button
 1. Select "Create codespace on main".
 1. You will see a "Setting up your codespace" screen before the codespace is ready for use.
-   It may take a few minutes before the codespace loads.
+   It may take a few minutes before the codespace loads
+   and displays the Visual Studio Code editor.
 
 !!! info
     For "Create codespace on main",
