@@ -80,25 +80,37 @@ preventing any further CPU or storage quota usage by the codespace.
 
     See the [OpenSAFELY CLI](../../../opensafely-cli.md) documentation for more details.
 
-## How to run the example project
+## How to use OpenSAFELY CLI to run the example project
 
-The research code repository that you created already has a minimal, working OpenSAFELY project in it..
+The research code repository that you created already has a minimal, working OpenSAFELY project in it.
 
-#### Use OpenSAFELY CLI to run the example project
+1. In the Visual Studio Code terminal,
+   type `opensafely run run_all` and then press ++enter++
+   to run the existing `project.yaml`.
+1. This may take a few moments to download the required Docker images,
+   before the project is run.
 
-* In the Visual Studio Code terminal,
-  type `opensafely run run_all` and then press ++enter++
-  to run the existing `project.yaml`.
-* This may take a few moments to download the required Docker images,
-  before the project is run.
+   You should see some information messages that should end something like:
 
-You should see some information messages that should end something like:
+   ```
+   => generate_dataset
+   Completed successfully
+   ```
 
-```
-=> generate_study_population
-Completed successfully
-```
+   The screenshot below shows this.
 
-The screenshot below shows this.
+   ![A screenshot showing an example OpenSAFELY project being run in a codespace.](../../../images/codespaces-opensafely-example-project.png)
 
-![A screenshot showing an example OpenSAFELY project being run in a codespace.](../../../images/codespaces-opensafely-example-project.png)
+
+!!! note
+
+    By default, the Visual Studio Code terminal that has opened should be in the correct directory (folder)
+    that contains the `project.yaml` file.
+
+    If you have changed the terminal directory by using the `cd` change directory command,
+    use `cd` to return to the directory containing `project.yaml` first.
+
+
+    ```sh
+    $ cd /workspaces/"$RepositoryName"
+    ```
