@@ -158,14 +158,7 @@ The screenshot below shows what this tab looks like..
     in the Visual Studio Code interface
     or by the terminal using command-line Git.
 
-## A quick overview of what is included in the codespace
-
-Now that we have a GitHub codespace running,
-we can use OpenSAFELY.
-
-Here is a short, non-exhaustive guide to what OpenSAFELY provides in the codespace.
-
-### Run the OpenSAFELY command-line interface (CLI)
+## How to run the OpenSAFELY command-line interface (CLI)
 
 * You can run the OpenSAFELY CLI in GitHub Codespaces.
   In the Visual Studio Code terminal, type `opensafely` and press ++enter++.
