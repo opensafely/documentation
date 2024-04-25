@@ -70,7 +70,7 @@ preventing any further CPU or storage quota usage by the codespace.
     If you have changes in the codespace that have not been published to the repository,
     GitHub will warn you to confirm that you are sure you want to delete the codespace.
 
-## How to run the OpenSAFELY command-line interface (CLI)
+## How to run the OpenSAFELY CLI
 
 * You can run the OpenSAFELY CLI in GitHub Codespaces.
   In the Visual Studio Code terminal, type `opensafely` and press ++enter++.
