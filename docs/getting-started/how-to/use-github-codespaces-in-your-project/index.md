@@ -64,11 +64,47 @@ Deleting a codespace removes the codespace entirely,
 preventing any further CPU or storage quota usage by the codespace.
 
 !!! info
-
     If you have changes in the codespace that have not been published to the repository,
     GitHub will warn you to confirm that you are sure you want to delete the codespace.
 
 ## Developing OpenSAFELY projects in GitHub Codespaces
+
+### How to ensure your work is saved
+
+#### How to save the files in the codespace
+
+!!! note
+    Saving files in the codespace only ensures that changes persist in that codespace's storage.
+    When the codespace is deleted, these changes will be lost
+    unless they are pushed to the remote repository that GitHub hosts.
+
+    The remote repository is the one accessible at a GitHub URL, like,
+    for example,
+    `https://github.com/opensafely/example-research-repository`
+
+If you work in the Visual Studio Code editor,
+changes that you make to the files in your codespace
+are saved automatically in the codespace.
+
+If you work in RStudio,
+changes that you make to the files in your codespaces
+must be manually saved.
+
+#### How to store your changes in your project's repository
+
+To do so,
+use your codespace's Visual Studio Code editor.
+
+1. Optionally, you may first wish to create a new branch for your changes if you have not already.
+   See GitHub's documentation on how to [create or switch to a branch](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#creating-or-switching-branches).
+1. Commit your changes to the codespace's "local" copy of the Git repository.
+   See GitHub's documentation on how to [commit your changes](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#committing-your-changes).
+1. Push the changes from the codespace's "local" repository to the "remote" repository as hosted on GitHub.
+   This makes your changes visible on GitHub's repository.
+   See GitHub's documentation on how to push your changes.
+
+!!! note
+    See GitHub's documentation on [source control workflow in Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#about-source-control-in-github-codespaces).
 
 ### How to run the OpenSAFELY CLI
 
