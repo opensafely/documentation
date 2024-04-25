@@ -67,7 +67,7 @@ preventing any further CPU or storage quota usage by the codespace.
 
 !!! info
 
-    If you have changes in the codespaces that have not been published to the repository,
+    If you have changes in the codespace that have not been published to the repository,
     GitHub will warn you to confirm that you are sure you want to delete the codespace.
 
 ### Navigating the codespace
