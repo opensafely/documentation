@@ -70,34 +70,6 @@ preventing any further CPU or storage quota usage by the codespace.
     If you have changes in the codespace that have not been published to the repository,
     GitHub will warn you to confirm that you are sure you want to delete the codespace.
 
-### Navigating the codespace
-
-When the build process for the codespace completes,
-you should see a Visual Studio Code editor with three panes.
-
-Briefly, when you first open Visual Studio Code, you will see:
-
-* at the far left, a vertical bar of icons showing various options
-* on the left, the project's files and folders in the file explorer
-* a terminal at the bottom-right
-* a file editor at the upper-right;
-  this initially remains blank until you open a file
-
-The screenshot below shows this.
-
-![A screenshot showing the Visual Studio Code editor in Codespaces.](../../../images/codespaces-vscode-layout.png)
-
-!!! info
-    There are other elements to the user interface.
-    If you are unfamiliar with Visual Studio Code, you can:
-
-    * refer to the [explanation in GitHub's documentation](https://docs.github.com/en/codespaces/developing-in-codespaces/developing-in-a-codespace#working-in-a-codespace-in-the-browser)
-      for more details.
-    * refer to the [Visual Studio Code user interface documentation](https://code.visualstudio.com/docs/getstarted/userinterface)
-
-It is possible to resize the different panes as needed
-by hovering on the dividers between sections of the screen.
-
 ### Working with files
 
 #### Editing code
