@@ -163,9 +163,6 @@ The screenshot below shows what this tab looks like..
 * You can run the OpenSAFELY CLI in GitHub Codespaces.
   In the Visual Studio Code terminal, type `opensafely` and press ++enter++.
 * You should see the OpenSAFELY CLI help prompt.
-  The screenshot below shows this.
-
-![A screenshot showing the OpenSAFELY CLI help prompt in a GitHub codespace.](../../../images/codespaces-opensafely-cli.png)
 
 !!! info
 
