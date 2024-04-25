@@ -37,7 +37,6 @@ Because stopped codespaces are persistent,
 they still count against storage usage quota.
 
 !!! note
-
     Closing a browser that is running a codespace
     does not immediately stop a codespace.
 
@@ -48,7 +47,6 @@ they still count against storage usage quota.
     to save on usage.
 
 !!! warning
-
     Inactive codespaces are automatically deleted after a period of inactivity.
     For the `opensafely` organization,
     this period is 14 days.
@@ -114,7 +112,6 @@ use your codespace's Visual Studio Code editor.
 * You should see the OpenSAFELY CLI help prompt.
 
 !!! info
-
     See the [OpenSAFELY CLI](../../../opensafely-cli.md) documentation for more details.
 
 ### How to use OpenSAFELY CLI to run the example project
@@ -135,13 +132,11 @@ The research code repository that you created already has a minimal, working Ope
    ```
 
 !!! note
-
     By default, the Visual Studio Code terminal that has opened should be in the correct directory (folder)
     that contains the `project.yaml` file.
 
     If you have changed the terminal directory by using the `cd` change directory command,
     use `cd` to return to the directory containing `project.yaml` first.
-
 
     ```sh
     $ cd /workspaces/"$RepositoryName"
