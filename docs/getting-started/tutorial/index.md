@@ -3,27 +3,30 @@
 OpenSAFELY is designed to allow you to do your analytic work on your own
 computer, without ever having to access the real, sensitive, patient-level data.
 
-We ask all potential collaborators to successfully complete this tutorial,
+Because the study uses dummy patient data,
+anyone can complete the tutorial.
+
+We ask all potential collaborators to complete this tutorial,
 before applying to run their project against real data.
 
 ## Learning outcome
 
-This tutorial will walk you through the minimum steps needed to run an
-OpenSAFELY-compliant study against "dummy" (randomly-generated) patient data.
+After completing this tutorial,
+you will have seen the steps needed to
+write an OpenSAFELY-compliant study
+that runs with "dummy" (randomly-generated) patient data.
 
 You will:
 
 1. Create a GitHub account
-2. Create a new repository
-3. Create a study
-4. Run the study in a local environment
-5. Update the study
+2. Create a new GitHub repository
+3. Create a study that queries "dummy" patient data to generate a dataset
+4. Run the study in a development environment
+5. Update the study to add extra data columns to the dataset
+6. Add an analysis step to the study
 6. Run the study in a testing environment
 
-Because the study uses dummy patient data, anyone can complete the tutorial.
-
-Please don't be afraid to ask questions in our [Q&A
-forum](https://github.com/opensafely/documentation/discussions)!
+Please ask any questions in our [Q&A forum](https://github.com/opensafely/documentation/discussions)!
 
 ## Requirements
 
