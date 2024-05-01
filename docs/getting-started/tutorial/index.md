@@ -46,3 +46,4 @@ we will create one in this tutorial.
 
 * [Start the tutorial](creating-an-opensafely-project/index.md)
 * [Create a GitHub account](create-a-github-account/index.md)
+* [Create a GitHub repository](create-a-github-repository/index.md)
