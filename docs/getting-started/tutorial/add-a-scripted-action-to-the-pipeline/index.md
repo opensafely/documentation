@@ -1,11 +1,15 @@
-### Add a scripted action to the pipeline
+## Add a scripted action to the pipeline
 
 **Every** study starts with a *dataset definition* like the one you just edited.
 When executed, a dataset definition generates a compressed CSV (`.csv.gz `) of patient data.
 
 A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
-OpenSAFELY](../../../actions-scripts.md). In this tutorial, we're going to draw a
+OpenSAFELY](../../../actions-scripts.md).
+
+### Create a new action
+
+In this tutorial, we're going to draw a
 histogram of ages, using either four lines of Python or just a few more lines of R.
 
 === "Python"
@@ -19,7 +23,7 @@ histogram of ages, using either four lines of Python or just a few more lines of
     data = pd.read_csv("output/dataset.csv.gz")
 
     fig = data.age.plot.hist().get_figure()
-    fig.savefig("output/descriptive.png")
+    fig.savefig("output/report.png")
     ```
 
 === "R"
@@ -39,12 +43,14 @@ histogram of ages, using either four lines of Python or just a few more lines of
 
     ggsave(
       plot= plot_age,
-      filename="descriptive.png", path=here::here("output"),
+      filename="report.png", path=here::here("output"),
     )
     ```
 
 
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
+
+### Add the action to the pipline
 
 <ol start=3>
   <li>
@@ -76,12 +82,12 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
           highly_sensitive:
             dataset: output/dataset.csv.gz
 
-      describe:
+      generate_report:
         run: python:v2 python analysis/report.py
         needs: [generate_dataset]
         outputs:
           moderately_sensitive:
-            chart: output/descriptive.png
+            chart: output/report.png
     ```
 
 === "R"
@@ -100,12 +106,12 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
           highly_sensitive:
             dataset: output/dataset.csv.gz
 
-      describe:
+      generate_report:
         run: r:latest analysis/report.R
         needs: [generate_dataset]
         outputs:
           moderately_sensitive:
-            chart: output/descriptive.png
+            chart: output/report.png
     ```
 
 - **Line 14** tells the system we want to create a new action called `describe`.
@@ -118,9 +124,12 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
   there's one output file, which will be found at `output/descriptive.png`.
 
 
-At the command line, type `opensafely run run_all --force-run-dependencies` and press
+At the command line, type `opensafely run generate_report` and press
 ++enter++. This should end by telling you a file containing the histogram has been created.
-Open it — you can do this via Visual Studio Code's Explorer — and check it looks right.
+Open the `output` folder — you can do this via Visual Studio Code's Explorer — and check that it contains `report.png`.
+
+Double click on `report.png` to display the image,
+or right-click on `report.png` and select Download to download the image.
 
 !!! warning
     Changes you make to files are automatically saved on GitHub. However, changes will not persist
