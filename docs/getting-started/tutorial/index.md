@@ -48,3 +48,4 @@ we will create one in this tutorial.
 * [Create a GitHub account](create-a-github-account/index.md)
 * [Create a GitHub repository](create-a-github-repository/index.md)
 * [Create a GitHub codespace](create-a-github-codespace/index.md)
+* [Generate a first dataset](generate-a-first-dataset/index.md)
