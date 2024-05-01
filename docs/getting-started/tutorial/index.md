@@ -50,3 +50,4 @@ we will create one in this tutorial.
 * [Create a GitHub codespace](create-a-github-codespace/index.md)
 * [Generate a first dataset](generate-a-first-dataset/index.md)
 * [Update the dataset definition](update-the-dataset-definition/index.md)
+* [Run the project pipeline](run-the-project-pipeline/index.md)
