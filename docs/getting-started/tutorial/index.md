@@ -51,3 +51,4 @@ we will create one in this tutorial.
 * [Generate a first dataset](generate-a-first-dataset/index.md)
 * [Update the dataset definition](update-the-dataset-definition/index.md)
 * [Run the project pipeline](run-the-project-pipeline/index.md)
+* [Add a scripted action to the pipeline](add-a-scripted-action-to-the-pipeline/index.md)
