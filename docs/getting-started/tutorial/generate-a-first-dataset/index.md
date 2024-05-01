@@ -1,51 +1,46 @@
 ## Generate a first dataset
 
-Now you're ready to run your first study. Ensure your current directory is your newly-cloned
-study repository, and run:
+Now you're ready to run your first study.
+
+In the terminal, run:
 
 ```shell-session
-$ opensafely run run_all
+$ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
 ```
 
 pressing ++enter++ once you've typed the command.
 
-The first time you run this command, it may take a while to download the
-required software. Eventually, you should see output that ends something like
-this:
+The first time you run this command, it may take a few seconds to download the
+required software. Eventually, you should see output that contains lines like the following:
 
 ```shell-session
-<...several lines of output...>
-generate_dataset: Extracting output file: output/dataset.csv.gz
-generate_dataset: Finished recording results
-generate_dataset: Completed successfully
-generate_dataset: Cleaning up container and volume
-
-=> generate_dataset
-   Completed successfully
-
-   log file: metadata/generate_dataset.log
-   outputs:
-     output/dataset.csv.gz  - highly_sensitive
+…
+[info     ] Compiling dataset definition from analysis/dataset_definition.py
+[info     ] Building dataset and writing results
+…
 ```
-The final line tells you a file of (randomly-generated) patient data has been created at
-`output/dataset.csv.gz`, and that it should be considered highly sensitive
-data. What you see here is exactly the same process that would happen on a real, secure
-server.
 
-This compressed CSV file contains a small amount of *dummy data* (patient ID and sex)
-based on the dataset definition at `analysis/dataset_definition.py`.
+followed by the dataset displayed in the terminal in CSV format.
 
-To view it, first run `opensafely unzip output`, then open that
-file (by left-clicking the filename in Visual Studio Code's Explorer, or
-software like Excel). You'll see that it contains rows for ten
-randomly-generated dummy patients.
+This should look something like the following,
+although the data you see will differ,
+because it is randomly generated:
 
-### Accessing files
+```
+patient_id,sex
+1,unknown
+2,male
+3,unknown
+4,unknown
+5,female
+6,unknown
+7,intersex
+8,unknown
+9,intersex
+10,male
+```
 
-The Visual Studio Code editor has a file Explorer that you can use
-to browse the files and appears when first starting the GitHub
-codespace. It is accessed by the file icon in the bar on the
-left-hand side of the editor.
+Notice the columns: `patient_id` and `sex`.
 
-Clicking on a file name in the Explorer will open the file in a tab
-within the editor.
+In the next part of the tutorial,
+we will see how to add another data column.
