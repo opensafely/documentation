@@ -1,7 +1,8 @@
-## 5. Make changes to your study
+## Update the dataset definition
 
-You've successfully run the code in your study, but at the moment it just creates a nearly-empty output
-file. Now we'll add some code to do something slightly more interesting.
+You've successfully generated a dataset from the code in your study, but at the moment it only adds one data column.
+
+Now we'll add some code to create an extra column.
 
 ### Add an `age` column
 
@@ -36,21 +37,9 @@ to the age of each patient on the given date*".
 1. If you run:
 
    ```shell-session
-   $ opensafely run run_all
+   $ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
    ```
 
-   you'll see the command does nothing (because there's already a file at `output/dataset.csv.gz`):
+   you will see a new randomly generated dataset.
 
-   ```shell-session
-   => All actions already completed successfully
-   Use -f option to force everything to re-run
-   ```
-
-   We can use the `--force-run-dependencies` (or `-f`) option to force
-   the CSV file to be created again.
-
-   ```shell-session
-   $ opensafely run run_all --force-run-dependencies
-   ```
-
-   A new `dataset.csv.gz` file will be created in the `output` folder.
+   However, this time it contains the additional `age` column.
