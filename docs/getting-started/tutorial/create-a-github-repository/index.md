@@ -1,5 +1,3 @@
-## Create a GitHub repository
-
 Here, you'll copy our OpenSAFELY research template to your own GitHub
 account, for developing your own study:
 

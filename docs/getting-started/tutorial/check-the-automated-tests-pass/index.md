@@ -1,5 +1,3 @@
-## Check that the automated tests pass
-
 Your repository is automatically configured with tests to verify the project is runnable,
 each time you push.
 

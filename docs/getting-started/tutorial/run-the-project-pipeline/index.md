@@ -38,7 +38,7 @@ file (by left-clicking the filename in Visual Studio Code's Explorer, or
 software like Excel). You'll see that it contains rows for ten
 randomly-generated dummy patients.
 
-### Accessing files
+## Accessing files
 
 The Visual Studio Code editor has a file Explorer that you can use
 to browse the files and appears when first starting the GitHub

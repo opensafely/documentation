@@ -1,10 +1,8 @@
-## Update the dataset definition
-
 You've successfully generated a dataset from the code in your study, but at the moment it only adds one data column.
 
 Now we'll add some code to create an extra column.
 
-### Add an `age` column
+## Add an `age` column
 
 1. The "Explorer" on the left hand side lists the files and folders in
    your research repository. Find and click on the `dataset_definition.py`

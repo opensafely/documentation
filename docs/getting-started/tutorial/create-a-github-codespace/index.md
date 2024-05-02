@@ -1,5 +1,3 @@
-## Open your repository with GitHub Codespaces
-
 For the repository you just created,
 there is a Code button on GitHub.
 
@@ -38,7 +36,7 @@ access many more options.
 If you find yourself using GitHub regularly for working on research,
 we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
 
-### Running `opensafely`
+## Running `opensafely`
 
 The `opensafely` software should already be installed if you start
 a GitHub codespace for the OpenSAFELY research template.

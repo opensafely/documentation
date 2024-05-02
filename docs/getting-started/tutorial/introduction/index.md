@@ -1,5 +1,3 @@
-## Introduction
-
 OpenSAFELY is designed to allow you to do your analytic work on your own
 computer, without ever having to access the real, sensitive, patient-level data.
 

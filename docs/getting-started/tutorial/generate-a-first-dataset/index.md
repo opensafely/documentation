@@ -1,5 +1,3 @@
-## Generate a first dataset
-
 Now you're ready to run your first study.
 
 In the terminal, run:

@@ -1,5 +1,3 @@
-## Add a scripted action to the pipeline
-
 **Every** study starts with a *dataset definition* like the one you just edited.
 When executed, a dataset definition generates a compressed CSV (`.csv.gz `) of patient data.
 
@@ -7,7 +5,7 @@ A real analysis will have several further steps after this. Each step is defined
 in a separate file, and can be written in [any of the programming languages supported in
 OpenSAFELY](../../../actions-scripts.md).
 
-### Create a new action
+## Create a new action
 
 In this tutorial, we're going to draw a
 histogram of ages, using either four lines of Python or just a few more lines of R.
@@ -50,7 +48,7 @@ histogram of ages, using either four lines of Python or just a few more lines of
 
 This code reads the CSV of patient data, and saves a histogram of ages to a new file.
 
-### Add the action to the pipline
+## Add the action to the pipline
 
 <ol start=3>
   <li>

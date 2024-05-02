@@ -1,5 +1,3 @@
-## Publish the changes to GitHub
-
 So far,
 the changes you have made only exist in the codespace which you are working in.
 
@@ -13,7 +11,7 @@ Pushing changes to your GitHub repository:
 * ensures the changes you have made persist even when the codespace is deleted
 * enables others with permission to access your repository to see those changes
 
-### Add your changes to the local repository
+## Add your changes to the local repository
 
 (If you know how to use command-line Git, this works within
 GitHub's terminal if you do not want to use Visual Studio Code's
@@ -55,7 +53,7 @@ make the new commit:
 
 ![Committing changes in GitHub.](../../../images/getting-started-codespaces-commit-message.png)
 
-### Push the changes to GitHub
+## Push the changes to GitHub
 
 The changes have been stored as a new commit in the codespace's
 *local* copy of the repository. We now need to *push* the
