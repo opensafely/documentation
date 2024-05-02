@@ -1,6 +1,4 @@
-## Running OpenSAFELY
-
-## 8. Next steps
+## Next steps
 
 Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it

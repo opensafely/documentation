@@ -44,7 +44,6 @@ we will create one in this tutorial.
 
 ---
 
-* [Start the tutorial](creating-an-opensafely-project/index.md)
 * [Create a GitHub account](create-a-github-account/index.md)
 * [Create a GitHub repository](create-a-github-repository/index.md)
 * [Create a GitHub codespace](create-a-github-codespace/index.md)
@@ -55,3 +54,4 @@ we will create one in this tutorial.
 * [Publish the changes to GitHub](publish-the-changes-to-github/index.md)
 * [Check the automated tests pass](check-the-automated-tests-pass/index.md)
 * [Delete the GitHub codespace](delete-the-github-codespace/index.md)
+* [See the next steps](see-the-next-steps/index.md)
