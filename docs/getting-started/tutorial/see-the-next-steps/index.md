@@ -4,27 +4,27 @@ Congratulations! You've covered all the basics that you need to develop a study
 on your own computer, verify that it can run against real data, and publish it
 to GitHub.
 
+To proceed from here,
+there is an application process to follow,
+and more about OpenSAFELY that you will need to learn.
+
+### Applying for OpenSAFELY access
+
 To write a real study and run it against actual patient data, you will first need to get permission for your project from the data controllers for the NHS England OpenSAFELY COVID-19 service.
-[Read about our pilot onboarding programme](https://www.opensafely.org/onboarding-new-users/).
-Once approved, your GitHub user account will be added to our `opensafely` GitHub organisation, along with your study repository, which gives you the ability to run your study against real data. [Read more about permissions](../../../jobs-site.md#permissions).
 
-In the meantime, take a look at the rest of our documentation for more
-detail on the subjects covered in this tutorial. For example:
+* [Read about our onboarding programme](https://www.opensafely.org/onboarding-new-users/).
 
-* There is a more complete [guide to the OpenSAFELY command-line
-  tool](../../../opensafely-cli.md).
-* The [ehrQL documentation](../../../ehrql/index.md) contains a tutorial for ehrQL,
-  as well as a complete [schema reference](../../../ehrql/reference/schemas.md).
-* You'll find more information about the contents of `project.yaml` in the
-  [Actions reference](../../../actions-intro.md).
-* OpenSAFELY walkthroughs (see [this notebook](https://github.com/opensafely/os-demo-research#opensafely-demo-materials))
-  to guide you through the platform workflow on your own computer with dummy data, rather than using the documentation pages alone
-* There is a final step we've not described here: [a
-  website](https://jobs.opensafely.org/) called the ["OpenSAFELY Job
-  Server"](../../../jobs-site.md) where you can submit your repository actions to be run
-  automatically within the secure EHR vendor environments. Right now you can
-  only use this to run real jobs, but we're working on adding the ability to
-  test your repository against dummy data.
-* You'll be using `git` and GitHub a lot, and it's a critical but complex part
-  of the OpenSAFELY ecosystem. If you're not familiar with these concepts, it's
-  a good idea to read our [git workflow page](../../../git-workflow.md) and its linked content.
+### Further learning
+
+To learn more about OpenSAFELY,
+we recommend the sections of our documentation about:
+
+* [our electronic health record query language, ehrQL](../../../ehrql/index.md)
+* [scripted actions](../../../actions-scripts.md)
+* [using Git](../../../install-github-and-git.md)
+* [using GitHub Codespaces in your project](../../../github-codespaces.md)
+
+We also recommend:
+
+* [OpenSAFELY Jobs](https://jobs.opensafely.org)
+* [the Visual Studio Code introduction to Git](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)
