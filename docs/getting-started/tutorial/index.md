@@ -54,3 +54,4 @@ we will create one in this tutorial.
 * [Add a scripted action to the pipeline](add-a-scripted-action-to-the-pipeline/index.md)
 * [Publish the changes to GitHub](publish-the-changes-to-github/index.md)
 * [Check the automated tests pass](check-the-automated-tests-pass/index.md)
+* [Delete the GitHub codespace](delete-the-github-codespace/index.md)

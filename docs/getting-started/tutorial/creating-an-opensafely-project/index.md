@@ -1,20 +1,5 @@
 ## Running OpenSAFELY
 
-### Check that the automated tests pass
-
-Visit your repository on GitHub's site. Click on the **Actions** tab
-![The GitHub Actions tab in a repository.](../../../images/getting-started-github-actions-tab.png)
-
-You'll see a *Workflow* running with the *commit message* of your last
-commit. The workflow verifies that the command `opensafely run run_all` can
-run successfully. If it's yellow, it's still running. If it's red, it
-has failed. If it's green, it has succeeded. You want it to be green!
-![The GitHub Actions tab showing a successful workflow.](../../../images/getting-started-github-actions-workflow-success.png)
-
-## 7. Tidy up
-
-If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../how-to/use-github-codespaces-in-your-project/index.md#managing-codespaces) page.
-
 ## 8. Next steps
 
 Congratulations! You've covered all the basics that you need to develop a study
