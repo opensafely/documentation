@@ -48,7 +48,9 @@ Only certain file types will be reviewed and released from the secure server. Se
 
 * **Tables** - Tables should be produced as `csv` files.
     * Make sure that any column names are understandable for reviewers.
-    * Limit the number of columns or rows to only what is necessary.
+    * Limit the number of columns or rows to only what is necessary. The maximum number of
+      rows that can be included in a file for release is 5000.
+
 * **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
     * We recommend requesting the release of the underlying _aggregated_ data for all figures, rather than the figures themselves. You can then create the figures outside of the secure server, which has a few advantages:
         * You can tweak the figure much quicker and easier on your local computer.
