@@ -1,14 +1,17 @@
-## 6. Test your study on GitHub
+## Publish the changes to GitHub
 
-Now that your study does something interesting, you should "*push*" it
-to GitHub, where it can be viewed by others. Your repository is
-automatically configured with tests to verify the project is runnable,
-each time you push.
+So far,
+the changes you have made only exist in the codespace which you are working in.
 
 In this section, you will first add the study changes that you've made
 to a new *commit* in your repository — a commit represents a stored
 version of your work — and then send that commit to GitHub by *pushing*
 the new commit.
+
+Pushing changes to your GitHub repository:
+
+* ensures the changes you have made persist even when the codespace is deleted
+* enables others with permission to access your repository to see those changes
 
 ### Add your changes to the local repository
 
@@ -42,11 +45,13 @@ over a file listed in the "Staged Changes" section and clicking the
 `-` icon next to the filename.
 
 When you've finished staging all your changes, you are now ready to
-make the new commit. Click the green Commit button, which will open
-and editor for you to type a commit message.  Type a message to describe
-the staged changes. When ready, you can then click the tick icon to
-accept the commit message and *commit* the staged changes to
-to add them to the repository as stored in the codespace.
+make the new commit:
+
+1. Type "Generate age histograms" where it says "Message" above the Commit button.
+   This messages summarises what your staged changes do.
+1. Click the Commit button or press ++ctrl+enter++
+   to *commit* the staged changes to
+   add them to the repository as stored in the codespace.
 
 ![Committing changes in GitHub.](../../../images/getting-started-codespaces-commit-message.png)
 
@@ -66,6 +71,11 @@ you created earlier.
 You will see a prompt: 'This action will pull and push commits from
 and to "origin/main".' — click OK.
 
-(You may see a prompt: "Would you like Code to periodically run `git
-fetch`?" You can ignore this or select "Ask me later" for the
-purposes of this demonstration.)
+## Seeing the changes in the GitHub repository
+
+The repository was created at:
+`https://github.com/<your_github_username>/opensafely-getting-started`
+
+If you now visit the repository on the main GitHub site,
+you should see the updated state of the repository
+with the changes you made in the codespace.
