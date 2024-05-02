@@ -1,7 +1,10 @@
+## Check that the automated tests pass
+
 Your repository is automatically configured with tests to verify the project is runnable,
 each time you push.
 
-### Check that the automated tests pass
+Now that you have published the changes from your codespace to your GitHub repository,
+we can see if these tests pass.
 
 Visit your repository on GitHub's site. Click on the **Actions** tab
 ![The GitHub Actions tab in a repository.](../../../images/getting-started-github-actions-tab.png)
