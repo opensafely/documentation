@@ -49,6 +49,9 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
      * you want to have more control on the tools you use to develop
        studies for OpenSAFELY.
 
+    Refer to the [how-to section of this documentation](http://localhost:8910/getting-started/how-to/#setting-up-opensafely)
+    that lists the installation guides.
+
     The [current local installation guide](../../../getting-started/how-to/index.md) is aimed at
     Windows users. Mac users should be able to follow along as well, with
     a few hopefully-obvious alterations; see also the [macOS Install
