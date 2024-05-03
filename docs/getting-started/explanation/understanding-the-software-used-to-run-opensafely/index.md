@@ -1,5 +1,3 @@
-# Understanding the software used to run OpenSAFELY
-
 ## Why OpenSAFELY requires several pieces of installed software to run
 
 Some of the software needed is so you can execute code on your computer

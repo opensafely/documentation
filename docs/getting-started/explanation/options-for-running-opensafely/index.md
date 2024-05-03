@@ -1,5 +1,3 @@
-# Options for running OpenSAFELY
-
 In this guide, we've documented two different ways to work with OpenSAFELY:
 
 1. *Use an online environment where the needed software is already
