@@ -47,7 +47,7 @@ Researchers can also view the “log files” (also within the secure environmen
 Researchers conducting projects do not have access to directly view any other pseudonymised patient data (i.e. [levels 1, 2 or 3](https://docs.opensafely.org/security-levels/)).
 
 Research Projects in OpenSAFELY cannot access or process data from patients who have registered a type 1 opt-out[^1].
-This is ensured by the software (see technical explanation).
+This is ensured by the software (see [technical explanation](https://docs.opensafely.org/type-one-opt-outs/)).
 
 ### Who
 
@@ -75,7 +75,7 @@ These cover four key areas:
 These projects are subject to the same approvals process as Research Projects, and are run via the standard OpenSAFELY Reproducible Analytical Pipeline.
 
 Short Data Report Projects in OpenSAFELY cannot access or process data from patients who have registered a type 1 opt-out[^1].
-This is ensured by the software (see technical explanation).
+This is ensured by the software (see [technical explanation](https://docs.opensafely.org/type-one-opt-outs/)).
 
 ### Who
 
