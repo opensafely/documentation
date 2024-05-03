@@ -118,7 +118,7 @@ horizontal lines (`≡`) is the **menu button**, which allows you to
 access many more options.
 
 If you find yourself using GitHub regularly for working on research,
-we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
+we have more information on [working with GitHub codespaces](../../how-to/use-github-codespaces-in-your-project/index.md).
 
 ### Running `opensafely`
 
@@ -473,7 +473,7 @@ has failed. If it's green, it has succeeded. You want it to be green!
 
 ## 7. Tidy up
 
-If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../../github-codespaces.md/#managing-codespaces) page.
+If you close a Codespace in your browser, it still continues running. So, once you've finished using your Codespace, you may want to stop or delete it. There's information about how to do this on our [Codespaces](../../how-to/use-github-codespaces-in-your-project/index.md#managing-codespaces) page.
 
 ## 8. Next steps
 

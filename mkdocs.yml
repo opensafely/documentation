@@ -21,8 +21,15 @@ nav:
         - Tutorial: getting-started/tutorial/index.md
       - How-to guides:
         - How-to guides: getting-started/how-to/index.md
+        - How to use GitHub Codespaces in your project: getting-started/how-to/use-github-codespaces-in-your-project/index.md
+        - How to use GitHub and Git: install-github-and-git.md
+        - How to use the OpenSAFELY command-line interface: opensafely-cli.md
+        - How to create a code repository for your project: getting-started/how-to/create-a-code-repository-for-your-project/index.md
       - Explanation:
         - Explanation: getting-started/explanation/index.md
+        - Options for running OpenSAFELY: getting-started/explanation/options-for-running-opensafely/index.md
+        - Understanding GitHub Codespaces: getting-started/explanation/understanding-github-codespaces/index.md
+        - Understanding the software used to run OpenSAFELY: getting-started/explanation/understanding-the-software-used-to-run-opensafely/index.md
   - Using OpenSAFELY:
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
