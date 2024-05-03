@@ -1,5 +1,3 @@
-## How to create a code repository for your project
-
 !!! info
     A "code repository" is where code gets published on GitHub.
     This is not to be confused with a codespace.
