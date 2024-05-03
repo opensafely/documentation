@@ -1,7 +1,7 @@
 /install-intro                           /getting-started/how-to/             302
 /install-intro/                          /getting-started/how-to/             302
-/github-codespaces                       /getting-started/explanation/how-to/use-github-codespaces-in-your-project/
-/github-codespaces/                      /getting-started/explanation/how-to/use-github-codespaces-in-your-project/
+/github-codespaces                       /getting-started/how-to/use-github-codespaces-in-your-project/
+/github-codespaces/                      /getting-started/how-to/use-github-codespaces-in-your-project/
 /data-builder/ehrql/reference            /ehrql/reference/features/           302
 /data-builder/ehrql/reference/           /ehrql/reference/features/           302
 /data-builder/backends                   /ehrql/reference/backends/           302
