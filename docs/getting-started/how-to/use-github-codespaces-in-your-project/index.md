@@ -68,7 +68,7 @@ preventing any further CPU or storage quota usage by the codespace.
 
 ## Developing OpenSAFELY projects in GitHub Codespaces
 
-### How to ensure your work is saved
+### How to save your work
 
 #### How to save the files in the codespace
 
