@@ -19,6 +19,18 @@ nav:
       - Getting started: getting-started/index.md
       - Tutorial:
         - Tutorial: getting-started/tutorial/index.md
+        - Introduction: getting-started/tutorial/introduction/index.md
+        - Create a GitHub account: getting-started/tutorial/create-a-github-account/index.md
+        - Create a GitHub repository: getting-started/tutorial/create-a-github-repository/index.md
+        - Create a GitHub codespace: getting-started/tutorial/create-a-github-codespace/index.md
+        - Generate a first dataset: getting-started/tutorial/generate-a-first-dataset/index.md
+        - Update the dataset definition: getting-started/tutorial/update-the-dataset-definition/index.md
+        - Run the project pipeline: getting-started/tutorial/run-the-project-pipeline/index.md
+        - Add a scripted action to the pipeline: getting-started/tutorial/add-a-scripted-action-to-the-pipeline/index.md
+        - Publish the changes to GitHub: getting-started/tutorial/publish-the-changes-to-github/index.md
+        - Check the automated tests pass: getting-started/tutorial/check-the-automated-tests-pass/index.md
+        - Delete the GitHub codespace: getting-started/tutorial/delete-the-github-codespace/index.md
+        - See the next steps: getting-started/tutorial/see-the-next-steps/index.md
       - How-to guides:
         - How-to guides: getting-started/how-to/index.md
         - How to use GitHub Codespaces in your project: getting-started/how-to/use-github-codespaces-in-your-project/index.md

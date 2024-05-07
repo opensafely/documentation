@@ -1,16 +1,15 @@
-In the tutorial, you will create a study that uses dummy patient data.
-You will:
+The tutorial provides practical steps for
+creating an OpenSAFELY study.
 
-1. Create a GitHub account
-2. Create a new repository
-3. Create a study
-4. Run the study in a local environment
-5. Update the study
-6. Run the study in a testing environment
-
-Because the study uses dummy patient data, anyone can complete the tutorial.
-All you need is an up to date web browser and an internet connection.
-
----
-
-[Start the tutorial](creating-an-opensafely-project/index.md)
+* [Introduction](introduction/index.md)
+* [Create a GitHub account](create-a-github-account/index.md)
+* [Create a GitHub repository](create-a-github-repository/index.md)
+* [Create a GitHub codespace](create-a-github-codespace/index.md)
+* [Generate a first dataset](generate-a-first-dataset/index.md)
+* [Update the dataset definition](update-the-dataset-definition/index.md)
+* [Run the project pipeline](run-the-project-pipeline/index.md)
+* [Add a scripted action to the pipeline](add-a-scripted-action-to-the-pipeline/index.md)
+* [Publish the changes to GitHub](publish-the-changes-to-github/index.md)
+* [Check the automated tests pass](check-the-automated-tests-pass/index.md)
+* [Delete the GitHub codespace](delete-the-github-codespace/index.md)
+* [See the next steps](see-the-next-steps/index.md)
