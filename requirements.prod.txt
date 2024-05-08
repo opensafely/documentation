@@ -231,9 +231,9 @@ mkdocs-multirepo-plugin==0.7.0 \
     --hash=sha256:1034fc2aadafedb9d789eb2fb9181b5121c297f7e123beebd51c19e1e6ee94e5 \
     --hash=sha256:efd70eb4ef4fdffab5e3af1d5d4da31d0463cbdbe5ea539cea31fbaa153c6fef
     # via -r requirements.prod.in
-mkdocs-table-reader-plugin==2.1.0 \
-    --hash=sha256:b98041627b4982c5a5c6dac6f2e97767c53658771eed926057aa48c61a4e494f \
-    --hash=sha256:cef5a1127e2c04955d5716e67ede66971a0a5ee3dd5386af6cba53c707c78b8b
+mkdocs-table-reader-plugin==2.2.1 \
+    --hash=sha256:35d7ccadcee70f8415f2a9c73f260074512585ce8f6b81267cd537effac260d6 \
+    --hash=sha256:8205b422bb37368e3e8c0bf5932e08400442946a1b07fdc0bb11df09c409291b
     # via -r requirements.prod.in
 mkdocstrings[python]==0.25.1 \
     --hash=sha256:c3a2515f31577f311a9ee58d089e4c51fc6046dbd9e9b4c3de4c3194667fe9bf \
