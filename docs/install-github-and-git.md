@@ -31,7 +31,7 @@ If you're not sure if you already have git installed, type `git --version` into 
 ### Via GitHub's site (recommended)
 
 It is possible to sign up on GitHub's site
-as mentioned in the [Getting Started tutorial](getting-started/tutorial/creating-an-opensafely-project/index.md#1-set-up-github).
+as mentioned in the [Getting Started tutorial](getting-started/tutorial/create-a-github-account/index.md).
 
 ### Via GitHub Desktop
 
