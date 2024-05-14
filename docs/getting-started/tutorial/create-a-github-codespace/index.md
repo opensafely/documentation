@@ -34,7 +34,7 @@ horizontal lines (`≡`) is the **menu button**, which allows you to
 access many more options.
 
 If you find yourself using GitHub regularly for working on research,
-we have more information on [working with GitHub codespaces](../../../github-codespaces.md).
+we have more information on [working with GitHub codespaces](../../how-to/use-github-codespaces-in-your-project/index.md).
 
 ## Running `opensafely`
 
