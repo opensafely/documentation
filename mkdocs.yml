@@ -35,7 +35,7 @@ nav:
         - How-to guides: getting-started/how-to/index.md
         - How to add GitHub Codespaces to your project: getting-started/how-to/add-github-codespaces-to-your-project/index.md
         - How to use GitHub Codespaces in your project: getting-started/how-to/use-github-codespaces-in-your-project/index.md
-        - How to use GitHub and Git: install-github-and-git.md
+        - How to use Git effectively: getting-started/how-to/use-git-effectively/index.md
         - How to use the OpenSAFELY command-line interface: opensafely-cli.md
         - How to create a code repository for your project: getting-started/how-to/create-a-code-repository-for-your-project/index.md
       - Explanation:
