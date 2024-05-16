@@ -62,6 +62,8 @@
 /dataset-onsdeaths/                      /data-sources/onsdeaths/             301
 /dataset-ukrr                            /data-sources/ukrr/                  301
 /dataset-ukrr/                           /data-sources/ukrr/                  301
+/install-github-and-git                  /getting-started/how-to/use-git-effectively/ 301
+/install-github-and-git/                 /getting-started/how-to/use-git-effectively/ 301
 /permissions                             /jobs-site/                          301
 /permissions/                            /jobs-site/                          301
 /job-server                              /jobs-site/                          301
