@@ -42,3 +42,8 @@ Notice the columns: `patient_id` and `sex`.
 
 In the next part of the tutorial,
 we will see how to add another data column.
+
+---
+
+* Previous: [Create a GitHub codespace](../create-a-github-codespace/index.md)
+* Next: [Update the dataset definition](../update-the-dataset-definition/index.md)

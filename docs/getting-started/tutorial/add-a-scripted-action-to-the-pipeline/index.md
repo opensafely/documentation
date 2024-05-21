@@ -133,3 +133,8 @@ or right-click on `report.png` and select Download to download the image.
     Changes you make to files are automatically saved on GitHub. However, changes will not persist
     outside of the GitHub codespace unless you *commit* and *push* them to GitHub, as described
     in the next section.
+
+---
+
+* Previous: [Run the project pipeline](../run-the-project-pipeline/index.md)
+* Next: [Publish the changes to GitHub](../publish-the-changes-to-github/index.md)

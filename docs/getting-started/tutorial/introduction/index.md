@@ -39,3 +39,7 @@ The tutorial will be completed in the GitHub Codespaces environment.
 Free GitHub accounts are given a monthly quota of Codespaces.
 If you do not have a GitHub account,
 we will create one in this tutorial.
+
+---
+
+* Next: [Create a GitHub account](../create-a-github-account/index.md)

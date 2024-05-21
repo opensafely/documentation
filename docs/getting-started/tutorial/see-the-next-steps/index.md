@@ -26,3 +26,7 @@ We also recommend:
 
 * [OpenSAFELY Jobs](https://jobs.opensafely.org)
 * [the Visual Studio Code introduction to Git](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)
+
+---
+
+* Previous: [Delete the GitHub codespace](../delete-the-github-codespace/index.md)
