@@ -23,3 +23,8 @@ to visit to confirm your account.
 
 We recommend that you [secure your GitHub account with two-factor
 authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
+
+---
+
+* Previous: [Introduction](../introduction/index.md)
+* Next: [Create a GitHub repository](../create-a-github-repository/index.md)

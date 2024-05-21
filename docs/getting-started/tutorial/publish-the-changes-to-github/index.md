@@ -77,3 +77,8 @@ The repository was created at:
 If you now visit the repository on the main GitHub site,
 you should see the updated state of the repository
 with the changes you made in the codespace.
+
+---
+
+* Previous: [Add a scripted action to the pipeline](../add-a-scripted-action-to-the-pipeline/index.md)
+* Next: [Check the automated tests pass](../check-the-automated-tests-pass/index.md)
