@@ -19,7 +19,7 @@ we recommend the sections of our documentation about:
 
 * [our electronic health record query language, ehrQL](../../../ehrql/index.md)
 * [scripted actions](../../../actions-scripts.md)
-* [using Git](../../../install-github-and-git.md)
+* [using Git](../../how-to/use-git-effectively/index.md)
 * [using GitHub Codespaces in your project](../../how-to/use-github-codespaces-in-your-project/index.md)
 
 We also recommend:
