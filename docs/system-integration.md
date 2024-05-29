@@ -67,7 +67,7 @@ that you can refer to.
 
 ## Support
 
-See our [support page](how-to-get-help.md#data-providers-and-system-integrators)
+See our [support page](how-to-get-help.md#data-providers)
 for details of how to get more assistance on integration.
 
 ---8<-- 'includes/glossary.md'

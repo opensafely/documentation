@@ -8,14 +8,20 @@
     - transcribing (e.g., to paper or email)
     - using screen sharing software or any recording device/software
 
+### Create a folder for outputs
+
 First, create one folder in your workspace called `release` (if you have previously made a release, we suggest appending the date to the new folder name to distinguish it) and copy from your `output` folder to this `release` folder the data files that require review. The number of study outputs requested for review must be kept to a minimum and include only the results you absolutely need to export from the secure server.
+
+### Complete a output review request form
 
 When you are ready to request a release of your aggregated results please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date.
 
 !!! note
     Each data release entails substantial review work. To retain rapid turnaround times, external data releases should typically only be of results for final submission to a journal or public notebook; or a small number of necessary releases for discussion with external collaborators.
 
-<a id="context-requirements"></a>For each output wishing to be released you will need to provide a clear contextual description including:
+#### Context requirements
+
+For each output wishing to be released you will need to provide a clear contextual description including:
 
 1. The file path for each output
 2. Variable descriptions
@@ -29,7 +35,7 @@ Each section in the review request form should normally describe a single file, 
 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
 
-* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](#running-further-analyses-on-released-outputs).
+* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](releasing-files.md#running-further-analyses-on-released-outputs).
 * A large number of outputs are produced from a single intermediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
 *  The intermediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
 
@@ -79,9 +85,9 @@ Please run through this checklist before making a review request.
 
 1. Do your results adhere to the [OpenSAFELY permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
 2. Are all of the outputs of the [allowed file types](#allowed-file-types)?
-3. Are all of the outputs in a [separate release folder](#2-requesting-release-of-outputs-and-error-log-files-from-the-server)?
-4. Have you [redacted any low counts](#redacting-counts-less-than-or-equal-to-7)?
-5. Have you [rounded any counts](#rounding-counts) (including [counts underlying rates](#rounding-rates))?
+3. Are all of the outputs in a [separate release folder](#create-a-folder-for-outputs)?
+4. Have you [redacted any low counts](sdc.md#redacting-counts-less-than-or-equal-to-7)?
+5. Have you [rounded any counts](sdc.md#rounding-counts) (including [counts underlying rates](sdc.md#rounding-rates))?
 6. Have you supplied underlying counts for all of your results?
 7. Are all of the outputs clearly described?
     * Is the filename sensible and is the filepath provided in the request form correct?

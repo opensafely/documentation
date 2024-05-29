@@ -22,7 +22,7 @@ We ask that you don't send direct messages (DMs) to members of the tech support 
 
 The types of question that this team aim to answer include:
 
-* deleting files from [Level 3](security-levels.md#level-3) or [Level 4](security-levels.md#level-4)
+* deleting files from [Level 3](security-levels.md#level-3-nhs-england-are-data-controllers-of-the-data) or [Level 4](security-levels.md#level-4-nhs-england-are-data-controllers-of-the-data)
 * [requesting new libraries](requesting-libraries.md)
 * accuracy of the OpenSAFELY documentation
   ("The documentation says... but the error message says...")
