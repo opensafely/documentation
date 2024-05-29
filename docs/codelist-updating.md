@@ -6,7 +6,7 @@ You may encounter a warning message when you try to run jobs, that looks somethi
 ![Out of date codelists warning on Jobs site.](images/codelists-jobs-warning.png)
 
 
-To fix this, you will need to follow the steps to [add a codelist into your study](codelist-project.md#adding-updating-a-codelist-CSV-file) again.
+To fix this, you will need to follow the steps to [add a codelist into your study](codelist-project.md#addingupdating-a-codelist-csv-file) again.
 
 Note that this warning is only relevant if the jobs you are running require access to the
 backend database. Analysis jobs that use data that has already been extracted in a previous
