@@ -24,7 +24,7 @@ OPCS-4 and dm+d codes are not currently supported by the OpenCodelists builder. 
 
 Codelists on OpenCodelists can be owned by individuals or by organisations. Creating codelists under an organisation means that the codelist is easier to find and reuse. Only codelists created by organisations are included in search results on OpenCodelists.
 
-Any OpenCodelists user with an account can create a codelist. However, in order to create or edit codelists on behalf of an organisation, you must be a member of that organisation. 
+Any OpenCodelists user with an account can create a codelist. However, in order to create or edit codelists on behalf of an organisation, you must be a member of that organisation.
 
 If you are a member of an OpenCodelists organisation, you will see a [My organisations](https://www.opencodelists.org/organisations/) menu option, where you can view codelists that are owned by your organisations, or that are waiting for review.
 
