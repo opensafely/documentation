@@ -66,12 +66,13 @@ git switch --create=github-codespaces
     then create one.
     It's important that it starts with a dot (`.`).
 
-### Commit and push
+### Add, commit, and push
 
-Commit the files you copied in the previous step:
+Add and commit the files you copied in the previous step:
 
 ```sh
-git commit --message='Add GitHub Codespaces'
+git add .
+git commit --message="Add GitHub Codespaces"
 ```
 
 Push to GitHub:
