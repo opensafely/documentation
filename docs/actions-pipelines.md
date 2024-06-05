@@ -155,7 +155,7 @@ What happens:
 </details>
 
 
-## Running your code with GitHub actions
+## Running your code with GitHub Actions
 
 Every time you create a pull request to merge a development branch onto the main remote branch, GitHub will automatically run a series of tests on the code; specifically, that your codelists are up-to-date, and that `run_all` completes successfully.
 Depending on your settings, you may receive email notifications about the results of these tests.

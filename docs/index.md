@@ -38,7 +38,7 @@ To use OpenSAFELY, users must know, or be willing to learn, the following progra
 
 - **Stata, R or Python**
   OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis.
-  For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](actions-pipelines.md#execution-environments) for more information.
+  For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](actions-scripts.md#execution-environments) for more information.
 - **Git**
 The workflow is strongly integrated into Git/GitHub.
 As a minimum you need to be able to clone a remote git repository, create a branch to work on, commit changes to it, push those changes to the remote repository, create a pull request, and merge branches. We have simple guidance in our [Getting Started tutorial](getting-started/tutorial/index.md) on this if you have never used this tooling before.
