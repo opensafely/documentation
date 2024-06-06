@@ -61,6 +61,23 @@ git switch --create=github-codespaces
 * Repeat for the remaining files.
 * Copy each file to the `.devcontainer` folder in your project.
 
+!!! warn "Dotfiles and `.gitignore`"
+    Dotfiles are files and folders that start with a dot (`.`).
+    Many tools for browsing files and folders,
+    such as File Explorer on Windows or Finder on macOS,
+    hide dotfiles by default, so as not to clutter the display.
+
+    GitHub shows dotfiles, but removes the dots when they are downloaded.
+    Whilst this behaviour is understandable,
+    it is also unhelpful,
+    as the dots are important.
+
+    The `.devcontainer` folder contains one dotfile;
+    it's called `.gitignore` and specifies files that Git should ignore.
+    Having downloaded `gitignore` (without the dot) from GitHub
+    and copied it to the `.devcontainer` folder in your project,
+    you should rename it `.gitignore` (with the dot).
+
 !!! info "My project doesn't have a `.devcontainer` folder"
     If your project doesn't have a `.devcontainer` folder,
     then create one.
