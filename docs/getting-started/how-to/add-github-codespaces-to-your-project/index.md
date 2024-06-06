@@ -95,7 +95,7 @@ git commit --message="Add GitHub Codespaces"
 Push to GitHub:
 
 ```sh
-git push
+git push --set-upstream
 ```
 
 ### Create a pull request
