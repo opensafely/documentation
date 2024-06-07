@@ -19,3 +19,6 @@ The University of Bristol's Electronic Health Records Group have a section on th
 
 Git's "[Documentation](https://git-scm.com/doc)" page links to several videos and books,
 including the "[Pro Git](https://git-scm.com/book/en/v2)" book by Scott Chacon and Ben Straub.
+
+[Dangit, Git!?!](https://dangitgit.com/) describes several Git pitfalls, with advice about how to escape from them.
+There's also [a version with swears](https://ohshitgit.com/).
