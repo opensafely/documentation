@@ -6,6 +6,10 @@ The `git` command-line tool has a large number of commands.
 However, only a small number are important and commonly used.
 These are summarised in GitHub's "[Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)".
 
+[Julia Evans](https://jvns.ca/) has produced a free "[Git Cheat Sheet](https://wizardzines.com/git-cheat-sheet.pdf)"
+and a paid-for "[How Git Works](https://wizardzines.com/zines/git/)" zine.
+Both are light-hearted and approachable.
+
 ## Using Git with VS Code
 
 VS Code's Source Control view provides a visual interface to important and commonly used commands.
