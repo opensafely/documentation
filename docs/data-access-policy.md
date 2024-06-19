@@ -6,7 +6,7 @@
 ## Introduction
 
 The following policy outlines the guidelines for patient data access and processing via the OpenSAFELY platform specifically related to **access to and processing of pseudonymised and de-identified patient data** (and data derived from it).
-Technical **data relating to the operation of the platform **is covered by a separate OpenSAFELY Platform Operational Data Policy.
+Technical **data relating to the operation of the platform** is covered by a separate OpenSAFELY Platform Operational Data Policy.
 
 The policy outlines the circumstances under which different groups of individuals can access or process pseudonymised patient data and the controls in place to maintain the platform's security model.
 OpenSAFELY is committed to upholding the principles of security, transparency, and minimal access (in line with our approved legal basis for access) in all data-related activities.
