@@ -61,27 +61,27 @@ git switch --create=github-codespaces
 * Repeat for the remaining files.
 * Copy each file to the `.devcontainer` folder in your project.
 
-!!! warn "Dotfiles and `.gitignore`"
+!!! warn "Dotfiles"
     Dotfiles are files and folders that start with a dot (`.`).
     Many tools for browsing files and folders,
     such as File Explorer on Windows or Finder on macOS,
     hide dotfiles by default, so as not to clutter the display.
 
-    GitHub shows dotfiles, but removes the dots when they are downloaded.
-    Whilst this behaviour is understandable,
-    it is also unhelpful,
-    as the dots are important.
-
-    The `.devcontainer` folder contains one dotfile;
-    it's called `.gitignore` and specifies files that Git should ignore.
-    Having downloaded `gitignore` (without the dot) from GitHub
-    and copied it to the `.devcontainer` folder in your project,
-    you should rename it `.gitignore` (with the dot).
-
 !!! info "My project doesn't have a `.devcontainer` folder"
     If your project doesn't have a `.devcontainer` folder,
     then create one.
     It's important that it starts with a dot (`.`).
+
+### Update `.gitignore`
+
+* Visit the [opensafely/research-template](https://github.com/opensafely/research-template) project on GitHub.
+* Click on the `.gitignore` file to open it.
+* Use your preferred text editor to open the `.gitignore` in your project ready for updating.
+* Copy the contents of the `.gitignore` from the `research-template` repository,
+  and paste them into your text editor,
+  replacing the previously existing contents of your `.gitignore` entirely.
+* Your project's `.gitignore` should look identical to the `.gitignore` in the `research-template`.
+* Save your project's updated `.gitignore`.
 
 ### Add, commit, and push
 
