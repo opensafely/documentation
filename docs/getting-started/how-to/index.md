@@ -3,6 +3,7 @@ The how-to guides provide practical steps for setting up and using OpenSAFELY.
 ## Using OpenSAFELY
 
 * [How to add GitHub Codespaces to your project](add-github-codespaces-to-your-project/index.md)
+* [How to update GitHub Codespaces in your project](update-github-codespaces-in-your-project/index.md)
 * [How to use GitHub Codespaces in your project](use-github-codespaces-in-your-project/index.md)
 * [How to use released outputs in GitHub Codespaces](use-released-outputs-in-github-codespaces/index.md)
 * [How to use Git effectively](use-git-effectively/index.md)

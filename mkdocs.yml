@@ -34,6 +34,7 @@ nav:
       - How-to guides:
         - How-to guides: getting-started/how-to/index.md
         - How to add GitHub Codespaces to your project: getting-started/how-to/add-github-codespaces-to-your-project/index.md
+        - How to update GitHub Codespaces in your project: getting-started/how-to/update-github-codespaces-in-your-project/index.md
         - How to use GitHub Codespaces in your project: getting-started/how-to/use-github-codespaces-in-your-project/index.md
         - How to use released outputs in GitHub Codespaces: getting-started/how-to/use-released-outputs-in-github-codespaces/index.md
         - How to use Git effectively: getting-started/how-to/use-git-effectively/index.md
