@@ -90,7 +90,10 @@ nav:
   - OpenSAFELY best practice:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md
-      - Code reviews: code-reviews.md
+      - Code reviews:
+          - About code reviews: code-reviews.md
+          - How to request a code review: code-reviews-for-authors.md
+          - How to review code: code-reviews-for-reviewers.md
       - Case-control studies: case-control-studies.md
       - Writing performant code: memory-efficient-working.md
   - ehrQL: '!import https://github.com/opensafely-core/ehrql?branch=main'
