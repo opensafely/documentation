@@ -26,6 +26,10 @@ and downloading figures and tables from a Codespace,
 are examples of **sharing results**.
 The "[Datasets Used](https://www.opensafely.org/policies-for-researchers/#datasets-used)" section
 of the "Policies for Researchers" page on the OpenSAFELY website contains more information about sharing results.
+In short, results
+— such as released outputs, figures, and tables —
+should be shared **in confidence**,
+and **only** with key members of the wider research team.
 
 !!! warning
     Never commit released outputs, figures, or tables to your project's repository.
