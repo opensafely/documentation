@@ -32,7 +32,7 @@ as per the instructions in the [RStudio Projects documentation](https://docs.pos
 
 ## RStudio's Files tab is not showing the correct directory
 
-Sometimes, when opening RStudio, you may find that the [Files tab](https://docs.posit.co/ide/user/ide/guide/ui/files.htm) is not displaying your project directory.
+Sometimes, when opening RStudio, you may find that the [Files tab](https://docs.posit.co/ide/user/ide/guide/ui/files.html) is not displaying your project directory.
 
 Opening the "More" menu in this tab and selecting "Go To Working Directory" should take you to your project directory.
 
