@@ -53,6 +53,6 @@ jobs:
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
-          channel_id: C069SADHP1Q
+          channel_id: C0270Q313H7
           status: "Check Docs Links Failure"
           color: danger
