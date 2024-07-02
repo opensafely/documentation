@@ -158,7 +158,7 @@ This allows you develop and and test code as if it was a regular interactive ses
 For example, to run an interactive Stata session:
 
 ```bash
-opensafely exec stata-mp
+opensafely exec stata-mp stata-mp
 ```
 
 This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code (the `opensafely` tool knows how to fetch and apply the OpenSAFELY Stata licence).
