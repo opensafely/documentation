@@ -48,7 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: "Notify Slack on Failure"
-        if: failure()
+        if: ${{ failure() && github.event_name == 'schedule' }}
         uses: voxmedia/github-action-slack-notify-build@3665186a8c1a022b28a1dbe0954e73aa9081ea9e # v1.6.0
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
