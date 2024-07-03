@@ -9,7 +9,7 @@ The how-to guides provide practical steps for setting up and using OpenSAFELY.
 
 * [How to use GitHub Codespaces in your project](use-github-codespaces-in-your-project/index.md)
 * [How to use released outputs in GitHub Codespaces](use-released-outputs-in-github-codespaces/index.md)
-* [How to troubleshoot common issues in GitHub Codespaces](troubleshoot-common-codespaces-issues/index.md)
+* [How to troubleshoot common issues with GitHub Codespaces](troubleshoot-common-codespaces-issues/index.md)
 
 ## Using Git, GitHub, and the OpenSAFELY command-line interface
 
