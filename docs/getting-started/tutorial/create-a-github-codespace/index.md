@@ -1,3 +1,5 @@
+This section assumes you have either [created a Github Codespace](https://docs.opensafely.org/getting-started/tutorial/create-a-github-repository/) or [added a GitHub Codespace to your project](https://docs.opensafely.org/getting-started/how-to/add-github-codespaces-to-your-project/#adding-github-codespaces-to-your-project).
+
 For the repository you just created,
 there is a Code button on GitHub.
 
