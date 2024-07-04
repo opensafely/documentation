@@ -6,7 +6,9 @@ def define_env(env):
         """
         Build a nested list of page links from a navigation section index, to be inserted into the index page itself
         """
-        assert page.is_index, "`build_toc` macro is only available for navigation index pages"
+        assert (
+            page.is_index
+        ), "`build_toc` macro is only available for navigation index pages"
         parent_section = page.parent
         links = [make_link(item) for item in parent_section.children if item != page]
         html = f"<ul>{''.join(links)}</ul>"
