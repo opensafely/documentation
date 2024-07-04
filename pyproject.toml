@@ -1,3 +1,7 @@
+[project]
+name = "documentation"
+requires-python = ">=3.11"
+
 [tool.black]
 extend-exclude = '''
 src/cohort-extractor
