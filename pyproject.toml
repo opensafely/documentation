@@ -1,3 +1,8 @@
+[tool.black]
+extend-exclude = '''
+src/cohort-extractor
+'''
+
 [tool.ruff]
 line-length = 88
 exclude = [
@@ -11,6 +16,7 @@ exclude = [
   "docker",
   "htmlcov",
   "venv",
+  "src/cohort-extractor",
 ]
 
 [tool.ruff.lint]
