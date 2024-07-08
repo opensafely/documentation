@@ -9,3 +9,8 @@ When you've completed the tutorial,
 browse the [how-to guides](how-to/index.md).
 These provide practical steps for setting up and using OpenSAFELY.
 Finally, the [explanation](explanation/index.md) section contains background information about running OpenSAFELY.
+
+!!! info "GitHub Codespaces"
+    Many of the pages in this section mention GitHub Codespaces.
+    For more information about what GitHub Codespaces are,
+    see our blog post on "[Research-ready computers in the cloud](https://www.bennett.ox.ac.uk/blog/2024/07/research-ready-computers-in-the-cloud/)".
