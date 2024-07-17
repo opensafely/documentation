@@ -74,7 +74,7 @@ This removes any code blocks in the notebook from the rendered html; to keep the
 To run this within an OpenSAFELY action, you can use the following run command:
 
 ```
-run: jupyter:latest jupyter nbconvert /workspace/analysis/notebook.ipynb --execute --to html --output-dir=/workspace/output --no-input --ExecutePreprocessor.timeout=86400
+run: python:v2 jupyter nbconvert /workspace/analysis/notebook.ipynb --execute --to html --output-dir=/workspace/output --no-input --ExecutePreprocessor.timeout=86400
 ```
 
 Refer to an [example of this, implemented as an OpenSAFELY action](https://github.com/opensafely/mechanical-valve-anticoag/blob/1f158504ba5a74470b11c8d73311fb2859d67cb7/project.yaml#L53-L63).
