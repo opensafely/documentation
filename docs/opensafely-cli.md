@@ -201,8 +201,8 @@ This can be useful if you want to explore the image manually.
 environments for developing code.
 
 You can run JupyterLab to use Jupyter notebooks via the `opensafely`
-tool. This ensures that the Python code you write will work in the
-OpenSAFELY environment.
+tool. This allows you to run Jupyter locally but ensure that the Python code
+you write will work in the OpenSAFELY environment too.
 
 From the directory containing code that you are working on, run:
 
@@ -217,6 +217,18 @@ browser to access JupyterLab.
 
 To exit, press ++control+c++ in the command line - this also shuts down the container.
 Or alternatively go to File -> shutdown in the JupyterLab tab.
+
+When you have developed a notebook to run within the OpenSAFELY environment,
+you can add a `run` command to your [`project.yaml`](actions-pipelines/#projectyaml-format)`
+that runs your notebook with [`nbconvert`](https://nbconvert.readthedocs.io).
+
+This is an example:
+
+```
+run: python:v2 jupyter nbconvert --execute analysis/notebook.ipynb
+```
+
+where `analysis/notebook.ipynb` is the location of your notebook in your repository.
 
 ### `unzip` - unzipping CSV files
 
