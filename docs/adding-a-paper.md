@@ -4,69 +4,9 @@ We are very keen to compile all pre-printed and published OpenSAFELY studies on 
 
 We have provided a template file to help you provide this information to us in the most helpful format. The file is visable below, and can be downloaded by clicking...
 
-Please download the template, fill it in (being careful not to change the format), and send it to your co-pilot.
+Please [download the template](/paper_template.txt), fill it in (being careful not to change the format), and send it to your co-pilot.
 
 
 ```yaml
-
----
-# the full paper title, but remove any extra subtitles added by the journal
-title: "Computing and statistics in the eighteenth century"
-
-# the date the paper was published on the journal's website
-date: "1850-06-24"
-
-# List of authors
-authors:
-  - Ada Lovelace # Enter each authors full name in plain text
-  - Florence Nightingale # One author per line
-
-# List of categories
-categories:
-  - OpenSAFELY # Enter each category name in plain text
-  - OpenPrescribing # One category per line
-
-# Full citation for the paper - this can usually be obtained from the online version of the paper or from a reference manager
-citation: "Lovelace A, Nightingale F. Computing and statistics in the eighteenth century: a Primer. Journal of Theory and Practice, XX(x)X.123 1850"
-
-# A short description that will display under the paper title across the
-# Bennett website and when the link is shared
-# For examples see https://www.opensafely.org/research/
-description: "This paper investigated..."
-
-# the DOI identifier for the paper *after* the `https://doi.org/`
-doi: "10.1111/ABC(12).16030"
-
-# Paper details from the journal, if published
-paper:
-  # the full title as it is displayed on the journal website
-  title: "Computing and statistics in the eighteenth century: A Primer"
-  # the name of the journal if the paper is published
-  journal: "Journal of Theory and Practice"
-
-# If the paper is now published, enter information of the preprint version of the paper
-preprint:
-  title: "Computing and statistics in the eighteenth century" # Preprint title
-  doi: "abc-101232" # Preprint DOI
-  link: https://www.preprintserver.com/abc123 # Link to preprint version of the paper
-
-# If the paper used OpenSAFELY, it should be linked to a project and repo
-opensafely:
-  project: 123 # the project number from the Approved Projects page - see https://www.opensafely.org/approved-projects/
-  repo: "test-repo" # the name of the repo in the github.com/opensafely org
-
-# The slug is the second part of the url after the 
-# The slug should match the DOI, but with the following amendments:
-# - If the DOI has brackets in it, remove them from the slug
-# - If the DOI has upper case characters, replace them with lowercase
-# For example, a DOI of the form "10.1111/ABC(12).16030", becomes "10.1111/abc12.16030"
-slug: "10.1111/abc12.16030"
-
-# Set the status of the paper to "preprint" or "published"
-status: "published"
-
----
-
-## Markdown-formatted abstract goes here!
-
+--8<-- "docs/paper_template.txt"
 ```
