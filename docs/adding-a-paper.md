@@ -1,22 +1,13 @@
 # Adding an OpenSAFELY paper to OpenSAFELY.org
 
-We are very keen to compile all pre-printed and published OpenSAFELY studies on [opensafely.org](https://www.opensafely.org).
+We are very keen to compile all pre-printed and published OpenSAFELY studies on [the OpenSAFELY website](https://www.opensafely.org/research).
 
-To do this, we require the following information:
+We have provided a template file to help you provide this information to us in the most helpful format. The template can be previewed in full below.
 
-* the full title
-* the date the paper was published on the journal's website
-* the authors
-* the full citation
-* a short description
-* the DOI
-* the name of the journal
-* the URL of the associated OpenSAFELY repository
-* the number of the associated OpenSAFELY project (see the "[Approved Projects](https://www.opensafely.org/approved-projects/)" page)
+Please [download the template](/paper_template.txt), fill it in (being careful not to change the format), and send it to your co-pilot.
 
-If the paper has an accompanying preprint,
-then we also require the following information about the accompanying preprint:
 
-* the full title
-* the DOI
-* the URL
+
+```yaml
+--8<-- "docs/paper_template.txt"
+```
