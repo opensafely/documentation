@@ -167,7 +167,12 @@ The `opensafely` command line software should now automatically use this Stata l
 
 ### Python
 
-The Docker image provided is Python 3.8, with [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v1/requirements.txt).
+There are two versions of the Docker image.
+
+* `python:v1`, which for historical reasons is the same as `python:latest`, contains Python 3.8.
+  It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v1/requirements.txt).
+* `python:v2` contains Python 3.10.
+  It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v2/requirements.txt).
 
 ### R
 
