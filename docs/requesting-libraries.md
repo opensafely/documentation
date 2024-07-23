@@ -39,7 +39,7 @@ issue](https://github.com/opensafely-core/stata-docker/issues) to request the pa
 
 ## Python packages
 
-First check that the package is not already available, by [viewing all installed packages and their versions for the OpenSAFELY Python image](https://github.com/opensafely-core/python-docker/blob/main/v2/requirements.txt). If your package isn't there then [open an
+First check that the package is not already available, by [viewing all installed packages and their versions for the OpenSAFELY Python image](https://github.com/opensafely-core/python-docker/blob/main/v2/packages.md). If your package isn't there then [open an
 issue](https://github.com/opensafely-core/python-docker/issues) to request it be added. Include the following information:
 
 * A link to information about the package;
