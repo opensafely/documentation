@@ -66,7 +66,7 @@ Clicking "Open in Browser" should open a new tab where you will see a directory 
 
 You can also navigate to this window via the "ports" tab in VS Code:
 
-![VS Code ports tab showing application running on port 3000](vscode-ports.png)
+![VS Code ports tab showing application running on port 3000.](vscode-ports.png)
 
 ### Alternative extension
 
