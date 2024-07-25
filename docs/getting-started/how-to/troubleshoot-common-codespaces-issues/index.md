@@ -50,7 +50,7 @@ If you wish your settings and extensions to be available anywhere you open VS Co
 
 ## Previewing HTML files doesn't work
 
-If you are using a codespace to author an HTML file, for example a report, you may wish to see a live preview of this and for this purpose many will turn to the [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) VS Code extension from Microsoft.
+If you are using a codespace to author an HTML file, for example a report, you may wish to see a preview of this. Microsoft's [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) VS Code extension is frequently used for this purpose.
 However, if you install and try to use this extension in a codespace, you might experiences errors such as _"This content is blocked. Contact the site owner to fix the issue."_ or the preview window appearing blank.
 This is a [known issue](https://github.com/microsoft/vscode-livepreview/issues/111) which is currently awaiting a fix from the extension's developers.
 
