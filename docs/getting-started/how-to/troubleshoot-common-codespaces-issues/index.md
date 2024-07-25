@@ -58,7 +58,7 @@ This is a [known issue](https://github.com/microsoft/vscode-livepreview/issues/1
 
 When you first try to open a preview window via the context menu (right click), you may see a pop-up in the bottom right hand corner of your screeen advising you of a new "application running on port 3000":
 
-![vs code popup notifying of application running on port 300](vscode-popup.png)
+![VS Code popup notifying of application running on port 3000.](vscode-popup.png)
 
 Clicking "Open in Browser" should open a new tab where you will see a directory listing of the files in your workspace, and from which you can navigate to your desired html file:
 
