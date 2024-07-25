@@ -62,7 +62,7 @@ When you first try to open a preview window via the context menu (right click), 
 
 Clicking "Open in Browser" should open a new tab where you will see a directory listing of the files in your workspace, and from which you can navigate to your desired html file:
 
-![browser window showing project workspace directory listing](directory-listing.png)
+![Browser window showing project workspace directory listing.](directory-listing.png)
 
 You can also navigate to this window via the "ports" tab in VS Code:
 
