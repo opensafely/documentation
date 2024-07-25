@@ -47,3 +47,28 @@ However, you will find that any changes you make will not be preserved when you 
 If you wish to make changes that will apply whenever anyone opens your project, then consider using a [Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings) file in your project.
 
 If you wish your settings and extensions to be available anywhere you open VS Code (including in Codespaces), then consider using [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync).
+
+## Previewing HTML files doesn't work
+
+If you are using a codespace to author an HTML file, for example a report, you may wish to see a preview of this. Microsoft's [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) VS Code extension is frequently used for this purpose.
+However, if you try to use this extension in a codespace, you might see error messages such as: "This content is blocked. Contact the site owner to fix the issue…" or see that the preview window appears blank.
+This is a [currently known issue](https://github.com/microsoft/vscode-livepreview/issues/111) with the extension.
+
+### Workaround
+
+When you first try to open a preview window via the context menu (right click), you may see a pop-up in the bottom right hand corner of your screeen advising you of a new "application running on port 3000":
+
+![VS Code popup notifying of application running on port 3000.](vscode-popup.png)
+
+Clicking "Open in Browser" should open a new tab where you will see a directory listing of the files in your workspace, and from which you can navigate to your desired html file:
+
+![Browser window showing project workspace directory listing.](directory-listing.png)
+
+You can also navigate to this window via the "Ports" tab in VS Code:
+
+![VS Code ports tab showing application running on port 3000.](vscode-ports.png)
+
+### Alternative extension
+
+There is also an [alternative preview extension](https://marketplace.visualstudio.com/items?itemName=searKing.preview-vscode), which [reportedly](https://stackoverflow.com/questions/74452866/how-preview-a-html-file-github-codespaces/75135098#75135098) is not affected by this issue.
+We have not tested this extension and therefore cannot vouch for its functionality or safety.
