@@ -72,3 +72,19 @@ You can also navigate to this window via the "Ports" tab in VS Code:
 
 There is also an [alternative preview extension](https://marketplace.visualstudio.com/items?itemName=searKing.preview-vscode), which [reportedly](https://stackoverflow.com/questions/74452866/how-preview-a-html-file-github-codespaces/75135098#75135098) is not affected by this issue.
 We have not tested this extension and therefore cannot vouch for its functionality or safety.
+
+## My code runs fine in the codespace's local environment but not as an OpenSAFELY action (or vice versa)
+
+Your codespace comes pre-installed with all the packages from the most recent OpenSAFELY R and Python action images.
+These action images are the environment in which your code is executed via the [`opensafely`](../../../opensafely-cli.md) command.
+
+For [R](../../../actions-scripts.md#r) actions, we currently only maintain one version of the R action image (`R:latest`) and so we expect the behaviour of R scripts to be the same when executed via the OpenSAFELY R action image or via RStudio (or `R` on the command line).
+
+In the case of [Python](../../../actions-scripts.md#python), the most recent action image version is `python:v2` at the time of writing.
+If you have actions defined in your [project pipeline file](../../../actions-pipelines.md#projectyaml-format) that reference images called `python:v1` or `jupyter:v1` (or — due to an _unfortunate_ historical naming convention —  `python:latest` or `jupyter:latest`), then the behaviour of your code when run in those images may not be the same as if you run the code directly in the codespace. This is because the installed packages and versions of Python available differ between these environments.
+
+If this is the case for your project, your options are:
+
+* Update your project pipeline file to reference the most recent action images and make any neccesary changes to your code
+* Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec---interactive-development) for interactive development using these action images' environments
+
