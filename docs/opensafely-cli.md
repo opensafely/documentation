@@ -219,7 +219,7 @@ To exit, press ++control+c++ in the command line - this also shuts down the cont
 Or alternatively go to File -> shutdown in the JupyterLab tab.
 
 When you have developed a notebook to run within the OpenSAFELY environment,
-you can add a `run` command to your [`project.yaml`](actions-pipelines.md#projectyaml-format).
+you can add a `run` command to your [`project.yaml`](actions-pipelines.md#projectyaml-format)
 that runs your notebook with [`nbconvert`](https://nbconvert.readthedocs.io).
 
 This is an example:
