@@ -78,6 +78,11 @@ and how you might address them:
   relative links are not always easy to get right)
 * :heavy_check_mark: **Resolution**: edit the documentation to correct the link
 <!-- -->
+* :mag: **Cause**: an internal relative link to another Markdown source file
+  is missing the `.md` suffix
+* :heavy_check_mark: **Resolution**: edit the link from
+  `some-path/filename` to `some-path/filename.md`
+<!-- -->
 * :mag: **Cause**: a broken URL due to the resource being unavailable,
   due to the site having an outage or maintenance period
 * :heavy_check_mark: **Resolution**: recheck the URL later;
