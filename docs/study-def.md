@@ -314,7 +314,7 @@ generate_cohort --param my_param='Value with spaces' ...
 ```
 
 ### Identical study definitions with different index dates
-To parameterise index dates, there is a simpler alternative than using `--param`. Use the `--index-date-range` argument from the [measures](measures.md#extract-the-data) feature. `--index-date-range` can be given a single date, instead of a range.
+To parameterise index dates, there is a simpler alternative than using `--param`. Use the `--index-date-range` argument from the [measures](study-def-measures.md#extract-the-data) feature. `--index-date-range` can be given a single date, instead of a range.
 
 We start by creating the study definition defining the variables you want to extract.
 Then within the [`project.yaml`](actions-pipelines.md#projectyaml-format) we define two or more actions, one for each index date you want to use.

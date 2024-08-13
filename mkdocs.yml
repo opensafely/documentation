@@ -86,7 +86,7 @@ nav:
           - Working with codelists: study-def-codelists.md
           - Dummy data and expectations: study-def-expectations.md
           - Variable reference: study-def-variables.md
-          - Measures: measures.md
+          - Measures: study-def-measures.md
           - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
           - Programming tricks: study-def-tricks.md
   - OpenSAFELY best practice:

@@ -346,7 +346,7 @@ Indeed, we could think of writing less code as reducing our [opportunity cost](h
 In addition:
 
 * **Compatibility:**
-  cohort-joiner uses the same logic as cohort-extractor to save files, meaning that it's compatible with "downstream" actions, such as [the measures framework](measures.md).
+  cohort-joiner uses the same logic as cohort-extractor to save files, meaning that it's compatible with "downstream" actions, such as [the measures framework](study-def-measures.md).
 * **Efficiency:**
   cohort-joiner uses [an efficient strategy](https://gist.github.com/iaindillingham/4903394b65dc3bad3b54e0eb1cde7ea5) for joining the extracts.
   This strategy uses roughly 2.9 times less memory than an alternative, previously documented, strategy.
