@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 In study definitions, dates are described in `"YYYY-MM-DD"` format; so, for example, the 3rd May 1995 would be written `"1995-05-03"`.
@@ -101,7 +105,7 @@ actions:
         cohort: output/input-2020-01-01.csv.gz
 ```
 
-This can also be used to define a range of dates over which to run the study definition, usually when working with [Measures](measures.md).
+This can also be used to define a range of dates over which to run the study definition, usually when working with [Measures](study-def-measures.md).
 
 
 ## Date arithmetic

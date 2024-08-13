@@ -81,14 +81,14 @@ nav:
       - Information for system integrators: system-integration.md
       - Legacy:
         - Study definitions:
-          - Overview: study-def.md
-          - Working with dates: study-def-dates.md
-          - Working with codelists: study-def-codelists.md
-          - Dummy data and expectations: study-def-expectations.md
-          - Variable reference: study-def-variables.md
-          - Measures: measures.md
-          - Create inclusion/exclusion flowcharts: study-def-flowcharts.md
-          - Programming tricks: study-def-tricks.md
+          - Overview: legacy/study-def.md
+          - Working with dates: legacy/study-def-dates.md
+          - Working with codelists: legacy/study-def-codelists.md
+          - Dummy data and expectations: legacy/study-def-expectations.md
+          - Variable reference: legacy/study-def-variables.md
+          - Measures: legacy/study-def-measures.md
+          - Create inclusion/exclusion flowcharts: legacy/study-def-flowcharts.md
+          - Programming tricks: legacy/study-def-tricks.md
   - OpenSAFELY best practice:
       - Developing a protocol: protocol.md
       - Using Git effectively: git-workflow.md

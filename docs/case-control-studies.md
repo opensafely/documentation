@@ -1,7 +1,7 @@
 ## Background
 
 Data extracts often use an "index date" to define variables such as age, or presence of comorbidities at the start of a study.
-This can either be a fixed date (e.g. "2020-02-01") or a date that varies between patients, also known as [dynamic dates](study-def-dates.md#dynamic-dates) (e.g. the date that people were hospitalised).
+This can either be a fixed date (e.g. "2020-02-01") or a date that varies between patients, also known as [dynamic dates](legacy/study-def-dates.md#dynamic-dates) (e.g. the date that people were hospitalised).
 However, some studies that use dynamic index dates for a "case" population and then have a matched "control" comparator group.
 Because the control group by definition doesn't have the event of interest, the convention is for them to inherit the index date from their matched "case".
 The process to extract data for such a matched case-control population in OpenSAFELY is described below.
@@ -36,14 +36,14 @@ actions:
 
 ## Extract data for the cases
 
-In this step, we will construct [a study definition](study-def.md) to extract all the data we need for the cases:
+In this step, we will construct [a study definition](legacy/study-def.md) to extract all the data we need for the cases:
 that is, the *matching data*, or the data we will use to match the cases to the potential controls;
 and the *non-matching data*, or the data we will use for analysis.
 To avoid duplicating code to extract the matching data and the non-matching data in this and the following steps,
-we could use separate Python scripts to [share common study definition variables](study-def-tricks.md#sharing-common-study-definition-variables).
+we could use separate Python scripts to [share common study definition variables](legacy/study-def-tricks.md#sharing-common-study-definition-variables).
 
 As we will construct multiple study definitions in this and the following steps, we will name this study definition *study_definition_cases.py*.
-When working with [multiple study definitions](study-def.md#multiple-study-definitions), each study definition's suffix is used to name each corresponding output file.
+When working with [multiple study definitions](legacy/study-def.md#multiple-study-definitions), each study definition's suffix is used to name each corresponding output file.
 Here, the study definition's suffix is *cases*, so the corresponding output file will be named *input_cases.csv.gz*.
 
 Our *project.yaml* now includes the following action:

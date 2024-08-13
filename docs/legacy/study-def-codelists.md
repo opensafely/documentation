@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 A *Codelist* is a collection of clinical codes that classifies patients as having certain conditions or demographic properties. For example, in an clinical system, an asthma diagnosis may be indicated by [any of more than 100 codes](https://www.opencodelists.org/codelist/primis-covid19-vacc-uptake/ast/v1/#full-list).
