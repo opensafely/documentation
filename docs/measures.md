@@ -1,3 +1,5 @@
+---8<-- 'includes/cohort-extractor-deprecated.md'
+
 The Measures framework allows you to extract multiple datasets covering different time periods, and calculates a set of _measures_ for each period.
 
 Measures are expressed as a quotient (i.e., a numerator divided by a denominator) which in practice could be used to calculate proportions, ratios, means, counts, and so on.
