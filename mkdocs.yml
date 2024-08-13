@@ -67,7 +67,7 @@ nav:
         - Applying statistical disclosure control: releasing/sdc.md
         - Requesting release of research outputs: releasing/requesting-file-release.md
         - Review process for release requests: releasing/output-checking.md
-        - Release of approved outputs: releasing/releasing-files.md
+        - Viewing released outputs: releasing/viewing-released-files.md
         - Releasing with Airlock: '!import https://github.com/opensafely-core/airlock?branch=main'
       - Reports:
         - Overview: reports/intro.md

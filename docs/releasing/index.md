@@ -31,6 +31,9 @@ Researchers must follow a defined procedure for requesting release of outputs fr
 
 Review of the requested outputs by two trained OpenSAFELY output checkers.
 
-**4. [Release of files](releasing-files.md)**
+**4. [Retricted viewing of released files](viewing-released-files.md)**
 
-Release of outputs that meet our disclosure rules and have undergone thorough output checking to the relevant workspace on the [Jobs site](../jobs-site.md).
+Outputs that meet our disclosure rules and have undergone thorough output checking are
+released to the relevant workspace on the [Jobs site](../jobs-site.md). Viewing of
+released outputs is restricted to individuals with the relevant roles on the jobs
+site, and is not publicly accessible until outputs are published.

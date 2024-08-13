@@ -32,7 +32,7 @@ Another reason to ensure your analyses are complete is that re-running your stud
 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
 
-* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](releasing-files.md#running-further-analyses-on-released-outputs).
+* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](viewing-released-files.md#running-further-analyses-on-released-outputs).
 * A large number of outputs are produced from a single intermediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
 *  The intermediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
 
