@@ -32,7 +32,7 @@ We have various [examples](#examples) of completed and published analyses that w
 
 The researcher wrote the code as a **single codebase**. As with all OpenSAFELY activity, this is composed of small, cross-backend components called *actions*.
 
-The first action they wrote extracts a dataset using an [OpenSAFELY study definition](study-def.md)—a uniform way of extracting variables from very different databases.
+The first action they wrote extracts a dataset using an [OpenSAFELY study definition](legacy/study-def.md)—a uniform way of extracting variables from very different databases.
 (Note that this example uses cohort-extractor, which has been deprecated in favour of [ehrQL](/ehrql/).
 However, this doesn't change the approach to federation.)
 

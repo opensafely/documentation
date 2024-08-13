@@ -6,5 +6,5 @@
 !!! warning
     Avoid extracting the rounded IMD ranking to a binary format, such as `.feather` or `.dta`.
     Either nest it within a variable,
-    such as when [grouping rounded IMD by quintile](https://docs.opensafely.org/study-def-tricks/#grouping-imd-by-quintile),
+    such as when [grouping rounded IMD by quintile](https://docs.opensafely.org/legacy/study-def-tricks/#grouping-imd-by-quintile),
     or extract it to a non-binary format, such as `.csv.gz`.
