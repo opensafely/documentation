@@ -1,4 +1,12 @@
-**Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data**. Having applied disclosure controls to your aggregated study data you are ready to request their release. Please read the instructions and [checklist](#checklist) below.
+!!! note
+    Only specific members of the OpenSAFELY team trained in output checking have permissions to release the data.
+
+Having applied disclosure controls to your aggregated study data you are ready to request their release. This page describes the restrictions on files that can be released and the
+information you will need to provide in order to request release. For instructions on how
+to create and submit your release request, please refer to the documentation on [releasing files with
+Airlock](/using-opensafely/releasing-research-outputs/releasing-with-airlock).
+
+Note: the [previous manual process for requesting release of files](requesting-release-offline-process.md) is now deprecated. All release requests should be submitted via Airlock wherever possible.
 
 !!! warning
     You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
@@ -8,30 +16,19 @@
     - transcribing (e.g., to paper or email)
     - using screen sharing software or any recording device/software
 
-### Create a folder for outputs
 
-First, create one folder in your workspace called `release` (if you have previously made a release, we suggest appending the date to the new folder name to distinguish it) and copy from your `output` folder to this `release` folder the data files that require review. The number of study outputs requested for review must be kept to a minimum and include only the results you absolutely need to export from the secure server.
 
-### Complete a output review request form
+### When should I create a release request?
 
-When you are ready to request a release of your aggregated results please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date.
+Each data release entails substantial review work. To retain rapid turnaround times, external data releases should typically only be of results for final submission to a journal or public notebook; or a small number of necessary releases for discussion with external collaborators.
 
-!!! note
-    Each data release entails substantial review work. To retain rapid turnaround times, external data releases should typically only be of results for final submission to a journal or public notebook; or a small number of necessary releases for discussion with external collaborators.
+!!! note "Tips for getting a quicker review"
+    Our resources for checking outputs are not unlimited, therefore it is advised to ensure you have all of your outputs ready at the same time for your project (or its current phase) so they can be reviewed together. Please make your outputs as understandable as possible for output checkers who will not be familiar with your project by, for example, using descriptive variable names and providing full descriptions of your outputs and
+    [contextual information](#context-and-controls).
 
-#### Context requirements
+Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
 
-For each output wishing to be released you will need to provide a clear contextual description including:
-
-1. The file path for each output
-2. Variable descriptions
-3. A description and count of the underlying sample of the population for each output.
-4. Population size and degrees of freedom for all regression outputs.
-5. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
-
-Each section in the review request form should normally describe a single file, but where necessary for similar files, these can be grouped together and wildcards can be used for the file path (e.g. `release/hospitalisation_rate_by_*.csv`). **If you use a wildcard, please indicate how many files this captures**.
-
-### Release of intermediate data
+#### Release of intermediate data
 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
 
@@ -43,6 +40,21 @@ If requesting release of intermediate data there are a few considerations:
 
 *  We recommend that you continue to develop downstream analysis actions within the OpenSAFELY pipeline, even if they are not intended to be run on the server. This helps maintain reproducibility.
 * Intermediate results can contain much more data than outputs produced at the end of the analysis pipeline. The data contained within these outputs should be the minimum amount required to produce the downstream outputs or receive feedback from project collaborators.
+
+### Context and Controls
+
+For each group of outputs you wish to release you will need to provide a clear contextual description including:
+
+1. Variable descriptions.
+1. A description and count of the underlying sample of the population for each output.
+1. Population size and degrees of freedom for all regression outputs.
+1. Relationship to other data/tables which through combination may introduce secondary disclosive risks.
+
+You will also need to descibe **controls** (i.e. [statistical disclosure controls](sdc.md)
+that have been applied to the outputs.
+
+A group of files can include one output file, or multiple files that share the same
+context and controls.
 
 ### Error log files
 
@@ -76,37 +88,25 @@ Only certain file types will be reviewed and released from the secure server. Se
 
 If you would like to release other file types, please email <datarelease@opensafely.org>, stating why it is important that the file is released in a different format.
 
-!!! note
-    The maximum file size that can be released is 16MB. Please check your outputs before requesting them for release. It is unlikely any outputs that exceed this in size are appropriate for release, but if you think they are, please let us know when making a release request.
+### Maximum file size
+The maximum file size that can be released is 16MB. Please check your outputs before requesting them for release. It is unlikely any outputs that exceed this in size are appropriate for release, but if you think they are, please let us know when making a release request.
 
 ### Checklist
 
-Please run through this checklist before making a review request.
+Please run through this checklist before submitted a review request.
 
 1. Do your results adhere to the [OpenSAFELY permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
-2. Are all of the outputs of the [allowed file types](#allowed-file-types)?
-3. Are all of the outputs in a [separate release folder](#create-a-folder-for-outputs)?
-4. Have you [redacted any low counts](sdc.md#redacting-counts-less-than-or-equal-to-7)?
-5. Have you [rounded any counts](sdc.md#rounding-counts) (including [counts underlying rates](sdc.md#rounding-rates))?
-6. Have you supplied underlying counts for all of your results?
-7. Are all of the outputs clearly described?
-    * Is the filename sensible and is the filepath provided in the request form correct?
-    * Have you provided all of the context needed to review each output in isolation in the request form?
-    * Have you described the disclosure controls you have applied to each output?
-8. If you are requesting the release of log files, are you sure they [need to be released](#error-log-files)?
-9. Are all of the requested files below the [maximum file size](#allowed-file-types)?
+1. Are all of the outputs of the [allowed file types](#allowed-file-types)?
+1. Have you [redacted any low counts](sdc.md#redacting-counts-less-than-or-equal-to-7)?
+1. Have you [rounded any counts](sdc.md#rounding-counts) (including [counts underlying rates](sdc.md#rounding-rates))?
+1. Have you supplied underlying counts for all of your results?
+1. Are all of the outputs clearly described?
+    * Have you provided all of the [context](#context-and-controls) needed to review each output in isolation?
+    * Have you described the [disclosure controls](#context-and-controls) you have applied to each output?
+1. If you are requesting the release of log files, are you sure they [need to be released](#error-log-files)?
+1. Are all of the requested files below the [maximum file size](#maximum-file-size)?
 
 Following this checklist will make your outputs easier to check, speed up review time and avoid the outputs having to be rechecked.
 
-### Submitting the form
-
-Once you have completed this form, please send it to **<datarelease@opensafely.org>**. The requested outputs will undergo independent review by two OpenSAFELY output checkers who will check that the outputs are within the scope of your original project proposal and that they do not present any disclosure risks. **Please allow up to 5 working days for feedback on your request**.
-
 !!! warning
     The [Permitted Study Results Policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy) may be updated: **always check the policy before every new release request.**
-
-!!! note
-    **Tips for getting a quicker review**
-    Our resources for checking outputs are not unlimited, therefore it is advised to ensure you have all of your outputs ready at the same time for your project (or its current phase) so they can be reviewed together. Please make your outputs as understandable as possible for output checkers who will not be familiar with your project by, for example, using descriptive variable names and providing full descriptions of each output in the form provided.
-
-    Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
