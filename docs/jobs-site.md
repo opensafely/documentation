@@ -36,8 +36,8 @@ graph TD
 
 Once outputs have been produced by running _jobs_ from within a _Workspace_, there are several stages they must go through before being made publicly available:
 
-1. **Outputs on the [Level 4 server](level-4-server.md)**. These are aggregated patient-data (non patient-level data) outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](output-checking.md) before they can leave the server.
-2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](sdc.md#primary-vs-secondary-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
+1. **Outputs on the [Level 4 server](level-4-server.md)**. These are aggregated patient-data (non patient-level data) outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](releasing/output-checking.md) before they can leave the server.
+2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](releasing/sdc.md#primary-vs-secondary-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects ([refer to the examples of who this could include](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
 4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
 
@@ -158,7 +158,7 @@ You can view the various [output types](#output-types) from the `Releases` secti
 
 ![Workspace Releases](./images/releases.png)
 
-Any files that you would like to be released from the server, have to first be checked by our team of output checkers. Refer to the [instructions for requesting a release](requesting-file-release.md).
+Any files that you would like to be released from the server, have to first be checked by our team of output checkers. Refer to the [instructions for requesting a release](releasing/requesting-file-release.md).
 
 Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your _Workspace_, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy and/or contact your co-pilot (if you have one).
 
