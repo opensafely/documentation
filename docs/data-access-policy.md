@@ -42,12 +42,12 @@ Full details can be found in our documentation, but security controls include:
 * Logging of all operations, in public wherever possible
 * Manual checking of outputs for disclosivity before they are released from the secure environment
 
-Approved researchers (with appropriate permissions) can access the secure environment to view the aggregated results of their study ([level 4 data](https://docs.opensafely.org/security-levels/)); researchers ensure that appropriate statistical disclosure controls have been applied before requesting results for release.
+Approved researchers (with appropriate permissions) can access the secure environment to view the aggregated results of their study ([level 4 data](security-levels.md)); researchers ensure that appropriate statistical disclosure controls have been applied before requesting results for release.
 Researchers can also view the “log files” (also within the secure environment) produced when their study code runs, to help debug any issues.
-Researchers conducting projects do not have access to directly view any other pseudonymised patient data (i.e. [levels 1, 2 or 3](https://docs.opensafely.org/security-levels/)).
+Researchers conducting projects do not have access to directly view any other pseudonymised patient data (i.e. [levels 1, 2 or 3](security-levels.md)).
 
 Research Projects in OpenSAFELY cannot access or process data from patients who have registered a type 1 opt-out[^1].
-This is ensured by the software (see [technical explanation](https://docs.opensafely.org/type-one-opt-outs/)).
+This is ensured by the software (see [technical explanation](type-one-opt-outs.md)).
 
 ### Who
 
@@ -75,7 +75,7 @@ These cover four key areas:
 These projects are subject to the same approvals process as Research Projects, and are run via the standard OpenSAFELY Reproducible Analytical Pipeline.
 
 Short Data Report Projects in OpenSAFELY cannot access or process data from patients who have registered a type 1 opt-out[^1].
-This is ensured by the software (see [technical explanation](https://docs.opensafely.org/type-one-opt-outs/)).
+This is ensured by the software (see [technical explanation](type-one-opt-outs.md)).
 
 ### Who
 
@@ -96,9 +96,9 @@ They also review that projects are in-line with the stated purpose, and remind p
 ### What
 
 As part of the services offered by the OpenSAFELY Co-Pilot Service, co-pilots may help pilots by contributing code to their study on GitHub.
-It is also possible that a co-pilot might need to view the output files of a pilot's project on the secure environment ([level 4 data](https://docs.opensafely.org/security-levels/)) for purposes such as troubleshooting issues with code and helping with the process of requesting release of results files, such as applying the appropriate statistical disclosure controls.
+It is also possible that a co-pilot might need to view the output files of a pilot's project on the secure environment ([level 4 data](security-levels.md)) for purposes such as troubleshooting issues with code and helping with the process of requesting release of results files, such as applying the appropriate statistical disclosure controls.
 A co-pilot may also need to review the results files (both on the secure environment and those released to Job Server) when reviewing a pilot's paper/report for publication, to check that the correct processes have been followed and that all associated analyses and results are in line with the IG agreements.
-There is no need for co-pilots to have access to any other patient data (i.e. [levels 1, 2 or 3](https://docs.opensafely.org/security-levels/)).
+There is no need for co-pilots to have access to any other patient data (i.e. [levels 1, 2 or 3](security-levels.md)).
 
 ### Who
 
@@ -113,11 +113,11 @@ While co-piloting activities are largely focused on the first four weeks of trai
 ### Why
 
 A key element of the OpenSAFELY service, and one of the [Five Safes](https://www.bennett.ox.ac.uk/blog/2023/03/the-five-safes-framework-and-applying-it-to-opensafely/) is “safe outputs”.
-Statistical disclosure control is applied as necessary to research outputs, which then go through an [output checking process](https://docs.opensafely.org/releasing-files/) to minimise the risk of disclosure of identifiable information before outputs are released from the secure environment.
+Statistical disclosure control is applied as necessary to research outputs, which then go through an [output checking process](../releasing/releasing-research-outputs.md) to minimise the risk of disclosure of identifiable information before outputs are released from the secure environment.
 
 ### What
 
-Checking research outputs requires access to aggregated study files within the secure environment ([level 4 data](https://docs.opensafely.org/security-levels/)).
+Checking research outputs requires access to aggregated study files within the secure environment ([level 4 data](security-levels.md)).
 Releasing approved files requires access to trigger the file release mechanism.
 
 ### Who
@@ -170,7 +170,7 @@ This work may be done by individuals in different roles:
 
 ### Why
 
-For software development and maintenance purposes, it is sometimes necessary to execute OpenSAFELY [project pipelines](https://docs.opensafely.org/actions-pipelines/#project-pipelines).
+For software development and maintenance purposes, it is sometimes necessary to execute OpenSAFELY [project pipelines](actions-pipelines.md#project-pipelines).
 The test project pipelines are necessary to:
 
 * ensure that the entire OpenSAFELY platform is operating correctly
@@ -188,7 +188,7 @@ Because they are standard OpenSAFELY pipelines, they benefit from all the same s
 * logging of all operations
 * manual checking of outputs for disclosivity before they are released from the backend
 
-Access to the OpenSAFELY platform to view [level 4 data](https://docs.opensafely.org/security-levels/) will also be required to verify the pipeline outputs are as expected.
+Access to the OpenSAFELY platform to view [level 4 data](security-levels.md) will also be required to verify the pipeline outputs are as expected.
 
 Because the OpenSAFELY platform makes it possible to query data from patients who have a type 1 opt-out under approved conditions, it may be necessary for developers to run end-to-end tests that include these patients’ data.
 This is to ensure that all studies run correctly and that the mechanisms for excluding access to these patients’ data are operating correctly.
@@ -207,13 +207,13 @@ During development of new features, test projects may be run via the pipeline to
 
 ### Why
 
-Researchers conducting Research Projects or Short Data Report Projects may need technical assistance if there are errors or problems when attempting to run their [project pipelines](https://docs.opensafely.org/actions-pipelines/#project-pipelines).
+Researchers conducting Research Projects or Short Data Report Projects may need technical assistance if there are errors or problems when attempting to run their [project pipelines](actions-pipelines.md#project-pipelines).
 The issues may have been introduced by system failures or bugs in the platform or by errors made by the researchers themselves.
 
 ### What
 
 As part of the exploration and/or resolution of a technical issue, OpenSAFELY Platform Developers may need to amend the study code and/or re-run the project pipeline for the Approved Project.
-They will also need to view the outputs ([level 3 and 4 data](https://docs.opensafely.org/security-levels/)), to check for error resolution.
+They will also need to view the outputs ([level 3 and 4 data](security-levels.md)), to check for error resolution.
 
 ### Who
 
@@ -238,9 +238,9 @@ Access to backend systems is via secure, authenticated, encrypted channels. This
 
 * the OpenSAFELY software running in the backend
 * logs that the OpenSAFELY software produces
-* pseudonymised patient data ([level 1](https://docs.opensafely.org/security-levels/#level-1-gps-are-data-controllers-of-the-data) and [level 2](https://docs.opensafely.org/security-levels/#level-2-nhs-england-are-data-controllers-of-the-data))
-* intermediate outputs (study dataset) ([level 3 data](https://docs.opensafely.org/security-levels/#level-3-nhs-england-are-data-controllers-of-the-data))
-* unchecked, unreleased aggregated study outputs ([level 4 data](https://docs.opensafely.org/security-levels/#level-4-nhs-england-are-data-controllers-of-the-data)).
+* pseudonymised patient data ([level 1](security-levels.md#level-1-gps-are-data-controllers-of-the-data) and [level 2](security-levels.md#level-2-nhs-england-are-data-controllers-of-the-data))
+* intermediate outputs (study dataset) ([level 3 data](security-levels.md#level-3-nhs-england-are-data-controllers-of-the-data))
+* unchecked, unreleased aggregated study outputs ([level 4 data](security-levels.md#level-4-nhs-england-are-data-controllers-of-the-data)).
 
 This policy does not allow the extraction of pseudonymised patient data or study outputs from the system via this process; the data can only be studied within the system itself.
 Some operational data may be released under controlled conditions, as detailed in a separate Operational Data Policy.
@@ -268,7 +268,7 @@ In order to provide datasets to researchers, we need to ensure that we understan
 
 Depending on the requirements of the work, Data Development may be done via the standard OpenSAFELY Reproducible Analytical Pipeline or may require different methods of access.
 
-Some aspects of this work require direct access to the pseudonymised patient data ([level 1 and 2](https://docs.opensafely.org/security-levels/)).
+Some aspects of this work require direct access to the pseudonymised patient data ([level 1 and 2](security-levels.md)).
 Access to backend systems is via secure, authenticated, encrypted channels. All access to the system and database operations are logged.
 
 Because the OpenSAFELY platform supports projects that may include data from patients who have an active type 1 opt-out, it may be necessary to include these patients’ data in this development work.
