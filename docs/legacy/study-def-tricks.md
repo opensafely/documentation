@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 This section introduces some tricks for working more efficiently with the study definition API, by helping you to avoid copy-pasting chunks of code unnecessarily.

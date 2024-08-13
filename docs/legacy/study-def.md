@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 ## What is a Study Definition?

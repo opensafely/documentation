@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 The Measures framework allows you to extract multiple datasets covering different time periods, and calculates a set of _measures_ for each period.

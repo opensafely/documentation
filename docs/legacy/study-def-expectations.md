@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 Because OpenSAFELY doesn't allow direct access to individual patient records, researchers must use *dummy data* for developing their analytic code on their own computer.

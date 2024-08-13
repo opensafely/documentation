@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.001
+---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
 This section describes each available function for creating variables within a study definition.
