@@ -192,8 +192,12 @@ markdown_extensions:
       base_path: # base paths will be checked in order for matching snippets
         - .  # dir containing this config file
         - imported_docs/ehrql # docs folder for the imported repo
+        # docs folder for the imported airlock repo
+        - imported_docs/using-opensafely/releasing-research-outputs/releasing-with-airlock 
       auto_append:
         - includes/glossary.md
+        - imported_docs/using-opensafely/releasing-research-outputs/releasing-with-airlock/airlock-includes/glossary.md
+        
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
