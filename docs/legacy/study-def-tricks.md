@@ -340,8 +340,8 @@ Instead, we can:
 * Extract the other variables once for each index date
 * Join each index date's extract to the ethnicity extract
 
-We could join the extracts with a [scripted action](actions-scripts.md) that we write ourselves.
-Alternatively, we could use [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner#readme), which is a [reusable action](actions-reusable.md).
+We could join the extracts with a [scripted action](../actions-scripts.md) that we write ourselves.
+Alternatively, we could use [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner#readme), which is a [reusable action](../actions-reusable.md).
 
 Using cohort-joiner has several advantages over writing a scripted action.
 Principally, if we use cohort-joiner, then we write less code,
@@ -358,7 +358,7 @@ In addition:
   cohort-joiner doesn't replace the extracts;
   instead, it saves the joined extracts in a new output directory.
   Replacing the extracts makes it harder to construct an audit trail, which reduces computational and analytical transparency;
-  [core principles](index.md) of the OpenSAFELY platform.
+  [core principles](../index.md) of the OpenSAFELY platform.
 
 ## Grouping IMD by quintile
 
