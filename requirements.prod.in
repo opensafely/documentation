@@ -7,5 +7,4 @@ mkdocs
 mkdocs-macros-plugin
 mkdocs-material
 mkdocstrings[python]
-mkdocs-table-reader-plugin
 mkdocs-multirepo-plugin
