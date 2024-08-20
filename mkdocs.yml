@@ -163,8 +163,6 @@ copyright: © University of Oxford for the Bennett Institute for Applied Data Sc
 
 plugins:
   - search
-  - table-reader:
-      data_path: imported_docs/ehrql
   - mkdocstrings:
       default_handler: python
       handlers:
