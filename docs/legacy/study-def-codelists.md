@@ -8,13 +8,13 @@ A *Codelist* is a collection of clinical codes that classifies patients as havin
 
 Codelists must be stored as data within your study repository, from where they can be used in your study definition.
 
-To help you create, edit, and manage codelists, OpenSAFELY provides a web-based tool called [OpenCodelists](https://www.opencodelists.org). For more information about how to create and edit codelists on the  website, see the [codelists documentation](codelist-intro.md).
+To help you create, edit, and manage codelists, OpenSAFELY provides a web-based tool called [OpenCodelists](https://www.opencodelists.org). For more information about how to create and edit codelists on the  website, see the [codelists documentation](../codelist-intro.md).
 
 ## Pulling codelists into your study definition
 
 Many functions for defining variables take *codelists* as arguments.
 
-Codelists live as CSV files in the `codelists/` directory (see instructions in the [Adding codelists to a project](codelist-project.md) page).
+Codelists live as CSV files in the `codelists/` directory (see instructions in the [Adding codelists to a project](../codelist-project.md) page).
 
 Codelists are loaded into variables as follows:
 
