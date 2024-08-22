@@ -93,7 +93,7 @@ The maximum file size that can be released is 16MB. Please check your outputs be
 
 ### Checklist
 
-Please run through this checklist before submitted a review request.
+Please run through this checklist before submitting a review request.
 
 1. Do your results adhere to the [OpenSAFELY permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
 1. Are all of the outputs of the [allowed file types](#allowed-file-types)?
