@@ -4,20 +4,14 @@ Before any files are released from the secure server, they are checked independe
 * **Request changes** — output is an acceptable type for release, but has outstanding disclosure issues that must be addressed before release
 * **Reject** — output is not an acceptable type for release. An example is the release of practice level data which does not meet the [permitted study results policy](https://www.opensafely.org/policies-for-researchers/#permitted-study-results-policy)
 
+### Responding to requests
+Requests submitted via Airlock will also be reviewed by output checkers on Airlock. If
+the output checkers require changes or have questions about the requested files, they
+will return the release request to you. You will receive an email notification when this happens.
 
-=== "Responding to requests - Airlock"
-
-    Requests submitted via Airlock will also be reviewed by output checkers on Airlock. If
-    the output checkers require changes or have questions about the requested files, they
-    will return the release request to you. You will receive an email notification when this happens.
-
-    For further information on how to submit and respond to returned requests, please see the
-    documentation on [releasing with Airlock](/using-opensafely/releasing-research-outputs/
-    releasing-with-airlock).
-
-=== "Responding to requests - manual process (deprecated)"
-
-    Once reviewed, the completed review request will be emailed back to you. We aim to provide a response to review requests within **5 working days**. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.
+For further information on how to submit and respond to returned requests, please see the
+documentation on [releasing with Airlock](/using-opensafely/releasing-research-outputs/
+releasing-with-airlock).
 
 ### Most common problems with output review requests
 

@@ -25,7 +25,7 @@ Each section in the review request form should normally describe a single file, 
 
 ### Checklist
 
-Please run through [the checklist](requesting-file-release.md#checklist) before making a review request. In addition, check:
+Please run through [the checklist](../releasing/requesting-file-release.md#checklist) before making a review request. In addition, check:
 
 1. Are all of the outputs in a [separate release folder](#create-a-folder-for-outputs)?
 1. Are all of the outputs clearly described?
@@ -37,4 +37,7 @@ Please run through [the checklist](requesting-file-release.md#checklist) before 
 
 Once you have completed this form, please send it to **<datarelease@opensafely.org>**. The requested outputs will undergo independent review by two OpenSAFELY output checkers who will check that the outputs are within the scope of your original project proposal and that they do not present any disclosure risks. **Please allow up to 5 working days for feedback on your request**.
 
----8<-- 'includes/glossary.md'
+
+### Responding to requests
+
+Once reviewed, the completed review request will be emailed back to you. We aim to provide a response to review requests within **5 working days**. If all outputs are approved, they will then be released. If one or more outputs are approved subject to change, you will need to address the disclosure issues and submit a new review form detailing the changes you have made.

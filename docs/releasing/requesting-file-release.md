@@ -6,7 +6,7 @@ information you will need to provide in order to request release. For instructio
 to create and submit your release request, please refer to the documentation on [releasing files with
 Airlock](/using-opensafely/releasing-research-outputs/releasing-with-airlock).
 
-Note: the [previous manual process for requesting release of files](requesting-release-offline-process.md) is now deprecated. All release requests should be submitted via Airlock wherever possible.
+Note: the [previous manual process for requesting release of files](../legacy/requesting-release-offline-process.md) is now deprecated. All release requests should be submitted via Airlock wherever possible.
 
 !!! warning
     You **MUST NOT** share any results that have not been released through the official output checking process. This includes:
