@@ -4,6 +4,18 @@ This is the public documentation for using the [OpenSAFELY platform](https://www
 
 It provides information on how to get set up with and use the platform.
 
+## Running the site
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/opensafely/documentation)
+
+When you see "Your application running on port 8910 is available",
+you can click "Open in Browser" to see a preview,
+and edit the content files in `docs/` to change the content.
+It may take a few seconds for changes you make to appear.
+
+See INSTALL.md for more details,
+and for information on running locally instead of in Codespaces.
+
 ## Automated checks
 
 We have some automated checks that help us maintain the documentation.
