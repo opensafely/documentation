@@ -87,5 +87,3 @@ When developing a reusable action, just as when developing a scripted action, th
   Its dependencies are in [*packages.csv*](https://github.com/opensafely-core/r-docker/blob/master/packages.csv).
 * The Stata runtime is provided by [`stata-docker`](https://github.com/opensafely-core/stata-docker).
   Its dependencies are in [*libraries*](https://github.com/opensafely-core/stata-docker/tree/main/libraries).
-
----8<-- 'includes/glossary.md'

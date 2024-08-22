@@ -34,6 +34,3 @@ updated to match the new incremented version of `cohortextractor`. See
 the [documentation repository's
 README](https://github.com/opensafely/documentation#building-locally-and-testing)
 that details the use of `pip-compile` for this.
-
-
----8<-- 'includes/glossary.md'

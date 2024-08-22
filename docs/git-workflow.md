@@ -38,5 +38,3 @@ For a more generic overview, see [GitHub's own guidance](https://guides.github.c
   ![Writing a commit message with GitHub Desktop.](images/getting-started-github-desktop-commit-message.png)
 1. Click **Push origin** to push your local changes to the remote repository on
    GitHub ![Pushing changes to GitHub with GitHub Desktop.](images/getting-started-github-desktop-push-to-github.png)
-
----8<-- 'includes/glossary.md'

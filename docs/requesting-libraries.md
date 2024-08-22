@@ -53,7 +53,3 @@ This will only be feasible if the functions do not have a complex hierarchy of d
 For instance, in many cases, Stata packages can be added by copying the relevant `ado` files into the project repo.
 
 Either way, you should make an issue for the package so that other users are aware of the package's history in OpenSAFELY.
-
-
-
----8<-- 'includes/glossary.md'

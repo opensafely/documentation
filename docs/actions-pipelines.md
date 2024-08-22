@@ -185,5 +185,3 @@ No data should ever be published from the Level 3 server. Access is only for per
 Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_dataset.log`, `run_model.log`.
 
 Moderately sensitive outputs can be seen in `E:/FILESFORL4/workspaces/<WORKSPACE_NAME>`.
-
----8<-- 'includes/glossary.md'

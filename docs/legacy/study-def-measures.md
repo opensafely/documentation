@@ -221,5 +221,3 @@ To generate the final outputs `measure_hosp_admission_by_stp.csv.gz` and `measur
         measure_csv: output/measures/measure_*.csv.gz
 
 ```
-
----8<-- 'includes/glossary.md'

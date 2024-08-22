@@ -87,6 +87,3 @@ Then enable this version (eg `3.10.1`) in pyenv:
 ```bash
 pyenv global system 3.10.1
 ```
-
-
----8<-- 'includes/glossary.md'

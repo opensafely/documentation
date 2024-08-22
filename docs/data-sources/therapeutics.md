@@ -30,6 +30,3 @@ Treatment dates may be in the past or future at the point when the form is submi
 * **with_these_statuses**: Filters on `CurrentStatus`. Should be one or more of 'Approved', 'Treatment Complete', 'Treatment Not Started', 'Treatment Stopped'.
 Case insensitive.
 * **with_these_indications**: Filters on COVID_indication. Should be one or more of 'non-hospitalised', 'hospital_onset', 'hospitalised_with'.
-
-
----8<-- 'includes/glossary.md'

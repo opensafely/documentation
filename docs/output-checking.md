@@ -22,6 +22,3 @@ Below are the most common problems encountered by output checkers when reviewing
 5. **Unsupported file types being requested**. Files requested for release should be one of the [allowed file types](requesting-file-release.md#allowed-file-types). If you are requesting the release of HTML files, please make sure you have followed the [guidance for HTML files](requesting-file-release.md#allowed-file-types). **~10%** of rejected outputs are due to unsupported file types being requested.
 
 To help avoid these issues, please make sure you have read the [checklist](requesting-file-release.md#checklist) before submitting your review request.
-
-
----8<-- 'includes/glossary.md'

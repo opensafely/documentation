@@ -28,6 +28,3 @@ Operational research is key to understanding what works in the NHS. However the 
 * Use **version control**.
 * Write **tests** for your code.
 * Help develop and follow local **conventions** around coding.
-
-
----8<-- 'includes/glossary.md'

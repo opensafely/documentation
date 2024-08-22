@@ -30,6 +30,3 @@ This pipeline is also [automatically tested](actions-pipelines.md#running-your-c
 
 As well as your own Python, R or Stata scripts, other non-standard actions are available.
 For example, it's possible to run a matching routine that extracts a matched control population to the population defined in the study definition, without having to extract all candidate matches into a dataset first.
-
-
----8<-- 'includes/glossary.md'

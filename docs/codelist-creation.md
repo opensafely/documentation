@@ -149,7 +149,3 @@ on [our blog](https://www.bennett.ox.ac.uk/blog/2022/11/difference-between-bnf-d
 <div class="video-wrapper">
   <iframe width="1280" height="720" src="https://www.youtube.com/embed/t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
 </div>
-
-
-
----8<-- 'includes/glossary.md'
