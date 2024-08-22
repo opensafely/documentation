@@ -107,5 +107,3 @@ It is easy to think that it has frozen, but it will take quite a while to get go
   checking Control Panel > Administrative Tools > Services > Server
   was **Disabled**. Setting this to **Automatic** — the default in
   Windows — then started Docker running again.
-
----8<-- 'includes/glossary.md'

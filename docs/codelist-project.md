@@ -52,5 +52,3 @@ This command should be re-run every time a codelist is added or removed from the
 If necessary, you can also import CSVs not via OpenCodelists - just manually copy the CSV files into `codelists/`. However, we would recommend uploading these to OpenCodelists to import them as above. Note, if you are _also_ using some codelists from OpenCodelists, any manually imported codelists should be stored in a `local_codelists` folder so that they are not overwritten in the next step, as manual changes to CSV files will be clobbered the next time the command is run.
 
 See more on using Codelists in your study definition in [Working with codelists](legacy/study-def-codelists.md).
-
----8<-- 'includes/glossary.md'

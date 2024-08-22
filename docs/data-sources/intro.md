@@ -12,5 +12,3 @@ GP records, or primary care records, can also be used for conducting health rese
 <div class="video-wrapper">
   <iframe width="1280" height="720" src="https://www.youtube.com/embed/NEwSQ5-dWSg" frameborder="0" allowfullscreen></iframe>
 </div>
-
----8<-- 'includes/glossary.md'

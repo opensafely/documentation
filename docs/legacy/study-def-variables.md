@@ -235,6 +235,3 @@ These variables create new variable from existing variables. They do not extract
 
 ::: cohortextractor.patients.which_exist_in_file
 &nbsp;
-
-
----8<-- 'includes/glossary.md'

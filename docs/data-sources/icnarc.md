@@ -36,6 +36,3 @@ Specialist units (eg neuro / cardiac) also participate. covid-19 admissions only
 It may be useful to filter by severity, e.g., ventilated patients only.
 Similarly, potentially critically ill patients cared-for by ICU staff but who are admitted to a different unit will not be included in the CMP.
 Each admission is a row, so patients transferred to other units will appear in the dataset multiple times, even if it’s part of the same spell.
-
-
----8<-- 'includes/glossary.md'

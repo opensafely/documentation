@@ -20,8 +20,3 @@ Diagnoses and discharge destinations are coded using SNOMED CT.
 * [NHS Digital ECDS Information Standard](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0092-2062-commissioning-data-sets-emergency-care-data-set )
 * [NHS Digital ECDS Technical Output Specification](https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/emergency-care-data-set-ecds/ecds-latest-update)
 * [ECDS Data Quality Dashboards](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/emergency-care-data-set-ecds-data-quality )
-
-
-
-
----8<-- 'includes/glossary.md'

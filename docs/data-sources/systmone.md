@@ -124,5 +124,3 @@ For those with access to the OpenSAFELY database, the latest database build time
 
 [^1]:
     "Registered" here means a patient with a full "GMS" (General Medical Services) registration. Patients with temporary registrations are not included.
-
----8<-- 'includes/glossary.md'

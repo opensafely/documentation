@@ -129,7 +129,3 @@ If you want to create an empty folder to save files in, but you _never_ want its
 ```
 
 This can be useful if you want to, for example, add a `output/plots/` subfolder to put your analysis plots into without having to check and create that folder explicitly every time in the analysis script.  This is necessary because the contents of the `output/` folder is ignored by the default `.gitignore` in the root (the top-level) of the repository.
-
-
-
----8<-- 'includes/glossary.md'

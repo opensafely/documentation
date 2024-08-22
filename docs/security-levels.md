@@ -79,5 +79,3 @@ Any level 4 files that have been cleared by output-checkers, and therefore consi
 ## Diagram
 
 ![A diagram of the OpenSAFELY platform.](./images/NON-COVID-GP-data-OpenSAFELY-platform-architecture-and-dataflows-V5-for-DPIA-DPN.drawio.svg)
-
----8<-- 'includes/glossary.md'

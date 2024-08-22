@@ -4,6 +4,3 @@ The ISARIC dataset contains data from the International Severe Acute Respiratory
 
 !!! warning
     This section is a work in progress.
-
-
----8<-- 'includes/glossary.md'

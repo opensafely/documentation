@@ -73,5 +73,3 @@ See our guidance for [system integrators and data providers](system-integration.
 
 !!! note "These documents are a work-in-progress"
     Please see the [Updating the Documentation page](updating-the-docs.md) if you want to make improvements.
-
----8<-- 'includes/glossary.md'

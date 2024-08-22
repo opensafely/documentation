@@ -192,6 +192,8 @@ markdown_extensions:
       base_path: # base paths will be checked in order for matching snippets
         - .  # dir containing this config file
         - imported_docs/ehrql # docs folder for the imported repo
+      auto_append:
+        - includes/glossary.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
