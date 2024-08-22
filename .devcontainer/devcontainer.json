@@ -1,0 +1,15 @@
+{
+        "name": "Documentation development",
+        "dockerFile": "Dockerfile",
+        "postAttachCommand": "just run",
+        "customizations": {
+                "vscode": {
+                        "settings": {
+                                "extensions.ignoreRecommendations": true,
+                                "files.autoSave": "afterDelay",
+                                "files.autoSaveDelay": 3000,
+                                "git.autofetch": true
+                        }
+                }
+        }
+}
