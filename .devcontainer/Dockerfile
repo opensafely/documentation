@@ -9,6 +9,10 @@ RUN apt-get update && \
     python3.11 \
     python3.11-venv
 
+# Workaround for Python babel package resulting in
+# ValueError: ZoneInfo keys may not be absolute paths, got: /UTC
+ENV TZ="Europe/London"
+
 USER vscode
 
 # Clone cohort-extractor submodule via HTTPS.
