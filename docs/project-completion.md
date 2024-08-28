@@ -13,25 +13,25 @@ The [current README template](https://github.com/opensafely/research-template/bl
 To update your repository's README to match this new README:
 
 1. Copy the content from the template repository's latest README (typically [just the first section](https://github.com/opensafely/research-template/blob/main/README.md?plain=1#L1-L10)).
-1. Manually edit those changed sections into your research repository's README.
-1. You will need to replace the placeholder string in the README's "View on OpenSAFELY" URL to point to your repository:
+2. Manually edit those changed sections into your research repository's README.
+3. You will need to replace the placeholder string in the README's "View on OpenSAFELY" URL to point to your repository:
 
-* `${GITHUB_REPOSITORY_NAME}` is the name of your repo.
+4. `${GITHUB_REPOSITORY_NAME}` is the name of your repo.
 
 !!! warning
     Each branch in your repository has a separate README, each of which will need updating.
 
 
 ## Tidy up your repo
-You should ensure your repo is as tidy as possible once you have completed your project. Consider the following:
+Ensure your repo is as tidy as possible once you have completed your project. Consider the following:
 
 
 ### License
-* Check the `LICENSE` file exists, and that it allows modification and distribution without cost. We recommend the MIT Licence ([example](https://github.com/opensafely/risk-factors-research/blob/main/LICENSE)).
+Check your repo has a `LICENSE` file.  We recommend the [MIT licence](https://opensource.org/license/mit), as it is an [open source license with strong community support](https://opensource.org/licenses?categories=popular-strong-community) and allows modification and distribution without cost. An MIT License has been included as part of the research template repository - you will need to edit the first line to include the current year and the name of your organisation. 
 
 
 ### Tests
-Try to ensure your automated tests (on the repo's _Actions_ tab) are green.
+Try to ensure your automated tests (on the repos _Actions_ tab) are green.
 It's not essential, but it is a better look to be able to demonstrate your code is minimally runnable.
 
 
