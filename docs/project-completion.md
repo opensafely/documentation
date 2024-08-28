@@ -27,7 +27,7 @@ Ensure your repo is as tidy as possible once you have completed your project. Co
 
 
 ### License
-Check your repo has a `LICENSE` file.  We recommend the [MIT licence](https://opensource.org/license/mit), as it is an [open source license with strong community support](https://opensource.org/licenses?categories=popular-strong-community) and allows modification and distribution without cost. An MIT License has been included as part of the research template repository - you will need to edit the first line to include the current year and the name of your organisation. 
+Check your repo has a `LICENSE` file.  We recommend the [MIT licence](https://opensource.org/license/mit), as it is an [open source license with strong community support](https://opensource.org/licenses?categories=popular-strong-community) and allows modification and distribution without cost. An MIT License has been included as part of the research template repository -- you will need to edit the first line to include the current year and the name of your organisation. 
 
 
 ### Tests
