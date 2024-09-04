@@ -59,7 +59,7 @@ When applying disclosure controls to your outputs, you should consider the poten
 
 ### Redacting counts less than or equal to 7
 
-Before requesting files to be released, work through the [moderately sensitive](actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other released text and objects that may be a disclosure risk.
+Before requesting files to be released, work through the [moderately sensitive](../actions-pipelines.md#accessing-outputs) files in the workspace folder systematically to identify any tables, figures, and other released text and objects that may be a disclosure risk.
 
 The general principle is that **any statistic describing 7 or fewer patients, either directly or indirectly, should be redacted or combined into other statistics**. This includes:
 

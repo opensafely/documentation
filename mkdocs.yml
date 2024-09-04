@@ -62,12 +62,12 @@ nav:
           - Reusable actions: actions-reusable.md
       - Jobs site: jobs-site.md
       - Level 4 server: level-4-server.md
-      - Releasing research outputs from the Level 4 server:
-        - Overview: releasing-files-intro.md
-        - Applying statistical disclosure control: sdc.md
-        - Requesting release of research outputs: requesting-file-release.md
-        - Review process for release requests: output-checking.md
-        - Release of approved outputs: releasing-files.md
+      - Releasing research outputs:
+        - 'Overview: Releasing research outputs from the Level 4 server': releasing/index.md
+        - Applying statistical disclosure control: releasing/sdc.md
+        - Requesting release of research outputs: releasing/requesting-file-release.md
+        - Review process for release requests: releasing/output-checking.md
+        - Viewing released outputs: releasing/viewing-released-files.md
         - Releasing with Airlock: '!import https://github.com/opensafely-core/airlock?branch=main'
       - Reports:
         - Overview: reports/intro.md
@@ -192,8 +192,12 @@ markdown_extensions:
       base_path: # base paths will be checked in order for matching snippets
         - .  # dir containing this config file
         - imported_docs/ehrql # docs folder for the imported repo
+        # docs folder for the imported airlock repo
+        - imported_docs/using-opensafely/releasing-research-outputs/releasing-with-airlock 
       auto_append:
         - includes/glossary.md
+        - imported_docs/using-opensafely/releasing-research-outputs/releasing-with-airlock/airlock-includes/glossary.md
+        
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

@@ -1,4 +1,4 @@
-The [jobs site](https://jobs.opensafely.org/) is where you can run your code on the server against real data, view your analysis outputs on the server and view outputs that have been reviewed, approved and released from the server by our team of output checkers.
+The [jobs site](https://jobs.opensafely.org/) is where you can run your code on the server against real data and view outputs that have been reviewed, approved and released from the server by our team of output checkers.
 
 ## Jobs site structure
 
@@ -36,8 +36,8 @@ graph TD
 
 Once outputs have been produced by running _jobs_ from within a _Workspace_, there are several stages they must go through before being made publicly available:
 
-1. **Outputs on the [Level 4 server](level-4-server.md)**. These are aggregated patient-data (non patient-level data) outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](output-checking.md) before they can leave the server.
-2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](sdc.md#primary-vs-secondary-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
+1. **Outputs on the [Level 4 server](level-4-server.md)**. These are aggregated patient-data (non patient-level data) outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable (via [Airlock](/using-opensafely/releasing-research-outputs/releasing-with-airlock)) when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](releasing/output-checking.md) before they can leave the server.
+2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](releasing/sdc.md#primary-vs-secondary-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects ([refer to the examples of who this could include](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
 4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
 
@@ -118,39 +118,16 @@ What happens:
 6. The temporary directory is deleted.
 </details>
 
-Each job will either succeed or fail. In either case, the output and log files are only visible in the secure environment to avoid disclosure of potentially sensitive information.
+Each job will either succeed or fail. In either case, the output and log files are only visible [via Airlock](/using-opensafely/releasing-research-outputs/releasing-with-airlock) in the secure environment to avoid disclosure of potentially sensitive information.
 
 ## Viewing analysis outputs on the server
 
 You can view `moderately_sensitive` outputs from any of your submitted _jobs_
-via the Jobs website **if you have access to and are logged into the backend
+via Airlock **if you have access to and are logged into the backend
 the job was run on**.
 
-However, whilst normally you log into <https://jobs.opensafely.org> from your machines
-browser using GitHub, the secure server does not have access to
-GitHub. So you need to use an alternate method to login, by generating a Single
-Use Token, and then using it on the secure server to log in.
-
-To generate a Single Use Token, before logging into the secure server, visit
-[https://jobs.opensafely.org/settings/](https://jobs.opensafely.org/settings/),
-and click on "Generate a Single Use Token". This will be 3 english words, which
-you can memorize or write down. This token can be used to log in as you, but is
-only valid for a short time, and only works once.
-
-![Generate Single Use Token](./images/token.png)
-
-Once you are logged into the server via the VPN:
-
-* Navigate to [https://jobs.opensafely.org/](https://jobs.opensafely.org/) using Google Chrome (make sure to use `https://`)
-* Log in using your email or GitHub username, and the Single Use Token from the above step.
-* You should be now logged in. This login will expire after two weeks of not being used.
-
-Once logged in, to view your `moderately_sensitive` outputs:
-
-* Navigate to your _Workspace_
-* Under _Releases_, navigate to Level 4 Outputs
-* Choose the correct backend
-* Pick the file you would like to view from the list of files (you can search)
+Refer to the [Airlock documentation](/using-opensafely/releasing-research-outputs/releasing-with-airlock) for information on how to access and view
+outputs via Airlock.
 
 ## Viewing released outputs
 
@@ -158,7 +135,7 @@ You can view the various [output types](#output-types) from the `Releases` secti
 
 ![Workspace Releases](./images/releases.png)
 
-Any files that you would like to be released from the server, have to first be checked by our team of output checkers. Refer to the [instructions for requesting a release](requesting-file-release.md).
+Any files that you would like to be released from the server, have to first be checked by our team of output checkers. Refer to the [instructions for requesting a release](releasing/requesting-file-release.md).
 
 Once reviewed, approved and released, your requested files will be available to view from your _Workspace_ in the _Released Outputs_ section of Releases. To view released outputs, you need to have the **ProjectDeveloper** or **ProjectCollaborator** role. If you would like to add a project collaborator to your _Workspace_, please read [this section](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing) of the researcher policy and/or contact your co-pilot (if you have one).
 

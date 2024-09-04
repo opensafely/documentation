@@ -19,8 +19,8 @@ This repo will contain all the code relating to your project, and a history of i
     -   generating log files to debug the scripts when they run on the real data.
 5.  **Test the code** by running the analysis steps specified in the [_project pipeline_](actions-pipelines.md), which specifies the execution order for data extracts and analyses and the outputs to be released.
 6.  **Execute the analysis on the real data** via OpenSAFELY's [jobs site](jobs-site.md). This will generate outputs on the secure server.
-7.  **Check the output for [disclosivity](output-checking.md)** within the server, and redact if necessary.
-8.  **[Release](releasing-files.md) the outputs** via GitHub.
+7.  **Check the output for [disclosivity](releasing/sdc.md)** within the server, and redact if necessary.
+8.  **[Request release](releasing/requesting-file-release.md) of the outputs**
 9. **Repeat and iterate steps 2 to 8 as necessary**.
 
 These steps should always proceed with frequent git commits and code reviews where appropriate. Steps 2-5 can all be progressed on your local machine without accessing the real data.
