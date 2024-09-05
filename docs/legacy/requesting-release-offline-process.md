@@ -1,6 +1,6 @@
 !!! note
     This page describes the process used for requesting release of file prior to
-    Airlock. New release requests should be made using [Airlock](/using-opensafely/releasing-research-outputs/releasing-with-airlock) wherever possible.
+    Airlock. New release requests should be made using [Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock) wherever possible.
 
 
 ### Create a folder for outputs
@@ -25,7 +25,7 @@ Each section in the review request form should normally describe a single file, 
 
 ### Checklist
 
-Please run through [the checklist](../releasing/requesting-file-release.md#checklist) before making a review request. In addition, check:
+Please run through [the checklist](../outputs/requesting-file-release.md#checklist) before making a review request. In addition, check:
 
 1. Are all of the outputs in a [separate release folder](#create-a-folder-for-outputs)?
 1. Are all of the outputs clearly described?

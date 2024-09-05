@@ -4,7 +4,7 @@
 Having applied disclosure controls to your aggregated study data you are ready to request their release. This page describes the restrictions on files that can be released and the
 information you will need to provide in order to request release. For instructions on how
 to create and submit your release request, please refer to the documentation on [releasing files with
-Airlock](/using-opensafely/releasing-research-outputs/releasing-with-airlock).
+Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock).
 
 Note: the [previous manual process for requesting release of files](../legacy/requesting-release-offline-process.md) is now deprecated. All release requests should be submitted via Airlock wherever possible.
 
