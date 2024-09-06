@@ -69,7 +69,7 @@ In general, actions are composed as follows:
     * The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment that can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
     * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment. This includes all data at the pseudonymised patient-level. Outputs labelled highly_sensitive will not be visible to researchers.
-    * `moderately_sensitive` outputs **should never include patient-level data**, only data that is considered non-disclosive. This includes aggregated patient-data outputs such as summary tables, summary statistics and the outputs from statistical models. For a full list, check the [allowed file types subsection](releasing/requesting-file-release.md#allowed-file-types). The appropriate [statistical disclosure controls](releasing/sdc.md) should have been applied to these files. They are copied to the secure review area (otherwise known as [Level 4](security-levels.md)).
+    * `moderately_sensitive` outputs **should never include patient-level data**, only data that is considered non-disclosive. This includes aggregated patient-data outputs such as summary tables, summary statistics and the outputs from statistical models. For a full list, check the [allowed file types subsection](outputs/requesting-file-release.md#allowed-file-types). The appropriate [statistical disclosure controls](outputs/sdc.md) should have been applied to these files. They are copied to the secure review area (otherwise known as [Level 4](security-levels.md)).
     * Outputs should be separated onto different lines, each with a unique 'key', but related outputs can be combined using a wildcard (`*`). Note, when using a wildcard, it is extremely important to ensure that no `highly_sensitive` outputs are included. E.g.:
         ```yaml
            outputs:
@@ -174,7 +174,7 @@ After your project has been executed via the [jobs site](jobs-site.md), its outp
 
 Users with permission to access Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 
-For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](jobs-site.md#viewing-analysis-outputs-on-the-server) and [released if they are deemed non-disclosive](releasing/output-checking.md).
+For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](jobs-site.md#viewing-analysis-outputs-on-the-server) and [released if they are deemed non-disclosive](outputs/output-checking.md).
 
 Outputs labelled `highly_sensitive` are not visible.
 

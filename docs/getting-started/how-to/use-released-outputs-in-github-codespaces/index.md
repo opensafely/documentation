@@ -4,7 +4,7 @@ This is because the final stage frequently involves carefully crafting figures a
 making many small adjustments that would otherwise entail multiple round-trips to the OpenSAFELY Jobs site.
 
 Executing the final stage of a project pipeline outside a secure environment is only possible when the outputs from the previous stage have been released to the OpenSAFELY Jobs site.
-[Released outputs](../../../releasing/index.md) have been subject to statistical disclosure control and have been reviewed by two trained OpenSAFELY output checkers.
+[Released outputs](../../../outputs/index.md) have been subject to statistical disclosure control and have been reviewed by two trained OpenSAFELY output checkers.
 
 To upload released outputs to a Codespace, using VS Code:
 
