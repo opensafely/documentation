@@ -86,5 +86,4 @@ If you have actions defined in your [project pipeline file](../../../actions-pip
 If this is the case for your project, your options are:
 
 * Update your project pipeline file to reference the most recent action images and make any neccesary changes to your code
-* Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec---interactive-development) for interactive development using these action images' environments
-
+* Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec-interactive-development) for interactive development using these action images' environments
