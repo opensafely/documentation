@@ -113,7 +113,7 @@ While co-piloting activities are largely focused on the first four weeks of trai
 ### Why
 
 A key element of the OpenSAFELY service, and one of the [Five Safes](https://www.bennett.ox.ac.uk/blog/2023/03/the-five-safes-framework-and-applying-it-to-opensafely/) is “safe outputs”.
-Statistical disclosure control is applied as necessary to research outputs, which then go through an [output checking process](../outputs/index.md) to minimise the risk of disclosure of identifiable information before outputs are released from the secure environment.
+Statistical disclosure control is applied as necessary to research outputs, which then go through an [output checking process](outputs/index.md) to minimise the risk of disclosure of identifiable information before outputs are released from the secure environment.
 
 ### What
 

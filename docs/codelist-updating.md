@@ -16,7 +16,7 @@ run do not need to update codelists in order to run successfully.
 !!! Info
 
     [The Dictionary of Medicines and Devices (dm+d)](https://www.bennett.ox.ac.uk/blog/2019/08/what-is-the-dm-d-the-nhs-dictionary-of-medicines-and-devices/)[^1]
-    is a dictionary of descriptions and (SNOMED-CT) codes which represent medicines and devices in use across the NHS. The codes representing specific medicines can change, and [require special treatment](#dmd-a-special-case), described below. As a result,
+    is a dictionary of descriptions and (SNOMED-CT) codes which represent medicines and devices in use across the NHS. The codes representing specific medicines can change, and [require special treatment](#addressing-changing-dmd-codes), described below. As a result,
     dm+d codelists now download with standardised column headings: "code" (the dm+d code), and "term" (the description) in the CSV files. For backwards compatibility, they also
     include a column with the original code column heading (typically "dmd_id") [^2].
 
