@@ -19,6 +19,7 @@ https?://www\.encepp\.eu(?:/.*)?$
 https?://www\.tandfonline\.com(?:/.*)?$
 https?://www\.icnarc\.org(?:/.*)?$
 https?://doi\.org(?:/.*)?$
+https?://digital.nhs.uk(?:/.*$)?$
 
 # Twitter used to work but is being very flaky.
 # This exclusion should be reviewed in future to see if the issue persists.
