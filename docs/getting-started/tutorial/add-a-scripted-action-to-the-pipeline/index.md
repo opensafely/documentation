@@ -60,7 +60,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
     following carefully.
   </li>
   <li>
-    Add a <code>describe</code> action to the file, so the entire file looks like this:
+    Add a <code>generate_report</code> action to the file, so the entire file looks like this:
   </li>
 </ol>
 
@@ -112,14 +112,14 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             chart: output/report.png
     ```
 
-- **Line 14** tells the system we want to create a new action called `describe`.
+- **Line 14** tells the system we want to create a new action called `generate_report`.
 - **Line 15** says how to run the script (using the `python` or `R` runner).
 - **Line 16** tells the system that this action depends on the outputs of the
   `generate_dataset` being present.
 - **Lines 17-19** describe the files that the action creates. Line 18 says that the
   items indented below it are *moderately* sensitive, that is they may be released
   to the public after a careful review (and possible redaction). Line 19 says that
-  there's one output file, which will be found at `output/descriptive.png`.
+  there's one output file, which will be found at `output/report.png`.
 
 
 At the command line, type `opensafely run generate_report` and press
