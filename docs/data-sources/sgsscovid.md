@@ -1,4 +1,4 @@
-> The Second Generation Surveillance System (SGSS) is an application that stores and manages data on laboratory isolates and notifications, and is the preferred method for capturing routine laboratory surveillance data on infectious diseases and antimicrobial resistance from laboratories across England.   -- <cite>[PHE Laboratory Reporting Guidelines, page 6](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/739854/PHE_Laboratory_Reporting_Guidelines.pdf#page=6)</cite>
+> The Second Generation Surveillance System (SGSS) is an application that stores and manages data on laboratory isolates and notifications, and is the preferred method for capturing routine laboratory surveillance data on infectious diseases and antimicrobial resistance from laboratories across England.   -- <cite>[UKHSA Laboratory Reporting Guidelines, page 5](https://assets.publishing.service.gov.uk/media/66e2e0ba0d913026165c3d77/UKHSA_Laboratory_reporting_guidelines_May_2023.pdf#page=5)</cite>
 
 
 SGSS data currently available in OpenSAFELY is for SARS-COV-2 test results from the UK's Pillar 1 and Pillar 2 tests.
@@ -42,5 +42,3 @@ SARS-CoV-2 test results from various sources are also coded [within SystmOne](sy
 
 
 --8<-- "includes/glossary.md"
-
-
