@@ -1,5 +1,5 @@
 Here, you'll copy our OpenSAFELY research template to your own GitHub
-account, for developing your own study:
+account and use it to develop your own study:
 
 1. Click on the link below to create new repository based on our template.
    You may need to log in to GitHub if you are not already logged in:
@@ -13,10 +13,10 @@ account, for developing your own study:
 1. Click **Create repository from template**
 1. The new GitHub repository will take a moment to initialise, as it is running
    some setup in background. Wait about 1 minute, then reload the page, and you
-   should see the README displayed now reflects the name you gave to the new
+   should see that the README displayed now reflects the name you gave to the new
    repository.
 
-   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised, wait a few seconds longer and reload.
+   If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised; wait a few seconds longer and reload.
 
 ---
 

@@ -1,5 +1,5 @@
 So far,
-the changes you have made only exist in the codespace which you are working in.
+the changes you have made only exist in the codespace in which you are working.
 
 In this section, you will first add the study changes that you've made
 to a new *commit* in your repository — a commit represents a stored

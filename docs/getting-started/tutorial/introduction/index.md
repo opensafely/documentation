@@ -4,7 +4,7 @@ computer, without ever having to access the real, sensitive, patient-level data.
 Because the study uses dummy patient data,
 anyone can complete the tutorial.
 
-We ask all potential collaborators to complete this tutorial,
+We ask all potential collaborators to complete this tutorial
 before applying to run their project against real data.
 
 ## Learning outcome

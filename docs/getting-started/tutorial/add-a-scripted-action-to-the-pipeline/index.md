@@ -117,7 +117,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 - **Line 16** tells the system that this action depends on the outputs of the
   `generate_dataset` being present.
 - **Lines 17-19** describe the files that the action creates. Line 18 says that the
-  items indented below it are *moderately* sensitive, that is they may be released
+  items indented below it are *moderately* sensitive, which means they may be released
   to the public after a careful review (and possible redaction). Line 19 says that
   there's one output file, which will be found at `output/report.png`.
 

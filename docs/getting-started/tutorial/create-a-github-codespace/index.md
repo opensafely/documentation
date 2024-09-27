@@ -25,7 +25,7 @@ Explorer.](../../../images/getting-started-codespaces-start.png)
 The terminal at the bottom-right of the GitHub codespace runs
 commands on a computer (virtual machine) provided by GitHub.
 
-The large, upper-right area holds the **main editor** and where you will
+The large, upper-right area holds the **main editor**, which is where you will
 view and edit files that you are working on. The left **"side bar"**
 holds the Explorer when you first start the codespace. There are
 other useful menus in this area that can be switched with the icons
