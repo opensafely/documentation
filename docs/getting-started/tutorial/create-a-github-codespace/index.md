@@ -28,7 +28,7 @@ commands on a computer (virtual machine) provided by GitHub.
 The large, upper-right area holds the **main editor**, which is where you will
 view and edit files that you are working on. The left **"side bar"**
 holds the Explorer when you first start the codespace. There are
-other useful menus in this area that can be switched with the icons
+other useful menus in this area that can be accessed with the icons
 to the far left side. Finally, the button at the top-left with three
 horizontal lines (`≡`) is the **menu button**, which allows you to
 access many more options.

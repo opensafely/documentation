@@ -8,6 +8,8 @@ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
 
 pressing ++enter++ once you've typed the command.
 
+This command makes use of files that already exist in the repository to generate a dummy dataset.
+
 The first time you run this command, it may take a few seconds to download the
 required software. Eventually, you should see output that contains lines like the following:
 

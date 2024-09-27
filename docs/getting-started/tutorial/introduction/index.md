@@ -1,7 +1,7 @@
 OpenSAFELY is designed to allow you to do your analytic work on your own
 computer, without ever having to access the real, sensitive, patient-level data.
 
-Because the study uses dummy patient data,
+Because the tutorial study uses dummy patient data,
 anyone can complete the tutorial.
 
 We ask all potential collaborators to complete this tutorial

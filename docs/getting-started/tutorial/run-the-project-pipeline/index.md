@@ -19,7 +19,7 @@ defines the actions for an OpenSAFELY project pipeline.
 ## The `project.yaml` file
 
 In the Visual Studio Code file Explorer,
-open the `project.yaml` file by clicking on it.
+open the `project.yaml` file by clicking on it. This file will be near the end of the list of files and folders.
 
 You should see a tab with the following content:
 
@@ -38,7 +38,7 @@ actions:
         dataset: output/dataset.csv.gz
 ```
 
-There is a single actions defined called `generate_dataset`
+There is a single action defined, called `generate_dataset`,
 in this project pipeline.
 
 The highlighted line is the command that the action runs,
