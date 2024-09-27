@@ -10,6 +10,12 @@ To open your repository with GitHub Codespaces:
 
 ![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
 
+You may see the following screen requesting additional permissions for your Codepsace:
+
+![A screenshot showing "This codepsace is requesting additional permissions, with a green 'Authorize and continue button at the bottom right".](../../../images/getting-started-codespaces-repository-additional-permissions.png)
+
+If so, click "Authorize and continue".
+
 You should then see a "Setting up your codespace" screen:
 
 ![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
