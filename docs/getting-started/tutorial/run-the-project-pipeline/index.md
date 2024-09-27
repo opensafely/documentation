@@ -6,7 +6,7 @@ we have run the single dataset definition step, or *scripted action*,
 using the command line with the command:
 
 ```sh
-$ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py`
+opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py`
 ```
 
 A complete OpenSAFELY study may include multiple actions.
@@ -56,7 +56,7 @@ stored in the `output` folder.
    type:
 
    ```sh
-   $ opensafely run generate_dataset
+   opensafely run generate_dataset
    ```
 
    and press ++enter++ to run the pipeline action.

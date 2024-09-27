@@ -1,9 +1,9 @@
 Now you're ready to run your first study.
 
-In the terminal, run:
+In the terminal, type the following:
 
 ```shell-session
-$ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
+opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
 ```
 
 pressing ++enter++ once you've typed the command.
