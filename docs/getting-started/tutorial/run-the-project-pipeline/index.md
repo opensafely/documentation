@@ -49,10 +49,14 @@ stored in the `output` folder.
 
 ## Running the action in the pipeline
 
-1. In the Visual Studio Code file Explorer,
+<ol>
+  <li>
+   In the Visual Studio Code file Explorer,
    confirm that the `output` folder is empty.
+  </li>
 
-2. In the Visual Studio Code Terminal,
+  <li>
+   In the Visual Studio Code Terminal,
    type:
 
    ```sh
@@ -82,10 +86,13 @@ stored in the `output` folder.
    `output/dataset.csv.gz`, and that it should be considered highly sensitive
    data. What you see here is exactly the same process that would happen on a real, secure
    server.
+  </li>
 
-3. When the command completes,
-   recheck the `output` folder
+  <li>
+   When the command completes, recheck the `output` folder
    and see that it contains a `dataset.csv.gz` file.
+   </li>
+</ol>
 
 ### Viewing the dataset output
 
