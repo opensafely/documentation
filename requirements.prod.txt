@@ -214,9 +214,9 @@ mkdocs-get-deps==0.2.0 \
     --hash=sha256:162b3d129c7fad9b19abfdcb9c1458a651628e4b1dea628ac68790fb3061c60c \
     --hash=sha256:2bf11d0b133e77a0dd036abeeb06dec8775e46efa526dc70667d8863eefc6134
     # via mkdocs
-mkdocs-macros-plugin==1.0.5 \
-    --hash=sha256:f60e26f711f5a830ddf1e7980865bf5c0f1180db56109803cdd280073c1a050a \
-    --hash=sha256:fe348d75f01c911f362b6d998c57b3d85b505876dde69db924f2c512c395c328
+mkdocs-macros-plugin==1.2.0 \
+    --hash=sha256:3e442f8f37aa69710a69b5389e6b6cd0f54f4fcaee354aa57a61735ba8f97d27 \
+    --hash=sha256:7603b85cb336d669e29a8a9cc3af8b90767ffdf6021b3e023d5ec2e0a1f927a7
     # via -r requirements.prod.in
 mkdocs-material==9.5.39 \
     --hash=sha256:0f2f68c8db89523cb4a59705cd01b4acd62b2f71218ccb67e1e004e560410d2b \
@@ -247,7 +247,9 @@ mypy-extensions==1.0.0 \
 packaging==23.0 \
     --hash=sha256:714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2 \
     --hash=sha256:b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97
-    # via mkdocs
+    # via
+    #   mkdocs
+    #   mkdocs-macros-plugin
 paginate==0.5.6 \
     --hash=sha256:5e6007b6a9398177a7e1648d04fdd9f8c9766a1a945bceac82f1929e8c78af2d
     # via mkdocs-material
