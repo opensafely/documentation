@@ -10,6 +10,12 @@ To open your repository with GitHub Codespaces:
 
 ![A screenshot showing the "Create codespace on main" button.](../../../images/getting-started-codespaces-button.png)
 
+You may see the following screen requesting additional permissions for your Codepsace:
+
+![A screenshot showing "This codepsace is requesting additional permissions, with a green 'Authorize and continue button at the bottom right".](../../../images/getting-started-codespaces-repository-additional-permissions.png)
+
+If so, click "Authorize and continue".
+
 You should then see a "Setting up your codespace" screen:
 
 ![A screenshot showing "Setting up your codespace".](../../../images/getting-started-codespaces-setting-up.png)
@@ -25,10 +31,10 @@ Explorer.](../../../images/getting-started-codespaces-start.png)
 The terminal at the bottom-right of the GitHub codespace runs
 commands on a computer (virtual machine) provided by GitHub.
 
-The large, upper-right area holds the **main editor** and where you will
+The large, upper-right area holds the **main editor**, which is where you will
 view and edit files that you are working on. The left **"side bar"**
 holds the Explorer when you first start the codespace. There are
-other useful menus in this area that can be switched with the icons
+other useful menus in this area that can be accessed with the icons
 to the far left side. Finally, the button at the top-left with three
 horizontal lines (`≡`) is the **menu button**, which allows you to
 access many more options.

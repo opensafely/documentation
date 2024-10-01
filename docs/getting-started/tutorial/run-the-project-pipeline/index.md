@@ -3,10 +3,10 @@ we will look at the OpenSAFELY project pipeline.
 
 So far,
 we have run the single dataset definition step, or *scripted action*,
-at the command line with the command:
+using the command line with the command:
 
 ```sh
-$ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py`
+opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py`
 ```
 
 A complete OpenSAFELY study may include multiple actions.
@@ -14,12 +14,12 @@ For example, the first action might extract a dataset,
 and a subsequent action might generate a table or chart from that data.
 
 The `project.yaml` file in the study repository
-defines the actions for an OpenSAFELY project pipeline
+defines the actions for an OpenSAFELY project pipeline.
 
 ## The `project.yaml` file
 
 In the Visual Studio Code file Explorer,
-open the `project.yaml` file by clicking on it.
+open the `project.yaml` file by clicking on it. This file will be near the end of the list of files and folders.
 
 You should see a tab with the following content:
 
@@ -38,10 +38,10 @@ actions:
         dataset: output/dataset.csv.gz
 ```
 
-There is a single actions defined called `generate_dataset`
+There is a single action defined, called `generate_dataset`,
 in this project pipeline.
 
-The highlighted line is the command that the action runs
+The highlighted line is the command that the action runs,
 and is very similar to the command we previously ran.
 
 The difference is that `generate_dataset` defines an output
@@ -49,13 +49,18 @@ stored in the `output` folder.
 
 ## Running the action in the pipeline
 
-1. In the Visual Studio Code file Explorer,
+<ol>
+  <li>
+   In the Visual Studio Code file Explorer,
    confirm that the `output` folder is empty.
-2. In the Visual Studio Code Terminal,
+  </li>
+
+  <li>
+   In the Visual Studio Code Terminal,
    type:
 
    ```sh
-   $ opensafely run generate_dataset
+   opensafely run generate_dataset
    ```
 
    and press ++enter++ to run the pipeline action.
@@ -81,9 +86,13 @@ stored in the `output` folder.
    `output/dataset.csv.gz`, and that it should be considered highly sensitive
    data. What you see here is exactly the same process that would happen on a real, secure
    server.
-3. When the command completes,
-   recheck the `output` folder
+  </li>
+
+  <li>
+   When the command completes, recheck the `output` folder
    and see that it contains a `dataset.csv.gz` file.
+   </li>
+</ol>
 
 ### Viewing the dataset output
 
@@ -103,7 +112,7 @@ The difference between them is that:
 
 * `opensafely exec` runs actions *outside* of the project pipeline
   and is useful for quick feedback during interactive development
-* `opensafely run` runs actions *inside* the project pipeline,
+* `opensafely run` runs actions *inside* the project pipeline -
   that is, just as they would be in the secure OpenSAFELY environment
   containing real patient data
 

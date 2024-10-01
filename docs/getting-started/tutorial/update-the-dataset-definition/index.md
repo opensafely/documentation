@@ -1,4 +1,4 @@
-You've successfully generated a dataset from the code in your study, but at the moment it only adds one data column.
+You've successfully generated a dataset from the code in your study, but at the moment it only contains one data column.
 
 Now we'll add some code to create an extra column.
 
@@ -32,15 +32,13 @@ Lines 8-12 mean "*I'm interested in all patients who were registered at a practi
 on the index date*"; line 14 "*Give me a column of data corresponding
 to the sex of each patient*"; and line 15 "*Give me a column of data corresponding
 to the age of each patient on the given date*".
-1. If you run:
+1. If you type the following into your terminal:
 
    ```shell-session
-   $ opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
+   opensafely exec ehrql:v1 generate-dataset analysis/dataset_definition.py
    ```
 
-   you will see a new randomly generated dataset.
-
-   However, this time it contains the additional `age` column.
+   and press ++enter++, you will see a new randomly generated dataset which now contains the additional `age` column.
 
 ---
 
