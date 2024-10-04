@@ -19,8 +19,8 @@ that to find all the patients with Type 1 diabetes, you may have to search for
 We built a system for building, reviewing and maintaining codelists at
 [OpenCodelists](https://www.opencodelists.org/).
 We've made an introductory video to help explain OpenCodelists in more detail. Codelists
-that are hosted on this website can be used directly in the Study Definition. This means
-there is no need to download or alter these codelists in the study definition, and
+that are hosted on this website can be used directly in the Dataset Definition. This means
+there is no need to download or alter these codelists in the dataset definition, and
 they can be reused.
 
 <div class="video-wrapper">
