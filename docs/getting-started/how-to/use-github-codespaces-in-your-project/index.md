@@ -1,5 +1,10 @@
 This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 
+!!! warning
+    Codespaces are automatically deleted after a period of inactivity and any changes not pushed to the GitHub repo will be lost.
+    For the `opensafely` organization,
+    this period is 30 days.
+
 ## Managing GitHub Codespaces
 
 ### How to create a codespace
@@ -45,11 +50,6 @@ they still count against storage usage quota.
     will eventually timeout.
     But it is preferable to stop codespaces explicitly
     to save on usage.
-
-!!! warning
-    Inactive codespaces are automatically deleted after a period of inactivity.
-    For the `opensafely` organization,
-    this period is 14 days.
 
 ### How to restart a stopped codespace
 
