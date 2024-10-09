@@ -24,11 +24,7 @@ open the `project.yaml` file by clicking on it. This file will be near the end o
 You should see a tab with the following content:
 
 ```yaml linenums="1" hl_lines="9"
-version: "3.0"
-
-# Ignore this `expectations` block. It is required but not used, and will be removed in future versions.
-expectations:
-  population_size: 1000
+version: "4.0"
 
 actions:
   generate_dataset:
