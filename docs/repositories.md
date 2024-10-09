@@ -74,7 +74,7 @@ This is an important folder, used internally by GitHub, that you can happily ign
 
 By convention, this folder contains:
 
-* Any `study_definition.py` script that defines the study definition
+* Any `dataset_definition.py` script that defines the dataset definition
 * Analysis scripts in R, Python or Stata
 
 ### `codelists/`

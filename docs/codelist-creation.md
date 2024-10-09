@@ -107,7 +107,7 @@ Go to the codelist issue in the [codelist repo](https://github.com/opensafely/co
 This issue serves as documentation of the choices made that determined the final codelist. The issue can be
 re-opened if revisions are required.
 
-## Import the codelist for use in your study definition
+## Import the codelist for use in your dataset definition
 
 Once the codelist is in [OpenCodelists](https://www.opencodelists.org), you can retrieve it for use in
 your research repo. Follow the [adding codelists to project instructions](codelist-project.md) if you're not sure how to do this.

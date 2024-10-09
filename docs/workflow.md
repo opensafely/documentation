@@ -10,10 +10,10 @@ This repo will contain all the code relating to your project, and a history of i
 2.  **Write a [dataset definition](/ehrql/)** that specifies what data you want to extract from the database:
     -   specify the patient population (dataset rows) and variables (dataset columns)
     -   specify the expected distributions of these variables for use in dummy data
-    -   specify (or create) the [codelists](codelist-intro.md) required by the study definition, hosted by [OpenCodelists](https://www.opencodelists.org), and import them to the repo.
+    -   specify (or create) the [codelists](codelist-intro.md) required by the dataset definition, hosted by [OpenCodelists](https://www.opencodelists.org), and import them to the repo.
 3.  **Generate [dummy data](/ehrql/how-to/dummy-data)** based on the dataset definition, for writing and testing code.
 4.  **Develop analysis scripts** using the dummy data in R, Stata, or Python. This will include:
-    -   importing and processing the dataset(s) created by the cohort extractor
+    -   importing and processing the dataset(s) created by the dataset definition
     -   importing any other external files needed for analysis
     -   generating analysis outputs like tables and figures
     -   generating log files to debug the scripts when they run on the real data.
@@ -29,4 +29,4 @@ It is possible to automatically test that the analytical pipeline defined in ste
 This pipeline is also [automatically tested](actions-pipelines.md#running-your-code-with-github-actions) against dummy data every time a new version of the study repository is saved ("pushed") to GitHub.
 
 As well as your own Python, R or Stata scripts, other non-standard actions are available.
-For example, it's possible to run a matching routine that extracts a matched control population to the population defined in the study definition, without having to extract all candidate matches into a dataset first.
+For example, it's possible to run a matching routine that extracts a matched control population to the population defined in the dataset definition, without having to extract all candidate matches into a dataset first.

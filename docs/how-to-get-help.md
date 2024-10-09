@@ -66,7 +66,7 @@ To search the OpenSAFELY GitHub organisation for code:
 4. Select "Code" to find any matches within previous code (or sometimes "Issues" may help).
 
 It can be helpful to use the option to filter the results by language.
-For example, restricting to Python might help you find study definition files.
+For example, restricting to Python might help you find dataset definition files.
 
 ## Bug reports and feature requests
 
