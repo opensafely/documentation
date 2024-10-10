@@ -1,8 +1,0 @@
-[flake8]
-extend-exclude = .direnv,.venv,venv
-ignore =
-    # line too long (black fixes long lines, except for long strings which may benefit from being long (eg URLs))
-    E501,
-    # line break before binary operator (black disagrees)
-    W503
-max-line-length = 88

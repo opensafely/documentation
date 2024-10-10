@@ -116,20 +116,20 @@ test: devenv
     echo "Not implemented here"
 
 
-black *args=".": devenv
-    $BIN/black --check {{ args }}
+format *args=".": devenv
+    $BIN/ruff format --check {{ args }}
 
-ruff *args=".": devenv
+lint *args=".": devenv
     $BIN/ruff check {{ args }}
 
 # run the various dev checks but does not change any files
-check: black ruff
+check: format lint
 
 
 # fix formatting and import sort ordering
 fix: devenv
-    $BIN/black .
     $BIN/ruff check --fix .
+    $BIN/ruff format .
 
 # Run the dev project
 run: devenv
