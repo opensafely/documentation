@@ -195,6 +195,27 @@ opensafely exec IMAGE bash
 This can be useful if you want to explore the image manually.
 
 
+### `rstudio` - Running RStudio Server
+
+This provides the RStudio interface to the r image, therefore, the versions of R and all the packages are the same as they are in the r image.
+
+To launch an RStudio Server session please navigate to your research repository and run
+
+```bash
+opensafely rstudio
+```
+
+This will launch an RStudio Server session in a browser window. A message in your terminal will tell you which port to browse to.
+
+In your RStudio Server session you can work on your files as usual, including saving your edits.
+
+If you have an `.Rproj` file at the top level of your repository, the command will detect this and will open the RStudio Server session in RStudio's project mode. In this mode the Git pane is available, so you can make commits, or you can make commits locally as you usually do.
+
+To end your RStudio Server session press ++ctrl+c++ in the Terminal window in which you ran the `opensafely run` command.
+
+An alternative method to open your project in an RStudio Server session is to open your research repository in [Codespaces](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio).
+
+
 ### `jupyter` - Running JupyterLab
 
 [Jupyter notebooks](https://jupyter.org/) are useful interactive
