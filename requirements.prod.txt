@@ -236,9 +236,9 @@ mkdocs-multirepo-plugin==0.8.3 \
     --hash=sha256:76190e457d22d768d53b79d4b11be513711c5c8587a4c28a8d605947e5733cde \
     --hash=sha256:c474fe29dc9f8fc73c27c133fe378c240fd98f79ca1b9b46575f83af9a1f2559
     # via -r requirements.prod.in
-mkdocstrings[python]==0.26.1 \
-    --hash=sha256:29738bfb72b4608e8e55cc50fb8a54f325dc7ebd2014e4e3881a49892d5983cf \
-    --hash=sha256:bb8b8854d6713d5348ad05b069a09f3b79edbc6a0f33a34c6821141adb03fe33
+mkdocstrings[python]==0.26.2 \
+    --hash=sha256:1248f3228464f3b8d1a15bd91249ce1701fe3104ac517a5f167a0e01ca850ba5 \
+    --hash=sha256:34a8b50f1e6cfd29546c6c09fbe02154adfb0b361bb758834bf56aa284ba876e
     # via
     #   -r requirements.prod.in
     #   mkdocstrings-python
