@@ -40,7 +40,7 @@ To install Docker Desktop on Windows Home [follow these installation instruction
 
    You may be asked to enable the Hyper-V and Containers features, which you should do.
    You can do this by [following these instructions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-   At least one user has had the box ticked on the screen but had to untick and tick again to get this to enable correctly (Detailed in [this issue](https://github.com/ebmdatalab/custom-docker/issues/4)).
+   At least one user has had the box ticked on the screen but had to untick and tick again to get this to enable correctly (Detailed in [this issue](https://github.com/ebmdatalab/notebook-template/issues/4)).
 
 1. Starting Docker can take a while &mdash; up to 5 minutes. While it's doing
    so, an animation runs in the notification area:<br>
