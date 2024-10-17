@@ -13,7 +13,7 @@ You can also [provide your own dummy data](#providing-your-own-dummy-data).
 ## Defining `return_expectations`
 
 Every variable in a study definition must have a `return_expectations` argument defined (with the exception of the `population` variable).
-This defines the general shape or distribution of the variables in the dummy data used for developing the code.  It is currently relatively unsophisticated; each variable is generated independently of all others. In most cases, dummy data is good enough to test that it is possible to run your study from start to finish, but sometimes not. You can find (and contribute to!) discussions on improving the [dummy data framework](https://github.com/opensafely/cohort-extractor/issues/221).
+This defines the general shape or distribution of the variables in the dummy data used for developing the code.  It is currently relatively unsophisticated; each variable is generated independently of all others. In most cases, dummy data is good enough to test that it is possible to run your study from start to finish, but sometimes not. You can find (and contribute to!) discussions on improving the [dummy data framework](https://github.com/opensafely-core/cohort-extractor/issues/221).
 
 ### Specifying default distributions
 
