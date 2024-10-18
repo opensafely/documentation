@@ -56,7 +56,7 @@ The `run_model` action will run a Stata script called `model.do` based on the `d
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
-Every `project.yaml` requires a `version` and `actions` section. An `expectations` section was also required for version 3.0 of the pipeline framework (example [here](case-control-studies.md)), but is not used in the latest version.
+Every `project.yaml` requires a `version` and an `actions` section.
 In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
