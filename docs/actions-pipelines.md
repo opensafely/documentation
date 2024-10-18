@@ -28,11 +28,7 @@ It is written using a configuration format called [YAML](https://yaml.org/), whi
 A simple example of a `project.yaml` is as follows:
 
 ```yaml
-version: "3.0"
-
-# Ignore this `expectations` block. It is required but not used, and will be removed in future versions.
-expectations:
-  population_size: 1000
+version: "4.0"
 
 actions:
   generate_dataset:
@@ -60,7 +56,7 @@ The `run_model` action will run a Stata script called `model.do` based on the `d
 It will output two moderately sensitive files `cox-model.txt` and `survival-plot.png`, which can be checked and released if appropriate.
 
 
-Every `project.yaml` requires a `version`, `expectations`, and `actions` section.
+Every `project.yaml` requires a `version` and an `actions` section.
 In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
