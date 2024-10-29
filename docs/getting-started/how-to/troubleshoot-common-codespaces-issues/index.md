@@ -10,6 +10,12 @@ This is perfectly normal and is a result of how we have configured Codespaces to
 If you plan to use Stata in your project, then you will need to click the "Authorize and continue" button.
 If you do not plan to use Stata, then you may click either button.
 
+## My Codespace says it's in "recovery mode"
+
+Occasionally when creating a Codespace something goes wrong. In these instances, GitHub will boot the Codespace into a "recovery mode". This provides you with a very basic environment in which to debug the problem. If this happens, either delete it and try again or contact tech support. If you contact tech support, then don't delete the Codespace, as it's likely you'll be asked for the creation logs so the problem can be investigated.
+
+In recovery mode, you will not be able to access any of the usual tools or VS Code plugins. Some basic functionality, like copy and paste, may not work as expected either. So you should not attempt you use it for any work. GitHub provide some more information about Codespace recovery mode in their [documentation](https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-creation-and-deletion-of-codespaces#codespace-creation-fails).
+
 ## R Session Error
 
 After restarting a stopped Codespace in which you were using RStudio, you may see the following error:
