@@ -40,8 +40,7 @@ jobs:
       # This workaround may not be needed in future if lychee has better rate limiting.
       # https://github.com/lycheeverse/lychee/issues/36
       - name: Check links
-        uses: lycheeverse/lychee-action@2b973e86fc7b1f6b36a93795fe2c9c6ae1118621  # v1.10.0
+        uses: lycheeverse/lychee-action@7cd0af4c74a61395d455af97419279d86aafaede  # v2.0.2
         with:
           args: "--exclude-all-private --include-verbatim --max-concurrency 24 --require-https --verbose --no-progress --timeout 60 './docs/**/*.md' './docs/**/*.html' './imported_docs/**/*.md' './imported_docs/**/*.html' --exclude-path './docs/ehrql/includes/generated_docs'"
-          fail: true
           token: ${{secrets.GITHUB_TOKEN}}
