@@ -158,7 +158,7 @@ This allows you develop and and test code as if it was a regular interactive ses
 For example, to run an interactive Stata session:
 
 ```bash
-opensafely exec stata-mp stata-mp
+opensafely exec stata-mp
 ```
 
 This will run the Stata packaged in the `stata-mp` docker image, and you can manually test your Stata code (the `opensafely` tool knows how to fetch and apply the OpenSAFELY Stata licence).
@@ -167,10 +167,10 @@ This will run the Stata packaged in the `stata-mp` docker image, and you can man
 Likewise, for R:
 
 ```bash
-opensafely exec r R
+opensafely exec r
 ```
 
-This will launch the version of R packaged in the `r` docker image, and your files can be executed (we need to specify the command as `R` as the default is to run `Rscript`, which is non-interactive).
+This will launch the version of R packaged in the `r` docker image, and your files can be executed.
 
 For python, you can run a plain python interpreter with:
 
