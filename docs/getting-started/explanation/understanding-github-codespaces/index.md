@@ -28,6 +28,14 @@ to work on OpenSAFELY projects.
 
 GitHub provide users with a free monthly quota of Codespaces use.
 
+These cloud-hosted virtual machines have no persistent storage,
+which is to say any data on them will be lost when the machine is deleted
+if not saved elsewhere.
+Codespaces are primarily designed for writing code
+(such as an OpenSAFELY study)
+and are tightly integrated with GitHub,
+making it easy to commit and push your work to GitHub avoiding any data loss.
+
 ## Understanding GitHub Codespaces billing
 
 GitHub gives all users a free and decent-sized monthly quota for Codespaces.
