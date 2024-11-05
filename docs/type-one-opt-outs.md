@@ -30,7 +30,7 @@ Unless a project is named in the project permissions file, ehrQL will automatica
 This list is provided by the system suppliers and stored in the secure database along with the rest of the patient data.
 It consists of a single bespoke type 1 opt-out table, with a single list of pseudonymous IDs and no other information.
 
-Again, the [code which enforces this](https://github.com/opensafely-core/ehrql/blob/8494b943be0d73d02413ad41272a612a5fddbff3/ehrql/backends/tpp.py#L75-L100) is publicly available on Github.
+Again, the [code which enforces this](https://github.com/opensafely-core/ehrql/blob/72f289b0183e4c5dcbd9cbd6fcfa243a76fb9a67/ehrql/backends/tpp.py#L97-L129) is publicly available on Github.
 
 ### Data access which does _not_ go via ehrQL
 
