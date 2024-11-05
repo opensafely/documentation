@@ -34,41 +34,32 @@ Again, the [code which enforces this](https://github.com/opensafely-core/ehrql/b
 
 ### Data access which does _not_ go via ehrQL
 
-There are three sorts of circumstances under which data access in OpenSAFELY does not go via ehrQL, each with different behaviour with respect to type 1 opted-out patients' data.
+There are two sorts of circumstances under which data access in OpenSAFELY does not go via ehrQL, each with different behaviour with respect to type 1 opted-out patients' data.
 
-#### 1. Cohort Extractor
-
-ehrQL's predecessor was a tool called "Cohort Extractor" and studies which began before the launch of ehrQL continue to use this tool; these all had permission to process data from patients with a type 1 opt-out.
-Cohort Extractor applies exactly the [same rules](https://github.com/opensafely-core/cohort-extractor/blob/18c954499ec0a8fbcf5f83e0a4d1bbe2a469b0c1/cohortextractor/tpp_backend.py#L417-L435) as does ehrQL with respect to opt-outs.
-However, as a tool, it was not originally intended to enforce data access controls and its design makes it difficult to implement the same security boundaries as ehrQL.
-As a result, we have limited access to Cohort Extractor to just those projects which _already_ have access to opted-out data.
-This is enforced by the same mechanism as access to opted-out data i.e. an auditable file of [permitted projects](https://github.com/opensafely-core/job-server/blob/main/jobserver/permissions/cohortextractor.py), and enforced [code protection rules](https://github.com/opensafely-core/job-server/blob/main/.github/CODEOWNERS).
-
-We may make limited exceptions to this in the short term if there are specific reasons why a project cannot feasibly use ehrQL and where we can be confident there is no attempt to subvert Cohort Extractor's security.
-Any such exceptions will appear, along with details of who approved them and why, in the public [audit log](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/cohortextractor.py).
-
-Longer term, Cohort Extractor will be retired entirely.
-
-#### 2. SQL Runner
+#### 1. SQL Runner
 
 SQL Runner is a tool which allows the user to retrieve data by writing "raw" SQL rather than ehrQL.
 It is intended for the data curation and investigation tasks necessary for operating the platform, rather than research purposes.
 Its use is therefore limited to just those OpenSAFELY staff involved in this work.
 Details of the circumstances under which OpenSAFELY staff may perform development and maintenance activities are described in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/).
 
-This is enforced by a parallel mechanism to that which controls use of Cohort Extractor and any changes to this policy will appear in the public [audit log](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/sqlrunner.py).
+This is enforced by a parallel mechanism to that which controls access to type 1 opt out data via ehrQL and any changes to this policy will appear in the public [audit log](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/sqlrunner.py).
 
 SQL Runner does not itself grant or deny access to opted-out data.
 Instead the user must declare whether the task in question should properly exclude such data or not, and SQL Runner enforces that such a declaration has been made by rejecting any queries which do not explicitly reference the opt-out table.
 
 All SQL Runner code run against patient data is also visible on our public “jobs” server: [https://jobs.opensafely.org/](https://jobs.opensafely.org/); therefore, it will be possible to see which code (or jobs) were run against patients with a type 1 opt-out.
 
-#### 3. Direct access to pseudonymised data
+#### 2. Direct access to pseudonymised data
 
 In order to facilitate the operation and maintenance of the OpenSAFELY platform a small number of individuals are able to access the pseudonymised data directly, without going via ehrQL, Cohort Extractor or SQL Runner.
 It is important to note that the code run in such circumstances will not be publicly visible on our “jobs” server, but it is logged in the database audit file of the GP system suppliers; preventing access to patient data with a type 1 opt-out is not enforceable at this level.
 
 The circumstances under which this is permitted and the rationale are covered in detail in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/) but, importantly, such access is never used for research purposes.
+
+#### Cohort Extractor is discontinued
+
+ehrQL's predecessor was a tool called "Cohort Extractor". This has now been discontinued and is no longer permitted to be used. Although Cohort Extractor applied exactly the same rules as does ehrQL with respect to opt-outs it was not originally intended to enforce data access controls and its design makes it difficult to implement the same security boundaries as ehrQL.
 
 ## Summary Diagram
 
