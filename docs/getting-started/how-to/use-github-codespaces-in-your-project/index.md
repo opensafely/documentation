@@ -1,7 +1,7 @@
 This page explains how to work with OpenSAFELY projects using GitHub Codespaces.
 
 !!! warning
-    Codespaces are automatically deleted after a period of inactivity and any changes not pushed to the GitHub repo will be lost.
+    By default, Codespaces are automatically deleted after a period of inactivity and any changes not pushed to the GitHub repo will be lost.
     For the `opensafely` organization,
     this period is 30 days.
 
