@@ -115,8 +115,17 @@ body {
   padding-left: 0.5rem;
 }
 
-.md-logo {
-  display: none !important;
+.md-header__button.md-logo {
+  margin: 0 0.25rem 0 0;
+  padding: 0.25rem;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  height: 1.75rem;
+}
+
+[dir=ltr] .md-header__title {
+  margin-left: 0;
 }
 
 @media screen and (max-width: 76.1875em) {
