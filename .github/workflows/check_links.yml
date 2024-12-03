@@ -40,7 +40,7 @@ jobs:
       # This workaround may not be needed in future if lychee has better rate limiting.
       # https://github.com/lycheeverse/lychee/issues/36
       - name: Check links
-        uses: lycheeverse/lychee-action@7cd0af4c74a61395d455af97419279d86aafaede  # v2.0.2
+        uses: lycheeverse/lychee-action@f81112d0d2814ded911bd23e3beaa9dda9093915  # v2.1.0
         with:
           args: "--exclude-all-private --include-verbatim --max-concurrency 24 --require-https --verbose --no-progress
           --accept '100..=103,200..=299,429,500..=511'
