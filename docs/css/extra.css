@@ -30,6 +30,7 @@
   --md-primary-fg-color: var(--colorPrimary);
   --md-code-hl-generic-color: #77706b;
   --md-code-hl-variable-color: #756e69;
+  --md-default-bg-color: var(--colorVeryLightBlue);
 }
 
 body {
