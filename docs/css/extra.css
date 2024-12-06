@@ -170,3 +170,7 @@ body {
 .highlight .gp, .highlight .go { /* Generic.Prompt, Generic.Output */
   user-select: none;
 }
+
+.md-sidebar {
+  padding: 0;
+}
