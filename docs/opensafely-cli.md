@@ -199,7 +199,7 @@ This can be useful if you want to explore the image manually.
 
 An alternative method to open your project in an RStudio Server session is to open your research repository in [Codespaces](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio).
 
-This provides the RStudio interface to the r image. This lets you run your code in RStudio using the same versions of R and all the packages that are the OpenSAFELY secure backend..
+This provides the RStudio interface to the r image. This lets you run your code in RStudio using the same versions of R and all the packages that are the OpenSAFELY secure backend.
 
 To launch an RStudio Server session please navigate to your research repository and run
 
