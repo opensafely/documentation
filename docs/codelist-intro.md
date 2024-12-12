@@ -15,6 +15,8 @@ precisely, though not always consistently, in their everyday work. This means
 that to find all the patients with Type 1 diabetes, you may have to search for
 30 plus codes in the clinical record.
 
+For more information, see [our blog post on constructing codelists](https://www.bennett.ox.ac.uk/blog/2023/09/what-are-codelists-and-how-are-they-constructed/).
+
 ## OpenCodelists
 We built a system for building, reviewing and maintaining codelists at
 [OpenCodelists](https://www.opencodelists.org/).
