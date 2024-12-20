@@ -139,9 +139,10 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker GitHub repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
 
 !!! note
-    Stata can only produce very limited image formats on Linux, none of which
-    are in the approved list above.  To output an image from Stata, you can
-    output as eps and use the convert tool:
+    Stata can only produce very limited image formats on Linux, only eps, tiff,
+    and uncompressed svg.  None of these are preferred formats for images to be
+    output checked. So, we suggest that you generate images in eps format, and
+    then convert them to .png using the convert tool:
 
     ```stata
     graph export "output/graph.eps", replace
