@@ -1,5 +1,10 @@
 # The Clinical DATAPAST Function
 
+!!! info
+    The final paper on this topic is available [here](the_clinical_datapast_function.pdf).
+    It was presented to the OpenSAFELY Steering Board and the Joint GP IT Committee in December 2024;
+    the preferred option in section 6 was supported by both groups.
+
 The Clinical DATAPAST (**Data** **P**ublication, **A**dvice and **S**upport **T**eam) function will act as a distinct but integral part of the publication approval service which was piloted during the pandemic.
 
 **Publication approval = Clinical DATAPAST advice + NHS England approval decision**
