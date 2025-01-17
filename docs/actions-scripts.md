@@ -187,4 +187,9 @@ There are two versions of the Docker image.
 
 ### R
 
-The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md).
+There are two versions of the R image. 
+
+* `r:v1`, which for historical reasons is the same as `r:latest`, contains R 4.0.5.
+  It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md).
+* `r:v2` contains R 4.4.2.
+  It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v2/packages.md)
