@@ -8,8 +8,8 @@ and let [tech-support](/how-to-get-help#slack) know.
 
 ## R packages
 
-First check that the package is not already available, by [viewing all installed packages and their versions for the
-OpenSAFELY R image](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md)). If your package isn't there then [open an
+First check that the package is not already available, by [viewing all installed packages and their versions for v2 of the
+OpenSAFELY R image](https://github.com/opensafely-core/r-docker/blob/main/v2/packages.md). If your package isn't there then [open an
 issue](https://github.com/opensafely-core/r-docker/issues) to request it be added. Include the following information:
 
 * A link to the CRAN page for the package;
