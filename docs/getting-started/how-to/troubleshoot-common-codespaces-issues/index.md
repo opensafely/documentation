@@ -31,10 +31,7 @@ This is because, as stated in the [RStudio version control documentation](https:
 
 > RStudio’s version control features are tied to the use of [Projects](https://docs.posit.co/ide/user/ide/guide/code/projects.html)
 
-In most cases, opening RStudio will create an RStudio project file in your project directory and the Git features will be enabled.
-
-If this does not happen, you may use the New Project Wizard in RStudio to "associate a project with an existing working directory"
-as per the instructions in the [RStudio Projects documentation](https://docs.posit.co/ide/user/ide/guide/code/projects.html).
+Therefore, if you have not already created an RStudio project file (.Rproj) file in your repository you can do so by using the New Project Wizard in RStudio to "associate a project with an existing directory". Once your repository is opened in project mode the Git features will be enabled.
 
 ## RStudio's Files tab is not showing the correct directory
 
