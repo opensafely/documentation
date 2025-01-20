@@ -148,6 +148,8 @@ extra_javascript:
   - js/lite-yt-embed.js
 
 extra:
+  analytics:
+    provider: plausible
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/opensafely
