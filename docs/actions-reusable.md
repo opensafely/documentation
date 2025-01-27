@@ -84,6 +84,6 @@ When developing a reusable action, just as when developing a scripted action, th
   Its dependencies are in [*requirements.txt*](https://github.com/opensafely-core/python-docker/blob/main/v2/packages.md).
   In practice, this means that a Python action's *requirements.txt* is ignored.
 * The R runtime is provided by [`r-docker`](https://github.com/opensafely-core/r-docker).
-  Its dependencies are in [*packages.csv*](https://github.com/opensafely-core/r-docker/blob/master/packages.csv).
+  Its dependencies are in [*packages.md*](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md).
 * The Stata runtime is provided by [`stata-docker`](https://github.com/opensafely-core/stata-docker).
   Its dependencies are in [*libraries*](https://github.com/opensafely-core/stata-docker/tree/main/libraries).
