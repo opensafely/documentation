@@ -194,20 +194,37 @@ opensafely exec IMAGE bash
 
 This can be useful if you want to explore the image manually.
 
+### `launch` - Run web based interactive tools
 
-### `rstudio` - Running RStudio Server
+Many users may prefer to use some of the interactive development environments that are commonly used for different languages, like Rstudio or Jupyter Lab.
 
-An alternative method to open your project in an RStudio Server session is to open your research repository in [Codespaces](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio).
+Using `opensafely launch`, you can run these tools from the OpenSAFELY images, accessing them via your browser. This means that code you write and run in these tools will be running the OpenSAFELY provided environment, with the right dependencies and versions, rather than what ever you have installed on your machine.
 
-This subcommand provides the RStudio interface to the r image. This lets you run your code in RStudio using the same versions of R and all the packages that are the OpenSAFELY secure backend.
+The supported tools of Rstudio and Jupyter Lab are documented below, but they share a common set of options, which you can see with
+
+```
+opensafely launch --help
+```
+
+
+#### `opensafely launch rstudio` - Running RStudio Server
+
+This sub-command provides the RStudio interface to the r image. This lets you run your code in RStudio using the same versions of R and all the packages that are the OpenSAFELY secure backend.
+Note that if you are using a Github [Codespaces](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio), then this is run automatically for you.
 
 To launch an RStudio Server session please navigate to your research repository and run
 
 ```bash
-opensafely rstudio
+opensafely launch rstudio
 ```
 
-This will launch an RStudio Server session in a browser window. A message in your terminal will tell you which port to browse to.
+This will launch an RStudio Server session, and open it in a browser window. A message in your terminal will tell you which port it is running on, in case you need to know.
+
+By default it will use the most recent version of the OpenSAFELY R image, but you can specify an older version with:
+
+```bash
+opensafely launch rstudio:v1
+```
 
 In your RStudio Server session you can work on your files as usual, including saving your edits.
 
@@ -215,18 +232,18 @@ If you have an `.Rproj` file at the top level of your repository, the command wi
 
 To end your RStudio Server session press ++ctrl+c++ in the Terminal window in which you ran the `opensafely rstudio` command.
 
-Note that the `opensafely` CLI is not vendored within the rstudio image. Hence to use CLI commands such as `opensafely run`, please do so from a local Terminal session and not from the Terminal pane in your RStudio Server session. Whereas, the `opensafely` CLI is vendored within the Codespaces version of RStudio Server, and so you can use the RStudio Terminal in this case.
+Note that the `opensafely` CLI is not vendored within the RStudio image. Hence to use CLI commands such as `opensafely run`, please do so from a local Terminal session and not from the Terminal pane in your RStudio Server session. Whereas, the `opensafely` CLI is vendored within the Codespaces version of RStudio Server, and so you can use the RStudio Terminal in this case.
 
 Users with Apple Silicon computers need to [enable Rosetta emulation](/install-docker/#macs-with-an-apple-silicon-processor). Since Docker Desktop 4.25.0 this feature has been enabled by default. For Docker Desktop versions between 4.16.0 and 4.24.4 this setting can be found in Settings under the _Features in development_ and then _Beta features_ tab. The `opensafely rstudio` command will not run under either the Docker Virtual Machine Manager virtualization (since Docker Desktop 4.35.0) nor the legacy QEMU virtualization.
 
-Users with Windows computers will notice that after opening a repository in RStudio project mode that their _.Rproj_ file will have had its line endings changed (from CRLF to LF). This is because RStudio always rewrites _.Rproj_ files on opening a project. You can simply discard these changes, for example, in GitHub Desktop by right clicking and selecting _Discard Changes_. Alternatively, this can be overcome by resaving your _.Rproj_ file with LF line endings, then adding a special case, as shown below, to your _.gitattributes_ file to tell Git to always save this file with LF line endings (this setting needs to placed on a line after the `* text=auto` line). Make sure to commit this addition to your _.gitattributes_ file into your repository.
+Users with Windows computers will notice that after opening a repository in RStudio project mode that their _.Rproj_ file will have had its line endings changed (from CRLF to LF). This is because RStudio always rewrites _.Rproj_ files on opening a project. You can simply discard these changes, for example, in GitHub Desktop by right clicking and selecting _Discard Changes_. Alternatively, this can be overcome by re-saving your _.Rproj_ file with LF line endings, then adding a special case, as shown below, to your _.gitattributes_ file to tell Git to always save this file with LF line endings (this setting needs to placed on a line after the `* text=auto` line). Make sure to commit this addition to your _.gitattributes_ file into your repository.
 
 ```text
 *.Rproj text eol=lf
 ```
 
 
-### `jupyter` - Running JupyterLab
+#### `opensafely launch jupyter` - Running JupyterLab
 
 [Jupyter notebooks](https://jupyter.org/) are useful interactive
 environments for developing code.
@@ -245,6 +262,12 @@ JupyterLab should then open in a web browser automatically. Otherwise,
 copy the long URL shown by the JupyterLab logs — starting
 `http://localhost`… — and use that URL in a web
 browser to access JupyterLab.
+
+By default, it will run Jupyter Lab in the most recent version of the python image, but you can to run an older version with:
+
+```bash
+opensafely launch juypter:v1
+```
 
 To exit, press ++control+c++ in the command line - this also shuts down the container.
 Or alternatively go to File -> shutdown in the JupyterLab tab.
@@ -336,7 +359,7 @@ opensafely run job_name -m 8G
 Over time, some left over Docker containers and volumes can build up, and take
 up space.
 
-You can use the `clean` command in order to safely purge any such left over artifacts:
+You can use the `clean` command in order to safely purge any such left over artefacts:
 
 `opensafely clean`
 
