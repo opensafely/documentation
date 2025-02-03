@@ -1,7 +1,19 @@
 ## Adding a codelist
 
 Your example research template doesn't include any codelists but the folder structure and text files that are needed to include codelists already exist.
-Take a look at the `codelists/codelists.txt` file in the repo, this file is currently empty but you can add one (or more) lines to this file that specify the codelists that you need for your research project.
+Take a look at the `codelists/codelists.txt` file in the repo, this file is currently empty but any codelists that you add to your project will appear here.
+
+You can add a codelist from [OpenCodelists](https://www.opencodelists.org) to your project by [manually editing](#manually-editing-codelists.txt) the codelists.txt file or by using the `opensafely codelists add` command.
+
+For example, running the following command in your terminal:
+
+```bash
+opensafely codelists add https://www.opencodelists.org/codelist/opensafely/covid-identification/2020-06-03/
+```
+
+will add the [OpenSAFELY COVID Identification](https://www.opencodelists.org/codelist/opensafely/covid-identification) codelist to `codelists.txt` and also download and add `opensafely-covid-identification.csv` to your project.
+
+### Manually editing codelists.txt
 The naming convention of the line that you need to add to the `codelists/codelists.txt` file follows this structure: a `<codelist-id> `is followed by `/` and a `<version-id>`.
 Note that the version ID is a sequence of 8 characters. Some codelists may also have a version tag in the form of a date (YYYY-MM-DD) or a version number (e.g., v1.2) that can be
 used in place of the version ID.
@@ -10,7 +22,7 @@ used in place of the version ID.
 <codelist-id>/<version-id>
 ```
 
-If you want to add a codelist from [OpenCodelists](https://www.opencodelists.org) to your project you can find this information on the page for each of the codelists, see orange boxes in the screenshot below.
+To find this information on the page for each of the codelists on [OpenCodelists](https://www.opencodelists.org), see orange boxes in the screenshot below.
 
 ![Finding the codelist ID and version ID on OpenCodelists.](images/adding-codelist-id-version.png)
 
