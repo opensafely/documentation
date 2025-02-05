@@ -196,11 +196,11 @@ This can be useful if you want to explore the image manually.
 
 ### `launch` - Run web based interactive tools
 
-Many users may prefer to use some of the interactive development environments that are commonly used for different languages, like Rstudio or Jupyter Lab.
+Many users may prefer to use some of the interactive development environments that are commonly used for different languages, like RStudio or JupyterLab.
 
-Using `opensafely launch`, you can run these tools from the OpenSAFELY images, accessing them via your browser. This means that code you write and run in these tools will be running the OpenSAFELY provided environment, with the right dependencies and versions, rather than what ever you have installed on your machine.
+Using `opensafely launch`, you can run these tools from the OpenSAFELY images, accessing them via your browser. This means that code you write and run in these tools will be running the OpenSAFELY-provided environment, with the right dependencies and versions, rather than whatever you have installed on your own machine.
 
-The supported tools of Rstudio and Jupyter Lab are documented below, but they share a common set of options, which you can see with
+The supported tools of RStudio and JupyterLab are documented below, but they share a common set of options, which you can see with
 
 ```
 opensafely launch --help
@@ -209,8 +209,8 @@ opensafely launch --help
 
 #### `opensafely launch rstudio` - Running RStudio Server
 
-This sub-command provides the RStudio interface to the r image. This lets you run your code in RStudio using the same versions of R and all the packages that are the OpenSAFELY secure backend.
-Note that if you are using a Github [Codespaces](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio), then this is run automatically for you.
+This sub-command provides the RStudio interface to the R image. This lets you run your code in RStudio using the same versions of R and all the packages that are available in the OpenSAFELY secure backend.
+Note that if you are using a Github [Codespace](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio), then this is run automatically for you.
 
 To launch an RStudio Server session please navigate to your research repository and run
 
@@ -232,7 +232,7 @@ If you have an `.Rproj` file at the top level of your repository, the command wi
 
 To end your RStudio Server session press ++ctrl+c++ in the Terminal window in which you ran the `opensafely rstudio` command.
 
-Note that the `opensafely` CLI is not vendored within the RStudio image. Hence to use CLI commands such as `opensafely run`, please do so from a local Terminal session and not from the Terminal pane in your RStudio Server session. Whereas, the `opensafely` CLI is vendored within the Codespaces version of RStudio Server, and so you can use the RStudio Terminal in this case.
+Note that the `opensafely` CLI is not available within the RStudio image. Hence to use CLI commands such as `opensafely run`, please do so from a local Terminal session and not from the Terminal pane in your RStudio Server session. If you are using a Codespace, the `opensafely` CLI **is** availablle within the RStudio Server session, and so you can use the RStudio Terminal in this case.
 
 Users with Apple Silicon computers need to [enable Rosetta emulation](/install-docker/#macs-with-an-apple-silicon-processor). Since Docker Desktop 4.25.0 this feature has been enabled by default. For Docker Desktop versions between 4.16.0 and 4.24.4 this setting can be found in Settings under the _Features in development_ and then _Beta features_ tab. The `opensafely rstudio` command will not run under either the Docker Virtual Machine Manager virtualization (since Docker Desktop 4.35.0) nor the legacy QEMU virtualization.
 
@@ -263,10 +263,10 @@ copy the long URL shown by the JupyterLab logs — starting
 `http://localhost`… — and use that URL in a web
 browser to access JupyterLab.
 
-By default, it will run Jupyter Lab in the most recent version of the python image, but you can to run an older version with:
+By default, it will run JupyterLab in the most recent version of the python image, but you can to run an older version with:
 
 ```bash
-opensafely launch juypter:v1
+opensafely launch jupyter:v1
 ```
 
 To exit, press ++control+c++ in the command line - this also shuts down the container.
