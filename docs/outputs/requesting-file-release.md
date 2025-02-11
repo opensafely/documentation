@@ -28,18 +28,18 @@ Each data release entails substantial review work. To retain rapid turnaround ti
 
 Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
 
-#### Release of intermediate data
+#### Release of aggregated results to be used to generate final outputs 
 
-In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate to release intermediate data. Below are some suggestions for when this is appropriate:
+In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate or even preferable to release data that is subsequently used to generate other outputs (e.g. graphs). As with all requested outputs, these must have appropriate disclosure controls applied. Below are some examples for when this is appropriate:
 
-* You think you may need to make minor edits to final outputs such as changing figure labels. Release of the intermediate data allows you to make these [changes locally](viewing-released-files.md#running-further-analyses-on-released-outputs).
-* A large number of outputs are produced from a single intermediate output. Release of the intermediate data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
-*  The intermediate data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
+* You think you may need to make minor edits to final outputs such as changing figure labels. You may request release of data that allows you to [generate final outputs (graphs etc) and make changes locally](viewing-released-files.md#running-further-analyses-on-released-outputs).
+* A large number of outputs are produced from a single output. Release of the data underlying the figures (which needs to be checked whether it is released or not) avoids the need to check the downstream outputs.
+*  The data doesn't contain person-level data, but is used for running a model that would produce multiple outputs.
 
-If requesting release of intermediate data there are a few considerations:
+If requesting release of such data there are a few considerations:
 
 *  We recommend that you continue to develop downstream analysis actions within the OpenSAFELY pipeline, even if they are not intended to be run on the server. This helps maintain reproducibility.
-* Intermediate results can contain much more data than outputs produced at the end of the analysis pipeline. The data contained within these outputs should be the minimum amount required to produce the downstream outputs or receive feedback from project collaborators.
+* Such non-final results have the potential to contain much more data than outputs produced at the end of the analysis pipeline. The data contained within these outputs should be the minimum amount required to produce the downstream outputs or receive feedback from project collaborators.
 
 ### Context and Controls
 
