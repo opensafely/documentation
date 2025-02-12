@@ -174,3 +174,26 @@ body {
 .md-sidebar {
   padding: 0;
 }
+
+.footer-nav-buttons {
+  border-top: 1px solid var(--colorLightGrey);
+
+  .md-footer__link {
+    color: var(--colorLink);
+    font-weight: 600;
+    text-decoration-color: var(--colorLinkHeader);
+    text-underline-offset: 2px;
+
+    .md-footer__title {
+      font-size: 0.8rem;
+    }
+
+    .md-footer__direction {
+      opacity: 0.9;
+    }
+
+    .md-ellipsis {
+      text-decoration: underline;
+    }
+  }
+}
