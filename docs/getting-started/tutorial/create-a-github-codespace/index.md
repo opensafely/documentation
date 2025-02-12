@@ -69,8 +69,3 @@ available commands:
     pull      Command for updating the docker images used to run OpenSAFELY studies locally
     upgrade   Upgrade the opensafely cli tool.
 ```
-
----
-
-* Previous: [Create a GitHub repository](../create-a-github-repository/index.md)
-* Next: [Generate a first dataset](../generate-a-first-dataset/index.md)

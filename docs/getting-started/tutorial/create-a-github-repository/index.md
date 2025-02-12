@@ -17,8 +17,3 @@ account and use it to develop your own study:
    repository.
 
    If you see `${GITHUB_REPOSITORY_NAME}` in your README, the repo is not yet initialised; wait a few seconds longer and reload.
-
----
-
-* Previous: [Create a GitHub account](../create-a-github-account/index.md)
-* Next: [Create a GitHub codespace](../create-a-github-codespace/index.md)
