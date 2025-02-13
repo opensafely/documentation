@@ -56,7 +56,15 @@ function moveNavButtons() {
 }
 
 /** @type {string[]} */
-const buttonPaths = ["/getting-started/tutorial/", "/ehrql/tutorial/"];
+const buttonPaths = [
+  "/ehrql/tutorial/",
+  "/getting-started/tutorial/",
+  "/outputs/output-checking/",
+  "/outputs/releasing-overview/",
+  "/outputs/requesting-file-release/",
+  "/outputs/sdc/",
+  "/outputs/viewing-released-files/",
+];
 /** @type {string} */
 const docPath = window.location.pathname;
 
