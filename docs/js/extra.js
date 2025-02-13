@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * Move the existing footer buttons to the main content section
+ * Move the existing footer buttons to the main content section to make them more visible.
+ * Material MKDocs doesn’t seem to have any options to do this natively.
  * @returns {void}
  */
 function moveNavButtons() {
