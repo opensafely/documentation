@@ -8,7 +8,7 @@ Visit your repository on GitHub's site. Click on the **Actions** tab
 ![The GitHub Actions tab in a repository.](../../../images/getting-started-github-actions-tab.png)
 
 You'll see a *Workflow* running with the *commit message* of your last
-commit. The workflow verifies that the command `opensafely run run_all` can
-run successfully. If it's yellow, it's still running. If it's red, it
-has failed. If it's green, it has succeeded. You want it to be green!
+commit. The workflow verifies that all of the actions in your project pipeline can run.
+
+If the action icon is green (as shown below), it's succeeded. If it's yellow, it's still running. If it's red, it has failed. You want it to be green!
 ![The GitHub Actions tab showing a successful workflow.](../../../images/getting-started-github-actions-workflow-success.png)

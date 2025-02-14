@@ -23,7 +23,7 @@ open the `project.yaml` file by clicking on it. This file will be near the end o
 
 You should see a tab with the following content:
 
-```yaml linenums="1" hl_lines="9"
+```yaml linenums="1" hl_lines="5"
 version: "4.0"
 
 actions:
@@ -48,7 +48,7 @@ stored in the `output` folder.
 <ol>
   <li>
    In the Visual Studio Code file Explorer,
-   confirm that the `output` folder is empty.
+   confirm that the <code>output</code> folder only contains a <code>.gitkeep</code> file.
   </li>
 
   <li>
@@ -59,7 +59,7 @@ stored in the `output` folder.
    opensafely run generate_dataset
    ```
 
-   and press ++enter++ to run the pipeline action.
+   and press ++enter++ on your keyboard to run the pipeline action.
 
    You should see output that ends something like the following:
 
@@ -79,14 +79,14 @@ stored in the `output` folder.
    ```
 
    The final line tells you a file of (randomly-generated) patient data has been created at
-   `output/dataset.csv.gz`, and that it should be considered highly sensitive
+   <code>output/dataset.csv.gz</code>, and that it should be considered highly sensitive
    data. What you see here is exactly the same process that would happen on a real, secure
    server.
   </li>
 
   <li>
-   When the command completes, recheck the `output` folder
-   and see that it contains a `dataset.csv.gz` file.
+   When the command completes, recheck the <code>output</code> folder
+   and see that it contains a <code>dataset.csv.gz</code> file.
    </li>
 </ol>
 
@@ -95,8 +95,11 @@ stored in the `output` folder.
 This `.csv.gz` file is a compressed CSV file that contains a small amount of *dummy data* (patient ID and sex)
 based on the dataset definition at `analysis/dataset_definition.py`.
 
-To view it, first run `opensafely unzip output`, then open that
-file (by left-clicking the filename in Visual Studio Code's Explorer, or
+To view it, first run:
+```
+opensafely unzip output
+```
+then open that file (by left-clicking the filename in Visual Studio Code's Explorer, or
 software like Excel). You'll see that it contains rows for ten
 randomly-generated dummy patients.
 
