@@ -111,8 +111,3 @@ The difference between them is that:
 * `opensafely run` runs actions *inside* the project pipeline -
   that is, just as they would be in the secure OpenSAFELY environment
   containing real patient data
-
----
-
-* Previous: [Update the dataset definition](../update-the-dataset-definition/index.md)
-* Next: [Add a scripted action to the pipeline](../add-a-scripted-action-to-the-pipeline/index.md)

@@ -39,8 +39,3 @@ to the age of each patient on the given date*".
    ```
 
    and press ++enter++, you will see a new randomly generated dataset which now contains the additional `age` column.
-
----
-
-* Previous: [Generate a first dataset](../generate-a-first-dataset/index.md)
-* Next: [Run the project pipeline](../run-the-project-pipeline/index.md)

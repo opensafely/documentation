@@ -37,3 +37,39 @@ function patchCopyCodeButtons() {
 document.addEventListener("DOMContentLoaded", () => {
   patchCopyCodeButtons();
 });
+
+/**
+ * Move the existing footer buttons to the main content section to make them more visible.
+ * Material MKDocs doesn’t seem to have any options to do this natively.
+ * @returns {void}
+ */
+function moveNavButtons() {
+  /** @type {HTMLDivElement} */
+  const contentArea = document.querySelector(`[data-md-component="content"]`);
+  /** @type {HTMLElement} */
+  const footerNav = document.querySelector(`[aria-label="Footer"]`);
+  /** @type {HTMLElement} */
+  const footClone = footerNav.cloneNode(true);
+  footClone.classList.add("footer-nav-buttons");
+  contentArea.appendChild(footClone);
+  footerNav.setAttribute("hidden", "true");
+}
+
+/** @type {string[]} */
+const buttonPaths = [
+  "/ehrql/tutorial/",
+  "/getting-started/tutorial/",
+  "/outputs/output-checking/",
+  "/outputs/releasing-overview/",
+  "/outputs/requesting-file-release/",
+  "/outputs/sdc/",
+  "/outputs/viewing-released-files/",
+];
+/** @type {string} */
+const docPath = window.location.pathname;
+
+for (const path of buttonPaths) {
+  if (docPath.startsWith(path)) {
+    moveNavButtons();
+  }
+}
