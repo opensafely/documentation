@@ -66,7 +66,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "Python"
 
-    ```yaml linenums="1" hl_lines="14 15 16 17 18 19"
+    ```yaml linenums="1" hl_lines="10 11 12 13 14 15"
     version: "4.0"
 
     actions:
@@ -86,7 +86,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 
 === "R"
 
-    ```yaml linenums="1" hl_lines="14 15 16 17 18 19"
+    ```yaml linenums="1" hl_lines="10 11 12 13 14 15"
     version: "4.0"
 
     actions:
@@ -104,24 +104,28 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             chart: output/report.png
     ```
 
-- **Line 14** tells the system we want to create a new action called `generate_report`.
-- **Line 15** says how to run the script (using the `python` or `R` runner).
-- **Line 16** tells the system that this action depends on the outputs of the
+- **Line 10** tells the system we want to create a new action called `generate_report`.
+- **Line 11** says how to run the script (using the `python` or `R` runner).
+- **Line 12** tells the system that this action depends on the outputs of the
   `generate_dataset` being present.
-- **Lines 17-19** describe the files that the action creates. Line 18 says that the
+- **Lines 13-15** describe the files that the action creates. Line 14 says that the
   items indented below it are *moderately* sensitive, which means they may be released
-  to the public after a careful review (and possible redaction). Line 19 says that
+  to the public after a careful review (and possible redaction). Line 15 says that
   there's one output file, which will be found at `output/report.png`.
 
+   In the Visual Studio Code Terminal, type:
 
-At the command line, type `opensafely run generate_report` and press
-++enter++. This should end by telling you a file containing the histogram has been created.
+   ```
+   opensafely run generate_report
+   ```
+and press ++enter++. This should end by telling you a file containing the histogram has been created.
 Open the `output` folder — you can do this via Visual Studio Code's Explorer — and check that it contains `report.png`.
 
 Double click on `report.png` to display the image,
 or right-click on `report.png` and select Download to download the image.
 
 !!! warning
-    Changes you make to files are automatically saved on GitHub. However, changes will not persist
-    outside of the GitHub codespace unless you *commit* and *push* them to GitHub, as described
-    in the next section.
+    Changes will not persist outside of the GitHub codespace
+    unless you *commit* and *push* them to GitHub, as described in the
+    next section.
+
