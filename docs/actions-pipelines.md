@@ -168,16 +168,6 @@ To run code for real in the production environment, use the [jobs site](jobs-sit
 
 After your project has been executed via the [jobs site](jobs-site.md), its outputs will be stored on a secure server.
 
-Users with permission to access Level 4 can view output files that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
-
-For security reasons, they will be in a different directory than if you had run locally. For the TPP backend, outputs labelled `moderately_sensitive` in the `project.yaml` will be saved in `D:/Level4Files/workspaces/<NAME_OF_YOUR_WORKSPACE>`. These outputs can be [reviewed on the server](jobs-site.md#viewing-analysis-outputs-on-the-server) and [released if they are deemed non-disclosive](outputs/output-checking.md).
+Users with permission to access Level 4 can view output files using [Airlock](outputs/viewing-with-airlock.md). Users can view outputs that are labelled as _moderately sensitive_; they can also view automatically created log files of the run for debugging purposes.
 
 Outputs labelled `highly_sensitive` are not visible.
-
-#### If you have Level 3 access
-
-No data should ever be published from the Level 3 server. Access is only for permitted users, for the purpose of debugging problems in the secure environment.
-
-Highly sensitive outputs can be seen in `E:/high_privacy/workspaces/<WORKSPACE_NAME>`. This includes a directory called `metadata`, containing log files for each action e.g. `generate_dataset.log`, `run_model.log`.
-
-Moderately sensitive outputs can be seen in `E:/FILESFORL4/workspaces/<WORKSPACE_NAME>`.
