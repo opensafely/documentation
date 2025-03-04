@@ -38,7 +38,7 @@ actions:
         dataset: output/dataset.csv.gz
 
   run_model:
-    run: stata-mp:latest analysis/model.do
+    run: stata-mp:v1 analysis/model.do
     needs: [generate_dataset]
     outputs:
       moderately_sensitive:

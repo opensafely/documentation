@@ -21,7 +21,7 @@ Reports that are hosted on the reports site have to be in the `html` file format
 
 Jupyter notebooks provide an interactive environment for developing code which allows you to incorporate contextual text with code blocks. OpenSAFELY Reports is designed to work with Jupyter notebooks. It has automatic styling for the standard markup that Jupyter produces.
 
-You can refer to [our instructions on running a Jupyter environment in OpenSAFELY](../opensafely-cli.md#jupyter-running-jupyterlab).
+You can refer to [our instructions on running a Jupyter environment in OpenSAFELY](../opensafely-cli.md#opensafely-launch-jupyter-running-jupyterlab).
 
 These guidelines for writing notebooks makes them consistent with the best practices in the section above.
 
@@ -142,7 +142,7 @@ The value is `r value`.
 In OpenSAFELY, you can convert an R markdown file to html file by including the following run command in an action.
 
 ```
-run: r:latest -e 'rmarkdown::render("path_to_report", output_dir = "/workspace/output/",knit_root_dir = "/workspace",)'
+run: r:v1 -e 'rmarkdown::render("path_to_report", output_dir = "/workspace/output/",knit_root_dir = "/workspace",)'
 ```
 
 ## Next step

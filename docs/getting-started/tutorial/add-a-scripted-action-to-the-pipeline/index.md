@@ -97,7 +97,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             dataset: output/dataset.csv.gz
 
       generate_report:
-        run: r:latest analysis/report.R
+        run: r:v1 analysis/report.R
         needs: [generate_dataset]
         outputs:
           moderately_sensitive:
@@ -128,4 +128,3 @@ or right-click on `report.png` and select Download to download the image.
     Changes will not persist outside of the GitHub codespace
     unless you *commit* and *push* them to GitHub, as described in the
     next section.
-
