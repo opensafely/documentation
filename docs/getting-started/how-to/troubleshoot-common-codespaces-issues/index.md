@@ -78,15 +78,21 @@ We have not tested this extension and therefore cannot vouch for its functionali
 
 ## My code runs fine in the codespace's local environment but not as an OpenSAFELY action (or vice versa)
 
-Your codespace comes pre-installed with all the packages from the most recent OpenSAFELY R and Python action images.
+Your codespace comes pre-installed with all the packages from the [`r:v1`](../../../actions-scripts.md#r) and [`python:v2`](../../../actions-scripts.md#python) action images.
+
 These action images are the environment in which your code is executed via the [`opensafely`](../../../opensafely-cli.md) command.
 
-For [R](../../../actions-scripts.md#r) actions, we currently only maintain one version of the R action image (`r:v1`) and so we expect the behaviour of R scripts to be the same when executed via the OpenSAFELY R action image or via RStudio (or `R` on the command line).
+For actions that use these image versions in their `run: ` stanza in project.yaml, we expect the behaviour of your R or python scripts to be the same when executed via `opensafely run` or directly in codespace environment (or in the provided RStudio environment for R).
 
-In the case of [Python](../../../actions-scripts.md#python), the most recent action image version is `python:v2` at the time of writing.
-If you have actions defined in your [project pipeline file](../../../actions-pipelines.md#projectyaml-format) that reference images called `python:v1` or `jupyter:v1` (or — due to an _unfortunate_ historical naming convention —  `python:latest` or `jupyter:latest`), then the behaviour of your code when run in those images may not be the same as if you run the code directly in the codespace. This is because the installed packages and versions of Python available differ between these environments.
+If you have actions defined in your [project pipeline file](../../../actions-pipelines.md#projectyaml-format) that reference older images like `python:v1` or `jupyter:v1` (or — due to an _unfortunate_ historical naming convention —  `python:latest` or `jupyter:latest`),
+or the newer `r:v2` image, then the behaviour of your code when run in those images may not be the same as if you run the code directly in the codespace. This is because the installed packages and versions of Python or R that are available differ between these environments.
 
 If this is the case for your project, your options are:
 
-* Update your project pipeline file to reference the most recent action images and make any neccesary changes to your code
+For older images like `python:v1` or `jupyter:v1`:
+* Update your project pipeline file to reference the most recent action images and make any neccesary changes to your code (recommended)
 * Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec-interactive-development) for interactive development using these action images' environments
+
+For the recently released `r:v2` image, until we have support for its version of R and libraries natively in codespaces, you can:
+* Follow the instructions for [manually running `r:v2` instance of Rstudio in codespaces](#rstudio-with-the-r-v2-image) (recommended)
+* Use the older `r:v1` image in your actions, and the integrated codespaces RStudio.

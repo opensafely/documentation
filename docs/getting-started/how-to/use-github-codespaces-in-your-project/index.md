@@ -144,10 +144,42 @@ The research code repository that you created already has a minimal, working Ope
 
 ## How to access RStudio
 
+### RStudio with the r:v1 image
+
+Our codespace environment includes RStudio based on the [`r:v1` image](../../../actions-scripts.md#r).
+If you are using the `r:v1` image in your project, you can access RSTudio via:
+
 1. In Visual Studio Code,
    select the "Ports" tab
    (next to "Terminal").
 1. Port 8787 should be listed —
-   this is configured by the RStudio server.
+   this is configured by the RStudio v1 server.
 1. Right-click on port 8787 and select "Open in browser".
-1. A new browser tab/window appears with RStudio running.
+1. A new browser tab/window appears with RStudio v1 running.
+
+
+### RStudio with the r:v2 image.
+
+Our codespaces environment does not yet natively support the new `r:v2` image with its builtin RStudio support. We anticpate adding explicit support for `r:v2` to codespaces in the future.
+
+However, you can manually run a version of RStudio that uses the `r:v2` image with the following commend:
+
+```
+opensafely launch rstudio:v2 --background
+```
+
+Note: the first time you run it, it may take a while as it downloads the rstudio:v2 docker image.
+
+This will start an instance of RStudio on port 8788 using the v2 image in your codespace and automatically open a browser window pointing to it.
+You should be able to edit and run your project's `r:v2` code using this instance of RStudio.
+
+You can navigate back to this RStudio instance using VSCode's "Ports" tab:
+1. In Visual Studio Code,
+   select the "Ports" tab
+   (next to "Terminal").
+1. Port 8788 should be listed —
+   this is configured by the RStudio v2 server.
+1. Right-click on port 8788 and select "Open in browser".
+1. A new browser tab/window appears with RStudio v2 running.
+
+However, when you return to your codespace after it has shut down, you will need to manually re-run the above command to start the RStudio v2 instance again, at which point it will open the window again, or you can access it via the Ports tab
