@@ -97,7 +97,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
             dataset: output/dataset.csv.gz
 
       generate_report:
-        run: r:v1 analysis/report.R
+        run: r:v2 analysis/report.R
         needs: [generate_dataset]
         outputs:
           moderately_sensitive:
