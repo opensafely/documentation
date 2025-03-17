@@ -43,47 +43,70 @@ These types of outputs are considered potentially highly-disclosive, should not 
 Pseudonymised patient-level outputs tend to be large in size and therefore it is important that the right files formats are used for these large data files. The wrong formats can waste disk space, execution time, and server memory. The specific formats used vary with language ecosystem, but they should always be compressed.
 
 !!! note
-    The template sets up the `ehrql` command to produce `csv.gz` outputs.
-    This is the current recommended output format, as CSV files compress well,
-    and this reduces both storage requirements and improves job execution times
-    on the backend.
 
-    If you need to view the raw CSV data locally, you can unzip with `opensafely unzip dataset.csv.gz`.
+    The current recommended output format is `arrow` (Apache Arrow format). Arrow is a
+    language-independent columnar memory format which allows for efficient analytic operations
+    and supports compression.
 
+    However, for initial development, arrow formats are not easily inspected, so the template sets up the `ehrql` command to produce `csv.gz` outputs.
+
+    Both `csv.gz` and `arrow` format are compressed, which both reduces storage requirements and improves job execution times on the backend.
+
+    If you need to view raw CSV data locally, you can unzip with `opensafely unzip dataset.csv.gz`.
+
+    You are strongly recommended to use `arrow` format to run your analyses on the real data.
 
 
 === "Python"
 
     ```python
+    import pandas as pd
+    import pyarrow.feather as feather
+
+    # read arrow output from ehrql, decompressed automatically
+    # as a pandas.DataFrame
+    read_df = feather.read_feather("output/dataset.arrow")
+    # as a pyarrow.Table
+    read_arrow = feather.read_table("output/dataset.arrow")
+
     # read compressed CSV output from ehrql
     pd.read_csv("output/dataset.csv.gz")
 
-    # write compressed feather file
-    df.to_feather("output/model.feather", compression="zstd")
-
-    # read feather file, decompressed automatically
-    pd.read_feather("output/dataset.feather")
+    # write compressed arrow file
+    df.to_feather("output/model.arrow", compression="zstd")
     ```
 
 === "R"
 
     ```r
+    # read arrow output from ehrql, decompressed automatically
+    df <- arrow::read_feather("output/dataset.arrow")
+
     # read compressed CSV output from ehrql
     df <- readr::read_csv("output/dataset.csv.gz")
 
     # write a compressed feather file
-    arrow::write_feather(df, "output/model.feather", compression = "zstd")
+    arrow::write_feather(df, "output/model.arrow", compression="zstd")
 
-    # read a feather file, decompressed automatically
-    df <- arrow::read_feather("output/dataset.feather")
     ```
+    !!! warning
+        Be sure to use the `arrow` library and not the `feather` library, which is no
+        longer maintained.
 
 === "Stata"
 
     ```stata
+    // read arrow output from ehrql
+    // stata itself does not directly support .arrow. However, OpenSAFELY's Stata Docker
+    // image contains the arrowload library that can load .arrow files in Stata.
+
+    . arrowload /path/to/arrow/file
+
+    // read compressed CSV output from ehrql
     // stata cannot handle compressed CSV files directly, so unzip first to a plain CSV file
     // the unzipped file will be discarded when the action finishes.
     !gunzip output/dataset.csv.gz
+
     // now import the uncompressed CSV using delimited
     import delimited using output/dataset.csv
 
@@ -94,6 +117,7 @@ Pseudonymised patient-level outputs tend to be large in size and therefore it is
     gzload output/dataset.dta.gz
 
     ```
+
 
 ### Smaller `moderately_sensitive` output files
 
