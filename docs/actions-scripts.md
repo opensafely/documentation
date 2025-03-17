@@ -137,7 +137,7 @@ These are restricted to types of file that are likely to contain summary data, r
 | Text |  `.txt`, `.log`, `.md` |
 | Data | `.csv`, `.json` |
 | Images | `.png`, `.jpeg`, `.svgz` |
-| Reports | `.html`, `.pdf` |
+| Reports | `.html`|
 
 **File size**
 
