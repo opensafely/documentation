@@ -161,7 +161,16 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 
 ### Stata
 
-We currently package version 16.1, with `datacheck`, `safetab`, and `safecount` libraries installed; when installed, new libraries will appear [in the stata-docker GitHub repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
+We currently package version 16.1, with the following libraies installed:
+
+  * `datacheck`
+  * `safetab`
+  * `safecount`
+  * `itsa`
+  * `arrowload`
+  * `gzsave`
+
+When installed, new libraries will appear [in the stata-docker GitHub repository](https://github.com/opensafely-core/stata-docker/tree/master/libraries).
 
 !!! note
     Stata can only produce very limited image formats on Linux, only eps, tiff,
