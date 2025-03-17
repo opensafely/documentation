@@ -26,8 +26,9 @@ This helps with:
 ## Reading and Writing Outputs
 
 Scripted actions can read and write output files that are saved in the workspace. These generally fall into two categories:
-* large pseudonymised patient-level files of `highly_sensitive` data for use by other actions
-* smaller `moderately_sensitive` aggregated patient-data (this should **never** be patient-level data) files for review and release
+
+  * large pseudonymised patient-level files of `highly_sensitive` data for use by other actions
+  * smaller `moderately_sensitive` aggregated patient-data (this should **never** be patient-level data) files for review and release
 
 
 ### Large `highly_sensitive` output files
