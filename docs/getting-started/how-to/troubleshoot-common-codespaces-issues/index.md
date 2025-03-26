@@ -50,7 +50,7 @@ Once you have done this, you may need to select "Set As Working Directory" from 
 You are free to install any VS Code extensions and change any settings you wish within your Codespaces.
 However, you will find that any changes you make will not be preserved when you start a new Codespace.
 
-If you wish to make changes that will apply whenever anyone opens your project, then consider using a [Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings) file in your project.
+If you wish to make changes that will apply whenever anyone opens your project, then consider using a [Workspace Settings](https://code.visualstudio.com/docs/configure/settings#_workspace-settings) file in your project.
 
 If you wish your settings and extensions to be available anywhere you open VS Code (including in Codespaces), then consider using [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync).
 
