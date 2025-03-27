@@ -162,7 +162,7 @@ If you are using the `r:v1` image in your project, you can access RSTudio via:
 
 Our codespaces environment does not yet natively support the new `r:v2` image with its builtin RStudio support. We anticpate adding explicit support for `r:v2` to codespaces in the future.
 
-However, you can manually run a version of RStudio that uses the `r:v2` image with the following commend:
+However, you can manually run a version of RStudio that uses the `r:v2` image with the following command:
 
 ```
 opensafely launch rstudio:v2 --background
@@ -182,4 +182,4 @@ You can navigate back to this RStudio instance using VSCode's "Ports" tab:
 1. Right-click on port 8788 and select "Open in browser".
 1. A new browser tab/window appears with RStudio v2 running.
 
-However, when you return to your codespace after it has shut down, you will need to manually re-run the above command to start the RStudio v2 instance again, at which point it will open the window again, or you can access it via the Ports tab
+When you return to your codespace after it has shut down, you will need to manually re-run the above command to start the RStudio v2 instance again.
