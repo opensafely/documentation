@@ -90,9 +90,11 @@ or the newer `r:v2` image, then the behaviour of your code when run in those ima
 If this is the case for your project, your options are:
 
 For older images like `python:v1` or `jupyter:v1`:
+
 * Update your project pipeline file to reference the most recent action images and make any neccesary changes to your code (recommended)
 * Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec-interactive-development) for interactive development using these action images' environments
 
 For the recently released `r:v2` image, until we have support for its version of R and libraries natively in codespaces, you can:
+
 * Follow the instructions for [manually running `r:v2` instance of Rstudio in codespaces](#rstudio-with-the-r-v2-image) (recommended)
 * Use the older `r:v1` image in your actions, and the integrated codespaces RStudio.

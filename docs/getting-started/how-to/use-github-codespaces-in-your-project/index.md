@@ -174,6 +174,7 @@ This will start an instance of RStudio on port 8788 using the v2 image in your c
 You should be able to edit and run your project's `r:v2` code using this instance of RStudio.
 
 You can navigate back to this RStudio instance using VSCode's "Ports" tab:
+
 1. In Visual Studio Code,
    select the "Ports" tab
    (next to "Terminal").
