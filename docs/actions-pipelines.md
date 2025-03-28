@@ -159,6 +159,15 @@ You can view the tests, including any errors or failures, by going to the pull r
 
 You can re-run these tests by clicking the `re-run jobs` button.
 
+If your project is too large for `run_all` to complete in a sensible time you can specify just the individual actions you want to run.
+To do this add a `with:` block to the bottom of the file `.github/workflows/test_runner.yaml` like so:
+```yaml
+ - name: Test that the project is runnable
+   uses: opensafely-core/research-action@v2
+   with:
+     actions: test_action_1 test_action_2 test_action_3
+```
+
 
 ## Running your code on the server
 
