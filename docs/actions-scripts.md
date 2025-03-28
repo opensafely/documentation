@@ -212,13 +212,18 @@ The `opensafely` command line software should now automatically use this Stata l
 
 ### Python
 
-There are two versions of the Docker image.
+There are two versions of the python image.  We recommend that you the use the latest verion, `python:v2`, for all python actions in your project.yaml
 
-* `python:v1`, which for historical reasons is the same as `python:latest`, contains Python 3.8.
-  It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v1/packages.md).
 * `python:v2` contains Python 3.10.
   It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v2/packages.md).
+* `python:v1`, which for historical reasons is the same as `python:latest`, contains Python 3.8.
+  It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v1/packages.md).
 
 ### R
 
-The R image provided is R 4.0, with [this list of libraries installed](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md).
+There are two versions of the R image.  We recommend that you the use the latest verion, `r:v2`, for all R actions in your project.yaml
+
+* `r:v2` contains R 4.4.3.
+  It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v2/packages.md)
+* `r:v1`, which for historical reasons is the same as `r:latest`, contains R 4.0.5.
+  It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md).
