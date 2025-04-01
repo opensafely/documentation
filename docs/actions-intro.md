@@ -4,7 +4,7 @@ In OpenSAFELY, each logical unit is called an _action_.  Actions can be scripts,
 
 An OpenSAFELY project must refer to its actions in a [_pipeline_](actions-pipelines.md).  This is a file called `project.yaml` which defines all the actions in a project, how they should be run, and how their outputs should be saved.
 
-* Every pipeline will start with an [_ehrQL_](/ehrql/) action, to generate an analysis-ready dataset of real or dummy data.
+* Every pipeline will start with an [_ehrQL_](ehrql/index.md) action, to generate an analysis-ready dataset of real or dummy data.
 * You can create custom [scripted actions](actions-scripts.md) in a number of other coding languages and choose from (or create your own) [reusable actions](actions-reusable.md).
 
 Dividing your analysis into actions and describing them in a pipeline has a few purposes:

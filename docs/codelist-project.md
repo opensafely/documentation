@@ -3,7 +3,7 @@
 Your example research template doesn't include any codelists but the folder structure and text files that are needed to include codelists already exist.
 Take a look at the `codelists/codelists.txt` file in the repo, this file is currently empty but any codelists that you add to your project will appear here.
 
-You can add a codelist from [OpenCodelists](https://www.opencodelists.org) to your project by [manually editing](#manually-editing-codelists.txt) the codelists.txt file or by using the `opensafely codelists add` command.
+You can add a codelist from [OpenCodelists](https://www.opencodelists.org) to your project by [manually editing](#manually-editing-codeliststxt) the codelists.txt file or by using the `opensafely codelists add` command.
 
 For example, running the following command in your terminal:
 

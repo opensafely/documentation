@@ -4,7 +4,7 @@ Installing packages via commands that pull the package from the internet (e.g `i
 **Before requesting a new package, please first check whether or not the package has already been installed!** See below for how to do this for specific languages.
 
 To make a request, please open an issue against the relevant GitHub repository (see below for details)
-and let [tech-support](/how-to-get-help#slack) know.
+and let [tech-support](how-to-get-help.md#slack) know.
 
 ## R packages
 

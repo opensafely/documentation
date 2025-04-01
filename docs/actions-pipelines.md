@@ -5,7 +5,7 @@ This section covers how to develop, run, and test your code to ensure it will wo
 
 ## Project pipelines
 
-The [ehrQL](/ehrql/how-to/dummy-data) documentation describes how to make an action which generate dummy datasets based on the instructions defined in your `dataset_definition.py` script.
+The [ehrQL](ehrql/how-to/dummy-data.md) documentation describes how to make an action which generate dummy datasets based on the instructions defined in your `dataset_definition.py` script.
 These dummy datasets are the basis for developing the analysis code that will eventually be passed to the server to run on real datasets.
 The code can be written and run on your local machine using whatever development set up you prefer (e.g., developing R in RStudio).
 However, it's important to ensure that this code will run successfully in OpenSAFELY's secure environment too, using the specific language and package versions that are installed there. To do this, you should use the project pipeline.
@@ -61,7 +61,7 @@ In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
 * Each action must include a `run` key which includes an officially-supported command and a version (which at present is usually just `latest`).
-    * The `ehrql` command has the same options as described in the [ehrQL reference](/ehrql/reference/cli/#generate-dataset).
+    * The `ehrql` command has the same options as described in the [ehrQL reference](ehrql/reference/cli.md#generate-dataset).
     * The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment that can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`
     * `highly_sensitive` outputs are considered potentially highly-disclosive, and are never intended for publishing outside the secure environment. This includes all data at the pseudonymised patient-level. Outputs labelled highly_sensitive will not be visible to researchers.
@@ -112,7 +112,7 @@ To run the first action in the example above, using dummy data, you can use:
 opensafely run generate_dataset
 ```
 
-This will generate the `dataset.csv.gz` file as explained in the [ehrQL](/ehrql/) documentation.
+This will generate the `dataset.csv.gz` file as explained in the [ehrQL](ehrql/index.md) documentation.
 
 To run the second action you can use:
 

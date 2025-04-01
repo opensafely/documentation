@@ -39,7 +39,7 @@ The `config` property, which is optional, describes configuration options.
 
 !!! note
     If you're thinking about developing a reusable action, then start by creating a new study within the [`opensafely`](https://github.com/opensafely) organisation that encapsulates the problem.
-    As a minimum, the study should [extract](/ehrql/) and operate on a dataset:
+    As a minimum, the study should [extract](ehrql/index.md) and operate on a dataset:
     indeed, the code that operates on the dataset *is* the reusable action.
 
     At this point, you should [open an issue](https://github.com/opensafely-actions/.github/issues).

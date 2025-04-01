@@ -1,5 +1,5 @@
 This section provides contextual information on the core primary care EHR systems inside which OpenSAFELY is built (currently TPP and EMIS), as well as all external datasets imported to the secure EHR environment.
-To learn about querying the data, refer to the [documentation on ehrQL](/ehrql/).
+To learn about querying the data, refer to the [documentation on ehrQL](../ehrql/index.md).
 
 View information on [available datasets](index.md).
 
