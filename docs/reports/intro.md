@@ -142,7 +142,7 @@ The value is `r value`.
 In OpenSAFELY, you can convert an R markdown file to html file by including the following run command in an action.
 
 ```
-run: r:v1 -e 'rmarkdown::render("path_to_report", output_dir = "/workspace/output/",knit_root_dir = "/workspace",)'
+run: r:v2 -e 'rmarkdown::render("path_to_report", output_dir = "/workspace/output/",knit_root_dir = "/workspace",)'
 ```
 
 ## Next step
