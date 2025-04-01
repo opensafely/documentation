@@ -28,7 +28,7 @@ Each data release entails substantial review work. To retain rapid turnaround ti
 
 Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
 
-#### Release of aggregated results to be used to generate final outputs 
+#### Release of aggregated results to be used to generate final outputs
 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate or even preferable to release data that is subsequently used to generate other outputs (e.g. graphs). As with all requested outputs, these must have appropriate disclosure controls applied. Below are some examples for when this is appropriate:
 
