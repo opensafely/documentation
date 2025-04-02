@@ -8,7 +8,7 @@ These outputs can be shared with project collaborators and published in line wit
 
 ### Running further analyses on released outputs
 
-If you have had [intermediate data released](requesting-file-release.md#release-of-intermediate-data) and you wish to run further analyses on them, such as reformatting figures, there are a few things to consider.
+If you have had [aggregated results released](requesting-file-release.md#release-of-aggregated-results-to-be-used-to-generate-final-outputs) and you wish to run further analyses on them, such as reformatting figures, there are a few things to consider.
 
 1. You should include the code for these steps in your GitHub repo.
 2. You **should not** commit any of the released outputs (including final processed charts/tables) to your GitHub repo. Make sure to include them in the `.gitignore` file.

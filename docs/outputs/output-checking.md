@@ -10,7 +10,7 @@ the output checkers require changes or have questions about the requested files,
 will return the release request to you. You will receive an email notification when this happens.
 
 For further information on how to submit and respond to returned requests, please see the
-documentation on [releasing with Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock).
+documentation on [releasing with Airlock](../using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md).
 
 ### Most common problems with output review requests
 

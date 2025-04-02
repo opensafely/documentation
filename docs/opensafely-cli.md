@@ -210,7 +210,7 @@ opensafely launch --help
 #### `opensafely launch rstudio` - Running RStudio Server
 
 This sub-command provides the RStudio interface to the R image. This lets you run your code in RStudio using the same versions of R and all the packages that are available in the OpenSAFELY secure backend.
-Note that if you are using a Github [Codespace](/getting-started/how-to/use-github-codespaces-in-your-project/#how-to-access-rstudio), then this is run automatically for you.
+Note that if you are using a Github [Codespace](getting-started/how-to/use-github-codespaces-in-your-project/index.md#how-to-access-rstudio), then this is run automatically for you.
 
 To launch an RStudio Server session please navigate to your research repository and run
 
@@ -234,7 +234,7 @@ To end your RStudio Server session press ++ctrl+c++ in the Terminal window in wh
 
 Note that the `opensafely` CLI is not available within the RStudio image. Hence to use CLI commands such as `opensafely run`, please do so from a local Terminal session and not from the Terminal pane in your RStudio Server session. If you are using a Codespace, the `opensafely` CLI **is** availablle within the RStudio Server session, and so you can use the RStudio Terminal in this case.
 
-Users with Apple Silicon computers need to [enable Rosetta emulation](/install-docker/#macs-with-an-apple-silicon-processor). Since Docker Desktop 4.25.0 this feature has been enabled by default. For Docker Desktop versions between 4.16.0 and 4.24.4 this setting can be found in Settings under the _Features in development_ and then _Beta features_ tab. The `opensafely rstudio` command will not run under either the Docker Virtual Machine Manager virtualization (since Docker Desktop 4.35.0) nor the legacy QEMU virtualization.
+Users with Apple Silicon computers need to [enable Rosetta emulation](install-docker.md#macs-with-an-apple-silicon-processor). Since Docker Desktop 4.25.0 this feature has been enabled by default. For Docker Desktop versions between 4.16.0 and 4.24.4 this setting can be found in Settings under the _Features in development_ and then _Beta features_ tab. The `opensafely rstudio` command will not run under either the Docker Virtual Machine Manager virtualization (since Docker Desktop 4.35.0) nor the legacy QEMU virtualization.
 
 Users with Windows computers will notice that after opening a repository in RStudio project mode that their _.Rproj_ file will have had its line endings changed (from CRLF to LF). This is because RStudio always rewrites _.Rproj_ files on opening a project. You can simply discard these changes, for example, in GitHub Desktop by right clicking and selecting _Discard Changes_. Alternatively, this can be overcome by re-saving your _.Rproj_ file with LF line endings, then adding a special case, as shown below, to your _.gitattributes_ file to tell Git to always save this file with LF line endings (this setting needs to placed on a line after the `* text=auto` line). Make sure to commit this addition to your _.gitattributes_ file into your repository.
 

@@ -36,7 +36,7 @@ graph TD
 
 Once outputs have been produced by running _jobs_ from within a _Workspace_, there are several stages they must go through before being made publicly available:
 
-1. **Outputs on the [Level 4 server](level-4-server.md)**. These are aggregated patient-data (non patient-level data) outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable (via [Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock)) when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](outputs/output-checking.md) before they can leave the server.
+1. **Outputs on the [Level 4 server](level-4-server.md)**. These are aggregated patient-data (non patient-level data) outputs marked as `moderately_sensitive` in the `project.yaml` file and are only viewable (via [Airlock](using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md)) when logged into the Level 4 server. These outputs have to be [reviewed by our output checking team](outputs/output-checking.md) before they can leave the server.
 2. **Released outputs**. These are analysis outputs that have been reviewed for any [disclosivity issues](outputs/sdc.md#primary-vs-secondary-disclosure) and released from the Level 4 server by the output checking team to the relevant _Workspace_ on the Jobs site. These are only viewable if you have the correct permissions for the _Project_ the _Workspace_ belongs to.
 3. **Draft public outputs**. Released outputs can only be shared with close collaborators of your projects ([refer to the examples of who this could include](https://www.opensafely.org/policies-for-researchers/#all-datasets-sharing)). To be shared more widely, they have to first be approved by NHS England. Once approved, and if you have the correct jobs site permissions, you can create draft public outputs for approval.
 4. **Published outputs**. Once approved, draft public outputs are made publicly available to view by anyone through the _Workspace_ they belong to.
@@ -118,7 +118,7 @@ What happens:
 6. The temporary directory is deleted.
 </details>
 
-Each job will either succeed or fail. In either case, the output and log files are only visible [via Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock) in the secure environment to avoid disclosure of potentially sensitive information.
+Each job will either succeed or fail. In either case, the output and log files are only visible [via Airlock](using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md) in the secure environment to avoid disclosure of potentially sensitive information.
 
 ## Viewing analysis outputs on the server
 
@@ -126,7 +126,7 @@ You can view `moderately_sensitive` outputs from any of your submitted _jobs_
 via Airlock **if you have access to and are logged into the backend
 the job was run on**.
 
-Refer to the [Airlock documentation](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock) for information on how to access and view
+Refer to the [Airlock documentation](using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md) for information on how to access and view
 outputs via Airlock.
 
 ## Viewing released outputs

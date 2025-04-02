@@ -1,6 +1,6 @@
 !!! note
     This page describes the process used for requesting release of file prior to
-    Airlock. New release requests should be made using [Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock) wherever possible.
+    Airlock. New release requests should be made using [Airlock](../using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md) wherever possible.
 
 
 ### Create a folder for outputs
@@ -9,7 +9,7 @@ First, create one folder in your workspace called `release` (if you have previou
 
 ### Complete a output review request form
 
-When you are ready to request a release of your aggregated results please [complete this form](/documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date.
+When you are ready to request a release of your aggregated results please [complete this form](../documents/OpenSAFELY_Output_Review_Form_ADD_WORKSPACE_NAME_ADD_DATE.docx), renaming the form to replace the placeholders with your workspace name and the date.
 
 #### Context requirements
 

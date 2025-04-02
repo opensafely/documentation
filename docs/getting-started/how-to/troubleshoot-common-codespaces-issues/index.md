@@ -96,5 +96,5 @@ For older images like `python:v1` or `jupyter:v1`:
 
 For the recently released `r:v2` image, until we have support for its version of R and libraries natively in codespaces, you can:
 
-* Follow the instructions for [manually running `r:v2` instance of Rstudio in codespaces](#rstudio-with-the-r-v2-image) (recommended)
+* Follow the instructions for [manually running `r:v2` instance of Rstudio in codespaces](../use-github-codespaces-in-your-project/index.md#rstudio-with-the-rv2-image) (recommended)
 * Use the older `r:v1` image in your actions, and the integrated codespaces RStudio.

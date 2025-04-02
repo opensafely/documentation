@@ -4,7 +4,7 @@
 Having applied disclosure controls to your aggregated study data you are ready to request their release. This page describes the restrictions on files that can be released and the
 information you will need to provide in order to request release. For instructions on how
 to create and submit your release request, please refer to the documentation on [releasing files with
-Airlock](/using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock).
+Airlock](../using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md).
 
 Note: the [previous manual process for requesting release of files](../legacy/requesting-release-offline-process.md) is now deprecated. All release requests should be submitted via Airlock wherever possible.
 
@@ -28,7 +28,7 @@ Each data release entails substantial review work. To retain rapid turnaround ti
 
 Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
 
-#### Release of aggregated results to be used to generate final outputs 
+#### Release of aggregated results to be used to generate final outputs
 
 In general, releases should be for final results from your project (see the note above). However, on some occassions it is appropriate or even preferable to release data that is subsequently used to generate other outputs (e.g. graphs). As with all requested outputs, these must have appropriate disclosure controls applied. Below are some examples for when this is appropriate:
 

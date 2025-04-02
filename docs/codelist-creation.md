@@ -50,7 +50,7 @@ as a group (i.e. at least 2). Detailed reasons are helpful in this issue for ref
    GitHub issue) and sign offs by [editing the codelist metadata](#editing-existing-codelists).
    When ready, click "Publish version" to publish it.
 1. Close the issue on the [codelist-development repo](https://github.com/opensafely/codelist-development).
-1. [Import the codelist](#import-the-codelist-for-use-in-your-study-definition) for use in your study definition.
+1. [Import the codelist](#import-the-codelist-for-use-in-your-dataset-definition) for use in your dataset definition.
 
 ## Create a new issue on the [codelist-development repo](https://github.com/opensafely/codelist-development)
 
