@@ -132,9 +132,9 @@ ghp-import==2.1.0 \
     --hash=sha256:8337dd7b50877f163d4c0289bc1f1c7f127550241988d568c1db512c4324a619 \
     --hash=sha256:9c535c4c61193c2df8871222567d7fd7e5014d835f97dc7b7439069e2413d343
     # via mkdocs
-griffe==1.5.7 \
-    --hash=sha256:465238c86deaf1137761f700fb343edd8ffc846d72f6de43c3c345ccdfbebe92 \
-    --hash=sha256:4af8ec834b64de954d447c7b6672426bb145e71605c74a4e22d510cc79fe7d8b
+griffe==1.7.2 \
+    --hash=sha256:1ed9c2e338a75741fc82083fe5a1bc89cb6142efe126194cc313e34ee6af5423 \
+    --hash=sha256:98d396d803fab3b680c2608f300872fd57019ed82f0672f5b5323a9ad18c540c
     # via mkdocstrings-python
 hjson==3.1.0 \
     --hash=sha256:55af475a27cf83a7969c808399d7bccdec8fb836a07ddbd574587593b9cdcf75 \
@@ -278,9 +278,9 @@ mkdocstrings[python]==0.29.1 \
     # via
     #   -r requirements.prod.in
     #   mkdocstrings-python
-mkdocstrings-python==1.16.2 \
-    --hash=sha256:942ec1a2e0481d28f96f93be3d6e343cab92a21e5baf01c37dd2d7236c4d0bd7 \
-    --hash=sha256:ff7e719404e59ad1a72f1afbe854769984c889b8fa043c160f6c988e1ad9e966
+mkdocstrings-python==1.16.8 \
+    --hash=sha256:211b7aaf776cd45578ecb531e5ad0d3a35a8be9101a6bfa10de38a69af9d8fd8 \
+    --hash=sha256:9453ccae69be103810c1cf6435ce71c8f714ae37fef4d87d16aa92a7c800fe1d
     # via mkdocstrings
 mypy-extensions==1.0.0 \
     --hash=sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d \
