@@ -138,3 +138,9 @@ run: devenv
 # Build the documentation
 build: devenv
     $BIN/mkdocs build
+
+# Count words in generated documentation content (within <article> tags)
+wordcount: build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    find site/ -name '*.html' -exec python scripts/wordcount.py {} + | awk '{sum += $1} END {print "Total words in documentation:", sum}'
