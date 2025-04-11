@@ -3,9 +3,16 @@
 The OpenSAFELY platform was established during the COVID-19 pandemic; the legal basis the platform originally operated under was for the monitoring and control of communicable disease and other risks to public health.
 NHS England policy was that the [Type 1 Opt-Out](https://www.nhs.uk/using-the-nhs/about-the-nhs/opt-out-of-sharing-your-health-records/) was not required to be upheld due to the overriding public interest in responding to the COVID-19 pandemic.
 In June 2023, the [legal basis for the operation of the platform](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/directions-and-data-provision-notices/data-provision-notices-dpns/opensafely-covid-19-service-data-provision-notice) changed to powers that traditionally _do_ uphold a Type 1 Opt-out.
-Therefore, since June 2023, the OpenSAFELY platform has been required to exclude patients with a Type 1 Opt-out from _new_ projects.
+Therefore, since June 2023, the OpenSAFELY platform has been required to exclude patients with a Type 1 Opt-out from all projects, except those explicitly described in our [Data Access Policy](data-access-policy.md) and [Data Protection Impact Assessment](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/directions-and-data-provision-notices/data-provision-notices-dpns/opensafely-covid-19-service-data-provision-notice#further-information).
+
+The policy for determining which patients have an active Type 1 Opt-out is agreed by NHS England. This policy has changed over time. See [here](https://www.opensafely.org/changelog/#2024-08-07) and [here](https://www.opensafely.org/changelog/#2024-10-29) for how that has impacted the data made available via OpenSAFELY.
 
 ## Technical details
+
+### The list of patients with an active Type 1 Opt-Out
+
+The system suppliers provide a list of pseudonymous IDs for patients for whom there is an active Type 1 opt-out. It is populated by the system supplier according to the policy agreed with NHS England. This list is provided and stored in the secure database along with the rest of the patient data. It consists of a single bespoke table, with a single list of pseudonymous IDs and no other information.
+The way this list has been provided has changed over time, to match the changing policy as described [above](#background).
 
 ### How is permission to access Type 1 Opt-Out data determined?
 
@@ -25,10 +32,7 @@ Instead they describe the data they require using [ehrQL](https://docs.opensafel
 At the point where ehrQL needs to fetch the data, it is told (by the system described above) whether it should include data from opted-out patients or not.
 
 Every ehrQL query contains a "population definition" which specifies exactly which criteria a patient must meet to be included in the result e.g. "patients between the ages of 18 and 65 who have not recently changed GP practice".
-Unless a project is named in the project permissions file, ehrQL will automatically add an extra condition to this population definition: the patient's pseudonymous ID number must not appear in the list of ID numbers with a registered type 1 opt-out.
-
-This list is provided by the system suppliers and stored in the secure database along with the rest of the patient data.
-It consists of a single bespoke type 1 opt-out table, with a single list of pseudonymous IDs and no other information.
+Unless a project is named in the project permissions file, ehrQL will automatically add an extra condition to this population definition: the patient's pseudonymous ID number must not appear in the list of ID numbers [provided by the system supplier](#the-list-of-patients-with-an-active-Type-1-Opt-Out).
 
 Again, the [code which enforces this](https://github.com/opensafely-core/ehrql/blob/72f289b0183e4c5dcbd9cbd6fcfa243a76fb9a67/ehrql/backends/tpp.py#L97-L129) is publicly available on Github.
 
@@ -52,7 +56,7 @@ All SQL Runner code run against patient data is also visible on our public “jo
 
 #### 2. Direct access to pseudonymised data
 
-In order to facilitate the operation and maintenance of the OpenSAFELY platform a small number of individuals are able to access the pseudonymised data directly, without going via ehrQL, Cohort Extractor or SQL Runner.
+In order to facilitate the operation and maintenance of the OpenSAFELY platform a small number of individuals are able to access the pseudonymised data directly, without going via ehrQL or SQL Runner.
 It is important to note that the code run in such circumstances will not be publicly visible on our “jobs” server, but it is logged in the database audit file of the GP system suppliers; preventing access to patient data with a type 1 opt-out is not enforceable at this level.
 
 The circumstances under which this is permitted and the rationale are covered in detail in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/) but, importantly, such access is never used for research purposes.
