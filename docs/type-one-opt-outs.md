@@ -11,7 +11,7 @@ The policy for determining which patients have an active Type 1 Opt-out is agree
 
 ### The list of patients with an active Type 1 Opt-Out
 
-The system suppliers provide a list of pseudonymous IDs for patients for whom there is an active Type 1 opt-out. It is populated by the system supplier according to the policy agreed with NHS England. This list is provided and stored in the secure database along with the rest of the patient data. It consists of a single bespoke table, with a single list of pseudonymous IDs and no other information.
+The system suppliers provide a list of pseudonymous IDs for patients for whom there is an active Type 1 Opt-out. It is populated by the system supplier according to the policy agreed with NHS England. This list is provided and stored in the secure database along with the rest of the patient data. It consists of a single bespoke table, with a single list of pseudonymous IDs and no other information.
 The way this list has been provided has changed over time, to match the changing policy as described [above](#background).
 
 ### How is permission to access Type 1 Opt-Out data determined?
@@ -32,7 +32,7 @@ Instead they describe the data they require using [ehrQL](https://docs.opensafel
 At the point where ehrQL needs to fetch the data, it is told (by the system described above) whether it should include data from opted-out patients or not.
 
 Every ehrQL query contains a "population definition" which specifies exactly which criteria a patient must meet to be included in the result e.g. "patients between the ages of 18 and 65 who have not recently changed GP practice".
-Unless a project is named in the project permissions file, ehrQL will automatically add an extra condition to this population definition: the patient's pseudonymous ID number must not appear in the list of ID numbers [provided by the system supplier](#the-list-of-patients-with-an-active-Type-1-Opt-Out).
+Unless a project is named in the project permissions file, ehrQL will automatically add an extra condition to this population definition: the patient's pseudonymous ID number must not appear in the list of ID numbers [provided by the system supplier](#the-list-of-patients-with-an-active-type-1-opt-out).
 
 Again, the [code which enforces this](https://github.com/opensafely-core/ehrql/blob/72f289b0183e4c5dcbd9cbd6fcfa243a76fb9a67/ehrql/backends/tpp.py#L97-L129) is publicly available on Github.
 
