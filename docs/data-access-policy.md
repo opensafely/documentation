@@ -290,4 +290,4 @@ Data development activities may be carried out:
 
 ## Notes
 
-[^1]: A number of projects were permitted to use this data, during the Covid-19 Pandemic. Those legacy projects have been given permission to use that data until their completion. Details of these projects are included within the [Data Protection Impact Assessment](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/directions-and-data-provision-notices/data-provision-notices-dpns/opensafely-covid-19-service-data-provision-notice#further-information).
+[^1]: A number of projects were permitted to use this data, during the Covid-19 Pandemic. Certain legacy projects were given permission to use that data until their completion. Details of these projects are included within the [Data Protection Impact Assessment](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/directions-and-data-provision-notices/data-provision-notices-dpns/opensafely-covid-19-service-data-provision-notice#further-information). These projects all finished processing data by September 2024.
