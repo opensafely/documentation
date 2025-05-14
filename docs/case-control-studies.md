@@ -18,7 +18,7 @@ There are five steps to undertaking a [case-control study](https://en.wikipedia.
 4. Extract data for the matched controls
 5. Analysis
 
-To begin with, our [*project.yaml*](actions-pipelines.md) looks like this:
+To begin with, our [`project.yaml`](actions-pipelines.md) looks like this:
 
 ```yaml
 version: '4.0'
@@ -39,11 +39,11 @@ and the *non-matching data*, or the data we will use for analysis.
 To avoid duplicating code to extract the matching data and the non-matching data in this and the following steps,
 we could use separate Python scripts to [share common study definition variables](legacy/study-def-tricks.md#sharing-common-study-definition-variables).
 
-As we will construct multiple study definitions in this and the following steps, we will name this study definition *study_definition_cases.py*.
+As we will construct multiple study definitions in this and the following steps, we will name this study definition `study_definition_cases.py`.
 When working with [multiple study definitions](legacy/study-def.md#multiple-study-definitions), each study definition's suffix is used to name each corresponding output file.
-Here, the study definition's suffix is *cases*, so the corresponding output file will be named *input_cases.csv.gz*.
+Here, the study definition's suffix is *cases*, so the corresponding output file will be named `input_cases.csv.gz`.
 
-Our *project.yaml* now includes the following action:
+Our `project.yaml` now includes the following action:
 
 ```yaml
 # ...
@@ -59,10 +59,10 @@ actions:
 
 The *potential controls* are the group of patients that are matched to the cases to give the *matched controls*.
 In this step, we will construct a second study definition to extract only the matching data for the potential controls.
-We will name this study definition *study_definition_potential_controls.py*.
+We will name this study definition `study_definition_potential_controls.py`.
 
 
-Our *project.yaml* now includes the following action:
+Our `project.yaml` now includes the following action:
 
 ```yaml
 # ...
@@ -78,12 +78,12 @@ actions:
 ## Match the cases to the potential controls
 
 In this step, we will use the [OpenSAFELY matching library](https://github.com/opensafely-core/matching#readme) in [a scripted action](actions-scripts.md) to match the cases to the potential controls.
-We will name this scripted action *match.py*.
-Whilst the OpenSAFELY matching library can output multiple files, we will use two: *matching_report.txt* and *matched_matches.csv.gz*.
+We will name this scripted action `match.py`.
+Whilst the OpenSAFELY matching library can output multiple files, we will use two: `matching_report.txt` and `matched_matches.csv.gz`.
 The former contains information about the matching process.
 The latter contains the matched controls.
 
-Our *project.yaml* now includes the following action:
+Our `project.yaml` now includes the following action:
 
 ```yaml
 # ...
@@ -112,7 +112,7 @@ actions:
 ## Extract data for the matched controls
 
 In this step, we will construct a third study definition to extract only the non-matching data for the matched controls.
-We will name this study definition *study_definition_controls.py*.
+We will name this study definition `study_definition_controls.py`.
 
 We will use the functions `patients.which_exist_in_file` and `patients.with_value_from_file`.
 We will use `patients.which_exist_in_file` to include only the matched controls in the population:
@@ -151,7 +151,7 @@ study = StudyDefinition(
 )
 ```
 
-Our *project.yaml* now includes the following action:
+Our `project.yaml` now includes the following action:
 
 ```yaml
 # ...
