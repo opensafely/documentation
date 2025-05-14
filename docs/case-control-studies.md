@@ -170,6 +170,38 @@ dataset.has_event_in_codelist = events_in_codelist.where(
 ```
 The above code snippet assumes that the codelist is a list of SNOMED codes, and is located at `codelists/codelist.csv`.
 
+Putting it all together, our `dataset_definition_controls.py` looks like this:
+```python
+import datetime
+
+from ehrql import codelist_from_csv, create_dataset
+from ehrql.query_language import PatientFrame, Series, table_from_file
+from ehrql.tables.core import clinical_events
+
+
+CONTROLS = "output/matched_matches.csv.gz"
+codelist = codelist_from_csv("codelists/codelist.csv")
+
+
+@table_from_file(CONTROLS)
+class matched_patients(PatientFrame):
+    age = Series(int)
+    sex = Series(str)
+    case_index_date = Series(datetime.date)
+
+
+dataset = create_dataset()
+dataset.define_population(matched_patients.exists_for_patient())
+
+
+events_in_codelist = clinical_events.where(
+    clinical_events.snomedct_code.is_in(codelist)
+)
+dataset.has_event_in_codelist = events_in_codelist.where(
+    events_in_codelist.date.is_on_or_after(matched_patients.case_index_date)
+).exists_for_patient()
+```
+
 Our `project.yaml` now includes the following action:
 
 ```yaml
