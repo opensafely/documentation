@@ -61,8 +61,9 @@ actions:
 ## Extract data for the potential controls
 
 The *potential controls* are the group of patients that are matched to the cases to give the *matched controls*.
-In this step, we will construct a second study definition to extract only the matching data for the potential controls.
-We will name this study definition `study_definition_potential_controls.py`.
+In this step, we will construct a second dataset definition to extract only the matching data for the potential controls.
+
+We will name this dataset definition `dataset_definition_potential_controls.py`.
 
 
 Our `project.yaml` now includes the following action:
@@ -72,10 +73,10 @@ Our `project.yaml` now includes the following action:
 actions:
   # ...
   extract_potential_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_potential_controls --output-format csv.gz
+    run: ehrql:v1 generate-dataset analysis/dataset_definition_potential_controls.py --output output/dataset_potential_controls.csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_potential_controls.csv.gz
+        dataset: output/dataset_potential_controls.csv.gz
 ```
 
 ## Match the cases to the potential controls
