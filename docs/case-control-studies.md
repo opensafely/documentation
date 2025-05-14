@@ -116,45 +116,59 @@ actions:
 
 ## Extract data for the matched controls
 
-In this step, we will construct a third study definition to extract only the non-matching data for the matched controls.
-We will name this study definition `study_definition_controls.py`.
+In this step, we will construct a third dataset definition to extract only the non-matching data for the matched controls.
 
-We will use the functions `patients.which_exist_in_file` and `patients.with_value_from_file`.
-We will use `patients.which_exist_in_file` to include only the matched controls in the population:
+We will name this dataset definition `dataset_definition_controls.py`.
 
+We will use the `@table_from_file` feature in ehrQL to make a table called `matched_patients` from the `matched_matches.csv.gz` file.
+When we are done, `matched_patients` would behave as if it were any other
+[`PatientFrame`](../ehrql/reference/language/#PatientFrame)
+in ehrQL.
+
+Suppose `matched_matches.csv.gz` has the following columns: `patient_id`, `age`, `sex` and `case_index_date` -
+i.e. `age` and `sex` were the *matching data* we extracted in the first step.
+We can create `matched_patients` with:
 ```python
-from cohortextractor import StudyDefinition, patients
+import datetime
+
+from ehrql.query_language import PatientFrame, Series, table_from_file
 
 CONTROLS = "output/matched_matches.csv.gz"
 
-study = StudyDefinition(
-    index_date="2021-01-01",  # Ignored
-    population=patients.which_exist_in_file(CONTROLS),
-)
+@table_from_file(CONTROLS)
+class matched_patients(PatientFrame):
+    age = Series(int)
+    sex = Series(str)
+    case_index_date = Series(datetime.date)
 ```
 
-We will use `patients.with_value_from_file` to access the case index dates:
-
+This allows us to only include the matched controls in our dataset.
 ```python
-from cohortextractor import codelist_from_csv, StudyDefinition, patients
+from ehrql import create_dataset
 
-CONTROLS = "output/matched_matches.csv.gz"
+dataset = create_dataset()
+dataset.define_population(
+    matched_patients.exists_for_patient()
+)
+```
+Don't forget to add additional population constraints to the dataset if you require them!
+
+Since the `case_index_date` column in `matched_patients` is now accessible,
+we can use it as the index date for controls (since they by definition don't have an index date).
+For example, we might want to see if our matched controls have had a codelist event on or after their case index date.
+```python
+from ehrql import codelist_from_csv
+from ehrql.tables.core import clinical_events
+
 codelist = codelist_from_csv("codelists/codelist.csv")
-
-study = StudyDefinition(
-    index_date="2021-01-01",  # Ignored
-    population=patients.which_exist_in_file(CONTROLS),
-        case_index_date=patients.with_value_from_file(
-        CONTROLS,
-        returning="case_index_date",
-        returning_type="date",
-    ),
-    has_event_in_codelist=patients.with_these_clinical_events(
-        codelist,
-        on_or_after="case_index_date",
-    ),
+events_in_codelist = clinical_events.where(
+    clinical_events.snomedct_code.is_in(codelist)
 )
+dataset.has_event_in_codelist = events_in_codelist.where(
+    events_in_codelist.date.is_on_or_after(matched_patients.case_index_date)
+).exists_for_patient()
 ```
+The above code snippet assumes that the codelist is a list of SNOMED codes, and is located at `codelists/codelist.csv`.
 
 Our `project.yaml` now includes the following action:
 
@@ -163,11 +177,11 @@ Our `project.yaml` now includes the following action:
 actions:
   # ...
   extract_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls --output-format csv.gz
+    run: ehrql:v1 generate-dataset analysis/dataset_definition_controls.py --output output/dataset_controls.csv.gz
     needs: [matching]
     outputs:
       highly_sensitive:
-        cohort: output/input_controls.csv.gz
+        dataset: output/dataset_controls.csv.gz
 ```
 
 ## Analysis
