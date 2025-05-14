@@ -10,8 +10,8 @@ instead, trusted analysts can run large scale computation across near real-time 
 
 As such, the platform maintains extremely high standards for data privacy whilst ensuring complete computational and analytical transparency.
 
-!!! note "OpenSAFELY is still a relatively new project"
-    OpenSAFELY is under constant development; we suggest you regularly check our [Platform News page](https://www.opensafely.org/changelog/) to learn about significant improvements.
+!!! note "OpenSAFELY is constantly developing and improving"
+    We suggest you regularly check our [Platform News page](https://www.opensafely.org/changelog/) to learn about recent changes.
 
 <div class="youtube-embed">
   <lite-youtube
