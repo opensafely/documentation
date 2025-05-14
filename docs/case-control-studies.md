@@ -83,6 +83,7 @@ actions:
 
 In this step, we will use the [OpenSAFELY matching library](https://github.com/opensafely-core/matching#readme) in [a scripted action](actions-scripts.md) to match the cases to the potential controls.
 We will name this scripted action `match.py`.
+
 Whilst the OpenSAFELY matching library can output multiple files, we will use two: `matching_report.txt` and `matched_matches.csv.gz`.
 The former contains information about the matching process.
 The latter contains the matched controls.
@@ -94,7 +95,7 @@ Our `project.yaml` now includes the following action:
 actions:
   # ...
   matching:
-    run: python:v2 python analysis/match.py
+    run: python:v1 python analysis/match.py
     needs: [extract_cases, extract_potential_controls]
     outputs:
       moderately_sensitive:
