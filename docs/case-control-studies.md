@@ -21,10 +21,7 @@ There are five steps to undertaking a [case-control study](https://en.wikipedia.
 To begin with, our [*project.yaml*](actions-pipelines.md) looks like this:
 
 ```yaml
-version: '3.0'
-
-expectations:
-  population_size: 1000
+version: '4.0'
 
 actions:
   # Extract data for the cases
