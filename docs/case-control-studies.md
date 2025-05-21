@@ -154,7 +154,7 @@ dataset.define_population(
 Don't forget to add additional population constraints to the dataset if you require them!
 
 Since the `case_index_date` column in `matched_patients` is now accessible,
-we can use it to define columns of *non-matching data* in our dataset.
+we can use it as the index date for controls (since they by definition don't have an index date).
 For example, we might want to see if our matched controls have had a codelist event on or after their case index date.
 ```python
 from ehrql import codelist_from_csv
