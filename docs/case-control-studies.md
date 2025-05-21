@@ -39,7 +39,6 @@ and the *non-matching data*, or the data we will use for analysis.
 
 To avoid duplicating code to extract the matching data and the non-matching data in this and the following steps,
 we could use separate Python scripts to share common variables or parametrise the dataset definition.
-Your copilot would be happy to help you with this.
 
 As we will construct multiple dataset definitions in this and the following steps,
 we will name this dataset definition `dataset_definition_cases.py`.
