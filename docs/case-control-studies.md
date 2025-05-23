@@ -44,7 +44,7 @@ As we will construct multiple dataset definitions in this and the following step
 we will name this dataset definition `dataset_definition_cases.py`.
 
 When working with multiple dataset definitions, it is good practice to use the same suffix to name each corresponding output file.
-Here, the dataset definition's suffix is `cases`, so the corresponding output file will be named `dataset_cases.csv.gz`.
+Here, the dataset definition's suffix is `cases`, so the corresponding output file will be named `dataset_cases.csv`.
 
 Our `project.yaml` now includes the following action:
 
@@ -52,10 +52,10 @@ Our `project.yaml` now includes the following action:
 # ...
 actions:
   extract_cases:
-    run: ehrql:v1 generate-dataset analysis/dataset_definition_cases.py --output output/dataset_cases.csv.gz
+    run: ehrql:v1 generate-dataset analysis/dataset_definition_cases.py --output output/dataset_cases.csv
     outputs:
       highly_sensitive:
-        dataset: output/dataset_cases.csv.gz
+        dataset: output/dataset_cases.csv
 ```
 
 ## Extract data for the potential controls
@@ -73,10 +73,10 @@ Our `project.yaml` now includes the following action:
 actions:
   # ...
   extract_potential_controls:
-    run: ehrql:v1 generate-dataset analysis/dataset_definition_potential_controls.py --output output/dataset_potential_controls.csv.gz
+    run: ehrql:v1 generate-dataset analysis/dataset_definition_potential_controls.py --output output/dataset_potential_controls.csv
     outputs:
       highly_sensitive:
-        dataset: output/dataset_potential_controls.csv.gz
+        dataset: output/dataset_potential_controls.csv
 ```
 
 ## Match the cases to the potential controls
@@ -84,7 +84,7 @@ actions:
 In this step, we will use the [OpenSAFELY matching library](https://github.com/opensafely-core/matching#readme) in [a scripted action](actions-scripts.md) to match the cases to the potential controls.
 We will name this scripted action `match.py`.
 
-Whilst the OpenSAFELY matching library can output multiple files, we will use two: `matching_report.txt` and `matched_matches.csv.gz`.
+Whilst the OpenSAFELY matching library can output multiple files, we will use two: `matching_report.txt` and `matched_matches.csv`.
 The former contains information about the matching process.
 The latter contains the matched controls.
 
@@ -101,7 +101,7 @@ actions:
       moderately_sensitive:
         matching_report: output/matching_report.txt
       highly_sensitive:
-        matched_matches: output/matched_matches.csv.gz
+        matched_matches: output/matched_matches.csv
 ```
 
 !!! note "Alternatives to the OpenSAFELY matching library"
@@ -120,12 +120,12 @@ In this step, we will construct a third dataset definition to extract only the n
 
 We will name this dataset definition `dataset_definition_controls.py`.
 
-We will use the `@table_from_file` feature in ehrQL to make a table called `matched_patients` from the `matched_matches.csv.gz` file.
+We will use the `@table_from_file` feature in ehrQL to make a table called `matched_patients` from the `matched_matches.csv` file.
 When we are done, `matched_patients` would behave as if it were any other
 [`PatientFrame`](../ehrql/reference/language/#PatientFrame)
 in ehrQL.
 
-Suppose `matched_matches.csv.gz` has the following columns: `patient_id`, `age`, `sex` and `case_index_date` -
+Suppose `matched_matches.csv` has the following columns: `patient_id`, `age`, `sex` and `case_index_date` -
 i.e. `age` and `sex` were the *matching data* we extracted in the first step.
 We can create `matched_patients` with:
 ```python
@@ -133,7 +133,7 @@ import datetime
 
 from ehrql.query_language import PatientFrame, Series, table_from_file
 
-CONTROLS = "output/matched_matches.csv.gz"
+CONTROLS = "output/matched_matches.csv"
 
 @table_from_file(CONTROLS)
 class matched_patients(PatientFrame):
@@ -179,7 +179,7 @@ from ehrql.query_language import PatientFrame, Series, table_from_file
 from ehrql.tables.core import clinical_events
 
 
-CONTROLS = "output/matched_matches.csv.gz"
+CONTROLS = "output/matched_matches.csv"
 codelist = codelist_from_csv("codelists/codelist.csv")
 
 
