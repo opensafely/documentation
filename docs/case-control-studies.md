@@ -6,10 +6,6 @@ However, some studies that use dynamic index dates for a "case" population and t
 Because the control group by definition doesn't have the event of interest, the convention is for them to inherit the index date from their matched "case".
 The process to extract data for such a matched case-control population in OpenSAFELY is described below.
 
-!!! warning
-
-    At present, only the [OpenSAFELY TPP backend](data-sources/systmone.md) supports case-control studies.
-
 There are five steps to undertaking a [case-control study](https://en.wikipedia.org/wiki/Case%E2%80%93control_study) (or [matched cohort study](https://en.wikipedia.org/wiki/Nested_case%E2%80%93control_study)) with OpenSAFELY:
 
 1. Extract data for the cases
