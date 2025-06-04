@@ -29,7 +29,7 @@ actions:
 
 ## Extract data for the cases
 
-In this step, we will construct [a dataset definition](../ehrql/tutorial/building-a-dataset) to extract all the data we need for the cases:
+In this step, we will construct [a dataset definition](./ehrql/tutorial/building-a-dataset/index.md) to extract all the data we need for the cases:
 that is, the *matching data*, or the data we will use to match the cases to the potential controls;
 and the *non-matching data*, or the data we will use for analysis.
 
@@ -118,7 +118,7 @@ We will name this dataset definition `dataset_definition_controls.py`.
 
 We will use the `@table_from_file` feature in ehrQL to make a table called `matched_patients` from the `matched_matches.csv` file.
 When we are done, `matched_patients` would behave as if it were any other
-[`PatientFrame`](../ehrql/reference/language/#PatientFrame)
+[`PatientFrame`](./ehrql/reference/language.md#PatientFrame)
 in ehrQL.
 
 Suppose `matched_matches.csv` has the following columns: `patient_id`, `age`, `sex` and `case_index_date` -
