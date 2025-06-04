@@ -29,7 +29,7 @@ actions:
 
 ## Extract data for the cases
 
-In this step, we will construct [a dataset definition](../ehrql/tutorial/building-a-dataset) to extract all the data we need for the cases:
+In this step, we will construct [a dataset definition](../ehrql/tutorial/building-a-dataset/index.md) to extract all the data we need for the cases:
 that is, the *matching data*, or the data we will use to match the cases to the potential controls;
 and the *non-matching data*, or the data we will use for analysis.
 
