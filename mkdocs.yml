@@ -132,6 +132,7 @@ theme:
   features:
     - content.action.edit
     - content.code.copy
+    - content.tooltips
     - navigation.footer
     - navigation.indexes
 
