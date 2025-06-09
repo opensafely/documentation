@@ -77,7 +77,7 @@ The [DATAPAST template](https://docs.google.com/document/d/10derqFbS3c0SbZxGnBb1
 1. After the DATAPAST templates have been reviewed and completed by users (alongside any amendments to work, where appropriate), the work will be submitted to NHS England for an approval decision.
 1. NHS England typically responds within 2 weeks (subject to annual leave and service pressures).
 
-Please refer to the [policies for researchers page](https://www.opensafely.org/policies-for-researchers/#details-all-datasets) for full details of the publication review process, which now incorporates the Clinical DATAPAST function.
+Please refer to the [policies for researchers page](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) for full details of the publication review process, which now incorporates the Clinical DATAPAST function.
 
 Please reach out to your co-pilot in the meantime if you have any questions, or post them in the user slack channel.
 
