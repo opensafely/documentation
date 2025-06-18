@@ -161,7 +161,7 @@ These Docker images have yet to be optimised; if you have skills in creating Doc
 
 ### Stata
 
-We currently package version 16.1, with the following libraies installed:
+We currently package version 16.1, with the following libraries installed:
 
   * `datacheck`
   * `safetab`
