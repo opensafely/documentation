@@ -26,8 +26,6 @@ to allow you to run OpenSAFELY
 This removes the need to have anything other than a web browser installed
 to work on OpenSAFELY projects.
 
-GitHub provide users with a free monthly quota of Codespaces use.
-
 These cloud-hosted virtual machines have no persistent storage,
 which is to say any data on them will be lost when the machine is deleted
 if not saved elsewhere.
@@ -38,23 +36,6 @@ making it easy to commit and push your work to GitHub avoiding any data loss.
 
 ## Understanding GitHub Codespaces billing
 
-GitHub gives all users a free and decent-sized monthly quota for Codespaces.
-This is accessible without a paid account.
-See [GitHub's pricing details](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces).
+Anyone working on a repository in the GitHub `opensafely` organization can use Codespaces free of charge.
 
-!!! note
-    You will not get billed for using Codespaces,
-    unless you both:
-
-    * set a Codespaces spending limit
-    * and add a payment method
-
-    Without billing configured,
-    you will not get invoiced or charged.
-
-    If you run out of free quota,
-    GitHub can only block you from using Codespaces until the next monthly cycle starts.
-
-!!! note
-    Approved OpenSAFELY users working on projects in the GitHub `opensafely` organization
-    can request to use Codespaces for those projects.
+If you use Codespaces for a repository that is not in the `opensafely` organization, then you may receive a message from GitHub about billing. Codespaces is a paid-for product, however GitHub gives all users a decent-sized free monthly allowance. You will not be charged unless you have provided GitHub with a payment method and set a Codespaces spending limit. GitHub's documentation on [billing](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces) has more information.
