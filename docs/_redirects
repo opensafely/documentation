@@ -79,8 +79,8 @@
 /study-def-expectations/                 /legacy/study-def-expectations/      301
 /study-def-flowcharts                    /legacy/study-def-flowcharts/        301
 /study-def-flowcharts/                   /legacy/study-def-flowcharts/        301
-/measures                                /legacy/study-def-measures/          301
-/measures/                               /legacy/study-def-measures/          301
+/measures                                /ehrql/explanation/measures/         301
+/measures/                               /ehrql/explanation/measures/         301
 /study-def-tricks                        /legacy/study-def-tricks/            301
 /study-def-tricks/                       /legacy/study-def-tricks/            301
 /study-def-variables                     /legacy/study-def-variables/         301
