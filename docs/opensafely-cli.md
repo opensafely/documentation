@@ -255,7 +255,7 @@ you write will work in the OpenSAFELY environment too.
 From the directory containing code that you are working on, run:
 
 ```bash
-opensafely jupyter
+opensafely launch jupyter
 ```
 
 JupyterLab should then open in a web browser automatically. Otherwise,
