@@ -36,6 +36,12 @@ We use the cohort-extractor docstrings to generate some content here.
 cohort-extractor is currently a Git submodule instead, for installation simplicity (see #832).
 **We currently do not install cohort-extractor into a virtualenv because we are only using the docstrings**
 
+An example usage of a cohort-extractor docstring is in [docs/legacy/study-def-variables.md](https://github.com/opensafely/documentation/blob/main/docs/legacy/study-def-variables.md?plain=1):
+
+```
+::: cohortextractor.patients.registered_as_of
+```
+
 ### Updating cohort-extractor via Dependabot
 
 You can update the cohort-extractor submodule via Dependabot.
