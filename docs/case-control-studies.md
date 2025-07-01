@@ -116,17 +116,17 @@ Our `project.yaml` now includes the following action. Remember to replace [versi
 actions:
   # ...
   matching:
+    needs: [extract_cases, extract_potential_controls]
     run: >
       matching:[version]
       --cases output/dataset_cases.arrow
       --cases output/dataset_potential_controls.arrow
-      --config '{
-        "matches_per_case": 3,
-        "match_variables": ["age"],
-        "index_date_variable": "index_date",
-        "generate_match_index_date": "no_offset",
-      }'
-    needs: [extract_cases, extract_potential_controls]
+    config:
+      matches_per_case: 3
+      match_variables:
+        - age
+      index_date_variable: index_date
+      generate_match_index_date: no_offset
     outputs:
       moderately_sensitive:
         matching_report: output/matching_report.txt
