@@ -14,7 +14,3 @@ RUN apt-get update && \
 ENV TZ="Europe/London"
 
 USER vscode
-
-# Clone cohort-extractor submodule via HTTPS.
-# GitHub does not allow SSH access without adding a private key.
-RUN git config --global url.https://github.com/.insteadOf git@github.com:

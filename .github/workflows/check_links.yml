@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - name: Install Python and just
         uses: opensafely-core/setup-action@v1

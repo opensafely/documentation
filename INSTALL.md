@@ -30,32 +30,6 @@ EHRQL_BRANCH=my-branch just run
 
 ## Updating Cohort Extractor
 
-[cohort-extractor](https://github.com/opensafely-core/cohort-extractor) is a documentation dependency.
-We use the cohort-extractor docstrings to generate some content here.
-
-cohort-extractor is currently a Git submodule instead, for installation simplicity (see #832).
-**We currently do not install cohort-extractor into a virtualenv because we are only using the docstrings**
-
-An example usage of a cohort-extractor docstring is in [docs/legacy/study-def-variables.md](https://github.com/opensafely/documentation/blob/main/docs/legacy/study-def-variables.md?plain=1):
-
-```
-::: cohortextractor.patients.registered_as_of
-```
-
-### Updating cohort-extractor via Dependabot
-
-You can update the cohort-extractor submodule via Dependabot.
-
-Dependabot runs daily and will create a new pull request to update
-cohort-extractor if a newer version is available.
-
-If you don't want to wait, you can also trigger a Dependabot check
-manually via the ["Dependency
-graph"](https://github.com/opensafely/documentation/network/updates)
-section of this repository.
-
-### Updating cohort-extractor manually
-
-Alternatively, you can pull in the latest version of the cohortextractor
-docstrings, for local development or to update the requirements entirely
-by hand: `just update-cohort-extractor`
+[cohort-extractor](https://github.com/opensafely-core/cohort-extractor) used to be a documentation dependency.
+As cohort-extractor is now discontinued we wanted to remove this dependency,
+so the rendered HTML content has been committed to legacy/docs.

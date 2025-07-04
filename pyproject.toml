@@ -15,7 +15,6 @@ exclude = [
   "docker",
   "htmlcov",
   "venv",
-  "src/cohort-extractor",
 ]
 
 [tool.ruff.lint]

@@ -55,7 +55,7 @@ requirements-dev *args: requirements-prod
 
 
 # ensure prod requirements installed and up to date
-prodenv: requirements-prod fetch-cohort-extractor
+prodenv: requirements-prod
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -98,14 +98,6 @@ upgrade env package="": virtualenv
     opts="--upgrade"
     test -z "{{ package }}" || opts="--upgrade-package {{ package }}"
     FORCE=true {{ just_executable() }} requirements-{{ env }} $opts
-
-# Fetch cohort-extractor submodule
-fetch-cohort-extractor:
-    git submodule update --init
-
-# Update cohort-extractor submodule
-update-cohort-extractor:
-    git submodule update --remote src/cohort-extractor
 
 # Requires Vale: https://github.com/errata-ai/vale
 lint-docs:

@@ -168,19 +168,6 @@ copyright: © University of Oxford for the Bennett Institute for Applied Data Sc
 
 plugins:
   - search
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          options:
-            show_root_heading: true
-            show_root_toc_entry: false
-            show_root_full_path: false
-            show_source: false
-            show_if_no_docstring: true
-            heading_level: 4
-          paths: [src/cohort-extractor]
-      custom_templates: templates
   - macros
   - multirepo:
       cleanup: !ENV [MKDOCS_MULTIREPO_CLEANUP, false]
@@ -188,7 +175,6 @@ plugins:
 
 watch:
   - includes
-  - src/cohort-extractor/cohortextractor
 
 markdown_extensions:
   - pymdownx.details
