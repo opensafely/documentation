@@ -1,4 +1,7 @@
 ---
+name:
+  "Build & deploy to Cloudflare Pages"
+
 on:
   push:
   workflow_dispatch:
