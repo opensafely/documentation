@@ -59,9 +59,9 @@ stored in the `output` folder.
    opensafely run generate_dataset
    ```
 
-   and press ++enter++ on your keyboard to run the pipeline action.
+   and press <kbd>Enter</kbd> on your keyboard to run the pipeline action.
 
-   You should see output that ends something like the following:
+   You should see an output that ends something like the following:
 
    ```
    <...several lines of output...>
