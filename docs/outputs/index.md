@@ -12,4 +12,4 @@
 - [Viewing released outputs](viewing-released-files.md)
 
 ## Using Airlock
-- [Using Airlock to view and releasing outputs](../using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md)
+- [Using Airlock to view and release outputs](../using-opensafely/viewing-and-releasing-outputs/viewing-and-releasing-with-airlock/index.md)
