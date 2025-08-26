@@ -12,6 +12,7 @@ nav:
       - Security: security-levels.md
       - "Safe data access: The Five Safes": five-safes.md
       - Access policies: access-policies.md
+      - A high level overview of how OpenSAFELY works: how-open-safely-works.md
       - Technical architecture: technical-architecture.md
       - Type One Opt Outs: type-one-opt-outs.md
       - Contributing: contributing.md
