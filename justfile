@@ -129,7 +129,7 @@ run: devenv
 
 # Build the documentation
 build: devenv
-    $BIN/mkdocs build
+    $BIN/mkdocs build --strict
 
 # Count words in generated documentation content (within <article> tags)
 wordcount: build
