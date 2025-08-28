@@ -1,6 +1,6 @@
 # A high level overview of how OpenSAFELY works
 
-[image here]
+![A diagram of how OpenSAFELY works.](./images/how-os-works-diagram.jpg)
 
 Once a research project is approved, the Approved Researcher is given permission to access the system to manage code execution, which allows them to run code against patient data in the Secure Zone as appropriate for their project. There is extensive documentation for OS, including [step-by-step getting started guidance](getting-started/index.md) - this diagram provides a high-level overview of how the system works.
 
@@ -16,24 +16,24 @@ This supports transparency and auditability across the research lifecycle.
 
 [^bignote]: Tools to help with writing code:
 
-    a. [Github codespaces](getting-started/how-to/use-github-codespaces-in-your-project.md) - A ready-to-use cloud development environment you can access from anywhere without installing anything on your computer.
+    a. [Github codespaces](getting-started/how-to/use-github-codespaces-in-your-project/index.md) A ready-to-use cloud development environment you can access from anywhere without installing anything on your computer.
 
     b. [Github repo template](https://github.com/opensafely/research-template) A starter repository you can copy to create new projects quickly.
 
     c. [Project.yaml](actions-pipelines.md#projectyaml-format) A configuration file that defines your project’s settings and structure.
 
-    d. [Table schemas]() + [metadata]() Table schemas define the tables and columns available to query in a dataset definition. Metadata provides contextual information on the core primary care EHR systems inside which OpenSAFELY is built (currently TPP and EMIS), as well as all external datasets imported to the secure EHR environment.
+    d. [Table schemas](ehrql/reference/schemas.md) + [metadata](data-sources/index.md) Table schemas define the tables and columns available to query in a dataset definition. Metadata provides contextual information on the core primary care EHR systems inside which OpenSAFELY is built (currently TPP and EMIS), as well as all external datasets imported to the secure EHR environment.
 
-    e. [OpenCodelists]() A system for building, reviewing and maintaining codelists
+    e. [OpenCodelists](codelist-intro.md/#opencodelists) A system for building, reviewing and maintaining codelists
 
-    f. [ehrQL] Electronic Health Records Query Language: a query language and software tool designed for working with health data
+    f. [ehrQL](ehrql/index.md#ehrqls-documentation) Electronic Health Records Query Language: a query language and software tool designed for working with health data
 
-    g. [Dummy data]() Sample data used for developing analytic code on your own computer
+    g. [Dummy data](ehrql/how-to/dummy-data.md) Sample data used for developing analytic code on your own computer
 
-    h. [OpenSAFELY CLI]() The main tool for using a version of the OpenSAFELY platform on your computer to test your code
+    h. [OpenSAFELY CLI](opensafely-cli.md) The main tool for using a version of the OpenSAFELY platform on your computer to test your code
 
-    i. [Docker Images]() Prebuilt packages for running software containing R, Python and Stata - these contain the specific software versions that are installed within the Secure Zone
+    i. [Docker Images](actions-scripts.md#execution-environments) Prebuilt packages for running software containing R, Python and Stata - these contain the specific software versions that are installed within the Secure Zone
 
-    j. [CI checks]() Automated tests that will check that the analytical code will run successfully in the Secure Zone.
+    j. [CI checks](actions-pipelines.md#running-your-code-with-github-actions) Automated tests that will check that the analytical code will run successfully in the Secure Zone.
 
 [^2]: Safe in this context means the [5 Safes framework](https://www.bennett.ox.ac.uk/blog/2023/03/the-five-safes-framework-and-applying-it-to-opensafely/), which OpenSAFELY is designed around.
