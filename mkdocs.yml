@@ -12,7 +12,7 @@ nav:
       - Security: security-levels.md
       - "Safe data access: The Five Safes": five-safes.md
       - Access policies: access-policies.md
-      - A high level overview of how OpenSAFELY works: how-open-safely-works.md
+      - A high level overview of how OpenSAFELY works: how-opensafely-works.md
       - Technical architecture: technical-architecture.md
       - Type One Opt Outs: type-one-opt-outs.md
       - Contributing: contributing.md
@@ -48,6 +48,7 @@ nav:
         - Understanding GitHub Codespaces: getting-started/explanation/understanding-github-codespaces/index.md
         - Understanding the software used to run OpenSAFELY: getting-started/explanation/understanding-the-software-used-to-run-opensafely/index.md
   - Using OpenSAFELY:
+      - Introduction to using OpenSAFELY: intro-using-opensafely.md
       - Analysis workflow: workflow.md
       - Federated analytics: federation.md
       - GitHub repositories: repositories.md
