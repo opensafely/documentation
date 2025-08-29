@@ -22,7 +22,7 @@ a. [Github codespaces](getting-started/how-to/use-github-codespaces-in-your-proj
 
 b. [Github repo template](https://github.com/opensafely/research-template) A starter repository you can copy to create new projects quickly.
 
-c. [Project.yaml](actions-pipelines.md#projectyaml-format) A configuration file that defines your project’s settings and structure.
+c. [Project.yaml](actions-pipelines.md#projectyaml-format) A configuration file within your project's repository that defines your project’s settings and structure.
 
 d. [Table schemas](ehrql/reference/schemas.md) + [metadata](data-sources/index.md) Table schemas define the tables and columns available to query in a dataset definition. Metadata provides contextual information on the core primary care EHR systems inside which OpenSAFELY is built (currently TPP and EMIS), as well as all external datasets imported to the secure EHR environment.
 
