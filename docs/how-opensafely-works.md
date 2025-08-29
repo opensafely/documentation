@@ -2,10 +2,10 @@
 
 ![A diagram of how OpenSAFELY works.](./images/how-os-works-diagram.jpg)
 
-Once a research project is approved, the Approved Researcher is given permission to access the system to manage code execution, which allows them to run code against patient data in the Secure Zone as appropriate for their project. There is extensive documentation for OS, including [step-by-step getting started guidance](getting-started/index.md) - this diagram provides a high-level overview of how the system works.
+Once a research project is approved, the Approved Researcher is given permission to access the system to manage code execution, which allows them to run code against patient data in the Secure Zone as appropriate for their project. There is extensive documentation for OpenSAFELY, including [step-by-step getting started guidance](getting-started/index.md) - this diagram provides a high-level overview of how the system works.
 
 1. The researcher has access to various tools ([see below](#tools-to-help-with-writing-code)) that allows them to design and write code that will enable them to run their analysis on patient data via the OpenSAFELY system. Using these tools, they write and test their ehrQL and analytical code (R, Python or Stata) in Github before it is run in the Secure Zone. Github is used to store code and help with collaboration and versioning. The code can be tested and perfected/improved on a dummy dataset.
-1. Once the code is written, the researcher can log into the system to manage code execution and run a specific section of code or their entire code against a patient dataset. They use the system to manage code execution via the jobs site.
+1. Once the code is written, the researcher can log into the system to manage code execution and run a specific section of code or their entire code against a patient dataset. They do this via the jobs site.
     1. This request is sent to the Secure Zone which operates within the data controllers’ domain (e.g.TPP or Optum). Within the Secure Zone, the code is run against the sensitive patient data generating an output.
 1. Once the code has run, researchers can review the output (safe files[^1]) within Airlock, a tool hosted in the Secure Zone.
 When the researcher is satisfied with the output, they submit a request for the results to be released, allowing the results to leave the data controller’s domain.
