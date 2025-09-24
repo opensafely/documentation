@@ -37,7 +37,7 @@ To use OpenSAFELY, users must know, or be willing to learn, the following progra
 ### Essential
 
 - **Stata, R or Python**
-  OpenSAFELY currently supports Stata v16.1, Python 3.8, and R 4.0 for statistical analysis.
+  OpenSAFELY currently supports Stata v16.1, Python 3.8, Python 3.10, R 4.0 and R 4.4 for statistical analysis.
   For security reasons, available libraries are restricted to those provided by the framework. See ["Execution Environments"](actions-scripts.md#execution-environments) for more information.
 - **Git**
 The workflow is strongly integrated into Git/GitHub.
