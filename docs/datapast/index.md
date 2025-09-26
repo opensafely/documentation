@@ -57,7 +57,7 @@ The [DATAPAST template](https://docs.google.com/document/d/10derqFbS3c0SbZxGnBb1
 
 ## The workflow for submission for publication approval
 
-All OpenSAFELY projects must obtain NHS England approval for the publication or wider sharing of results, papers, presentations (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). Researchers can find the guidance on the Policies for Researchers webpage > Acknowledgement and Data Sharing/Publication Policy > Publication of Results > in the Datasets used section.  Here you will find step-by-step instructions, expectations of the DATAPAST service, and information on timelines you must follow. 
+All OpenSAFELY project outputs (e.g results, papers, presentations, etc.) need to be approved before they can be made public (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). The Clinical Datapast Review forms part of this publication approval process. For full guidance, including step-by-step instructions, can be found on the Policies for Researchers webpage > Acknowledgement and Data Sharing/Publication Policy > Publication of Results > in the Datasets used section. 
 
 ## The timelines
 
