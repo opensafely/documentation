@@ -57,19 +57,7 @@ The [DATAPAST template](https://docs.google.com/document/d/10derqFbS3c0SbZxGnBb1
 
 ## The workflow for submission for publication approval
 
-1. You must ensure your co-pilot is aware of your intent to submit as a list of co-pilot checks need to be actioned prior to submission.
-1. All submissions must be read and approved by the study leads, sponsor and line manager (for service evaluation/audit work only) and Principal Investigator and line manager (for research work only).
-1. All submissions must be roughly “90%” finalised, with the results and conclusions final.
-1. After steps 1-3 are complete, please submit your work (alongside the Project ID), to the [publications@opensafely.org](mailto:publications@opensafely.org) inbox. Copy in your co-pilot, study leads, and sponsor and line manager or Principal Investigator and line manager, where appropriate. You must specify that study leads, sponsor, Principal Investigator and line manager have read and approved the submission.
-1. There is no longer a specific regular Wednesday deadline to submit your work. You can submit at any time. However, over specific holiday periods (such as Christmas, Easter and the summer break, the review approval periods may be longer).
-1. Two DATAPAST advisors will be selected to review the submission independently using the DATAPAST template; when completed, they will arrange a moderation discussion.
-1. On the DATAPAST template, advisors may, for example, ask questions, point out areas that they consider require further clarification, or make suggestions. Advisors will capture key important content in the template; however, they may also make comments on the actual document (typically less critical comments). Advisors will not copy large bodies of content or tables, graphs or data into the template.
-1. Following moderation, users, including the study sponsor, Principal Investigator, line manager and co-pilot, will be emailed the DATAPAST templates. Users are expected to provide written responses in each part of the template where appropriate; if no responses are provided where required, templates will still be published in the public domain and can be forwarded to relevant journals if there are concerns. In addition, the DATAPAST advice may result in users updating the content of their work. Users may reasonably ask their co-pilot for support in addressing any advice.
-1. The completed DATAPAST templates, alongside any updated content must be re-submitted for approval. The updated parts must be clearly highlighted. The amendments must also be approved by the study leads, sponsors / line managers (for service evaluation/audit work only) and Principal Investigator (for research work only).
-1. The advisors will read the users’ responses and any updated content where appropriate. There may be further discussion between the DATAPAST advisors and users, but it is intended that this to-and-fro is kept to a minimum, and ideally not required following the first round of advice.
-1. Lastly, the completed DATAPAST templates, alongside any updated work, and the lay summary of work, will be submitted to NHS England’s publication approval team.
-1. NHS England will provide an approval response, or may request a further discussion regarding the submitted work.
-1. The completed templates, independent of the final NHS England approval decision, will be placed in the public domain (most likely attached to the project on our jobserver, but the exact location is yet to be determined).
+All OpenSAFELY projects must obtain NHS England approval for the publication or wider sharing of results, papers, presentations (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). Researchers can find the guidance on the Policies for Researchers webpage > Acknowledgement and Data Sharing/Publication Policy > Publication of Results > in the Datasets used section.  Here you will find step-by-step instructions, expectations of the DATAPAST service, and information on timelines you must follow. 
 
 ## The timelines
 
