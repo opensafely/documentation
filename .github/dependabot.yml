@@ -14,3 +14,7 @@ updates:
     interval: "monthly"
   cooldown:
     default-days: 7
+  # 2.6.1 seemed to cause the exclude-path to not take effect, waiting for the next release.
+  ignore:
+    - dependency-name: "lycheeverse/lychee-action"
+      versions: ["2.5.0", "2.6.0", "2.6.1"]

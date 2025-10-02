@@ -38,7 +38,8 @@ jobs:
       # This workaround may not be needed in future if lychee has better rate limiting.
       # https://github.com/lycheeverse/lychee/issues/36
       - name: Check links
-        uses: lycheeverse/lychee-action@885c65f3dc543b57c898c8099f4e08c8afd178a2  # v2.6.1
+        # 2.6.1 seemed to cause the exclude-path to not take effect, waiting for next release.
+        uses: lycheeverse/lychee-action@82202e5e9c2f4ef1a55a3d02563e1cb6041e5332  # v2.4.1
         with:
           args: "--exclude-all-private --include-verbatim --max-concurrency 24 --require-https --verbose --no-progress --offline
           --accept '100..=103,200..=299,429,500..=511'
