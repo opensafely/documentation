@@ -1,8 +1,5 @@
 ## Pre-specifying your Research Question and Writing a Study Protocol
 
-!!! note
-    This section is a work in progress, and will be further developed.
-
 Briefly, pre-specifying your research question and developing a study protocol which outlines your methodology is an important open science principle. There are several benefits to developing a protocol:
 
 * It reduces "researcher degrees of freedom" and minimises the risk of questionable research practices such as ["hypothesising after the results are known" (HARKing)](https://en.wikipedia.org/wiki/HARKing) or [p-hacking](https://en.wikipedia.org/wiki/Data_dredging);
