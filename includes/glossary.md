@@ -3,10 +3,8 @@
 *[Pillar 3]: serology testing to show if people have antibodies from having had COVID-19
 *[Pillar 4]: serology and swab testing for national surveillance supported by PHE, ONS, Biobank, universities and other partners to learn more about the prevalence and spread of the virus and for other testing research purposes, for example on the accuracy and ease of use of home testing
 *[study definition]: specifies the patients you want to include in your study and defines the variables that describe them. Study definitions are written in a Python script using a human-readable API.
-*[cohort extractor]: a program that uses the study definition to create a dataset for analysis
 *[codelist]: a collection of clinical codes that define a particular condition, event or diagnosis.
 *[project pipeline]: defines how different scripts within the project’s analytic code should be run: in what order, with which versions of which software, etc; defined in a file named `project.yaml`
-*[job runner]: runs the actions defined in the project pipeline using real data, in a secure environment
 *[jobs site]: a website where you can request runs of all or some of your project pipeline outputs
 *[PHE]: Public Health England
 *[EHR]: Electronic Health Record
@@ -34,7 +32,6 @@
 *[API]: Application Programming Interface. An agreed way for one system to communicate with another system.
 *[released outputs]: files from Level 4 uploaded to the Jobs site.
 *[draft published outputs]: a collection of released outputs prepared for publication to the general public.
-*[Data Builder]: A program that extracts EHR data for analysis.
 *[dataset definition]: Describes, using ehrQL, the EHR data to extract from a backend.
 *[ehrQL]: The Electronic Health Records Query Language. A Domain-Specific Language (DSL) for EHR data.
 *[dataset]: A tabular data structure with one row per patient and one column per variable.
