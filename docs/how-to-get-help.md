@@ -68,6 +68,8 @@ To search the OpenSAFELY GitHub organisation for code:
 It can be helpful to use the option to filter the results by language.
 For example, restricting to Python might help you find dataset definition files.
 
+To see how this works in the GitHub UI, please watch our [video explainer](https://www.youtube.com/watch?v=S05-6Cmv4Xc) on searching past study code.
+
 ## Bug reports and feature requests
 
 OpenSAFELY uses GitHub to manage and share code and other platform resources. If you want to request any changes to the platform then GitHub issues should be your first port of call.
