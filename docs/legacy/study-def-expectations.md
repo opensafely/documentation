@@ -1,6 +1,6 @@
 ---
 search:
-  boost: 0.001
+  exclude: true
 ---
 ---8<-- 'includes/cohort-extractor-deprecated.md'
 
