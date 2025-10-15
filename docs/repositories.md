@@ -132,4 +132,4 @@ This can be useful if you want to, for example, add a `output/plots/` subfolder 
 
 ## Searching existing repositories for sample code
 
-Often when writing study code, it can be useful to see how others have solved certain problems or used ehrQL features. To search all the pbulic code in the OpenSAFELY GitHub organisation, see instructions in our [How to Get Help page](how-to-get-help.md#searching-past-study-code).
+Often when writing study code, it can be useful to see how others have solved certain problems or used ehrQL features. To search all the public code in the OpenSAFELY GitHub organisation, see instructions in our [How to Get Help page](how-to-get-help.md#searching-past-study-code).
