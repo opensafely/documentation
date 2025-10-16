@@ -5,6 +5,7 @@ Admitted Patient Care Spells (APCS) is part of Hospital Episode Statistics (HES)
 
 * **Data provider** NHS England.
 * **Participation / Coverage** In-hospital patient admissions in NHS Trusts in England.
+* **Available from** Data are available from early 2016.
 * **Update frequency in OpenSAFELY** Approximately monthly.
 * **Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 months.
 * **Collected information** Admission and discharge dates; routes of admission; reason for admission; diagnoses; treatments; discharge destination.

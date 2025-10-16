@@ -5,6 +5,7 @@ ECDS is part of Hospital Episode Statistics (HES) and is provided to OpenSAFELY 
 
 * **Data provider** NHS England.
 * **Participation / Coverage** Emergency Department attendances in NHS Trusts in England.
+* **Available from** Data are available from late 2017; however, ECDS was in a pilot phase until 2020 and data are incomplete prior to approximately early 2019.
 * **Update frequency in OpenSAFELY** Approximately monthly.
 * **Delay between event occurring and event appearing in OpenSAFELY** * Approximately 1-2 months.
 * **Collected information** Attendance, admission and discharge dates; locations; presenting complaints; diagnoses.
