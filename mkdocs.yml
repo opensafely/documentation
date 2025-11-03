@@ -147,7 +147,7 @@ extra_css:
   - ehrql/stylesheets/extra.css
 
 extra_javascript:
-  - js/extra.js
+  - js/extra.mjs
   - js/lite-yt-embed.js
 
 extra:
