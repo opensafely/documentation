@@ -88,7 +88,7 @@ function feedbackForm() {
         Give us feedback
       </summary>
       <div class="feedback-form__content">
-        <p>Your feedback helps the OpenSAFELY team improve your experience.</p>
+        <p>We love when our users are able to provide feedback so that the OpenSAFELY team can better understand and improve your experiences with OpenSAFELY documentation.</p>
         <a
           class="feedback-form__button"
           href="https://docs.google.com/forms/d/e/1FAIpQLScTKst1yv50n_wwbQOIAT-ysKbte_K1MibKbjfQilL4r-JRSw/viewform?usp=header"
@@ -99,7 +99,7 @@ function feedbackForm() {
         </a>
         <p>
           For anything else,
-          <a href="/how-to-get-help/">find out how to get help</a>.
+          <a href="/how-to-get-help/#slack">find out how to get help</a>.
         </p>
       </div>
     </details>
