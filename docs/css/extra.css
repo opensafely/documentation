@@ -211,7 +211,8 @@ body {
   --color-neutral-200: oklch(92.2% 0 0);
 
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   align-items: center;
   border: 1px solid transparent;
@@ -224,7 +225,7 @@ body {
 
   box-sizing: border-box;
 
-  >* {
+  > * {
     box-sizing: border-box;
   }
 }
@@ -267,20 +268,19 @@ body {
   font-size: 0.8rem;
   line-height: 1.4;
   padding: 0.5rem 1rem;
+  text-wrap-style: pretty;
   width: 35ch;
 
   a:not([class]) {
     color: var(--color-blue-700);
-    text-underline-offset: 2px;
     font-weight: 600;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    transition-property: color, text-decoration;
-    transition-duration: .2s;
-    transition-timing-function: ease-in-out;
+    text-decoration: underline 2px
+      color-mix(in srgb, currentColor, transparent 75%);
+    text-underline-offset: 2px;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 
     &:hover {
-      text-decoration-color: currentColor
+      text-decoration-color: currentColor;
     }
   }
 }
