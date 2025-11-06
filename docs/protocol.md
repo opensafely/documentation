@@ -6,7 +6,7 @@ Briefly, pre-specifying your research question and developing a study protocol w
 * It increases replicability by explaining the “why” of each analytic decision (whereas study code only tells you the “what”);
 * It allows you to get feedback from colleagues and potentially identify problems early on in the process, before writing code;
 * It forces you to think carefully about your planned analysis before it takes place;
-* It can help set a reasonable score for the project;
+* It can help set a reasonable scope for the project;
 * It makes writing the manuscript easier.
 
 Taken together, this can improve both the quality and credibility of your research. Developing a detailed study plan, including figure and table shells, can be particularly helpful when using a federated analytics platform such as OpenSAFELY, as there is less scope for interactively developing these whilst working with the data.
