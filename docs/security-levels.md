@@ -41,6 +41,10 @@ This includes external datasets imported into the database, for instance hospita
 
 Only data for patients who are present in the GP data held by EMIS or TPP are imported from external datasets (a matching processing is carried using the pseudonymised NHS number). The external data is stored only in pseudonymised form.
 
+The system guarantees that patient identifiers cannot be queried or searched. In ehrQL (the OpenSAFELY query language, and the only mechanism through which users access patient-level data) the patient_id variable is handled implicitly and never exposed to the query language. This prevents any lookup or filtering by individual patient. Identifiers are used only to link multiple extracts of data within a single secure project workspace, supporting consistent analysis without any risk of re-identification.
+
+EMIS and TPP securely hash NHS numbers for linkage purposes using a secret key shared with external dataset providers. Level 2 contains neither NHS numbers nor those hashes. Instead, each backend supplies a system-specific patient identifier that is unique to the OpenSAFELY environment and cannot be traced back to an NHS number. These identifiers are implemented differently across backends (for example, integers in TPP and hexadecimal strings in EMIS), are meaningless outside the platform, and cannot be used to identify individuals or to perform direct lookups.
+
 The schema for the TPP database can be seen in [this notebook](https://reports.opensafely.org/reports/opensafely-tpp-database-schema/).
 
 ### Where is this data held?
