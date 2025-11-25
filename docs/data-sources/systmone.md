@@ -40,6 +40,15 @@ These are coded in response to data flowing from Pillar 1 and Pillar 2. (At the 
 All coded events should be accompanied by an event date.
 However, invalid or unusual dates are possible and may occur for a number of reasons; for instance, when a GP is coding an important event in the patient's medical history but the exact date is not known.
 
+### Sensitive datasets
+
+Clinical codes relating to certain conditions or situations, as defined in the Royal College of GP’s (RCGP) sensitive datasets, are not available in OpenSAFELY. These are:
+
+* **Gender related issues**: SNOMED Refset for General Practice summary data sharing exclusion for gender related issues _999004351000000109_
+* **Assisted fertility**: SNOMED Refset for General Practice summary data sharing exclusion for assisted fertility _999004371000000100_
+* **Termination of pregnancy**: SNOMED Refset for General Practice summary data sharing exclusion for termination of pregnancy _999004361000000107_
+* **Sexuality and sexual activity**: Finding related to sexuality and sexual activity _All children of the SNOMED code 118199002_
+
 ## Additional derived data
 
 ### Geographic and administrative groupings
