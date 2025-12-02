@@ -18,7 +18,7 @@ jobs:
     name: Deploy to Cloudflare Pages
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Install Python and just
         uses: opensafely-core/setup-action@v1
