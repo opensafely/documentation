@@ -172,7 +172,7 @@ We can create `matched_patients` with:
 ```python
 import datetime
 
-from ehrql.query_language import PatientFrame, Series, table_from_file
+from ehrql.tables import PatientFrame, Series, table_from_file
 
 CONTROLS = "output/matched_matches.arrow"
 
@@ -217,7 +217,7 @@ Putting it all together, our `dataset_definition_controls.py` now looks like thi
 import datetime
 
 from ehrql import codelist_from_csv, create_dataset
-from ehrql.query_language import PatientFrame, Series, table_from_file
+from ehrql.tables import PatientFrame, Series, table_from_file
 from ehrql.tables.core import clinical_events
 
 
