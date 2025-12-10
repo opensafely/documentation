@@ -153,10 +153,8 @@ In this step, we will construct a third dataset definition to extract only the n
 
 We will name this dataset definition `dataset_definition_controls.py`.
 
-We will use the `@table_from_file` feature in ehrQL to make a table called `matched_patients` from the `matched_matches.arrow` file.
-When we are done, `matched_patients` would behave as if it were any other
-[`PatientFrame`](./ehrql/reference/language.md#PatientFrame)
-in ehrQL.
+We will use the [`table_from_file`](./ehrql/reference/language/#table_from_file) feature in ehrQL to make a table called `matched_patients` from the `matched_matches.arrow` file.
+When we are done, `matched_patients` will behave as if it were any other ehrQL table.
 
 Suppose `matched_matches.arrow` has the following columns:
 
@@ -172,15 +170,18 @@ We can create `matched_patients` with:
 ```python
 import datetime
 
-from ehrql.tables import PatientFrame, Series, table_from_file
+from ehrql import table_from_file
 
 CONTROLS = "output/matched_matches.arrow"
 
-@table_from_file(CONTROLS)
-class matched_patients(PatientFrame):
-    age = Series(int)
-    sex = Series(str)
-    index_date = Series(datetime.date)
+matched_patients = table_from_file(
+  CONTROLS,
+  columns={
+    "age": int,
+    "sex": str,
+    "index_date": datetime.date
+  }
+)
 ```
 
 This allows us to only include the matched controls in our dataset.
@@ -216,21 +217,21 @@ Putting it all together, our `dataset_definition_controls.py` now looks like thi
 ```python
 import datetime
 
-from ehrql import codelist_from_csv, create_dataset
-from ehrql.tables import PatientFrame, Series, table_from_file
+from ehrql import codelist_from_csv, create_dataset, table_from_file
 from ehrql.tables.core import clinical_events
 
 
 CONTROLS = "output/matched_matches.arrow"
 codelist = codelist_from_csv("codelists/codelist.csv")
 
-
-@table_from_file(CONTROLS)
-class matched_patients(PatientFrame):
-    age = Series(int)
-    sex = Series(str)
-    index_date = Series(datetime.date)
-
+matched_patients = table_from_file(
+  CONTROLS,
+  columns={
+    "age": int,
+    "sex": str,
+    "index_date": datetime.date
+  }
+)
 
 dataset = create_dataset()
 dataset.define_population(matched_patients.exists_for_patient())
