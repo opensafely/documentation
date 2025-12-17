@@ -153,7 +153,7 @@ In this step, we will construct a third dataset definition to extract only the n
 
 We will name this dataset definition `dataset_definition_controls.py`.
 
-We will use the [`table_from_file`](./ehrql/reference/language/#table_from_file) feature in ehrQL to make a table called `matched_patients` from the `matched_matches.arrow` file.
+We will use the [`table_from_file`](./ehrql/reference/language.md#table_from_file) feature in ehrQL to make a table called `matched_patients` from the `matched_matches.arrow` file.
 When we are done, `matched_patients` will behave as if it were any other ehrQL table.
 
 Suppose `matched_matches.arrow` has the following columns:
