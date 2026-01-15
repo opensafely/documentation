@@ -72,7 +72,10 @@ IMD rankings are recalculated every 3 or 4 years.
 Consequently, there is no original ranking for some newly built residences.
 In these cases, the rounded ranking is -1.
 
----8<-- 'includes/imd-warning-header.md'
+!!! warning
+    The original IMD ranking is rounded to the nearest 100 in the OpenSAFELY-TPP and OpenSAFELY-EMIS databases.
+    The rounded IMD ranking ranges from 0 to 32,800.
+    If there is no original ranking, then the rounded ranking is -1 in the OpenSAFELY-TPP database and `NULL` in the OpenSAFELY-EMIS database.
 
 Occasionally, a patient has multiple active registrations on a given date.
 If so, the address is chosen as follows:
