@@ -14,7 +14,7 @@ Some SARS-CoV-2 testing info also flows directly into the primary care record fr
 * **Update frequency in OpenSAFELY** Approximately monthly
 * **Delay between event occurring and event appearing in OpenSAFELY** Approximately 1-2 weeks.
 * **Collected information** Earliest specimen date, lab report date, age, sex, county, test result, source ("pillar 2" or "other")
-
+* **End of data collection** [February 2024](https://digital.nhs.uk/services/data-access-request-service-dars/dars-products-and-services/data-set-catalogue/covid-19-second-generation-surveillance-system-sgss)
 
 ## Overview
 SGSS contains information on patients receiving a swab test for SARS-CoV-2, from Pillar 1 (NHS and PHE labs) and Pillar 2 (commercial partners).

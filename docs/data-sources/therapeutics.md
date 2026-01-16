@@ -8,6 +8,7 @@ The Therapeutics dataset contains information on COVID treatments used in inpati
 * **Update frequency in OpenSAFELY** Approximately weekly
 * **Delay between event occurring and event appearing in OpenSAFELY** Approximately 2-9 days
 * **Collected information** Treatment start date; therapeutic intervention; COVID indication, current status, risk group, region
+* **End of data collection** [July 2023](https://www.england.nhs.uk/statistics/statistical-work-areas/covid-therapeutics-antivirals-and-neutralising-monoclonal-antibodies/)
 
 
 ## Overview
