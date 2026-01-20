@@ -182,6 +182,7 @@ watch:
   - includes
 
 markdown_extensions:
+  - def_list
   - pymdownx.details
   - pymdownx.snippets:
       check_paths: true
