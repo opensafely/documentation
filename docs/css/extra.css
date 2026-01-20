@@ -178,10 +178,24 @@ body {
 /* Google Custom Search Engine styling */
 .md-search {
   position: relative;
+  display: block !important;
+  opacity: 1 !important;
+  transform: none !important;
+  width: auto !important;
+  max-width: 400px;
+}
+
+.md-search__inner {
+  display: block !important;
 }
 
 .gcse-search {
   width: 100%;
+}
+
+/* Hide the default search toggle icon since CSE is always visible */
+.md-header__button[for="__search"] {
+  display: none;
 }
 
 /* Search input styling */
