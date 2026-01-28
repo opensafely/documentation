@@ -17,8 +17,7 @@ Medications are coded using DM+D codes, and are available in the `MedicationIssu
 The `Vaccination` table contains information on administered vaccinations, identified using either the target disease (e.g., influenza), or the vaccine product (e.g., Optaflu).
 
 !!! warning
-    Detailed information on onward referrals is not currently available.
-    A subset of referrals are recorded in the `CodedEvent` table but this data will be incomplete.
+    Detailed information on onward referrals is not currently available. A subset of referrals are recorded in the `CodedEvent` table but this data will be incomplete.
 
 Only coded or other structured data can be accessed in OpenSAFELY &mdash; we do not have access to free text data.
 
@@ -26,9 +25,9 @@ Only coded or other structured data can be accessed in OpenSAFELY &mdash; we do 
 
 SARS-CoV-2 test result data is incorporated into SystmOne and uses the following CTV3 codes:
 
-* **Y20d1** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result positive_
-* **Y20d2** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result negative_
-* **Y23f6** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result unknown_
+- **Y20d1** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result positive_
+- **Y20d2** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result negative_
+- **Y23f6** _SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) RNA (ribonucleic acid) detection result unknown_
 
 These are coded in response to data flowing from Pillar 1 and Pillar 2. (At the time of writing, Dec 2020, Moonshot community tests are also planned to be incorporated).
 
@@ -44,22 +43,25 @@ However, invalid or unusual dates are possible and may occur for a number of rea
 
 Clinical codes relating to certain conditions or situations, as defined in the Royal College of GP’s (RCGP) sensitive datasets, are not available in OpenSAFELY. These are:
 
-* **Gender related issues**: SNOMED Refset for General Practice summary data sharing exclusion for gender related issues _999004351000000109_
-* **Assisted fertility**: SNOMED Refset for General Practice summary data sharing exclusion for assisted fertility _999004371000000100_
-* **Termination of pregnancy**: SNOMED Refset for General Practice summary data sharing exclusion for termination of pregnancy _999004361000000107_
-* **Sexuality and sexual activity**: Finding related to sexuality and sexual activity _All children of the SNOMED code 118199002_
+- **Gender related issues**: SNOMED Refset for General Practice summary data sharing exclusion for gender related issues _999004351000000109_
+- **Assisted fertility**: SNOMED Refset for General Practice summary data sharing exclusion for assisted fertility _999004371000000100_
+- **Termination of pregnancy**: SNOMED Refset for General Practice summary data sharing exclusion for termination of pregnancy _999004361000000107_
+- **Sexuality and sexual activity**: Finding related to sexuality and sexual activity _All children of the SNOMED code 118199002_
 
 ## Additional derived data
 
 ### Geographic and administrative groupings
+
 A patient registers with a practice using their home address.
 The postcode from this address is mapped to an Output Area, from which other larger geographic representations such as LSOA, MSOA, CCG, and STP can be derived (see [various](https://geoportal.statistics.gov.uk/search?q=Beginners%20Guide%20to%20UK%20Geographies) [ONS publications](https://www.ons.gov.uk/methodology/geography/ukgeographies) for more detail).
 
 #### MSOA
+
 According to our identifiable data minimisation principles, only representations as large or larger than MSOA are available to be extracted into a study cohort for analysis.
 Of ~36 million active patient addresses, less than 55,000 have no MSOA code set. These are a split of no postcode entered, an invalid postcode entered, and no fixed abode.
 
 #### IMD
+
 IMD ([Index of Multiple Deprivation](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)) is a ranking of LSOAs based on various characteristics of the areas.
 The original ranking ranges from 1 to 32,844 (the number of LSOAs in England),
 where 1 is the most deprived area.
@@ -80,9 +82,9 @@ In these cases, the rounded ranking is -1.
 Occasionally, a patient has multiple active registrations on a given date.
 If so, the address is chosen as follows:
 
-* choose the registration with the latest start date;
-* if this is not unique, then choose the registration with the latest end date;
-* if this is not unique, then choose the registration with the lowest ID.
+- choose the registration with the latest start date;
+- if this is not unique, then choose the registration with the latest end date;
+- if this is not unique, then choose the registration with the lowest ID.
 
 If a patient's address is not recorded, then these geographic variables are not available for analysis.
 
@@ -90,17 +92,16 @@ If a patient's address is not recorded, then these geographic variables are not 
 
 Content to be written.
 
-
 ## Externally linked data
 
 Patient records from external datasets are imported and matched to the core primary care data as follows:
 
-* Patient records from other external sources are matched to SystmOne records on NHS numbers via a [salted](https://en.wikipedia.org/wiki/Salt_(cryptography)) [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function):
-	* Usually this is done by the data controllers of the external dataset &mdash; that is, hashed NHS numbers for patients in OpenSAFELY are sent to the external data controller, they identify all the matching records in their dataset, and then send only those records back to OpenSAFELY.
-	* For some datasets (ICNARC), OpenSAFELY receives the hashed NHS numbers from the external dataset and the matching occurs inside OpenSAFELY. The matched IDs are then sent back and the matched records are returned to OpenSAFELY.
-* No other identifiers (names, postcodes, DOBs etc) are used for matching, though this may change in future.
-* No patient identifiers are imported from external datasets.
-* Only records for patients with matching NHS numbers are imported to OpenSAFELY (i.e., `left_join(SystmOne, External, by='NHSNumber')`).
+- Patient records from other external sources are matched to SystmOne records on NHS numbers via a [salted](<https://en.wikipedia.org/wiki/Salt_(cryptography)>) [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function):
+  - Usually this is done by the data controllers of the external dataset &mdash; that is, hashed NHS numbers for patients in OpenSAFELY are sent to the external data controller, they identify all the matching records in their dataset, and then send only those records back to OpenSAFELY.
+  - For some datasets (ICNARC), OpenSAFELY receives the hashed NHS numbers from the external dataset and the matching occurs inside OpenSAFELY. The matched IDs are then sent back and the matched records are returned to OpenSAFELY.
+- No other identifiers (names, postcodes, DOBs etc) are used for matching, though this may change in future.
+- No patient identifiers are imported from external datasets.
+- Only records for patients with matching NHS numbers are imported to OpenSAFELY (i.e., `left_join(SystmOne, External, by='NHSNumber')`).
 
 Matching quality is dependent on the quality of NHS numbers (they're good but not infallible).
 Currently there is no direct evaluation of linkage quality because by design (minimisation of the transfer of sensitive data) we don't have access to direct identifiers from external datasets; nor do we know in general if we should be expecting a match or not.
@@ -108,6 +109,7 @@ Currently there is no direct evaluation of linkage quality because by design (mi
 When TPP receive data from external data sources (eg ONS), the tables are completely replaced.
 
 ## OpenSAFELY-TPP database builds
+
 The OpenSAFELY-TPP database is typically built once per week.
 In essence, this involves refreshing the database records so that the following groups are available for analysis:
 
@@ -123,9 +125,6 @@ Old database builds cannot be recovered, and due to the differences between succ
 
 For those with access to the OpenSAFELY database, the latest database build time is available in the `LatestBuildTime` table, and the history of builds for each dataset is available in the `BuildInfo` table.
 
-
-
-
 ## OpenSAFELY-TPP database coverage and metadata
 
 - [Most recent coverage of records in SystmOne and external datasets](https://reports.opensafely.org/reports/opensafely-tpp-database-builds/)
@@ -133,6 +132,4 @@ For those with access to the OpenSAFELY database, the latest database build time
 - [OpenSAFELY-TPP database schema](https://reports.opensafely.org/reports/opensafely-tpp-database-schema/)
 - [OpenSAFELY-TPP database table examples (based on dummy data)](https://github.com/opensafely/tpp-sql-notebook/blob/master/notebooks/tpp-schema.ipynb)
 
-
-[^1]:
-    "Registered" here means a patient with a full "GMS" (General Medical Services) registration. Patients with temporary registrations are not included.
+[^1]: "Registered" here means a patient with a full "GMS" (General Medical Services) registration. Patients with temporary registrations are not included.
