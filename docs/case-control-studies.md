@@ -47,7 +47,7 @@ actions:
 
 ## Extract data for the cases
 
-In this step, we will construct [a dataset definition](./ehrql/tutorial/building-a-dataset/index.md) to extract all the data we need for the cases. The dataset definition will include:
+In this step, we will construct [a dataset definition](./ehrql/tutorials/introduction-to-ehrql/building-a-dataset/index.md) to extract all the data we need for the cases. The dataset definition will include:
 
   - an *index date variable*
   - *matching data*, or the variables we will use to match the cases to the potential controls (e.g. we might want to match patients on age and sex); these variables may or may not be used in later analysis.
