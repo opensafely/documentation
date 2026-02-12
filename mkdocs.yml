@@ -14,6 +14,8 @@ nav:
       - Access policies: access-policies.md
       - A high level overview of how OpenSAFELY works: how-opensafely-works.md
       - Technical architecture: technical-architecture.md
+      - OpenSAFELY data:
+          - OpenSAFELY data: opensafely-data/index.md
       - Type One Opt-Outs: type-one-opt-outs.md
       - National Data Opt-Outs: national-data-opt-outs.md
       - Contributing: contributing.md
