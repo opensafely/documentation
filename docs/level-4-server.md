@@ -16,11 +16,16 @@ If you have Level 4 access you can use [Airlock](outputs/viewing-with-airlock.md
     with older *Intel* hardware have had success in accessing Level 4
     when running Windows in a virtual machine.
 
-    However, Mac users with newer Macs that have *Apple* processors —
-    for example, the M1 processor — can only run Windows in a virtual
-    machine via the Windows on ARM release: **this configuration is
-    currently incompatible with the client necessary for Level 4
-    access.**
+    However, Mac users with newer Macs that have *Apple* processors
+    **cannot run Windows in a virtual machine that is compatible with
+    the client necessary for Level 4 access.**
+
+    Macs from 2020 onwards are likely to have an Apple processor.
+    You can check by going to the Apple menu in the top left of your
+    screen and choosing "About This Mac". If the chip or processor
+    information includes "Intel", it is an older model. If the chip
+    starts with "Apple M...", it is a newer model which is
+    incompatible with the client.
 
     Macs with Apple processors are still suitable for writing, testing
     and submitting OpenSAFELY code to be run on the secure server.
