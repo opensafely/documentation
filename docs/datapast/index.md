@@ -25,7 +25,7 @@ The Clinical DATAPAST forms one of several mitigations established by the OpenSA
 
 ## Who is part of the Clinical DATAPAST?
 
-Prior to full implementation of the Clinical DATAPAST (expected sometime shortly after April 2025), we will roll out an interim process where the regular clinical advisor will be Dr Amir Mehrkar, an NHS GP, Clinical Informatician, and Director of IG and External Relations at OpenSAFELY. He will be supported by other clinicians (such as clinical pharmacists and clinical informaticians), as well as data scientists and epidemiologists with strong experience in GP data.
+Prior to full implementation of the Clinical DATAPAST, we will roll out an interim process where the regular clinical advisor will be Dr Amir Mehrkar, an NHS GP, Clinical Informatician, and Director of IG and External Relations at OpenSAFELY. He will be supported by other clinicians (such as clinical pharmacists and clinical informaticians), as well as data scientists and epidemiologists with strong experience in GP data.
 
 It is expected that when the Clinical DATAPAST is fully implemented, all advisors will be clinicians or clinical informaticians (or another member of the general practice team appropriate for the study in question); all will have some knowledge of Electronic Health Record data and quantitative research methods, and be independent from the OpenSAFELY service and the Bennett Institute for Applied Data Science (University of Oxford).
 
