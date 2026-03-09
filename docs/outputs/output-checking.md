@@ -17,7 +17,7 @@ documentation on [releasing with Airlock](../using-opensafely/viewing-and-releas
 Below are the most common problems encountered by output checkers when reviewing output review requests. **Avoiding these issues makes it more likely your files can be released first time round**, saving reviewer time and allowing quicker file release for you and other researchers.
 
 1. **There are unrounded counts in the outputs**. All counts should be [rounded](sdc.md#rounding-counts). This includes rounding counts prior to them being used to calculate further statistics, such as percentages or odds ratios. Commonly raw counts are rounded, but downstream statistics are calculated using the raw counts rather than the rounded counts. Unrounded counts account for **~30%** of rejections.
-2. **Insufficicent context is provided for the outputs**. **~25%** of rejected outputs are due to insufficient context. Make sure you have provided all of the context needed to review each output in isolation in the request form. Common errors include:
+2. **Insufficient context is provided for the outputs**. **~25%** of rejected outputs are due to insufficient context. Make sure you have provided all of the context needed to review each output in isolation in the request form. Common errors include:
     * Using unclear column/variable names or poorly describing the presented data. Refer to the [context requirements](requesting-file-release.md#context-and-controls).
     * Not clearly indicating the relationship between different outputs.
     * Where an output has previously been requested, not indicating how the output differs to previously reviewed version.
