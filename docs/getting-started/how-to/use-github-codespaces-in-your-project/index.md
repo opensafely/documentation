@@ -160,7 +160,7 @@ If you are using the `r:v1` image in your project, you can access RSTudio via:
 
 ### RStudio with the r:v2 image.
 
-Our codespaces environment does not yet natively support the new `r:v2` image with its builtin RStudio support. We anticpate adding explicit support for `r:v2` to codespaces in the future.
+Our codespaces environment does not yet natively support the new `r:v2` image with its builtin RStudio support. We anticipate adding explicit support for `r:v2` to codespaces in the future.
 
 However, you can manually run a version of RStudio that uses the `r:v2` image with the following command:
 
