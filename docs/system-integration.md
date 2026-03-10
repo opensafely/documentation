@@ -33,31 +33,38 @@ and how they interact.
 
 The specific steps required to create a minimal setup are:
 
-1. Deploy a [*job runner*](https://github.com/opensafely-core/job-runner) within your secure environment.
+1. Deploy a [*RAP Agent*](https://github.com/opensafely-core/job-runner/blob/main/DEVELOPERS.md#the-rap-agent) within your secure environment.
    A minimal configuration simply runs Docker containers
    and stores any resulting container output on a local disk.
 
-2. Deploy a [*job server*](https://github.com/opensafely-core/job-server)
-   that the *job runner* polls for jobs that end users request to be run.
+
+1. Deploy a [*RAP Controller*](https://github.com/opensafely-core/job-runner/blob/main/DEVELOPERS.md#the-rap-controller). This provides a service
+   that creates tasks for the RAP Agent to run, and a Django web application that provides a *RAP API*
+   that the *RAP Agent* polls for tasks, and the *job server* (see below) uses to submit jobs.
+
+     It is possible to use our existing *RAP Controller* instance; [contact us](how-to-get-help.md#data-providers)
+     if you would like us to configure this for you.
+
+1. Deploy a [*job server*](https://github.com/opensafely-core/job-server)
+   that uses the *RAP API* to submit jobs that end users request to be run, and to obtain updates on the
+   output of jobs.
 
      It is possible to use our existing instance of this server at our [*jobs site*](https://jobs.opensafely.org);
      [contact us](how-to-get-help.md#data-providers)
      if you would like us to configure this for you.
 
-3. Create a secure network with our [*GitHub proxy*](https://github.com/opensafely-core/proxy).
+1. Create a secure network with our [*GitHub proxy*](https://github.com/opensafely-core/proxy).
    This provides access to repositories with research study code to run
    and Docker images used to run the code.
 
-4. To provide *access to your database* from within your setup,
+1. To provide *access to your database* from within your setup,
    integrate into our [*ehrQL*](https://github.com/opensafely-core/ehrql) ETL tool:
 
      * via an implementation of a backend interface; [this is an example for TPP](https://github.com/opensafely-core/ehrql/blob/main/ehrql/backends/tpp.py)
      * and, if you are using an as-yet unsupported database, a query engine; [this is an example for Trino](https://github.com/opensafely-core/ehrql/blob/main/ehrql/query_engines/trino.py)
 
-5. *Releasing job outputs* requires:
+1. To enable *viewing and releasing job outputs*, deploy [*Airlock*](https://github.com/opensafely-core/ airlock) within your secure environment.
 
-     * the [*release-hatch*](https://github.com/opensafely-core/release-hatch) tool for reviewing outputs
-     * the [*output-publisher*](https://github.com/opensafely-core/output-publisher) tool for publishing outputs
 
 ### Deployment
 
