@@ -124,6 +124,7 @@ nav:
       - Requesting new libraries: requesting-libraries.md
       - Plan S and OpenSAFELY: plan-s.md
       - Updating the documentation: updating-the-docs.md
+      - Contributorship and content guidance: contributorship-and-content-guidance.md
   - Bennett Institute Open Manifesto: open-data-manifesto.md
   - Platform News: https://www.opensafely.org/changelog/
 theme:
