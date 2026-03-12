@@ -56,8 +56,8 @@ OpenSAFELY funders should be acknowledged. Suggested content:
 >
 > Additional contributions to OpenSAFELY have been funded by grants from:
 >
-> - Medical Research Council (MRC) via the National Core Study programme Longitudinal Health and Wellbeing strand (MCPC20030, MCPC20059 [2020-2022]) and the Data and Connectivity strand (MCPC20058 [2021-2022]);
-> - The National Institute for Health Research (NIHR) and the Medical Research Council (MRC) via the CONVALESCENCE programme (COV-LT-0009, MCPC20051 [2021-2024]);
+> - Medical Research Council (MRC) via the National Core Study programme Longitudinal Health and Wellbeing strand (MC_PC_20030, MC_PC_20059 [2020-2022]) and the Data and Connectivity strand (MC_PC_20058 [2021-2022]);
+> - The National Institute for Health Research (NIHR) and the Medical Research Council (MRC) via the CONVALESCENCE programme (COV-LT-0009, MC_PC_20051 [2021-2024]);
 > - NHS England via the Primary Care Medicines Analytics Unit [2021-2024].
 >
 > The views expressed are those of the authors and not necessarily those of the NIHR, Wellcome Trust, NHS England, Wellcome Trust, the Department of Health and Social Care, or other funders. Funders had no role in the study design, collection, analysis, and interpretation of data; in the writing of the report; and in the decision to submit the article for publication.
