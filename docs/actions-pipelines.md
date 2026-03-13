@@ -28,7 +28,7 @@ It is written using a configuration format called [YAML](https://yaml.org/), whi
 A simple example of a `project.yaml` is as follows:
 
 ```yaml
-version: "4.0"
+version: "5.0"
 
 actions:
   generate_dataset:
