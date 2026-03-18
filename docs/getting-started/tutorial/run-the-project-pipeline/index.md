@@ -24,7 +24,7 @@ open the `project.yaml` file by clicking on it. This file will be near the end o
 You should see a tab with the following content:
 
 ```yaml linenums="1" hl_lines="5"
-version: "4.0"
+version: "5.0"
 
 actions:
   generate_dataset:

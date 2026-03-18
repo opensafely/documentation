@@ -67,7 +67,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 === "Python"
 
     ```yaml linenums="1" hl_lines="10 11 12 13 14 15"
-    version: "4.0"
+    version: "5.0"
 
     actions:
       generate_dataset:
@@ -87,7 +87,7 @@ This code reads the CSV of patient data, and saves a histogram of ages to a new 
 === "R"
 
     ```yaml linenums="1" hl_lines="10 11 12 13 14 15"
-    version: "4.0"
+    version: "5.0"
 
     actions:
       generate_dataset:
