@@ -125,11 +125,11 @@ fix: devenv
 
 # Run the dev project
 run: devenv
-    $BIN/mkdocs serve -a localhost:8910
+    NO_MKDOCS_2_WARNING=1 $BIN/mkdocs serve -a localhost:8910
 
 # Build the documentation
 build: devenv
-    $BIN/mkdocs build --strict
+    NO_MKDOCS_2_WARNING=1 $BIN/mkdocs build --strict
 
 # Count words in generated documentation content (within <article> tags)
 wordcount: build
