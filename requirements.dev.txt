@@ -22,15 +22,15 @@ distlib==0.4.0 \
     --hash=sha256:9659f7d87e46584a30b5780e43ac7a2143098441670ff0a49d5f9034c54a6c16 \
     --hash=sha256:feec40075be03a04501a973d81f633735b4b69f98b05450592310c0f401a4e0d
     # via virtualenv
-filelock==3.25.0 \
-    --hash=sha256:5ccf8069f7948f494968fc0713c10e5c182a9c9d9eef3a636307a20c2490f047 \
-    --hash=sha256:8f00faf3abf9dc730a1ffe9c354ae5c04e079ab7d3a683b7c32da5dd05f26af3
+filelock==3.25.2 \
+    --hash=sha256:b64ece2b38f4ca29dd3e810287aa8c48182bbecd1ae6e9ae126c9b35f1382694 \
+    --hash=sha256:ca8afb0da15f229774c9ad1b455ed96e85a81373065fb10446672f64444ddf70
     # via
     #   python-discovery
     #   virtualenv
-identify==2.6.17 \
-    --hash=sha256:be5f8412d5ed4b20f2bd41a65f920990bdccaa6a4a18a08f1eefdcd0bdd885f0 \
-    --hash=sha256:f816b0b596b204c9fdf076ded172322f2723cf958d02f9c3587504834c8ff04d
+identify==2.6.18 \
+    --hash=sha256:873ac56a5e3fd63e7438a7ecbc4d91aca692eb3fefa4534db2b7913f3fc352fd \
+    --hash=sha256:8db9d3c8ea9079db92cafb0ebf97abdc09d52e97f4dcf773a2e694048b7cd737
     # via pre-commit
 nodeenv==1.10.0 \
     --hash=sha256:5bb13e3eed2923615535339b3c620e76779af4cb4c6a90deccc9e36b274d3827 \
@@ -165,9 +165,9 @@ ruff==0.15.6 \
     --hash=sha256:ee7dcfaad8b282a284df4aa6ddc2741b3f4a18b0555d626805555a820ea181c3 \
     --hash=sha256:ee7dcfaad8b282a284df4aa6ddc2741b3f4a18b0555d626805555a820ea181c3
     # via -r requirements.dev.in
-virtualenv==21.1.0 \
-    --hash=sha256:164f5e14c5587d170cf98e60378eb91ea35bf037be313811905d3a24ea33cc07 \
-    --hash=sha256:1990a0188c8f16b6b9cf65c9183049007375b26aad415514d377ccacf1e4fb44
+virtualenv==21.2.0 \
+    --hash=sha256:1720dc3a62ef5b443092e3f499228599045d7fea4c79199770499df8becf9098 \
+    --hash=sha256:1bd755b504931164a5a496d217c014d098426cddc79363ad66ac78125f9d908f
     # via pre-commit
 wheel==0.46.3 \
     --hash=sha256:4b399d56c9d9338230118d705d9737a2a468ccca63d5e813e2a4fc7815d8bc4d \
@@ -179,7 +179,7 @@ pip==26.0.1 \
     --hash=sha256:bdb1b08f4274833d62c1aa29e20907365a2ceb950410df15fc9521bad440122b \
     --hash=sha256:c4037d8a277c89b320abe636d59f91e6d0922d08a05b60e85e53b296613346d8
     # via pip-tools
-setuptools==82.0.0 \
-    --hash=sha256:22e0a2d69474c6ae4feb01951cb69d515ed23728cf96d05513d36e42b62b37cb \
-    --hash=sha256:70b18734b607bd1da571d097d236cfcfacaf01de45717d59e6e04b96877532e0
+setuptools==82.0.1 \
+    --hash=sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9 \
+    --hash=sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb
     # via pip-tools
