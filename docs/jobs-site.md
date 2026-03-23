@@ -152,9 +152,11 @@ As part of publishing your outputs, you should also make the repository where yo
 
 
 ## Updating project status
+Project statuses are not displayed publicly, but are used internally within the Bennett Institute to help manage the OpenSAFELY service.
+
 When you start a new project on OpenSAFELY it will have the _Ongoing_ status, but as your work progresses you'll want to update this status.
 
-If you are a member of a project you will see an `Edit` button near the top of your project page:
+If you are a member of a project you will see an `Edit` button near the top of that project's page:
 
 ![Project edit button](./images/project-edit-button.png)
 
