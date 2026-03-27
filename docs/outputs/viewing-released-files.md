@@ -16,6 +16,6 @@ If you have had [aggregated results released](requesting-file-release.md#release
 
 ### Reporting a data breach
 
-If you discover or suspect a data breach involving the OpenSAFELY Service, including the discovery of files released to the Jobs site that have been insufficiently redacted and still contain sensitive information, you should immediately email the OpenSAFELY Incident Team (<incidents@opensafely.org>) providing as much information as possible. Ensure you do not share these files and if they have already been shared please identify as best as possible with whom they have been shared.
+If you discover or suspect a data breach involving the OpenSAFELY Service, including the discovery of files released to the Jobs site that have been insufficiently redacted and still contain sensitive information, you must immediately email the OpenSAFELY Incident Team (<incidents@opensafely.org>) providing as much information as possible. Ensure you do not share these files and if they have already been shared please identify as best as possible with whom they have been shared.
 
 Please refer to the [Incident Management Policy](https://www.opensafely.org/incident-management-policy/) for further information.
