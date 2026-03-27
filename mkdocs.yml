@@ -76,6 +76,7 @@ nav:
         - Review process for release requests: outputs/output-checking.md
         - Viewing released outputs: outputs/viewing-released-files.md
         - Viewing and Releasing with Airlock: '!import https://github.com/opensafely-core/airlock?branch=main'
+      - Reporting a Data Breach: reporting-a-data-breach.md
       - Reports:
         - Overview: reports/intro.md
         - Create a draft: reports/create-a-draft.md
