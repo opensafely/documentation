@@ -7,11 +7,11 @@
 
 The Clinical DATAPAST (**Data** **P**ublication, **A**dvice and **S**upport **T**eam) function will act as a distinct but integral part of the publication approval service which was piloted during the pandemic.
 
-**Publication approval = Clinical DATAPAST advice + NHS England approval decision**
+**Publication approval = Clinical DATAPAST advice + Department of Health & Social Care (DHSC) approval decision**
 
 ## What does the Clinical DATAPAST do?
 
-The Clinical DATAPAST function will provide advisory feedback to users (and the study leads) from clinical advisors[^1] on any work submitted for publication approval prior to NHS England receiving the work for an approval decision.
+The Clinical DATAPAST function provides advisory feedback to Users (and the Project Leads) from two members of the Bennett Institute on any work submitted for publication approval prior to the DHSC receiving the work for an approval decision.
 
 Each submitted piece of work will ordinarily receive feedback from two advisors.
 
@@ -20,31 +20,31 @@ Each submitted piece of work will ordinarily receive feedback from two advisors.
 The Clinical DATAPAST forms one of several mitigations established by the OpenSAFELY service to address the GP profession’s requirements:
 
 - to maintain alignment with the project’s approved purpose;
-- to maintain the quality of the publication content by advising project leads regarding how clinical interactions are coded within GP EHR systems;
+- to maintain the quality of the publication content by advising Project Leads regarding how clinical interactions are coded within GP EHR systems;
 - to help ensure conclusions on clinical policies and services are supported by the data.
 
 ## Who is part of the Clinical DATAPAST?
 
-Prior to full implementation of the Clinical DATAPAST, we will roll out an interim process where the regular clinical advisor will be Dr Amir Mehrkar, an NHS GP, Clinical Informatician, and Director of IG and External Relations at OpenSAFELY. He will be supported by other clinicians (such as clinical pharmacists and clinical informaticians), as well as data scientists and epidemiologists with strong experience in GP data.
+Prior to full implementation of the Clinical DATAPAST, we have an interim process involving two members of the Bennett Institute, drawn from clinicians (such as clinical pharmacists and clinical informaticians), data scientists and epidemiologists with substantial experience of GP data.
 
 It is expected that when the Clinical DATAPAST is fully implemented, all advisors will be clinicians or clinical informaticians (or another member of the general practice team appropriate for the study in question); all will have some knowledge of Electronic Health Record data and quantitative research methods, and be independent from the OpenSAFELY service and the Bennett Institute for Applied Data Science (University of Oxford).
 
 The Joint GP IT Committee of the British Medical Association and Royal College of GPs are in support of the interim process, pending full implementation.
 
-## What does the NHS England approval decision assess?
+## What does the Department of Health & Social Care approval decision assess?
 
-The primary assessment of NHS England is to determine that the study leads did in fact do what they said they would do as was written in their initial application. Put simply, was the material submitted in-line with the approved project purpose? If not, NHS England will provide advice to the study leads.
+The primary assessment of the DHSC is to determine that the Project Leads did in fact do what they said they would do as was written in their initial application. Put simply, was the material submitted in-line with the approved project purpose? If not, the DHSC will provide advice to the Project Leads.
 
-To make their judgement, NHS England will use the actual material submitted, including the lay summary, and the information from the DATAPAST templates. As data controller, NHS England may exercise their judgement on how to constructively act on (both internally and externally) any information that could be deemed contentious, for example, information that could materially affect patient safety. NHS England will promptly communicate with study leads if there are any matters of concern.
+To make their judgement, the DHSC will use the actual material submitted, including the lay summary, and the information from the DATAPAST templates. The DHSC may exercise their judgement on how to constructively act on (both internally and externally) any information that could be deemed contentious, for example, information that could materially affect patient safety. The DHSC will promptly communicate with Project Leads if there are any matters of concern.
 
 ## How will the interim process work?
 
 ### A summary
 
-- There will be a structured DATAPAST template that advisors use to provide advice on your submitted work; academic users may recognise some parallels with the peer review process for journal submission.
-- The template includes sections for users to provide responses.
-- The completed templates, submitted work (with any amendments following users' consideration of the advice), and the lay summary will then be submitted to NHS England for an approval decision.
-- The completed templates, independent of the final NHS England approval decision, will be placed in the public domain (most likely attached to the project on our jobserver, but the exact location is yet to be determined).
+- There will be a structured DATAPAST template that advisors use to provide advice on your submitted work; academic Users may recognise some parallels with the peer review process for journal submission.
+- The template includes sections for Users to provide responses.
+- The completed templates, submitted work (with any amendments following Users' consideration of the advice), and the lay summary will then be submitted to the DHSC for an approval decision.
+- The completed templates, independent of the final DHSC approval decision, will be placed in the public domain (most likely attached to the project on our jobserver, but the exact location is yet to be determined).
 
 ### The detail
 
@@ -57,18 +57,16 @@ The [DATAPAST template](https://docs.google.com/document/d/10derqFbS3c0SbZxGnBb1
 
 ## The workflow for submission for publication approval
 
-All OpenSAFELY project outputs (e.g results, papers, presentations, etc.) need to be approved before they can be made public (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). The Clinical Datapast Review forms part of this publication approval process. For full guidance, including step-by-step instructions, can be found on the Policies for Researchers webpage > Acknowledgement and Data Sharing/Publication Policy > Publication of Results > in the Datasets used section. 
+All OpenSAFELY project outputs (e.g results, papers, presentations, etc.) need to be approved before they can be made public (e.g. submitting to a journal or a pre-print server, or uploading to any public facing website). The Clinical DATAPAST Review forms part of this publication approval process. 
+
+The Publication of Results Policy can be found at https://www.opensafely.org/policies-for-researchers/publication-of-results-policy/ 
 
 ## The timelines
 
-1. Users can expect to receive the DATAPAST templates from advisors within 2-4 weeks of submitting their work for publication approval (subject to annual leave and other service pressures). For specific review cutoff dates please see our publication of results policy.
-1. After the DATAPAST templates have been reviewed and completed by users (alongside any amendments to work, where appropriate), the work will be submitted to NHS England for an approval decision.
-1. NHS England typically responds within 2 weeks (subject to annual leave and service pressures).
+1. Users can expect to receive the DATAPAST templates from advisors within 2-4 weeks of submitting their work for publication approval (subject to annual leave and other service pressures). 
+1. After the DATAPAST templates have been reviewed and completed by Users (alongside any amendments to work, where appropriate), the work will be submitted to the DHSC for an approval decision.
+1. The DHSC typically responds within 2-4 weeks (subject to annual leave and service pressures).
 
-Please refer to the [policies for researchers page](https://www.opensafely.org/policies-for-researchers/#all-datasets-publication) for full details of the publication review process, which now incorporates the Clinical DATAPAST function.
-
-Please reach out to your co-pilot in the meantime if you have any questions, or post them in the user slack channel.
+Please reach out to your Co-pilot in the meantime if you have any questions, or post them in the opensafely-users Slack channel, or alternatively, email publications@opensafely.org with your enquiry.
 
 The OpenSAFELY Leadership Team.
-
-[^1]: GPs, including clinicians from other relevant professions with the necessary experience and skills to provide project-specific advice
