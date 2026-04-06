@@ -3,7 +3,7 @@
 # To generate requirements file, run:
 # pip-compile --generate-hashes --output-file=requirements.prod.txt requirements.prod.in
 
-click==8.2.1 # See https://github.com/mkdocs/mkdocs/issues/4032
+click==8.3.1 # See https://github.com/mkdocs/mkdocs/issues/4032
 mkdocs
 mkdocs-macros-plugin
 mkdocs-material
