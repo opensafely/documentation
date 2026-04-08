@@ -17,7 +17,11 @@ updates:
         dependency-type: "development"
     allow:
       - dependency-type: "all"
-
+    ignore:
+      # mkdocs has a file reload bug with newer click versions,
+      # so pin until this is resolved:
+      # https://github.com/mkdocs/mkdocs/issues/4032
+      - dependency-name: "click"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
