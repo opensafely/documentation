@@ -7,14 +7,10 @@ for purposes beyond individual care across the health and adult social care syst
 The national data opt-out does not apply to the
 [OpenSAFELY COVID-19 Service](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/directions-and-data-provision-notices/data-provision-notices-dpns/opensafely-covid-19-service-data-provision-notice)
 or the [OpenSAFELY Data Analytics Service](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/directions-and-data-provision-notices/data-provision-notices-dpns/opensafely-data-analytics-service).
-The opt-out does not apply to anonymous data.
-System suppliers pseudonymise the data prior to queries being run in the services
-and only anonymous aggregate data is shared with users of the services once it has been output checked.
 
-In certain limited circumstances, and where ethics approvals support it,
-an OpenSAFELY Data Analytics Service project may wish to apply the national data opt-out,
+In certain limited circumstances an OpenSAFELY Data Analytics Service project may wish to apply the national data opt-out,
 notwithstanding that the service operates under an exemption to the national data opt-out policy.
-This page describes the implementation of such applications.
+This page describes the technical implementation for projects that require it.
 
 ## Technical details
 
@@ -52,26 +48,3 @@ ehrQL will automatically add an extra condition to this population definition:
 the patient's pseudonymous ID number must appear in the list of ID numbers provided by the system supplier.
 
 Again, the [code which enforces this](https://github.com/opensafely-core/ehrql/blob/6b6e5e5c3ccf997f919569101570ef59619762f0/ehrql/backends/tpp.py#L138-L150) is publicly available on Github.
-
-### Data access which does _not_ go via ehrQL
-
-There are two sorts of circumstances under which data access in OpenSAFELY does not go via ehrQL.
-
-#### 1. SQL Runner
-
-SQL Runner is a tool which allows the user to retrieve data by writing "raw" SQL rather than ehrQL.
-It is intended for the data curation and investigation tasks necessary for operating the platform, rather than research purposes.
-Its use is therefore limited to just those OpenSAFELY staff involved in this work.
-Details of the circumstances under which OpenSAFELY staff may perform development and maintenance activities are described in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/).
-
-This is enforced by a parallel mechanism to that which controls access to out-out data via ehrQL and any changes to this policy will appear in the public [audit log](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/sqlrunner.py).
-All SQL Runner code run against patient data is also visible on our public [“jobs” server](https://jobs.opensafely.org/).
-
-SQL Runner allows access to national opt-out data.
-
-#### 2. Direct access to pseudonymised data
-
-In order to facilitate the operation and maintenance of the OpenSAFELY platform a small number of individuals are able to access the pseudonymised data directly, without going via ehrQL or SQL Runner.
-It is important to note that the code run in such circumstances will not be publicly visible on our “jobs” server, but it is logged in the database audit file of the GP system suppliers; preventing access to national data opt-out data is not enforceable at this level.
-
-The circumstances under which this is permitted and the rationale are covered in detail in our [Data Access Policy](https://docs.opensafely.org/data-access-policy/) but, importantly, such access is never used for research purposes.
