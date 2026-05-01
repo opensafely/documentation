@@ -11,7 +11,7 @@ GitHub is the means by which code in the repository is passed to the server to b
 
 In accordance with the [Principles of OpenSAFELY](https://www.opensafely.org/about/#transparency-and-public-logs), we expect all code from all users to be made public.
 
-By default, repositories will initially be public, visible to anyone. Repositories may be temporarily set to private, visible to members of the opensafely organization only, [by request](#how-to-make-your-repository-private).
+By default, repositories will initially be public, visible to anyone. Repositories may be temporarily set to private, visible to members of the `opensafely` GitHub organization only, [by request](#how-to-make-your-repository-private).
 
 ### How to make your repository private
 
@@ -37,7 +37,7 @@ In earlier versions of OpenSAFELY, all results released from the secure server a
 
 ### When you need to make your code public
 
-A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have a [guide to publishing repositories](project-completion.md) that you must read. During the development stage of a project, a repository may be kept private, so that only members of the [`opensafely` GitHub organisation](https://github.com/opensafely) are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after first code execution.
+A repository must be made public if it forms part of a [publication](https://www.opensafely.org/policies-for-researchers/#acknowledgment-and-data-sharing--publication-policy). We have a [guide to publishing repositories](project-completion.md) that you must read. During the development stage of a project, a [repository may be kept private](#how-to-make-your-repository-private), so that only members of the [`opensafely` GitHub organisation](https://github.com/opensafely) are able to view it. We welcome people sharing code in public while they are developing, where they wish to do so, but we recognise that for many this would be a little like drafting a paper entirely in public, so it is not a requirement. Even when there is no publication, we expect all repositories to become public, within twelve months after first code execution.
 
 !!! warning
     You should _never_ commit files or content that should not be made public to the repository. All committed files, whether on the `main` branch or on development branches, will remain in the git history of the repository even after they have been deleted. These might include for example patient- or commercially-sensitive data from other sources, internal institutional documentation or forms, and incomplete manuscript drafts.
@@ -49,33 +49,35 @@ To create a repository for your OpenSAFELY project, you can either:
 - Have a new repository created for you in the `opensafely` GitHub organisation
 - Create a repository in your own GitHub account, and request to have this transferred to the `opensafely` GitHub organisation later
 
-### Default opensafely repository settings
+### Default repository settings in the GitHub `opensafely` organisation
 
 Any repositories created within, or transferred to, the `opensafely` organisation, will be configured with the settings, listed below:
 
 - Deletion of branches on merge: enabled
-- Branch protection for `master` and `main` branches: enabled
+- Branch protection for `master` and `main` branches: enabled (mandatory)
 - Require a pull request review before merging: disabled
+
+You can [contact Tech Support](how-to-get-help.md/#slack) to request changes to your repository settings; those listed as *mandatory* above cannot be changed.
 
 ### New researchers and projects
 
-When you are approved to start working on an OpenSAFELY research project, you will be added to the `opensafely` GitHub organisation. Within the `opensafely` GitHub organisation, you’ll be added to the `researchers` team.
+When you are approved to start working on an OpenSAFELY research project, you will be added to the `opensafely` GitHub organisation to provide repository access.
 
 Contact [Tech Support](how-to-get-help.md/#slack) and ask them to create a new repository for your research, or transfer a repository from your personal GitHub account into the `opensafely` GitHub organisation (depending on your preference, and whether you have an existing repository to transfer).
 
-Newly-created and trasnferred repositories will be configured with the settings listed in [Default `opensafely` repository settings](#default-opensafely-repository-settings), above.
+Newly-created and transferred repositories will be configured with the settings listed in [default `opensafely` repository settings](#default-opensafely-repository-settings), above.
 
-Repositories will initially be public, but may be (temporarily) set to private at your request. See [Repository visibility](#repository-visibility) to make the right choice for your study.
+Repositories will initially be public, but may be temporarily set to private at your request. See [Repository visibility](#repository-visibility) to make the right choice for your study.
 
 ### Established researchers and projects
 
 Contact [Tech Support](how-to-get-help.md/#slack) to request the creation of any additional repositories you require. Please provide a name for the repository when you make a request. Your repository name should be short but informative &mdash; browse [existing repo names](https://github.com/orgs/opensafely/repositories) for inspiration.
 
-All repositories will be created using the OpenSAFELY [research-template repo](https://github.com/opensafely/research-template). You can see a detailed breakdown of this repository’s structure in [Repository structure](#repository-structure).
+All repositories will be created using the OpenSAFELY [research-template repo](https://github.com/opensafely/research-template). Refer to the [detailed breakdown of this repository’s structure](#repository-structure).
 
 ## Transferring your own repository to the `opensafely` GitHub organisation
 
-You may want to start work on a project before approval by creating a repository in your own GitHub account (see [instructions for how to do this](#creating-a-research-repository-in-your-own-github-account-so-that-you-can-transfer-it-later), below). You can request that this repository is transferred to the `opensafely` organisation at a later date.
+You may want to start work on a project before approval by [creating a repository in your own GitHub account](#creating-a-research-repository-in-your-own-github-account-so-that-you-can-transfer-it-later). You can request that this repository is transferred to the `opensafely` organisation at a later date.
 
 !!! warning
     Creating a repository owned by your GitHub user account will enable you to:
@@ -87,15 +89,13 @@ You may want to start work on a project before approval by creating a repository
 
 ### How to transfer an existing repository to the opensafely organization
 
-To transfer a repository from your personal GitHub account to the OpenSAFELY organisation, follow the instructions [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account). You will then need to contact [Tech Support](how-to-get-help.md/#slack), to request approval for the repository transfer.
+To transfer a repository from your personal GitHub account to the OpenSAFELY organisation:
 
-If your request is approved, Tech Support will notify you once the transfer has been completed. You will also be able to see the repository on the `opensafely` organisation [Repositories page](https://github.com/orgs/opensafely/repositories).
+1. Follow [GitHub's instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account) to initiate a transfer.
+2. Contact [Tech Support](how-to-get-help.md/#slack) to request approval for the repository transfer.
+3. Tech Support will notify you once the transfer has been completed. You will also be able to see the repository listed in the [`opensafely` organisation](https://github.com/orgs/opensafely/repositories) once transferred.
 
-The settings of any transferred repositories will be updated to match the default `opensafely` repository settings, listed below:
-
-- Deletion of branches on merge: enabled
-- Branch protection for `master` and `main` branches: enabled
-- Require a pull request before merging: disabled
+The settings of any transferred repositories will be updated to match the [default `opensafely` repository settings](#default-repository-settings-in-the-github-opensafely-organisation).
 
 ### Creating a research repository in your own GitHub account so that you can transfer it later
 

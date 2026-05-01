@@ -69,7 +69,7 @@ You will be prompted to check various bits of metadata associated with the repos
 Once you have completed this page it will be checked by the OpenSAFELY team before being made public.
 
 !!! info
-    Private repositories within the opensafely GitHub organisation are made public after 12 months. This means that your repository may be made public before project completion, if you first ran the code against an OpenSAFELY database more than 12 months ago. You can find more information about repository visibility and how this is managed [here](repositories.md/#repository-visibility).
+    Private repositories within the opensafely GitHub organisation are made public after 12 months. This means that your repository may be made public before project completion, if you first ran the code against an OpenSAFELY database more than 12 months ago. You can find more information about repository visibility and how this is managed in the [Repository visibility](repositories.md/#repository-visibility) section of our documentation.
 
 ## Make your outputs on the jobs site public
 

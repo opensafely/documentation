@@ -6,8 +6,8 @@ The jobs site is centred around **Projects**. When an application to run a study
 
 We will add any GitHub usernames listed in your approval to our `opensafely` [GitHub organisation](https://github.com/opensafely). We will also ask you to [transfer](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account) your existing OpenSAFELY study repository (if you have one) into the same organisation. This allows OpenSAFELY to enforce certain security standards, such as [multi-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
 
-!!! warning
-    It is important that the study repository is _transferred_ into the `opensafely` organization, not forked into it. You can request to transfer your existing OpenSAFELY study repository by following the process outlined [here](repositories.md/#how-to-transfer-an-existing-repository-to-the-opensafely-organization).
+!!! info
+    You can request to transfer your existing OpenSAFELY study repository by following the [outlined process](repositories.md/#how-to-transfer-an-existing-repository-to-the-opensafely-organization).
 
 
 Within each _Project_, there are one or more **Workspaces**, which are linked to a GitHub repository in the [`opensafely` organisation](https://github.com/opensafely). Any [actions](actions-intro.md) you develop as part of your [project pipeline](actions-pipelines.md) within the attached repository are linked to the workspace, allowing these to be run against real data.
@@ -87,7 +87,7 @@ If you are not able to do any of the tasks and you think you should, please cont
     * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`)
     * Click `Create workspace`
 
-When a new repository is added to the [`opensafely` organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
+When a new repository is added to the [`opensafely` organisation](https://github.com/opensafely), it may take up to 15 minutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
 
 ![Create a new workspace button on the project page](./images/create_new_workspace_1.png)
 

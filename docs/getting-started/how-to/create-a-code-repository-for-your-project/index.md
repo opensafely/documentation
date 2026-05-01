@@ -8,7 +8,7 @@
 You only need to create a code repository once for a particular project.
 
 
-To create a repository for your OpenSAFELY project, you can either:
+To create a repository for your OpenSAFELY research project, you can either:
 
 - Have a new repository created for you in the `opensafely` GitHub organisation
 - Create a repository in your own GitHub account, and request to have this transferred to the `opensafely` GitHub organisation later
