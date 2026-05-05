@@ -69,36 +69,42 @@ There are some additional roles linked to the release of outputs from the server
 
 #### Viewing and requesting changes to your permissions
 
-You can view the permissions you have for your project by navigating to the _Project_ page (see arrow below), where can see the permissions for all researchers involved in your project.
+You can view the permissions you have for your project by navigating to the _Project_ page, where can see the permissions for all researchers involved in your project.
 
 ![Jobs site project page](./images/view_project.png)
 
 If you are not able to do any of the tasks and you think you should, please contact your co-pilot to confirm you have the correct permissions.
+
 ## Creating a Workspace
 
-* **Log in** using your GitHub credentials
-* **Create a Workspace**:
-    * Click the `Create a new workspace` button (circled in red below).
-    * Pick a _Project_ from the list.
-    * Click the `Create a new workspace` link.
-    ![Create new workspace](./images/create_new_workspace.png)
-    * Choose a name, for example the name of the repo.
-    * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`).
-    * Click `Create`.
+- **Log in** using your GitHub credentials
+- Go to your project page
+- **Create a Workspace**:
+    * Click the `Create a new workspace` button
+    * Choose a name, for example the name of the repo
+    * Add a purpose for the workspace
+    * Select the repo and branch whose action you want to run (in most cases, the branch will be either `main` or `master`)
+    * Click `Create workspace`
 
 When you add a new repository in the [`opensafely` organisation](https://github.com/opensafely), it may take up to 15 mintutes for it to be available to select at [https://jobs.opensafely.org](https://jobs.opensafely.org).
+
+![Create a new workspace button on the project page](./images/create_new_workspace_1.png)
+
+![Create a new workspace form](./images/create_new_workspace_2.png)
+
 ## Running your code on the server
 
-* Click the `Run Jobs` button (see red arrow below) from your workspace.
-![Create new workspace](./images/run_jobs.png)
-*  **Select actions** to run:
+- Click the `Run Jobs` button from your workspace
+- **Select actions** to run:
     * Select the actions you want to run by clicking the `Run` buttons.
     * If any of these actions have dependent actions (e.g. running a cohort extractor action before an analysis script is run) then they will also be run, unless their outputs already exist.
-      * If any dependencies have already been set to run, your current job will be queued until dependencies have completed.
+        * If any dependencies have already been set to run, your current job will be queued until dependencies have completed.
     * Dependencies can be viewed by clicking the `Needs` button.
     * You can force dependencies to be run by clicking `Force run dependencies`, even if those actions have already been run.
     * You can choose to send notifications for the selected actions to your email address.
     * When you're ready, click `Submit`.
+
+![Create new workspace](./images/run_jobs.png)
 
 The workspace is available at `https://jobs.opensafely.org/<WORKSPACE_NAME>/`.
 You can view the progress of these actions by click the `Logs` button from the workspace, or going to `https://jobs.opensafely.org/<WORKSPACE_NAME>/logs`. If you selected to receive notifications, you will also receive an email to notify you when each job completes.
@@ -150,8 +156,8 @@ Once approved, your released outputs will be “published” and viewable from t
 
 As part of publishing your outputs, you should also make the repository where your analysis code is written public. Refer to the [instructions on doing so](project-completion.md).
 
-
 ## Updating project status
+
 Project statuses are not displayed publicly, but are used internally within the Bennett Institute to help manage the OpenSAFELY service.
 
 When you start a new project on OpenSAFELY it will have the _Ongoing_ status, but as your work progresses you'll want to update this status.
