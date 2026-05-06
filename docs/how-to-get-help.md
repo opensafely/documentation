@@ -73,9 +73,6 @@ Other than this, you will need to choose the most appropriate repo to submit an 
 
 We have information on [integration](system-integration.md) elsewhere in this documentation.
 
-For general questions on getting a local integration running,
-please use our [Q&A forum](https://github.com/opensafely/documentation/discussions).
-
 To discuss making your data available to researchers via the OpenSAFELY
 platform, please [contact our technical
 team](mailto:team@opensafely.org).
