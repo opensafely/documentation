@@ -1,19 +1,8 @@
-## Q&A forum
-
-If you're outside the co-pilot programme,
-then your first port of call should be to ask your question in the [Q&A forum][].
-Before asking your question,
-please search the [Q&A forum][] and the OpenSAFELY documentation,
-to check that your question hasn’t already been answered.
-
-[Q&A forum]: https://github.com/opensafely/documentation/discussions
-
 ## Slack
 
 You will be invited to join the Bennett Institute's workspace during the co-pilot programme.
 If you're outside the co-pilot programme,
 then your second port of call should be to ask your question in any channel to which you have access.
-(Your first port of call should be to ask your question in the [Q&A forum](#qa-forum).)
 
 You may wish to direct your question to the **tech support team**.
 To do so, include the string `tech-support` in your question
@@ -78,14 +67,11 @@ Issues can be submitted for lots of different things &mdash; new variables or ot
 
 The most common requests are about library support; this page describes [how to request new libraries](requesting-libraries.md). If you want to report bugs or request features in the `opensafely` command-line tool, you can do so in [its own dedicated issue tracker](https://github.com/opensafely-core/opensafely-cli/issues).
 
-Other than this, you will need to choose the most appropriate repo to submit an issue. If you're not sure where to submit your issue, just ask a question in our [Q&A forum](https://github.com/opensafely/documentation/discussions) and we can point you to the right place.
+Other than this, you will need to choose the most appropriate repo to submit an issue.
 
 ## Data providers
 
 We have information on [integration](system-integration.md) elsewhere in this documentation.
-
-For general questions on getting a local integration running,
-please use our [Q&A forum](https://github.com/opensafely/documentation/discussions).
 
 To discuss making your data available to researchers via the OpenSAFELY
 platform, please [contact our technical
