@@ -24,8 +24,6 @@ You will:
 6. Add an analysis step to the study
 6. Run the study in a testing environment
 
-Please ask any questions in our [Q&A forum](https://github.com/opensafely/documentation/discussions)!
-
 ## Requirements
 
 The requirements for this tutorial are minimal.

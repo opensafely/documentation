@@ -170,7 +170,7 @@ There may be cases where you have run an analysis and results have been released
 If you are likely to release data multiple times, e.g. for initial discussion with collaborators, use rounding of outputs initially and/or a threshold substantially higher than 5 for suppressing low numbers.
 
 ### Requesting exceptions
-The principles outlined above balance minimising the risk of re-identification of individuals with the requirements of researchers. These principles are designed to enable us to provide an efficient output checking service. In rare cases an exception to our output checking rules may be justified. If you wish to request an exception please make informal enquiries to the output checking lead, Colm Andrews (colm.andrews@phc.ox.ac.uk). Applications can then be submitted to datarelease@opensafely.org 
+The principles outlined above balance minimising the risk of re-identification of individuals with the requirements of researchers. These principles are designed to enable us to provide an efficient output checking service. In rare cases an exception to our output checking rules may be justified. If you wish to request an exception please make informal enquiries to the output checking lead, Colm Andrews (colm.andrews@phc.ox.ac.uk). Applications can then be submitted to datarelease@opensafely.org
 
 ### Further reading
 
@@ -187,5 +187,3 @@ There are also resources for extended guidance for analysis methods commonly use
     [Ritchie, Felix. Output-based disclosure control for regressions” (2012).](https://www2.uwe.ac.uk/faculties/BBS/BUS/Research/economics2012/1209.pdf)
 * Survival analysis:
     [O’Keefe, C. M., Sparks, R. S., McAullay, D. & Loong, B. Confidentialising Survival Analysis Output in a Remote Data Access System. J. Priv. Confidentiality 4, (2012)](https://journalprivacyconfidentiality.org/index.php/jpc/article/view/614)
-
-There is also a disclosure control section in our [Q&A forum](https://github.com/opensafely/documentation/discussions/categories/disclosure-control) where you can ask any questions you may have.
