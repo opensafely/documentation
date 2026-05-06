@@ -5,8 +5,7 @@ The following assumes that a well-defined and ethically-approved research agenda
 
 The workflow for a single study can typically be broken down into the following steps:
 
-1.  **Create a git repository** from the [template repository provided](https://github.com/opensafely/research-template) and clone it on your local machine.
-This repo will contain all the code relating to your project, and a history of its development over time.
+1.  **Clone your `opensafely` research repository** from GitHub onto your local machine. This repo will contain all the code relating to your project, and a history of its development over time.
 2.  **Write a [dataset definition](ehrql/index.md)** that specifies what data you want to extract from the database:
     -   specify the patient population (dataset rows) and variables (dataset columns)
     -   specify the expected distributions of these variables for use in dummy data
