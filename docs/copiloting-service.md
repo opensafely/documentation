@@ -8,7 +8,7 @@ The service includes five days (over four weeks) of dedicated 1:1 support with c
 
 Beyond this initial four week period, we also provide:
 
-- community support via GitHub forums and the `#opensafely-users` Slack channel
+- community support via the `#opensafely-users` Slack channel
 - output checking service
 - manuscript review
 - opportunities to present at quarterly OpenSAFELY User Group meetings
@@ -108,7 +108,7 @@ Please note that co-pilots will not perform code review of any analysis scripts 
 
 ## What happens after the co-piloting period is over (the 'post co-piloting stage')?
 
-It is not expected that the research project will be complete at the end of the active co-piloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. All community resources (the [discussion forum](https://github.com/opensafely/documentation/discussions) and the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The co-pilot will remain involved in the project over the long term in terms of output checking and manuscript review.
+It is not expected that the research project will be complete at the end of the active co-piloting period, rather that the pilot will have acquired the relevant experience to complete the project independently. The community resources (the `#opensafely-users` Slack channel) will remain accessible to the pilots but regular, dedicated 1:1 support for study implementation will end. The co-pilot will remain involved in the project over the long term in terms of output checking and manuscript review.
 
 All OpenSAFELY outputs require approval from NHS England before they can be disseminated any wider than the pilot's research group. This includes academic manuscripts (pre-printed or peer-reviewed), conference abstracts and presentations, internal reports and masters/PhD theses. Our IG team will handle the NHS England approval process; for more information about how to request NHS England approval and what to include in your publication text please see [this section of our documentation](https://www.opensafely.org/policies-for-researchers/).
 
