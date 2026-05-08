@@ -1,7 +1,6 @@
 ## Slack
 
 You will be invited to join the Bennett Institute's workspace during the co-pilot programme.
-If you're outside the co-pilot programme,
 then your second port of call should be to ask your question in any channel to which you have access.
 
 You may wish to direct your question to the **tech support team**.
