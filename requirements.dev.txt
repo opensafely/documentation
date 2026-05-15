@@ -4,9 +4,9 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes --output-file=requirements.dev.txt requirements.dev.in
 #
-build==1.4.3 \
-    --hash=sha256:1bc22b19b383303de8f2c8554c9a32894a58d3f185fe3756b0b20d255bee9a38 \
-    --hash=sha256:5aa4231ae0e807efdf1fd0623e07366eca2ab215921345a2e38acdd5d0fa0a74
+build==1.5.0 \
+    --hash=sha256:13f3eecb844759ab66efec90ca17639bbf14dc06cb2fdf37a9010322d9c50a6f \
+    --hash=sha256:302c22c3ba2a0fd5f3911918651341ebb3896176cbdec15bd421f80b1afc7647
     # via pip-tools
 cfgv==3.5.0 \
     --hash=sha256:a8dc6b26ad22ff227d2634a65cb388215ce6cc96bbcc5cfde7641ae87e8dacc0 \
@@ -64,11 +64,11 @@ pyproject-hooks==1.2.0 \
     # via
     #   build
     #   pip-tools
-python-discovery==1.2.2 \
-    --hash=sha256:876e9c57139eb757cb5878cbdd9ae5379e5d96266c99ef731119e04fffe533bb \
-    --hash=sha256:876e9c57139eb757cb5878cbdd9ae5379e5d96266c99ef731119e04fffe533bb \
-    --hash=sha256:e1ae95d9af875e78f15e19aed0c6137ab1bb49c200f21f5061786490c9585c7a \
-    --hash=sha256:e1ae95d9af875e78f15e19aed0c6137ab1bb49c200f21f5061786490c9585c7a
+python-discovery==1.3.0 \
+    --hash=sha256:441d9ced3dfce36e113beb35ca302c71c7ef06f3c0f9c227a0b9bb3bd49b9e9f \
+    --hash=sha256:441d9ced3dfce36e113beb35ca302c71c7ef06f3c0f9c227a0b9bb3bd49b9e9f \
+    --hash=sha256:d098f1e86be5d45fe4d14bf1029294aabbd332f4321179dec85e76cddce834b0 \
+    --hash=sha256:d098f1e86be5d45fe4d14bf1029294aabbd332f4321179dec85e76cddce834b0
     # via virtualenv
 pyyaml==6.0.2 \
     --hash=sha256:01179a4a8559ab5de078078f37e5c1a30d76bb88519906844fd7bdea1b7729ff \
@@ -165,19 +165,19 @@ ruff==0.15.12 \
     --hash=sha256:fe87510d000220aa1ed530d4448a7c696a0cae1213e5ec30e5874287b66557b5 \
     --hash=sha256:fe87510d000220aa1ed530d4448a7c696a0cae1213e5ec30e5874287b66557b5
     # via -r requirements.dev.in
-virtualenv==21.2.4 \
-    --hash=sha256:29d21e941795206138d0f22f4e45ff7050e5da6c6472299fb7103318763861ac \
-    --hash=sha256:b294ef68192638004d72524ce7ef303e9d0cf5a44c95ce2e54a7500a6381cada
+virtualenv==21.3.1 \
+    --hash=sha256:c2305bc1fddeec40699b8370d13f8d431b0701f00ce895061ce493aeded4426b \
+    --hash=sha256:d1a71cf58f2f9228fff23a1f6ec15d39785c6b32e03658d104974247145edd35
     # via pre-commit
-wheel==0.46.3 \
-    --hash=sha256:4b399d56c9d9338230118d705d9737a2a468ccca63d5e813e2a4fc7815d8bc4d \
-    --hash=sha256:e3e79874b07d776c40bd6033f8ddf76a7dad46a7b8aa1b2787a83083519a1803
+wheel==0.47.0 \
+    --hash=sha256:212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced \
+    --hash=sha256:cc72bd1009ba0cf63922e28f94d9d83b920aa2bb28f798a31d0691b02fa3c9b3
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
-pip==26.1 \
-    --hash=sha256:4e8486d821d814b77319acb7b9e8bf5a4ee7590a643e7cb21029f209be8573c1 \
-    --hash=sha256:81e13ebcca3ffa8cc85e4deff5c27e1ee26dea0aa7fc2f294a073ac208806ff3
+pip==26.1.1 \
+    --hash=sha256:99cb1c2899893b075ff56e4ed0af55669a955b49ad7fb8d8603ecdaf4ed653fb \
+    --hash=sha256:d36762751d156a4ee895de8af39aa0abeeeb577f93a2eca6ab62467bbf0f8a78
     # via pip-tools
 setuptools==82.0.1 \
     --hash=sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9 \
