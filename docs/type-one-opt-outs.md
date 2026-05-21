@@ -22,7 +22,7 @@ It is also automatically covered by our [code protection rules](https://docs.git
 
 We have also added an additional code protection rule that changes to the specific files involved require sign-off from the Information Governance team (the [code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)).
 
-The [project permissions](https://github.com/opensafely-core/job-server/blob/main/jobserver/permissions/t1oo.py) file, the [history of changes](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/t1oo.py) to it, and the additional [code protection rules](https://github.com/opensafely-core/job-server/blob/main/.github/CODEOWNERS) are all publicly available on Github.
+The [project permissions](https://github.com/opensafely-core/job-server/blob/main/jobserver/permissions/population_permissions/t1oo.py) file, the [history of changes](https://github.com/opensafely-core/job-server/commits/main/jobserver/permissions/population_permissions/t1oo.py) to it, and the additional [code protection rules](https://github.com/opensafely-core/job-server/blob/main/.github/CODEOWNERS) are all publicly available on Github.
 
 ### How is permission to access Type 1 Opt-Out data enforced?
 
