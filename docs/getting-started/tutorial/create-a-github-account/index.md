@@ -21,5 +21,9 @@ to visit to confirm your account.
 
 ## Securing your GitHub account
 
-We recommend that you [secure your GitHub account with two-factor
-authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa).
+You must [secure your GitHub account with two-factor
+authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa),
+
+You should also [follow GitHub's recommendation](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-text-messages)
+of using one of the available two-factor authentication methods
+that are more secure than text message (SMS).
