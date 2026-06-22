@@ -89,9 +89,9 @@ You may want to start work on a project before approval by [creating a repositor
 
 ### How to transfer an existing repository to the opensafely organization
 
-To transfer a repository from your personal GitHub account to the OpenSAFELY organisation, contact [Tech Support](how-to-get-help.md/#slack) to initiate the transfer.
+To transfer a repository from your personal GitHub account to the OpenSAFELY organisation, contact [Tech Support](how-to-get-help.md/#slack) to request a repository transfer.
 
-Tech Support will notify you once the transfer has been completed. You will also be able to see the repository listed in the [`opensafely` organisation](https://github.com/orgs/opensafely/repositories) once transferred.
+Tech Support will guide you through the transfer process and notify you once the repository has been transferred. You will also be able to see the repository listed in the [`opensafely` organisation](https://github.com/orgs/opensafely/repositories) once transferred.
 
 The settings of any transferred repositories will be updated to match the [default `opensafely` repository settings](#default-repository-settings-in-the-github-opensafely-organisation).
 
