@@ -1,11 +1,10 @@
----
-name: 'Check Cloudflare redirects'
+name: "Check Cloudflare redirects"
 
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
   schedule:
-    - cron: '25 10 * * 2'
+    - cron: "25 10 * * 2"
 
 permissions:
   contents: read

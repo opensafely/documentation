@@ -1,5 +1,4 @@
----
-name: 'Check docs with Vale'
+name: "Check docs with Vale"
 
 # yamllint disable-line rule:truthy
 on:

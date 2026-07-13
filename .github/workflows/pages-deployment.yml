@@ -1,6 +1,4 @@
----
-name:
-  "Build & deploy to Cloudflare Pages"
+name: "Build & deploy to Cloudflare Pages"
 
 on:
   push:
@@ -8,7 +6,6 @@ on:
 
 jobs:
   deploy:
-
     permissions:
       contents: read
       deployments: write
@@ -24,7 +21,7 @@ jobs:
         uses: opensafely-core/setup-action@v1
         with:
           install-just: true
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Build site
         env:
