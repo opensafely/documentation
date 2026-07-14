@@ -1,5 +1,4 @@
----
-name: 'Check docs with Vale'
+name: "Check docs with Vale"
 
 # yamllint disable-line rule:truthy
 on:
@@ -13,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
 
       - name: Install just
-        uses: opensafely-core/setup-action@v1
+        uses: opensafely-core/setup-action@d9171097dd0d37bdb7bed58f701eb03ff317ed17 # v1.7.0
         with:
           install-just: true
 

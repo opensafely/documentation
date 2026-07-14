@@ -1,28 +1,28 @@
----
-name: 'Check links'
+name: "Check links"
 
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
   schedule:
-    - cron: '37 11 * * 2'
+    - cron: "37 11 * * 2"
 
 permissions:
   contents: read
 
 jobs:
-
   links:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
 
       - name: Install Python and just
-        uses: opensafely-core/setup-action@v1
+        uses: opensafely-core/setup-action@d9171097dd0d37bdb7bed58f701eb03ff317ed17 # v1.7.0
         with:
           install-just: true
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Build site
         env:
@@ -38,9 +38,18 @@ jobs:
       # This workaround may not be needed in future if lychee has better rate limiting.
       # https://github.com/lycheeverse/lychee/issues/36
       - name: Check links
-        # 2.6.1 seemed to cause the exclude-path to not take effect, waiting for next release.
-        uses: lycheeverse/lychee-action@82202e5e9c2f4ef1a55a3d02563e1cb6041e5332  # v2.4.1
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
-          args: "--exclude-all-private --include-verbatim --max-concurrency 24 --require-https --verbose --no-progress --offline
-          --accept '100..=103,200..=299,429,500..=511'
-          --timeout 60 './docs/**/*.md' './docs/**/*.html' './imported_docs/**/*.md' './imported_docs/**/*.html' --exclude-path './docs/ehrql/includes/generated_docs'"
+          args:
+            "--accept '100..=103,200..=299,429,500..=511'
+            --exclude-all-private
+            --exclude-path 'docs/ehrql/includes/generated_docs'
+            --include-verbatim
+            --max-concurrency 24
+            --no-progress
+            --offline
+            --require-https
+            --root-dir '${{ github.workspace }}/site'
+            --timeout 60
+            --verbose
+            './docs/**/*.md' './docs/**/*.html'"
