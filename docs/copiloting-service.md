@@ -112,18 +112,6 @@ It is not expected that the research project will be complete at the end of the 
 
 All OpenSAFELY outputs require approval from NHS England before they can be disseminated any wider than the pilot's research group. This includes academic manuscripts (pre-printed or peer-reviewed), conference abstracts and presentations, internal reports and masters/PhD theses. Our IG team will handle the NHS England approval process; for more information about how to request NHS England approval and what to include in your publication text please see [this section of our documentation](https://www.opensafely.org/policies-for-researchers/).
 
-## What is our authorship policy?
-
-We encourage all our users who produce traditional academic papers to preprint their work. The vast majority of OpenSAFELY papers have been preprinted on on [medRxiv](https://www.medrxiv.org/), however we are happy for them to be preprinted on other servers. If you typically use other preprint servers, please let us know so that we can assess whether they are appropriate for OpenSAFELY studies.
-
-Authorship should be discussed at the introductory meeting of any co-piloted project. Our specific policy regarding authorship for co-piloted projects is outlined below:
-
-- The OpenSAFELY co-pilot(s) for the project should always be offered authorship. Sometimes, if the co-pilot has needed to do a substantial amount of work to deliver a data analysis project for or with a collaborator organisation, it may be appropriate for the co-pilot to be offered joint first authorship (but not first). Appropriateness of joint first-authorship should be discussed with your co-pilot based on the extent of their contribution to your project.
-- A core team of people who contribute to the running of the OpenSAFELY platform which facilitate every study that is completed should also be offered authorship. This includes people who contribute to the platform, code, data acquisition, data curation and management, and design of OpenSAFELY.
-- In some circumstances (for example multiple consortia outputs across a diverse range of different datasets in a diverse range of different platforms with an extremely large number of contributors) it might be appropriate for some OpenSAFELY team to be authors, and others making smaller specific contributions to that single output to be listed under the group author name “The OpenSAFELY Collaborative” if the journal permits this in a manner that ensures that the individual names of members of that group author name also appear in Google Scholar and PubMed records (as is common with many journals).
-- As with standard authorship guidelines, named authors must be given the opportunity to read and approve the final manuscript before submission. Persons offered authorship should also have the opportunity to decline the offer if preferred.
-- There is [a template authorship contribution form](https://docs.google.com/spreadsheets/d/1-piPlxWtp1RbhQ5l7AGPrE8nLTzDIavPB1MG9bZPBfM/edit?usp=share_link) containing the named persons who should be offered authorship (and their contributions towards running the platform).
-
 ## Where can I find out more?
 
 You can read about the experience of one of our previous pilots, Rachel Seeley from PrescQIPP CIC, in [this blog post](https://www.bennett.ox.ac.uk/blog/2023/01/conducting-research-using-opensafely-my-experience-of-the-co-pilot-service/).
