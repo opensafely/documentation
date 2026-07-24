@@ -4,7 +4,7 @@
 For security, consistency, and readability, OpenSAFELY provides an API built in [**Python**](https://www.python.org/) for using the platform.
 This API includes script-based functions for specifying the patients and variables that make up a study dataset (using [ehrQL](ehrql/index.md)),
 and command line functions for importing codelists, generating dummy data, and testing that the study definition can be run successfully on the server.
-**Python version 3.7 or higher** must be installed on your machine to perform these tasks.
+**Python version 3.10-3.13** must be installed on your machine to perform these tasks.
 
 Many functions are provided in a Python module called `opensafely` which will also need to be installed &mdash; see the [`opensafely` CLI section](opensafely-cli.md) for more details.
 
