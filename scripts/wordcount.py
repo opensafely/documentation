@@ -1,5 +1,5 @@
-from html.parser import HTMLParser
 import sys
+from html.parser import HTMLParser
 
 
 class ArticleParser(HTMLParser):
@@ -24,7 +24,7 @@ class ArticleParser(HTMLParser):
 if __name__ == "__main__":
     total = 0
     for filename in sys.argv[1:]:
-        with open(filename, "r", encoding="utf-8") as f:
+        with open(filename, encoding="utf-8") as f:
             parser = ArticleParser()
             parser.feed(f.read())
             text = " ".join(parser.text)
