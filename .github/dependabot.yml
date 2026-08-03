@@ -1,36 +1,8 @@
 version: 2
 
 updates:
-  - package-ecosystem: "pip"
+  - package-ecosystem: pip
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "08:00"
-      timezone: "Europe/London"
-    cooldown:
-      default-days: 7
-    groups:
-      production-dependencies:
-        dependency-type: "production"
-      development-dependencies:
-        dependency-type: "development"
-    allow:
-      - dependency-type: "all"
-    ignore:
-      # mkdocs has a file reload bug with newer click versions,
-      # so pin until this is resolved:
-      # https://github.com/mkdocs/mkdocs/issues/4032
-      - dependency-name: "click"
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "08:00"
-      timezone: "Europe/London"
-    cooldown:
-      default-days: 7
-    # Newer versions of lychee cause the exclude-path to not take effect.
-    ignore:
-      - dependency-name: "lycheeverse/lychee-action"
+      interval: daily
+      time: "17:00"
