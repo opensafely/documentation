@@ -1,3 +1,0 @@
-# This file is a shim for CloudFlare Pages which expects a requirements.txt,
-# but we want to maintain requirements.prod.txt for our general dev tooling.
--r requirements.prod.txt
