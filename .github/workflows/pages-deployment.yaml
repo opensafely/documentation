@@ -51,5 +51,4 @@ jobs:
         with:
           apiToken: "${{ secrets.CLOUDFLARE_API_TOKEN }}"
           accountId: "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
-          command: "pages deploy site --project-name=opensafely-documentation"
-          gitHubToken: "${{ secrets.GITHUB_TOKEN }}"
+          command: "pages deploy site --project-name=opensafely-documentation --commit-dirty=true"
