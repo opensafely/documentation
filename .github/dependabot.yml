@@ -22,6 +22,7 @@ updates:
       # so pin until this is resolved:
       # https://github.com/mkdocs/mkdocs/issues/4032
       - dependency-name: "click"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -34,3 +35,13 @@ updates:
     # Newer versions of lychee cause the exclude-path to not take effect.
     ignore:
       - dependency-name: "lycheeverse/lychee-action"
+
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/London"
+    cooldown:
+      default-days: 7
