@@ -1,5 +1,7 @@
 # macOS Install Guide
 
+This is a tiny tweak to confirm a change to the docs is made on a PR.
+
 !!! note "This guide was created using macOS 11.1"
     It is expected that this guide should work from 10.15 upwards but has only been tested with 11.1
 
