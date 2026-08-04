@@ -67,6 +67,6 @@ The Publication of Results Policy can be found at https://www.opensafely.org/pol
 1. After the DATAPAST templates have been reviewed and completed by Users (alongside any amendments to work, where appropriate), the work will be submitted to the DHSC for an approval decision.
 1. The DHSC typically responds within 2-4 weeks (subject to annual leave and service pressures).
 
-Please reach out to your Co-pilot in the meantime if you have any questions, or post them in the opensafely-users Slack channel, or alternatively, email publications@opensafely.org with your enquiry.
+Please reach out to your Co-pilot in the meantime if you have any questions, or post them in the opensafely-users Slack channel, or alternatively, email [publications@opensafely.org](mailto:publications@opensafely.org) with your enquiry.
 
 The OpenSAFELY Leadership Team.
