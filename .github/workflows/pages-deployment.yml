@@ -43,4 +43,3 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_DIRECT_UPLOAD_API_TOKEN }}
           command: pages deploy site --project-name=opensafely-docs
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
