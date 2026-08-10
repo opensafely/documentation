@@ -83,8 +83,6 @@ If you are unsure whether co-piloting will work for your project, contact `team@
 
 Once a project has been approved, it will be matched to one of our internal OpenSAFELY researchers, in terms of the experience and knowledge required for the project. The pilot and co-pilot will have an introductory meeting in which the co-pilot will provide further details about the co-piloting service and the pilot can provide further details about the research project. At this meeting, both parties will agree when the dedicated 1:1 support period will begin.
 
-The [slides that we use for these meetings are available to download](https://docs.google.com/presentation/d/1tOajKhvCy9zWfmAyFHsFXhml3onp7DaJ/edit?usp=share_link&ouid=116818038849804976910&rtpof=true&sd=true). Some of our co-pilots also run through a version of these slides in [this video on our Youtube channel](https://youtu.be/3BNmoV7aHwA).
-
 ### Active co-piloting stage (four weeks)
 
 The four week period of co-piloting is intended to provide a supportive, encouraging environment in which a new user can become familiar with how to build and run a research study using the OpenSAFELY platform. In our experience, pilots get the most out of the service if they are able to focus exclusively on the project for the four week period.
