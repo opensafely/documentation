@@ -65,7 +65,7 @@ When you are approved to start working on an OpenSAFELY research project, you wi
 
 Contact [Tech Support](how-to-get-help.md/#slack) and ask them to create a new repository for your research, or transfer a repository from your personal GitHub account into the `opensafely` GitHub organisation (depending on your preference, and whether you have an existing repository to transfer).
 
-Newly-created and transferred repositories will be configured with the settings listed in [default `opensafely` repository settings](#default-opensafely-repository-settings), above.
+Newly-created and transferred repositories will be configured with the settings listed in [default `opensafely` repository settings](#default-repository-settings-in-the-github-opensafely-organisation), above.
 
 Repositories will initially be public, but may be temporarily set to private at your request. See [Repository visibility](#repository-visibility) to make the right choice for your study.
 
