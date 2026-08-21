@@ -19,6 +19,8 @@ Contact [Tech Support](how-to-get-help.md/#slack) to request that your repositor
 
 If your request is approved, Tech Support will make your repository private and you will be notified once this has been completed.
 
+If your OpenSAFELY repository is made private, other users will not be able to fork the repository. Instead they can make a copy ("clone") of it (see the [GitHub documentation on cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#about-cloning-a-repository) for more information on this).
+
 Private repositories will be made public after 12 months. Ahead of that, you can make a new request to extend the private visibility period for another 12 months.
 
 !!! info
