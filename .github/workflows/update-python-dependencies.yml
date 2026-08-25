@@ -3,30 +3,37 @@ name: Update Python dependencies
 on:
   workflow_dispatch:
   schedule:
-    - cron:  "16 7 * * MON"
+    - cron: "16 7 * * MON"
 
 permissions:
   contents: read
 
+concurrency:
+  group: update-python-dependencies
+  cancel-in-progress: false
+
 jobs:
   update-dependencies:
+    name: Update Python dependencies
     runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      with:
-        persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-    - uses: opensafely-core/setup-action@d9171097dd0d37bdb7bed58f701eb03ff317ed17 # v1.7.0
-      with:
-        install-just: true
+      - uses: opensafely-core/setup-action@d9171097dd0d37bdb7bed58f701eb03ff317ed17 # v1.7.0
+        with:
+          install-just: true
 
-    - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-      id: generate-token
-      with:
-        app-id: 1031449  # opensafely-core Create PR app
-        private-key: ${{ secrets.CREATE_PR_APP_PRIVATE_KEY }}
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: generate-token
+        with:
+          client-id: 1031449 # opensafely-core Create PR app
+          private-key: ${{ secrets.CREATE_PR_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
 
-    - uses: bennettoxford/update-dependencies-action@b77a22bcfe1d06020d908e64c9828fe944da3a5e
-      id: update
-      with:
-        token: ${{ steps.generate-token.outputs.token }}
+      - uses: bennettoxford/update-dependencies-action@b77a22bcfe1d06020d908e64c9828fe944da3a5e
+        id: update
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
