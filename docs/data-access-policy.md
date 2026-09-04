@@ -242,6 +242,13 @@ Access to backend systems is via secure, authenticated, encrypted channels. This
 * intermediate outputs (study dataset) ([level 3 data](security-levels.md#level-3-nhs-england-are-data-controllers-of-the-data))
 * unchecked, unreleased aggregated study outputs ([level 4 data](security-levels.md#level-4-nhs-england-are-data-controllers-of-the-data)).
 
+Examples of development and maintenance activities include:
+
+* viewing and searching application, job, container and system logs
+* inspecting intermediate outputs to investigate suspected software or data issues
+* running application management commands for operational support
+* testing performance and integrity against production-scale data within the secure environment
+
 This policy does not allow the extraction of pseudonymised patient data or study outputs from the system via this process; the data can only be studied within the system itself.
 Some operational data may be released under controlled conditions, as detailed in a separate Operational Data Policy.
 
