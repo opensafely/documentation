@@ -18,9 +18,9 @@ issue](https://github.com/opensafely-core/r-docker/issues) to request it be adde
 
 We consider the following things when deciding whether to include a new R package:
 
-* The quality of the package. The vast majority of our packages come from CRAN. In r:v2 we can install from a remote repository, for such packages the package must build and be able to be added to our [r-universe](https://opensafely-core.r-universe.dev/).
+* The quality of the package. The vast majority of our packages come from CRAN. In r:v2 and r:v3 we can install from a remote repository, for such packages the package must build and be able to be added to our [r-universe](https://opensafely-core.r-universe.dev/).
 * Is the package "in scope"? In other words does the package help to process and analyse data available within the OpenSAFELY secure environment, and is this clear from the request? If it's not clear what the package will be used for, we may ask for more information to justify its inclusion, so try to communicate this from the start.
-    * Is this a package you just require, for example, for post processing released outputs. If so, in r:v2 you can install your own local packages simply by running
+    * Is this a package you just require, for example, for post processing released outputs. If so, in r:v2/r:v3 you can install your own local packages simply by running
       ```r
       install.packages("PACKAGENAME")
       ```
