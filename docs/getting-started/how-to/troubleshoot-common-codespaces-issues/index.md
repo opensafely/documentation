@@ -84,8 +84,8 @@ These action images are the environment in which your code is executed via the [
 
 For actions that use these image versions in their `run: ` stanza in project.yaml, we expect the behaviour of your R or python scripts to be the same when executed via `opensafely run` or directly in codespace environment (or in the provided RStudio environment for R).
 
-If you have actions defined in your [project pipeline file](../../../actions-pipelines.md#projectyaml-format) that reference older images like `python:v1` or `jupyter:v1` (or — due to an _unfortunate_ historical naming convention —  `python:latest` or `jupyter:latest`),
-or the newer `r:v2` image, then the behaviour of your code when run in those images may not be the same as if you run the code directly in the codespace. This is because the installed packages and versions of Python or R that are available differ between these environments.
+If you have actions defined in your [project pipeline file](../../../actions-pipelines.md#projectyaml-format) that reference older images like `python:v1` or `jupyter:v1`,
+or the newer `r:v2` or `r:v3` images, then the behaviour of your code when run in those images may not be the same as if you run the code directly in the codespace. This is because the installed packages and versions of Python or R that are available differ between these environments.
 
 If this is the case for your project, your options are:
 
@@ -94,7 +94,6 @@ For older images like `python:v1` or `jupyter:v1`:
 * Update your project pipeline file to reference the most recent action images and make any neccesary changes to your code (recommended)
 * Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec-interactive-development) for interactive development using these action images' environments
 
-For the recently released `r:v2` image, until we have support for its version of R and libraries natively in codespaces, you can:
+For the more recently released `r:v2` and `r:v3` images, until we have support for its version of R and libraries natively in codespaces, you can:
 
-* Follow the instructions for [manually running `r:v2` instance of Rstudio in codespaces](../use-github-codespaces-in-your-project/index.md#rstudio-with-the-rv2-image) (recommended)
-* Use the older `r:v1` image in your actions, and the integrated codespaces RStudio.
+* Follow the instructions for [manually running an alternative instance of Rstudio in codespaces](../use-github-codespaces-in-your-project/index.md#rstudio-with-the-rv2-image) (recommended)

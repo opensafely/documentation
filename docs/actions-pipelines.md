@@ -60,7 +60,7 @@ Every `project.yaml` requires a `version` and an `actions` section.
 In general, actions are composed as follows:
 
 * Each action must be named using a valid YAML key (you won't go wrong with letters, numbers, and underscores) and must be unique.
-* Each action must include a `run` key which includes an officially-supported command and a version (which at present is usually just `latest`).
+* Each action must include a `run` key which includes an officially-supported command and a version. You should specify an explicit verion (do not use `latest`).
     * The `ehrql` command has the same options as described in the [ehrQL reference](ehrql/reference/cli.md#generate-dataset).
     * The `python`, `r`, and `stata-mp` commands provide a locked-down execution environment that can take one or more `inputs` which are passed to the code.
 * Each action must include an `outputs` key with at least one output, classified as either `highly_sensitive` or `moderately_sensitive`

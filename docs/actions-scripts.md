@@ -216,14 +216,16 @@ There are two versions of the python image.  We recommend that you the use the l
 
 * `python:v2` contains Python 3.10.
   It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v2/packages.md).
-* `python:v1`, which for historical reasons is the same as `python:latest`, contains Python 3.8.
+* `python:v1` is scheduled for deprecation and should not be used. It contains Python 3.8.
   It has [this list of packages installed](https://github.com/opensafely-core/python-docker/blob/main/v1/packages.md).
 
 ### R
 
-There are two versions of the R image.  We recommend that you the use the latest verion, `r:v2`, for all R actions in your project.yaml
+There are three versions of the R image.  We recommend that you the use the latest verion, `r:v3`, for all R actions in your project.yaml
 
+* `r:v1` contains R 4.6.1.
+  It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v3/packages.md)
 * `r:v2` contains R 4.4.3.
   It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v2/packages.md)
-* `r:v1`, which for historical reasons is the same as `r:latest`, contains R 4.0.5.
+* `r:v1` is scheduled for deprecation and should not be used. It contains R 4.0.5.
   It has [this list of packages installed](https://github.com/opensafely-core/r-docker/blob/main/v1/packages.md).
