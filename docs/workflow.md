@@ -8,12 +8,10 @@ The workflow for a single study can typically be broken down into the following 
 1.  **Clone your `opensafely` research repository** from GitHub onto your local machine. This repo will contain all the code relating to your project, and a history of its development over time.
 2.  **Write a [dataset definition](ehrql/index.md)** that specifies what data you want to extract from the database:
     -   specify the patient population (dataset rows) and variables (dataset columns)
-    -   specify the expected distributions of these variables for use in dummy data
     -   specify (or create) the [codelists](codelist-intro.md) required by the dataset definition, hosted by [OpenCodelists](https://www.opencodelists.org), and import them to the repo.
 3.  **Generate [dummy data](ehrql/how-to/dummy-data.md)** based on the dataset definition, for writing and testing code.
 4.  **Develop analysis scripts** using the dummy data in R, Stata, or Python. This will include:
     -   importing and processing the dataset(s) created by the dataset definition
-    -   importing any other external files needed for analysis
     -   generating analysis outputs like tables and figures
     -   generating log files to debug the scripts when they run on the real data.
 5.  **Test the code** by running the analysis steps specified in the [_project pipeline_](actions-pipelines.md), which specifies the execution order for data extracts and analyses and the outputs to be released.
