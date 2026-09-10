@@ -147,7 +147,7 @@ The research code repository that you created already has a minimal, working Ope
 ### RStudio with the r:v1 image
 
 Our codespace environment includes RStudio based on the [`r:v1` image](../../../actions-scripts.md#r).
-If you are using the `r:v1` image in your project, you can access RSTudio via:
+If you are using the `r:v1` image in your project, you can access RStudio via:
 
 1. In Visual Studio Code,
    select the "Ports" tab
@@ -158,20 +158,20 @@ If you are using the `r:v1` image in your project, you can access RSTudio via:
 1. A new browser tab/window appears with RStudio v1 running.
 
 
-### RStudio with the r:v2 image.
+### RStudio with the r:v2 or r:v3 images.
 
-Our codespaces environment does not yet natively support the new `r:v2` image with its builtin RStudio support. We anticipate adding explicit support for `r:v2` to codespaces in the future.
+Our codespaces environment does not yet natively support the later `r:v2` or `r:v3` image with their builtin RStudio support. We anticipate adding explicit support for `r:v2` and `r:v3` to codespaces in the future.
 
-However, you can manually run a version of RStudio that uses the `r:v2` image with the following command:
+However, you can manually run a version of RStudio that uses an alternative image with the following command:
 
 ```
-opensafely launch rstudio:v2 --background
+opensafely launch rstudio:v3 --background
 ```
 
-Note: the first time you run it, it may take a while as it downloads the rstudio:v2 docker image.
+Note: the first time you run it, it may take a while as it downloads the rstudio:v3 docker image.
 
-This will start an instance of RStudio on port 8788 using the v2 image in your codespace and automatically open a browser window pointing to it.
-You should be able to edit and run your project's `r:v2` code using this instance of RStudio.
+This will start an instance of RStudio on port 8788 using the v3 image in your codespace and automatically open a browser window pointing to it.
+You should be able to edit and run your project's `r:v3` code using this instance of RStudio.
 
 You can navigate back to this RStudio instance using VSCode's "Ports" tab:
 
@@ -179,8 +179,8 @@ You can navigate back to this RStudio instance using VSCode's "Ports" tab:
    select the "Ports" tab
    (next to "Terminal").
 1. Port 8788 should be listed —
-   this is configured by the RStudio v2 server.
+   this is configured by the RStudio v3 server.
 1. Right-click on port 8788 and select "Open in browser".
-1. A new browser tab/window appears with RStudio v2 running.
+1. A new browser tab/window appears with RStudio v3 running.
 
-When you return to your codespace after it has shut down, you will need to manually re-run the above command to start the RStudio v2 instance again.
+When you return to your codespace after it has shut down, you will need to manually re-run the above command to start the RStudio v3 instance again.
