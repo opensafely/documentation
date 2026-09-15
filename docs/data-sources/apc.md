@@ -38,6 +38,12 @@ The dataset does not include any patients who have not been discharged (i.e., pa
 - The post-transfer spell may have additional diagnoses or procedures of interest so it is often useful to include them.
 - Transfers may occasionally come from private hospitals where a patient's condition worsened to require e.g. intensive care; if the initial spell was not NHS funded we would probably not have the original spell in our data.
 
+### \* Notes on ICD-10 codes:
+
+Diagnosis codes in the APCS dataset use the ICD-10 coding system in a slightly non-standard manner:
+three-character ICD-10 codes in the APCS dataset are padded to four characters with a terminal `X` character.
+
+
 ## Reference tables
 
 ### Admission method reference table
