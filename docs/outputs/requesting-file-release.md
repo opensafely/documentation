@@ -25,8 +25,9 @@ Each data release entails substantial review work. To retain rapid turnaround ti
 !!! note "Tips for getting a quicker review"
     Our resources for checking outputs are not unlimited, therefore it is advised to ensure you have all of your outputs ready at the same time for your project (or its current phase) so they can be reviewed together. Please make your outputs as understandable as possible for output checkers who will not be familiar with your project by, for example, using descriptive variable names and providing full descriptions of your outputs and
     [contextual information](#context-and-controls).
+Please also make use of the file group feature available when making output requests, to avoid lengthy descriptions that cover all of the outputs together.
 
-Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (One solution to minimise this issue is to round all of your results, e.g. to the nearest 5).
+Another reason to ensure your analyses are complete is that re-running your study definition a short time later (e.g. to create an additional variable) may produce small differences in the previous results, e.g. due to movement of patients or codes added retrospectively to patient records. If you have already released similar results, any small changes in new outputs may be subject to small number suppression which may prevent the new outputs being released at all. (However, we also request that all counts are [rounded](sdc.md#rounding-counts) to help minimise this type of issue).
 
 #### Release of aggregated results to be used to generate final outputs
 
@@ -68,6 +69,8 @@ Only certain file types will be reviewed and released from the secure server. Se
     * Make sure that any column names are understandable for reviewers.
     * Limit the number of columns or rows to only what is necessary. The maximum number of
       rows that can be included in a file for release is 5000.
+    * Make your tables long rather than wide where possible - these are much easier to review.
+    * Avoid combining multiple statistics into a single column (e.g. 45.3% (453/1000)). Present each separately and without formatting wherever possible so that calculations can be carried out to support output checking.
 
 * **Figures** - Figures can be produced as bitmap images (`jpeg` or `png`) or vector graphics (`svg`).
     * We recommend requesting the release of the underlying _aggregated_ data for all figures, rather than the figures themselves. You can then create the figures outside of the secure server, which has a few advantages:
@@ -94,6 +97,7 @@ Please run through this checklist before submitting a review request.
 1. Have you [redacted any low counts](sdc.md#redacting-counts-less-than-or-equal-to-7)?
 1. Have you [rounded any counts](sdc.md#rounding-counts) (including [counts underlying rates](sdc.md#rounding-rates))?
 1. Have you supplied underlying counts for all of your results?
+1. Are all numerical values in separate columns where possible?
 1. Are all of the outputs clearly described?
     * Have you provided all of the [context](#context-and-controls) needed to review each output in isolation?
     * Have you described the [disclosure controls](#context-and-controls) you have applied to each output?
