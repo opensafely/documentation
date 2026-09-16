@@ -136,3 +136,6 @@ wordcount: build
     #!/usr/bin/env bash
     set -euo pipefail
     find site/ -name '*.html' -exec python scripts/wordcount.py {} + | awk '{sum += $1} END {print "Total words in documentation:", sum}'
+
+# Update prod and dev dependencies
+update-dependencies: (upgrade 'prod') (upgrade 'dev')
