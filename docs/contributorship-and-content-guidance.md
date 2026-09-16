@@ -82,7 +82,11 @@ If the [High Cost Drug dataset](https://docs.opensafely.org/study-def-variables/
 
 > North East Commissioning Support Unit provided support on behalf of all Commissioning Support Units to aggregate the high cost drugs data for use in OpenSAFELY studies.
 
-If the ICNARC data was used, required acknowledgement content:
+If the ICNARC data was used, applicants will send one draft copy of any proposed publication or presentation arising from the data to ICNARC data@icnarc.org at the same time as submission for publication or at least 28 days before the date intended for publication/presentation, whichever is earlier. The required acknowledgement content:
+
+> This publication is based on data derived from the Intensive Care National Audit & Research Centre (ICNARC) Case Mix Programme Database. The Case Mix Programme is the national, comparative audit of patient outcomes from adult citical care coordinated by ICNARC. We thank all the staff in the critical care units participating in the Case Mix Programme. For more information on the representativeness and quality of these data, please contact ICNARC. Disclaimer: The views and opinions expressed therein are those of the authors and do not necessarily relect those of ICNARC.
+
+If the ISARIC data was used, applicants will provide a copy of any publication to isaric4c-samples@roslin.ed.ac.uk at least 7 days in advance of submission for publication. The required acknowledgement content:
 
 > This report is independent research which used data provided by the MRC funded ISARIC 4C Consortium and which the Consortium collected under a research contract funded by the National Institute for Health Research. The views expressed in this publication are those of the author(s) and not necessarily those of the ISARIC 4C consortium.
 
