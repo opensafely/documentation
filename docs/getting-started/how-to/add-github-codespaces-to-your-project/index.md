@@ -57,6 +57,12 @@ Create a new branch called `github-codespaces`:
 git switch --create=github-codespaces
 ```
 
+The same command written more concisely is:
+
+```sh
+git switch -c github-codespaces
+```
+
 ### Copy files
 
 * Visit the [opensafely/research-template](https://github.com/opensafely/research-template) project on GitHub.
