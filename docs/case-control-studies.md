@@ -175,12 +175,12 @@ from ehrql import table_from_file
 CONTROLS = "output/matched_matches.arrow"
 
 matched_patients = table_from_file(
-  CONTROLS,
-  columns={
-    "age": int,
-    "sex": str,
-    "index_date": datetime.date
-  }
+    CONTROLS,
+    columns={
+        "age": int,
+        "sex": str,
+        "index_date": datetime.date,
+    },
 )
 ```
 
@@ -227,12 +227,12 @@ CONTROLS = "output/matched_matches.arrow"
 codelist = codelist_from_csv("codelists/codelist.csv")
 
 matched_patients = table_from_file(
-  CONTROLS,
-  columns={
-    "age": int,
-    "sex": str,
-    "index_date": datetime.date
-  }
+    CONTROLS,
+    columns={
+        "age": int,
+        "sex": str,
+        "index_date": datetime.date,
+    },
 )
 
 dataset = create_dataset()

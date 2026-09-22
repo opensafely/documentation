@@ -72,10 +72,11 @@ Where *action/cli.py* is:
 
 ```python
 def main():
-  print("A reusable action")
+    print("A reusable action")
+
 
 if __name__ == "__main__":
-  main()
+    main()
 ```
 
 When developing a reusable action, just as when developing a scripted action, the action's dependencies are made available by the runtime; they are not made available by the action.
