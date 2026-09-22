@@ -19,7 +19,7 @@ def on_config(config):
     ehrql_nav_index, ehrql_nav_section = next(
         (i, section)
         for i, section in enumerate(config["nav"])
-        if list(section.keys())[0] == "ehrQL"
+        if next(iter(section.keys())) == "ehrQL"
     )
     new_import_string = ehrql_nav_section["ehrQL"].replace(
         "branch=main", f"branch={ehrql_branch}"
