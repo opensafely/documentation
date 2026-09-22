@@ -40,16 +40,17 @@ For example, this section of the study definition creates a variable that indica
 
 
 ```python
-
-  sev_obesity = patients.with_these_clinical_events(
-    sev_obesity_codes,
-    returning = "date",
-    ignore_missing_values = True,
-    find_last_match_in_period = True,
-    on_or_after = "bmi_stage_date",
-    on_or_before = "index_date",
-    date_format = "YYYY-MM-DD",
-  ),
+sev_obesity = (
+    patients.with_these_clinical_events(
+        sev_obesity_codes,
+        returning="date",
+        ignore_missing_values=True,
+        find_last_match_in_period=True,
+        on_or_after="bmi_stage_date",
+        on_or_before="index_date",
+        date_format="YYYY-MM-DD",
+    ),
+)
 ```
 
 
