@@ -18,6 +18,7 @@ exclude = [
   # These are frozen and we don't intend to update them
   "docs/legacy",
 ]
+extend-exclude = ["*.md"] # Don't format or lint Python code snippets in markdown docs
 
 [tool.ruff.lint]
 extend-select = [
