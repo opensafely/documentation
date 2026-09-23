@@ -31,6 +31,8 @@ jobs:
         with:
           client-id: "${{ vars.CREATE_PR_APP_ID }}"
           private-key: "${{ secrets.CREATE_PR_APP_PRIVATE_KEY }}"
+          owner: "opensafely"
+          repositories: "documentation"
           permission-contents: "write"
           permission-pull-requests: "write"
 
