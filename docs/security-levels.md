@@ -6,7 +6,7 @@ Each stage is generated from the preceding stage &mdash; at each step, data priv
 This is the most restrictive level and includes the complete, raw, fully-identifiable, event-level patient data.
 EHR vendor data engineers store data at an identifiable level as part of their business-as-usual; they are instructed to process this data by the GPs (who are in routine practice the data controllers) in order to manage and store this information.
 
-This identifiable data is further processed by the EHR vendor to create a database of pseudonymised coded event-level GP data which the OpenSAFELY service can access to run study queries against. The pseudonymised GP data can be refreshed at regular intervals, for example, it is currently refreshed weekly by TPP.
+This identifiable data is further processed by the EHR vendor to create a database of pseudonymised coded event-level GP data which the OpenSAFELY service can access to run study queries against. The pseudonymised GP data can be refreshed at regular intervals, for example, it is currently refreshed every four weeks by TPP.
 
 ### Where is this data held?
 Data is held within the EHR vendor's secure environment.

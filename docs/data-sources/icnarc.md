@@ -26,10 +26,10 @@ Specialist units (eg neuro / cardiac) also participate. covid-19 admissions only
 : ICUs and HDUs
 
 **Update frequency in OpenSAFELY**
-: Approximately weekly.
+: Approximately every four weeks.
 
 **Delay between event occurring and event appearing in OpenSAFELY**
-: Approximately 1-2 weeks.
+: Approximately 1-5 weeks.
 
 **Collected information**
 : Admission, discharge and transfer dates; reason for admission; clinical support/interventions; clinical findings

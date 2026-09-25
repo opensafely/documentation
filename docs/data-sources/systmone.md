@@ -110,7 +110,7 @@ When TPP receive data from external data sources (eg ONS), the tables are comple
 
 ## OpenSAFELY-TPP database builds
 
-The OpenSAFELY-TPP database is typically built once per week.
+The OpenSAFELY-TPP database is typically built every four weeks.
 In essence, this involves refreshing the database records so that the following groups are available for analysis:
 
 1. All patients currently registered[^1] at a TPP practice
