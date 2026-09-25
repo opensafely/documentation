@@ -12,13 +12,13 @@ Date and cause of death based on information recorded when deaths are certified 
 : General Register Office.
 
 **Update frequency in OpenSAFELY**
-: Approximately weeekly.
+: Approximately every four weeks.
 
 **Available from**
 : deaths recorded from February 2019 onwards.
 
 **Delay between event occurring and event appearing in OpenSAFELY**
-: Approximately 1-2 weeks.
+: Approximately 1-5 weeks.
 
 **Collected information**
 : Date of death, causes of death, age, sex, place of death.

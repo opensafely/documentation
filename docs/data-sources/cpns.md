@@ -10,10 +10,10 @@ Initially this was lab-confirmed covid deaths only, but also includes suspected 
 : In-hospital covid-related deaths in England.
 
 **Update frequency in OpenSAFELY**
-: Weekly.
+: Every four weeks.
 
 **Delay between event occurring and event appearing in OpenSAFELY**
-: Within 2 weeks.
+: Within 2 to 5 weeks.
 
 **Available from**
 : 24/03/2020 onwards (all test-positive deaths); 28/04/2020 onwards (test-positive and covid documented as underlying cause).

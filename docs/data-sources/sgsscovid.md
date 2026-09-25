@@ -18,7 +18,7 @@ Some SARS-CoV-2 testing info also flows directly into the primary care record fr
 : Approximately monthly
 
 **Delay between event occurring and event appearing in OpenSAFELY**
-: Approximately 1-2 weeks.
+: Approximately 1-5 weeks.
 
 **Collected information**
 : Earliest specimen date, lab report date, age, sex, county, test result, source ("pillar 2" or "other")

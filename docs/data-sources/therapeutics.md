@@ -12,10 +12,10 @@ The Therapeutics dataset contains information on COVID treatments used in inpati
 : Data sourced largely from BlueTeq system (forms completed by clinicians)
 
 **Update frequency in OpenSAFELY**
-: Approximately weekly
+: Approximately every four weeks
 
 **Delay between event occurring and event appearing in OpenSAFELY**
-: Approximately 2-9 days
+: Approximately 2 days + (0 - 4 weeks)
 
 **Collected information**
 : Treatment start date; therapeutic intervention; COVID indication, current status, risk group, region
