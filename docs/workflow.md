@@ -13,10 +13,10 @@ The workflow for a single study can typically be broken down into the following 
 4.  **Develop analysis scripts** using the dummy data in R, Stata, or Python. This will include:
     -   importing and processing the dataset(s) created by the dataset definition
     -   generating analysis outputs like tables and figures
-    -   generating log files to debug the scripts when they run on the real data.
+    -   generating log files to debug the scripts when they run on the real data (NB only truncated log files can be viewed as per our [security policy](https://www.opensafely.org/logfile-security-policy/)).
 5.  **Test the code** by running the analysis steps specified in the [_project pipeline_](actions-pipelines.md), which specifies the execution order for data extracts and analyses and the outputs to be released.
 6.  **Execute the analysis on the real data** via OpenSAFELY's [jobs site](jobs-site.md). This will generate outputs on the secure server.
-7.  **Check the output for [disclosivity](outputs/sdc.md)** within the server, and redact if necessary.
+7.  **Check the output for [disclosivity](outputs/sdc.md)** within the server, and redact if necessary by amending the code and re-running the job.
 8.  **[Request release](outputs/requesting-file-release.md) of the outputs**
 9. **Repeat and iterate steps 2 to 8 as necessary**.
 
