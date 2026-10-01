@@ -95,3 +95,51 @@ For older images like `python:v1` or `jupyter:v1`:
 * Retain the references to the older action images, and use [`opensafely exec`](../../../opensafely-cli.md#exec-interactive-development) for interactive development using these action images' environments
 
 For the more recently released `r:v2` and `r:v3` images, until we have support for its version of R and libraries natively in codespaces, you can follow the instructions for [manually running an alternative instance of Rstudio in codespaces](../use-github-codespaces-in-your-project/index.md#rstudio-with-the-rv2-or-rv3-images) (recommended)
+
+## Known issues with opening RStudio in a Codespace
+
+We are currently investigating an issue that can prevent RStudio from opening correctly when using it inside a GitHub Codespace.
+
+Until this is resolved, you can use either of the following workarounds.
+
+### Option 1: Launch RStudio from the terminal
+
+1. Open the terminal in your Codespace
+1. Run: `opensafely launch rstudio`
+1. Wait for the command to start, then stop it with <kbd>Ctrl</kbd>+<kbd>C</kbd>
+1. Run the same command again: `opensafely launch rstudio`
+1. When the **Open in Browser** notification appears, click it
+
+![](./rstudio-double-launch.png)
+
+RStudio should then open in a new browser tab.
+
+### Option 2: Reopen the RStudio port
+
+1. Open a Codespace for your repository
+1. Open the **Ports tab** and wait for the RStudio port to show as available
+1. Click **Open in Browser** for the RStudio port
+
+![](./rstudio-browser.png)
+
+The first attempt may open a new tab that remains on a GitHub Codespaces authentication page, for example:
+
+`https://github.com/codespaces/auth/...`
+
+If this happens:
+
+1. Close the tab
+1. Click **Open in Browser** for the RStudio port again
+1. Repeat this if necessary
+
+You may briefly be redirected to:
+
+`https://localhost:8787/auth-sign-in?appUri=%2F`
+
+Continue closing the tab and reopening the RStudio port until `https://localhost:8787` loads successfully.
+
+After it has loaded once, subsequent attempts to open the RStudio port should open RStudio normally.
+
+### If you are still unable to open RStudio
+
+If neither workaround works, [contact tech-support in Slack](https://docs.opensafely.org/how-to-get-help/#slack) with any relevant error messages or screenshots so that we can investigate further.
