@@ -63,9 +63,18 @@ You can [contact Tech Support](how-to-get-help.md/#slack) to request changes to 
 
 ### New researchers and projects
 
-When you are approved to start working on an OpenSAFELY research project, you will be added to the `opensafely` GitHub organisation to provide repository access.
+When you are approved to start working on an OpenSAFELY research project, your invitations depend on your role:
 
-Contact [Tech Support](how-to-get-help.md/#slack) and ask them to create a new repository for your research, or transfer a repository from your personal GitHub account into the `opensafely` GitHub organisation (depending on your preference, and whether you have an existing repository to transfer).
+- If you have the **Project Developer** role on Job Server, you will be invited to the `opensafely` GitHub organisation and your project’s GitHub team, which gives you write access to the project’s code.
+- If you are a **Project Collaborator**, you will be invited to the `opensafely` GitHub organisation but not the project team, as you do not have write access to the code.
+
+Once you receive your invitation:
+
+1. Accept the GitHub organisation invite within 7 days, otherwise you will need to be sent a new invite
+     1. You can check if you have accepted the invite [by viewing your pending invitations](https://github.com/settings/organizations)
+1. Depending on whether you have an existing repository to transfer, contact [Tech Support](how-to-get-help.md/#slack) and ask them to:
+     1. create a new repository for your research, or
+     1. transfer a repository from your personal GitHub account into the `opensafely` GitHub organisation
 
 Newly-created and transferred repositories will be configured with the settings listed in [default `opensafely` repository settings](#default-repository-settings-in-the-github-opensafely-organisation), above.
 
