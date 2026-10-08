@@ -4,7 +4,7 @@
 
 It captures symptoms, investigations, test results, diagnoses, prescriptions, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
 
-Patients that have a [Type 1 Opt-Out](https://docs.opensafely.org/type-one-opt-outs/) code in their records at their currently registered practice will be upheld and not have their data processed by the NHS OpenSAFELY Data Analytics Pilot Service. Records for patients who have registered a [National Data Opt-out](https://docs.opensafely.org/national-data-opt-outs/) will be included or excluded according to the project's approvals.
+Patients that have a [Type 1 Opt-Out](https://docs.opensafely.org/type-one-opt-outs/) code in their records at their currently registered practice will be upheld and not have their data processed by the NHS OpenSAFELY Data Analytics Pilot Service. Records for patients who have registered a [National Data Opt-out](https://docs.opensafely.org/national-data-opt-outs/) will be included or excluded according to the [project's approvals](https://www.opensafely.org/approved-projects/).
 
 ## The OpenSAFELY-TPP database
 
