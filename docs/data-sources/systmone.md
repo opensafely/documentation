@@ -4,7 +4,7 @@
 
 It captures symptoms, investigations, test results, diagnoses, prescriptions, demographic and social characteristics, etc. Essentially this is everything about a patient that is electronically recorded or accessed by GPs.
 
-Records for patients who have registered a [Type 1 Opt-out](https://www.nhs.uk/using-the-nhs/about-the-nhs/opt-out-of-sharing-your-health-records/) will be included or excluded according to the [project's approvals](https://www.opensafely.org/approved-projects/).
+Records for patients who have registered a [National Data Opt-out](https://docs.opensafely.org/national-data-opt-outs/) will be included or excluded according to the [project's approvals](https://www.opensafely.org/approved-projects/).
 
 ## The OpenSAFELY-TPP database
 
