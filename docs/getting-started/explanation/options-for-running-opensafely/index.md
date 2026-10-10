@@ -44,6 +44,10 @@ In this guide, we've documented two different ways to work with OpenSAFELY:
        GitHub Desktop) installed;
      * or you don't already have the required software installed, but
        are comfortable installing and configuring these tools yourself;
+     * you want to be able to work offline or are affected by an unstable connection;
+     * you are working on a project that is not yet approved and you are
+       reaching the free usage limits on Codespaces for personal accounts
+       (the limit is higher when you are working within the OpenSAFELY organisation);
      * you want to have more control on the tools you use to develop
        studies for OpenSAFELY.
 
