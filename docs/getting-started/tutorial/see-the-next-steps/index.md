@@ -8,9 +8,9 @@ and more about OpenSAFELY that you will need to learn.
 
 ## Applying for OpenSAFELY access
 
-To write a real study and run it against actual patient data, you will first need to get permission for your project from the data controllers for the NHS England OpenSAFELY COVID-19 service.
+To write a real study and run it against actual patient data, you will first need to get permission for your project from the data controllers NHS England.
 
-* [Read about our onboarding programme](https://www.opensafely.org/onboarding-new-users/).
+* [Using OpenSAFELY for research: how the process works](https://www.opensafely.org/for-research/).
 
 ## Further learning
 
