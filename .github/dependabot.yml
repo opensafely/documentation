@@ -13,6 +13,9 @@ updates:
     # Newer versions of lychee cause the exclude-path to not take effect.
     ignore:
       - dependency-name: "lycheeverse/lychee-action"
+    labels:
+      - "dependencies"
+      - "github_actions"
 
   - package-ecosystem: "pre-commit"
     directory: "/"
@@ -23,3 +26,5 @@ updates:
       timezone: "Europe/London"
     cooldown:
       default-days: 7
+    labels:
+      - "dependencies"
