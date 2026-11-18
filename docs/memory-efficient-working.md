@@ -9,7 +9,7 @@ This section provides advice on improving the performance of your scripted actio
 
 ## Use proper typing
 
-Objects like vectors, data frame columns, and matrices use different amounts of memory, depending on their type and class. You should use the class that minimises memory use whilst preserving information. 
+Objects like vectors, data frame columns, and matrices use different amounts of memory, depending on their type and class. You should use the class that minimises memory use whilst preserving information.
 
 In general, for memory use of types in R assume that (`logical` = `integer`) < `double` < `character`. In Python, it's (`logical` = `bool`) < `float` < `object`. Note that factors (`categorical` in Python) are integers in disguise, with a small amount of metadata (or attributes) to map the factor levels to the underlying integer value. Similarly, dates are doubles in disguise, with attributes defining the date origin. In R, the memory use of class attributes is usually negligible, so you only really have to consider the underlying data type.
 
@@ -19,7 +19,7 @@ The most likely savings in R are `double` to `integer` and `character` to `facto
 
 * If a column contains only integer values, type it as an integer not a double. It’s common for integers to sneakily convert back to doubles. For example, if `x` is an integer, then `y <- x + 1` is a double, because `1` is a double and combining an integer and a double will give a double. Instead, use `y <- x + 1L` which is an integer because `1L` is an integer.
 * If a column contains only a few different string values, it’s usually better to convert it from a character to a factor. In fact, because there is no free-text info in OpenSAFELY, _in theory_ all string-type variables, including derived variables, should only contain values from a known set, and so could all be represented as factors. But in practice this might not be simple to enforce, and might be actively unhelpful if lots of theoretically possible values are not actually represented. So some character variables are permissible. Use your judgement.
-* A DataFrame column can have only one data type. Inputting a value with greater precision (`float` instead of an `int`, for instance) can lead to the entire column converting to a more memory-consuming data type. For instance in Python, `np.nan` is a `float` value. Inserting `nan` in an `int` column will convert the entire column to a `float`. 
+* A DataFrame column can have only one data type. Inputting a value with greater precision (`float` instead of an `int`, for instance) can lead to the entire column converting to a more memory-consuming data type. For instance in Python, `np.nan` is a `float` value. Inserting `nan` in an `int` column will convert the entire column to a `float`.
   * The default behaviour of Pandas' [`read_csv`](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) function when presented with an integer column with missing values is to use `NaN` for these missing values and thus load the column as a `float`.
   * [Nullable integer types](https://pandas.pydata.org/docs/user_guide/integer_na.html) are available which support missing values (albeit as `pandas.NA` rather than `numpy.NaN`), with a variety of precisions ( `Int8`,`Int16`,`Int32`,`Int64`). Providing a `dtype` specification to `read_csv` (or converting a `float` column after replacing `NaN` values with `NA`) using one of these types with the smallest required precision may significantly reduce memory usage.
 
@@ -34,15 +34,15 @@ The most likely savings in R are `double` to `integer` and `character` to `facto
 
 * Write code that loads or processes data in functions so that the source and/or intermediate datasets do not hang around for the whole duration of the script (thereby taking up memory). Also use functions for chunks of code that are repeated or re-executed.
 * Sometimes there might be a long section of code to create an object, but that also produces lots of large intermediate objects. In R, you can wrap this section of code in `local()` so that only the final object is kept, without having to explicitly delete the intermediate objects. This also helps keep your working environment clean.
-* Rather than importing data at the top of a script, import only when the data are needed. 
+* Rather than importing data at the top of a script, import only when the data are needed.
 * Remove large objects from memory if they're no longer needed (`rm(x)` in R, `del x` in Python).
 * In R, model objects (such as those produced by `lm`, `glm` or `coxph`) scale with the input data size, even if you use `data=FALSE` and `x=FALSE` and `model=FALSE` and the like to remove these components from the resulting object. The `butcher` package can help reduce size. For other big objects, check to see if there are components that can be omitted.
 
-## Restructure your data 
+## Restructure your data
 
-Consider subdividing very wide or very long data into chunks. Can you divide the data into yearly chunks or run the script on each outcome separately and aggregate the results later? If the processes do not depend on one another, it will be possible for jobs to run in parallel to one another on the server, completing sooner than running in one continuous process. 
+Consider subdividing very wide or very long data into chunks. Can you divide the data into yearly chunks or run the script on each outcome separately and aggregate the results later? If the processes do not depend on one another, it will be possible for jobs to run in parallel to one another on the server, completing sooner than running in one continuous process.
 
-If you are extracting multiple events over time per patient, consider extracting covariates you expect to be time-invariant (e.g. ethnicity) separately, then merging it onto your outcome variables later (made easy using [cohort-joiner](https://actions.opensafely.org/actions/cohort-joiner/v0.0.27/)).
+If you are extracting multiple events over time per patient, consider extracting covariates you expect to be time-invariant (e.g. ethnicity) separately, then merging it onto your outcome variables later (made easy using [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner/tree/v0.0.27)).
 
 ## Use random sampling
 
@@ -58,7 +58,7 @@ Parallelisation allows multiple processes to be run at once on different process
 
 Operations that are amenable to parallelisation include: GLM-fitting (Stata does this automatically, see the [parglm](https://cran.r-project.org/web/packages/parglm/index.html) package to do it in R); exact matching; bootstrapping; multiple imputation. Be considerate here: don’t access so many cores that other users will suffer. If you need to use more than 8 cores to get close to a sensible run time, then you should probably reconsider your approach.
 
-Note that while you can spread you processes across different cores in a single action, there is still a hard memory limit for each action which is the same regardless of the number of cores you're using. However, you can take advantage of OpenSAFELY’s job-runner tooling to split operations across different actions, which will run in parallel if there's capacity to do so.  
+Note that while you can spread you processes across different cores in a single action, there is still a hard memory limit for each action which is the same regardless of the number of cores you're using. However, you can take advantage of OpenSAFELY’s job-runner tooling to split operations across different actions, which will run in parallel if there's capacity to do so.
 
 ## Use profiling tools to identify processes that can be optimised
 
