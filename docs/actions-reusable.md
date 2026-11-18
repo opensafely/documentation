@@ -4,7 +4,7 @@ This makes reusable actions ideal for tasks that must be completed by several st
 
 ## Running reusable actions
 
-You can browse existing reusable actions at <https://actions.opensafely.org>.
+You can browse existing reusable actions at [github.com/opensafely-actions](https://github.com/opensafely-actions).
 Although each is different, they have a common API.
 Consider the following extract from a study's *project.yaml*:
 
@@ -58,8 +58,7 @@ The repo has the following minimal structure:
 └── action.yaml
 ```
 
-*README.md* contains information about the reusable action, which is displayed by <https://actions.opensafely.org>.
-
+*README.md* contains information about the reusable action
 *action.yaml* contains a run command, which is composed of a runtime image (either `python`, `r`, or `stata-mp`) and an entry point.
 The entry point is a path to a script.
 For example:
