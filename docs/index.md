@@ -13,12 +13,12 @@ As such, the platform maintains extremely high standards for data privacy whilst
 !!! note "OpenSAFELY is constantly developing and improving"
     We suggest you regularly check our [Platform News page](https://www.opensafely.org/changelog/) to learn about recent changes.
 
-<div class="youtube-embed">
-  <lite-youtube
-    videoid="GRjRqOAIVy8"
-    params="controls=1&modestbranding=2&rel=0&enablejsapi=1"
-  ></lite-youtube>
-</div>
+
+## OpenSAFELY in a nutshell
+
+<video controls playsinline preload="metadata" poster="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/opensafely-in-a-nutshell-GRjRqOAIVy8.webp">
+  <source src="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/opensafely-in-a-nutshell-GRjRqOAIVy8.mp4" type="video/mp4" />
+</video>
 
 ## Who is OpenSAFELY?
 

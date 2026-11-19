@@ -9,6 +9,6 @@ The core patient-level data used within OpenSAFELY is based on electronic GP rec
 
 GP records, or primary care records, can also be used for conducting health research, which is what OpenSAFELY was built for. We've made a video to help explain primary care data in more detail; essential viewing if you're new to this domain.
 
-<div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/NEwSQ5-dWSg" frameborder="0" allowfullscreen></iframe>
-</div>
+<video controls playsinline preload="metadata" poster="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/opensafely-a-brief-introduction-to-working-with-primary-care-electronic-health-records-NEwSQ5-dWSg.webp">
+  <source src="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/opensafely-a-brief-introduction-to-working-with-primary-care-electronic-health-records-NEwSQ5-dWSg.mp4" type="video/mp4" />
+</video>

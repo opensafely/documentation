@@ -146,6 +146,6 @@ Very briefly, we recommend that you build and agree medication codelists using t
 dm+d for use in study definitions. You can read more about the uses and differences between pseudoBNF, dm+d and SNOMED CT
 on [our blog](https://www.bennett.ox.ac.uk/blog/2022/11/difference-between-bnf-dm-d-and-snomed-ct-codes/).
 
-<div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/t-A2kWHZ5lA" frameborder="0" allowfullscreen></iframe>
-</div>
+<video controls playsinline preload="metadata" poster="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/making-a-pseudobnf-medication-codelist-with-opencodelists-A2kWHZ5lA.webp">
+  <source src="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/making-a-pseudobnf-medication-codelist-with-opencodelists-A2kWHZ5lA.mp4" type="video/mp4" />
+</video>
