@@ -141,14 +141,11 @@ theme:
 edit_uri: "edit/main/docs/"
 
 extra_css:
-  - css/youtube.css
   - css/extra.css
-  - css/lite-yt-embed.css
   - ehrql/stylesheets/extra.css
 
 extra_javascript:
   - js/extra.mjs
-  - js/lite-yt-embed.js
 
 extra:
   analytics:
