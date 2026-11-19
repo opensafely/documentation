@@ -4,7 +4,7 @@ A case-control study compares the population with the condition or event of inte
 matched on specific categorical and/or scalar variables.
 
 We can take advantage of an OpenSAFELY [reusable action](actions-reusable.md), the
-[matching](https://actions.opensafely.org/actions/matching) action.
+[matching](https://github.com/opensafely-actions/matching) action.
 This action takes a dataset of "cases" (i.e. patients with the condition of interest), and a second
 dataset of potential controls, both extracted using ehrql dataset definitions. It produces outputs
 containing a set of matched control patients which can be incorporated into further analyses.
@@ -15,7 +15,7 @@ Data extracts often use an "index date" to define variables such as age, or pres
 
 Where index dates are dynamic, and defined by the event of interest, the control group cannot by
 definition  contain a relevant index date. In this case, the convention is for the control group to
-inherit the index date from their matched "case". The [matching reusable action](https://actions.opensafely.org/actions/matching)
+inherit the index date from their matched "case". The [matching reusable action](https://github.com/opensafely-actions/matching)
 provides a number of options for how this "inherited" index date can be generated.
 
 After the control group is extracted by matching on a set
@@ -102,7 +102,7 @@ actions:
 
 ## Match the cases to the potential controls
 
-In this step, we will use the [OpenSAFELY matching reusable-action](https://actions.opensafely.org/actions/matching) to match the cases to the potential controls.
+In this step, we will use the [OpenSAFELY matching reusable-action](https://github.com/opensafely-actions/matching) to match the cases to the potential controls.
 We will name this scripted action `match.py`.
 
 Whilst the OpenSAFELY matching action can output multiple files, we will use two: `matching_report.txt` and `matched_matches.arrow`.
@@ -134,7 +134,7 @@ actions:
         matched_matches: output/matched_matches.arrow
 ```
 
-See the [OpenSAFELY matching reusable action documentation](https://actions.opensafely.org/actions/matching)
+See the [OpenSAFELY matching reusable action documentation](https://github.com/opensafely-actions/matching)
 for further information on the available configuration options.
 
 !!! note "Alternatives to the OpenSAFELY matching reusable action"
