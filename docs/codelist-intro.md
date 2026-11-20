@@ -25,9 +25,9 @@ that are hosted on this website can be used directly in the Dataset Definition. 
 there is no need to download or alter these codelists in the dataset definition, and
 they can be reused.
 
-<div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/ayRtpbcPFLA" frameborder="0" allowfullscreen></iframe>
-</div>
+<video controls playsinline preload="metadata" poster="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/introducing-opencodelists-ayRtpbcPFLA.webp">
+  <source src="https://bennett-media.lon1.cdn.digitaloceanspaces.com/videos/introducing-opencodelists-ayRtpbcPFLA.mp4" type="video/mp4" />
+</video>
 
 ## Applying the principle of open working to making codelists
 
