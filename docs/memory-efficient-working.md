@@ -6,8 +6,45 @@ This section provides advice on improving the performance of your scripted actio
 
     These options may be useful when developing locally. However, the techniques listed on this page are useful both in local development and when running your code in production.
 
+## ehrQL tips
 
-## Use proper typing
+Before you get to your scripted actions, you can try the following tips for ehrQL. 
+
+* Carry out initial testing on a small sample population (e.g. short time period). This allows you to check your variables are working as expected in the real data without a large load on the server.
+* If you're developing complex new variables create a separate dataset definition and test script rather than embedding in the main file.
+* Limit to the period and fields you really need - remove any that are no longer needed after initial testing.
+* Use separate dataset definitions or use parameters[link to add] to help to create your flow chart, subsets of the population or run specific tests, rather than returning all variables for all groups where these are not necessary.
+* Consider using measures[link to add] for basic counts/rates. But note that these can also be slow for large queries.
+
+## Dataset management
+
+### Minimise population size
+
+Say you’re studying 1 million people. Maybe just 50,000 is enough? Perhaps at least for preliminary work. In which case, let's take a random sample of 50,000 people which will reduce the dataset to a 20th of its original size. Or, limit to a shorter time period for initial testing.
+
+Maybe a simple random sample doesn’t work because the outcome is rare. In case case keep everybody who experienced the outcome, and randomly sample the rest. In this case, the contribution of each person in the model should be reweighted by the inverse of the sampling probability – for those who experienced the outcome this is `1`, and for those who didn’t this is `N/n`, where `n` is number of non-outcomes who were sampled, and `N` is the total number of non-outcomes.
+
+This is useful for preliminary development work for speed but may sometimes be a necessary design feature, for example if the analysis requires large, time-dependent datasets on millions of people.
+
+### Slim down your datasets
+
+* Stick to compressed data types, including Arrow or csv.gz. These can be loaded directly into Python, R or Stata.
+* Only import columns that get used. Remove unused columns or rows.
+* Avoid creating columns that contain the same information as other columns, just in a different format.
+* Store single-value vectors as global variables, or in a list, rather than as a column in a dataset that repeats the same value.
+* Avoid storing the same data across multiple datasets. Use look-up tables instead, and join the data on when needed.
+
+### Subdivide long or wide data
+
+Consider subdividing very wide or very long data into chunks. Can you divide the data into yearly chunks or run the script on each outcome separately and aggregate the results later? If the processes do not depend on one another, it will be possible for jobs to run in parallel to one another on the server, completing sooner than running in one continuous process.
+
+### Join fixed variables on later
+
+If you are extracting multiple events over time per patient/practice, consider extracting covariates you expect to be time-invariant (e.g. ethnicity, practice-region) separately, then merging it onto your outcome variables later (made easy using [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner/tree/v0.0.27)).
+
+## Loading data into scripted actions
+
+### Use proper typing
 
 Objects like vectors, data frame columns, and matrices use different amounts of memory, depending on their type and class. You should use the class that minimises memory use whilst preserving information.
 
@@ -23,14 +60,7 @@ The most likely savings in R are `double` to `integer` and `character` to `facto
   * The default behaviour of Pandas' [`read_csv`](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) function when presented with an integer column with missing values is to use `NaN` for these missing values and thus load the column as a `float`.
   * [Nullable integer types](https://pandas.pydata.org/docs/user_guide/integer_na.html) are available which support missing values (albeit as `pandas.NA` rather than `numpy.NaN`), with a variety of precisions ( `Int8`,`Int16`,`Int32`,`Int64`). Providing a `dtype` specification to `read_csv` (or converting a `float` column after replacing `NaN` values with `NA`) using one of these types with the smallest required precision may significantly reduce memory usage.
 
-## Slim down your datasets
-
-* Only import columns that get used. Remove unused columns or rows.
-* Avoid creating columns that contain the same information as other columns, just in a different format.
-* Store single-value vectors as global variables, or in a list, rather than as a column in a dataset that repeats the same value.
-* Avoid storing the same data across multiple datasets. Use look-up tables instead, and join the data on when needed.
-
-## Remove or slim down large objects from memory
+### Remove or slim down large objects from memory
 
 * Write code that loads or processes data in functions so that the source and/or intermediate datasets do not hang around for the whole duration of the script (thereby taking up memory). Also use functions for chunks of code that are repeated or re-executed.
 * Sometimes there might be a long section of code to create an object, but that also produces lots of large intermediate objects. In R, you can wrap this section of code in `local()` so that only the final object is kept, without having to explicitly delete the intermediate objects. This also helps keep your working environment clean.
@@ -38,21 +68,7 @@ The most likely savings in R are `double` to `integer` and `character` to `facto
 * Remove large objects from memory if they're no longer needed (`rm(x)` in R, `del x` in Python).
 * In R, model objects (such as those produced by `lm`, `glm` or `coxph`) scale with the input data size, even if you use `data=FALSE` and `x=FALSE` and `model=FALSE` and the like to remove these components from the resulting object. The `butcher` package can help reduce size. For other big objects, check to see if there are components that can be omitted.
 
-## Restructure your data
-
-Consider subdividing very wide or very long data into chunks. Can you divide the data into yearly chunks or run the script on each outcome separately and aggregate the results later? If the processes do not depend on one another, it will be possible for jobs to run in parallel to one another on the server, completing sooner than running in one continuous process.
-
-If you are extracting multiple events over time per patient, consider extracting covariates you expect to be time-invariant (e.g. ethnicity) separately, then merging it onto your outcome variables later (made easy using [cohort-joiner](https://github.com/opensafely-actions/cohort-joiner/tree/v0.0.27)).
-
-## Use random sampling
-
-Say you’re studying 1 million people. Maybe just 50,000 is enough? Perhaps at least for preliminary work. In which case, let's take a random sample of 50,000 people which will reduce the dataset to a 20th of its original size.
-
-Maybe a simple random sample doesn’t work because the outcome is rare. In case case keep everybody who experienced the outcome, and randomly sample the rest. In this case, the contribution of each person in the model should be reweighted by the inverse of the sampling probability – for those who experienced the outcome this is `1`, and for those who didn’t this is `N/n`, where `n` is number of non-outcomes who were sampled, and `N` is the total number of non-outcomes.
-
-This is useful for preliminary development work for speed but may sometimes be a necessary design feature, for example if the analysis requires large, time-dependent datasets on millions of people.
-
-## Parallelisation
+## Parallelisation of statistical methods
 
 Parallelisation allows multiple processes to be run at once on different processors (or "cores"), which (usually) means things happen faster.
 
