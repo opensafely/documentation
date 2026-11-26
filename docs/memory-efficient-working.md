@@ -13,8 +13,8 @@ Before you get to your scripted actions, you can try the following tips for ehrQ
 * Carry out initial testing on a small sample population (e.g. short time period). This allows you to check your variables are working as expected in the real data without a large load on the server.
 * If you're developing complex new variables create a separate dataset definition and test script rather than embedding in the main file.
 * Limit to the period and fields you really need - remove any that are no longer needed after initial testing.
-* Use separate dataset definitions or use parameters[link to add] to help to create your flow chart, subsets of the population or run specific tests, rather than returning all variables for all groups where these are not necessary.
-* Consider using measures[link to add] for basic counts/rates. But note that these can also be slow for large queries.
+* Use separate dataset definitions or use [parameters](ehrql/how-to/parameterise-ehrql/) to help to create your flow chart, subsets of the population or run specific tests, rather than returning all variables for all groups where these are not necessary.
+* Consider using [measures](erhql/explanation/measures/) for basic counts/rates. But note that these can also be slow for large queries.
 
 ## Dataset management
 
